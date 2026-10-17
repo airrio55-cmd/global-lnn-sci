@@ -1,0 +1,15 @@
+{
+  "downloaded_at_utc": "2026-10-17T06:39:24.543389+00:00",
+  "sha256": "ad5139d6895f3274307615d990bbd62dd194f0a949aed6f36243a403b11bf4a3",
+  "tickers": {
+    "Close": "^NDX",
+    "VXN": "^VXN",
+    "SOX": "^SOX",
+    "US10Y": "^TNX",
+    "DXY": "DX-Y.NYB"
+  },
+  "rows": 4024,
+  "first_date": "2010-01-04",
+  "last_date": "2025-12-31",
+  "policy": "Frozen once before training; no data refresh or feature tuning based on test results."
+}

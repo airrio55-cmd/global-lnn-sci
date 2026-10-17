@@ -1,0 +1,113 @@
+Python: 3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]
+Platform: Linux-6.18.44-x86_64-with-glibc2.41
+Torch: 2.14.1+cpu
+DEVICE: cpu
+
+Completed cell 1
+✅ configuration ready
+
+Completed cell 3
+Markets: ['KOSPI200', 'SP500', 'NASDAQ100', 'NIKKEI225', 'EUROSTOXX50']
+
+Completed cell 5
+
+Completed cell 7
+
+Completed cell 9
+
+Completed cell 11
+
+Completed cell 13
+
+Completed cell 14
+
+Completed cell 16
+
+Completed cell 18
+
+Completed cell 20
+
+Completed cell 22
+
+Completed cell 24
+PREFLIGHT PASS: 4024 daily rows; 10 features; no test metrics inspected
+
+Completed cell 25
+
+======================================================================
+RUN: NASDAQ100 COMMON_LOCAL + WALK-FORWARD
+======================================================================
+
+[Walk-forward validation folds]
+
+Fold 1: Train <= 2018-12-31 | Val 2019-01-01~2019-12-31
+Train          n= 2223 | Down=  745 (33.51%) | Up= 1478 (66.49%)
+Validation     n=  232 | Down=   55 (23.71%) | Up=  177 (76.29%)
+
+Fold 2: Train <= 2019-12-31 | Val 2020-01-01~2020-12-31
+Train          n= 2475 | Down=  809 (32.69%) | Up= 1666 (67.31%)
+Validation     n=  233 | Down=   57 (24.46%) | Up=  176 (75.54%)
+
+Fold 3: Train <= 2020-12-31 | Val 2021-01-01~2021-12-31
+Train          n= 2728 | Down=  866 (31.74%) | Up= 1862 (68.26%)
+Validation     n=  232 | Down=   80 (34.48%) | Up=  152 (65.52%)
+
+[Final train/test]
+Final Train    n= 2980 | Down=  946 (31.74%) | Up= 2034 (68.26%)
+Test           n=  983 | Down=  342 (34.79%) | Up=  641 (65.21%)
+
+--- LOSS: CE ---
+LNN          seed=42  loss=CE         thr=0.50 WF-BA=0.5000 TEST-BA=0.5194 MacroF1=0.4589 PPR=0.323
+LSTM         seed=42  loss=CE         thr=0.66 WF-BA=0.6338 TEST-BA=0.4697 MacroF1=0.3413 PPR=0.161
+Transformer  seed=42  loss=CE         thr=0.59 WF-BA=0.7124 TEST-BA=0.5239 MacroF1=0.5169 PPR=0.790
+LNN          seed=52  loss=CE         thr=0.61 WF-BA=0.5033 TEST-BA=0.5013 MacroF1=0.3454 PPR=0.119
+LSTM         seed=52  loss=CE         thr=0.49 WF-BA=0.6384 TEST-BA=0.4702 MacroF1=0.3072 PPR=0.106
+Transformer  seed=52  loss=CE         thr=0.69 WF-BA=0.7035 TEST-BA=0.4838 MacroF1=0.2576 PPR=0.025
+LNN          seed=62  loss=CE         thr=0.69 WF-BA=0.5099 TEST-BA=0.4754 MacroF1=0.2687 PPR=0.048
+LSTM         seed=62  loss=CE         thr=0.57 WF-BA=0.6432 TEST-BA=0.5055 MacroF1=0.3900 PPR=0.190
+Transformer  seed=62  loss=CE         thr=0.48 WF-BA=0.7006 TEST-BA=0.4852 MacroF1=0.4852 PPR=0.665
+LNN          seed=72  loss=CE         thr=0.50 WF-BA=0.5000 TEST-BA=0.4445 MacroF1=0.2765 PPR=0.097
+LSTM         seed=72  loss=CE         thr=0.62 WF-BA=0.6085 TEST-BA=0.4708 MacroF1=0.2863 PPR=0.076
+Transformer  seed=72  loss=CE         thr=0.53 WF-BA=0.6474 TEST-BA=0.4669 MacroF1=0.2638 PPR=0.052
+LNN          seed=82  loss=CE         thr=0.70 WF-BA=0.5047 TEST-BA=0.4771 MacroF1=0.2938 PPR=0.078
+LSTM         seed=82  loss=CE         thr=0.53 WF-BA=0.6127 TEST-BA=0.4549 MacroF1=0.3178 PPR=0.144
+Transformer  seed=82  loss=CE         thr=0.57 WF-BA=0.6760 TEST-BA=0.5532 MacroF1=0.5218 PPR=0.922
+
+--- LOSS: MILD_WCE ---
+LNN          seed=42  loss=MILD_WCE   thr=0.50 WF-BA=0.5000 TEST-BA=0.4494 MacroF1=0.3022 PPR=0.128
+LSTM         seed=42  loss=MILD_WCE   thr=0.51 WF-BA=0.6302 TEST-BA=0.4850 MacroF1=0.3218 PPR=0.107
+Transformer  seed=42  loss=MILD_WCE   thr=0.49 WF-BA=0.6896 TEST-BA=0.4407 MacroF1=0.2780 PPR=0.104
+LNN          seed=52  loss=MILD_WCE   thr=0.58 WF-BA=0.5161 TEST-BA=0.4687 MacroF1=0.3169 PPR=0.123
+LSTM         seed=52  loss=MILD_WCE   thr=0.51 WF-BA=0.6139 TEST-BA=0.4756 MacroF1=0.2999 PPR=0.088
+Transformer  seed=52  loss=MILD_WCE   thr=0.51 WF-BA=0.6978 TEST-BA=0.4877 MacroF1=0.2713 PPR=0.036
+LNN          seed=62  loss=MILD_WCE   thr=0.63 WF-BA=0.5353 TEST-BA=0.4578 MacroF1=0.2904 PPR=0.099
+LSTM         seed=62  loss=MILD_WCE   thr=0.33 WF-BA=0.6300 TEST-BA=0.5103 MacroF1=0.4068 PPR=0.215
+Transformer  seed=62  loss=MILD_WCE   thr=0.57 WF-BA=0.6851 TEST-BA=0.5662 MacroF1=0.5528 PPR=0.871
+LNN          seed=72  loss=MILD_WCE   thr=0.50 WF-BA=0.5000 TEST-BA=0.4484 MacroF1=0.2772 PPR=0.092
+LSTM         seed=72  loss=MILD_WCE   thr=0.67 WF-BA=0.6255 TEST-BA=0.4464 MacroF1=0.3181 PPR=0.158
+Transformer  seed=72  loss=MILD_WCE   thr=0.45 WF-BA=0.6545 TEST-BA=0.5054 MacroF1=0.4902 PPR=0.821
+LNN          seed=82  loss=MILD_WCE   thr=0.54 WF-BA=0.5246 TEST-BA=0.4717 MacroF1=0.3036 PPR=0.099
+LSTM         seed=82  loss=MILD_WCE   thr=0.50 WF-BA=0.6319 TEST-BA=0.4501 MacroF1=0.3036 PPR=0.129
+Transformer  seed=82  loss=MILD_WCE   thr=0.65 WF-BA=0.7400 TEST-BA=0.4907 MacroF1=0.2477 PPR=0.006
+
+--- LOSS: MILD_FOCAL ---
+LNN          seed=42  loss=MILD_FOCAL thr=0.50 WF-BA=0.5162 TEST-BA=0.4886 MacroF1=0.2906 PPR=0.059
+LSTM         seed=42  loss=MILD_FOCAL thr=0.51 WF-BA=0.6501 TEST-BA=0.4605 MacroF1=0.3434 PPR=0.180
+Transformer  seed=42  loss=MILD_FOCAL thr=0.57 WF-BA=0.6596 TEST-BA=0.5000 MacroF1=0.2512 PPR=0.000
+LNN          seed=52  loss=MILD_FOCAL thr=0.52 WF-BA=0.5846 TEST-BA=0.4846 MacroF1=0.2620 PPR=0.029
+LSTM         seed=52  loss=MILD_FOCAL thr=0.53 WF-BA=0.6708 TEST-BA=0.5059 MacroF1=0.4263 PPR=0.268
+Transformer  seed=52  loss=MILD_FOCAL thr=0.50 WF-BA=0.6884 TEST-BA=0.5210 MacroF1=0.4652 PPR=0.337
+LNN          seed=62  loss=MILD_FOCAL thr=0.54 WF-BA=0.5688 TEST-BA=0.4345 MacroF1=0.2707 PPR=0.102
+LSTM         seed=62  loss=MILD_FOCAL thr=0.52 WF-BA=0.6778 TEST-BA=0.5051 MacroF1=0.3272 PPR=0.087
+Transformer  seed=62  loss=MILD_FOCAL thr=0.55 WF-BA=0.6814 TEST-BA=0.4816 MacroF1=0.2839 PPR=0.059
+LNN          seed=72  loss=MILD_FOCAL thr=0.51 WF-BA=0.5675 TEST-BA=0.4569 MacroF1=0.2799 PPR=0.085
+LSTM         seed=72  loss=MILD_FOCAL thr=0.48 WF-BA=0.6567 TEST-BA=0.4651 MacroF1=0.3406 PPR=0.167
+Transformer  seed=72  loss=MILD_FOCAL thr=0.52 WF-BA=0.6738 TEST-BA=0.4661 MacroF1=0.2622 PPR=0.051
+LNN          seed=82  loss=MILD_FOCAL thr=0.50 WF-BA=0.5906 TEST-BA=0.5086 MacroF1=0.3817 PPR=0.169
+LSTM         seed=82  loss=MILD_FOCAL thr=0.58 WF-BA=0.6869 TEST-BA=0.4523 MacroF1=0.2755 PPR=0.085
+Transformer  seed=82  loss=MILD_FOCAL thr=0.50 WF-BA=0.7125 TEST-BA=0.4590 MacroF1=0.2476 PPR=0.042
+
+Completed cell 27
+EXPORT PASS: all 45 runs, 3 baselines and validation-only thresholds verified
+
+Completed cell 33
