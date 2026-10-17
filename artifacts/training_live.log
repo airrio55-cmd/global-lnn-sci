@@ -1,0 +1,50 @@
+LNN          seed=42  loss=CE         thr=0.69 WF-BA=0.5369 TEST-BA=0.4318 MacroF1=0.3786 PPR=0.314
+LSTM         seed=42  loss=CE         thr=0.69 WF-BA=0.5844 TEST-BA=0.4299 MacroF1=0.4020 PPR=0.397
+Transformer  seed=42  loss=CE         thr=0.52 WF-BA=0.5823 TEST-BA=0.4030 MacroF1=0.4041 PPR=0.575
+LNN          seed=52  loss=CE         thr=0.61 WF-BA=0.5353 TEST-BA=0.4476 MacroF1=0.4019 PPR=0.341
+LSTM         seed=52  loss=CE         thr=0.61 WF-BA=0.5817 TEST-BA=0.4463 MacroF1=0.4403 PPR=0.522
+Transformer  seed=52  loss=CE         thr=0.50 WF-BA=0.6520 TEST-BA=0.5186 MacroF1=0.5171 PPR=0.618
+LNN          seed=62  loss=CE         thr=0.69 WF-BA=0.5348 TEST-BA=0.4655 MacroF1=0.4215 PPR=0.352
+LSTM         seed=62  loss=CE         thr=0.65 WF-BA=0.6022 TEST-BA=0.4221 MacroF1=0.3948 PPR=0.396
+Transformer  seed=62  loss=CE         thr=0.63 WF-BA=0.6076 TEST-BA=0.4680 MacroF1=0.4609 PPR=0.526
+LNN          seed=72  loss=CE         thr=0.70 WF-BA=0.5786 TEST-BA=0.4338 MacroF1=0.3724 PPR=0.292
+LSTM         seed=72  loss=CE         thr=0.63 WF-BA=0.5478 TEST-BA=0.4421 MacroF1=0.4337 PPR=0.502
+Transformer  seed=72  loss=CE         thr=0.70 WF-BA=0.5856 TEST-BA=0.3999 MacroF1=0.3887 PPR=0.461
+LNN          seed=82  loss=CE         thr=0.50 WF-BA=0.5000 TEST-BA=0.4815 MacroF1=0.4705 PPR=0.505
+LSTM         seed=82  loss=CE         thr=0.65 WF-BA=0.6318 TEST-BA=0.4469 MacroF1=0.4305 PPR=0.456
+Transformer  seed=82  loss=CE         thr=0.58 WF-BA=0.6614 TEST-BA=0.4094 MacroF1=0.3999 PPR=0.477
+
+--- LOSS: MILD_WCE ---
+LNN          seed=42  loss=MILD_WCE   thr=0.62 WF-BA=0.5211 TEST-BA=0.4191 MacroF1=0.3588 PPR=0.291
+LSTM         seed=42  loss=MILD_WCE   thr=0.65 WF-BA=0.6121 TEST-BA=0.4228 MacroF1=0.4153 PPR=0.497
+Transformer  seed=42  loss=MILD_WCE   thr=0.50 WF-BA=0.6445 TEST-BA=0.4341 MacroF1=0.4346 PPR=0.647
+LNN          seed=52  loss=MILD_WCE   thr=0.59 WF-BA=0.5247 TEST-BA=0.4446 MacroF1=0.3998 PPR=0.343
+LSTM         seed=52  loss=MILD_WCE   thr=0.57 WF-BA=0.6031 TEST-BA=0.4480 MacroF1=0.4356 PPR=0.479
+Transformer  seed=52  loss=MILD_WCE   thr=0.50 WF-BA=0.5866 TEST-BA=0.4127 MacroF1=0.4073 PPR=0.713
+LNN          seed=62  loss=MILD_WCE   thr=0.50 WF-BA=0.5434 TEST-BA=0.4684 MacroF1=0.4356 PPR=0.393
+LSTM         seed=62  loss=MILD_WCE   thr=0.44 WF-BA=0.5889 TEST-BA=0.4393 MacroF1=0.4338 PPR=0.522
+Transformer  seed=62  loss=MILD_WCE   thr=0.70 WF-BA=0.5961 TEST-BA=0.3899 MacroF1=0.3794 PPR=0.460
+LNN          seed=72  loss=MILD_WCE   thr=0.64 WF-BA=0.5733 TEST-BA=0.4445 MacroF1=0.3977 PPR=0.336
+LSTM         seed=72  loss=MILD_WCE   thr=0.66 WF-BA=0.5701 TEST-BA=0.4805 MacroF1=0.4792 PPR=0.598
+Transformer  seed=72  loss=MILD_WCE   thr=0.64 WF-BA=0.6032 TEST-BA=0.3768 MacroF1=0.3425 PPR=0.354
+LNN          seed=82  loss=MILD_WCE   thr=0.61 WF-BA=0.5352 TEST-BA=0.4616 MacroF1=0.4447 PPR=0.460
+LSTM         seed=82  loss=MILD_WCE   thr=0.60 WF-BA=0.6455 TEST-BA=0.4282 MacroF1=0.4209 PPR=0.502
+Transformer  seed=82  loss=MILD_WCE   thr=0.58 WF-BA=0.6456 TEST-BA=0.4043 MacroF1=0.3766 PPR=0.387
+
+--- LOSS: MILD_FOCAL ---
+LNN          seed=42  loss=MILD_FOCAL thr=0.50 WF-BA=0.5934 TEST-BA=0.4428 MacroF1=0.4226 PPR=0.435
+LSTM         seed=42  loss=MILD_FOCAL thr=0.53 WF-BA=0.6239 TEST-BA=0.4683 MacroF1=0.4565 PPR=0.493
+Transformer  seed=42  loss=MILD_FOCAL thr=0.57 WF-BA=0.6337 TEST-BA=0.4012 MacroF1=0.4012 PPR=0.555
+LNN          seed=52  loss=MILD_FOCAL thr=0.50 WF-BA=0.5936 TEST-BA=0.4287 MacroF1=0.3940 PPR=0.371
+LSTM         seed=52  loss=MILD_FOCAL thr=0.54 WF-BA=0.6161 TEST-BA=0.4566 MacroF1=0.4443 PPR=0.484
+Transformer  seed=52  loss=MILD_FOCAL thr=0.52 WF-BA=0.6504 TEST-BA=0.4738 MacroF1=0.4732 PPR=0.611
+LNN          seed=62  loss=MILD_FOCAL thr=0.50 WF-BA=0.5937 TEST-BA=0.4518 MacroF1=0.4378 PPR=0.471
+LSTM         seed=62  loss=MILD_FOCAL thr=0.54 WF-BA=0.5969 TEST-BA=0.4434 MacroF1=0.4314 PPR=0.479
+Transformer  seed=62  loss=MILD_FOCAL thr=0.50 WF-BA=0.6052 TEST-BA=0.4742 MacroF1=0.4722 PPR=0.584
+LNN          seed=72  loss=MILD_FOCAL thr=0.50 WF-BA=0.6452 TEST-BA=0.4700 MacroF1=0.4384 PPR=0.398
+LSTM         seed=72  loss=MILD_FOCAL thr=0.52 WF-BA=0.5971 TEST-BA=0.4658 MacroF1=0.4528 PPR=0.484
+Transformer  seed=72  loss=MILD_FOCAL thr=0.61 WF-BA=0.6293 TEST-BA=0.4408 MacroF1=0.4347 PPR=0.518
+LNN          seed=82  loss=MILD_FOCAL thr=0.50 WF-BA=0.5926 TEST-BA=0.4131 MacroF1=0.3561 PPR=0.298
+LSTM         seed=82  loss=MILD_FOCAL thr=0.55 WF-BA=0.6508 TEST-BA=0.4340 MacroF1=0.4108 PPR=0.417
+Transformer  seed=82  loss=MILD_FOCAL thr=0.50 WF-BA=0.6529 TEST-BA=0.3947 MacroF1=0.3869 PPR=0.479
+Verified 45 learned runs; reports exported to /workspace/global-lnn-sci/artifacts

@@ -1,0 +1,52 @@
+{
+  "started_at_utc": "2026-10-16T07:29:45.523274+00:00",
+  "source_sha256": "f449dcae0d5ec2177904088e0da476a1f75739c133350e786ef71077dd2d09e8",
+  "git_commit": "1f3b6626e7eb8bb73d6052d87ba0bfab4afc8c1e",
+  "python": "3.12.14",
+  "device": "CPU",
+  "threads": 2,
+  "market": "SP500",
+  "feature_set": "COMMON_LOCAL",
+  "models": [
+    "LNN",
+    "LSTM",
+    "Transformer"
+  ],
+  "losses": [
+    "CE",
+    "MILD_WCE",
+    "MILD_FOCAL"
+  ],
+  "seeds": [
+    42,
+    52,
+    62,
+    72,
+    82
+  ],
+  "epochs_per_validation_fold_max": 100,
+  "final_epochs": 60,
+  "fold_validation_years": [
+    2019,
+    2020,
+    2021
+  ],
+  "test_years": [
+    2022,
+    2023,
+    2024,
+    2025
+  ],
+  "data_access_check": "PASS: 21 rows each for ^GSPC, ^VIX, ^TNX, DX-Y.NYB (2024-01)",
+  "packages": {
+    "torch": "2.14.1+cpu",
+    "numpy": "2.5.4",
+    "pandas": "3.0.6",
+    "scikit-learn": "1.9.1",
+    "scipy": "1.18.1",
+    "yfinance": "1.7.0",
+    "hmmlearn": "0.3.3",
+    "ncps": "1.0.1",
+    "nbclient": "0.11.0"
+  }
+}

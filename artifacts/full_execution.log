@@ -1,0 +1,18 @@
+/workspace/.venvs/global-lnn-sci/lib/python3.12/site-packages/nbformat/validator.py:434: MissingIDFieldWarning: Cell is missing an id field, this will become a hard error in future nbformat versions. You may want to use `normalize()` on your notebooks before validations (available since nbformat 5.1.4). Previous versions of nbformat are fixing this issue transparently, and will stop doing so in the future.
+  _validate(nbdict, ref, version, version_minor, relax_add_props)
+[IPKernelApp] WARNING | Kernel is running over TCP without encryption. All communication (including code and outputs) is sent in plain text and is susceptible to eavesdropping. Use IPC transport or launch with kernel manager-provisioned CurveZMQ keys to enable transport encryption.
+Completed cell 1
+Completed cell 3
+Completed cell 5
+Completed cell 7
+Completed cell 9
+Completed cell 11
+Completed cell 13
+Completed cell 14
+Completed cell 16
+Completed cell 18
+Completed cell 20
+Completed cell 22
+Completed cell 24
+Completed cell 26
+Completed cell 32
