@@ -1,0 +1,27 @@
+{
+  "started_at_utc": "2026-10-19T23:13:46.790996+00:00",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "device": "CPU",
+  "threads": 2,
+  "base_commit": "9941bda787bafb31cce1285869e44ea25661c88f",
+  "source_hashes": {
+    "SCI_v1_4_WALKFORWARD_NIKKEI225.ipynb": "c08bcccc8b27246e383f86fa55f9eb6b84eea103a9ca93b7ee6d44546cab4f69",
+    "preflight.py": "7c07d8e7b6fbadad7919c1795495dcedeb0e17786449a78ad660d432a2f08806",
+    "export_results.py": "e66f19e69670cd46e3be534f8fe311b4b5395aeb0c7396cb352fe959e777bff9",
+    "protocol_lock.json": "1f763484cc5765f40dc56cc3d4d1d0fc0c6225c3d6ec03c6e5c0b0f1716e3e95",
+    "run_experiment.py": "fdc40e4a75a4ce927b74c83df9af019946cb0c4b3d0d2261e0c5cf146a50ec3c",
+    "acquire_inputs.py": "01ba51983fb447fdb5b05950a15675f845662fd77704bf10ae35f96a2791175c"
+  },
+  "packages": {
+    "torch": "2.14.1+cpu",
+    "numpy": "2.5.4",
+    "pandas": "3.0.6",
+    "scikit-learn": "1.9.1",
+    "scipy": "1.18.1",
+    "yfinance": "1.7.0",
+    "hmmlearn": "0.3.3",
+    "ncps": "1.0.1",
+    "nbclient": "0.11.0"
+  },
+  "publish_requested": true
+}

@@ -1,0 +1,13 @@
+Python: 3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]
+Platform: Linux-6.18.55-x86_64-with-glibc2.41
+Torch: 2.14.1+cpu
+DEVICE: cpu
+✅ configuration ready
+Markets: ['KOSPI200', 'SP500', 'NASDAQ100', 'NIKKEI225', 'EUROSTOXX50']
+PREFLIGHT PASS: 3913 daily rows; 11 features; no test metrics inspected
+REAL DATA PREFLIGHT PASS WITH urllib/yfinance NETWORK ACQUISITION BLOCKED
+ONE-MONTH BOUNDARY / NO BACKFILL / NEGATIVE YIELD TEST PASS
+LNN real training-data forward/backward: all 3 losses PASS
+LSTM real training-data forward/backward: all 3 losses PASS
+Transformer real training-data forward/backward: all 3 losses PASS
+No test metrics evaluated; no protocol changes.

@@ -1,0 +1,45 @@
+{
+  "sources": {
+    "Close": {
+      "ticker": "^N225",
+      "sha256": "7448a878bf5f59ebe9daec1e8b9e0b3045e451da208732dcb3f128fdec76431e",
+      "downloaded_at_utc": "2026-10-18T22:27:00.239545+00:00"
+    },
+    "USD_JPY": {
+      "ticker": "JPY=X",
+      "sha256": "9590be5ce8a9634062ff78a7a352e649949591a6b3cd0c354f4f9af238f7855d",
+      "downloaded_at_utc": "2026-10-18T22:27:01.529593+00:00"
+    },
+    "VIX": {
+      "ticker": "^VIX",
+      "sha256": "245fd09afeb57e9b79d43d31c43d425b78642e800166ea378b1d4a79734b3069",
+      "downloaded_at_utc": "2026-10-18T22:27:01.888092+00:00"
+    },
+    "SP500": {
+      "ticker": "^GSPC",
+      "sha256": "dfac1d9aa5a4b042162baf52413102f113cf45f4915f4582d46749be84f5745b",
+      "downloaded_at_utc": "2026-10-18T22:27:02.245795+00:00"
+    },
+    "JP10Y": {
+      "repository_csv": "data/JAPAN_10Y_FRED_2010_2025.csv",
+      "series": "IRLTLT01JPM156N",
+      "frequency": "monthly",
+      "provider": "FRED/OECD",
+      "unit": "percent per annum",
+      "vintage": "repository-provided historical values; real-time vintages not supplied",
+      "sha256": "b006ce8b43b5a7b74e90d2311c50e70f7eca9344a8a9b8b7f5e9bf9f1d0d3b91",
+      "repository_csv_sha256": "8b6d3d421a8d8d0389b86c1f6ee03d27d3e2fb52c0f0a5560183690f25b3b4d1",
+      "loaded_at_utc": "2026-10-19T09:36:33.590683+00:00"
+    }
+  },
+  "timing_policy": {
+    "USD_JPY": "one source-observation lag, then Tokyo reindex and forward-fill",
+    "VIX": "one U.S. source-observation lag, then Tokyo reindex and forward-fill",
+    "SP500": "one U.S. source-observation lag, then Tokyo reindex and forward-fill",
+    "JP10Y": "repository CSV only; one monthly-period lag; month M usable from first day of M+1 JST; backward as-of/forward-fill on Tokyo dates; initial missing values never backfilled",
+    "Close": "conservative Tokyo day-end availability",
+    "US_inputs": "conservative source-date New York day-end availability",
+    "no_bfill": true
+  },
+  "availability_sha256": "88e33d2ad03e429760e6439f8c4a05f5d9d12146442229ce3133cd4634f0bbbb"
+}

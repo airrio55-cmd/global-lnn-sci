@@ -1,0 +1,12 @@
+{
+  "status": "validated",
+  "validated_at_utc": "2026-10-21T03:08:12.937205+00:00",
+  "learned_runs": 45,
+  "baseline_rows": 3,
+  "summary_rows": 9,
+  "prediction_files": 90,
+  "all_code_cells_executed": true,
+  "notebook_errors": 0,
+  "source_hashes_unchanged": true,
+  "thresholds_checked_against_validation_only": true
+}

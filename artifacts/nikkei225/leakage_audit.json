@@ -1,0 +1,86 @@
+{
+  "status": "passed",
+  "features": [
+    "Log_Ret",
+    "Vol20",
+    "Momentum20",
+    "Disparity20",
+    "RSI14",
+    "USD_JPY",
+    "VIX",
+    "SP500",
+    "JP10Y",
+    "JP10Y_Change1",
+    "JP10Y_Change5"
+  ],
+  "raw_rows": 3913,
+  "auxiliary_row_lag": {
+    "USD_JPY": 1,
+    "VIX": 1,
+    "SP500": 1,
+    "JP10Y_month_start_offset": 1
+  },
+  "effective_last_feature_row": "strictly before target row t",
+  "decision_contract": "predict close(t+20)/close(t) using only feature rows preceding t; no same-close execution assumption",
+  "monthly_rate_policy": "Exactly one monthly-period lag as requested: month M observation becomes eligible at 00:00 JST on the first day of M+1, then forward-filled to Tokyo trading dates. Never backfill initial missing dates. This is a lag convention, not verified historical release timestamps.",
+  "checks": [
+    "one-month lag, no backfill, no earlier effect from future monthly observations",
+    "all source-availability bounds precede Tokyo target cutoffs",
+    "future perturbation cannot affect past features",
+    "all input dates strictly before target dates",
+    "labels stay inside each split",
+    "scalers fitted on training only",
+    "41 fixed validation thresholds"
+  ],
+  "data_limit": "Yahoo/FRED/OECD histories are not point-in-time vintage databases. Audit verifies calendar causality under declared availability bounds, not historical vendor revisions or exact intraday publication timestamps.",
+  "splits": [
+    {
+      "split": "fold_1_train",
+      "samples": 2140,
+      "first_target": "2010-03-09",
+      "last_target": "2018-11-29"
+    },
+    {
+      "split": "fold_1_val",
+      "samples": 201,
+      "first_target": "2019-02-04",
+      "last_target": "2019-12-02"
+    },
+    {
+      "split": "fold_2_train",
+      "samples": 2381,
+      "first_target": "2010-03-09",
+      "last_target": "2019-12-02"
+    },
+    {
+      "split": "fold_2_val",
+      "samples": 202,
+      "first_target": "2020-02-04",
+      "last_target": "2020-12-02"
+    },
+    {
+      "split": "fold_3_train",
+      "samples": 2623,
+      "first_target": "2010-03-09",
+      "last_target": "2020-12-02"
+    },
+    {
+      "split": "fold_3_val",
+      "samples": 205,
+      "first_target": "2021-02-02",
+      "last_target": "2021-12-02"
+    },
+    {
+      "split": "final_train",
+      "samples": 2868,
+      "first_target": "2010-03-09",
+      "last_target": "2021-12-02"
+    },
+    {
+      "split": "test",
+      "samples": 938,
+      "first_target": "2022-02-02",
+      "last_target": "2025-12-02"
+    }
+  ]
+}
