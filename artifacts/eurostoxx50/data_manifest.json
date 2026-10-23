@@ -1,0 +1,26 @@
+{
+  "downloaded_at_utc": "2026-10-22T10:46:54.588769+00:00",
+  "sha256": "3e37fc4ec0c51d25170eda20d717cc662e5aed37efa5e3ce8a4d971dc32ec36a",
+  "tickers": {
+    "Close": "^STOXX50E",
+    "EUR_USD": "EURUSD=X",
+    "VIX": "^VIX",
+    "SP500": "^GSPC"
+  },
+  "DE10Y_source": {
+    "repository_csv": "data/GERMANY_10Y_FRED_2010_2025.csv",
+    "series": "IRLTLT01DEM156N",
+    "frequency": "monthly",
+    "provider": "FRED/OECD",
+    "unit": "percent per annum",
+    "vintage": "repository-provided historical values; real-time vintages not supplied",
+    "sha256": "5377494515093204aade09d32abc50685f6ba9afaab75b2702ac4f13418855d8",
+    "repository_csv_sha256": "cffe22b11c49a4fb99ea3e41713f7d7833475f06b6a94c9d29c75e9cf67244f0",
+    "loaded_at_utc": "2026-10-22T10:46:53.416427+00:00"
+  },
+  "availability_sha256": "d1f71551186f8a3f05524299d4ef27edbbeb8212cb3fc788f061ee6cb509fe85",
+  "rows": 4012,
+  "first_date": "2010-01-04",
+  "last_date": "2025-12-30",
+  "policy": "Frozen once before training; no data refresh or feature tuning based on test results."
+}

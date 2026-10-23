@@ -1,0 +1,11 @@
+Python: 3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]
+Platform: Linux-6.18.55-x86_64-with-glibc2.41
+Torch: 2.14.1+cpu
+DEVICE: cpu
+✅ configuration ready
+Markets: ['KOSPI200', 'SP500', 'NASDAQ100', 'NIKKEI225', 'EUROSTOXX50']
+PREFLIGHT PASS: 4012 daily rows; 11 features; no test metrics inspected
+LNN all 3 losses finite forward/backward PASS
+LSTM all 3 losses finite forward/backward PASS
+Transformer all 3 losses finite forward/backward PASS
+OFFLINE PREFLIGHT PASS. No test metrics evaluated.

@@ -1,0 +1,46 @@
+{
+  "sources": {
+    "Close": {
+      "ticker": "^STOXX50E",
+      "sha256": "322ba9f7c94637da8e1ba84be8f145dd19fe67a11fb4224162998a4d1849d3e1",
+      "downloaded_at_utc": "2026-10-22T10:46:51.257619+00:00"
+    },
+    "EUR_USD": {
+      "ticker": "EURUSD=X",
+      "sha256": "30c1623b9c5da36c8074fbec3bd9dc7ad1c04cb855e9fde56127a3b7d6b0a900",
+      "downloaded_at_utc": "2026-10-22T10:46:52.007546+00:00"
+    },
+    "VIX": {
+      "ticker": "^VIX",
+      "sha256": "245fd09afeb57e9b79d43d31c43d425b78642e800166ea378b1d4a79734b3069",
+      "downloaded_at_utc": "2026-10-22T10:46:52.690316+00:00"
+    },
+    "SP500": {
+      "ticker": "^GSPC",
+      "sha256": "dfac1d9aa5a4b042162baf52413102f113cf45f4915f4582d46749be84f5745b",
+      "downloaded_at_utc": "2026-10-22T10:46:53.405491+00:00"
+    },
+    "DE10Y": {
+      "repository_csv": "data/GERMANY_10Y_FRED_2010_2025.csv",
+      "series": "IRLTLT01DEM156N",
+      "frequency": "monthly",
+      "provider": "FRED/OECD",
+      "unit": "percent per annum",
+      "vintage": "repository-provided historical values; real-time vintages not supplied",
+      "sha256": "5377494515093204aade09d32abc50685f6ba9afaab75b2702ac4f13418855d8",
+      "repository_csv_sha256": "cffe22b11c49a4fb99ea3e41713f7d7833475f06b6a94c9d29c75e9cf67244f0",
+      "loaded_at_utc": "2026-10-22T10:46:53.416427+00:00"
+    }
+  },
+  "timing_policy": {
+    "EUR_USD": "one source-observation lag, then European reindex and forward-fill",
+    "VIX": "one U.S. source-observation lag, then European reindex and forward-fill",
+    "SP500": "one U.S. source-observation lag, then European reindex and forward-fill",
+    "DE10Y": "repository CSV only; one monthly-period lag; month M usable from first day of M+1 Europe/Berlin local time; backward as-of/forward-fill on European dates; initial missing values never backfilled",
+    "Close": "conservative European day-end availability",
+    "US_inputs": "conservative source-date New York day-end availability",
+    "EURUSD_availability": "Yahoo daily label is not an audited intraday publication timestamp. Bound availability at source-date New York day-end after one source-observation lag, and use only rows preceding target date; no same-day FX close is assumed available.",
+    "no_bfill": true
+  },
+  "availability_sha256": "d1f71551186f8a3f05524299d4ef27edbbeb8212cb3fc788f061ee6cb509fe85"
+}

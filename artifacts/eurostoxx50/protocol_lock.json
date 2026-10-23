@@ -1,0 +1,91 @@
+{
+  "created_at_utc": "2026-10-19T09:36:07.657689+00:00",
+  "base_commit": "2a64073cdd7ce83fb63451e8ae2f553e0dabde6c",
+  "base_notebook_sha256": "f449dcae0d5ec2177904088e0da476a1f75739c133350e786ef71077dd2d09e8",
+  "market": "EUROSTOXX50",
+  "feature_set": "COMMON_LOCAL",
+  "period": [
+    "2010-01-01",
+    "2025-12-31"
+  ],
+  "horizon": 20,
+  "lookback": 20,
+  "seeds": [
+    42,
+    52,
+    62,
+    72,
+    82
+  ],
+  "models": [
+    "LNN",
+    "LSTM",
+    "Transformer"
+  ],
+  "losses": [
+    "CE",
+    "MILD_WCE",
+    "MILD_FOCAL"
+  ],
+  "validation_years": [
+    2019,
+    2020,
+    2021
+  ],
+  "thresholds": {
+    "min": 0.3,
+    "max": 0.7,
+    "step": 0.01
+  },
+  "final_test": [
+    "2022-01-01",
+    "2025-12-31"
+  ],
+  "hidden_size": 128,
+  "num_layers": 1,
+  "dropout": 0.2,
+  "max_lr": 0.005,
+  "epochs": 100,
+  "patience": 10,
+  "batch_size": 64,
+  "final_epochs": 60,
+  "focal_gamma": 1.0,
+  "local_features": [
+    "EUR_USD",
+    "VIX",
+    "SP500",
+    "DE10Y",
+    "DE10Y_Change1",
+    "DE10Y_Change5"
+  ],
+  "feature_decision": "User-specified EURO STOXX 50 features and original experiment protocol locked before training; no test-driven changes.",
+  "unchanged_cell_hashes": {
+    "3": "5d95ea4677a1901f4fbd59684f3be40d179c82c2ae6333181d25f4ae25d8b0c1",
+    "11": "badd79d271f6695184865af8eede4a9bfaf4ac775942131aa1eb3dae1d674fbc",
+    "13": "9c567a7d79dd80792d72289d8d3ca55a7dc79145a013be2bbae5fe294ed128e4",
+    "14": "0994aa21e616e2d161b2b7061e38f2b01537798be6aaafb48d24bdab503b9375"
+  },
+  "packages": {
+    "torch": "2.14.1+cpu",
+    "numpy": "2.5.4",
+    "pandas": "3.0.6",
+    "scikit-learn": "1.9.1",
+    "scipy": "1.18.1",
+    "yfinance": "1.7.0",
+    "hmmlearn": "0.3.3",
+    "ncps": "1.0.1",
+    "nbclient": "0.11.0"
+  },
+  "auxiliary_lags": {
+    "EUR_USD_source_rows": 1,
+    "VIX_source_rows": 1,
+    "SP500_source_rows": 1,
+    "DE10Y_month_start_offset": 1
+  },
+  "german_rate_series": "IRLTLT01DEM156N",
+  "german_rate_frequency": "monthly",
+  "monthly_availability_policy": "Exactly one monthly-period lag: month M becomes eligible at midnight Europe/Berlin on the first day of M+1, then forward-filled on EURO STOXX 50 trading dates; no initial backfill. This is a lag convention, not verified historical release timestamps.",
+  "rate_warmup": "CSV begins January 2010; dates before February 2010 have no lagged rate. Keep missing, use inherited dropna/rolling-window rules; no artificial 2009 values or backward fill.",
+  "german_rate_path": "data/GERMANY_10Y_FRED_2010_2025.csv",
+  "german_rate_sha256": "cffe22b11c49a4fb99ea3e41713f7d7833475f06b6a94c9d29c75e9cf67244f0"
+}
