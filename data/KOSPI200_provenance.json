@@ -1,0 +1,18 @@
+{
+  "file": "KOSPI200_daily_2010_2025.csv",
+  "original_uploaded_filename": "KOSPI_200.csv",
+  "source": "User-provided original data used in their existing research paper; identified as KOSPI200 by the user.",
+  "sha256": "7612a3ea53427dcf0148ab6b1e22f34500e6bff6fe1f23e2da793e40b0b82c50",
+  "preservation": "Original uploaded bytes preserved, including 2026 rows; filename matches existing notebook configuration.",
+  "experiment_filter": "Use only 2010-01-01 through 2025-12-31; no 2026 rows in experiment.",
+  "columns": [
+    "Date",
+    "종가",
+    "고가",
+    "저가",
+    "시가",
+    "거래량"
+  ],
+  "close_column": "종가",
+  "validation_limit": "Date uniqueness and finite positive closes checked for 2010–2025; complete exchange-calendar coverage not yet verified."
+}
