@@ -1,0 +1,69 @@
+{
+  "sources": {
+    "Close": {
+      "sha256": "15f4667d06d97b294f87bdaee24769683911965ef32dd2b8663ff414df2dc6b3",
+      "source": "original user CSV, no target imputation"
+    },
+    "USD_KRW": {
+      "ticker": "KRW=X",
+      "sha256": "fe76a87aa1d34fe993a43bdc0646e23eb1b07ebf835ab319e48344082752a974",
+      "downloaded_at_utc": "2026-10-24T14:04:20.568518+00:00"
+    },
+    "SOX": {
+      "ticker": "^SOX",
+      "sha256": "b0d647a9ae3e7a065afc436739481948e967fb2ec370154a7bd1e9953b1611fd",
+      "downloaded_at_utc": "2026-10-24T14:04:21.314419+00:00"
+    },
+    "VIX": {
+      "ticker": "^VIX",
+      "sha256": "245fd09afeb57e9b79d43d31c43d425b78642e800166ea378b1d4a79734b3069",
+      "downloaded_at_utc": "2026-10-24T14:04:21.699983+00:00"
+    }
+  },
+  "primary": {
+    "path": "KOSPI200_daily_2010_2025.csv",
+    "sha256": "7612a3ea53427dcf0148ab6b1e22f34500e6bff6fe1f23e2da793e40b0b82c50",
+    "provenance_path": "data/KOSPI200_provenance.json",
+    "provenance_sha256": "514735890b546d4dd0b65b5e1dee8387b12fd31d134a53b876840e23de7f8466",
+    "source": "User-provided original research KOSPI200 data; identity attested by user",
+    "selected_columns": {
+      "Date": "Date",
+      "Close": "\uc885\uac00"
+    },
+    "period_filter": [
+      "2010-01-01",
+      "2025-12-31"
+    ],
+    "raw_rows": 3935,
+    "selected_rows": 3894,
+    "calendar": {
+      "status": "passed_empirical_integrity",
+      "policy": "Use only actual observed dates of original CSV within 2010\u20132025. Horizon/lookback count these observations; no imputation, date insertion or backfill. XKRX discrepancy not confirmed missing KRX observations.",
+      "XKRX_expected_rows": 3939,
+      "observed_rows": 3894,
+      "difference": 45,
+      "classification": "calendar implementation discrepancy",
+      "discrepancy_not_confirmed_as_missing_KRX_observations": true,
+      "pykrx_verification": "unavailable because current index endpoint returned empty data (user-reported); cloud acquisition independently blocked by proxy CONNECT 403",
+      "pykrx_verification_claimed": false,
+      "duplicates": 0,
+      "Close_NaN": 0,
+      "Close_nonpositive": 0,
+      "date_ascending": true,
+      "period": [
+        "2010-01-01",
+        "2025-12-31"
+      ],
+      "first_observation": "2010-01-04",
+      "last_observation": "2025-12-30",
+      "target_imputation": false
+    }
+  },
+  "availability_sha256": "1c8850d04f340b6685b21322045e8d8e3c74c07109b5f62f3eccbe662344b49d",
+  "timing_policy": {
+    "target": "Use observed CSV dates only; no reindexing or filling target Close",
+    "auxiliary": "One source-observation lag, reindex to observed target dates, auxiliary-only ffill; never bfill",
+    "availability": "Conservative source-date New York day-end including USDKRW; target Seoul day-end; all input rows precede target row",
+    "limitations": "Exact daily FX publication timestamp and historical revisions unavailable; not point-in-time-vintage certification"
+  }
+}

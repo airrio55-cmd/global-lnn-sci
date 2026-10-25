@@ -1,0 +1,22 @@
+{
+  "status": "passed_empirical_integrity",
+  "policy": "Use only actual observed dates of original CSV within 2010\u20132025. Horizon/lookback count these observations; no imputation, date insertion or backfill. XKRX discrepancy not confirmed missing KRX observations.",
+  "XKRX_expected_rows": 3939,
+  "observed_rows": 3894,
+  "difference": 45,
+  "classification": "calendar implementation discrepancy",
+  "discrepancy_not_confirmed_as_missing_KRX_observations": true,
+  "pykrx_verification": "unavailable because current index endpoint returned empty data (user-reported); cloud acquisition independently blocked by proxy CONNECT 403",
+  "pykrx_verification_claimed": false,
+  "duplicates": 0,
+  "Close_NaN": 0,
+  "Close_nonpositive": 0,
+  "date_ascending": true,
+  "period": [
+    "2010-01-01",
+    "2025-12-31"
+  ],
+  "first_observation": "2010-01-04",
+  "last_observation": "2025-12-30",
+  "target_imputation": false
+}

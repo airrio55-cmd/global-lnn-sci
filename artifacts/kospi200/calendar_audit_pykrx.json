@@ -1,0 +1,15 @@
+{
+  "checked_at_utc": "2026-10-24T13:21:42.399968+00:00",
+  "status": "blocked_pykrx_acquisition_or_validation",
+  "reference": "pykrx stock.get_index_ohlcv(\"20100101\", \"20251231\", \"1028\")",
+  "ticker": "1028",
+  "source_sha256": "7612a3ea53427dcf0148ab6b1e22f34500e6bff6fe1f23e2da793e40b0b82c50",
+  "exchange_calendar_used_as_truth": false,
+  "actual_missing_dates": null,
+  "training_started": false,
+  "imputation": false,
+  "pykrx_version": "1.2.9",
+  "error_type": "ProxyError",
+  "error": "HTTPSConnectionPool(host='data.krx.co.kr', port=443): Max retries exceeded with url: /comm/bldAttendant/getJsonData.cmd (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))",
+  "note": "KRX source unavailable or invalid: previous XKRX differences are unconfirmed, not actual missing observations. No verified CSV created by the failed attempt."
+}
