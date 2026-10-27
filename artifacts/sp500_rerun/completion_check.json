@@ -1,0 +1,14 @@
+{
+  "status": "validated",
+  "validated_at_utc": "2026-10-27T02:56:03.814991+00:00",
+  "learned_runs": 45,
+  "baseline_rows": 3,
+  "summary_rows": 9,
+  "prediction_files": 90,
+  "checkpoint_files": 45,
+  "all_checkpoint_predictions_reproduced": true,
+  "all_code_cells_executed": true,
+  "notebook_errors": 0,
+  "source_hashes_unchanged": true,
+  "thresholds_checked_against_validation_only": true
+}

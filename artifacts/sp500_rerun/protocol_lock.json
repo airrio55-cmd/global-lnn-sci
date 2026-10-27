@@ -1,0 +1,92 @@
+{
+  "created_at_utc": "2026-10-26T00:09:32.093777+00:00",
+  "base_commit": "0f27183c73d5de4d366ba430ae235315cc10c319",
+  "base_notebook_sha256": "f449dcae0d5ec2177904088e0da476a1f75739c133350e786ef71077dd2d09e8",
+  "market": "SP500",
+  "feature_set": "COMMON_LOCAL",
+  "period": [
+    "2010-01-01",
+    "2025-12-31"
+  ],
+  "horizon": 20,
+  "lookback": 20,
+  "seeds": [
+    42,
+    52,
+    62,
+    72,
+    82
+  ],
+  "models": [
+    "LNN",
+    "LSTM",
+    "Transformer"
+  ],
+  "losses": [
+    "CE",
+    "MILD_WCE",
+    "MILD_FOCAL"
+  ],
+  "validation_years": [
+    2019,
+    2020,
+    2021
+  ],
+  "thresholds": {
+    "min": 0.3,
+    "max": 0.7,
+    "step": 0.01
+  },
+  "final_test": [
+    "2022-01-01",
+    "2025-12-31"
+  ],
+  "hidden_size": 128,
+  "num_layers": 1,
+  "dropout": 0.2,
+  "max_lr": 0.005,
+  "epochs": 100,
+  "patience": 10,
+  "batch_size": 64,
+  "final_epochs": 60,
+  "focal_gamma": 1.0,
+  "local_features": [
+    "VIX",
+    "VIX_Change1",
+    "VIX_Change5",
+    "US10Y",
+    "US10Y_Change1",
+    "US10Y_Change5",
+    "DXY_LogRet1",
+    "DXY_LogRet5"
+  ],
+  "feature_decision": "Original archived SP500 v1.4 COMMON_LOCAL feature map and lag rules retained before rerun. No feature or parameter selection from archived/rerun test results.",
+  "unchanged_cell_hashes": {
+    "3": "5d95ea4677a1901f4fbd59684f3be40d179c82c2ae6333181d25f4ae25d8b0c1",
+    "11": "badd79d271f6695184865af8eede4a9bfaf4ac775942131aa1eb3dae1d674fbc",
+    "13": "9c567a7d79dd80792d72289d8d3ca55a7dc79145a013be2bbae5fe294ed128e4",
+    "14": "0994aa21e616e2d161b2b7061e38f2b01537798be6aaafb48d24bdab503b9375",
+    "16": "a513a2887d17f26b1c18e596fa62ede5fa4fca9c0eaaef486240ffc721a9e33b"
+  },
+  "packages": {
+    "torch": "2.14.1+cpu",
+    "numpy": "2.5.4",
+    "pandas": "3.0.6",
+    "scikit-learn": "1.9.1",
+    "scipy": "1.18.1",
+    "yfinance": "1.7.0",
+    "hmmlearn": "0.3.3",
+    "ncps": "1.0.1",
+    "nbclient": "0.11.0"
+  },
+  "auxiliary_lags": {
+    "VIX_source_rows": 0,
+    "US10Y_source_rows": 0,
+    "DXY_source_rows": 0
+  },
+  "availability_policy": "Raw auxiliaries source-row lag 0 as original SP500 config; X[i-20:i] excludes target date. All source-date day-end availability bounds precede target-date 16:00 New York cutoff.",
+  "archived_artifact_sha256": {
+    "artifacts/seed_results.csv": "a13740feacb0821ebd8ce3bcacbdcfefac20c080bfcb4be845d579056a8dd856",
+    "artifacts/SCI_v1_4_WALKFORWARD.completed.ipynb": "970a4e69f976f3ae3b88d53828be6f06a6cc50fe76608b7a6ae7d3824116d0cd"
+  }
+}

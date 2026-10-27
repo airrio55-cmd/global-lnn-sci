@@ -1,0 +1,26 @@
+{
+  "sources": {
+    "Close": {
+      "ticker": "^GSPC",
+      "sha256": "2611cb8fd867c40f8554543a332b24963058cb061f04ec4a1e076c52e5210e7a",
+      "downloaded_at_utc": "2026-10-26T00:09:36.678207+00:00"
+    },
+    "VIX": {
+      "ticker": "^VIX",
+      "sha256": "245fd09afeb57e9b79d43d31c43d425b78642e800166ea378b1d4a79734b3069",
+      "downloaded_at_utc": "2026-10-26T00:09:37.065879+00:00"
+    },
+    "US10Y": {
+      "ticker": "^TNX",
+      "sha256": "4555a76e607badafe42acc5272c108d5efa91a8538b596aab2c9a3a69ff93316",
+      "downloaded_at_utc": "2026-10-26T00:09:37.920615+00:00"
+    },
+    "DXY": {
+      "ticker": "DX-Y.NYB",
+      "sha256": "68c0d476b509fc31bb30f93fa7485d99f513b4d6339bd2bb5f845d9c19cbbf78",
+      "downloaded_at_utc": "2026-10-26T00:09:38.617097+00:00"
+    }
+  },
+  "availability_sha256": "fd247c46390a50d6006a0cab5575c35c2e57257d1659c4c8b36aa8e3429b0be7",
+  "policy": "Original archived SP500 source lag 0; conservative source-date New York day-end; sequence excludes target row; no initial bfill."
+}
