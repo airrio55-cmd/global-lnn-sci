@@ -1,0 +1,27 @@
+{
+  "states": 3,
+  "inputs": [
+    "Log_Ret",
+    "Vol20"
+  ],
+  "classifier": "GaussianHMM, diagonal covariance",
+  "n_iter": 300,
+  "tol": 0.0001,
+  "min_covar": 0.0001,
+  "random_seed": 20261028,
+  "refit": "monthly expanding; fit rows strictly before first frozen-market observation in each test month",
+  "initial_history": "2010\u20132021",
+  "assignment": "target-date t uses filtered state at latest frozen observation strictly before t (t-1 observation). No same-target close or future observation. Forward filtering only, never full-month Viterbi/smoothing.",
+  "state_order": "Sort training-history posterior-weighted mean original Vol20 ascending; Low/Normal/High; relearned per market/month using training history only",
+  "bootstrap": {
+    "resamples": 2000,
+    "block_length_observations": 20,
+    "method": "circular date-block bootstrap over full test chronology; apply original regime mask after resampling; mean five seed BAs minus Persistence BA",
+    "seed": 20261028,
+    "ci": "95% percentile; require two classes and >=20 regime samples in resample"
+  },
+  "small_regime_flag": "N<50 or minority-label count<10; CIs exploratory, no formal significance claims",
+  "predictive_training": false,
+  "best_selection": "Read fixed cross_market_statistics/market_best_models.csv; never reselect using regimes",
+  "no_tuning": true
+}

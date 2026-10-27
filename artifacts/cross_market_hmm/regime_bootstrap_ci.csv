@@ -1,0 +1,16 @@
+Market,Regime,Model,Loss,N,Resamples,Valid_resamples,Block_length,CI_low,CI_high,Small_sample,Interpretation
+SP500,Low,LNN,MILD_WCE,335,2000,2000,20,-0.20462374213331044,0.1126349636478689,False,exploratory conditional fixed-regime CI; not refitting HMM or accounting for model-selection uncertainty
+SP500,Normal,LNN,MILD_WCE,412,2000,2000,20,-0.25085120667741845,0.1574160324810642,False,exploratory conditional fixed-regime CI; not refitting HMM or accounting for model-selection uncertainty
+SP500,High,LNN,MILD_WCE,216,2000,2000,20,-0.29542780435599458,0.22926976001006147,False,exploratory conditional fixed-regime CI; not refitting HMM or accounting for model-selection uncertainty
+NASDAQ100,Low,Transformer,CE,140,2000,1987,20,-0.068859590429845949,0.070596638655462243,False,exploratory conditional fixed-regime CI; not refitting HMM or accounting for model-selection uncertainty
+NASDAQ100,Normal,Transformer,CE,451,2000,2000,20,-0.13152289167976725,0.060794172932330755,False,exploratory conditional fixed-regime CI; not refitting HMM or accounting for model-selection uncertainty
+NASDAQ100,High,Transformer,CE,372,2000,2000,20,-0.12398892886392882,0.18752692111444719,False,exploratory conditional fixed-regime CI; not refitting HMM or accounting for model-selection uncertainty
+NIKKEI225,Low,LNN,CE,458,2000,2000,20,-0.13385462720055863,0.15835933026866569,False,exploratory conditional fixed-regime CI; not refitting HMM or accounting for model-selection uncertainty
+NIKKEI225,Normal,LNN,CE,363,2000,2000,20,-0.089251876907785216,0.24567119800414194,False,exploratory conditional fixed-regime CI; not refitting HMM or accounting for model-selection uncertainty
+NIKKEI225,High,LNN,CE,117,2000,1998,20,0.028889974543276336,0.47275349650349652,False,exploratory conditional fixed-regime CI; not refitting HMM or accounting for model-selection uncertainty
+EUROSTOXX50,Low,LNN,MILD_FOCAL,463,2000,2000,20,-0.050051574686604872,0.16238904976368027,False,exploratory conditional fixed-regime CI; not refitting HMM or accounting for model-selection uncertainty
+EUROSTOXX50,Normal,LNN,MILD_FOCAL,347,2000,2000,20,-0.077358720039535506,0.18632757367682432,False,exploratory conditional fixed-regime CI; not refitting HMM or accounting for model-selection uncertainty
+EUROSTOXX50,High,LNN,MILD_FOCAL,154,2000,2000,20,-0.0054204533078889968,0.29309203824726537,False,exploratory conditional fixed-regime CI; not refitting HMM or accounting for model-selection uncertainty
+KOSPI200,Low,LSTM,CE,137,2000,1997,20,-0.092195361403674014,0.2572473867595817,False,exploratory conditional fixed-regime CI; not refitting HMM or accounting for model-selection uncertainty
+KOSPI200,Normal,LSTM,CE,407,2000,2000,20,-0.11400166255892526,0.051049024607930607,False,exploratory conditional fixed-regime CI; not refitting HMM or accounting for model-selection uncertainty
+KOSPI200,High,LSTM,CE,391,2000,2000,20,-0.088452932457568009,0.12023518251238634,False,exploratory conditional fixed-regime CI; not refitting HMM or accounting for model-selection uncertainty
