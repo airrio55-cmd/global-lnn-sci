@@ -1,0 +1,14 @@
+{
+  "status": "validated",
+  "validated_at_utc": "2026-10-27T05:11:42.514657+00:00",
+  "markets": 5,
+  "learned_runs_in_source_tables": 225,
+  "majority_vote_pairs": 5,
+  "McNemar_tests": 5,
+  "seed_specific_McNemar_tests": 0,
+  "SP500_source": "artifacts/sp500_rerun",
+  "archived_SP500_excluded": true,
+  "source_hashes_unchanged": true,
+  "majority_votes_contingencies_exact_p_and_Holm_checked": true,
+  "training_performed": false
+}

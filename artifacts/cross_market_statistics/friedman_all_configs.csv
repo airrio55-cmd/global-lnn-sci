@@ -1,0 +1,2 @@
+Comparison,N_markets,N_configurations,Friedman_statistic,raw_p,Kendall_W,Holm_p,significant
+all_configs,5,9,3.8400000000000034,0.87126289168242677,0.096000000000000085,1,False

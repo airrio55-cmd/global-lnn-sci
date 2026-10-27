@@ -1,0 +1,6 @@
+Market,status,N,baseline,labels
+SP500,paired_integrity_passed,963,Reproduced original deterministic Close(t)>Close(t-20) on frozen input; BA/F1/accuracy match saved baseline,Verified against frozen 20-observation target; identical across all five seeds
+NASDAQ100,paired_integrity_passed,963,Reproduced original deterministic Close(t)>Close(t-20) on frozen input; BA/F1/accuracy match saved baseline,Verified against frozen 20-observation target; identical across all five seeds
+NIKKEI225,paired_integrity_passed,938,Reproduced original deterministic Close(t)>Close(t-20) on frozen input; BA/F1/accuracy match saved baseline,Verified against frozen 20-observation target; identical across all five seeds
+EUROSTOXX50,paired_integrity_passed,964,Reproduced original deterministic Close(t)>Close(t-20) on frozen input; BA/F1/accuracy match saved baseline,Verified against frozen 20-observation target; identical across all five seeds
+KOSPI200,paired_integrity_passed,935,Reproduced original deterministic Close(t)>Close(t-20) on frozen input; BA/F1/accuracy match saved baseline,Verified against frozen 20-observation target; identical across all five seeds
