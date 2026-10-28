@@ -1,0 +1,18 @@
+{
+  "status": "validated",
+  "validated_at_utc": "2026-10-28T03:30:43.042230+00:00",
+  "markets": 5,
+  "performance_combinations": 160,
+  "primary_summary_rows": 40,
+  "bootstrap_CIs": 30,
+  "same_signal_close_execution": false,
+  "signal_effective_return_order_verified": true,
+  "independent_execution_and_accounting_reconstruction_passed": true,
+  "future_price_return_perturbation_positions_invariant": true,
+  "past_returns_unaffected_by_future_perturbation": true,
+  "unit_leverage_verified": true,
+  "entry_and_terminal_exit_costs_verified": true,
+  "cost_wealth_monotonicity_passed": true,
+  "source_inputs_unchanged": true,
+  "predictive_and_HMM_training": false
+}

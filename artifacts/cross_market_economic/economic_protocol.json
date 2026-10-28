@@ -1,0 +1,63 @@
+{
+  "markets": {
+    "SP500": "artifacts/sp500_rerun",
+    "NASDAQ100": "artifacts/nasdaq100",
+    "NIKKEI225": "artifacts/nikkei225",
+    "EUROSTOXX50": "artifacts/eurostoxx50",
+    "KOSPI200": "artifacts/kospi200"
+  },
+  "frozen_best": {
+    "SP500": [
+      "LNN",
+      "MILD_WCE"
+    ],
+    "NASDAQ100": [
+      "Transformer",
+      "CE"
+    ],
+    "NIKKEI225": [
+      "LNN",
+      "CE"
+    ],
+    "EUROSTOXX50": [
+      "LNN",
+      "MILD_FOCAL"
+    ],
+    "KOSPI200": [
+      "LSTM",
+      "CE"
+    ]
+  },
+  "prediction_rule": "Original saved per-seed threshold (strict probability > threshold); five-seed majority (>=3), matching cross-market statistics; no reselection",
+  "execution": "Close-only: signal at t, execute at next frozen observed close t+1, earn price return from t+1 to t+2 onward. Same signal-date close execution forbidden. Fees charged at execution-date close.",
+  "accounting": "net_return_t = position_at_previous_close * close_to_close_return_t - per_side_fee * abs(position_at_close - previous_position). Final liquidation fee at last close.",
+  "evaluation": "Per-market common window: first saved prediction date + one observed date through last frozen 2025 observation. Start flat before first execution; no 2026 rows. All benchmarks use identical dates.",
+  "daily_tail": "Last available signal held through evaluation end; tail dates flagged as stale. No new predictions fabricated.",
+  "nonoverlap": "Schedule signals every 20 frozen raw observation dates starting at first prediction; execute next close; hold at most 20 observed intervals, then next scheduled signal or cash if absent. No favorable schedule phase selection.",
+  "cost_round_trip_bps": [
+    0,
+    10,
+    25,
+    50
+  ],
+  "primary_round_trip_bps": 10,
+  "per_side": "Half round-trip cost, charged per unit one-way turnover; index tracking ETF/future stylized fee, not index tradability",
+  "cash_return": 0,
+  "risk_free_rate": 0,
+  "leverage_max": 1,
+  "return_basis": "Frozen Close price returns in local index currency; no dividends, FX conversion, financing, taxes, tracking error or explicit slippage beyond fixed stylized costs",
+  "annualization": 252,
+  "trades": "Number of one-way entries/exits; round trips separately; average holding period in observed close intervals",
+  "hit_rate": "Fraction positive net daily returns among days with previous-close equity exposure >0; not forecast accuracy",
+  "bootstrap": {
+    "method": "paired noncircular moving date-block bootstrap of realized primary daily net returns; no extra trades invented at block joins",
+    "block_length": 20,
+    "resamples": 2000,
+    "seed": 20261028,
+    "CI": "95% percentile, exploratory; no formal multiple-comparison significance claim"
+  },
+  "regime": "Use saved causal HMM label on realized return date, no HMM refit, no regime-conditioned signal changes; conditional annualized return is geometric mean over regime dates raised to252, not contiguous-regime CAGR",
+  "predictive_training": false,
+  "threshold_tuning": false,
+  "HMM_training": false
+}
