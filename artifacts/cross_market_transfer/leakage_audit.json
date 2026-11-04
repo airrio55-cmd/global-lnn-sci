@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "source_max_year": 2021,
+  "source_fold_cutoffs": [
+    2018,
+    2019,
+    2020,
+    2021
+  ],
+  "no_future_target_validation_source": true,
+  "per_split_20_observation_label_purge": true,
+  "sequence_excludes_target_row": true,
+  "training_only_scalers": true,
+  "future_feature_perturbation": true,
+  "local_features_used": false,
+  "original_base_results_unchanged": true
+}

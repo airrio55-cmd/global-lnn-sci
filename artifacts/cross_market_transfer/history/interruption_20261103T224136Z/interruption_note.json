@@ -1,0 +1,6 @@
+{
+  "cause": "Process absent; no shutdown cause recorded",
+  "completed_final_runs": 47,
+  "code_protocol_and_input_checksums_verified": true,
+  "resume": "unchanged completed checkpoints reused"
+}

@@ -1,0 +1,106 @@
+{
+  "experiment": "Leave-One-Market-Out pooled source pretraining, paired target Scratch vs Transfer",
+  "feature_set": "TRANSFER_COMMON",
+  "features": [
+    "Log_Ret",
+    "Vol20",
+    "Momentum20",
+    "Disparity20",
+    "RSI14"
+  ],
+  "architecture": "Original ncps.torch.LTC LNN",
+  "hidden_size": 128,
+  "layers": 1,
+  "dropout": 0.2,
+  "lookback": 20,
+  "horizon": 20,
+  "seeds": [
+    42,
+    52,
+    62,
+    72,
+    82
+  ],
+  "loss": "CE",
+  "definition_notebook": "artifacts/sp500_rerun/SCI_v1_4_WALKFORWARD_SP500.ipynb",
+  "period": [
+    "2010-01-01",
+    "2025-12-31"
+  ],
+  "source_cutoff_years": [
+    2018,
+    2019,
+    2020,
+    2021
+  ],
+  "source_internal_validation": "For cutoff C: gradient training through C-1; held-out source validation C. Per-market train-only scalers. Purge20 observation labels at both ends. Equal-market mean validation BA early stopping.",
+  "source_balanced_batch": {
+    "source_markets": 4,
+    "samples_each": 16,
+    "total_batch": 64,
+    "steps_per_epoch": "ceil(max source train sample count /16), cycle/reshuffle smaller sources"
+  },
+  "source_pretraining": {
+    "optimizer": "AdamW",
+    "weight_decay": 0.0001,
+    "scheduler": "OneCycleLR",
+    "max_lr": 0.005,
+    "max_epochs": 100,
+    "patience": 10,
+    "gradient_norm_clip": 1
+  },
+  "target_training": {
+    "applies_identically_to": [
+      "Scratch",
+      "Transfer"
+    ],
+    "max_lr": 0.001,
+    "optimizer": "AdamW",
+    "weight_decay": 0.0001,
+    "scheduler": "OneCycleLR",
+    "batch_size": 64,
+    "fold_max_epochs": 100,
+    "fold_patience": 10,
+    "final_epochs": 60,
+    "fine_tune": "all parameters; no partial freezing or head selection",
+    "only_initialization_differs": true
+  },
+  "target_validation_folds": [
+    2019,
+    2020,
+    2021
+  ],
+  "threshold_grid": {
+    "min": 0.3,
+    "max": 0.7,
+    "step": 0.01
+  },
+  "threshold_selection": "Original frozen validation-only pooled-fold rule, independently for each method/seed; no target test data",
+  "test": [
+    "2022-01-01",
+    "2025-12-31"
+  ],
+  "source_membership": "All other four markets, target excluded from pretraining fit and validation; never reselect source sets",
+  "economic_secondary": "Only positive mean Delta BA targets; unchanged cross_market_economic daily protocol at10bps round trip",
+  "bootstrap_resamples": 10000,
+  "bootstrap_seed": 20261028,
+  "states_reused_only": "artifacts/cross_market_hmm/regime_assignments_all_markets.csv",
+  "test_driven_tuning": false,
+  "success_rules": {
+    "Transfer_positive": "mean Delta BA>0",
+    "Robust_transfer_positive": ">=4/5 seed Delta BA>0",
+    "Metric_consistent_transfer": "mean Delta BA>0 and mean Delta Macro F1>0",
+    "Negative_transfer": "mean Delta BA<0"
+  },
+  "packages": {
+    "torch": "2.14.1+cpu",
+    "numpy": "2.5.4",
+    "pandas": "3.0.6",
+    "scikit-learn": "1.9.1",
+    "scipy": "1.18.1",
+    "yfinance": "1.7.0",
+    "hmmlearn": "0.3.3",
+    "ncps": "1.0.1",
+    "nbformat": "5.11.1"
+  }
+}

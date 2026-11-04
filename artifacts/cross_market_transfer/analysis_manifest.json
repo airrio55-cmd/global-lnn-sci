@@ -1,0 +1,19 @@
+{
+  "status": "completed",
+  "completed_at_utc": "2026-11-04T05:29:53.538711+00:00",
+  "protocol_sha256": "dca2030c479b31bea8b97d6cff1eb427ca71a8a39b68ae1ddbc745575fb71ac1",
+  "input_sha256": {
+    "artifacts/sp500_rerun/market_input.csv": "ac8ae4157cfb7c478d7d8d48a7cb0f3482296e497ba831188f3dd00339f6003c",
+    "artifacts/nasdaq100/market_input.csv": "ad5139d6895f3274307615d990bbd62dd194f0a949aed6f36243a403b11bf4a3",
+    "artifacts/nikkei225/market_input.csv": "48713c71038143b96bf57bd01415b206c398949e53697cc828522351df92c67d",
+    "artifacts/eurostoxx50/market_input.csv": "3e37fc4ec0c51d25170eda20d717cc662e5aed37efa5e3ce8a4d971dc32ec36a",
+    "artifacts/kospi200/market_input.csv": "5b4ab3d0985784d5353f24adebe48255a9fd088519df8e294950f41b87cfc85c"
+  },
+  "HMM_assignment_sha256": "3ab4200dfb40fd03383b31be412aafd398ff5b66b4aea2a03011b9e21c1ec0b8",
+  "economic_protocol_sha256": "f29ec312f6197b43cc2f986284ab6cd97358fbebdd7445444dddd713ddc23924",
+  "new_feature_set": "TRANSFER_COMMON, not COMMON_LOCAL",
+  "pretraining_source_sets_fixed": true,
+  "source_2022_2025_training_used": false,
+  "target_hyperparameter_selection_from_test": false,
+  "source_combination_attribution": "Pooled LOMO only; no isolated US/non-US or Japan/Europe-to-Korea causal attribution possible."
+}

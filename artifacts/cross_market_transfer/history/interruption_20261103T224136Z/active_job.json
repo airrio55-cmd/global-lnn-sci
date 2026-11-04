@@ -1,0 +1,9 @@
+{
+  "phase": "source_pretraining",
+  "Target": "KOSPI200",
+  "Seed": 72,
+  "cutoff": 2021,
+  "epoch": 11,
+  "max_epochs": 100,
+  "updated_at_utc": "2026-11-03T10:51:31.077529+00:00"
+}

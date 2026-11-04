@@ -1,0 +1,21 @@
+{
+  "input_sha256": {
+    "artifacts/sp500_rerun/market_input.csv": "ac8ae4157cfb7c478d7d8d48a7cb0f3482296e497ba831188f3dd00339f6003c",
+    "artifacts/nasdaq100/market_input.csv": "ad5139d6895f3274307615d990bbd62dd194f0a949aed6f36243a403b11bf4a3",
+    "artifacts/nikkei225/market_input.csv": "48713c71038143b96bf57bd01415b206c398949e53697cc828522351df92c67d",
+    "artifacts/eurostoxx50/market_input.csv": "3e37fc4ec0c51d25170eda20d717cc662e5aed37efa5e3ce8a4d971dc32ec36a",
+    "artifacts/kospi200/market_input.csv": "5b4ab3d0985784d5353f24adebe48255a9fd088519df8e294950f41b87cfc85c"
+  },
+  "feature_set": "TRANSFER_COMMON",
+  "features": [
+    "Log_Ret",
+    "Vol20",
+    "Momentum20",
+    "Disparity20",
+    "RSI14"
+  ],
+  "definition_notebook_sha256": "65bbaf40ebef817e20967a406302f02aaac8b728e2576554e50c43161b1829d7",
+  "protocol_sha256": "dca2030c479b31bea8b97d6cff1eb427ca71a8a39b68ae1ddbc745575fb71ac1",
+  "normalization": "separate per-market, gradient-training-only StandardScaler",
+  "source_validation_rule": "last eligible pretraining year held out, label tails purged; stricter fold-specific source cutoff prevents target validation leakage"
+}

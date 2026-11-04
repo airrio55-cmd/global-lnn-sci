@@ -1,0 +1,8 @@
+{
+  "status": "running",
+  "completed_final_runs": 11,
+  "expected_final_runs": 50,
+  "completed_checkpoints": 64,
+  "expected_checkpoints": 300,
+  "updated_at_utc": "2026-10-29T16:11:34.684280+00:00"
+}

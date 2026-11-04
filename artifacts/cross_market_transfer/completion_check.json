@@ -1,0 +1,16 @@
+{
+  "status": "validated",
+  "final_runs": 50,
+  "scratch_runs": 25,
+  "transfer_runs": 25,
+  "pretraining_checkpoints": 100,
+  "target_fold_checkpoints": 150,
+  "final_checkpoints": 50,
+  "validation_prediction_files": 50,
+  "test_prediction_files": 50,
+  "final_checkpoint_inference_verified": true,
+  "validation_only_thresholds_verified": true,
+  "leakage_audit": "passed",
+  "source_inputs_unchanged": true,
+  "frozen_source_and_target_training_rules": true
+}

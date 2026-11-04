@@ -1,0 +1,23 @@
+{
+  "source_sha256": {
+    "run_transfer.py": "53d9e8600cbac913233dc7b7d5d3ed3460fed1fa52a3830767bef0c004965e68",
+    "finalize.py": "59e5615f43ba7cbeb97a4bf7aef10c21b2e4e76cf5ef216781663a8898475dc2",
+    "report.py": "6c8285b7549f53611da44db25b8a430e0df6bed3781fe3c235cc6db4af931a64",
+    "transfer_protocol.json": "dca2030c479b31bea8b97d6cff1eb427ca71a8a39b68ae1ddbc745575fb71ac1"
+  },
+  "packages": {
+    "torch": "2.14.1+cpu",
+    "numpy": "2.5.4",
+    "pandas": "3.0.6",
+    "scikit-learn": "1.9.1",
+    "scipy": "1.18.1",
+    "yfinance": "1.7.0",
+    "hmmlearn": "0.3.3",
+    "ncps": "1.0.1",
+    "nbformat": "5.11.1"
+  },
+  "started_at_utc": "2026-10-28T03:55:28.122215+00:00",
+  "definition_notebook_sha256": "65bbaf40ebef817e20967a406302f02aaac8b728e2576554e50c43161b1829d7",
+  "HMM_sha256": "3ab4200dfb40fd03383b31be412aafd398ff5b66b4aea2a03011b9e21c1ec0b8",
+  "economic_protocol_sha256": "f29ec312f6197b43cc2f986284ab6cd97358fbebdd7445444dddd713ddc23924"
+}

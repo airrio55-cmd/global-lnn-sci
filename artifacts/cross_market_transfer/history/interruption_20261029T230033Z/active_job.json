@@ -1,0 +1,8 @@
+{
+  "phase": "target_validation",
+  "Target": "NASDAQ100",
+  "Method": "Transfer",
+  "Seed": 42,
+  "fold": 3,
+  "updated_at_utc": "2026-10-29T19:02:46.387135+00:00"
+}

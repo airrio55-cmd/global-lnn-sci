@@ -1,0 +1,7 @@
+{
+  "status": "completed",
+  "completed_final_runs": 50,
+  "expected_final_runs": 50,
+  "completed_checkpoints": 300,
+  "expected_checkpoints": 300
+}
