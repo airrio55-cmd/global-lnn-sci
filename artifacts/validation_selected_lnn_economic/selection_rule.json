@@ -1,0 +1,41 @@
+{
+  "candidate_architecture": "LNN only",
+  "candidate_losses": [
+    "CE",
+    "MILD_WCE",
+    "MILD_FOCAL"
+  ],
+  "selection_column": "WF_Val_BA_mean",
+  "selection_read_columns": [
+    "Model",
+    "Loss",
+    "WF_Val_BA_mean"
+  ],
+  "validation_folds": [
+    2019,
+    2020,
+    2021
+  ],
+  "aggregation": "existing five-seed mean in each summary.csv",
+  "tie_rule": "loss lexical ascending only if exactly tied; no ties occurred",
+  "expected_losses": {
+    "SP500": "MILD_FOCAL",
+    "NASDAQ100": "MILD_FOCAL",
+    "NIKKEI225": "MILD_WCE",
+    "EUROSTOXX50": "MILD_FOCAL",
+    "KOSPI200": "CE"
+  },
+  "actual_losses": {
+    "SP500": "MILD_FOCAL",
+    "NASDAQ100": "MILD_FOCAL",
+    "NIKKEI225": "MILD_WCE",
+    "EUROSTOXX50": "MILD_FOCAL",
+    "KOSPI200": "CE"
+  },
+  "all_expected_selections_agree": true,
+  "test_columns_accessed_for_selection": false,
+  "selection_frozen_before_economic_calculation": true,
+  "prediction": "Five original separately thresholded seeds, >=3 votes; no probability averaging",
+  "SP500_source": "artifacts/sp500_rerun only",
+  "overwrites_existing_artifacts": false
+}

@@ -1,0 +1,6 @@
+Market,Model,Loss,WF_Val_BA_mean,Selection_metric,Test_used_for_loss_selection,Summary_source
+SP500,LNN,MILD_FOCAL,0.60372670807453421,WF_Val_BA_mean only,False,artifacts/sp500_rerun/summary.csv
+NASDAQ100,LNN,MILD_FOCAL,0.56553503925559756,WF_Val_BA_mean only,False,artifacts/nasdaq100/summary.csv
+NIKKEI225,LNN,MILD_WCE,0.63902173913043481,WF_Val_BA_mean only,False,artifacts/nikkei225/summary.csv
+EUROSTOXX50,LNN,MILD_FOCAL,0.63165672065927825,WF_Val_BA_mean only,False,artifacts/eurostoxx50/summary.csv
+KOSPI200,LNN,CE,0.6660241599409189,WF_Val_BA_mean only,False,artifacts/kospi200/summary.csv
