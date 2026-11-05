@@ -1,0 +1,33 @@
+{
+  "scope": "Final explanatory robustness to overlapping H=20 labels; not model selection or a replacement for main results",
+  "markets": {
+    "SP500": "artifacts/sp500_rerun",
+    "NASDAQ100": "artifacts/nasdaq100",
+    "NIKKEI225": "artifacts/nikkei225",
+    "EUROSTOXX50": "artifacts/eurostoxx50",
+    "KOSPI200": "artifacts/kospi200"
+  },
+  "frozen_best_source": "artifacts/cross_market_statistics/market_best_models.csv",
+  "representative_prediction": "Each original seed probability > original saved threshold, then >=3 positive votes among all five seeds; never probability averaging",
+  "sampling": {
+    "sort": "chronological existing frozen test prediction rows",
+    "phase": 0,
+    "step": 20,
+    "offsets_evaluated": [
+      0
+    ],
+    "alternative_phase_search": false
+  },
+  "Persistence": "Exact saved full-test Persistence predictions, independently matched to original Close(t)>Close(t-20) definition",
+  "McNemar": {
+    "two_sided": true,
+    "alpha": 0.05,
+    "primary_p": "max(exact binomial p, continuity-corrected chi-square p)",
+    "Holm_family": "Exactly five market-level p-values",
+    "tests": "Accuracy/correctness, not Balanced Accuracy"
+  },
+  "training": false,
+  "model_or_feature_or_threshold_changes": false,
+  "HMM_or_economic_changes": false,
+  "independence_limit": "Reduced label overlap does not guarantee complete serial independence; smaller N reduces power"
+}

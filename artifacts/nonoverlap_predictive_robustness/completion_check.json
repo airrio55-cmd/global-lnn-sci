@@ -1,0 +1,68 @@
+{
+  "status": "validated",
+  "validated_at_utc": "2026-11-05T01:17:48.501745+00:00",
+  "market_checks": [
+    {
+      "Market": "SP500",
+      "selected_N": 49,
+      "first_date": "2022-02-01",
+      "selected_dates_exact_original_rows": true,
+      "exact_every20_prediction_rows": true,
+      "minimum_actual_market_spacing": 20,
+      "Persistence_matches_saved_and_original_definition": true,
+      "thresholds_and_best_unchanged": true
+    },
+    {
+      "Market": "NASDAQ100",
+      "selected_N": 49,
+      "first_date": "2022-02-01",
+      "selected_dates_exact_original_rows": true,
+      "exact_every20_prediction_rows": true,
+      "minimum_actual_market_spacing": 20,
+      "Persistence_matches_saved_and_original_definition": true,
+      "thresholds_and_best_unchanged": true
+    },
+    {
+      "Market": "NIKKEI225",
+      "selected_N": 47,
+      "first_date": "2022-02-02",
+      "selected_dates_exact_original_rows": true,
+      "exact_every20_prediction_rows": true,
+      "minimum_actual_market_spacing": 20,
+      "Persistence_matches_saved_and_original_definition": true,
+      "thresholds_and_best_unchanged": true
+    },
+    {
+      "Market": "EUROSTOXX50",
+      "selected_N": 49,
+      "first_date": "2022-01-31",
+      "selected_dates_exact_original_rows": true,
+      "exact_every20_prediction_rows": true,
+      "minimum_actual_market_spacing": 20,
+      "Persistence_matches_saved_and_original_definition": true,
+      "thresholds_and_best_unchanged": true
+    },
+    {
+      "Market": "KOSPI200",
+      "selected_N": 47,
+      "first_date": "2022-02-04",
+      "selected_dates_exact_original_rows": true,
+      "exact_every20_prediction_rows": true,
+      "minimum_actual_market_spacing": 20,
+      "Persistence_matches_saved_and_original_definition": true,
+      "thresholds_and_best_unchanged": true
+    }
+  ],
+  "no_model_training": true,
+  "source_prediction_hashes_unchanged": true,
+  "thresholds_unchanged": true,
+  "best_configurations_unchanged": true,
+  "first_date_phase_fixed": true,
+  "exact_every20_frozen_prediction_rows": true,
+  "phase_search": false,
+  "selected_labels_predictions_exact_saved_rows": true,
+  "Persistence_exact_reproduction": true,
+  "Holm_exactly_five_markets": true,
+  "independent_saved_row_and_p_value_checks": true,
+  "existing_HMM_economic_and_primary_results_unchanged": true
+}
