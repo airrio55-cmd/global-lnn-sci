@@ -1,0 +1,40 @@
+{
+  "states_refit": false,
+  "predictive_training": false,
+  "selection": "Per market/architecture argmax WF_Val_BA_mean only; expected15 verified before test reading",
+  "seed_bootstrap": {
+    "resamples": 10000,
+    "seed": 20261028,
+    "scope": "algorithmic seed variability, not independent market history"
+  },
+  "Wilcoxon": "exact conditional sign enumeration of nonzero signed ranks; ties use midranks; two-sided; zeros discarded",
+  "Holm_families": {
+    "seed_primary": 15,
+    "seed_LNN_specific": 5,
+    "full_majority_McNemar": 5,
+    "nonoverlap_McNemar": 5,
+    "Friedman_primary_and_secondary": 2
+  },
+  "nonoverlap": "first saved test row, every20 observed prediction rows, phase0 only",
+  "Nikkei_primary": "LNN MILD_WCE five-seed metric mean vs deterministic Persistence, High labels reused; majority sensitivity also reported",
+  "Nikkei_bootstrap": {
+    "type": "noncircular moving blocks of20 on full chronological test observation sequence, THEN select resampled High rows; never concatenate High episodes before block sampling",
+    "resamples": 10000,
+    "seed": 20261028,
+    "paired": "same indices for truth, all five LNN seed predictions, Persistence and fixed regimes",
+    "invalid": "BA invalid if sampled High subset lacks either class; exclude and count; no imputation",
+    "conditional": "fixed HMM sequence, no refit/regime uncertainty/model-selection uncertainty/multiplicity adjustment"
+  },
+  "Nikkei_permutation": {
+    "method": "within each contiguous original-observation High episode split consecutive chunks of maximum20, retaining shorter final blocks; independent whole-block model/baseline swaps shared across all five seeds",
+    "resamples": 10000,
+    "seed": 20261028,
+    "statistic": "mean five-seed Delta BA vs Persistence, consistent with descriptive0.2468",
+    "p": "two-sided (1+count(abs(permuted delta)>=abs(observed delta)))/(B+1)",
+    "exploratory": true,
+    "post_hoc": true,
+    "preregistered": false,
+    "confirmatory": false
+  },
+  "interpretation": "Conservative Outcome A only if absolute BA>0.5, positive block-CI lower bound, nonoverlap direction nonnegative and exploratory permutation p<=0.05; otherwise Outcome B. No model/signal/settings changed by interpretation."
+}

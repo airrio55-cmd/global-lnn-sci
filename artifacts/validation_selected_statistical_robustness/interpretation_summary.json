@@ -1,0 +1,13 @@
+{
+  "Outcome": "B",
+  "Nikkei_High_BA": 0.539153439153439,
+  "Persistence_High_BA": 0.2923280423280423,
+  "Delta_BA": 0.24682539682539673,
+  "Block_CI_low": 0.009407546337157985,
+  "Block_CI_high": 0.475509828009828,
+  "Exploratory_block_permutation_p": 0.33426657334266574,
+  "Nonoverlap_Nikkei_Delta_BA": 0.08364661654135341,
+  "BA_sign_preserved_markets": 3,
+  "Accuracy_sign_preserved_markets": 5,
+  "Effective_independent_N_estimated": false
+}

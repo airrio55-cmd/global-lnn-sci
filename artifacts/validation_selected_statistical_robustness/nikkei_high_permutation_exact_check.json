@@ -1,0 +1,7 @@
+{
+  "status": "diagnostic_only",
+  "patterns": 512,
+  "exact_block_sign_p": 0.33203125,
+  "Monte_Carlo_primary_p_retained": 0.3342665733426657,
+  "not_effective_independent_sample_size": true
+}

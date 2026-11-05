@@ -1,0 +1,2 @@
+Market,Loss,Regime,Statistic,Observed_delta_BA,Two_sided_p,Permutations,Seed,High_N,Episodes,Blocks,Block_max_length,Short_blocks,Blocks_cross_regime_interruptions,Exploratory,Post_hoc,Preregistered,Confirmatory
+NIKKEI225,MILD_WCE,High,mean five-seed Delta BA vs Persistence,0.24682539682539673,0.33426657334266574,10000,20261028,117,7,9,20,5,False,True,True,False,False

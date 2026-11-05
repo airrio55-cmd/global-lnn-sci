@@ -1,0 +1,29 @@
+     Market Architecture       Loss  Mean_Delta_BA  raw_p  Holm15_p
+      SP500          LNN MILD_FOCAL      -0.076692 0.0625    0.9375
+      SP500         LSTM MILD_FOCAL      -0.074758 0.0625    0.9375
+      SP500  Transformer MILD_FOCAL      -0.075286 0.0625    0.9375
+  NASDAQ100          LNN MILD_FOCAL      -0.057880 0.0625    0.9375
+  NASDAQ100         LSTM MILD_FOCAL      -0.054766 0.0625    0.9375
+  NASDAQ100  Transformer   MILD_WCE      -0.034375 0.1875    0.9375
+  NIKKEI225          LNN   MILD_WCE       0.059907 0.0625    0.9375
+  NIKKEI225         LSTM MILD_FOCAL       0.044610 0.0625    0.9375
+  NIKKEI225  Transformer MILD_FOCAL       0.059915 0.0625    0.9375
+EUROSTOXX50          LNN MILD_FOCAL       0.061847 0.0625    0.9375
+EUROSTOXX50         LSTM         CE       0.051723 0.0625    0.9375
+EUROSTOXX50  Transformer         CE       0.048186 0.1250    0.9375
+   KOSPI200          LNN         CE      -0.007827 0.6250    0.9375
+   KOSPI200         LSTM         CE       0.022763 0.0625    0.9375
+   KOSPI200  Transformer MILD_FOCAL       0.012461 0.3125    0.9375
+{
+  "Outcome": "B",
+  "Nikkei_High_BA": 0.539153439153439,
+  "Persistence_High_BA": 0.2923280423280423,
+  "Delta_BA": 0.24682539682539673,
+  "Block_CI_low": 0.009407546337157985,
+  "Block_CI_high": 0.475509828009828,
+  "Exploratory_block_permutation_p": 0.33426657334266574,
+  "Nonoverlap_Nikkei_Delta_BA": 0.08364661654135341,
+  "BA_sign_preserved_markets": 3,
+  "Accuracy_sign_preserved_markets": 5,
+  "Effective_independent_N_estimated": false
+}
