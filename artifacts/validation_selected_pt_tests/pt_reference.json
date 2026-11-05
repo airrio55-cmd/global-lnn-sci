@@ -1,0 +1,13 @@
+{
+  "original": "Pesaran, M.H. and Timmermann, A. (1992), A Simple Nonparametric Test of Predictive Performance, Journal of Business & Economic Statistics10(4),461\u2013465",
+  "independent_implementation": "rugarch::DACTest, test=PT, R/rugarch-tests.R, lines384\u2013400",
+  "source_url": "https://raw.githubusercontent.com/alexiosg/rugarch/master/R/rugarch-tests.R",
+  "source_sha256": "39f935f61d7b09f31abba625f4e01bc48231f196671a9b21b9039534b47c700b",
+  "documentation_url": "https://raw.githubusercontent.com/alexiosg/rugarch/master/man/DACTest.Rd",
+  "documentation_sha256": "4309a00e1f99165ae4eee5a3ae10358e11c29d5502f291df8ff7ae53792546d3",
+  "binary_mapping_for_reference": "Reference sign-based implementation requires mapping binary directions to -1/+1; passing0/1 directly would incorrectly omit Down/Down hits",
+  "variance": "Var(P_hat)-Var(P_star), exactly as original formula; no alternative test substituted",
+  "p_primary": "two-sided normal; one-sided positive normal tail supplemental",
+  "constant_forecast": "PT not defined for constant forecast; never assign p=1 as an observed PT result",
+  "planned_Holm": "reserve undefined hypotheses as p=1 internally for correction, report their adjusted p as NA; exactly15 and5 planned hypotheses"
+}

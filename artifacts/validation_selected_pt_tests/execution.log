@@ -1,0 +1,17 @@
+     Market Architecture Selected_Loss  PT_statistic  PT_two_sided_p  Holm15_p  Positive_direction_supported_Holm15
+      SP500          LNN    MILD_FOCAL     -3.160760        0.001574  0.017309                                False
+      SP500         LSTM    MILD_FOCAL     -3.726760        0.000194  0.002521                                False
+      SP500  Transformer    MILD_FOCAL     -3.685656        0.000228  0.002737                                False
+  NASDAQ100          LNN    MILD_FOCAL     -2.712017        0.006688  0.061491                                False
+  NASDAQ100         LSTM    MILD_FOCAL     -2.739722        0.006149  0.061491                                False
+  NASDAQ100  Transformer      MILD_WCE     -4.141207        0.000035  0.000518                                False
+  NIKKEI225          LNN      MILD_WCE      1.798780        0.072054  0.432321                                False
+  NIKKEI225         LSTM    MILD_FOCAL      0.282499        0.777561  1.000000                                False
+  NIKKEI225  Transformer    MILD_FOCAL      0.880516        0.378580  1.000000                                False
+EUROSTOXX50          LNN    MILD_FOCAL      0.033500        0.973276  1.000000                                False
+EUROSTOXX50         LSTM            CE      0.458223        0.646793  1.000000                                False
+EUROSTOXX50  Transformer            CE     -2.165937        0.030316  0.212212                                False
+   KOSPI200          LNN            CE      0.881177        0.378222  1.000000                                False
+   KOSPI200         LSTM            CE      2.365643        0.017999  0.143990                                False
+   KOSPI200  Transformer    MILD_FOCAL      3.756760        0.000172  0.002410                                 True
+Undefined seed PT: 1 ; primary majority PT: 0

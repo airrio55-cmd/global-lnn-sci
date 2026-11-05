@@ -1,0 +1,11 @@
+{
+  "Outcome": "B",
+  "primary_positive_support_count": 1,
+  "primary_significant_negative_count": 4,
+  "LNN_positive_support_Holm5_count": 0,
+  "nonoverlap_LNN_positive_support_count": 0,
+  "Nikkei_High_majority_accuracy": 0.5128205128205127,
+  "Nikkei_High_AlwaysUp_accuracy": 0.5384615384615384,
+  "Nikkei_High_PT_two_sided_p": 0.0814585499907834,
+  "no_consistent_cross_market_architecture_superiority": true
+}

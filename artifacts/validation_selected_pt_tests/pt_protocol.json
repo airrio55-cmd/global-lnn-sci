@@ -1,0 +1,19 @@
+{
+  "alpha": 0.05,
+  "primary_tail": "two-sided",
+  "supplemental_tail": "one-sided positive association, prespecified, not chosen after observing sign",
+  "families": {
+    "A": 15,
+    "B_LNN": 5,
+    "nonoverlap_exploratory": 5
+  },
+  "support_rule": "primary directional support requires positive PT and two-sided Holm p<0.05; significant negative association is not positive forecasting skill",
+  "undefined": "retain rows with NA test/p; count them and reserve planned Holm slots, not silently drop",
+  "selection": "existing validation WF BA only; all15 expected verified",
+  "source_models_unchanged": true,
+  "nonoverlap_phase": 0,
+  "nonoverlap_step": 20,
+  "phase_search": false,
+  "HMM_refit": false,
+  "standard_PT_not_dependence_robust": true
+}

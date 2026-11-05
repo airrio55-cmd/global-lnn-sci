@@ -1,0 +1,119 @@
+Category,Case,N,Status,Reference_formula_checked,Pearson_identity_checked,PT_reference_difference,Small_cell_warning
+Seed,SP500/LNN/42,963,defined,True,True,0.0,False
+Seed,SP500/LNN/52,963,defined,True,True,0.0,False
+Seed,SP500/LNN/62,963,defined,True,True,0.0,False
+Seed,SP500/LNN/72,963,defined,True,True,0.0,False
+Seed,SP500/LNN/82,963,defined,True,True,0.0,False
+Seed,SP500/LSTM/42,963,defined,True,True,0.0,False
+Seed,SP500/LSTM/52,963,defined,True,True,-4.440892098500626e-16,False
+Seed,SP500/LSTM/62,963,defined,True,True,0.0,False
+Seed,SP500/LSTM/72,963,defined,True,True,0.0,False
+Seed,SP500/LSTM/82,963,defined,True,True,-8.881784197001252e-16,False
+Seed,SP500/Transformer/42,963,defined,True,True,0.0,False
+Seed,SP500/Transformer/52,963,defined,True,True,0.0,False
+Seed,SP500/Transformer/62,963,defined,True,True,0.0,False
+Seed,SP500/Transformer/72,963,defined,True,True,0.0,False
+Seed,SP500/Transformer/82,963,defined,True,True,0.0,False
+Seed,NASDAQ100/LNN/42,963,defined,True,True,0.0,False
+Seed,NASDAQ100/LNN/52,963,defined,True,True,0.0,False
+Seed,NASDAQ100/LNN/62,963,defined,True,True,0.0,False
+Seed,NASDAQ100/LNN/72,963,defined,True,True,8.881784197001252e-16,False
+Seed,NASDAQ100/LNN/82,963,defined,True,True,0.0,False
+Seed,NASDAQ100/LSTM/42,963,defined,True,True,0.0,False
+Seed,NASDAQ100/LSTM/52,963,defined,True,True,0.0,False
+Seed,NASDAQ100/LSTM/62,963,defined,True,True,0.0,False
+Seed,NASDAQ100/LSTM/72,963,defined,True,True,-4.440892098500626e-16,False
+Seed,NASDAQ100/LSTM/82,963,defined,True,True,8.881784197001252e-16,False
+Seed,NASDAQ100/Transformer/42,963,defined,True,True,0.0,False
+Seed,NASDAQ100/Transformer/52,963,defined,True,True,0.0,False
+Seed,NASDAQ100/Transformer/62,963,defined,True,True,0.0,False
+Seed,NASDAQ100/Transformer/72,963,defined,True,True,0.0,False
+Seed,NASDAQ100/Transformer/82,963,defined,True,True,8.881784197001252e-15,True
+Seed,NIKKEI225/LNN/42,938,defined,True,True,0.0,False
+Seed,NIKKEI225/LNN/52,938,defined,True,True,0.0,False
+Seed,NIKKEI225/LNN/62,938,defined,True,True,2.7755575615628914e-17,False
+Seed,NIKKEI225/LNN/72,938,defined,True,True,0.0,False
+Seed,NIKKEI225/LNN/82,938,defined,True,True,0.0,False
+Seed,NIKKEI225/LSTM/42,938,defined,True,True,-5.551115123125783e-17,False
+Seed,NIKKEI225/LSTM/52,938,defined,True,True,0.0,False
+Seed,NIKKEI225/LSTM/62,938,defined,True,True,0.0,False
+Seed,NIKKEI225/LSTM/72,938,defined,True,True,0.0,False
+Seed,NIKKEI225/LSTM/82,938,defined,True,True,0.0,False
+Seed,NIKKEI225/Transformer/42,938,defined,True,True,5.551115123125783e-17,False
+Seed,NIKKEI225/Transformer/52,938,defined,True,True,0.0,False
+Seed,NIKKEI225/Transformer/62,938,defined,True,True,0.0,False
+Seed,NIKKEI225/Transformer/72,938,defined,True,True,0.0,False
+Seed,NIKKEI225/Transformer/82,938,defined,True,True,0.0,False
+Seed,EUROSTOXX50/LNN/42,964,PT not defined for constant forecast,True,False,,True
+Seed,EUROSTOXX50/LNN/52,964,defined,True,True,0.0,False
+Seed,EUROSTOXX50/LNN/62,964,defined,True,True,0.0,False
+Seed,EUROSTOXX50/LNN/72,964,defined,True,True,0.0,False
+Seed,EUROSTOXX50/LNN/82,964,defined,True,True,0.0,False
+Seed,EUROSTOXX50/LSTM/42,964,defined,True,True,0.0,False
+Seed,EUROSTOXX50/LSTM/52,964,defined,True,True,0.0,False
+Seed,EUROSTOXX50/LSTM/62,964,defined,True,True,0.0,False
+Seed,EUROSTOXX50/LSTM/72,964,defined,True,True,0.0,False
+Seed,EUROSTOXX50/LSTM/82,964,defined,True,True,0.0,False
+Seed,EUROSTOXX50/Transformer/42,964,defined,True,True,0.0,False
+Seed,EUROSTOXX50/Transformer/52,964,defined,True,True,0.0,False
+Seed,EUROSTOXX50/Transformer/62,964,defined,True,True,0.0,False
+Seed,EUROSTOXX50/Transformer/72,964,defined,True,True,4.440892098500626e-16,False
+Seed,EUROSTOXX50/Transformer/82,964,defined,True,True,0.0,False
+Seed,KOSPI200/LNN/42,935,defined,True,True,0.0,False
+Seed,KOSPI200/LNN/52,935,defined,True,True,0.0,False
+Seed,KOSPI200/LNN/62,935,defined,True,True,-4.884981308350689e-15,False
+Seed,KOSPI200/LNN/72,935,defined,True,True,0.0,False
+Seed,KOSPI200/LNN/82,935,defined,True,True,-1.1102230246251565e-16,False
+Seed,KOSPI200/LSTM/42,935,defined,True,True,0.0,False
+Seed,KOSPI200/LSTM/52,935,defined,True,True,0.0,False
+Seed,KOSPI200/LSTM/62,935,defined,True,True,0.0,False
+Seed,KOSPI200/LSTM/72,935,defined,True,True,1.7763568394002505e-15,False
+Seed,KOSPI200/LSTM/82,935,defined,True,True,2.220446049250313e-16,False
+Seed,KOSPI200/Transformer/42,935,defined,True,True,8.881784197001252e-16,False
+Seed,KOSPI200/Transformer/52,935,defined,True,True,0.0,False
+Seed,KOSPI200/Transformer/62,935,defined,True,True,0.0,True
+Seed,KOSPI200/Transformer/72,935,defined,True,True,0.0,False
+Seed,KOSPI200/Transformer/82,935,defined,True,True,0.0,False
+Majority,SP500/LNN,963,defined,True,True,0.0,False
+Majority,SP500/LSTM,963,defined,True,True,0.0,False
+Majority,SP500/Transformer,963,defined,True,True,0.0,False
+Majority,NASDAQ100/LNN,963,defined,True,True,0.0,False
+Majority,NASDAQ100/LSTM,963,defined,True,True,0.0,False
+Majority,NASDAQ100/Transformer,963,defined,True,True,0.0,False
+Majority,NIKKEI225/LNN,938,defined,True,True,0.0,False
+Majority,NIKKEI225/LSTM,938,defined,True,True,0.0,False
+Majority,NIKKEI225/Transformer,938,defined,True,True,2.220446049250313e-16,False
+Majority,EUROSTOXX50/LNN,964,defined,True,True,0.0,False
+Majority,EUROSTOXX50/LSTM,964,defined,True,True,0.0,False
+Majority,EUROSTOXX50/Transformer,964,defined,True,True,0.0,False
+Majority,KOSPI200/LNN,935,defined,True,True,1.1102230246251565e-16,False
+Majority,KOSPI200/LSTM,935,defined,True,True,0.0,False
+Majority,KOSPI200/Transformer,935,defined,True,True,0.0,False
+Nonoverlap,SP500,49,defined,True,True,0.0,False
+Nonoverlap,NASDAQ100,49,defined,True,True,4.440892098500626e-16,True
+Nonoverlap,NIKKEI225,47,defined,True,True,0.0,True
+Nonoverlap,EUROSTOXX50,49,defined,True,True,0.0,True
+Nonoverlap,KOSPI200,47,defined,True,True,0.0,True
+Benchmark,SP500/Always_Up,963,PT not defined for constant forecast,True,False,,True
+Benchmark,SP500/Always_Down,963,PT not defined for constant forecast,True,False,,True
+Benchmark,SP500/Persistence,963,defined,True,True,0.0,False
+Benchmark,NASDAQ100/Always_Up,963,PT not defined for constant forecast,True,False,,True
+Benchmark,NASDAQ100/Always_Down,963,PT not defined for constant forecast,True,False,,True
+Benchmark,NASDAQ100/Persistence,963,defined,True,True,0.0,False
+Benchmark,NIKKEI225/Always_Up,938,PT not defined for constant forecast,True,False,,True
+Benchmark,NIKKEI225/Always_Down,938,PT not defined for constant forecast,True,False,,True
+Benchmark,NIKKEI225/Persistence,938,defined,True,True,0.0,False
+Benchmark,EUROSTOXX50/Always_Up,964,PT not defined for constant forecast,True,False,,True
+Benchmark,EUROSTOXX50/Always_Down,964,PT not defined for constant forecast,True,False,,True
+Benchmark,EUROSTOXX50/Persistence,964,defined,True,True,0.0,False
+Benchmark,KOSPI200/Always_Up,935,PT not defined for constant forecast,True,False,,True
+Benchmark,KOSPI200/Always_Down,935,PT not defined for constant forecast,True,False,,True
+Benchmark,KOSPI200/Persistence,935,defined,True,True,0.0,False
+Nikkei_High,Seed_42,117,defined,True,True,0.0,False
+Nikkei_High,Seed_52,117,defined,True,True,6.661338147750939e-16,True
+Nikkei_High,Seed_62,117,defined,True,True,0.0,False
+Nikkei_High,Seed_72,117,defined,True,True,0.0,False
+Nikkei_High,Seed_82,117,defined,True,True,0.0,False
+Nikkei_High,Majority,117,defined,True,True,0.0,True
+Nikkei_High,Persistence,117,defined,True,True,0.0,False
+Nikkei_High,Always_Up,117,PT not defined for constant forecast,True,False,,True
