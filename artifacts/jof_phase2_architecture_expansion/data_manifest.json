@@ -1,0 +1,24 @@
+{
+  "input_sha256": {
+    "artifacts/jof_phase1_benchmark_expansion/checkpoints/SP500_input_tensors.pt": "f592f4e9e7689430acd0323b514d31de8fa960b6723f618e0a2c2b566afcb6e2",
+    "artifacts/jof_phase1_benchmark_expansion/frozen_features/SP500.csv": "e49af32e4bd9fd894186e037b0b57d5a22dc61d477f3e03822615c6aa4db23ce",
+    "artifacts/sp500_rerun/market_input.csv": "ac8ae4157cfb7c478d7d8d48a7cb0f3482296e497ba831188f3dd00339f6003c",
+    "artifacts/jof_phase1_benchmark_expansion/checkpoints/NASDAQ100_input_tensors.pt": "d955acd335c2730cdc44e6f803bc2401af2f5be278694f0f876cc491c186afe4",
+    "artifacts/jof_phase1_benchmark_expansion/frozen_features/NASDAQ100.csv": "a91841674f20c35e4ace244157c06f9e506b1c1755b242116c794c852b65ed72",
+    "artifacts/nasdaq100/market_input.csv": "ad5139d6895f3274307615d990bbd62dd194f0a949aed6f36243a403b11bf4a3",
+    "artifacts/jof_phase1_benchmark_expansion/checkpoints/NIKKEI225_input_tensors.pt": "04c60c5758aa164f33771815d84d138ead438d0b4e6ead760f4618ceae3f856c",
+    "artifacts/jof_phase1_benchmark_expansion/frozen_features/NIKKEI225.csv": "7c8e29bffd6ba2757fc1504ca4dcb703b747c89abc8694a9b388ffef6f52b7e5",
+    "artifacts/nikkei225/market_input.csv": "48713c71038143b96bf57bd01415b206c398949e53697cc828522351df92c67d",
+    "artifacts/jof_phase1_benchmark_expansion/checkpoints/EUROSTOXX50_input_tensors.pt": "e42c0fc3dc0a38e7132805c700f41487359b5777e3f125193bace16f2824cf53",
+    "artifacts/jof_phase1_benchmark_expansion/frozen_features/EUROSTOXX50.csv": "6b89943be7072ad49c57926995862b4a222fe29b6ec74601df51282596f3ef7a",
+    "artifacts/eurostoxx50/market_input.csv": "3e37fc4ec0c51d25170eda20d717cc662e5aed37efa5e3ce8a4d971dc32ec36a",
+    "artifacts/jof_phase1_benchmark_expansion/checkpoints/KOSPI200_input_tensors.pt": "83682ea1ff75267b360d6bae05736dab070302eed30875d8e5a251dc3aba8c53",
+    "artifacts/jof_phase1_benchmark_expansion/frozen_features/KOSPI200.csv": "018df3db199589431c773c426462350dbdcdda3d0a6285661db48ca8e41bd584",
+    "artifacts/kospi200/market_input.csv": "5b4ab3d0985784d5353f24adebe48255a9fd088519df8e294950f41b87cfc85c"
+  },
+  "same_frozen_Phase1_tensors": true,
+  "no_feature_rebuild": true,
+  "no_network_refresh": true,
+  "H": 20,
+  "W": 20
+}

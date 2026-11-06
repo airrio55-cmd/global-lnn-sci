@@ -1,0 +1,161 @@
+{
+  "study": "Journal of Forecasting Phase2 CfC and PE-Transformer",
+  "created_at_utc": "2026-11-06T08:41:40.394845+00:00",
+  "markets": {
+    "SP500": "sp500_rerun",
+    "NASDAQ100": "nasdaq100",
+    "NIKKEI225": "nikkei225",
+    "EUROSTOXX50": "eurostoxx50",
+    "KOSPI200": "kospi200"
+  },
+  "notebooks": {
+    "SP500": "SCI_v1_4_WALKFORWARD_SP500.ipynb",
+    "NASDAQ100": "SCI_v1_4_WALKFORWARD_NASDAQ100.ipynb",
+    "NIKKEI225": "SCI_v1_4_WALKFORWARD_NIKKEI225.ipynb",
+    "EUROSTOXX50": "SCI_v1_4_WALKFORWARD_EUROSTOXX50.ipynb",
+    "KOSPI200": "SCI_v1_4_WALKFORWARD_KOSPI200.ipynb"
+  },
+  "notebook_sha256": {
+    "SP500": "65bbaf40ebef817e20967a406302f02aaac8b728e2576554e50c43161b1829d7",
+    "NASDAQ100": "6431ed1b8a0abdab132c8f412376b0fc4bc98cfc24d45f5a3eb6572babbab487",
+    "NIKKEI225": "c08bcccc8b27246e383f86fa55f9eb6b84eea103a9ca93b7ee6d44546cab4f69",
+    "EUROSTOXX50": "93a7f4dccbefeb8934184cd7259d32e72e2158606816ee42c4413e59a74ee089",
+    "KOSPI200": "d759ea278d009d16ba8b1057d89a2e2ab789bd46b21ccc287d68b12a052b895d"
+  },
+  "features": "exact existing market-specific COMMON_LOCAL for LSTM, unchanged",
+  "processed_data_policy": "Use existing feature_input.csv if present; otherwise original feature cell on frozen market_input.csv; never network refresh",
+  "H": 20,
+  "W": 20,
+  "seeds": [
+    42,
+    52,
+    62,
+    72,
+    82
+  ],
+  "validation_folds": [
+    2019,
+    2020,
+    2021
+  ],
+  "train_ends": [
+    2018,
+    2019,
+    2020
+  ],
+  "test": [
+    2022,
+    2025
+  ],
+  "label_purge": 20,
+  "threshold_grid": {
+    "min": 0.3,
+    "max": 0.7,
+    "step": 0.01
+  },
+  "threshold_rule": "exact existing select_validation_threshold: BA descending, Macro F1 descending, abs(threshold-.5) ascending; strict probability>threshold",
+  "validation_first": "all450 validation fits; all150 candidate-seed probabilities and10 selected configurations with50 thresholds frozen before any new final fit",
+  "nonoverlap": {
+    "phase": 0,
+    "step": 20,
+    "phase_search": false
+  },
+  "economic": "unchanged cross_market_economic daily Long/Cash protocol, next-close execution then next interval return,0/10/25/50bps round trip; primary10bps",
+  "PT": "unchanged existing validated PT function, conventional overlap caveat, undefined constant forecasts retained",
+  "near_constant_diagnostic": "forecast Up rate<.10 or>.90; never selection/exclusion criterion",
+  "neural_Friedman": [
+    "LNN",
+    "CfC",
+    "LSTM",
+    "GRU",
+    "Transformer",
+    "PE-Transformer"
+  ],
+  "Friedman_input": "majority BA and majority Macro F1; five market blocks",
+  "old_Holm15_replaced": false,
+  "final_multiplicity_family": "Proposal after all predictions complete; no Holm until Phase3",
+  "planned_validation_candidate_seed_runs": 150,
+  "planned_validation_fits": 450,
+  "planned_final_fits": 50,
+  "planned_total_fits": 500,
+  "packages": {
+    "torch": "2.14.1+cpu",
+    "numpy": "2.5.4",
+    "pandas": "3.0.6",
+    "scikit-learn": "1.9.1",
+    "scipy": "1.18.1",
+    "hmmlearn": "0.3.3",
+    "ncps": "1.0.1",
+    "nbformat": "5.11.1",
+    "lightgbm": "4.7.0",
+    "joblib": "1.6.0",
+    "matplotlib": "3.11.2"
+  },
+  "CfC": {
+    "constructor": "ncps.torch.CfC(input_size,128,batch_first=True)",
+    "fully_connected": true,
+    "AutoNCP": false,
+    "explicit_dropout": 0.2,
+    "head": [
+      128,
+      2
+    ],
+    "return_sequences": true,
+    "mixed_memory": false,
+    "mode": "default",
+    "activation": "lecun_tanh",
+    "backbone_units": null,
+    "backbone_layers": null,
+    "backbone_dropout": null,
+    "library_defaults": "None parameters resolve inside installed ncps1.0.1; exact source hashes recorded",
+    "initialization": "same original init_weights for all Linear modules",
+    "resolved_package_defaults": {
+      "backbone_units": 128,
+      "backbone_layers": 1,
+      "backbone_dropout": 0.0,
+      "proj_size": null
+    },
+    "package_source_sha256": {
+      "CfC": "3e5c1ddf4bf0829cfaa9c6415d30b8081fdaf2e1f681d02631c497626b67f0ea",
+      "CfCCell": "79dcc1cbb3b6898dc2310e9086a2e031e31cbaeb129d69adcbf45eaa16d6b74d"
+    }
+  },
+  "PE-Transformer": {
+    "base": "exact original TransformerClassifier, subclass changes only forward by adding deterministic positional buffer after in_proj",
+    "d_model": 128,
+    "nhead": 4,
+    "num_encoder_layers": 2,
+    "dim_feedforward": 256,
+    "dropout": 0.2,
+    "activation": "gelu",
+    "batch_first": true,
+    "final_LayerNorm": true,
+    "aggregation": "last timestep",
+    "head": [
+      128,
+      2
+    ],
+    "positional_encoding": "sin(position / 10000**(2i/128)),cos for odd dimensions",
+    "max_len": 20,
+    "extra_dropout": false
+  },
+  "neural_training": {
+    "optimizer": "AdamW",
+    "weight_decay": 0.0001,
+    "MAX_LR": 0.005,
+    "scheduler": "OneCycleLR",
+    "gradient_clip": 1.0,
+    "batch_size": 64,
+    "max_epochs": 100,
+    "patience": 10,
+    "final_epochs": 60,
+    "losses": [
+      "CE",
+      "MILD_WCE",
+      "MILD_FOCAL"
+    ],
+    "source": "exact existing notebook cell14"
+  },
+  "loss_selection": "five-seed mean pooled WF validation BA; ties mean MacroF1,mean absolute threshold distance,lexical loss",
+  "data_policy": "load exact existing Phase1 tensor packs/features/scalers; no processing rebuild"
+}

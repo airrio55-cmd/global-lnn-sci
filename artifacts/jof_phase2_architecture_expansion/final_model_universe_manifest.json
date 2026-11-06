@@ -1,0 +1,36 @@
+{
+  "neural_architectures": [
+    "LNN",
+    "CfC",
+    "LSTM",
+    "GRU",
+    "Transformer",
+    "PE-Transformer"
+  ],
+  "display_names": {
+    "LNN": "LTC/LNN",
+    "Transformer": "Transformer (original, no explicit positional encoding)",
+    "PE-Transformer": "PE-Transformer (sinusoidal positional encoding)"
+  },
+  "non_neural_learned": [
+    "LogisticRegression",
+    "LightGBM"
+  ],
+  "rule_baselines": [
+    "Persistence",
+    "Rule_200DMA",
+    "Momentum60",
+    "Always-Up",
+    "Always-Down"
+  ],
+  "markets": [
+    "SP500",
+    "NASDAQ100",
+    "NIKKEI225",
+    "EUROSTOXX50",
+    "KOSPI200"
+  ],
+  "selection": "independently frozen validation-only loss and seed thresholds",
+  "predictions_complete_and_replay_verified": true,
+  "no_replacement_of_existing_models": true
+}

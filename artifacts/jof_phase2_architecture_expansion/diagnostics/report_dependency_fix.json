@@ -1,0 +1,9 @@
+{
+  "cause": "Report markdown rendering required missing optional tabulate package",
+  "resolution": "Installed tabulate==0.9.0 --no-deps into existing isolated dependency target",
+  "predictive_training_repeated": false,
+  "model_code_changed": false,
+  "protocol_changed": false,
+  "probabilities_changed": false,
+  "fixed_at_utc": "2026-11-06T13:36:23.782082+00:00"
+}

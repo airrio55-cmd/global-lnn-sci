@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "source": "exact audited frozen Phase1 tensors and copied train-only scaler statistics",
+  "same_frozen_data": true,
+  "same_features": true,
+  "H": 20,
+  "W": 20,
+  "no_HMM_refit": true,
+  "no_new_data_processing": true
+}

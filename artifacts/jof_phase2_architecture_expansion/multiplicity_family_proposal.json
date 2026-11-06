@@ -1,0 +1,113 @@
+{
+  "status": "proposal_only_not_executed",
+  "Holm_applied": false,
+  "Phase3_required": true,
+  "families": {
+    "A": {
+      "test": "two-sided PT on majority predictions",
+      "count": 30,
+      "membership": [
+        "SP500:LNN",
+        "SP500:CfC",
+        "SP500:LSTM",
+        "SP500:GRU",
+        "SP500:Transformer",
+        "SP500:PE-Transformer",
+        "NASDAQ100:LNN",
+        "NASDAQ100:CfC",
+        "NASDAQ100:LSTM",
+        "NASDAQ100:GRU",
+        "NASDAQ100:Transformer",
+        "NASDAQ100:PE-Transformer",
+        "NIKKEI225:LNN",
+        "NIKKEI225:CfC",
+        "NIKKEI225:LSTM",
+        "NIKKEI225:GRU",
+        "NIKKEI225:Transformer",
+        "NIKKEI225:PE-Transformer",
+        "EUROSTOXX50:LNN",
+        "EUROSTOXX50:CfC",
+        "EUROSTOXX50:LSTM",
+        "EUROSTOXX50:GRU",
+        "EUROSTOXX50:Transformer",
+        "EUROSTOXX50:PE-Transformer",
+        "KOSPI200:LNN",
+        "KOSPI200:CfC",
+        "KOSPI200:LSTM",
+        "KOSPI200:GRU",
+        "KOSPI200:Transformer",
+        "KOSPI200:PE-Transformer"
+      ]
+    },
+    "B": {
+      "test": "two-sided PT on majority/consensus predictions",
+      "count": 40,
+      "membership": [
+        "SP500:LNN",
+        "SP500:CfC",
+        "SP500:LSTM",
+        "SP500:GRU",
+        "SP500:Transformer",
+        "SP500:PE-Transformer",
+        "SP500:LogisticRegression",
+        "SP500:LightGBM",
+        "NASDAQ100:LNN",
+        "NASDAQ100:CfC",
+        "NASDAQ100:LSTM",
+        "NASDAQ100:GRU",
+        "NASDAQ100:Transformer",
+        "NASDAQ100:PE-Transformer",
+        "NASDAQ100:LogisticRegression",
+        "NASDAQ100:LightGBM",
+        "NIKKEI225:LNN",
+        "NIKKEI225:CfC",
+        "NIKKEI225:LSTM",
+        "NIKKEI225:GRU",
+        "NIKKEI225:Transformer",
+        "NIKKEI225:PE-Transformer",
+        "NIKKEI225:LogisticRegression",
+        "NIKKEI225:LightGBM",
+        "EUROSTOXX50:LNN",
+        "EUROSTOXX50:CfC",
+        "EUROSTOXX50:LSTM",
+        "EUROSTOXX50:GRU",
+        "EUROSTOXX50:Transformer",
+        "EUROSTOXX50:PE-Transformer",
+        "EUROSTOXX50:LogisticRegression",
+        "EUROSTOXX50:LightGBM",
+        "KOSPI200:LNN",
+        "KOSPI200:CfC",
+        "KOSPI200:LSTM",
+        "KOSPI200:GRU",
+        "KOSPI200:Transformer",
+        "KOSPI200:PE-Transformer",
+        "KOSPI200:LogisticRegression",
+        "KOSPI200:LightGBM"
+      ]
+    },
+    "C": {
+      "test": "two-sided PT on LTC majority predictions",
+      "count": 5,
+      "membership": [
+        "SP500:LNN",
+        "NASDAQ100:LNN",
+        "NIKKEI225:LNN",
+        "EUROSTOXX50:LNN",
+        "KOSPI200:LNN"
+      ]
+    },
+    "D": {
+      "test": "paired original Transformer vs PE-Transformer; specific test to freeze in Phase3 before execution",
+      "count": 5,
+      "membership": [
+        "SP500:Transformer_vs_PE-Transformer",
+        "NASDAQ100:Transformer_vs_PE-Transformer",
+        "NIKKEI225:Transformer_vs_PE-Transformer",
+        "EUROSTOXX50:Transformer_vs_PE-Transformer",
+        "KOSPI200:Transformer_vs_PE-Transformer"
+      ]
+    }
+  },
+  "old_Holm_results_unchanged": true,
+  "constant_forecast_undefined_PT": "retain membership and status, no fabricated p-value"
+}

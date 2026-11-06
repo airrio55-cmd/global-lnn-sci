@@ -1,0 +1,5 @@
+{
+  "status": "failed",
+  "error": "Command '['/workspace/.venvs/global-lnn-sci/bin/python', '/workspace/global-lnn-sci/artifacts/jof_phase2_architecture_expansion/finalize.py']' returned non-zero exit status 1.",
+  "failed_at_utc": "2026-11-06T13:09:27.937205+00:00"
+}
