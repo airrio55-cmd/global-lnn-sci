@@ -1,0 +1,33 @@
+{
+  "primary_loss": "Brier",
+  "secondary_loss": "binary log loss,learned8 only,eps1e-12",
+  "scoring_probability": "arithmetic mean of five saved seed probabilities, equal weights; distinct from binary majority label aggregation, not thresholded for scoring; deterministic rules use0/1",
+  "prediction_labels": "exact existing3-of-5 majority for neural, deterministic consensus verified for Logistic andLightGBM; no regeneration",
+  "loss_sign": "d=loss_A-loss_B;negative favorsA;positive favorsB",
+  "DM": {
+    "HAC": "Bartlett Newey-West, demeaned moments,biased autocovariance denominatorN",
+    "lag": 19,
+    "HLN": true,
+    "factor": "sqrt((N+1-2H+H*(H-1)/N)/N)",
+    "reference": "Student t withN-1df, two-sided",
+    "all_pairs": true,
+    "focal_benchmarks": [
+      "Persistence",
+      "Rule_200DMA",
+      "Momentum60"
+    ]
+  },
+  "GW": {
+    "implementation": "GW-style conditional predictive ability moment Wald, not exact original rolling-window GW asymptotics",
+    "instruments": [
+      "intercept",
+      "most recent resolved past loss differential",
+      "abs(Log_Ret) at previous raw market observation",
+      "Vol20 at previous raw market observation"
+    ],
+    "availability": "past differential j only if raw_date_index(j)+20<=raw_date_index(t)-1; exclude first unresolved rows",
+    "HAC_lag": 19,
+    "reference": "chi-square4df; singular/degenerate covariance yields undefined status not forced p",
+    "limitations": "fixed saved expanding-fit forecasts, instrument stationary-moment regularity not guaranteed;conditional robustness diagnostic only;no superiority from GW alone"
+  }
+}

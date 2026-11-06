@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "Holm_matches_statsmodels": true,
+  "pairwise_counts_correct": true,
+  "all11_MCS_members_preserved": true,
+  "MCS90_subset95": true,
+  "all200_seed_probability_sources_present": true,
+  "positive_PT_support_direction_verified": true,
+  "frequency_flags_verified": true,
+  "same2022_2025_unique_test_dates": true
+}

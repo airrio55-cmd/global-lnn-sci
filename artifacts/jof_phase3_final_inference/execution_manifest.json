@@ -1,0 +1,12 @@
+{
+  "source_sha256": {
+    "analyze.py": "0169f6d6ada21e8f7235db93d19bb79cb4eb376b03dd7d2fa00eb9b2eb3f9232",
+    "verify_methods.py": "8fc5e7f750e59ca7169ac04c421d9872b6c93c7f7350396e709b51d2e5f22f2a",
+    "report.py": "36e63ea3d1fe210066f71f4347e7427fc4c2a0d1451682297997cb39fabf414d",
+    "statistical_methods.py": "2fa3cfddcdd7de373953e9da276c1ea271803ef7b4cd625ef747ff5a94816d87"
+  },
+  "protocol_sha256": "78deda0b93d57e2b0d656057518cdbd202854555ff583a0e0b20e4233eed11c7",
+  "arch_version": "8.0.0",
+  "bootstrap_reps": 10000,
+  "random_seed": 20261106
+}

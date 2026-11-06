@@ -1,0 +1,6 @@
+Market,MCS90_retained,MCS90_eliminated,MCS95_retained,Interpretation
+SP500,"CfC,Momentum60,Rule_200DMA,PE-Transformer,Transformer,LogisticRegression","LightGBM,GRU,LSTM,LNN,Persistence","Persistence,CfC,Momentum60,Rule_200DMA,PE-Transformer,Transformer,LogisticRegression",The MCS procedure did not eliminate these models at the stated confidence level.
+NASDAQ100,"Rule_200DMA,PE-Transformer","LNN,GRU,LSTM,LightGBM,CfC,LogisticRegression,Persistence,Momentum60,Transformer","Rule_200DMA,PE-Transformer",The MCS procedure did not eliminate these models at the stated confidence level.
+NIKKEI225,"Transformer,PE-Transformer","LSTM,GRU,LightGBM,LogisticRegression,LNN,Persistence,CfC,Momentum60,Rule_200DMA","Transformer,PE-Transformer",The MCS procedure did not eliminate these models at the stated confidence level.
+EUROSTOXX50,"LNN,CfC","GRU,Persistence,LogisticRegression,Transformer,LSTM,PE-Transformer,Momentum60,LightGBM,Rule_200DMA","LNN,CfC",The MCS procedure did not eliminate these models at the stated confidence level.
+KOSPI200,"PE-Transformer,Transformer","Persistence,GRU,LightGBM,LNN,LSTM,Rule_200DMA,Momentum60,LogisticRegression,CfC","PE-Transformer,Transformer",The MCS procedure did not eliminate these models at the stated confidence level.

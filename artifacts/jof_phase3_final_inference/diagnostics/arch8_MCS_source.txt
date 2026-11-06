@@ -1,0 +1,282 @@
+class MCS(MultipleComparison):
+    """
+    Model Confidence Set (MCS) of Hansen, Lunde and Nason.
+
+    Parameters
+    ----------
+    losses : {ndarray, DataFrame}
+        T by k array containing losses from a set of models
+    size : float, optional
+        Value in (0,1) to use as the test size when implementing the
+        mcs. Default value is 0.05.
+    block_size : int, optional
+        Length of window to use in the bootstrap.  If not provided, sqrt(T)
+        is used.  In general, this should be provided and chosen to be
+        appropriate for the data.
+    method : {'max', 'R'}, optional
+        MCS test and elimination implementation method, either 'max' or 'R'.
+        Default is 'R'.
+    reps : int, optional
+        Number of bootstrap replications to uses.  Default is 1000.
+    bootstrap : str, optional
+        Bootstrap to use.  Options are
+        'stationary' or 'sb': Stationary bootstrap (Default)
+        'circular' or 'cbb': Circular block bootstrap
+        'moving block' or 'mbb': Moving block bootstrap
+    seed : {int, Generator, RandomState}, optional
+        Seed value to use when creating the bootstrap used in the comparison.
+        If an integer or None, the NumPy default_rng is used with the seed
+        value.  If a Generator or a RandomState, the argument is used.
+
+    Notes
+    -----
+    See [1]_ for details.
+
+    References
+    ----------
+    .. [1] Hansen, P. R., Lunde, A., & Nason, J. M. (2011). The model confidence set.
+       Econometrica, 79(2), 453-497.
+    """
+
+    def __init__(
+        self,
+        losses: ArrayLike2D,
+        size: float,
+        reps: int = 1000,
+        block_size: int | None = None,
+        method: Literal["R", "max"] = "R",
+        bootstrap: Literal[
+            "stationary", "sb", "circular", "cbb", "moving block", "mbb"
+        ] = "stationary",
+        *,
+        seed: int | np.random.Generator | np.random.RandomState | None = None,
+    ) -> None:
+        super().__init__()
+        self.losses = ensure2d(losses, "losses")
+        self._losses_arr = np.asarray(self.losses, dtype=float)
+        if self._losses_arr.shape[1] < 2:
+            raise ValueError("losses must have at least two columns")
+        self.size: float = size
+        self.reps: int = reps
+        if block_size is None:
+            self.block_size = int(np.sqrt(losses.shape[0]))
+        else:
+            self.block_size = block_size
+
+        self.t: int = losses.shape[0]
+        self.k: int = losses.shape[1]
+        self.method: Literal["R", "max"] = method
+        # Bootstrap indices since the same bootstrap should be used in the
+        # repeated steps
+        indices = np.arange(self.t)
+        bootstrap_meth = bootstrap.lower().replace(" ", "_")
+        if bootstrap_meth in ("circular", "cbb"):
+            bootstrap_inst = CircularBlockBootstrap(self.block_size, indices, seed=seed)
+        elif bootstrap_meth in ("stationary", "sb"):
+            bootstrap_inst = StationaryBootstrap(self.block_size, indices, seed=seed)
+        elif bootstrap_meth in ("moving_block", "mbb"):
+            bootstrap_inst = MovingBlockBootstrap(self.block_size, indices, seed=seed)
+        else:
+            raise ValueError(f"Unknown bootstrap: {bootstrap_meth}")
+        self._seed = seed
+        self.bootstrap: CircularBlockBootstrap = bootstrap_inst
+        self._bootstrap_indices: list[IntArray] = []  # For testing
+        self._model = "MCS"
+        self._info = {
+            "size": f"{self.size:0.2f}",
+            "bootstrap": str(bootstrap_inst),
+            "ID": hex(id(self)),
+        }
+        self._results_computed = False
+
+    def _has_been_computed(self) -> None:
+        if not self._results_computed:
+            raise RuntimeError("Must call compute before accessing results")
+
+    def _format_pvalues(self, eliminated: Sequence[tuple[int, float]]) -> pd.DataFrame:
+        columns = ["Model index", "Pvalue"]
+        mcs = pd.DataFrame(eliminated, columns=columns)
+        max_pval = cast("float", mcs.iloc[0, 1])
+        for i in range(1, mcs.shape[0]):
+            max_pval = np.max([max_pval, cast("float", mcs.iloc[i, 1])])
+            mcs.iloc[i, 1] = max_pval
+        model_index = mcs.pop("Model index")
+        if isinstance(self.losses, pd.DataFrame):
+            # Workaround for old pandas/numpy combination
+            # Preferred expression :
+            model_index = pd.Series(self.losses.columns[model_index])
+            # model_index = self.losses.iloc[:, model_index.to_numpy()].columns
+            # model_index = pd.Series(model_index)
+            model_index.name = "Model name"
+        mcs.index = pd.Index(model_index)
+        return mcs
+
+    def compute(self) -> None:
+        """
+        Compute the set of models in the confidence set.
+        """
+        if self.method.lower() == "r":
+            self._compute_r()
+        else:
+            self._compute_max()
+        self._results_computed = True
+
+    def _compute_r(self) -> None:
+        """
+        Computes the model confidence set using the R method
+        """
+        # R method
+        # 1. Compute pairwise difference (k,k)
+        losses = self._losses_arr
+        mean_losses = losses.mean(0)[:, None]
+        loss_diffs = mean_losses - mean_losses.T
+        # Compute pairwise variance using bootstrap (k,k)
+        # In each bootstrap, save the average difference of each pair (b,k,k)
+        bootstrapped_mean_losses = np.zeros((self.reps, self.k, self.k))
+        bs = self.bootstrap
+        for j, data in enumerate(bs.bootstrap(self.reps)):
+            bs_index = data[0][0]  # Only element in pos data
+            self._bootstrap_indices.append(
+                np.asarray(bs_index, dtype=int)
+            )  # For testing
+            mean_losses_star = losses[bs_index].mean(0)[:, None]
+            bootstrapped_mean_losses[j] = mean_losses_star - mean_losses_star.T
+        # Recenter
+        bootstrapped_mean_losses -= loss_diffs
+        variances = (bootstrapped_mean_losses**2).mean(0)
+        variances += np.eye(self.k)  # Prevent division by 0
+        self._variances = variances
+        # Standardize everything
+        std_loss_diffs = loss_diffs / np.sqrt(variances)
+        std_bs_mean_losses = bootstrapped_mean_losses / np.sqrt(variances)
+        # 3. Using the models still in the set, compute the max (b,1)
+        # Initialize the set
+        included = np.ones(self.k, dtype=np.bool_)
+        # Loop until there is only 1 model left
+        eliminated = []
+        while included.sum() > 1:
+            indices = np.argwhere(included)
+            included_loss_diffs = std_loss_diffs[indices, indices.T]
+            test_stat = np.max(included_loss_diffs)
+            included_bs_losses = std_bs_mean_losses[:, indices, indices.T]
+            simulated_test_stat = np.max(np.max(included_bs_losses, 2), 1)
+            pval = (test_stat < simulated_test_stat).mean()
+            loc = np.argwhere(included_loss_diffs == test_stat)
+            # Loc has indices i,j, -- i  is the elimination
+            # Diffs are L(i) - L(j), so large value in [i,j] indicates
+            # i is worse than j
+            # Elimination is for
+            i = loc.squeeze()[0]
+            eliminated.append((indices.flat[i], pval))
+            included[indices.flat[i]] = False
+        # Add pval of 1 for model remaining
+        indices = np.argwhere(included).flatten()
+        eliminated.extend([(ind, 1.0) for ind in indices])
+        self._pvalues = self._format_pvalues(eliminated)
+
+    def _compute_max(self) -> None:
+        """
+        Computes the model confidence set using the R method
+        """
+        # max method
+        losses = self._losses_arr
+        # 1. compute loss "errors"
+        loss_errors = losses - losses.mean(0)
+        # Generate bootstrap samples
+        bs_avg_loss_errors = np.zeros((self.reps, self.k))
+        for i, data in enumerate(self.bootstrap.bootstrap(self.reps)):
+            bs_index = data[0][0]
+            self._bootstrap_indices.append(
+                np.asarray(bs_index, dtype=int)
+            )  # For testing
+            bs_errors = loss_errors[bs_index]
+            avg_bs_errors = bs_errors.mean(0)
+            avg_bs_errors -= avg_bs_errors.mean()
+            bs_avg_loss_errors[i] = avg_bs_errors
+            # Initialize the set
+        included = np.ones(self.k, dtype=np.bool_)
+        # Loop until there is only 1 model left
+        eliminated = []
+        while included.sum() > 1:
+            indices = np.argwhere(included)
+            incl_losses = losses[:, included]
+            incl_bs_avg_loss_err = bs_avg_loss_errors[:, included]
+            incl_bs_grand_loss = incl_bs_avg_loss_err.mean(1)
+            # Reshape for broadcast
+            incl_bs_avg_loss_err -= incl_bs_grand_loss[:, None]
+            std_devs = np.sqrt((incl_bs_avg_loss_err**2).mean(0))
+            if np.any(std_devs <= 0):
+                warnings.warn(
+                    "During computation of a step of the MCS the estimated standard "
+                    "deviation of at least one loss difference was 0.  This "
+                    "indicates that the MCS is not valid for this problem. This can "
+                    "occur if the number of losses is too small, or if there are "
+                    "repeated (identical) losses in the set under consideration.",
+                    RuntimeWarning,
+                    stacklevel=2,
+                )
+            simulated_test_stat = incl_bs_avg_loss_err / std_devs
+            simulated_test_stat = np.max(simulated_test_stat, 1)
+            loss_diffs = incl_losses.mean(0)
+            loss_diffs -= loss_diffs.mean()
+            std_loss_diffs = loss_diffs / std_devs
+            test_stat = np.max(std_loss_diffs)
+            pval = (test_stat < simulated_test_stat).mean()
+            locs = np.argwhere(std_loss_diffs == test_stat)
+            eliminated.extend(
+                [
+                    (int(idx_val), pval)
+                    for idx_val in indices.flat[np.atleast_1d(locs.squeeze())]
+                ]
+            )
+            included[indices.flat[locs]] = False
+
+        indices = np.argwhere(included).flatten()
+        eliminated.extend([(int(ind), 1.0) for ind in indices])
+        self._pvalues = self._format_pvalues(eliminated)
+
+    @property
+    def included(self) -> list[Hashable]:
+        """
+        List of model indices that are included in the MCS
+
+        Returns
+        -------
+        included : list
+            List of column indices or names of the included models
+        """
+        self._has_been_computed()
+        incl_loc = self._pvalues.Pvalue > self.size
+        included = list(self._pvalues.index[incl_loc])
+        included.sort()
+        return included
+
+    @property
+    def excluded(self) -> list[Hashable]:
+        """
+        List of model indices that are excluded from the MCS
+
+        Returns
+        -------
+        excluded : list
+            List of column indices or names of the excluded models
+        """
+        self._has_been_computed()
+        excl_loc = self._pvalues.Pvalue <= self.size
+        excluded = list(self._pvalues.index[excl_loc])
+        excluded.sort()
+        return excluded
+
+    @property
+    def pvalues(self) -> pd.DataFrame:
+        """
+        Model p-values for inclusion in the MCS
+
+        Returns
+        -------
+        pvalues : DataFrame
+            DataFrame where the index is the model index (column or name)
+            containing the smallest size where the model is in the MCS.
+        """
+        self._has_been_computed()
+        return self._pvalues

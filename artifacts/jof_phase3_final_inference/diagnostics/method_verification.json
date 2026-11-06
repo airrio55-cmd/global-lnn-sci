@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "HAC_matches_statsmodels": true,
+  "DM_sign_symmetry_and_degenerate_status": true,
+  "Holm_known_example_and_fixed_family_NaN": true,
+  "studentized_SPA_matches_arch_on_fixed_scaled_differentials": true,
+  "SPA_zero_truncation_and_plus_one_p": "intentional conventional finite-bootstrap differences from arch raw strict-inequality implementation"
+}
