@@ -1,0 +1,13 @@
+{
+  "Market": "KOSPI200",
+  "Model": "LightGBM",
+  "Loss": "Binary_logloss",
+  "Seed": 42,
+  "Stage": "fold2",
+  "Warnings": [],
+  "n_iter": 300,
+  "Logistic_converged": null,
+  "LightGBM_requested_estimators": 300,
+  "LightGBM_actual_trees": 300,
+  "fit_seconds": 2.3460648889958975
+}

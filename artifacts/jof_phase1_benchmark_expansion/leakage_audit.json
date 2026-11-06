@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "same_features_as_LSTM": true,
+  "same_W20_tensors_for_tabular": true,
+  "training_only_scalers": true,
+  "label_boundaries_purged": true,
+  "input_window_excludes_target": true,
+  "future_feature_perturbation": true,
+  "original_frozen_source_availability_rules_preserved": true,
+  "rule_P_t_information_difference_documented": true,
+  "no_HMM_refit": true
+}

@@ -1,0 +1,31 @@
+Market,Model,Loss,WF_Val_BA_mean,WF_Val_Macro_F1_mean,Mean_threshold_distance,Origin,Selection
+SP500,GRU,MILD_FOCAL,0.63359517720131531,0.60012761448506358,0.026000000000000023,New_Phase1,Validation only; no test evaluation yet
+SP500,LogisticRegression,L2,0.50643953233467298,0.50638566912539518,0.17000000000000004,New_Phase1,Validation only; no test evaluation yet
+SP500,LightGBM,Binary_logloss,0.48410668615272201,0.43216370831863954,0.15999999999999998,New_Phase1,Validation only; no test evaluation yet
+NASDAQ100,GRU,MILD_FOCAL,0.65635601434525537,0.63091758294902012,0.016000000000000014,New_Phase1,Validation only; no test evaluation yet
+NASDAQ100,LogisticRegression,L2,0.56655883493263537,0.55417722914140854,0.19999999999999996,New_Phase1,Validation only; no test evaluation yet
+NASDAQ100,LightGBM,Binary_logloss,0.51841014829892407,0.48066652424695577,0.17999999999999999,New_Phase1,Validation only; no test evaluation yet
+NIKKEI225,GRU,CE,0.67000000000000004,0.67242967606366744,0.044000000000000018,New_Phase1,Validation only; no test evaluation yet
+NIKKEI225,LogisticRegression,L2,0.53505434782608696,0.41453935061950353,0.14000000000000001,New_Phase1,Validation only; no test evaluation yet
+NIKKEI225,LightGBM,Binary_logloss,0.62364130434782616,0.60841669316245583,0.010000000000000009,New_Phase1,Validation only; no test evaluation yet
+EUROSTOXX50,GRU,CE,0.66535947712418297,0.66586880477291321,0.018000000000000016,New_Phase1,Validation only; no test evaluation yet
+EUROSTOXX50,LogisticRegression,L2,0.58551926902310525,0.58189966441527552,0.15999999999999998,New_Phase1,Validation only; no test evaluation yet
+EUROSTOXX50,LightGBM,Binary_logloss,0.52979430345159251,0.5144374898719819,0.19,New_Phase1,Validation only; no test evaluation yet
+KOSPI200,GRU,CE,0.64865432294139358,0.63470483640986242,0.080000000000000002,New_Phase1,Validation only; no test evaluation yet
+KOSPI200,LogisticRegression,L2,0.61905892282534158,0.58955459399117904,0.18000000000000005,New_Phase1,Validation only; no test evaluation yet
+KOSPI200,LightGBM,Binary_logloss,0.53803344411035503,0.52941738971467145,0.18999999999999995,New_Phase1,Validation only; no test evaluation yet
+SP500,LNN,MILD_FOCAL,0.60372670807453421,,,Existing_frozen,Copied unchanged validated architecture selection
+SP500,LSTM,MILD_FOCAL,0.61782974059188878,,,Existing_frozen,Copied unchanged validated architecture selection
+SP500,Transformer,MILD_FOCAL,0.63618012422360237,,,Existing_frozen,Copied unchanged validated architecture selection
+NASDAQ100,LNN,MILD_FOCAL,0.56553503925559745,,,Existing_frozen,Copied unchanged validated architecture selection
+NASDAQ100,LSTM,MILD_FOCAL,0.66846830473974994,,,Existing_frozen,Copied unchanged validated architecture selection
+NASDAQ100,Transformer,MILD_WCE,0.69340893670640691,,,Existing_frozen,Copied unchanged validated architecture selection
+NIKKEI225,LNN,MILD_WCE,0.63902173913043481,,,Existing_frozen,Copied unchanged validated architecture selection
+NIKKEI225,LSTM,MILD_FOCAL,0.68693840579710153,,,Existing_frozen,Copied unchanged validated architecture selection
+NIKKEI225,Transformer,MILD_FOCAL,0.71498188405797103,,,Existing_frozen,Copied unchanged validated architecture selection
+EUROSTOXX50,LNN,MILD_FOCAL,0.63165672065927825,,,Existing_frozen,Copied unchanged validated architecture selection
+EUROSTOXX50,LSTM,CE,0.6571545675126238,,,Existing_frozen,Copied unchanged validated architecture selection
+EUROSTOXX50,Transformer,CE,0.61411677268454745,,,Existing_frozen,Copied unchanged validated architecture selection
+KOSPI200,LNN,CE,0.6660241599409189,,,Existing_frozen,Copied unchanged validated architecture selection
+KOSPI200,LSTM,CE,0.65230363454133033,,,Existing_frozen,Copied unchanged validated architecture selection
+KOSPI200,Transformer,MILD_FOCAL,0.66030279052592711,,,Existing_frozen,Copied unchanged validated architecture selection

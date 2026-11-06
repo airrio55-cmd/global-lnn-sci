@@ -1,0 +1,7 @@
+{
+  "status": "completed",
+  "validation_candidate_seed_runs": 125,
+  "validation_fits": 375,
+  "final_test_runs": 75,
+  "model_fit_checkpoints": 450
+}

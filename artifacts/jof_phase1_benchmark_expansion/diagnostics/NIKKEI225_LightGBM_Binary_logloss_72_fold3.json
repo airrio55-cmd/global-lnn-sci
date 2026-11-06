@@ -1,0 +1,13 @@
+{
+  "Market": "NIKKEI225",
+  "Model": "LightGBM",
+  "Loss": "Binary_logloss",
+  "Seed": 72,
+  "Stage": "fold3",
+  "Warnings": [],
+  "n_iter": 300,
+  "Logistic_converged": null,
+  "LightGBM_requested_estimators": 300,
+  "LightGBM_actual_trees": 300,
+  "fit_seconds": 2.7961137179954676
+}

@@ -1,0 +1,9 @@
+{
+  "phase": "final_test",
+  "Market": "KOSPI200",
+  "Model": "LightGBM",
+  "Loss": "Binary_logloss",
+  "Seed": 82,
+  "Stage": "final",
+  "updated_at_utc": "2026-11-06T02:58:17.740930+00:00"
+}

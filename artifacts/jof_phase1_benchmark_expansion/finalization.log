@@ -1,0 +1,61 @@
+Python: 3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]
+Platform: Linux-6.18.57-x86_64-with-glibc2.41
+Torch: 2.14.1+cpu
+DEVICE: cpu
+✅ configuration ready
+     Market              Model  Selected_Loss  Test_BA  Forecast_Up_Rate  Economic_CAGR_10bps
+      SP500                GRU     MILD_FOCAL 0.391019          0.599169             0.029786
+      SP500 LogisticRegression             L2 0.451481          0.229491             0.032334
+      SP500           LightGBM Binary_logloss 0.422934          0.396677             0.002232
+      SP500                LNN     MILD_FOCAL 0.448056          0.371755             0.024827
+      SP500               LSTM     MILD_FOCAL 0.436638          0.494289             0.004726
+      SP500        Transformer     MILD_FOCAL 0.441247          0.326064            -0.021395
+      SP500        Rule_200DMA     fixed_rule 0.565518          0.716511             0.062775
+      SP500         Momentum60     fixed_rule 0.563600          0.689512             0.091940
+      SP500        Persistence       baseline 0.515074          0.640706             0.061318
+      SP500          Always-Up       baseline 0.500000          1.000000             0.107772
+      SP500        Always-Down       baseline 0.500000          0.000000             0.000000
+  NASDAQ100                GRU     MILD_FOCAL 0.471645          0.079958            -0.089100
+  NASDAQ100 LogisticRegression             L2 0.460074          0.262721             0.005395
+  NASDAQ100           LightGBM Binary_logloss 0.450728          0.256490            -0.026660
+  NASDAQ100                LNN     MILD_FOCAL 0.479284          0.052960            -0.037636
+  NASDAQ100               LSTM     MILD_FOCAL 0.471747          0.101765            -0.023031
+  NASDAQ100        Transformer       MILD_WCE 0.460795          0.084112             0.019971
+  NASDAQ100        Rule_200DMA     fixed_rule 0.617383          0.697819             0.158754
+  NASDAQ100         Momentum60     fixed_rule 0.560512          0.656282             0.106882
+  NASDAQ100        Persistence       baseline 0.532517          0.646937             0.104579
+  NASDAQ100          Always-Up       baseline 0.500000          1.000000             0.139970
+  NASDAQ100        Always-Down       baseline 0.500000          0.000000             0.000000
+  NIKKEI225                GRU             CE 0.481863          0.160981             0.044333
+  NIKKEI225 LogisticRegression             L2 0.495309          0.005330             0.008894
+  NIKKEI225           LightGBM Binary_logloss 0.515523          0.046908             0.027656
+  NIKKEI225                LNN       MILD_WCE 0.517863          0.097015             0.057176
+  NIKKEI225               LSTM     MILD_FOCAL 0.503085          0.120469             0.094471
+  NIKKEI225        Transformer     MILD_FOCAL 0.505825          0.040512             0.000998
+  NIKKEI225        Rule_200DMA     fixed_rule 0.456108          0.715352             0.036916
+  NIKKEI225         Momentum60     fixed_rule 0.488745          0.591684             0.054491
+  NIKKEI225        Persistence       baseline 0.451269          0.606610             0.045891
+  NIKKEI225          Always-Up       baseline 0.500000          1.000000             0.175191
+  NIKKEI225        Always-Down       baseline 0.500000          0.000000             0.000000
+EUROSTOXX50                GRU             CE 0.492303          0.117220             0.011964
+EUROSTOXX50 LogisticRegression             L2 0.482776          0.142116             0.008461
+EUROSTOXX50           LightGBM Binary_logloss 0.490031          0.470954             0.027808
+EUROSTOXX50                LNN     MILD_FOCAL 0.500173          0.974066             0.078772
+EUROSTOXX50               LSTM             CE 0.505770          0.184647             0.025121
+EUROSTOXX50        Transformer             CE 0.474316          0.158714             0.021353
+EUROSTOXX50        Rule_200DMA     fixed_rule 0.496909          0.704357             0.030462
+EUROSTOXX50         Momentum60     fixed_rule 0.491835          0.579876            -0.021552
+EUROSTOXX50        Persistence       baseline 0.446689          0.545643            -0.009911
+EUROSTOXX50          Always-Up       baseline 0.500000          1.000000             0.084192
+EUROSTOXX50        Always-Down       baseline 0.500000          0.000000             0.000000
+   KOSPI200                GRU             CE 0.502377          0.990374             0.155620
+   KOSPI200 LogisticRegression             L2 0.526030          0.829947             0.097939
+   KOSPI200           LightGBM Binary_logloss 0.505413          0.983957             0.128633
+   KOSPI200                LNN             CE 0.509019          0.891979             0.114596
+   KOSPI200               LSTM             CE 0.514806          0.962567             0.149207
+   KOSPI200        Transformer     MILD_FOCAL 0.523513          0.962567             0.149403
+   KOSPI200        Rule_200DMA     fixed_rule 0.537735          0.522995             0.104244
+   KOSPI200         Momentum60     fixed_rule 0.591925          0.557219             0.111074
+   KOSPI200        Persistence       baseline 0.503252          0.552941             0.054092
+   KOSPI200          Always-Up       baseline 0.500000          1.000000             0.144716
+   KOSPI200        Always-Down       baseline 0.500000          0.000000             0.000000

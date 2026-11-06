@@ -1,0 +1,4 @@
+Scenario,Architecture_count,Market_count,Hypotheses,Membership,Final_family_replaced,Status
+Current frozen manuscript,3,5,15,"LNN,LSTM,Transformer",False,Original Holm15 retained unchanged
+Hypothetical after Phase1 GRU only,4,5,20,"LNN,LSTM,Transformer,GRU",False,Diagnostic size only; no new Holm significance claims
+After Phase2,,5,,Phase2 architecture list not supplied; future count=20+5*k additional architectures,False,Must be frozen after Phase2; no invented additions

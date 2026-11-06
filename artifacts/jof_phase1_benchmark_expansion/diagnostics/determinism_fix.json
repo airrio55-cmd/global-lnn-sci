@@ -1,0 +1,16 @@
+{
+  "fixed_at_utc": "2026-11-06T08:25:14.778724+00:00",
+  "original_sha256": "a8476c396fb72865ca05d1059f9f00ba92c85822c02d3b7458f81297f4aff57d",
+  "corrected_sha256": "f780219d07b60a371ba3227c5d33952e72101e40f0ee271e21668d11542ebaa7",
+  "scope": "Postprocessing/checkpoint verification only",
+  "cause": "Finalizer omitted set_seed, leaving deterministic algorithms disabled unlike training.",
+  "change": "Invoke original set_seed(seed) before rebuilding GRU for checkpoint replay.",
+  "reproduction_before_max_absolute_probability_error": 5.3048133850097656e-05,
+  "reproduction_after_max_absolute_probability_error": 0.0,
+  "label_difference_before_and_after": 0,
+  "probability_tolerance_unchanged": 1e-07,
+  "model_training_repeated": false,
+  "saved_predictions_changed": false,
+  "thresholds_changed": false,
+  "protocol_changed": false
+}

@@ -1,0 +1,12 @@
+Model,Rank_Test_BA_mean,Rank_Test_BA_median,Rank_Macro_F1_mean,Rank_Macro_F1_median,Rank_Test_Accuracy_mean,Rank_Test_Accuracy_median
+Always-Down,5.7,4.5,10.8,11.0,10.2,10.0
+Always-Up,5.7,4.5,6.8,6.0,2.4,1.0
+GRU,8.6,9.0,7.8,8.0,7.2,8.0
+LNN,4.4,6.0,6.8,6.0,6.4,7.0
+LSTM,5.2,5.0,6.0,7.0,5.4,6.0
+LightGBM,7.6,8.0,6.4,7.0,6.1,6.0
+LogisticRegression,7.0,7.0,7.2,6.0,7.9,9.0
+Momentum60,4.0,2.0,1.4,1.0,2.6,3.0
+Persistence,7.2,8.0,3.0,3.0,5.8,4.0
+Rule_200DMA,3.8,2.0,1.8,2.0,3.6,3.0
+Transformer,6.8,8.0,8.0,9.0,8.4,9.0

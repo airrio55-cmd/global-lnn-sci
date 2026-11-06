@@ -1,0 +1,658 @@
+Python: 3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]
+Platform: Linux-6.18.57-x86_64-with-glibc2.41
+Torch: 2.14.1+cpu
+DEVICE: cpu
+✅ configuration ready
+Markets: ['KOSPI200', 'SP500', 'NASDAQ100', 'NIKKEI225', 'EUROSTOXX50']
+Python: 3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]
+Platform: Linux-6.18.57-x86_64-with-glibc2.41
+Torch: 2.14.1+cpu
+DEVICE: cpu
+✅ configuration ready
+Markets: ['KOSPI200', 'SP500', 'NASDAQ100', 'NIKKEI225', 'EUROSTOXX50']
+Python: 3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]
+Platform: Linux-6.18.57-x86_64-with-glibc2.41
+Torch: 2.14.1+cpu
+DEVICE: cpu
+✅ configuration ready
+Markets: ['KOSPI200', 'SP500', 'NASDAQ100', 'NIKKEI225', 'EUROSTOXX50']
+Python: 3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]
+Platform: Linux-6.18.57-x86_64-with-glibc2.41
+Torch: 2.14.1+cpu
+DEVICE: cpu
+✅ configuration ready
+Markets: ['KOSPI200', 'SP500', 'NASDAQ100', 'NIKKEI225', 'EUROSTOXX50']
+Python: 3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]
+Platform: Linux-6.18.57-x86_64-with-glibc2.41
+Torch: 2.14.1+cpu
+DEVICE: cpu
+✅ configuration ready
+Markets: ['KOSPI200', 'SP500', 'NASDAQ100', 'NIKKEI225', 'EUROSTOXX50']
+FIT COMPLETE SP500_GRU_CE_42_fold1 seconds 5.2
+FIT COMPLETE SP500_GRU_CE_42_fold2 seconds 5.5
+FIT COMPLETE SP500_GRU_CE_42_fold3 seconds 13.3
+FIT COMPLETE SP500_GRU_CE_52_fold1 seconds 4.1
+FIT COMPLETE SP500_GRU_CE_52_fold2 seconds 5.3
+FIT COMPLETE SP500_GRU_CE_52_fold3 seconds 12.0
+FIT COMPLETE SP500_GRU_CE_62_fold1 seconds 7.2
+FIT COMPLETE SP500_GRU_CE_62_fold2 seconds 5.0
+FIT COMPLETE SP500_GRU_CE_62_fold3 seconds 9.5
+FIT COMPLETE SP500_GRU_CE_72_fold1 seconds 4.1
+FIT COMPLETE SP500_GRU_CE_72_fold2 seconds 5.7
+FIT COMPLETE SP500_GRU_CE_72_fold3 seconds 13.7
+FIT COMPLETE SP500_GRU_CE_82_fold1 seconds 4.3
+FIT COMPLETE SP500_GRU_CE_82_fold2 seconds 4.3
+FIT COMPLETE SP500_GRU_CE_82_fold3 seconds 5.2
+FIT COMPLETE SP500_GRU_MILD_WCE_42_fold1 seconds 6.5
+FIT COMPLETE SP500_GRU_MILD_WCE_42_fold2 seconds 4.4
+FIT COMPLETE SP500_GRU_MILD_WCE_42_fold3 seconds 9.1
+FIT COMPLETE SP500_GRU_MILD_WCE_52_fold1 seconds 8.3
+FIT COMPLETE SP500_GRU_MILD_WCE_52_fold2 seconds 7.3
+FIT COMPLETE SP500_GRU_MILD_WCE_52_fold3 seconds 8.2
+FIT COMPLETE SP500_GRU_MILD_WCE_62_fold1 seconds 8.9
+FIT COMPLETE SP500_GRU_MILD_WCE_62_fold2 seconds 4.7
+FIT COMPLETE SP500_GRU_MILD_WCE_62_fold3 seconds 12.1
+FIT COMPLETE SP500_GRU_MILD_WCE_72_fold1 seconds 5.7
+FIT COMPLETE SP500_GRU_MILD_WCE_72_fold2 seconds 4.6
+FIT COMPLETE SP500_GRU_MILD_WCE_72_fold3 seconds 10.1
+FIT COMPLETE SP500_GRU_MILD_WCE_82_fold1 seconds 4.0
+FIT COMPLETE SP500_GRU_MILD_WCE_82_fold2 seconds 4.4
+FIT COMPLETE SP500_GRU_MILD_WCE_82_fold3 seconds 8.7
+FIT COMPLETE SP500_GRU_MILD_FOCAL_42_fold1 seconds 6.3
+FIT COMPLETE SP500_GRU_MILD_FOCAL_42_fold2 seconds 15.8
+FIT COMPLETE SP500_GRU_MILD_FOCAL_42_fold3 seconds 7.1
+FIT COMPLETE SP500_GRU_MILD_FOCAL_52_fold1 seconds 6.7
+FIT COMPLETE SP500_GRU_MILD_FOCAL_52_fold2 seconds 12.0
+FIT COMPLETE SP500_GRU_MILD_FOCAL_52_fold3 seconds 9.6
+FIT COMPLETE SP500_GRU_MILD_FOCAL_62_fold1 seconds 6.6
+FIT COMPLETE SP500_GRU_MILD_FOCAL_62_fold2 seconds 9.6
+FIT COMPLETE SP500_GRU_MILD_FOCAL_62_fold3 seconds 11.9
+FIT COMPLETE SP500_GRU_MILD_FOCAL_72_fold1 seconds 5.5
+FIT COMPLETE SP500_GRU_MILD_FOCAL_72_fold2 seconds 10.1
+FIT COMPLETE SP500_GRU_MILD_FOCAL_72_fold3 seconds 9.7
+FIT COMPLETE SP500_GRU_MILD_FOCAL_82_fold1 seconds 7.1
+FIT COMPLETE SP500_GRU_MILD_FOCAL_82_fold2 seconds 13.5
+FIT COMPLETE SP500_GRU_MILD_FOCAL_82_fold3 seconds 9.0
+FIT COMPLETE SP500_LogisticRegression_L2_42_fold1 seconds 0.1
+FIT COMPLETE SP500_LogisticRegression_L2_42_fold2 seconds 0.2
+FIT COMPLETE SP500_LogisticRegression_L2_42_fold3 seconds 0.1
+FIT COMPLETE SP500_LogisticRegression_L2_52_fold1 seconds 0.1
+FIT COMPLETE SP500_LogisticRegression_L2_52_fold2 seconds 0.1
+FIT COMPLETE SP500_LogisticRegression_L2_52_fold3 seconds 0.1
+FIT COMPLETE SP500_LogisticRegression_L2_62_fold1 seconds 0.1
+FIT COMPLETE SP500_LogisticRegression_L2_62_fold2 seconds 0.1
+FIT COMPLETE SP500_LogisticRegression_L2_62_fold3 seconds 0.1
+FIT COMPLETE SP500_LogisticRegression_L2_72_fold1 seconds 0.1
+FIT COMPLETE SP500_LogisticRegression_L2_72_fold2 seconds 0.1
+FIT COMPLETE SP500_LogisticRegression_L2_72_fold3 seconds 0.1
+FIT COMPLETE SP500_LogisticRegression_L2_82_fold1 seconds 0.1
+FIT COMPLETE SP500_LogisticRegression_L2_82_fold2 seconds 0.1
+FIT COMPLETE SP500_LogisticRegression_L2_82_fold3 seconds 0.1
+FIT COMPLETE SP500_LightGBM_Binary_logloss_42_fold1 seconds 3.8
+FIT COMPLETE SP500_LightGBM_Binary_logloss_42_fold2 seconds 3.9
+FIT COMPLETE SP500_LightGBM_Binary_logloss_42_fold3 seconds 3.9
+FIT COMPLETE SP500_LightGBM_Binary_logloss_52_fold1 seconds 3.8
+FIT COMPLETE SP500_LightGBM_Binary_logloss_52_fold2 seconds 3.8
+FIT COMPLETE SP500_LightGBM_Binary_logloss_52_fold3 seconds 3.9
+FIT COMPLETE SP500_LightGBM_Binary_logloss_62_fold1 seconds 3.8
+FIT COMPLETE SP500_LightGBM_Binary_logloss_62_fold2 seconds 3.8
+FIT COMPLETE SP500_LightGBM_Binary_logloss_62_fold3 seconds 3.9
+FIT COMPLETE SP500_LightGBM_Binary_logloss_72_fold1 seconds 3.8
+FIT COMPLETE SP500_LightGBM_Binary_logloss_72_fold2 seconds 3.9
+FIT COMPLETE SP500_LightGBM_Binary_logloss_72_fold3 seconds 3.9
+FIT COMPLETE SP500_LightGBM_Binary_logloss_82_fold1 seconds 3.8
+FIT COMPLETE SP500_LightGBM_Binary_logloss_82_fold2 seconds 3.9
+FIT COMPLETE SP500_LightGBM_Binary_logloss_82_fold3 seconds 3.9
+FIT COMPLETE NASDAQ100_GRU_CE_42_fold1 seconds 3.9
+FIT COMPLETE NASDAQ100_GRU_CE_42_fold2 seconds 4.4
+FIT COMPLETE NASDAQ100_GRU_CE_42_fold3 seconds 10.1
+FIT COMPLETE NASDAQ100_GRU_CE_52_fold1 seconds 4.3
+FIT COMPLETE NASDAQ100_GRU_CE_52_fold2 seconds 9.6
+FIT COMPLETE NASDAQ100_GRU_CE_52_fold3 seconds 9.2
+FIT COMPLETE NASDAQ100_GRU_CE_62_fold1 seconds 3.9
+FIT COMPLETE NASDAQ100_GRU_CE_62_fold2 seconds 4.4
+FIT COMPLETE NASDAQ100_GRU_CE_62_fold3 seconds 9.3
+FIT COMPLETE NASDAQ100_GRU_CE_72_fold1 seconds 5.5
+FIT COMPLETE NASDAQ100_GRU_CE_72_fold2 seconds 6.1
+FIT COMPLETE NASDAQ100_GRU_CE_72_fold3 seconds 9.7
+FIT COMPLETE NASDAQ100_GRU_CE_82_fold1 seconds 4.2
+FIT COMPLETE NASDAQ100_GRU_CE_82_fold2 seconds 4.6
+FIT COMPLETE NASDAQ100_GRU_CE_82_fold3 seconds 8.7
+FIT COMPLETE NASDAQ100_GRU_MILD_WCE_42_fold1 seconds 5.1
+FIT COMPLETE NASDAQ100_GRU_MILD_WCE_42_fold2 seconds 11.9
+FIT COMPLETE NASDAQ100_GRU_MILD_WCE_42_fold3 seconds 13.7
+FIT COMPLETE NASDAQ100_GRU_MILD_WCE_52_fold1 seconds 5.7
+FIT COMPLETE NASDAQ100_GRU_MILD_WCE_52_fold2 seconds 7.0
+FIT COMPLETE NASDAQ100_GRU_MILD_WCE_52_fold3 seconds 11.0
+FIT COMPLETE NASDAQ100_GRU_MILD_WCE_62_fold1 seconds 5.2
+FIT COMPLETE NASDAQ100_GRU_MILD_WCE_62_fold2 seconds 5.7
+FIT COMPLETE NASDAQ100_GRU_MILD_WCE_62_fold3 seconds 11.6
+FIT COMPLETE NASDAQ100_GRU_MILD_WCE_72_fold1 seconds 11.9
+FIT COMPLETE NASDAQ100_GRU_MILD_WCE_72_fold2 seconds 6.3
+FIT COMPLETE NASDAQ100_GRU_MILD_WCE_72_fold3 seconds 12.2
+FIT COMPLETE NASDAQ100_GRU_MILD_WCE_82_fold1 seconds 10.4
+FIT COMPLETE NASDAQ100_GRU_MILD_WCE_82_fold2 seconds 5.8
+FIT COMPLETE NASDAQ100_GRU_MILD_WCE_82_fold3 seconds 11.0
+FIT COMPLETE NASDAQ100_GRU_MILD_FOCAL_42_fold1 seconds 7.6
+FIT COMPLETE NASDAQ100_GRU_MILD_FOCAL_42_fold2 seconds 11.7
+FIT COMPLETE NASDAQ100_GRU_MILD_FOCAL_42_fold3 seconds 12.4
+FIT COMPLETE NASDAQ100_GRU_MILD_FOCAL_52_fold1 seconds 11.4
+FIT COMPLETE NASDAQ100_GRU_MILD_FOCAL_52_fold2 seconds 12.7
+FIT COMPLETE NASDAQ100_GRU_MILD_FOCAL_52_fold3 seconds 11.6
+FIT COMPLETE NASDAQ100_GRU_MILD_FOCAL_62_fold1 seconds 5.3
+FIT COMPLETE NASDAQ100_GRU_MILD_FOCAL_62_fold2 seconds 14.4
+FIT COMPLETE NASDAQ100_GRU_MILD_FOCAL_62_fold3 seconds 11.7
+FIT COMPLETE NASDAQ100_GRU_MILD_FOCAL_72_fold1 seconds 5.3
+FIT COMPLETE NASDAQ100_GRU_MILD_FOCAL_72_fold2 seconds 12.7
+FIT COMPLETE NASDAQ100_GRU_MILD_FOCAL_72_fold3 seconds 12.0
+FIT COMPLETE NASDAQ100_GRU_MILD_FOCAL_82_fold1 seconds 11.5
+FIT COMPLETE NASDAQ100_GRU_MILD_FOCAL_82_fold2 seconds 11.7
+FIT COMPLETE NASDAQ100_GRU_MILD_FOCAL_82_fold3 seconds 11.7
+FIT COMPLETE NASDAQ100_LogisticRegression_L2_42_fold1 seconds 0.1
+FIT COMPLETE NASDAQ100_LogisticRegression_L2_42_fold2 seconds 0.1
+FIT COMPLETE NASDAQ100_LogisticRegression_L2_42_fold3 seconds 0.1
+FIT COMPLETE NASDAQ100_LogisticRegression_L2_52_fold1 seconds 0.1
+FIT COMPLETE NASDAQ100_LogisticRegression_L2_52_fold2 seconds 0.1
+FIT COMPLETE NASDAQ100_LogisticRegression_L2_52_fold3 seconds 0.1
+FIT COMPLETE NASDAQ100_LogisticRegression_L2_62_fold1 seconds 0.1
+FIT COMPLETE NASDAQ100_LogisticRegression_L2_62_fold2 seconds 0.1
+FIT COMPLETE NASDAQ100_LogisticRegression_L2_62_fold3 seconds 0.1
+FIT COMPLETE NASDAQ100_LogisticRegression_L2_72_fold1 seconds 0.1
+FIT COMPLETE NASDAQ100_LogisticRegression_L2_72_fold2 seconds 0.1
+FIT COMPLETE NASDAQ100_LogisticRegression_L2_72_fold3 seconds 0.1
+FIT COMPLETE NASDAQ100_LogisticRegression_L2_82_fold1 seconds 0.1
+FIT COMPLETE NASDAQ100_LogisticRegression_L2_82_fold2 seconds 0.1
+FIT COMPLETE NASDAQ100_LogisticRegression_L2_82_fold3 seconds 0.1
+FIT COMPLETE NASDAQ100_LightGBM_Binary_logloss_42_fold1 seconds 4.1
+FIT COMPLETE NASDAQ100_LightGBM_Binary_logloss_42_fold2 seconds 4.2
+FIT COMPLETE NASDAQ100_LightGBM_Binary_logloss_42_fold3 seconds 4.5
+FIT COMPLETE NASDAQ100_LightGBM_Binary_logloss_52_fold1 seconds 4.1
+FIT COMPLETE NASDAQ100_LightGBM_Binary_logloss_52_fold2 seconds 4.2
+FIT COMPLETE NASDAQ100_LightGBM_Binary_logloss_52_fold3 seconds 4.2
+FIT COMPLETE NASDAQ100_LightGBM_Binary_logloss_62_fold1 seconds 4.1
+FIT COMPLETE NASDAQ100_LightGBM_Binary_logloss_62_fold2 seconds 4.2
+FIT COMPLETE NASDAQ100_LightGBM_Binary_logloss_62_fold3 seconds 4.2
+FIT COMPLETE NASDAQ100_LightGBM_Binary_logloss_72_fold1 seconds 4.1
+FIT COMPLETE NASDAQ100_LightGBM_Binary_logloss_72_fold2 seconds 4.2
+FIT COMPLETE NASDAQ100_LightGBM_Binary_logloss_72_fold3 seconds 4.5
+FIT COMPLETE NASDAQ100_LightGBM_Binary_logloss_82_fold1 seconds 4.1
+FIT COMPLETE NASDAQ100_LightGBM_Binary_logloss_82_fold2 seconds 4.2
+FIT COMPLETE NASDAQ100_LightGBM_Binary_logloss_82_fold3 seconds 4.2
+FIT COMPLETE NIKKEI225_GRU_CE_42_fold1 seconds 5.1
+FIT COMPLETE NIKKEI225_GRU_CE_42_fold2 seconds 10.2
+FIT COMPLETE NIKKEI225_GRU_CE_42_fold3 seconds 7.3
+FIT COMPLETE NIKKEI225_GRU_CE_52_fold1 seconds 4.5
+FIT COMPLETE NIKKEI225_GRU_CE_52_fold2 seconds 9.6
+FIT COMPLETE NIKKEI225_GRU_CE_52_fold3 seconds 15.2
+FIT COMPLETE NIKKEI225_GRU_CE_62_fold1 seconds 4.5
+FIT COMPLETE NIKKEI225_GRU_CE_62_fold2 seconds 8.4
+FIT COMPLETE NIKKEI225_GRU_CE_62_fold3 seconds 7.4
+FIT COMPLETE NIKKEI225_GRU_CE_72_fold1 seconds 6.2
+FIT COMPLETE NIKKEI225_GRU_CE_72_fold2 seconds 9.5
+FIT COMPLETE NIKKEI225_GRU_CE_72_fold3 seconds 14.1
+FIT COMPLETE NIKKEI225_GRU_CE_82_fold1 seconds 5.0
+FIT COMPLETE NIKKEI225_GRU_CE_82_fold2 seconds 13.9
+FIT COMPLETE NIKKEI225_GRU_CE_82_fold3 seconds 12.5
+FIT COMPLETE NIKKEI225_GRU_MILD_WCE_42_fold1 seconds 4.3
+FIT COMPLETE NIKKEI225_GRU_MILD_WCE_42_fold2 seconds 9.7
+FIT COMPLETE NIKKEI225_GRU_MILD_WCE_42_fold3 seconds 8.9
+FIT COMPLETE NIKKEI225_GRU_MILD_WCE_52_fold1 seconds 6.5
+FIT COMPLETE NIKKEI225_GRU_MILD_WCE_52_fold2 seconds 7.7
+FIT COMPLETE NIKKEI225_GRU_MILD_WCE_52_fold3 seconds 12.1
+FIT COMPLETE NIKKEI225_GRU_MILD_WCE_62_fold1 seconds 4.3
+FIT COMPLETE NIKKEI225_GRU_MILD_WCE_62_fold2 seconds 6.9
+FIT COMPLETE NIKKEI225_GRU_MILD_WCE_62_fold3 seconds 8.8
+FIT COMPLETE NIKKEI225_GRU_MILD_WCE_72_fold1 seconds 3.6
+FIT COMPLETE NIKKEI225_GRU_MILD_WCE_72_fold2 seconds 8.1
+FIT COMPLETE NIKKEI225_GRU_MILD_WCE_72_fold3 seconds 6.0
+FIT COMPLETE NIKKEI225_GRU_MILD_WCE_82_fold1 seconds 3.6
+FIT COMPLETE NIKKEI225_GRU_MILD_WCE_82_fold2 seconds 8.1
+FIT COMPLETE NIKKEI225_GRU_MILD_WCE_82_fold3 seconds 10.0
+FIT COMPLETE NIKKEI225_GRU_MILD_FOCAL_42_fold1 seconds 3.7
+FIT COMPLETE NIKKEI225_GRU_MILD_FOCAL_42_fold2 seconds 9.4
+FIT COMPLETE NIKKEI225_GRU_MILD_FOCAL_42_fold3 seconds 6.1
+FIT COMPLETE NIKKEI225_GRU_MILD_FOCAL_52_fold1 seconds 3.7
+FIT COMPLETE NIKKEI225_GRU_MILD_FOCAL_52_fold2 seconds 7.8
+FIT COMPLETE NIKKEI225_GRU_MILD_FOCAL_52_fold3 seconds 6.1
+FIT COMPLETE NIKKEI225_GRU_MILD_FOCAL_62_fold1 seconds 6.6
+FIT COMPLETE NIKKEI225_GRU_MILD_FOCAL_62_fold2 seconds 10.1
+FIT COMPLETE NIKKEI225_GRU_MILD_FOCAL_62_fold3 seconds 9.7
+FIT COMPLETE NIKKEI225_GRU_MILD_FOCAL_72_fold1 seconds 3.7
+FIT COMPLETE NIKKEI225_GRU_MILD_FOCAL_72_fold2 seconds 8.5
+FIT COMPLETE NIKKEI225_GRU_MILD_FOCAL_72_fold3 seconds 5.9
+FIT COMPLETE NIKKEI225_GRU_MILD_FOCAL_82_fold1 seconds 7.5
+FIT COMPLETE NIKKEI225_GRU_MILD_FOCAL_82_fold2 seconds 8.3
+FIT COMPLETE NIKKEI225_GRU_MILD_FOCAL_82_fold3 seconds 9.8
+FIT COMPLETE NIKKEI225_LogisticRegression_L2_42_fold1 seconds 0.1
+FIT COMPLETE NIKKEI225_LogisticRegression_L2_42_fold2 seconds 0.1
+FIT COMPLETE NIKKEI225_LogisticRegression_L2_42_fold3 seconds 0.1
+FIT COMPLETE NIKKEI225_LogisticRegression_L2_52_fold1 seconds 0.1
+FIT COMPLETE NIKKEI225_LogisticRegression_L2_52_fold2 seconds 0.1
+FIT COMPLETE NIKKEI225_LogisticRegression_L2_52_fold3 seconds 0.1
+FIT COMPLETE NIKKEI225_LogisticRegression_L2_62_fold1 seconds 0.1
+FIT COMPLETE NIKKEI225_LogisticRegression_L2_62_fold2 seconds 0.1
+FIT COMPLETE NIKKEI225_LogisticRegression_L2_62_fold3 seconds 0.1
+FIT COMPLETE NIKKEI225_LogisticRegression_L2_72_fold1 seconds 0.1
+FIT COMPLETE NIKKEI225_LogisticRegression_L2_72_fold2 seconds 0.1
+FIT COMPLETE NIKKEI225_LogisticRegression_L2_72_fold3 seconds 0.1
+FIT COMPLETE NIKKEI225_LogisticRegression_L2_82_fold1 seconds 0.1
+FIT COMPLETE NIKKEI225_LogisticRegression_L2_82_fold2 seconds 0.1
+FIT COMPLETE NIKKEI225_LogisticRegression_L2_82_fold3 seconds 0.1
+FIT COMPLETE NIKKEI225_LightGBM_Binary_logloss_42_fold1 seconds 3.1
+FIT COMPLETE NIKKEI225_LightGBM_Binary_logloss_42_fold2 seconds 2.8
+FIT COMPLETE NIKKEI225_LightGBM_Binary_logloss_42_fold3 seconds 2.8
+FIT COMPLETE NIKKEI225_LightGBM_Binary_logloss_52_fold1 seconds 2.8
+FIT COMPLETE NIKKEI225_LightGBM_Binary_logloss_52_fold2 seconds 2.8
+FIT COMPLETE NIKKEI225_LightGBM_Binary_logloss_52_fold3 seconds 2.8
+FIT COMPLETE NIKKEI225_LightGBM_Binary_logloss_62_fold1 seconds 2.7
+FIT COMPLETE NIKKEI225_LightGBM_Binary_logloss_62_fold2 seconds 2.8
+FIT COMPLETE NIKKEI225_LightGBM_Binary_logloss_62_fold3 seconds 2.8
+FIT COMPLETE NIKKEI225_LightGBM_Binary_logloss_72_fold1 seconds 2.8
+FIT COMPLETE NIKKEI225_LightGBM_Binary_logloss_72_fold2 seconds 2.9
+FIT COMPLETE NIKKEI225_LightGBM_Binary_logloss_72_fold3 seconds 2.8
+FIT COMPLETE NIKKEI225_LightGBM_Binary_logloss_82_fold1 seconds 2.8
+FIT COMPLETE NIKKEI225_LightGBM_Binary_logloss_82_fold2 seconds 2.9
+FIT COMPLETE NIKKEI225_LightGBM_Binary_logloss_82_fold3 seconds 2.8
+FIT COMPLETE EUROSTOXX50_GRU_CE_42_fold1 seconds 4.2
+FIT COMPLETE EUROSTOXX50_GRU_CE_42_fold2 seconds 8.3
+FIT COMPLETE EUROSTOXX50_GRU_CE_42_fold3 seconds 5.0
+FIT COMPLETE EUROSTOXX50_GRU_CE_52_fold1 seconds 4.2
+FIT COMPLETE EUROSTOXX50_GRU_CE_52_fold2 seconds 11.9
+FIT COMPLETE EUROSTOXX50_GRU_CE_52_fold3 seconds 5.4
+FIT COMPLETE EUROSTOXX50_GRU_CE_62_fold1 seconds 4.1
+FIT COMPLETE EUROSTOXX50_GRU_CE_62_fold2 seconds 9.2
+FIT COMPLETE EUROSTOXX50_GRU_CE_62_fold3 seconds 5.5
+FIT COMPLETE EUROSTOXX50_GRU_CE_72_fold1 seconds 4.5
+FIT COMPLETE EUROSTOXX50_GRU_CE_72_fold2 seconds 7.6
+FIT COMPLETE EUROSTOXX50_GRU_CE_72_fold3 seconds 8.2
+FIT COMPLETE EUROSTOXX50_GRU_CE_82_fold1 seconds 4.4
+FIT COMPLETE EUROSTOXX50_GRU_CE_82_fold2 seconds 11.3
+FIT COMPLETE EUROSTOXX50_GRU_CE_82_fold3 seconds 5.4
+FIT COMPLETE EUROSTOXX50_GRU_MILD_WCE_42_fold1 seconds 4.1
+FIT COMPLETE EUROSTOXX50_GRU_MILD_WCE_42_fold2 seconds 7.8
+FIT COMPLETE EUROSTOXX50_GRU_MILD_WCE_42_fold3 seconds 5.1
+FIT COMPLETE EUROSTOXX50_GRU_MILD_WCE_52_fold1 seconds 4.2
+FIT COMPLETE EUROSTOXX50_GRU_MILD_WCE_52_fold2 seconds 7.7
+FIT COMPLETE EUROSTOXX50_GRU_MILD_WCE_52_fold3 seconds 5.1
+FIT COMPLETE EUROSTOXX50_GRU_MILD_WCE_62_fold1 seconds 4.3
+FIT COMPLETE EUROSTOXX50_GRU_MILD_WCE_62_fold2 seconds 8.0
+FIT COMPLETE EUROSTOXX50_GRU_MILD_WCE_62_fold3 seconds 5.0
+FIT COMPLETE EUROSTOXX50_GRU_MILD_WCE_72_fold1 seconds 4.5
+FIT COMPLETE EUROSTOXX50_GRU_MILD_WCE_72_fold2 seconds 7.7
+FIT COMPLETE EUROSTOXX50_GRU_MILD_WCE_72_fold3 seconds 5.1
+FIT COMPLETE EUROSTOXX50_GRU_MILD_WCE_82_fold1 seconds 3.8
+FIT COMPLETE EUROSTOXX50_GRU_MILD_WCE_82_fold2 seconds 11.1
+FIT COMPLETE EUROSTOXX50_GRU_MILD_WCE_82_fold3 seconds 5.0
+FIT COMPLETE EUROSTOXX50_GRU_MILD_FOCAL_42_fold1 seconds 5.1
+FIT COMPLETE EUROSTOXX50_GRU_MILD_FOCAL_42_fold2 seconds 8.6
+FIT COMPLETE EUROSTOXX50_GRU_MILD_FOCAL_42_fold3 seconds 7.7
+FIT COMPLETE EUROSTOXX50_GRU_MILD_FOCAL_52_fold1 seconds 5.5
+FIT COMPLETE EUROSTOXX50_GRU_MILD_FOCAL_52_fold2 seconds 5.4
+FIT COMPLETE EUROSTOXX50_GRU_MILD_FOCAL_52_fold3 seconds 8.4
+FIT COMPLETE EUROSTOXX50_GRU_MILD_FOCAL_62_fold1 seconds 3.9
+FIT COMPLETE EUROSTOXX50_GRU_MILD_FOCAL_62_fold2 seconds 8.2
+FIT COMPLETE EUROSTOXX50_GRU_MILD_FOCAL_62_fold3 seconds 8.0
+FIT COMPLETE EUROSTOXX50_GRU_MILD_FOCAL_72_fold1 seconds 5.1
+FIT COMPLETE EUROSTOXX50_GRU_MILD_FOCAL_72_fold2 seconds 7.8
+FIT COMPLETE EUROSTOXX50_GRU_MILD_FOCAL_72_fold3 seconds 7.6
+FIT COMPLETE EUROSTOXX50_GRU_MILD_FOCAL_82_fold1 seconds 3.8
+FIT COMPLETE EUROSTOXX50_GRU_MILD_FOCAL_82_fold2 seconds 5.4
+FIT COMPLETE EUROSTOXX50_GRU_MILD_FOCAL_82_fold3 seconds 4.7
+FIT COMPLETE EUROSTOXX50_LogisticRegression_L2_42_fold1 seconds 0.1
+FIT COMPLETE EUROSTOXX50_LogisticRegression_L2_42_fold2 seconds 0.1
+FIT COMPLETE EUROSTOXX50_LogisticRegression_L2_42_fold3 seconds 0.1
+FIT COMPLETE EUROSTOXX50_LogisticRegression_L2_52_fold1 seconds 0.1
+FIT COMPLETE EUROSTOXX50_LogisticRegression_L2_52_fold2 seconds 0.1
+FIT COMPLETE EUROSTOXX50_LogisticRegression_L2_52_fold3 seconds 0.1
+FIT COMPLETE EUROSTOXX50_LogisticRegression_L2_62_fold1 seconds 0.1
+FIT COMPLETE EUROSTOXX50_LogisticRegression_L2_62_fold2 seconds 0.1
+FIT COMPLETE EUROSTOXX50_LogisticRegression_L2_62_fold3 seconds 0.1
+FIT COMPLETE EUROSTOXX50_LogisticRegression_L2_72_fold1 seconds 0.1
+FIT COMPLETE EUROSTOXX50_LogisticRegression_L2_72_fold2 seconds 0.1
+FIT COMPLETE EUROSTOXX50_LogisticRegression_L2_72_fold3 seconds 0.1
+FIT COMPLETE EUROSTOXX50_LogisticRegression_L2_82_fold1 seconds 0.1
+FIT COMPLETE EUROSTOXX50_LogisticRegression_L2_82_fold2 seconds 0.1
+FIT COMPLETE EUROSTOXX50_LogisticRegression_L2_82_fold3 seconds 0.1
+FIT COMPLETE EUROSTOXX50_LightGBM_Binary_logloss_42_fold1 seconds 2.9
+FIT COMPLETE EUROSTOXX50_LightGBM_Binary_logloss_42_fold2 seconds 2.9
+FIT COMPLETE EUROSTOXX50_LightGBM_Binary_logloss_42_fold3 seconds 2.9
+FIT COMPLETE EUROSTOXX50_LightGBM_Binary_logloss_52_fold1 seconds 2.8
+FIT COMPLETE EUROSTOXX50_LightGBM_Binary_logloss_52_fold2 seconds 2.9
+FIT COMPLETE EUROSTOXX50_LightGBM_Binary_logloss_52_fold3 seconds 2.9
+FIT COMPLETE EUROSTOXX50_LightGBM_Binary_logloss_62_fold1 seconds 2.9
+FIT COMPLETE EUROSTOXX50_LightGBM_Binary_logloss_62_fold2 seconds 2.9
+FIT COMPLETE EUROSTOXX50_LightGBM_Binary_logloss_62_fold3 seconds 2.9
+FIT COMPLETE EUROSTOXX50_LightGBM_Binary_logloss_72_fold1 seconds 2.8
+FIT COMPLETE EUROSTOXX50_LightGBM_Binary_logloss_72_fold2 seconds 2.9
+FIT COMPLETE EUROSTOXX50_LightGBM_Binary_logloss_72_fold3 seconds 2.9
+FIT COMPLETE EUROSTOXX50_LightGBM_Binary_logloss_82_fold1 seconds 2.8
+FIT COMPLETE EUROSTOXX50_LightGBM_Binary_logloss_82_fold2 seconds 2.9
+FIT COMPLETE EUROSTOXX50_LightGBM_Binary_logloss_82_fold3 seconds 2.9
+FIT COMPLETE KOSPI200_GRU_CE_42_fold1 seconds 3.6
+FIT COMPLETE KOSPI200_GRU_CE_42_fold2 seconds 7.9
+FIT COMPLETE KOSPI200_GRU_CE_42_fold3 seconds 4.4
+FIT COMPLETE KOSPI200_GRU_CE_52_fold1 seconds 7.9
+FIT COMPLETE KOSPI200_GRU_CE_52_fold2 seconds 7.5
+FIT COMPLETE KOSPI200_GRU_CE_52_fold3 seconds 5.2
+FIT COMPLETE KOSPI200_GRU_CE_62_fold1 seconds 8.9
+FIT COMPLETE KOSPI200_GRU_CE_62_fold2 seconds 6.9
+FIT COMPLETE KOSPI200_GRU_CE_62_fold3 seconds 8.1
+FIT COMPLETE KOSPI200_GRU_CE_72_fold1 seconds 3.7
+FIT COMPLETE KOSPI200_GRU_CE_72_fold2 seconds 6.9
+FIT COMPLETE KOSPI200_GRU_CE_72_fold3 seconds 4.8
+FIT COMPLETE KOSPI200_GRU_CE_82_fold1 seconds 11.4
+FIT COMPLETE KOSPI200_GRU_CE_82_fold2 seconds 8.5
+FIT COMPLETE KOSPI200_GRU_CE_82_fold3 seconds 6.0
+FIT COMPLETE KOSPI200_GRU_MILD_WCE_42_fold1 seconds 3.6
+FIT COMPLETE KOSPI200_GRU_MILD_WCE_42_fold2 seconds 7.9
+FIT COMPLETE KOSPI200_GRU_MILD_WCE_42_fold3 seconds 4.4
+FIT COMPLETE KOSPI200_GRU_MILD_WCE_52_fold1 seconds 7.7
+FIT COMPLETE KOSPI200_GRU_MILD_WCE_52_fold2 seconds 7.5
+FIT COMPLETE KOSPI200_GRU_MILD_WCE_52_fold3 seconds 4.9
+FIT COMPLETE KOSPI200_GRU_MILD_WCE_62_fold1 seconds 8.1
+FIT COMPLETE KOSPI200_GRU_MILD_WCE_62_fold2 seconds 8.2
+FIT COMPLETE KOSPI200_GRU_MILD_WCE_62_fold3 seconds 7.9
+FIT COMPLETE KOSPI200_GRU_MILD_WCE_72_fold1 seconds 3.6
+FIT COMPLETE KOSPI200_GRU_MILD_WCE_72_fold2 seconds 6.8
+FIT COMPLETE KOSPI200_GRU_MILD_WCE_72_fold3 seconds 4.7
+FIT COMPLETE KOSPI200_GRU_MILD_WCE_82_fold1 seconds 11.4
+FIT COMPLETE KOSPI200_GRU_MILD_WCE_82_fold2 seconds 7.4
+FIT COMPLETE KOSPI200_GRU_MILD_WCE_82_fold3 seconds 4.8
+FIT COMPLETE KOSPI200_GRU_MILD_FOCAL_42_fold1 seconds 3.7
+FIT COMPLETE KOSPI200_GRU_MILD_FOCAL_42_fold2 seconds 6.9
+FIT COMPLETE KOSPI200_GRU_MILD_FOCAL_42_fold3 seconds 4.4
+FIT COMPLETE KOSPI200_GRU_MILD_FOCAL_52_fold1 seconds 9.0
+FIT COMPLETE KOSPI200_GRU_MILD_FOCAL_52_fold2 seconds 7.3
+FIT COMPLETE KOSPI200_GRU_MILD_FOCAL_52_fold3 seconds 6.0
+FIT COMPLETE KOSPI200_GRU_MILD_FOCAL_62_fold1 seconds 4.3
+FIT COMPLETE KOSPI200_GRU_MILD_FOCAL_62_fold2 seconds 9.7
+FIT COMPLETE KOSPI200_GRU_MILD_FOCAL_62_fold3 seconds 8.5
+FIT COMPLETE KOSPI200_GRU_MILD_FOCAL_72_fold1 seconds 3.7
+FIT COMPLETE KOSPI200_GRU_MILD_FOCAL_72_fold2 seconds 11.3
+FIT COMPLETE KOSPI200_GRU_MILD_FOCAL_72_fold3 seconds 10.0
+FIT COMPLETE KOSPI200_GRU_MILD_FOCAL_82_fold1 seconds 10.9
+FIT COMPLETE KOSPI200_GRU_MILD_FOCAL_82_fold2 seconds 8.7
+FIT COMPLETE KOSPI200_GRU_MILD_FOCAL_82_fold3 seconds 4.4
+FIT COMPLETE KOSPI200_LogisticRegression_L2_42_fold1 seconds 0.1
+FIT COMPLETE KOSPI200_LogisticRegression_L2_42_fold2 seconds 0.1
+FIT COMPLETE KOSPI200_LogisticRegression_L2_42_fold3 seconds 0.1
+FIT COMPLETE KOSPI200_LogisticRegression_L2_52_fold1 seconds 0.0
+FIT COMPLETE KOSPI200_LogisticRegression_L2_52_fold2 seconds 0.1
+FIT COMPLETE KOSPI200_LogisticRegression_L2_52_fold3 seconds 0.1
+FIT COMPLETE KOSPI200_LogisticRegression_L2_62_fold1 seconds 0.0
+FIT COMPLETE KOSPI200_LogisticRegression_L2_62_fold2 seconds 0.1
+FIT COMPLETE KOSPI200_LogisticRegression_L2_62_fold3 seconds 0.1
+FIT COMPLETE KOSPI200_LogisticRegression_L2_72_fold1 seconds 0.1
+FIT COMPLETE KOSPI200_LogisticRegression_L2_72_fold2 seconds 0.1
+FIT COMPLETE KOSPI200_LogisticRegression_L2_72_fold3 seconds 0.1
+FIT COMPLETE KOSPI200_LogisticRegression_L2_82_fold1 seconds 0.0
+FIT COMPLETE KOSPI200_LogisticRegression_L2_82_fold2 seconds 0.1
+FIT COMPLETE KOSPI200_LogisticRegression_L2_82_fold3 seconds 0.1
+FIT COMPLETE KOSPI200_LightGBM_Binary_logloss_42_fold1 seconds 2.3
+FIT COMPLETE KOSPI200_LightGBM_Binary_logloss_42_fold2 seconds 2.3
+FIT COMPLETE KOSPI200_LightGBM_Binary_logloss_42_fold3 seconds 2.3
+FIT COMPLETE KOSPI200_LightGBM_Binary_logloss_52_fold1 seconds 2.2
+FIT COMPLETE KOSPI200_LightGBM_Binary_logloss_52_fold2 seconds 2.3
+FIT COMPLETE KOSPI200_LightGBM_Binary_logloss_52_fold3 seconds 2.3
+FIT COMPLETE KOSPI200_LightGBM_Binary_logloss_62_fold1 seconds 2.2
+FIT COMPLETE KOSPI200_LightGBM_Binary_logloss_62_fold2 seconds 2.3
+FIT COMPLETE KOSPI200_LightGBM_Binary_logloss_62_fold3 seconds 2.3
+FIT COMPLETE KOSPI200_LightGBM_Binary_logloss_72_fold1 seconds 2.2
+FIT COMPLETE KOSPI200_LightGBM_Binary_logloss_72_fold2 seconds 2.2
+FIT COMPLETE KOSPI200_LightGBM_Binary_logloss_72_fold3 seconds 2.3
+FIT COMPLETE KOSPI200_LightGBM_Binary_logloss_82_fold1 seconds 2.2
+FIT COMPLETE KOSPI200_LightGBM_Binary_logloss_82_fold2 seconds 2.6
+FIT COMPLETE KOSPI200_LightGBM_Binary_logloss_82_fold3 seconds 3.0
+FIT COMPLETE SP500_GRU_MILD_FOCAL_42_final seconds 28.8
+FINAL COMPLETE SP500 GRU 42
+FIT COMPLETE SP500_GRU_MILD_FOCAL_52_final seconds 28.8
+FINAL COMPLETE SP500 GRU 52
+FIT COMPLETE SP500_GRU_MILD_FOCAL_62_final seconds 36.7
+FINAL COMPLETE SP500 GRU 62
+FIT COMPLETE SP500_GRU_MILD_FOCAL_72_final seconds 34.9
+FINAL COMPLETE SP500 GRU 72
+FIT COMPLETE SP500_GRU_MILD_FOCAL_82_final seconds 35.1
+FINAL COMPLETE SP500 GRU 82
+FIT COMPLETE SP500_LogisticRegression_L2_42_final seconds 0.1
+FINAL COMPLETE SP500 LogisticRegression 42
+FIT COMPLETE SP500_LogisticRegression_L2_52_final seconds 0.1
+FINAL COMPLETE SP500 LogisticRegression 52
+FIT COMPLETE SP500_LogisticRegression_L2_62_final seconds 0.1
+FINAL COMPLETE SP500 LogisticRegression 62
+FIT COMPLETE SP500_LogisticRegression_L2_72_final seconds 0.1
+FINAL COMPLETE SP500 LogisticRegression 72
+FIT COMPLETE SP500_LogisticRegression_L2_82_final seconds 0.1
+FINAL COMPLETE SP500 LogisticRegression 82
+FIT COMPLETE SP500_LightGBM_Binary_logloss_42_final seconds 5.3
+FINAL COMPLETE SP500 LightGBM 42
+FIT COMPLETE SP500_LightGBM_Binary_logloss_52_final seconds 5.3
+FINAL COMPLETE SP500 LightGBM 52
+FIT COMPLETE SP500_LightGBM_Binary_logloss_62_final seconds 5.3
+FINAL COMPLETE SP500 LightGBM 62
+FIT COMPLETE SP500_LightGBM_Binary_logloss_72_final seconds 5.3
+FINAL COMPLETE SP500 LightGBM 72
+FIT COMPLETE SP500_LightGBM_Binary_logloss_82_final seconds 5.3
+FINAL COMPLETE SP500 LightGBM 82
+FIT COMPLETE NASDAQ100_GRU_MILD_FOCAL_42_final seconds 34.7
+FINAL COMPLETE NASDAQ100 GRU 42
+FIT COMPLETE NASDAQ100_GRU_MILD_FOCAL_52_final seconds 27.4
+FINAL COMPLETE NASDAQ100 GRU 52
+FIT COMPLETE NASDAQ100_GRU_MILD_FOCAL_62_final seconds 25.7
+FINAL COMPLETE NASDAQ100 GRU 62
+FIT COMPLETE NASDAQ100_GRU_MILD_FOCAL_72_final seconds 25.5
+FINAL COMPLETE NASDAQ100 GRU 72
+FIT COMPLETE NASDAQ100_GRU_MILD_FOCAL_82_final seconds 25.6
+FINAL COMPLETE NASDAQ100 GRU 82
+FIT COMPLETE NASDAQ100_LogisticRegression_L2_42_final seconds 0.1
+FINAL COMPLETE NASDAQ100 LogisticRegression 42
+FIT COMPLETE NASDAQ100_LogisticRegression_L2_52_final seconds 0.1
+FINAL COMPLETE NASDAQ100 LogisticRegression 52
+FIT COMPLETE NASDAQ100_LogisticRegression_L2_62_final seconds 0.1
+FINAL COMPLETE NASDAQ100 LogisticRegression 62
+FIT COMPLETE NASDAQ100_LogisticRegression_L2_72_final seconds 0.1
+FINAL COMPLETE NASDAQ100 LogisticRegression 72
+FIT COMPLETE NASDAQ100_LogisticRegression_L2_82_final seconds 0.1
+FINAL COMPLETE NASDAQ100 LogisticRegression 82
+FIT COMPLETE NASDAQ100_LightGBM_Binary_logloss_42_final seconds 2.9
+FINAL COMPLETE NASDAQ100 LightGBM 42
+FIT COMPLETE NASDAQ100_LightGBM_Binary_logloss_52_final seconds 2.9
+FINAL COMPLETE NASDAQ100 LightGBM 52
+FIT COMPLETE NASDAQ100_LightGBM_Binary_logloss_62_final seconds 2.9
+FINAL COMPLETE NASDAQ100 LightGBM 62
+FIT COMPLETE NASDAQ100_LightGBM_Binary_logloss_72_final seconds 2.9
+FINAL COMPLETE NASDAQ100 LightGBM 72
+FIT COMPLETE NASDAQ100_LightGBM_Binary_logloss_82_final seconds 2.9
+FINAL COMPLETE NASDAQ100 LightGBM 82
+FIT COMPLETE NIKKEI225_GRU_CE_42_final seconds 24.7
+FINAL COMPLETE NIKKEI225 GRU 42
+FIT COMPLETE NIKKEI225_GRU_CE_52_final seconds 24.5
+FINAL COMPLETE NIKKEI225 GRU 52
+FIT COMPLETE NIKKEI225_GRU_CE_62_final seconds 24.6
+FINAL COMPLETE NIKKEI225 GRU 62
+FIT COMPLETE NIKKEI225_GRU_CE_72_final seconds 24.5
+FINAL COMPLETE NIKKEI225 GRU 72
+FIT COMPLETE NIKKEI225_GRU_CE_82_final seconds 24.6
+FINAL COMPLETE NIKKEI225 GRU 82
+FIT COMPLETE NIKKEI225_LogisticRegression_L2_42_final seconds 0.1
+FINAL COMPLETE NIKKEI225 LogisticRegression 42
+FIT COMPLETE NIKKEI225_LogisticRegression_L2_52_final seconds 0.1
+FINAL COMPLETE NIKKEI225 LogisticRegression 52
+FIT COMPLETE NIKKEI225_LogisticRegression_L2_62_final seconds 0.1
+FINAL COMPLETE NIKKEI225 LogisticRegression 62
+FIT COMPLETE NIKKEI225_LogisticRegression_L2_72_final seconds 0.1
+FINAL COMPLETE NIKKEI225 LogisticRegression 72
+FIT COMPLETE NIKKEI225_LogisticRegression_L2_82_final seconds 0.1
+FINAL COMPLETE NIKKEI225 LogisticRegression 82
+FIT COMPLETE NIKKEI225_LightGBM_Binary_logloss_42_final seconds 2.8
+FINAL COMPLETE NIKKEI225 LightGBM 42
+FIT COMPLETE NIKKEI225_LightGBM_Binary_logloss_52_final seconds 2.8
+FINAL COMPLETE NIKKEI225 LightGBM 52
+FIT COMPLETE NIKKEI225_LightGBM_Binary_logloss_62_final seconds 2.9
+FINAL COMPLETE NIKKEI225 LightGBM 62
+FIT COMPLETE NIKKEI225_LightGBM_Binary_logloss_72_final seconds 2.9
+FINAL COMPLETE NIKKEI225 LightGBM 72
+FIT COMPLETE NIKKEI225_LightGBM_Binary_logloss_82_final seconds 2.9
+FINAL COMPLETE NIKKEI225 LightGBM 82
+FIT COMPLETE EUROSTOXX50_GRU_CE_42_final seconds 25.8
+FINAL COMPLETE EUROSTOXX50 GRU 42
+FIT COMPLETE EUROSTOXX50_GRU_CE_52_final seconds 25.6
+FINAL COMPLETE EUROSTOXX50 GRU 52
+FIT COMPLETE EUROSTOXX50_GRU_CE_62_final seconds 25.0
+FINAL COMPLETE EUROSTOXX50 GRU 62
+FIT COMPLETE EUROSTOXX50_GRU_CE_72_final seconds 32.3
+FINAL COMPLETE EUROSTOXX50 GRU 72
+FIT COMPLETE EUROSTOXX50_GRU_CE_82_final seconds 24.1
+FINAL COMPLETE EUROSTOXX50 GRU 82
+FIT COMPLETE EUROSTOXX50_LogisticRegression_L2_42_final seconds 0.1
+FINAL COMPLETE EUROSTOXX50 LogisticRegression 42
+FIT COMPLETE EUROSTOXX50_LogisticRegression_L2_52_final seconds 0.1
+FINAL COMPLETE EUROSTOXX50 LogisticRegression 52
+FIT COMPLETE EUROSTOXX50_LogisticRegression_L2_62_final seconds 0.1
+FINAL COMPLETE EUROSTOXX50 LogisticRegression 62
+FIT COMPLETE EUROSTOXX50_LogisticRegression_L2_72_final seconds 0.1
+FINAL COMPLETE EUROSTOXX50 LogisticRegression 72
+FIT COMPLETE EUROSTOXX50_LogisticRegression_L2_82_final seconds 0.1
+FINAL COMPLETE EUROSTOXX50 LogisticRegression 82
+FIT COMPLETE EUROSTOXX50_LightGBM_Binary_logloss_42_final seconds 2.9
+FINAL COMPLETE EUROSTOXX50 LightGBM 42
+FIT COMPLETE EUROSTOXX50_LightGBM_Binary_logloss_52_final seconds 2.9
+FINAL COMPLETE EUROSTOXX50 LightGBM 52
+FIT COMPLETE EUROSTOXX50_LightGBM_Binary_logloss_62_final seconds 2.9
+FINAL COMPLETE EUROSTOXX50 LightGBM 62
+FIT COMPLETE EUROSTOXX50_LightGBM_Binary_logloss_72_final seconds 3.0
+FINAL COMPLETE EUROSTOXX50 LightGBM 72
+FIT COMPLETE EUROSTOXX50_LightGBM_Binary_logloss_82_final seconds 2.9
+FINAL COMPLETE EUROSTOXX50 LightGBM 82
+FIT COMPLETE KOSPI200_GRU_CE_42_final seconds 23.7
+FINAL COMPLETE KOSPI200 GRU 42
+FIT COMPLETE KOSPI200_GRU_CE_52_final seconds 26.6
+FINAL COMPLETE KOSPI200 GRU 52
+FIT COMPLETE KOSPI200_GRU_CE_62_final seconds 26.4
+FINAL COMPLETE KOSPI200 GRU 62
+FIT COMPLETE KOSPI200_GRU_CE_72_final seconds 31.8
+FINAL COMPLETE KOSPI200 GRU 72
+FIT COMPLETE KOSPI200_GRU_CE_82_final seconds 27.5
+FINAL COMPLETE KOSPI200 GRU 82
+FIT COMPLETE KOSPI200_LogisticRegression_L2_42_final seconds 0.1
+FINAL COMPLETE KOSPI200 LogisticRegression 42
+FIT COMPLETE KOSPI200_LogisticRegression_L2_52_final seconds 0.1
+FINAL COMPLETE KOSPI200 LogisticRegression 52
+FIT COMPLETE KOSPI200_LogisticRegression_L2_62_final seconds 0.1
+FINAL COMPLETE KOSPI200 LogisticRegression 62
+FIT COMPLETE KOSPI200_LogisticRegression_L2_72_final seconds 0.1
+FINAL COMPLETE KOSPI200 LogisticRegression 72
+FIT COMPLETE KOSPI200_LogisticRegression_L2_82_final seconds 0.1
+FINAL COMPLETE KOSPI200 LogisticRegression 82
+FIT COMPLETE KOSPI200_LightGBM_Binary_logloss_42_final seconds 2.2
+FINAL COMPLETE KOSPI200 LightGBM 42
+FIT COMPLETE KOSPI200_LightGBM_Binary_logloss_52_final seconds 2.2
+FINAL COMPLETE KOSPI200 LightGBM 52
+FIT COMPLETE KOSPI200_LightGBM_Binary_logloss_62_final seconds 2.2
+FINAL COMPLETE KOSPI200 LightGBM 62
+FIT COMPLETE KOSPI200_LightGBM_Binary_logloss_72_final seconds 2.2
+FINAL COMPLETE KOSPI200 LightGBM 72
+FIT COMPLETE KOSPI200_LightGBM_Binary_logloss_82_final seconds 2.3
+FINAL COMPLETE KOSPI200 LightGBM 82
+Python: 3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]
+Platform: Linux-6.18.57-x86_64-with-glibc2.41
+Torch: 2.14.1+cpu
+DEVICE: cpu
+✅ configuration ready
+Traceback (most recent call last):
+  File "/workspace/global-lnn-sci/artifacts/jof_phase1_benchmark_expansion/finalize.py", line 50, in <module>
+    np.testing.assert_allclose(replay,p.Probability,atol=1e-7 if r.Model=='GRU' else 1e-12,rtol=0)
+  File "/workspace/.venvs/global-lnn-sci/lib/python3.12/site-packages/numpy/testing/_private/utils.py", line 1780, in assert_allclose
+    assert_array_compare(compare, actual, desired, err_msg=str(err_msg),
+  File "/workspace/.venvs/global-lnn-sci/lib/python3.12/site-packages/numpy/testing/_private/utils.py", line 988, in assert_array_compare
+    raise AssertionError(msg)
+AssertionError:
+Not equal to tolerance rtol=0, atol=1e-07
+
+Mismatched elements: 308 / 963 (32%)
+First 5 mismatches are at indices:
+ [481]: 0.03307235985994339 (ACTUAL), 0.0330725722014904 (DESIRED)
+ [482]: 0.7259272336959839 (ACTUAL), 0.7259274125099182 (DESIRED)
+ [488]: 0.9938216209411621 (ACTUAL), 0.9938215017318726 (DESIRED)
+ [489]: 0.9801019430160522 (ACTUAL), 0.9801028370857239 (DESIRED)
+ [490]: 0.5628653764724731 (ACTUAL), 0.562869668006897 (DESIRED)
+Max absolute difference among violations: 5.30481339e-05
+Max relative difference among violations: 0.00018443
+ ACTUAL: array([9.993116e-01, 9.995983e-01, 9.998474e-01, 9.999698e-01,
+       9.950765e-01, 9.997770e-01, 9.968257e-01, 9.837479e-01,
+       9.999813e-01, 9.968860e-01, 9.999180e-01, 9.999928e-01,...
+ DESIRED: array([9.993116e-01, 9.995983e-01, 9.998474e-01, 9.999698e-01,
+       9.950765e-01, 9.997770e-01, 9.968257e-01, 9.837479e-01,
+       9.999813e-01, 9.968860e-01, 9.999180e-01, 9.999928e-01,...
+Traceback (most recent call last):
+  File "/workspace/global-lnn-sci/artifacts/jof_phase1_benchmark_expansion/run_phase1.py", line 193, in <module>
+    run()
+  File "/workspace/global-lnn-sci/artifacts/jof_phase1_benchmark_expansion/run_phase1.py", line 169, in run
+    subprocess.run([sys.executable,str(OUT/'finalize.py')],check=True)
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/workspace/.venvs/global-lnn-sci/bin/python', '/workspace/global-lnn-sci/artifacts/jof_phase1_benchmark_expansion/finalize.py']' returned non-zero exit status 1.
+
+POSTPROCESSING CORRECTION: original deterministic flags restored for checkpoint verification; no retraining or output changes.
+Python: 3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]
+Platform: Linux-6.18.57-x86_64-with-glibc2.41
+Torch: 2.14.1+cpu
+DEVICE: cpu
+✅ configuration ready
+     Market              Model  Selected_Loss  Test_BA  Forecast_Up_Rate  Economic_CAGR_10bps
+      SP500                GRU     MILD_FOCAL 0.391019          0.599169             0.029786
+      SP500 LogisticRegression             L2 0.451481          0.229491             0.032334
+      SP500           LightGBM Binary_logloss 0.422934          0.396677             0.002232
+      SP500                LNN     MILD_FOCAL 0.448056          0.371755             0.024827
+      SP500               LSTM     MILD_FOCAL 0.436638          0.494289             0.004726
+      SP500        Transformer     MILD_FOCAL 0.441247          0.326064            -0.021395
+      SP500        Rule_200DMA     fixed_rule 0.565518          0.716511             0.062775
+      SP500         Momentum60     fixed_rule 0.563600          0.689512             0.091940
+      SP500        Persistence       baseline 0.515074          0.640706             0.061318
+      SP500          Always-Up       baseline 0.500000          1.000000             0.107772
+      SP500        Always-Down       baseline 0.500000          0.000000             0.000000
+  NASDAQ100                GRU     MILD_FOCAL 0.471645          0.079958            -0.089100
+  NASDAQ100 LogisticRegression             L2 0.460074          0.262721             0.005395
+  NASDAQ100           LightGBM Binary_logloss 0.450728          0.256490            -0.026660
+  NASDAQ100                LNN     MILD_FOCAL 0.479284          0.052960            -0.037636
+  NASDAQ100               LSTM     MILD_FOCAL 0.471747          0.101765            -0.023031
+  NASDAQ100        Transformer       MILD_WCE 0.460795          0.084112             0.019971
+  NASDAQ100        Rule_200DMA     fixed_rule 0.617383          0.697819             0.158754
+  NASDAQ100         Momentum60     fixed_rule 0.560512          0.656282             0.106882
+  NASDAQ100        Persistence       baseline 0.532517          0.646937             0.104579
+  NASDAQ100          Always-Up       baseline 0.500000          1.000000             0.139970
+  NASDAQ100        Always-Down       baseline 0.500000          0.000000             0.000000
+  NIKKEI225                GRU             CE 0.481863          0.160981             0.044333
+  NIKKEI225 LogisticRegression             L2 0.495309          0.005330             0.008894
+  NIKKEI225           LightGBM Binary_logloss 0.515523          0.046908             0.027656
+  NIKKEI225                LNN       MILD_WCE 0.517863          0.097015             0.057176
+  NIKKEI225               LSTM     MILD_FOCAL 0.503085          0.120469             0.094471
+  NIKKEI225        Transformer     MILD_FOCAL 0.505825          0.040512             0.000998
+  NIKKEI225        Rule_200DMA     fixed_rule 0.456108          0.715352             0.036916
+  NIKKEI225         Momentum60     fixed_rule 0.488745          0.591684             0.054491
+  NIKKEI225        Persistence       baseline 0.451269          0.606610             0.045891
+  NIKKEI225          Always-Up       baseline 0.500000          1.000000             0.175191
+  NIKKEI225        Always-Down       baseline 0.500000          0.000000             0.000000
+EUROSTOXX50                GRU             CE 0.492303          0.117220             0.011964
+EUROSTOXX50 LogisticRegression             L2 0.482776          0.142116             0.008461
+EUROSTOXX50           LightGBM Binary_logloss 0.490031          0.470954             0.027808
+EUROSTOXX50                LNN     MILD_FOCAL 0.500173          0.974066             0.078772
+EUROSTOXX50               LSTM             CE 0.505770          0.184647             0.025121
+EUROSTOXX50        Transformer             CE 0.474316          0.158714             0.021353
+EUROSTOXX50        Rule_200DMA     fixed_rule 0.496909          0.704357             0.030462
+EUROSTOXX50         Momentum60     fixed_rule 0.491835          0.579876            -0.021552
+EUROSTOXX50        Persistence       baseline 0.446689          0.545643            -0.009911
+EUROSTOXX50          Always-Up       baseline 0.500000          1.000000             0.084192
+EUROSTOXX50        Always-Down       baseline 0.500000          0.000000             0.000000
+   KOSPI200                GRU             CE 0.502377          0.990374             0.155620
+   KOSPI200 LogisticRegression             L2 0.526030          0.829947             0.097939
+   KOSPI200           LightGBM Binary_logloss 0.505413          0.983957             0.128633
+   KOSPI200                LNN             CE 0.509019          0.891979             0.114596
+   KOSPI200               LSTM             CE 0.514806          0.962567             0.149207
+   KOSPI200        Transformer     MILD_FOCAL 0.523513          0.962567             0.149403
+   KOSPI200        Rule_200DMA     fixed_rule 0.537735          0.522995             0.104244
+   KOSPI200         Momentum60     fixed_rule 0.591925          0.557219             0.111074
+   KOSPI200        Persistence       baseline 0.503252          0.552941             0.054092
+   KOSPI200          Always-Up       baseline 0.500000          1.000000             0.144716
+   KOSPI200        Always-Down       baseline 0.500000          0.000000             0.000000
+
+VALIDATED: all final checkpoint/CSV probabilities match; ready for publication.

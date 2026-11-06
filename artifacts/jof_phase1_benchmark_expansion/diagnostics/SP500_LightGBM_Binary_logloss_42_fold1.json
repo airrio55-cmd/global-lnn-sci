@@ -1,0 +1,13 @@
+{
+  "Market": "SP500",
+  "Model": "LightGBM",
+  "Loss": "Binary_logloss",
+  "Seed": 42,
+  "Stage": "fold1",
+  "Warnings": [],
+  "n_iter": 300,
+  "Logistic_converged": null,
+  "LightGBM_requested_estimators": 300,
+  "LightGBM_actual_trees": 300,
+  "fit_seconds": 3.810361981999449
+}

@@ -1,0 +1,6 @@
+Market,Momentum20_definition,Persistence_definition,equivalent_to_existing_persistence,duplicate_baseline_created,additional_prespecified_momentum
+SP500,I(P_t>P_t-20),I(P_t>P_t-20),True,False,Momentum60
+NASDAQ100,I(P_t>P_t-20),I(P_t>P_t-20),True,False,Momentum60
+NIKKEI225,I(P_t>P_t-20),I(P_t>P_t-20),True,False,Momentum60
+EUROSTOXX50,I(P_t>P_t-20),I(P_t>P_t-20),True,False,Momentum60
+KOSPI200,I(P_t>P_t-20),I(P_t>P_t-20),True,False,Momentum60

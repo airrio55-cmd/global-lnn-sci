@@ -1,0 +1,168 @@
+{
+  "markets": [
+    {
+      "Market": "SP500",
+      "Feature_source": "Exact existing processed feature_input.csv, byte-preserved",
+      "Feature_names": [
+        "Log_Ret",
+        "Vol20",
+        "Momentum20",
+        "Disparity20",
+        "RSI14",
+        "VIX",
+        "VIX_Change1",
+        "VIX_Change5",
+        "US10Y",
+        "US10Y_Change1",
+        "US10Y_Change5",
+        "DXY_LogRet1",
+        "DXY_LogRet5"
+      ],
+      "Feature_input_sha256": "e49af32e4bd9fd894186e037b0b57d5a22dc61d477f3e03822615c6aa4db23ce",
+      "Market_input_sha256": "ac8ae4157cfb7c478d7d8d48a7cb0f3482296e497ba831188f3dd00339f6003c",
+      "Feature_definition_cell_sha256": "760881b41d17cd26ed36f12ccbfa28609c31384501839554bd45a81425a03edc",
+      "split_definition_cell_sha256": "badd79d271f6695184865af8eede4a9bfaf4ac775942131aa1eb3dae1d674fbc",
+      "Neural_input_shape": [
+        20,
+        13
+      ],
+      "Tabular_columns": 260,
+      "Feature_scaling": "Original per-feature train-only StandardScaler, shared across all20 lags; flatten the same scaled tensor without a second scaler",
+      "Test_dates_labels_match_frozen_LSTM": true
+    },
+    {
+      "Market": "NASDAQ100",
+      "Feature_source": "No processed file exists: original market-specific feature cell applied to original frozen market_input.csv; saved once with17digit precision",
+      "Feature_names": [
+        "Log_Ret",
+        "Vol20",
+        "Momentum20",
+        "Disparity20",
+        "RSI14",
+        "VXN",
+        "SOX",
+        "US10Y",
+        "DXY_LogRet1",
+        "DXY_LogRet5"
+      ],
+      "Feature_input_sha256": "a91841674f20c35e4ace244157c06f9e506b1c1755b242116c794c852b65ed72",
+      "Market_input_sha256": "ad5139d6895f3274307615d990bbd62dd194f0a949aed6f36243a403b11bf4a3",
+      "Feature_definition_cell_sha256": "6a1c6823f8c28334dbd5a5915eb16415270078c04c60272cec6ff5f0a74ac6cb",
+      "split_definition_cell_sha256": "badd79d271f6695184865af8eede4a9bfaf4ac775942131aa1eb3dae1d674fbc",
+      "Neural_input_shape": [
+        20,
+        10
+      ],
+      "Tabular_columns": 200,
+      "Feature_scaling": "Original per-feature train-only StandardScaler, shared across all20 lags; flatten the same scaled tensor without a second scaler",
+      "Test_dates_labels_match_frozen_LSTM": true
+    },
+    {
+      "Market": "NIKKEI225",
+      "Feature_source": "No processed file exists: original market-specific feature cell applied to original frozen market_input.csv; saved once with17digit precision",
+      "Feature_names": [
+        "Log_Ret",
+        "Vol20",
+        "Momentum20",
+        "Disparity20",
+        "RSI14",
+        "USD_JPY",
+        "VIX",
+        "SP500",
+        "JP10Y",
+        "JP10Y_Change1",
+        "JP10Y_Change5"
+      ],
+      "Feature_input_sha256": "7c8e29bffd6ba2757fc1504ca4dcb703b747c89abc8694a9b388ffef6f52b7e5",
+      "Market_input_sha256": "48713c71038143b96bf57bd01415b206c398949e53697cc828522351df92c67d",
+      "Feature_definition_cell_sha256": "ffadd67fbf24068d0c227e447b429a4c5ea23500800f9bbc5c471afd1089ef90",
+      "split_definition_cell_sha256": "badd79d271f6695184865af8eede4a9bfaf4ac775942131aa1eb3dae1d674fbc",
+      "Neural_input_shape": [
+        20,
+        11
+      ],
+      "Tabular_columns": 220,
+      "Feature_scaling": "Original per-feature train-only StandardScaler, shared across all20 lags; flatten the same scaled tensor without a second scaler",
+      "Test_dates_labels_match_frozen_LSTM": true
+    },
+    {
+      "Market": "EUROSTOXX50",
+      "Feature_source": "No processed file exists: original market-specific feature cell applied to original frozen market_input.csv; saved once with17digit precision",
+      "Feature_names": [
+        "Log_Ret",
+        "Vol20",
+        "Momentum20",
+        "Disparity20",
+        "RSI14",
+        "EUR_USD",
+        "VIX",
+        "SP500",
+        "DE10Y",
+        "DE10Y_Change1",
+        "DE10Y_Change5"
+      ],
+      "Feature_input_sha256": "6b89943be7072ad49c57926995862b4a222fe29b6ec74601df51282596f3ef7a",
+      "Market_input_sha256": "3e37fc4ec0c51d25170eda20d717cc662e5aed37efa5e3ce8a4d971dc32ec36a",
+      "Feature_definition_cell_sha256": "3cbb38037d8110e87f43035b848d448c0d96be83fc055b5e9791f572038b7355",
+      "split_definition_cell_sha256": "badd79d271f6695184865af8eede4a9bfaf4ac775942131aa1eb3dae1d674fbc",
+      "Neural_input_shape": [
+        20,
+        11
+      ],
+      "Tabular_columns": 220,
+      "Feature_scaling": "Original per-feature train-only StandardScaler, shared across all20 lags; flatten the same scaled tensor without a second scaler",
+      "Test_dates_labels_match_frozen_LSTM": true
+    },
+    {
+      "Market": "KOSPI200",
+      "Feature_source": "No processed file exists: original market-specific feature cell applied to original frozen market_input.csv; saved once with17digit precision",
+      "Feature_names": [
+        "Log_Ret",
+        "Vol20",
+        "Momentum20",
+        "Disparity20",
+        "RSI14",
+        "USD_KRW",
+        "SOX",
+        "VIX"
+      ],
+      "Feature_input_sha256": "018df3db199589431c773c426462350dbdcdda3d0a6285661db48ca8e41bd584",
+      "Market_input_sha256": "5b4ab3d0985784d5353f24adebe48255a9fd088519df8e294950f41b87cfc85c",
+      "Feature_definition_cell_sha256": "760881b41d17cd26ed36f12ccbfa28609c31384501839554bd45a81425a03edc",
+      "split_definition_cell_sha256": "badd79d271f6695184865af8eede4a9bfaf4ac775942131aa1eb3dae1d674fbc",
+      "Neural_input_shape": [
+        20,
+        8
+      ],
+      "Tabular_columns": 160,
+      "Feature_scaling": "Original per-feature train-only StandardScaler, shared across all20 lags; flatten the same scaled tensor without a second scaler",
+      "Test_dates_labels_match_frozen_LSTM": true
+    }
+  ],
+  "input_sha256": {
+    "artifacts/sp500_rerun/market_input.csv": "ac8ae4157cfb7c478d7d8d48a7cb0f3482296e497ba831188f3dd00339f6003c",
+    "artifacts/sp500_rerun/feature_input.csv": "e49af32e4bd9fd894186e037b0b57d5a22dc61d477f3e03822615c6aa4db23ce",
+    "artifacts/sp500_rerun/leakage_audit.json": "11350e047888dae04cff1132b20acf500f637fd547d2c7a1c84f4e3036517bd8",
+    "artifacts/sp500_rerun/predictions/LSTM_CE_42.csv": "beae8a8fbe813459c7ab9709914358e23ecbc34f7a68a16c0053664dd2bc3cfd",
+    "artifacts/sp500_rerun/summary.csv": "dee6802bfc9a0bb91740ec8f968c523ec7279c31ac73490baad2f9272666a900",
+    "artifacts/nasdaq100/market_input.csv": "ad5139d6895f3274307615d990bbd62dd194f0a949aed6f36243a403b11bf4a3",
+    "artifacts/nasdaq100/leakage_audit.json": "bf320e8f11e81fc31f78245867bf6b00d2cbeda95f633e9367491b7d9be13f2d",
+    "artifacts/nasdaq100/predictions/LSTM_CE_42.csv": "b9db1b16c65a40eba1a3f72246c17bf718475348bd0a0379c2e2043ff2ae4e3a",
+    "artifacts/nasdaq100/summary.csv": "158b15cd80c3084f3b8f9332fc4182bd558a0c1c7f2bcfb6fbe1befe054956c1",
+    "artifacts/nikkei225/market_input.csv": "48713c71038143b96bf57bd01415b206c398949e53697cc828522351df92c67d",
+    "artifacts/nikkei225/leakage_audit.json": "1d0702ce654b7c627de0f8df34dc519592dcc8a5a2eb0009466b6d1bbf9c9e0b",
+    "artifacts/nikkei225/predictions/LSTM_CE_42.csv": "3e1774104e41cdd97a7b03f59bb9a572c783afe95b367e2a1d6bf8afa130fad9",
+    "artifacts/nikkei225/summary.csv": "ca1edb87a00dffc3b7b115a8d68e4ad48d8c4b8830482abf948844c98164e65f",
+    "artifacts/eurostoxx50/market_input.csv": "3e37fc4ec0c51d25170eda20d717cc662e5aed37efa5e3ce8a4d971dc32ec36a",
+    "artifacts/eurostoxx50/leakage_audit.json": "edfcdb6381d355b85e9bd0ca4b05be1604a41325c1bbc0c26fd98fdd14615fcf",
+    "artifacts/eurostoxx50/predictions/LSTM_CE_42.csv": "a8d056a107be89d1a51da5d9c30348c2245ca4739aa241c715524dec461a573f",
+    "artifacts/eurostoxx50/summary.csv": "a4a59a2be21e4230dc9cde281a8b33542e09d328a49cc2ca82b3f5604b85ba69",
+    "artifacts/kospi200/market_input.csv": "5b4ab3d0985784d5353f24adebe48255a9fd088519df8e294950f41b87cfc85c",
+    "artifacts/kospi200/leakage_audit.json": "c8f78da8f8fc29c992c89c03ad54beae10df4d2ecbe5265036ee1a45a1ef5418",
+    "artifacts/kospi200/predictions/LSTM_CE_42.csv": "cc424e89bfb9d5f8aa5213da69803854378e2c5c843f2a3ea8dbfc67426e4d19",
+    "artifacts/kospi200/summary.csv": "bcba8913242039cca94e5a192e8c302acbee6f315afc587e3052997aef203d0b"
+  },
+  "feature_set": "exact market-specific COMMON_LOCAL",
+  "no_network_refresh": true,
+  "label_horizon": 20
+}
