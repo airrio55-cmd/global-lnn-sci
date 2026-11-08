@@ -1,0 +1,41 @@
+name: V14 locked historical rolling-origin confirmation
+on:
+  push:
+    paths:
+      - '.github/workflows/v14-locked-confirmation.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  locked-v14:
+    runs-on: ubuntu-latest
+    timeout-minutes: 100
+    steps:
+      - name: Checkout frozen repository
+        uses: actions/checkout@v4
+      - name: Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install locked-script dependencies
+        run: python -m pip install numpy==2.2.6 pandas==2.2.3 scipy==1.15.3 scikit-learn==1.6.1 lightgbm==4.6.0
+      - name: Validate Python syntax before scoring
+        run: python -m py_compile artifacts/jof_v14_preregistered_replication/run_v14_locked.py
+      - name: Run feature/price-only preflight
+        run: |
+          python artifacts/jof_v14_preregistered_replication/run_v14_locked.py --repo . --out v14_preflight --preflight
+          cat v14_preflight/v14_preflight_signal_counts.csv | head -n 8
+      - name: Run single locked confirmation analysis
+        run: python artifacts/jof_v14_preregistered_replication/run_v14_locked.py --repo . --out v14_output
+      - name: Upload all output including logs and preflight
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: v14-locked-run-results-and-preflight
+          path: |
+            v14_preflight/
+            v14_output/
+          if-no-files-found: warn
+          retention-days: 90
