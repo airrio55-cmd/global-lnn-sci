@@ -1,0 +1,3 @@
+Forecast,Mean_Brier,Mean_Reliability,Mean_Resolution,Mean_Uncertainty
+Raw,0.3911563666,0.1648552591,0.0100982167,0.2350672792
+Validation-only calibrated,0.2694298684,0.0455947355,0.0114502486,0.2350672792
