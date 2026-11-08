@@ -1,0 +1,33 @@
+name: Archive original V14 locked run results
+on:
+  push:
+    paths:
+      - '.github/workflows/v14-archive-original-results.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+  actions: read
+jobs:
+  archive-first-run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download existing first-run artifact (do not rerun models)
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh run download 42533779514 -R ${{ github.repository }} --name v14-locked-run-results-and-preflight --dir first_run
+          test -s first_run/v14_output/v14_results.json
+          test -s first_run/v14_output/v14_unit_level.csv
+      - name: Commit the original unaltered model outputs, metadata and logs
+        run: |
+          set -euo pipefail
+          target=artifacts/jof_v14_preregistered_replication/first_run_20261109
+          mkdir -p "$target"
+          cp -a first_run/v14_output/. "$target/"
+          cp first_run/v14_preflight/v14_preflight_signal_counts.csv "$target/price_feature_preflight.csv"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config user.name "github-actions[bot]"
+          git add "$target"
+          git commit -m "Archive original locked V14 run 42533779514 unchanged results"
+          git push
