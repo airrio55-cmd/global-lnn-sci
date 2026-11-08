@@ -1,0 +1,16 @@
+Market,Block_length,Positive_CI,Negative_CI,Includes_zero,Interpretation
+SP500,20,0,1,7,No positive advantage
+SP500,40,0,0,8,All include zero
+SP500,60,0,0,8,All include zero
+NASDAQ100,20,0,0,8,All include zero
+NASDAQ100,40,0,0,8,All include zero
+NASDAQ100,60,0,0,8,All include zero
+NIKKEI225,20,0,0,8,All include zero
+NIKKEI225,40,0,0,8,All include zero
+NIKKEI225,60,0,0,8,All include zero
+EUROSTOXX50,20,0,0,8,All include zero
+EUROSTOXX50,40,0,0,8,All include zero
+EUROSTOXX50,60,1,0,7,One positive only at L=60
+KOSPI200,20,0,0,8,All include zero
+KOSPI200,40,0,0,8,All include zero
+KOSPI200,60,0,0,8,All include zero
