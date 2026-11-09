@@ -20,3 +20,18 @@ This preflight does not calculate AUC or fit estimators. Passing means data alig
 - Check ncps topology, deterministic settings and CPU availability with random synthetic tensors only.
 - Explicitly approve epoch/loss/three seeds and code, then record immutable lock SHA in separate lock record.
 - Only then enable historical fits using a separate opt-in command.
+
+## Read-only GitHub-content cross-check — 2026-11-09
+
+Source: GitHub frozen market CSVs and frozen Phase1 feature CSVs, read through the repository connector. All five markets were examined using the 201-index minimum, W=20, H=20, feature-finiteness filter, and **two separate annual validation folds** with yearly label endpoints, plus the single two-year test fold.
+
+- SP500: 12/12 market-origin-period groups, V14 scoring dates exact; LOG [Log_Ret, Disparity20] finite on all RAW eligible dates.
+- NASDAQ100: 12/12, same.
+- NIKKEI225: 12/12, same.
+- EUROSTOXX50: 12/12, same.
+- KOSPI200: 12/12, same.
+- **Total 60/60 groups exact; zero LOG-window missingness on V14 RAW dates.**
+
+This was an independent, read-only JavaScript content audit in the connector, **not execution of the Python preflight on a full local checkout**. Input SHA256, installed torch/ncps, GPU determinism, feature publication times, and full locked runner are still pending. No labels used for accuracy/AUC; no training or V15 outcome analysis.
+
+The Python `v15_preflight_readonly.py` was amended to apply annual validation cutoff rules and requires execution in the complete repository before lock.
