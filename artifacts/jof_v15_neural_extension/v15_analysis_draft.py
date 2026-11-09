@@ -128,7 +128,7 @@ def analysis(repo,source,out):
     df.to_csv(out/"v15_unit_level.csv",index=False,float_format="%.17g")
     sdf.to_csv(out/"v15_seed_sensitivity.csv",index=False,float_format="%.17g")
     comparison.to_csv(out/"v15_model_comparison.csv",index=False,float_format="%.17g")
-    (out/"v15_results.json").write_text(json.dumps(result,indent=2,allow_nan=False,default=lambda x:None if not np.isfinite(x) else float(x))+"\n")
+    (out/"v15_results.json").write_text(json.dumps(v14.clean(result),indent=2,allow_nan=False)+"\n")
     return result
 
 def main():
