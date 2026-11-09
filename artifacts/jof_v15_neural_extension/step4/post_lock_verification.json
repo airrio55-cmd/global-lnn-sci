@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "payload_verified_at_commit": "d866841eeb87c63f42bd10240c7acc06ee7dbe49",
+  "verified_at_utc": "2026-11-09T10:19:35.695016+00:00",
+  "source_data_config_environment_hashes_match_anchor": true,
+  "training_and_analysis_authorization_guards": {
+    "training": "Protocol locked, but this task does not authorize training",
+    "AUC_statistics": "Protocol locked, but this task does not authorize AUC/statistical analysis"
+  },
+  "actual_training_runs": 0,
+  "AUC_calls": 0,
+  "H1_H3_executions": 0
+}
