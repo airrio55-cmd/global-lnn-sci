@@ -1,0 +1,11 @@
+test_config_rejects_changed_protocol (__main__.AuditTests.test_config_rejects_changed_protocol) ... ok
+test_draft_blocks_training_and_analysis_before_calls (__main__.AuditTests.test_draft_blocks_training_and_analysis_before_calls) ... ok
+test_inventory_tampering_rejected (__main__.AuditTests.test_inventory_tampering_rejected) ... ok
+test_prediction_completeness_and_ensemble (__main__.AuditTests.test_prediction_completeness_and_ensemble) ... ok
+test_scaler_and_excluded_target (__main__.AuditTests.test_scaler_and_excluded_target) ... ok
+test_static_hypothesis_scope (__main__.AuditTests.test_static_hypothesis_scope) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.186s
+
+OK

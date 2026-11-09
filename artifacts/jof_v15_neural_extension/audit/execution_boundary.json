@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "actual_predictive_fits": 0,
+  "AUC_calls": 0,
+  "backward_calls": 0,
+  "optimizer_constructions": 0,
+  "protocol_lock_created": false,
+  "forward_checks": 60,
+  "real_data_fold_checks": 90
+}

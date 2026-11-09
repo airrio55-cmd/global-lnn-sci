@@ -7,6 +7,8 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 from sklearn.metrics import roc_auc_score
+from v15_common import reference_dates, sha
+from v15_locked_runner import check_lock
 
 ARCH=("LSTM","LTC_RAW","CfC_RAW")
 MODELS=ARCH+("CfC_LOG","CfC_ENSEMBLE")
@@ -27,14 +29,35 @@ def effect(y,s):
     if (s==0).sum()<20 or (s==1).sum()<20:return np.nan
     return float(y[s==1].mean()-y[s==0].mean())
 
-def analysis(repo,source,out):
-    inp=pd.read_csv(source)
+def validate_predictions(repo,inp):
+    """Structural validation only: deliberately no AUC calculation."""
     key=["Market","Origin","Period","Date","Model","Seed"]
-    if inp.duplicated(key).any():raise ValueError("Duplicate predictions")
-    if set(inp.Market)!=set(MARKETS) or set(inp.Model)!=set(MODELS) or set(inp.Seed)!=set(SEEDS):
-        raise ValueError("Incomplete fixed markets/models/seeds")
-    if not inp.Probability.between(0,1).all() or not np.isfinite(inp.Probability).all():
-        raise ValueError("Invalid predictions")
+    if not set(key+["Probability","Y_true","s200","s60","s20"]).issubset(inp):raise ValueError("Missing prediction columns")
+    if inp[key].isna().any().any() or inp.duplicated(key).any():raise ValueError("Duplicate/null prediction keys")
+    if set(inp.Market)!=set(MARKETS) or set(inp.Model)!=set(MODELS) or set(inp.Seed)!=set(SEEDS):raise ValueError("Incomplete fixed markets/models/seeds")
+    if not np.isfinite(inp.Probability).all() or not inp.Probability.between(0,1).all():raise ValueError("Invalid probabilities")
+    for col in ["Y_true","s200","s60","s20"]:
+        if not inp[col].isin([0,1]).all():raise ValueError("Invalid binary field: "+col)
+        if inp.groupby(["Market","Origin","Period","Date"])[col].nunique().ne(1).any():raise ValueError("Inconsistent label/signal: "+col)
+    ref=reference_dates(repo)
+    refkeys=list(ref[["Market","Origin","Period","Date"]].itertuples(index=False,name=None))
+    required=set(refkeys)
+    for (model,seed),g in inp.groupby(["Model","Seed"]):
+        actual=set(g[["Market","Origin","Period","Date"]].itertuples(index=False,name=None))
+        if actual!=required or len(g)!=len(ref):raise ValueError("Missing/extra V14 dates in model-seed series")
+    pivot=inp.pivot(index=["Market","Origin","Period","Date","Seed"],columns="Model",values="Probability")
+    np.testing.assert_allclose(pivot.CfC_ENSEMBLE,.5*pivot.CfC_RAW+.5*pivot.CfC_LOG,atol=1e-14,rtol=0)
+    return True
+
+def analysis(repo,source,out,*,config=None,lock=None):
+    if config is None or lock is None:raise RuntimeError("DRAFT: analysis/AUC disabled without separate authorization and immutable lock")
+    cfg,_=check_lock(repo,config,lock)
+    if cfg.get("permission_to_analyze") is not True:raise RuntimeError("AUC/analysis permission not enabled")
+    completion=json.loads((Path(source).parent/"completion_manifest.json").read_text())
+    if completion.get("fit_count")!=1080 or completion.get("prediction_sha256")!=sha(source):raise ValueError("Predictions not a complete frozen1080fit run")
+    if Path(out).resolve().is_relative_to(Path(repo).resolve()):raise ValueError("Write future analysis outside the protected checkout")
+    if Path(out).exists():raise ValueError("Refusing to overwrite previous analysis")
+    inp=pd.read_csv(source);validate_predictions(repo,inp)
     group=["Market","Origin","Period","Date","Model"]
     if inp.groupby(group).Seed.nunique().ne(3).any():
         raise ValueError("Missing seed probabilities")
@@ -65,6 +88,8 @@ def analysis(repo,source,out):
         forecast=test[test.Model==ARCH[0]]
         for sig,col in [("200DMA","s200"),("Momentum60","s60"),("Persistence","s20")]:
             r[f"{sig}_Shift"]=effect(forecast.Y_true,forecast[col])-effect(reference.Y_true,reference[col])
+        r["MeanValAUC"]=float(np.mean([r[f"{m}_ValAUC"] for m in ARCH]))
+        r["MeanTestAUC"]=float(np.mean([r[f"{m}_TestAUC"] for m in ARCH]))
         r["MeanDeltaAUC"]=float(np.mean([r[f"{m}_DeltaAUC"] for m in ARCH]))
         align=[r[f"{m}_200DMA_rTest"] for m in ARCH]
         r["rTest200_Mean"]=float(np.mean(align)) if np.isfinite(align).all() else np.nan
@@ -86,6 +111,7 @@ def analysis(repo,source,out):
                       "diagnostics":v14.diagnostics(df,pred)}
     ordered=sorted((result[k]["nominal_p"],k) for k in ["H1b","H2_Momentum60","H2_Persistence"]
                    if result[k]["nominal_p"] is not None)
+    for k in ["H1b","H2_Momentum60","H2_Persistence"]:result[k]["Holm3"]=None
     running=0
     for i,(p,k) in enumerate(ordered):
         running=max(running,(3-i)*p);result[k]["Holm3"]=min(1.,running)
@@ -94,25 +120,29 @@ def analysis(repo,source,out):
     result["H3"]={"negative":int(np.sum(valid<0)),"evaluable":len(valid),"planned":90,
                   "no_independent_unit_p":True}
     negative=int(np.sum(df["rTest200_Mean"].to_numpy(float)<0))
-    result["H1_alignment_prerequisite"]={"negative":negative,"planned":30,"met":negative>=16}
+    result["H1_alignment_prerequisite"]={"negative":negative,"planned":30,"evaluable":int(df["rTest200_Mean"].notna().sum()),"met":negative>=16}
     r=result["H1"];rho=r["rho"];p=r["nominal_p"]
     if rho is None: label="not evaluable"
     elif rho>=0:label="Not supported in direction"
     elif p is not None and p<.05:label="Nominally supported under a non-exact permutation diagnostic"
     else:label="Directionally consistent, nominally non-significant"
+    if not result["H1_alignment_prerequisite"]["met"]:label="Not interpretable as H1 support: alignment prerequisite not met"
     if r["N"]!=30:label="not fully evaluable under locked 30-unit design; "+label
     result["H1_label"]=label
+    result["H3_CfC_ENSEMBLE"]={"negative":int((df["CfC_ENSEMBLE_Persistence_rVal"]<0).sum()),"evaluable":int(df["CfC_ENSEMBLE_Persistence_rVal"].notna().sum()),"planned":30,"descriptive_only":True}
     # Secondary: evaluate individual seed H1 directions; descriptive, no seed pseudo-replication.
     seed_rows=[]
-    for seed,sg in inp[inp.Model.isin(ARCH)].groupby("Seed"):
+    for seed,sg in inp.groupby("Seed"):
         for (m,o),z in sg.groupby(["Market","Origin"]):
-            vs=z[z.Period=="Validation"];ts=z[z.Period=="Test"];d=[]
-            for model in ARCH:
+            vs=z[z.Period=="Validation"];ts=z[z.Period=="Test"];d=[];details={}
+            for model in MODELS:
                 va=vs[vs.Model==model];te=ts[ts.Model==model]
-                d.append(roc_auc_score(te.Y_true,te.Probability)-roc_auc_score(va.Y_true,va.Probability))
+                av=roc_auc_score(va.Y_true,va.Probability);at=roc_auc_score(te.Y_true,te.Probability)
+                details.update({f"{model}_ValAUC":float(av),f"{model}_TestAUC":float(at),f"{model}_DeltaAUC":float(at-av)})
+                if model in ARCH:d.append(at-av)
             reference=df[(df.Market==m)&(df.Origin==o)].iloc[0]
             seed_rows.append({"Seed":int(seed),"Market":m,"Origin":o,
-                              "MeanDeltaAUC":float(np.mean(d)),"200DMA_Shift":reference["200DMA_Shift"]})
+                              "MeanDeltaAUC":float(np.mean(d)),"200DMA_Shift":reference["200DMA_Shift"],**details})
     sdf=pd.DataFrame(seed_rows)
     result["seed_H1_direction"]={}
     for seed,z in sdf.groupby("Seed"):
@@ -121,10 +151,18 @@ def analysis(repo,source,out):
                                                  "n":len(good)}
     # Compare V14 only as descriptive period-matched non-neural benchmark, not new confirmatory claim.
     baseline=pd.read_csv(Path(repo)/"artifacts/jof_v14_preregistered_replication/first_run_20261109/v14_unit_level.csv")
-    comparison=df.merge(baseline[["Market","Origin","MeanDeltaAUC"]],on=["Market","Origin"],how="left",validate="one_to_one",
+    baseline_cols=["Market","Origin","MeanDeltaAUC"]+[f"{m}_{metric}" for m in ["LogisticRegression","LightGBM"] for metric in ["ValAUC","TestAUC","DeltaAUC"]]
+    if len(baseline)!=30 or baseline.duplicated(["Market","Origin"]).any():raise ValueError("Incomplete V14 comparison units")
+    comparison=df.merge(baseline[baseline_cols],on=["Market","Origin"],how="left",validate="one_to_one",
                          suffixes=("_Neural","_NonNeural"))
+    if comparison.MeanDeltaAUC_NonNeural.isna().any():raise ValueError("Missing V14 baseline")
+    for metric in ["ValAUC","TestAUC","DeltaAUC"]:
+        comparison[f"CfC_Ensemble_minus_RAW_{metric}"]=comparison[f"CfC_ENSEMBLE_{metric}"]-comparison[f"CfC_RAW_{metric}"]
+    for metric in ["ValAUC","TestAUC"]:
+        comparison[f"Mean{metric}_NonNeural"]=(comparison[f"LogisticRegression_{metric}"]+comparison[f"LightGBM_{metric}"])/2
+        comparison[f"{metric}_Neural_minus_NonNeural"]=comparison[f"Mean{metric}"]-comparison[f"Mean{metric}_NonNeural"]
     comparison["DeltaDifference"]=comparison.MeanDeltaAUC_Neural-comparison.MeanDeltaAUC_NonNeural
-    out=Path(out);out.mkdir(parents=True,exist_ok=True)
+    out=Path(out);out.mkdir(parents=True,exist_ok=False)
     df.to_csv(out/"v15_unit_level.csv",index=False,float_format="%.17g")
     sdf.to_csv(out/"v15_seed_sensitivity.csv",index=False,float_format="%.17g")
     comparison.to_csv(out/"v15_model_comparison.csv",index=False,float_format="%.17g")
@@ -135,9 +173,12 @@ def main():
     ap=argparse.ArgumentParser()
     ap.add_argument("--repo",required=True,type=Path);ap.add_argument("--predictions",required=True,type=Path)
     ap.add_argument("--out",required=True,type=Path)
+    ap.add_argument("--config",required=True,type=Path);ap.add_argument("--lock",required=True,type=Path)
+    ap.add_argument("--acknowledge-analysis",action="store_true")
     args=ap.parse_args()
+    if not args.acknowledge_analysis:raise RuntimeError("DRAFT: explicit analysis authorization required")
     if not (args.predictions.exists() and args.predictions.stat().st_size>0):
         raise RuntimeError("No complete frozen predictions")
-    analysis(args.repo,args.predictions,args.out)
+    analysis(args.repo,args.predictions,args.out,config=args.config,lock=args.lock)
 
 if __name__=="__main__":main()

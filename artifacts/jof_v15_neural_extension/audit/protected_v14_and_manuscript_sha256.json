@@ -1,0 +1,21 @@
+{
+  ".github/workflows/v14-archive-original-results.yml": "7a516ca2dc6543173001516143e0b56d4ab9c32d09cecc109be21666463c90b9",
+  ".github/workflows/v14-locked-confirmation.yml": "31f90b54c1a95d44a601e62554c1762e089904d4581e2f1eee6a60bdee0e78d6",
+  "artifacts/jof_v14_preregistered_replication/V14_FIRST_RUN_INTERPRETATION.md": "0da1e8395e4d44a9b31947f676ce58b5f317a4a8e1dfc1a47a0b2f26299f3f85",
+  "artifacts/jof_v14_preregistered_replication/V14_LOCK_RECORD.md": "50c446ade0b6f9301cbd9e23a43eade5fd88e358eb8d6afa1275abc495a89266",
+  "artifacts/jof_v14_preregistered_replication/V14_PREREGISTERED_ROLLING_ORIGIN_PROTOCOL_LOCKED.md": "97bd41349bd7515192b22460d82c7003160fd78c94b0f306117906f5abbbf180",
+  "artifacts/jof_v14_preregistered_replication/first_run_20261109/price_feature_preflight.csv": "36e0156dc542f17660b25225cb469dce08af306905cf0e703fe0480d57b84e3b",
+  "artifacts/jof_v14_preregistered_replication/first_run_20261109/v14_execution.log": "45a44ec74c42003dbb7031ca6104ee0f6f57e7f591a1ed835263b338c3174ff4",
+  "artifacts/jof_v14_preregistered_replication/first_run_20261109/v14_input_inventory.json": "992f3202f85963339262d51d3e0c063c3e3d7513b74992f02d0a76a6048cbd0a",
+  "artifacts/jof_v14_preregistered_replication/first_run_20261109/v14_preflight_signal_counts.csv": "36e0156dc542f17660b25225cb469dce08af306905cf0e703fe0480d57b84e3b",
+  "artifacts/jof_v14_preregistered_replication/first_run_20261109/v14_results.json": "376892e00b1394aad11f80bfaaf680e6b7e11ae64a6c6ebe3b83a2cfefb9b146",
+  "artifacts/jof_v14_preregistered_replication/first_run_20261109/v14_scoring_dates.csv": "1cb9b3697d2f9b3352bc22a3f2b3dd251116a004436b64495ab4c5f51513771f",
+  "artifacts/jof_v14_preregistered_replication/first_run_20261109/v14_unit_level.csv": "dc837415b85c64ec5107c4d7c762b423f10e8cfa06c3402efdaed87b95017aa4",
+  "artifacts/jof_v14_preregistered_replication/run_v14_locked.py": "0b25d6d2db3a4c53730c361d579c90c9e1a18ef7fbbabe9afa80997edad7aab8",
+  "artifacts/jof_v14_preregistered_replication/v14_price_only_200dma_group_inventory.csv": "63c5ccd4a713bc7a5ac44958ca41302d5fe5c89509225ac3722cdefa7fb55aac",
+  "artifacts/validation_selected_pt_tests/manuscript_lnn_pt_table.csv": "36576474f996084f7625c426801f7b8b6431dbcef6947bade77e95cc2f0fa62d",
+  "artifacts/validation_selected_pt_tests/manuscript_pt_table.csv": "072e49492b0bfae7bba2bf61f5ea28ebfd06705e5f7bb211b44bedd862bdbef4",
+  "artifacts/validation_selected_statistical_robustness/manuscript_lnn_statistical_table.csv": "30c5640910143128eea4748d856d60f1eeaaa184d8d765d08d0613ba34648217",
+  "artifacts/validation_selected_statistical_robustness/manuscript_nikkei_high_panel.csv": "2d727675584f869393f77a545a0cdd688ac700a936e7150f5275263530f70ad5",
+  "artifacts/validation_selected_statistical_robustness/manuscript_nonoverlap_table.csv": "dc9b807bc005fe2585ffea01b3d98c0d5479991e11c696945925a189739df275"
+}

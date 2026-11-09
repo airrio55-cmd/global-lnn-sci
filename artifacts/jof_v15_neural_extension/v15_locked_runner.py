@@ -4,6 +4,9 @@ No model fitting occurs at import or preflight.
 """
 from __future__ import annotations
 import argparse, hashlib, importlib.util, json, os, platform, random, subprocess, sys, time
+from datetime import datetime, timezone
+from v15_common import require_training, required_inventory, integrity, reference_dates
+from v15_representation_gate import validate_representation
 from pathlib import Path
 import numpy as np
 import pandas as pd
@@ -19,7 +22,12 @@ def sha256(path):
 
 def check_lock(repo, cfgpath, lockpath):
     """Refuse training without a separately recorded, clean, inventory-verified Git lock."""
+    repo=Path(repo).resolve()
     cfg=json.loads(Path(cfgpath).read_text())
+    require_training(cfg)
+    validate_representation(cfgpath,repo,require_locked=True)
+    if Path(lockpath).resolve().is_relative_to(repo):
+        raise RuntimeError("Lock record must be external to the clean checkout")
     lock=json.loads(Path(lockpath).read_text()) if Path(lockpath).exists() else {}
     if cfg.get("status")!="LOCKED" or cfg.get("permission_to_train") is not True:
         raise RuntimeError("V15 remains draft: model fitting forbidden")
@@ -38,8 +46,10 @@ def check_lock(repo, cfgpath, lockpath):
     required=["artifacts/jof_v15_neural_extension/v15_locked_runner.py",
               "artifacts/jof_v15_neural_extension/V15_PROTOCOL_DRAFT.md",
               "artifacts/jof_v15_neural_extension/V15_CONFIG_DRAFT.json"]
+    required += required_inventory(repo)
     if not all(k in inventory for k in required):
         raise RuntimeError("Locked file inventory incomplete")
+    if inventory.get(str(Path(cfgpath).resolve().relative_to(repo)))!=sha256(cfgpath):raise RuntimeError("Config not covered by immutable inventory")
     for rel,digest in inventory.items():
         p=(Path(repo)/rel).resolve()
         if not p.is_relative_to(Path(repo).resolve()) or not p.exists() or sha256(p)!=digest:
@@ -82,6 +92,9 @@ def build_model(name,input_size):
 
 def window_tensors(train,eval_rows,frame,cols):
     from sklearn.preprocessing import StandardScaler
+    if not train or not eval_rows:raise ValueError("Empty train/evaluation window")
+    if any(r["index"]<20 or r["index"]>=len(frame) for r in train+eval_rows):raise ValueError("Window index outside frame")
+    if max(r["index"]+20 for r in train)>=min(r["index"] for r in eval_rows):raise ValueError("Training label endpoint overlaps evaluation period")
     arr=frame[list(cols)].to_numpy(float);w=20
     used=np.unique(np.concatenate([np.arange(r["index"]-w,r["index"]) for r in train]))
     scaler=StandardScaler().fit(arr[used])
@@ -89,14 +102,19 @@ def window_tensors(train,eval_rows,frame,cols):
         raw=np.stack([arr[r["index"]-w:r["index"]] for r in rows])
         if not np.isfinite(raw).all():raise RuntimeError("Nonfinite LOG/RAW feature window")
         return scaler.transform(raw.reshape(-1,len(cols))).reshape(len(rows),w,len(cols)).astype("float32")
-    return x(train),x(eval_rows)
+    if not np.isfinite(arr[used]).all():raise ValueError("Nonfinite training scaler input")
+    return x(train),x(eval_rows),scaler,used
 
-def fit_predict(name,train,eval_rows,frame,cols,seed,epochs,device):
+def fit_predict(name,train,eval_rows,frame,cols,seed,epochs,device,*,cfg=None,artifact_dir=None):
+    require_training(cfg or {})
+    if epochs!=60 or device!="cpu" or seed not in SEEDS or artifact_dir is None:raise RuntimeError("Unapproved fit settings or missing artifact directory")
     import torch
     if not train or not eval_rows:raise RuntimeError("Empty V15 train/evaluation fold")
     y=np.asarray([r["y"] for r in train],dtype=np.int64)
     if np.unique(y).size!=2:raise RuntimeError("One-class training fold")
-    xtr,xev=window_tensors(train,eval_rows,frame,cols)
+    xtr,xev,scaler,used=window_tensors(train,eval_rows,frame,cols)
+    artifact_dir=Path(artifact_dir);artifact_dir.mkdir(parents=True,exist_ok=False)
+    started=datetime.now(timezone.utc).isoformat();epoch_losses=[]
     configure_seed(seed);torch.set_num_threads(2)
     model=build_model(name,xtr.shape[-1]).to(device)
     dataset=torch.utils.data.TensorDataset(torch.from_numpy(xtr),torch.from_numpy(y))
@@ -104,8 +122,8 @@ def fit_predict(name,train,eval_rows,frame,cols,seed,epochs,device):
                             generator=torch.Generator().manual_seed(seed),num_workers=0)
     opt=torch.optim.AdamW(model.parameters(),lr=.005,weight_decay=.0001)
     sch=torch.optim.lr_scheduler.OneCycleLR(opt,max_lr=.005,steps_per_epoch=len(loader),epochs=epochs)
-    for _ in range(epochs):
-        model.train()
+    for epoch in range(epochs):
+        model.train();loss_sum=0.;seen=0
         for bx,by in loader:
             bx,by=bx.to(device),by.to(device)
             opt.zero_grad(set_to_none=True)
@@ -113,49 +131,40 @@ def fit_predict(name,train,eval_rows,frame,cols,seed,epochs,device):
             if not torch.isfinite(loss):raise RuntimeError("Nonfinite loss")
             loss.backward();torch.nn.utils.clip_grad_norm_(model.parameters(),1.)
             opt.step();sch.step()
+            loss_sum+=float(loss.detach().cpu())*len(by);seen+=len(by)
+        epoch_losses.append({"epoch":epoch+1,"train_loss":loss_sum/seen})
+        pd.DataFrame(epoch_losses).to_csv(artifact_dir/"training_loss.csv",index=False)
     model.eval()
     with torch.inference_mode():
         preds=torch.cat([torch.softmax(model(torch.from_numpy(part).to(device)),dim=1)[:,1].cpu()
                       for part in np.array_split(xev,max(1,(len(xev)+255)//256))]).numpy()
     if not np.isfinite(preds).all():raise RuntimeError("Nonfinite predictions")
+    torch.save({"state_dict":model.cpu().state_dict(),"architecture":name,"input_size":len(cols),"seed":seed,"epochs":epochs,"loss":"CE","probabilities":preds},artifact_dir/"checkpoint.pt")
+    metadata={"columns":list(cols),"scaler_mean":scaler.mean_.tolist(),"scaler_scale":scaler.scale_.tolist(),"scaler_var":scaler.var_.tolist(),"scaler_used_rows":used.tolist(),"train_dates":[r["Date"] for r in train],"evaluation_dates":[r["Date"] for r in eval_rows],"input_tensor_sha256":hashlib.sha256(xtr.tobytes()).hexdigest(),"eval_tensor_sha256":hashlib.sha256(xev.tobytes()).hexdigest(),"started_at_utc":started,"ended_at_utc":datetime.now(timezone.utc).isoformat()}
+    (artifact_dir/"fit_metadata.json").write_text(json.dumps(metadata,indent=2)+"\n")
+    pd.DataFrame({"Date":[r["Date"] for r in eval_rows],"Y_true":[r["y"] for r in eval_rows],"Probability":preds,"Y_pred":(preds>.5).astype(int)}).to_csv(artifact_dir/"predictions.csv",index=False,float_format="%.17g")
     return preds
 
 def preflight_dates(v14,repo):
-    """Actual labels and AUC are not computed; only eligible feature dates are checked."""
-    frozen=pd.read_csv(Path(repo)/"artifacts/jof_v14_preregistered_replication/first_run_20261109/v14_scoring_dates.csv")
-    expected={}
-    for item in frozen.itertuples(index=False):
-        expected.setdefault((item.Market,item.Origin,item.Period),[]).append(str(item.Date))
-    checked=0
-    for market in MARKETS:
-        raw,frame,cols,_=v14.load_market(Path(repo),market)
-        if not set(LOGCOLS).issubset(frame.columns):
-            raise RuntimeError(market+" LOG columns missing")
-        for vy,ty in ORIGINS:
-            label="O"+str(vy-2012)
-            for period,years in [("Validation",(vy,vy+1)),("Test",(ty,ty+1))]:
-                spans=[(vy,vy),(vy+1,vy+1)] if period=="Validation" else [(ty,ty+1)]
-                rows=[]
-                for start,end in spans:
-                    rows+=v14.records(frame,raw,cols,f"{start}-01-01",f"{end}-12-31",preflight=True)
-                dates=[p["Date"] for p in rows]
-                if dates!=expected[(market,label,period)]:
-                    raise RuntimeError(f"{market}/{label}/{period}: V14 scoring date mismatch")
-                for row in rows:
-                    i=row["index"]
-                    if not np.isfinite(frame[list(LOGCOLS)].iloc[i-20:i].to_numpy(float)).all():
-                        raise RuntimeError("LOG window not finite")
-                checked+=1
-    return checked
+    from v15_preflight_readonly import audit
+    return audit(repo)['groups']
 
-def run(repo,cfg,out):
+def run(repo,cfg,out,*,cfgpath=None,lockpath=None):
+    require_training(cfg)
+    if cfgpath is None or lockpath is None:raise RuntimeError("Separate immutable lock verification required")
+    verified,_=check_lock(repo,cfgpath,lockpath)
+    if cfg!=verified:raise RuntimeError("Config changed after lock check")
     import torch
     v14=v14_module(repo)
     scorefile=Path(repo)/"artifacts/jof_v14_preregistered_replication/first_run_20261109/v14_scoring_dates.csv"
-    reference=pd.read_csv(scorefile)
+    reference=reference_dates(repo)
+    (out/"execution_config.json").write_text(json.dumps(cfg,indent=2)+"\n")
+    import importlib.metadata
+    (out/"environment.json").write_text(json.dumps({"python":platform.python_version(),"platform":platform.platform(),"device":cfg["device"],"CUBLAS_WORKSPACE_CONFIG":os.environ.get("CUBLAS_WORKSPACE_CONFIG"),"packages":{n:importlib.metadata.version(n) for n in ["torch","ncps","numpy","pandas","scikit-learn"]}},indent=2)+"\n")
     records=[];fit_log=[]
     for market in MARKETS:
         raw,frame,cols,_=v14.load_market(repo,market)
+        integrity(raw,frame,cols)
         for vy,ty in ORIGINS:
             origin="O"+str(vy-2012)
             folds=[(vy,vy),(vy+1,vy+1),(ty,ty+1)]
@@ -174,7 +183,12 @@ def run(repo,cfg,out):
                         ("CfC","RAW","CfC_RAW"),("CfC","LOG","CfC_LOG")]:
                         colnames=cols if representation=="RAW" else LOGCOLS
                         t0=time.monotonic()
-                        p=fit_predict(name,train,ev,frame,colnames,seed,cfg["epochs"],cfg["device"])
+                        stem=f"{market}_{origin}_{start}_{tag}_{seed}"
+                        try:
+                            p=fit_predict(name,train,ev,frame,colnames,seed,cfg["epochs"],cfg["device"],cfg=cfg,artifact_dir=out/"fits"/stem)
+                        except Exception as error:
+                            (out/"failure.json").write_text(json.dumps({"fit":stem,"error_type":type(error).__name__,"message":str(error),"status":"failed_not_complete"},indent=2)+"\n")
+                            raise
                         probs[tag]=p
                         fit_log.append({"Market":market,"Origin":origin,"Stage":start,"Model":tag,
                                         "Seed":seed,"TrainN":len(train),"EvalN":len(ev),
@@ -185,14 +199,16 @@ def run(repo,cfg,out):
                             signals=row["signals"]
                             records.append({"Market":market,"Origin":origin,"Period":period,
                                 "Date":row["Date"],"Model":tag,"Seed":seed,"Probability":float(p),
-                                "Y_true":row["y"],"s200":signals["200DMA"],"s60":signals["Momentum60"],
+                                "Y_true":row["y"],"Y_pred":int(p>.5),"s200":signals["200DMA"],"s60":signals["Momentum60"],
                                 "s20":signals["Persistence"]})
                 pd.DataFrame(records).to_csv(out/"v15_predictions.partial.csv",index=False)
                 pd.DataFrame(fit_log).to_csv(out/"v15_fit_diagnostics.partial.csv",index=False)
     pd.DataFrame(records).to_csv(out/"v15_predictions.csv",index=False,float_format="%.17g")
     pd.DataFrame(fit_log).to_csv(out/"v15_fit_diagnostics.csv",index=False)
+    if len(fit_log)!=1080:raise RuntimeError("Incomplete planned1080fits")
+    (out/"completion_manifest.json").write_text(json.dumps({"status":"fits_complete","fit_count":1080,"prediction_sha256":sha256(out/"v15_predictions.csv"),"protocol_config_sha256":sha256(cfgpath)},indent=2)+"\n")
     # Deliberately leave V14-equivalent statistical test to reviewed analysis script
-    (out/"FIT_COMPLETE_EVALUATION_PENDING.txt").write_text("Neural predictions complete. Do not interpret before reviewed V15 analysis.\\n")
+    (out/"FIT_COMPLETE_EVALUATION_PENDING.txt").write_text("Neural predictions complete. Do not interpret before reviewed V15 analysis.\n")
 
 def main():
     ap=argparse.ArgumentParser()
@@ -209,9 +225,11 @@ def main():
         return
     if not args.acknowledge_compute:raise SystemExit("Training requires explicit --acknowledge-compute")
     cfg,head=check_lock(args.repo,args.config,args.lock)
+    if args.out is None:raise RuntimeError("--out is required for training")
+    if args.out.resolve().is_relative_to(args.repo.resolve()):raise RuntimeError("Write future training outputs outside protected checkout")
     if args.out.exists():raise RuntimeError("Refusing to overwrite a previous result directory")
     args.out.mkdir(parents=True)
-    (args.out/"lock_sha.txt").write_text(head+"\\n")
-    run(args.repo,cfg,args.out)
+    (args.out/"lock_sha.txt").write_text(head+"\n")
+    run(args.repo,cfg,args.out,cfgpath=args.config,lockpath=args.lock)
 
 if __name__=="__main__":main()

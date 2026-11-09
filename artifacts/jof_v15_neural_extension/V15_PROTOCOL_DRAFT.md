@@ -1,94 +1,56 @@
-# V15 Neural Rolling-Origin Extension — Protocol DRAFT
+# V15 neural extension — integrated protocol draft
 
-**Status: DRAFT / NOT LOCKED / NO V15 OUTCOME EXAMINED**  
-**Source repository:** `airrio55-cmd/global-lnn-sci`, default branch `main`; inspected 2026-11-09.  
-**V14 lock commit:** `2e60d259eb96c859ec4374541600218c8a414ffa` (do not alter).  
-**V15 lock commit:** NOT SET. DO NOT START MODEL FITTING until blocking choices are resolved, code-only preflight passes, and protocol + executable code are committed.
+**DRAFT / NOT LOCKED. No authorization to train or calculate AUC.** This code-review commit is not an immutable protocol lock. V14 outputs, original locked code and V14.2 manuscript remain unchanged. This is a historical, pre-result specification of V15 after observing V14, not a prospective preregistration.
 
-## 1. Scope and evidentiary status
+## Data and timing retained from V14
 
-Separate *pre-specified historical neural extension* of the already observed V14 analysis, **not** a prospective or independently preregistered replication. The V14 outcome is known to the researchers. Preserve V14 files and V14.2 manuscript unchanged. Report all V15 outcomes, successes, and failures.
+Use the original five market_input.csv files, Phase1 frozen feature CSVs and ordered COMMON_LOCAL feature lists. Hashes must match both Phase1 and the original V14 input inventory. No data download, feature refresh, backfill or synthetic observations. Preserve the existing empirical market calendars and source availability limitations.
 
-## 2. Frozen datasets, windows, labels
+H=W=20 observed trading rows. At forecast t use exactly t-20 through t-1; label is I(Close[t+20]>Close[t]). Preserve V14's minimum raw index201, finite RAW-window eligibility and within-split forward label endpoint. No extra embargo. Scaler is fit only on the union of feature rows in eligible training windows, shared across lags. LOG must be finite on the same RAW-eligible dates; no LOG-only dates are added.
 
-Five markets: `SP500`, `NASDAQ100`, `NIKKEI225`, `EUROSTOXX50`, `KOSPI200`. Reuse each original `artifacts/<market-folder>/market_input.csv`, `artifacts/jof_phase1_benchmark_expansion/frozen_features/<MARKET>.csv`, and `data_manifest.json` `Feature_names` for exact market-specific `COMMON_LOCAL`. Verify SHA256 against source manifest/inventory before execution; no downloading or recomputing features.
-
-Forecast date t: target `1[Close_(t+20) > Close_t]`, ties 0. Inputs chronological feature rows `t−20` to `t−1` inclusive (20×F). A row qualifies only if forecast date falls within the split, forward label endpoint t+20 lies inside that split's last session, all inputs finite, and signal lookbacks exist. Model and StandardScaler fit using eligible training samples only, scaler fit on the union of training feature rows used in input windows and shared over the 20 lags. **No extra embargo** beyond this exact V14 label-endpoint restriction. The original frozen external feature availability caveat persists.
-
-## 3. Rolling origins and retraining
-
-| Origin | Initial training | Validation | Test |
+| Origin | Initial training | Annual validation folds | Single test fold |
 |---|---|---|---|
-| O1 | 2010–2012 | 2013–2014 | 2015–2016 |
-| O2 | 2010–2013 | 2014–2015 | 2016–2017 |
-| O3 | 2010–2014 | 2015–2016 | 2017–2018 |
-| O4 | 2010–2015 | 2016–2017 | 2018–2019 |
-| O5 | 2010–2016 | 2017–2018 | 2019–2020 |
-| O6 | 2010–2017 | 2018–2019 | 2020–2021 |
+| O1 | 2010–2012 | 2013; 2014 | 2015–2016 |
+| O2 | 2010–2013 | 2014; 2015 | 2016–2017 |
+| O3 | 2010–2014 | 2015; 2016 | 2017–2018 |
+| O4 | 2010–2015 | 2016; 2017 | 2018–2019 |
+| O5 | 2010–2016 | 2017; 2018 | 2019–2020 |
+| O6 | 2010–2017 | 2018; 2019 | 2020–2021 |
 
-Per market × origin × seed × base architecture/representation, train three **fresh** models: train on all eligible history up to prior year, predict validation year 1; fresh expanding train through next prior year, predict validation year 2; fresh expanding train through last validation year, predict entire two-year test with no test-period refit. Two validation years' predictions are concatenated and a single pooled AUC is computed. Honor V14 market trading calendars and exact scoring dates.
+Each validation year receives a fresh fit on eligible history through the preceding year, with its own year-end label cutoff. Pool the two annual validation prediction sets; do not treat them as one two-year fit. A third fresh fit uses all eligible history through the last validation year and predicts the entire two-year test with no test-period refit. Exactly match all60 V14 market/origin/period scoring-date groups and90 individual refit folds.
 
-## 4. Candidate architecture and predictions
+## Four trainable branches and one derived variant
 
-- LSTM / LTC(LNN RAW) / CfC: preserve original notebook model definitions and `ncps` version where applicable. Input shape B×20×F; 128 hidden, 0.2 explicit output dropout, two logits, positive-class probability from softmax.
-- CfC LOG: **BLOCKING / UNRESOLVED**. An earlier RAW/LOG ensemble was discussed, but a source implementation or exact LOG representation has NOT been located in inspected default branch. The presence of `Log_Ret` in COMMON_LOCAL does *not* define a separate LOG input. Do not invent or silently choose LOG transformation.
-- LNN ensemble by matched seed: `P_LNN_Ens,s = 0.5*P_CfC_RAW,s + 0.5*P_CfC_LOG,s`, and then ensemble probabilities across 3 seeds. Models must score exactly the same dates with the same labels. The ensemble is an input-representation variant of CfC, not a fourth independent architecture.
-- Seeds: `[42,52,62]` fixed; per-seed models train from scratch. Main model predictions are **mean probabilities over seeds**; separate seed-specific diagnostics included. Compare against V14 locked Logistic Regression + LightGBM, with matched market/origin dates.
+Train LSTM RAW, LTC RAW, CfC RAW and CfC LOG. RAW uses the existing per-market COMMON_LOCAL input. LOG is exactly ordered `[Log_Ret, Disparity20]`, reusing existing values: diff(log(Close)) and Close/rolling_mean20(Close)-1. No extra logarithm or transformation of Disparity20.
 
-**H1 main neural estimand:** equal-weight mean ΔAUC across *three architecture families* LSTM, LTC RAW, CfC (using seed probability ensembles). LNN RAW/LOG Ensemble is **secondary descriptive** and NOT added as a fourth model into this H1 mean, because that would double-weight CfC. The V14 main statistic remains its two-model mean. Define neural/non-neural differences on matched market-origin units.
+Historical JKSCI KOSPI200 material reportedly describes CfC RAW [Log_Ret, Foreign_Net, Nasdaq, SOX, Disparity] and LOG [Log_Ret, Disparity]. Those historical files are not part of this checkout and their exact Disparity series was not independently verified here. V15 is a **new five-market adaptation**, not an exact reproduction of that KOSPI200 experiment. Do not claim a historical LTC ensemble or identical original features/loss.
 
-## 5. Training rule (must lock before run)
+For each matched seed/date, CfC_ENSEMBLE =0.5 CfC_RAW probability +0.5 CfC_LOG probability. Then average probabilities across seeds for every evaluated variant. This is probability averaging, not majority vote and not averaging model AUCs. CfC_LOG is retained diagnostically. H1 uses only LSTM, LTC RAW and CfC RAW; the ensemble never becomes a fourth architecture family.
 
-Source Phase2 protocol lists AdamW, weight decay 1e-4, max LR .005, OneCycleLR, gradient clip 1, batch 64, max epochs 100, patience 10 for validation, and final epochs 60. **V15 draft recommendation:** CE (two-logit cross-entropy); AdamW/OneCycleLR as original; **fixed 60 epochs for BOTH validation years and test**, no early stopping or performance-based checkpoint selection on evaluation windows, no threshold tuning for ROC AUC. This changes the original validation training rule, deliberately to avoid using the same observed Validation AUC/BA for model selection and estimation. This 60-epoch policy remains *proposed*, not binding until code/config review and explicit lock. No changing it after any V15 outcomes are viewed.
+Architecture topology matches the original notebook:128 units, explicit dropout0.2, last timestep and Linear128→2. Fully connected ncps LTC/CfC retain library defaults. No AutoNCP or extra hidden layers are added. CfC library defaults include its internal backbone; this is not a tuned extension.
 
-Set Python/NumPy/Torch seeds; deterministic algorithms strict or record and halt unsupported operations. Record CPU/GPU, library/OS versions, `CUBLAS_WORKSPACE_CONFIG` if GPU, torch and ncps hashes, model checkpoints, per-fit loss, start/end timestamps and failure messages. Record exact feature order, data SHA256 and code SHA.
+## Training proposal, not an executed or locked experiment
 
-## 6. Statistical reproduction (from V14; no cherry-picking)
+Seeds `[42,52,62]`; CE; fixed60 epochs for every validation and test fit. Original AdamW lr.005/weight_decay1e-4, OneCycleLR, batch64, clip norm1. No early stopping or threshold selection; a descriptive class output uses p>.5. This intentionally differs from older neural100-epoch/patience10 validation and from historical KOSPI200 focal loss. Equal epochs do not imply equal optimization steps as training history grows.
 
-V14 signal definitions on previous trading session t−1: Persistence 20 sessions, 200DMA of 200 closes ending t−1, Momentum60 60 sessions. Evaluate signal-outcome relation shift `S(u,s)=E_test−E_val` on exact common model-scoring dates. AUC difference `ΔAUC(u,m)=AUC_test−AUC_val`.
+Only CPU was audited. Strict deterministic PyTorch settings are required. Four branches ×5 markets ×6 origins ×3 seeds ×3 refits =1080 future fits. There are450 evaluated model/unit/seed combinations when all five output variants are counted;360 counts only four outputs excluding diagnostic CfC_LOG. Independent units are at most30, not450 or1080.
 
-- **H1 primary:** Spearman `rho[S(u,200DMA), mean_m ΔAUC(u,m)]<0` for three neural architecture families; fixed group eligibility and alignment-prerequisite logic of V14; missing 30-unit pairs explicitly reported without imputation.
-- **H1b:** Spearman `rho[S(u,200DMA) × mean_m corr(P_test,m,200DMA_test), mean_m ΔAUC(u,m)]>0`.
-- **H2:** negative correlations for Momentum60 and Persistence signal shifts (two secondary tests).
-- **H3 descriptive:** fraction of neural model × market/origin validation score–Persistence correlations <0. Three architecture families × 30 units => 90 entries if fully defined; never use naive independent-unit binomial p value. LNN Ensemble H3 separately descriptive.
-- Use exactly V14's 10,000 nominal within-market permutation (seed 20261109), market-specific circular shifts (6^5), synchronized circular shifts (6), primary H1 nominal directional label, alignment prerequisite, Holm correction for *three* secondary tests H1b/H2-Momentum/H2-Persistence, and descriptive leave-one-market-out and within-market checks. These are non-exact dependent-data diagnostics; no causal or confirmatory claims.
-- Additional **descriptive** comparisons: per-seed ΔAUC and H1 sign/size (do not treat seeds as independent samples), paired neural vs V14 non-neural `AUC_val`, `AUC_test`, and `ΔAUC`; matched CfC RAW vs CfC RAW/LOG ensemble. No post-hoc inferential family expansion.
+Future execution must preserve every model state, per-epoch training loss, train/evaluation dates, scaler statistics and used-row masks, tensor hashes, date-level probabilities/labels, source hash inventory, environment, timestamps and failure message. Fail fast; do not skip failures to create a favorable complete-case subset. An incomplete run is not analyzed. Outputs must be outside the protected checkout, then separately reviewed before publication. No fits are run by import or preflight.
 
-**Eligibility issue:** V14 had only 28/30 evaluable H1 units in reported output due to 200DMA signal-group restrictions. Reproduce each eligibility screen exactly and report any model-specific fit failures. Do not replace missing units or tune them away.
+## Static analysis contract retained from V14
 
-## 7. Execution order and artifact retention
+Use original V14 functions for nominal10000 within-market permutations (seed20261109), rotations, rank statistics, leave-one-market-out and within-market diagnostics. Importing those functions must never invoke V14.main or estimator fitting. Do not alter V14 source.
 
-1. Verify exact source paths, code hashes, frozen data hashes; audit original RAW/LOG implementation from historical code if available. If unresolved, disable ensemble and **do not label a substitute as the legacy RAW/LOG approach**.
-2. Resolve LOG input and fixed epoch policy; finalize protocol and complete executable V15 runner; code-only/synthetic preflight, no actual V15 model fits.
-3. Commit source, protocol, environment and validation tests to a NEW V15 path; record SHA+UTC time as lock (not in V14 directories).
-4. Execute all predeclared combinations once without result-dependent changes. Record original and any corrected bug-fix runs separately.
-5. Store date-level probabilities, true labels, predicted class, eligible sample masks, fit metrics and errors; compute seed ensemble and model family summaries; publish complete output.
+- H1: negative Spearman of200DMA signal-effect shift and equally weighted three-family mean ΔAUC. Alignment prerequisite is at least16/30 negative mean test probability–200DMA correlations. A missing prerequisite or fewer than30 eligible units must qualify the conclusion.
+- H1b: positive correlation of shift×mean test alignment with mean ΔAUC.
+- H2: negative correlations for Momentum60 and Persistence shifts.
+- Secondary Holm family has exactly3 members: H1b and both H2 tests. Undefined members are not silently promoted to support.
+- H3: count negative validation probability–Persistence correlations across3×30 planned entries; no independent-binomial p. CfC ensemble H3 is separate descriptive output.
+- Seed diagnostics report per-variant validation/test/ΔAUC and each seed's three-family H1 sign/size. Seeds are not independent replications.
+- V14 comparisons retain both non-neural models' validation/test/ΔAUC and their two-model means, paired by exact dates and30 market-origin keys. CfC ensemble vs RAW is descriptive on identical dates.
 
-## 8. Execution count and interpretation
+Signal effect requires at least20 observations in each binary signal group in both periods. Price/feature-only audit reproduces28/30 eligible200DMA units. Original V14.rotate_p rotates **after finite-row filtering**: the nominal6^5 rotation count applies only to complete six-origin blocks; with missing units the actual product is smaller (5×5×6^3=5400 for the current eligibility). Preserve original behavior and record actual total, not a falsely exact7776. Six synchronized rotations also remain non-exact dependent-data diagnostics.
 
-4 underlying trainable networks: LSTM, LTC RAW, CfC, CfC LOG. `5 markets × 6 origins × 3 seeds × 4 networks × 3 refits = 1,080` fits, **if LOG is defined**. Outputs span 4 evaluated model variants × 5 × 6 × 3 = 360 model-unit-seed combinations; independent market-origin clusters are at most 30 and temporally/cross-sectionally dependent. If LOG cannot be sourced, run only a separately relabeled 3-model design after changing/locking protocol; never pretend 1,080 fits took place.
+## Current restrictions and future lock conditions
 
-## 9. Blocking decisions / signoff
-
-- [ ] Exact LOG representation + transformations + frozen source code or honest new-definition label
-- [ ] Fixed 60-epoch policy confirmed as pre-result choice
-- [ ] Confirm date matching and feature indexing with synthetic tests
-- [ ] Confirm whether H1 H1b shared score dates require intersecting model-successful dates (define failure treatment with V14 complete-case logic)
-- [ ] Commit lock and UTC time before any outcomes
-
-No fitting, no claimed V15 statistical findings, no change to V14/V14.2 while this draft is open.
-
-## 10. STEP 2 continuation — user clarification (2026-11-09)
-
-The researcher has clarified: **RAW denotes the original input variables; LOG denotes a log-return-based feature representation.** This removes ambiguity about the *conceptual* ensemble branches, but does not yet specify the exact LOG columns, their lagging, or transformation of non-price covariates. Existing frozen `COMMON_LOCAL` already includes `Log_Ret`; this alone does **not** produce a distinct LOG representation. To avoid inventing a historical implementation, the V15 runner requires an explicit ordered list of existing frozen log-based features *per market* (`V15_CONFIG_TEMPLATE.json` → `log_columns`). LOG columns must be verified against the historical definition. No new features are calculated online, no speculative log transformation is performed, and RAW/LOG valid-date masks must coincide with V14.
-
-The runner has been written to permit locked execution with an explicit config and Git SHA/hash inventory. It refuses to train unless config status is `LOCKED`, 60 fixed epochs and 3 seeds are present, Git tracked files are clean, HEAD matches the lock record, and all specified locked hashes match. This is **not a claim that the protocol is locked now**. It remains draft until those conditions are met. If exact historical LOG columns cannot be recovered, any new representation must be honestly labeled a *newly specified LOG-feature variant*, not a reconstruction of an earlier ensemble.
-
-Original V14 non-neural method remains a comparison baseline. V15's fixed 60 epochs is a deliberate deviation from V14-era neural validation early stopping, to prevent evaluation-window outcomes choosing their own checkpoint. Equal epoch counts are not necessarily equal optimization exposure across expanding datasets; disclose this limitation.
-
-## STEP 3 historical-source correction (2026-11-09; pre-lock)
-Prior JKSCI Korean thesis materials (e.g. JKSCI_유성만6.docx and Fig1_final_v2.pptx in the researcher’s file library) explicitly describe the historical KOSPI200 ensemble as **CfC**, RAW 5 features [Log_Ret, Foreign_Net, Nasdaq, SOX, Disparity] and LOG 2 features [Log_Ret, Disparity], using equal-weight probabilities. This differs from the earlier draft’s LTC-based ensemble. The V15 proposal therefore uses **CfC RAW + CfC LOG** while retaining LTC as an independently evaluated model. The five-market frozen COMMON_LOCAL RAW inputs are not the historical KOSPI200 5-feature inputs; the adapted LOG uses existing [Log_Ret, Disparity20] columns in each market (still subject to hash/data audits). **This is a new pre-specified cross-market analogue, not an exact reconstruction of the old KOSPI200 ensemble.**
-
-The V15 RAW-eligible dates define the common train/validation/test observation universe, and the LOG branch must have finite data for every RAW-eligible input window. Additional LOG-only eligible dates are intentionally not added. The two branches have the same target, fold timing, target-endpoint rule and prediction date set. This policy avoids confounding effects from changing evaluation samples.
-
-Training loss for V15 is CE as proposed, but the old KOSPI200 study used FocalLoss(gamma=2,alpha=.25); the distinction must be disclosed. No old ensemble claim is supported for markets other than KOSPI200.
+Config stays DRAFT; permission_to_train=false and permission_to_analyze=false. This task creates no lock file/record/commit designation and performs no model fitting or AUC calculation. Future locking requires separate explicit authorization, environment review and an immutable clean-checkout SHA with full inventory, including config and all runtime/input sources. The lock record must be external to the checkout. Draft inventory completion does not constitute locking. Forward-only checks cannot certify60-epoch numerical stability or real historical external-feature publication times.

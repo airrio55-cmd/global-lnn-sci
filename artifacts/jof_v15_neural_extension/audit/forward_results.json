@@ -1,0 +1,624 @@
+{
+  "status": "SMOKE_PASS",
+  "forward_checks": 60,
+  "no_training": true,
+  "no_gradients": true,
+  "no_AUC": true,
+  "CPU_only": true,
+  "versions": {
+    "torch": "2.14.1+cpu",
+    "ncps": "1.0.1",
+    "numpy": "2.5.4",
+    "pandas": "3.0.6",
+    "scikit-learn": "1.9.1"
+  },
+  "Python": "3.12.14",
+  "torch_source_sha256": "bd4a10ff16357ed78f45aaf4b46ce5b771fdc0e8549402206e324d0eb792c672",
+  "ncps_class_source_sha256": {
+    "LTC": "bbf3127013d3969994ecf0debf4eb37b56db750475ee71646a9decdf1aaf3026",
+    "CfC": "3e5c1ddf4bf0829cfaa9c6415d30b8081fdaf2e1f681d02631c497626b67f0ea"
+  },
+  "models": [
+    {
+      "Market": "SP500",
+      "Model": "LSTM",
+      "Representation": "RAW",
+      "Seed": 42,
+      "Input_dim": 13,
+      "deterministic_forward": true,
+      "original_topology_parameters_and_outputs_identical": true,
+      "parameters": 73474
+    },
+    {
+      "Market": "SP500",
+      "Model": "LSTM",
+      "Representation": "RAW",
+      "Seed": 52,
+      "Input_dim": 13,
+      "deterministic_forward": true,
+      "original_topology_parameters_and_outputs_identical": true,
+      "parameters": 73474
+    },
+    {
+      "Market": "SP500",
+      "Model": "LSTM",
+      "Representation": "RAW",
+      "Seed": 62,
+      "Input_dim": 13,
+      "deterministic_forward": true,
+      "original_topology_parameters_and_outputs_identical": true,
+      "parameters": 73474
+    },
+    {
+      "Market": "SP500",
+      "Model": "LTC",
+      "Representation": "RAW",
+      "Seed": 42,
+      "Input_dim": 13,
+      "deterministic_forward": true,
+      "original_topology_parameters_and_outputs_identical": true,
+      "parameters": 91164
+    },
+    {
+      "Market": "SP500",
+      "Model": "LTC",
+      "Representation": "RAW",
+      "Seed": 52,
+      "Input_dim": 13,
+      "deterministic_forward": true,
+      "original_topology_parameters_and_outputs_identical": true,
+      "parameters": 91164
+    },
+    {
+      "Market": "SP500",
+      "Model": "LTC",
+      "Representation": "RAW",
+      "Seed": 62,
+      "Input_dim": 13,
+      "deterministic_forward": true,
+      "original_topology_parameters_and_outputs_identical": true,
+      "parameters": 91164
+    },
+    {
+      "Market": "SP500",
+      "Model": "CfC",
+      "Representation": "RAW",
+      "Seed": 42,
+      "Input_dim": 13,
+      "deterministic_forward": true,
+      "original_topology_parameters_and_outputs_identical": true,
+      "parameters": 84482
+    },
+    {
+      "Market": "SP500",
+      "Model": "CfC",
+      "Representation": "RAW",
+      "Seed": 52,
+      "Input_dim": 13,
+      "deterministic_forward": true,
+      "original_topology_parameters_and_outputs_identical": true,
+      "parameters": 84482
+    },
+    {
+      "Market": "SP500",
+      "Model": "CfC",
+      "Representation": "RAW",
+      "Seed": 62,
+      "Input_dim": 13,
+      "deterministic_forward": true,
+      "original_topology_parameters_and_outputs_identical": true,
+      "parameters": 84482
+    },
+    {
+      "Market": "SP500",
+      "Model": "CfC",
+      "Representation": "LOG",
+      "Seed": 42,
+      "Input_dim": 2,
+      "deterministic_forward": true,
+      "original_topology_parameters_and_outputs_identical": true,
+      "parameters": 83074
+    },
+    {
+      "Market": "SP500",
+      "Model": "CfC",
+      "Representation": "LOG",
+      "Seed": 52,
+      "Input_dim": 2,
+      "deterministic_forward": true,
+      "original_topology_parameters_and_outputs_identical": true,
+      "parameters": 83074
+    },
+    {
+      "Market": "SP500",
+      "Model": "CfC",
+      "Representation": "LOG",
+      "Seed": 62,
+      "Input_dim": 2,
+      "deterministic_forward": true,
+      "original_topology_parameters_and_outputs_identical": true,
+      "parameters": 83074
+    },
+    {
+      "Market": "NASDAQ100",
+      "Model": "LSTM",
+      "Representation": "RAW",
+      "Seed": 42,
+      "Input_dim": 10,
+      "deterministic_forward": true,
+      "original_topology_parameters_and_outputs_identical": true,
+      "parameters": 71938
+    },
+    {
+      "Market": "NASDAQ100",
+      "Model": "LSTM",
+      "Representation": "RAW",
+      "Seed": 52,
+      "Input_dim": 10,
+      "deterministic_forward": true,
+      "original_topology_parameters_and_outputs_identical": true,
+      "parameters": 71938
+    },
+    {
+      "Market": "NASDAQ100",
+      "Model": "LSTM",
+      "Representation": "RAW",
+      "Seed": 62,
+      "Input_dim": 10,
+      "deterministic_forward": true,
+      "original_topology_parameters_and_outputs_identical": true,
+      "parameters": 71938
+    },
+    {
+      "Market": "NASDAQ100",
+      "Model": "LTC",
+      "Representation": "RAW",
+      "Seed": 42,
+      "Input_dim": 10,
+      "deterministic_forward": true,
+      "original_topology_parameters_and_outputs_identical": true,
+      "parameters": 89238
+    },
+    {
+      "Market": "NASDAQ100",
+      "Model": "LTC",
+      "Representation": "RAW",
+      "Seed": 52,
+      "Input_dim": 10,
+      "deterministic_forward": true,
+      "original_topology_parameters_and_outputs_identical": true,
+      "parameters": 89238
+    },
+    {
+      "Market": "NASDAQ100",
+      "Model": "LTC",
+      "Representation": "RAW",
+      "Seed": 62,
+      "Input_dim": 10,
+      "deterministic_forward": true,
+      "original_topology_parameters_and_outputs_identical": true,
+      "parameters": 89238
+    },
+    {
+      "Market": "NASDAQ100",
+      "Model": "CfC",
+      "Representation": "RAW",
+      "Seed": 42,
+      "Input_dim": 10,
+      "deterministic_forward": true,
+      "original_topology_parameters_and_outputs_identical": true,
+      "parameters": 84098
+    },
+    {
+      "Market": "NASDAQ100",
+      "Model": "CfC",
+      "Representation": "RAW",
+      "Seed": 52,
+      "Input_dim": 10,
+      "deterministic_forward": true,
+      "original_topology_parameters_and_outputs_identical": true,
+      "parameters": 84098
+    },
+    {
+      "Market": "NASDAQ100",
+      "Model": "CfC",
+      "Representation": "RAW",
+      "Seed": 62,
+      "Input_dim": 10,
+      "deterministic_forward": true,
+      "original_topology_parameters_and_outputs_identical": true,
+      "parameters": 84098
+    },
+    {
+      "Market": "NASDAQ100",
+      "Model": "CfC",
+      "Representation": "LOG",
+      "Seed": 42,
+      "Input_dim": 2,
+      "deterministic_forward": true,
+      "original_topology_parameters_and_outputs_identical": true,
+      "parameters": 83074
+    },
+    {
+      "Market": "NASDAQ100",
+      "Model": "CfC",
+      "Representation": "LOG",
+      "Seed": 52,
+      "Input_dim": 2,
+      "deterministic_forward": true,
+      "original_topology_parameters_and_outputs_identical": true,
+      "parameters": 83074
+    },
+    {
+      "Market": "NASDAQ100",
+      "Model": "CfC",
+      "Representation": "LOG",
+      "Seed": 62,
+      "Input_dim": 2,
+      "deterministic_forward": true,
+      "original_topology_parameters_and_outputs_identical": true,
+      "parameters": 83074
+    },
+    {
+      "Market": "NIKKEI225",
+      "Model": "LSTM",
+      "Representation": "RAW",
+      "Seed": 42,
+      "Input_dim": 11,
+      "deterministic_forward": true,
+      "original_topology_parameters_and_outputs_identical": true,
+      "parameters": 72450
+    },
+    {
+      "Market": "NIKKEI225",
+      "Model": "LSTM",
+      "Representation": "RAW",
+      "Seed": 52,
+      "Input_dim": 11,
+      "deterministic_forward": true,
+      "original_topology_parameters_and_outputs_identical": true,
+      "parameters": 72450
+    },
+    {
+      "Market": "NIKKEI225",
+      "Model": "LSTM",
+      "Representation": "RAW",
+      "Seed": 62,
+      "Input_dim": 11,
+      "deterministic_forward": true,
+      "original_topology_parameters_and_outputs_identical": true,
+      "parameters": 72450
+    },
+    {
+      "Market": "NIKKEI225",
+      "Model": "LTC",
+      "Representation": "RAW",
+      "Seed": 42,
+      "Input_dim": 11,
+      "deterministic_forward": true,
+      "original_topology_parameters_and_outputs_identical": true,
+      "parameters": 89880
+    },
+    {
+      "Market": "NIKKEI225",
+      "Model": "LTC",
+      "Representation": "RAW",
+      "Seed": 52,
+      "Input_dim": 11,
+      "deterministic_forward": true,
+      "original_topology_parameters_and_outputs_identical": true,
+      "parameters": 89880
+    },
+    {
+      "Market": "NIKKEI225",
+      "Model": "LTC",
+      "Representation": "RAW",
+      "Seed": 62,
+      "Input_dim": 11,
+      "deterministic_forward": true,
+      "original_topology_parameters_and_outputs_identical": true,
+      "parameters": 89880
+    },
+    {
+      "Market": "NIKKEI225",
+      "Model": "CfC",
+      "Representation": "RAW",
+      "Seed": 42,
+      "Input_dim": 11,
+      "deterministic_forward": true,
+      "original_topology_parameters_and_outputs_identical": true,
+      "parameters": 84226
+    },
+    {
+      "Market": "NIKKEI225",
+      "Model": "CfC",
+      "Representation": "RAW",
+      "Seed": 52,
+      "Input_dim": 11,
+      "deterministic_forward": true,
+      "original_topology_parameters_and_outputs_identical": true,
+      "parameters": 84226
+    },
+    {
+      "Market": "NIKKEI225",
+      "Model": "CfC",
+      "Representation": "RAW",
+      "Seed": 62,
+      "Input_dim": 11,
+      "deterministic_forward": true,
+      "original_topology_parameters_and_outputs_identical": true,
+      "parameters": 84226
+    },
+    {
+      "Market": "NIKKEI225",
+      "Model": "CfC",
+      "Representation": "LOG",
+      "Seed": 42,
+      "Input_dim": 2,
+      "deterministic_forward": true,
+      "original_topology_parameters_and_outputs_identical": true,
+      "parameters": 83074
+    },
+    {
+      "Market": "NIKKEI225",
+      "Model": "CfC",
+      "Representation": "LOG",
+      "Seed": 52,
+      "Input_dim": 2,
+      "deterministic_forward": true,
+      "original_topology_parameters_and_outputs_identical": true,
+      "parameters": 83074
+    },
+    {
+      "Market": "NIKKEI225",
+      "Model": "CfC",
+      "Representation": "LOG",
+      "Seed": 62,
+      "Input_dim": 2,
+      "deterministic_forward": true,
+      "original_topology_parameters_and_outputs_identical": true,
+      "parameters": 83074
+    },
+    {
+      "Market": "EUROSTOXX50",
+      "Model": "LSTM",
+      "Representation": "RAW",
+      "Seed": 42,
+      "Input_dim": 11,
+      "deterministic_forward": true,
+      "original_topology_parameters_and_outputs_identical": true,
+      "parameters": 72450
+    },
+    {
+      "Market": "EUROSTOXX50",
+      "Model": "LSTM",
+      "Representation": "RAW",
+      "Seed": 52,
+      "Input_dim": 11,
+      "deterministic_forward": true,
+      "original_topology_parameters_and_outputs_identical": true,
+      "parameters": 72450
+    },
+    {
+      "Market": "EUROSTOXX50",
+      "Model": "LSTM",
+      "Representation": "RAW",
+      "Seed": 62,
+      "Input_dim": 11,
+      "deterministic_forward": true,
+      "original_topology_parameters_and_outputs_identical": true,
+      "parameters": 72450
+    },
+    {
+      "Market": "EUROSTOXX50",
+      "Model": "LTC",
+      "Representation": "RAW",
+      "Seed": 42,
+      "Input_dim": 11,
+      "deterministic_forward": true,
+      "original_topology_parameters_and_outputs_identical": true,
+      "parameters": 89880
+    },
+    {
+      "Market": "EUROSTOXX50",
+      "Model": "LTC",
+      "Representation": "RAW",
+      "Seed": 52,
+      "Input_dim": 11,
+      "deterministic_forward": true,
+      "original_topology_parameters_and_outputs_identical": true,
+      "parameters": 89880
+    },
+    {
+      "Market": "EUROSTOXX50",
+      "Model": "LTC",
+      "Representation": "RAW",
+      "Seed": 62,
+      "Input_dim": 11,
+      "deterministic_forward": true,
+      "original_topology_parameters_and_outputs_identical": true,
+      "parameters": 89880
+    },
+    {
+      "Market": "EUROSTOXX50",
+      "Model": "CfC",
+      "Representation": "RAW",
+      "Seed": 42,
+      "Input_dim": 11,
+      "deterministic_forward": true,
+      "original_topology_parameters_and_outputs_identical": true,
+      "parameters": 84226
+    },
+    {
+      "Market": "EUROSTOXX50",
+      "Model": "CfC",
+      "Representation": "RAW",
+      "Seed": 52,
+      "Input_dim": 11,
+      "deterministic_forward": true,
+      "original_topology_parameters_and_outputs_identical": true,
+      "parameters": 84226
+    },
+    {
+      "Market": "EUROSTOXX50",
+      "Model": "CfC",
+      "Representation": "RAW",
+      "Seed": 62,
+      "Input_dim": 11,
+      "deterministic_forward": true,
+      "original_topology_parameters_and_outputs_identical": true,
+      "parameters": 84226
+    },
+    {
+      "Market": "EUROSTOXX50",
+      "Model": "CfC",
+      "Representation": "LOG",
+      "Seed": 42,
+      "Input_dim": 2,
+      "deterministic_forward": true,
+      "original_topology_parameters_and_outputs_identical": true,
+      "parameters": 83074
+    },
+    {
+      "Market": "EUROSTOXX50",
+      "Model": "CfC",
+      "Representation": "LOG",
+      "Seed": 52,
+      "Input_dim": 2,
+      "deterministic_forward": true,
+      "original_topology_parameters_and_outputs_identical": true,
+      "parameters": 83074
+    },
+    {
+      "Market": "EUROSTOXX50",
+      "Model": "CfC",
+      "Representation": "LOG",
+      "Seed": 62,
+      "Input_dim": 2,
+      "deterministic_forward": true,
+      "original_topology_parameters_and_outputs_identical": true,
+      "parameters": 83074
+    },
+    {
+      "Market": "KOSPI200",
+      "Model": "LSTM",
+      "Representation": "RAW",
+      "Seed": 42,
+      "Input_dim": 8,
+      "deterministic_forward": true,
+      "original_topology_parameters_and_outputs_identical": true,
+      "parameters": 70914
+    },
+    {
+      "Market": "KOSPI200",
+      "Model": "LSTM",
+      "Representation": "RAW",
+      "Seed": 52,
+      "Input_dim": 8,
+      "deterministic_forward": true,
+      "original_topology_parameters_and_outputs_identical": true,
+      "parameters": 70914
+    },
+    {
+      "Market": "KOSPI200",
+      "Model": "LSTM",
+      "Representation": "RAW",
+      "Seed": 62,
+      "Input_dim": 8,
+      "deterministic_forward": true,
+      "original_topology_parameters_and_outputs_identical": true,
+      "parameters": 70914
+    },
+    {
+      "Market": "KOSPI200",
+      "Model": "LTC",
+      "Representation": "RAW",
+      "Seed": 42,
+      "Input_dim": 8,
+      "deterministic_forward": true,
+      "original_topology_parameters_and_outputs_identical": true,
+      "parameters": 87954
+    },
+    {
+      "Market": "KOSPI200",
+      "Model": "LTC",
+      "Representation": "RAW",
+      "Seed": 52,
+      "Input_dim": 8,
+      "deterministic_forward": true,
+      "original_topology_parameters_and_outputs_identical": true,
+      "parameters": 87954
+    },
+    {
+      "Market": "KOSPI200",
+      "Model": "LTC",
+      "Representation": "RAW",
+      "Seed": 62,
+      "Input_dim": 8,
+      "deterministic_forward": true,
+      "original_topology_parameters_and_outputs_identical": true,
+      "parameters": 87954
+    },
+    {
+      "Market": "KOSPI200",
+      "Model": "CfC",
+      "Representation": "RAW",
+      "Seed": 42,
+      "Input_dim": 8,
+      "deterministic_forward": true,
+      "original_topology_parameters_and_outputs_identical": true,
+      "parameters": 83842
+    },
+    {
+      "Market": "KOSPI200",
+      "Model": "CfC",
+      "Representation": "RAW",
+      "Seed": 52,
+      "Input_dim": 8,
+      "deterministic_forward": true,
+      "original_topology_parameters_and_outputs_identical": true,
+      "parameters": 83842
+    },
+    {
+      "Market": "KOSPI200",
+      "Model": "CfC",
+      "Representation": "RAW",
+      "Seed": 62,
+      "Input_dim": 8,
+      "deterministic_forward": true,
+      "original_topology_parameters_and_outputs_identical": true,
+      "parameters": 83842
+    },
+    {
+      "Market": "KOSPI200",
+      "Model": "CfC",
+      "Representation": "LOG",
+      "Seed": 42,
+      "Input_dim": 2,
+      "deterministic_forward": true,
+      "original_topology_parameters_and_outputs_identical": true,
+      "parameters": 83074
+    },
+    {
+      "Market": "KOSPI200",
+      "Model": "CfC",
+      "Representation": "LOG",
+      "Seed": 52,
+      "Input_dim": 2,
+      "deterministic_forward": true,
+      "original_topology_parameters_and_outputs_identical": true,
+      "parameters": 83074
+    },
+    {
+      "Market": "KOSPI200",
+      "Model": "CfC",
+      "Representation": "LOG",
+      "Seed": 62,
+      "Input_dim": 2,
+      "deterministic_forward": true,
+      "original_topology_parameters_and_outputs_identical": true,
+      "parameters": 83074
+    }
+  ],
+  "optimizer_backward_AUC_fit_traps_active": true
+}

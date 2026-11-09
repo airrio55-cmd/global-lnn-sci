@@ -1,37 +1,20 @@
-# V15 Read-only preflight / integration checkpoint
+# V15 audit checkpoint — 2026-11-09
 
-**Status: NO LOCK; NO FIT; NO V15 PERFORMANCE RESULTS.**
+**DRAFT / NO LOCK / NO FIT / NO AUC.** Complete code is now integrated in this branch; the older statements that runtime sources remain in a ZIP are superseded.
 
-Added `v15_preflight_readonly.py` to compare frozen raw/feature hashes, all 60 V14 market-origin-period scoring-date groups, RAW/LOG 2-feature finite dates, and train label endpoints. Run on a full local checkout (without torch or ncps):
+Executed in the isolated worktree with the existing CPU environment:
 
-```bash
-python artifacts/jof_v15_neural_extension/v15_preflight_readonly.py --repo .
-```
+- All60 V14 market/origin/period scoring-date groups: exact match.
+- All90 annual-validation/two-year-test refit folds: training label endpoints within cutoff; no test-period refit.
+- Both RAW/LOG: finite on every required input window; no LOG-only date expansion.
+- Input hashes match original V14 inventory and frozen Phase1 manifest.
+- Existing Log_Ret and Disparity20 values match their documented price formulas within1e-12 tolerance; source files were not recalculated or modified.
+- All90 fold scalers: train-only window-row union; target-row and future perturbation leaves training tensors/scalers and first evaluated window exactly unchanged.
+- 60 synthetic forward checks: five real feature dimensions ×four branches ×three seeds; logits finite, bitwise deterministic on CPU, and parameter/output identity with original notebook implementations.
+- Six regression tests passed, including malformed/missing predictions, incorrect50/50 ensemble, changed settings, corrupted inventory and blocked fit/AUC entrypoints.
+- Unified audit additionally trapped optimizer construction, backward, sklearn/LightGBM fit and AUC calls: all zero.
+- Price/feature-only200DMA group eligibility remains28/30 units; no AUC or signal-outcome statistics computed.
 
-This preflight does not calculate AUC or fit estimators. Passing means data alignment and time boundary checks passed; it does **not** certify original real-time external feature availability.
+Evidence: audit/preflight_results.json, audit/forward_results.json, audit/execution_boundary.json, audit/regression_tests.log and audit/preparation_manifest.json.
 
-**Historical model identity:** archived KOSPI200 JKSCI manuscript documents two CfC branches, RAW [Log_Ret, Foreign_Net, Nasdaq, SOX, Disparity], LOG [Log_Ret, Disparity], W=20 and 50/50 probability average. V15's intended cross-market LOG [Log_Ret, Disparity20] and RAW frozen COMMON_LOCAL are *new adaptations*. Retain the historical-vs-V15 distinction and never assert byte-identical historical reproduction.
-
-**Execution remains BLOCKED:** full neural runner is still in a downloadable ZIP, not fully committed here; 60-epoch CE settings await review; torch/ncps smoke tests and actual-data preflight are not yet performed; frozen feature/as-of availability must be disclosed. No workflow here trains V15.
-
-**Lock criteria:**
-- Commit and inspect every V15 runtime file and hashes on dedicated branch.
-- Run synthetic tests and above read-only data check; retain stdout and version inventory.
-- Check ncps topology, deterministic settings and CPU availability with random synthetic tensors only.
-- Explicitly approve epoch/loss/three seeds and code, then record immutable lock SHA in separate lock record.
-- Only then enable historical fits using a separate opt-in command.
-
-## Read-only GitHub-content cross-check — 2026-11-09
-
-Source: GitHub frozen market CSVs and frozen Phase1 feature CSVs, read through the repository connector. All five markets were examined using the 201-index minimum, W=20, H=20, feature-finiteness filter, and **two separate annual validation folds** with yearly label endpoints, plus the single two-year test fold.
-
-- SP500: 12/12 market-origin-period groups, V14 scoring dates exact; LOG [Log_Ret, Disparity20] finite on all RAW eligible dates.
-- NASDAQ100: 12/12, same.
-- NIKKEI225: 12/12, same.
-- EUROSTOXX50: 12/12, same.
-- KOSPI200: 12/12, same.
-- **Total 60/60 groups exact; zero LOG-window missingness on V14 RAW dates.**
-
-This was an independent, read-only JavaScript content audit in the connector, **not execution of the Python preflight on a full local checkout**. Input SHA256, installed torch/ncps, GPU determinism, feature publication times, and full locked runner are still pending. No labels used for accuracy/AUC; no training or V15 outcome analysis.
-
-The Python `v15_preflight_readonly.py` was amended to apply annual validation cutoff rules and requires execution in the complete repository before lock.
+This does not certify unknown real historical publication times or vintages. It does not validate60-epoch numerical stability, GPU execution or the complete statistical analysis runtime, which were deliberately not executed. Current versions differ from the original V14 non-neural execution; they must be explicitly reviewed before any future lock. Details and static analysis findings are in AUDIT_REPORT.md. The code-review commit must not be cited as a protocol lock.

@@ -1,0 +1,34 @@
+{
+  "review": "static_only_no_AUC_or_hypothesis_execution",
+  "H1_architectures": [
+    "LSTM",
+    "LTC_RAW",
+    "CfC_RAW"
+  ],
+  "H1_alignment_guard": true,
+  "H1b_H2_Holm_family_size": 3,
+  "H3_planned": 90,
+  "H3_seed_independence_claim": false,
+  "ensemble_H3_separate": true,
+  "per_seed_all5_variant_metrics_planned": true,
+  "V14_both_models_validation_test_delta_comparison": true,
+  "rotation_eligibility_by_market": {
+    "SP500": 5,
+    "NASDAQ100": 5,
+    "NIKKEI225": 6,
+    "EUROSTOXX50": 6,
+    "KOSPI200": 6
+  },
+  "actual_rotation_product_from_signal_counts": 5400,
+  "signal_eligible_H1_units": 28,
+  "excluded_signal_units": [
+    [
+      "SP500",
+      "O1"
+    ],
+    [
+      "NASDAQ100",
+      "O1"
+    ]
+  ]
+}
