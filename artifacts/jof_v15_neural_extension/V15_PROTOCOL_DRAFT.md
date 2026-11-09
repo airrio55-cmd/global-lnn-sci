@@ -31,11 +31,11 @@ Per market × origin × seed × base architecture/representation, train three **
 ## 4. Candidate architecture and predictions
 
 - LSTM / LTC(LNN RAW) / CfC: preserve original notebook model definitions and `ncps` version where applicable. Input shape B×20×F; 128 hidden, 0.2 explicit output dropout, two logits, positive-class probability from softmax.
-- LTC LOG: **BLOCKING / UNRESOLVED**. An earlier RAW/LOG ensemble was discussed, but a source implementation or exact LOG representation has NOT been located in inspected default branch. The presence of `Log_Ret` in COMMON_LOCAL does *not* define a separate LOG input. Do not invent or silently choose LOG transformation.
-- LNN ensemble by matched seed: `P_LNN_Ens,s = 0.5*P_LTC_RAW,s + 0.5*P_LTC_LOG,s`, and then ensemble probabilities across 3 seeds. Models must score exactly the same dates with the same labels. The ensemble is an input-representation variant of LTC, not a fourth independent architecture.
+- CfC LOG: **BLOCKING / UNRESOLVED**. An earlier RAW/LOG ensemble was discussed, but a source implementation or exact LOG representation has NOT been located in inspected default branch. The presence of `Log_Ret` in COMMON_LOCAL does *not* define a separate LOG input. Do not invent or silently choose LOG transformation.
+- LNN ensemble by matched seed: `P_LNN_Ens,s = 0.5*P_CfC_RAW,s + 0.5*P_CfC_LOG,s`, and then ensemble probabilities across 3 seeds. Models must score exactly the same dates with the same labels. The ensemble is an input-representation variant of CfC, not a fourth independent architecture.
 - Seeds: `[42,52,62]` fixed; per-seed models train from scratch. Main model predictions are **mean probabilities over seeds**; separate seed-specific diagnostics included. Compare against V14 locked Logistic Regression + LightGBM, with matched market/origin dates.
 
-**H1 main neural estimand:** equal-weight mean ΔAUC across *three architecture families* LSTM, LTC RAW, CfC (using seed probability ensembles). LNN RAW/LOG Ensemble is **secondary descriptive** and NOT added as a fourth model into this H1 mean, because that would double-weight LTC. The V14 main statistic remains its two-model mean. Define neural/non-neural differences on matched market-origin units.
+**H1 main neural estimand:** equal-weight mean ΔAUC across *three architecture families* LSTM, LTC RAW, CfC (using seed probability ensembles). LNN RAW/LOG Ensemble is **secondary descriptive** and NOT added as a fourth model into this H1 mean, because that would double-weight CfC. The V14 main statistic remains its two-model mean. Define neural/non-neural differences on matched market-origin units.
 
 ## 5. Training rule (must lock before run)
 
@@ -52,7 +52,7 @@ V14 signal definitions on previous trading session t−1: Persistence 20 session
 - **H2:** negative correlations for Momentum60 and Persistence signal shifts (two secondary tests).
 - **H3 descriptive:** fraction of neural model × market/origin validation score–Persistence correlations <0. Three architecture families × 30 units => 90 entries if fully defined; never use naive independent-unit binomial p value. LNN Ensemble H3 separately descriptive.
 - Use exactly V14's 10,000 nominal within-market permutation (seed 20261109), market-specific circular shifts (6^5), synchronized circular shifts (6), primary H1 nominal directional label, alignment prerequisite, Holm correction for *three* secondary tests H1b/H2-Momentum/H2-Persistence, and descriptive leave-one-market-out and within-market checks. These are non-exact dependent-data diagnostics; no causal or confirmatory claims.
-- Additional **descriptive** comparisons: per-seed ΔAUC and H1 sign/size (do not treat seeds as independent samples), paired neural vs V14 non-neural `AUC_val`, `AUC_test`, and `ΔAUC`; matched LTC RAW vs LTC RAW/LOG ensemble. No post-hoc inferential family expansion.
+- Additional **descriptive** comparisons: per-seed ΔAUC and H1 sign/size (do not treat seeds as independent samples), paired neural vs V14 non-neural `AUC_val`, `AUC_test`, and `ΔAUC`; matched CfC RAW vs CfC RAW/LOG ensemble. No post-hoc inferential family expansion.
 
 **Eligibility issue:** V14 had only 28/30 evaluable H1 units in reported output due to 200DMA signal-group restrictions. Reproduce each eligibility screen exactly and report any model-specific fit failures. Do not replace missing units or tune them away.
 
@@ -66,7 +66,7 @@ V14 signal definitions on previous trading session t−1: Persistence 20 session
 
 ## 8. Execution count and interpretation
 
-4 underlying trainable networks: LSTM, LTC RAW, CfC, LTC LOG. `5 markets × 6 origins × 3 seeds × 4 networks × 3 refits = 1,080` fits, **if LOG is defined**. Outputs span 4 evaluated model variants × 5 × 6 × 3 = 360 model-unit-seed combinations; independent market-origin clusters are at most 30 and temporally/cross-sectionally dependent. If LOG cannot be sourced, run only a separately relabeled 3-model design after changing/locking protocol; never pretend 1,080 fits took place.
+4 underlying trainable networks: LSTM, LTC RAW, CfC, CfC LOG. `5 markets × 6 origins × 3 seeds × 4 networks × 3 refits = 1,080` fits, **if LOG is defined**. Outputs span 4 evaluated model variants × 5 × 6 × 3 = 360 model-unit-seed combinations; independent market-origin clusters are at most 30 and temporally/cross-sectionally dependent. If LOG cannot be sourced, run only a separately relabeled 3-model design after changing/locking protocol; never pretend 1,080 fits took place.
 
 ## 9. Blocking decisions / signoff
 
@@ -85,3 +85,10 @@ The researcher has clarified: **RAW denotes the original input variables; LOG de
 The runner has been written to permit locked execution with an explicit config and Git SHA/hash inventory. It refuses to train unless config status is `LOCKED`, 60 fixed epochs and 3 seeds are present, Git tracked files are clean, HEAD matches the lock record, and all specified locked hashes match. This is **not a claim that the protocol is locked now**. It remains draft until those conditions are met. If exact historical LOG columns cannot be recovered, any new representation must be honestly labeled a *newly specified LOG-feature variant*, not a reconstruction of an earlier ensemble.
 
 Original V14 non-neural method remains a comparison baseline. V15's fixed 60 epochs is a deliberate deviation from V14-era neural validation early stopping, to prevent evaluation-window outcomes choosing their own checkpoint. Equal epoch counts are not necessarily equal optimization exposure across expanding datasets; disclose this limitation.
+
+## STEP 3 historical-source correction (2026-11-09; pre-lock)
+Prior JKSCI Korean thesis materials (e.g. JKSCI_유성만6.docx and Fig1_final_v2.pptx in the researcher’s file library) explicitly describe the historical KOSPI200 ensemble as **CfC**, RAW 5 features [Log_Ret, Foreign_Net, Nasdaq, SOX, Disparity] and LOG 2 features [Log_Ret, Disparity], using equal-weight probabilities. This differs from the earlier draft’s LTC-based ensemble. The V15 proposal therefore uses **CfC RAW + CfC LOG** while retaining LTC as an independently evaluated model. The five-market frozen COMMON_LOCAL RAW inputs are not the historical KOSPI200 5-feature inputs; the adapted LOG uses existing [Log_Ret, Disparity20] columns in each market (still subject to hash/data audits). **This is a new pre-specified cross-market analogue, not an exact reconstruction of the old KOSPI200 ensemble.**
+
+The V15 RAW-eligible dates define the common train/validation/test observation universe, and the LOG branch must have finite data for every RAW-eligible input window. Additional LOG-only eligible dates are intentionally not added. The two branches have the same target, fold timing, target-endpoint rule and prediction date set. This policy avoids confounding effects from changing evaluation samples.
+
+Training loss for V15 is CE as proposed, but the old KOSPI200 study used FocalLoss(gamma=2,alpha=.25); the distinction must be disclosed. No old ensemble claim is supported for markets other than KOSPI200.
