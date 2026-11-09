@@ -1,0 +1,32 @@
+{
+  "status": "READY_FOR_PUBLICATION_USER_AUTHORIZED",
+  "purpose": "Exact Docker runtime archive transfer; no training or protocol change",
+  "payload_commit": "d866841eeb87c63f42bd10240c7acc06ee7dbe49",
+  "image": "global-lnn-sci-v15-runtime:locked-d866841",
+  "image_id": "sha256:cb7fdf00a342e756668faec689892d6d90c72fd0a3c13b8912ba9021d365de48",
+  "archive_sha256": "9b6d1e17f519c99aa0b42055439f564430b9374e84fd07143e3541b68870dbe6",
+  "parts": [
+    {
+      "file": "runtime.part-01",
+      "bytes": 99999999
+    },
+    {
+      "file": "runtime.part-02",
+      "bytes": 99999999
+    },
+    {
+      "file": "runtime.part-03",
+      "bytes": 99999999
+    },
+    {
+      "file": "runtime.part-04",
+      "bytes": 99999999
+    },
+    {
+      "file": "runtime.part-05",
+      "bytes": 99504925
+    }
+  ],
+  "parts_count": 5,
+  "total_bytes": 499504921
+}

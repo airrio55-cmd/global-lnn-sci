@@ -1,0 +1,23 @@
+{
+  "status": "TRANSFER_IMAGE_VALIDATED_NO_TRAINING",
+  "created_at_utc": "2026-11-09T23:42:13.316026+00:00",
+  "payload_commit": "d866841eeb87c63f42bd10240c7acc06ee7dbe49",
+  "image": "global-lnn-sci-v15-runtime:locked-d866841",
+  "image_id": "sha256:cb7fdf00a342e756668faec689892d6d90c72fd0a3c13b8912ba9021d365de48",
+  "archive": "v15-runtime-locked-d866841.tar.gz",
+  "archive_bytes": 499504921,
+  "archive_sha256": "9b6d1e17f519c99aa0b42055439f564430b9374e84fd07143e3541b68870dbe6",
+  "checks": {
+    "original_locked_environment_hashes": true,
+    "container_locked_environment_hashes": true,
+    "V14_scoring_groups": 60,
+    "annual_folds": 90,
+    "forward_checks": 60,
+    "gzip_integrity": true,
+    "docker_save_load_roundtrip": true
+  },
+  "predictive_training_runs": 0,
+  "AUC_calls": 0,
+  "H1_H3_executions": 0,
+  "original_repository_unchanged": true
+}
