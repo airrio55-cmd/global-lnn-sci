@@ -51,8 +51,11 @@ def audit(repo):
         for vy,ty in ORIGINS:
             label=f'O{vy-2012}'
             for period,s,e in [('Validation',vy,vy+1),('Test',ty,ty+1)]:
-                indices=dates_for(s,e,dates,a)
-                log_indices=set(dates_for(s,e,dates,b))
+                # V14 validation is TWO separate annual folds, each with its own label-end cutoff.
+                indices=(dates_for(vy,vy,dates,a)+dates_for(vy+1,vy+1,dates,a)
+                         if period=='Validation' else dates_for(ty,ty+1,dates,a))
+                log_indices=(set(dates_for(vy,vy,dates,b)+dates_for(vy+1,vy+1,dates,b))
+                             if period=='Validation' else set(dates_for(ty,ty+1,dates,b)))
                 if not set(indices).issubset(log_indices):
                     raise RuntimeError(f'{market}/{label}/{period}: LOG missing on RAW dates')
                 actual=[str(dates[i]) for i in indices]
