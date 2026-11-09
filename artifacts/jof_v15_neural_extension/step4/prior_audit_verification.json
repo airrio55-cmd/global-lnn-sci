@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "step3_commit": "e89dfd790e81477a25e940146f16de7850c18c92",
+  "code_config_hashes_checked": 13,
+  "input_source_hashes_checked": 33,
+  "audit_files_sha256": {
+    "artifacts/jof_v15_neural_extension/audit/audit_only.log": "70dd6be38782f596845ebc7bd7ac8771ae6af91aab1988979a37f804e5344c4d",
+    "artifacts/jof_v15_neural_extension/audit/execution_boundary.json": "acbecf0ab26b5f077e9f11e39f6e34b99b25d491b8fdb74593745b2cbd44262e",
+    "artifacts/jof_v15_neural_extension/audit/forward.log": "031bc55f7d9f9ec60a923cb15eaa8c93069ba3183669035fc4c252bfed4ba681",
+    "artifacts/jof_v15_neural_extension/audit/forward_results.json": "19c1e9c9dc8f9df4e3e34f0b295e5654eca7f25532def60929cfa4f449f59db0",
+    "artifacts/jof_v15_neural_extension/audit/preflight.log": "3a13a7b1edaf6b1cf449ee9b1e5a045b587eed416e7569ae1653c5931f32c5ce",
+    "artifacts/jof_v15_neural_extension/audit/preflight_results.json": "1972f2d41c14091e3dba4eeef044b163faa68aa1e41a6cb71c08bddf0414fb4d",
+    "artifacts/jof_v15_neural_extension/audit/preparation_manifest.json": "f36fe715898ec591bf2916b62d92a77aa6cbe6dccc60358f878035f1b6530806",
+    "artifacts/jof_v15_neural_extension/audit/protected_v14_and_manuscript_sha256.json": "2f310c5bc1e0d31226da8d30be9ce0a518fd5d78ed190072518192028f17edf2",
+    "artifacts/jof_v15_neural_extension/audit/regression_tests.log": "1084730676b2efba31a2153b397034647a9f374dee0e91110f8c447feadf15f1",
+    "artifacts/jof_v15_neural_extension/audit/static_analysis_review.json": "9eb5b7700c6f0a6766b9548891c4131b2a095ebf601468e7bf4f7f363a218a5f"
+  },
+  "protected_V14_manuscripts_verified": true
+}

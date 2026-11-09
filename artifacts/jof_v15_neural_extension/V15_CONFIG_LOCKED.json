@@ -1,0 +1,107 @@
+{
+  "status": "LOCKED",
+  "permission_to_train": false,
+  "epochs": 60,
+  "device": "cpu",
+  "seeds": [
+    42,
+    52,
+    62
+  ],
+  "raw_representation": "frozen per-market COMMON_LOCAL",
+  "log_representation": "new cross-market adaptation of historical CfC LOG 2-feature input",
+  "log_columns": {
+    "SP500": [
+      "Log_Ret",
+      "Disparity20"
+    ],
+    "NASDAQ100": [
+      "Log_Ret",
+      "Disparity20"
+    ],
+    "NIKKEI225": [
+      "Log_Ret",
+      "Disparity20"
+    ],
+    "EUROSTOXX50": [
+      "Log_Ret",
+      "Disparity20"
+    ],
+    "KOSPI200": [
+      "Log_Ret",
+      "Disparity20"
+    ]
+  },
+  "ensemble": "CfC_RAW_0.5 + CfC_LOG_0.5; seed mean after matched-seed pair",
+  "log_representation_provenance": {
+    "classification": "new_prespecified",
+    "source_description": "Earlier JKSCI KOSPI200 manuscript documents CfC LOG [Log_Ret, Disparity], but V15 uses frozen [Log_Ret, Disparity20] across five markets. Historical identity not claimed.",
+    "formula": "Reuse exact existing frozen Log_Ret and Disparity20 column values; transformation provenance of source features must be audited.",
+    "time_alignment_rule": "Only frozen t-20 through t-1 features at forecast t. Score exactly V14 RAW-eligible dates.",
+    "source_file_sha256": {
+      "artifacts/sp500_rerun/market_input.csv": "ac8ae4157cfb7c478d7d8d48a7cb0f3482296e497ba831188f3dd00339f6003c",
+      "artifacts/sp500_rerun/SCI_v1_4_WALKFORWARD_SP500.ipynb": "65bbaf40ebef817e20967a406302f02aaac8b728e2576554e50c43161b1829d7",
+      "artifacts/sp500_rerun/leakage_audit.json": "11350e047888dae04cff1132b20acf500f637fd547d2c7a1c84f4e3036517bd8",
+      "artifacts/nasdaq100/market_input.csv": "ad5139d6895f3274307615d990bbd62dd194f0a949aed6f36243a403b11bf4a3",
+      "artifacts/nasdaq100/SCI_v1_4_WALKFORWARD_NASDAQ100.ipynb": "6431ed1b8a0abdab132c8f412376b0fc4bc98cfc24d45f5a3eb6572babbab487",
+      "artifacts/nasdaq100/leakage_audit.json": "bf320e8f11e81fc31f78245867bf6b00d2cbeda95f633e9367491b7d9be13f2d",
+      "artifacts/nikkei225/market_input.csv": "48713c71038143b96bf57bd01415b206c398949e53697cc828522351df92c67d",
+      "artifacts/nikkei225/SCI_v1_4_WALKFORWARD_NIKKEI225.ipynb": "c08bcccc8b27246e383f86fa55f9eb6b84eea103a9ca93b7ee6d44546cab4f69",
+      "artifacts/nikkei225/leakage_audit.json": "1d0702ce654b7c627de0f8df34dc519592dcc8a5a2eb0009466b6d1bbf9c9e0b",
+      "artifacts/eurostoxx50/market_input.csv": "3e37fc4ec0c51d25170eda20d717cc662e5aed37efa5e3ce8a4d971dc32ec36a",
+      "artifacts/eurostoxx50/SCI_v1_4_WALKFORWARD_EUROSTOXX50.ipynb": "93a7f4dccbefeb8934184cd7259d32e72e2158606816ee42c4413e59a74ee089",
+      "artifacts/eurostoxx50/leakage_audit.json": "edfcdb6381d355b85e9bd0ca4b05be1604a41325c1bbc0c26fd98fdd14615fcf",
+      "artifacts/kospi200/market_input.csv": "5b4ab3d0985784d5353f24adebe48255a9fd088519df8e294950f41b87cfc85c",
+      "artifacts/kospi200/SCI_v1_4_WALKFORWARD_KOSPI200.ipynb": "d759ea278d009d16ba8b1057d89a2e2ab789bd46b21ccc287d68b12a052b895d",
+      "artifacts/kospi200/leakage_audit.json": "c8f78da8f8fc29c992c89c03ad54beae10df4d2ecbe5265036ee1a45a1ef5418",
+      "artifacts/jof_phase1_benchmark_expansion/frozen_features/SP500.csv": "e49af32e4bd9fd894186e037b0b57d5a22dc61d477f3e03822615c6aa4db23ce",
+      "artifacts/jof_phase1_benchmark_expansion/frozen_features/NASDAQ100.csv": "a91841674f20c35e4ace244157c06f9e506b1c1755b242116c794c852b65ed72",
+      "artifacts/jof_phase1_benchmark_expansion/frozen_features/NIKKEI225.csv": "7c8e29bffd6ba2757fc1504ca4dcb703b747c89abc8694a9b388ffef6f52b7e5",
+      "artifacts/jof_phase1_benchmark_expansion/frozen_features/EUROSTOXX50.csv": "6b89943be7072ad49c57926995862b4a222fe29b6ec74601df51282596f3ef7a",
+      "artifacts/jof_phase1_benchmark_expansion/frozen_features/KOSPI200.csv": "018df3db199589431c773c426462350dbdcdda3d0a6285661db48ca8e41bd584",
+      "artifacts/jof_phase1_benchmark_expansion/data_manifest.json": "47223113ddffea6ea1f6a3dd5368c9736977270cadb7100d00aaa0214552f88b",
+      "artifacts/jof_v14_preregistered_replication/run_v14_locked.py": "0b25d6d2db3a4c53730c361d579c90c9e1a18ef7fbbabe9afa80997edad7aab8",
+      "artifacts/jof_v14_preregistered_replication/first_run_20261109/v14_scoring_dates.csv": "1cb9b3697d2f9b3352bc22a3f2b3dd251116a004436b64495ab4c5f51513771f",
+      "artifacts/jof_v14_preregistered_replication/first_run_20261109/v14_unit_level.csv": "dc837415b85c64ec5107c4d7c762b423f10e8cfa06c3402efdaed87b95017aa4",
+      "artifacts/jof_v14_preregistered_replication/first_run_20261109/v14_input_inventory.json": "992f3202f85963339262d51d3e0c063c3e3d7513b74992f02d0a76a6048cbd0a",
+      "artifacts/jof_v15_neural_extension/test_v15_audit.py": "64cfc777f2a725b74d265b905f085da7115f2357120f0c43afd51a150c4b96b2",
+      "artifacts/jof_v15_neural_extension/v15_analysis_draft.py": "e5916ece5d1a3a0f638e30a3179c440bdf79f8e38cfac17bc1ec06be271cc591",
+      "artifacts/jof_v15_neural_extension/v15_audit_only.py": "a89c2f7a50901dd59d54afe1e8637a4520ae73091573570c2c53ee73a5050ed0",
+      "artifacts/jof_v15_neural_extension/v15_common.py": "a954811da07e949a38233e3df064612718cfddf13f19a600c65bfa23e5b46f4a",
+      "artifacts/jof_v15_neural_extension/v15_environment.py": "0af8943e0a5cb6f0422ffe59312315dec469218a6446dbe4abf156d5027e6188",
+      "artifacts/jof_v15_neural_extension/v15_job_manifest.py": "50b1f5473ac5c6f5ff6a06e10f54a152387d7ab152a78495aa79c2b98ddda4f2",
+      "artifacts/jof_v15_neural_extension/v15_locked_runner.py": "5e7b00bc49512a44e144cb379f3aa1485f2f7eef8d61f6a610e65075ab3a7d24",
+      "artifacts/jof_v15_neural_extension/v15_locking.py": "e73673af04e2f3642961390830558b91f71f78ed9229d19e8e79dc9c5762547b",
+      "artifacts/jof_v15_neural_extension/v15_preflight_readonly.py": "515adc8b1ee6ca0fb2339bf24bfc18b37b74dd904f320b456fe50f7cac2682ea",
+      "artifacts/jof_v15_neural_extension/v15_representation_gate.py": "13a553fc46dc3e23a17beca10aede771eeac8d3001ac47793969b861f5f56e19",
+      "artifacts/jof_v15_neural_extension/v15_smoke_no_fit.py": "3f7a5dbb3461038d1d97596c87d14c97663687dd3b1c98475c4aae5dd60c86f5",
+      "artifacts/jof_v15_neural_extension/v15_step4_tests.py": "d9ac59171b93cc34af4dd691d62c87f07803193bbfed82ac32d3c1f88ef6b122"
+    }
+  },
+  "blocking_checks": [],
+  "loss": "CE",
+  "permission_to_analyze": false,
+  "H": 20,
+  "W": 20,
+  "evaluated_variants": [
+    "LSTM",
+    "LTC_RAW",
+    "CfC_RAW",
+    "CfC_LOG",
+    "CfC_ENSEMBLE"
+  ],
+  "H1_families": [
+    "LSTM",
+    "LTC_RAW",
+    "CfC_RAW"
+  ],
+  "protocol_version": "V15.0",
+  "automatic_execution": false,
+  "execution_authorization": "External per-run record plus explicit CLI opt-in, not granted by STEP4",
+  "known_limitations": [
+    "Historical release timestamps/vintages not independently certified",
+    "V14 non-neural versions differ; fixed V15 installed runtime has passed no-fit checks",
+    "60epoch optimization and full AUC/H1-H3 runtime deliberately unexecuted",
+    "CPU-only;no GPU or cross-hardware bitwise guarantee"
+  ]
+}

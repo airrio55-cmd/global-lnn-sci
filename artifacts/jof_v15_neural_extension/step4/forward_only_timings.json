@@ -1,0 +1,202 @@
+[
+  {
+    "Market": "SP500",
+    "Architecture": "LSTM",
+    "Representation": "RAW",
+    "Input_dim": 13,
+    "Batch": 64,
+    "Window": 20,
+    "median_forward_seconds": 0.0017724609933793545,
+    "parameters": 73474
+  },
+  {
+    "Market": "SP500",
+    "Architecture": "LTC",
+    "Representation": "RAW",
+    "Input_dim": 13,
+    "Batch": 64,
+    "Window": 20,
+    "median_forward_seconds": 0.41834668500814587,
+    "parameters": 91164
+  },
+  {
+    "Market": "SP500",
+    "Architecture": "CfC",
+    "Representation": "RAW",
+    "Input_dim": 13,
+    "Batch": 64,
+    "Window": 20,
+    "median_forward_seconds": 0.010528695012908429,
+    "parameters": 84482
+  },
+  {
+    "Market": "SP500",
+    "Architecture": "CfC",
+    "Representation": "LOG",
+    "Input_dim": 2,
+    "Batch": 64,
+    "Window": 20,
+    "median_forward_seconds": 0.008446629042737186,
+    "parameters": 83074
+  },
+  {
+    "Market": "NASDAQ100",
+    "Architecture": "LSTM",
+    "Representation": "RAW",
+    "Input_dim": 10,
+    "Batch": 64,
+    "Window": 20,
+    "median_forward_seconds": 0.004816900996956974,
+    "parameters": 71938
+  },
+  {
+    "Market": "NASDAQ100",
+    "Architecture": "LTC",
+    "Representation": "RAW",
+    "Input_dim": 10,
+    "Batch": 64,
+    "Window": 20,
+    "median_forward_seconds": 0.2416266390355304,
+    "parameters": 89238
+  },
+  {
+    "Market": "NASDAQ100",
+    "Architecture": "CfC",
+    "Representation": "RAW",
+    "Input_dim": 10,
+    "Batch": 64,
+    "Window": 20,
+    "median_forward_seconds": 0.004220465023536235,
+    "parameters": 84098
+  },
+  {
+    "Market": "NASDAQ100",
+    "Architecture": "CfC",
+    "Representation": "LOG",
+    "Input_dim": 2,
+    "Batch": 64,
+    "Window": 20,
+    "median_forward_seconds": 0.004018103994894773,
+    "parameters": 83074
+  },
+  {
+    "Market": "NIKKEI225",
+    "Architecture": "LSTM",
+    "Representation": "RAW",
+    "Input_dim": 11,
+    "Batch": 64,
+    "Window": 20,
+    "median_forward_seconds": 0.0018491660011932254,
+    "parameters": 72450
+  },
+  {
+    "Market": "NIKKEI225",
+    "Architecture": "LTC",
+    "Representation": "RAW",
+    "Input_dim": 11,
+    "Batch": 64,
+    "Window": 20,
+    "median_forward_seconds": 0.23217797599500045,
+    "parameters": 89880
+  },
+  {
+    "Market": "NIKKEI225",
+    "Architecture": "CfC",
+    "Representation": "RAW",
+    "Input_dim": 11,
+    "Batch": 64,
+    "Window": 20,
+    "median_forward_seconds": 0.004887098970357329,
+    "parameters": 84226
+  },
+  {
+    "Market": "NIKKEI225",
+    "Architecture": "CfC",
+    "Representation": "LOG",
+    "Input_dim": 2,
+    "Batch": 64,
+    "Window": 20,
+    "median_forward_seconds": 0.005115449021104723,
+    "parameters": 83074
+  },
+  {
+    "Market": "EUROSTOXX50",
+    "Architecture": "LSTM",
+    "Representation": "RAW",
+    "Input_dim": 11,
+    "Batch": 64,
+    "Window": 20,
+    "median_forward_seconds": 0.00145344203338027,
+    "parameters": 72450
+  },
+  {
+    "Market": "EUROSTOXX50",
+    "Architecture": "LTC",
+    "Representation": "RAW",
+    "Input_dim": 11,
+    "Batch": 64,
+    "Window": 20,
+    "median_forward_seconds": 0.2513741569709964,
+    "parameters": 89880
+  },
+  {
+    "Market": "EUROSTOXX50",
+    "Architecture": "CfC",
+    "Representation": "RAW",
+    "Input_dim": 11,
+    "Batch": 64,
+    "Window": 20,
+    "median_forward_seconds": 0.004392749979160726,
+    "parameters": 84226
+  },
+  {
+    "Market": "EUROSTOXX50",
+    "Architecture": "CfC",
+    "Representation": "LOG",
+    "Input_dim": 2,
+    "Batch": 64,
+    "Window": 20,
+    "median_forward_seconds": 0.004510355996899307,
+    "parameters": 83074
+  },
+  {
+    "Market": "KOSPI200",
+    "Architecture": "LSTM",
+    "Representation": "RAW",
+    "Input_dim": 8,
+    "Batch": 64,
+    "Window": 20,
+    "median_forward_seconds": 0.0014780809869989753,
+    "parameters": 70914
+  },
+  {
+    "Market": "KOSPI200",
+    "Architecture": "LTC",
+    "Representation": "RAW",
+    "Input_dim": 8,
+    "Batch": 64,
+    "Window": 20,
+    "median_forward_seconds": 0.24322298698825762,
+    "parameters": 87954
+  },
+  {
+    "Market": "KOSPI200",
+    "Architecture": "CfC",
+    "Representation": "RAW",
+    "Input_dim": 8,
+    "Batch": 64,
+    "Window": 20,
+    "median_forward_seconds": 0.004628979950211942,
+    "parameters": 83842
+  },
+  {
+    "Market": "KOSPI200",
+    "Architecture": "CfC",
+    "Representation": "LOG",
+    "Input_dim": 2,
+    "Batch": 64,
+    "Window": 20,
+    "median_forward_seconds": 0.004529940022621304,
+    "parameters": 83074
+  }
+]

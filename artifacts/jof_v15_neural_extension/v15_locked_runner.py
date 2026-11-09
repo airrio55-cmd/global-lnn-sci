@@ -20,41 +20,9 @@ MARKETS=("SP500","NASDAQ100","NIKKEI225","EUROSTOXX50","KOSPI200")
 def sha256(path):
     return hashlib.sha256(Path(path).read_bytes()).hexdigest()
 
-def check_lock(repo, cfgpath, lockpath):
-    """Refuse training without a separately recorded, clean, inventory-verified Git lock."""
-    repo=Path(repo).resolve()
-    cfg=json.loads(Path(cfgpath).read_text())
-    require_training(cfg)
-    validate_representation(cfgpath,repo,require_locked=True)
-    if Path(lockpath).resolve().is_relative_to(repo):
-        raise RuntimeError("Lock record must be external to the clean checkout")
-    lock=json.loads(Path(lockpath).read_text()) if Path(lockpath).exists() else {}
-    if cfg.get("status")!="LOCKED" or cfg.get("permission_to_train") is not True:
-        raise RuntimeError("V15 remains draft: model fitting forbidden")
-    if cfg.get("epochs")!=60 or cfg.get("loss")!="CE" or cfg.get("seeds")!=list(SEEDS):
-        raise RuntimeError("V15 fixed training settings not approved")
-    if cfg.get("ensemble")!="CfC_RAW_0.5 + CfC_LOG_0.5; seed mean after matched-seed pair":
-        raise RuntimeError("CfC ensemble configuration differs")
-    if set(cfg.get("log_columns",{}))!=set(MARKETS) or any(cfg["log_columns"][m]!=list(LOGCOLS) for m in MARKETS):
-        raise RuntimeError("Unapproved LOG inputs")
-    head=subprocess.check_output(["git","-C",str(repo),"rev-parse","HEAD"],text=True).strip()
-    if lock.get("locked_commit")!=head or len(head)!=40:
-        raise RuntimeError("Immutable lock commit missing or mismatched")
-    if subprocess.check_output(["git","-C",str(repo),"status","--porcelain"],text=True).strip():
-        raise RuntimeError("Git checkout not clean")
-    inventory=lock.get("sha256",{})
-    required=["artifacts/jof_v15_neural_extension/v15_locked_runner.py",
-              "artifacts/jof_v15_neural_extension/V15_PROTOCOL_DRAFT.md",
-              "artifacts/jof_v15_neural_extension/V15_CONFIG_DRAFT.json"]
-    required += required_inventory(repo)
-    if not all(k in inventory for k in required):
-        raise RuntimeError("Locked file inventory incomplete")
-    if inventory.get(str(Path(cfgpath).resolve().relative_to(repo)))!=sha256(cfgpath):raise RuntimeError("Config not covered by immutable inventory")
-    for rel,digest in inventory.items():
-        p=(Path(repo)/rel).resolve()
-        if not p.is_relative_to(Path(repo).resolve()) or not p.exists() or sha256(p)!=digest:
-            raise RuntimeError("Locked file hash invalid: "+rel)
-    return cfg,head
+def check_lock(repo,cfgpath,lockpath,*,require_execution=False,require_analysis=False):
+    from v15_locking import check
+    return check(repo,cfgpath,lockpath,require_execution=require_execution,require_analysis=require_analysis)
 
 def v14_module(repo):
     path=Path(repo)/"artifacts/jof_v14_preregistered_replication/run_v14_locked.py"
@@ -105,8 +73,8 @@ def window_tensors(train,eval_rows,frame,cols):
     if not np.isfinite(arr[used]).all():raise ValueError("Nonfinite training scaler input")
     return x(train),x(eval_rows),scaler,used
 
-def fit_predict(name,train,eval_rows,frame,cols,seed,epochs,device,*,cfg=None,artifact_dir=None):
-    require_training(cfg or {})
+def fit_predict(name,train,eval_rows,frame,cols,seed,epochs,device,*,cfg=None,artifact_dir=None,execution_authorized=False):
+    require_training(cfg or {},execution_authorized=execution_authorized)
     if epochs!=60 or device!="cpu" or seed not in SEEDS or artifact_dir is None:raise RuntimeError("Unapproved fit settings or missing artifact directory")
     import torch
     if not train or not eval_rows:raise RuntimeError("Empty V15 train/evaluation fold")
@@ -139,21 +107,37 @@ def fit_predict(name,train,eval_rows,frame,cols,seed,epochs,device,*,cfg=None,ar
         preds=torch.cat([torch.softmax(model(torch.from_numpy(part).to(device)),dim=1)[:,1].cpu()
                       for part in np.array_split(xev,max(1,(len(xev)+255)//256))]).numpy()
     if not np.isfinite(preds).all():raise RuntimeError("Nonfinite predictions")
-    torch.save({"state_dict":model.cpu().state_dict(),"architecture":name,"input_size":len(cols),"seed":seed,"epochs":epochs,"loss":"CE","probabilities":preds},artifact_dir/"checkpoint.pt")
+    torch.save({"state_dict":model.cpu().state_dict(),"architecture":name,"input_size":len(cols),"seed":seed,"epochs":epochs,"loss":"CE","probabilities":torch.from_numpy(preds.copy())},artifact_dir/"checkpoint.pt")
+    replay_checkpoint(artifact_dir/"checkpoint.pt",xev)
     metadata={"columns":list(cols),"scaler_mean":scaler.mean_.tolist(),"scaler_scale":scaler.scale_.tolist(),"scaler_var":scaler.var_.tolist(),"scaler_used_rows":used.tolist(),"train_dates":[r["Date"] for r in train],"evaluation_dates":[r["Date"] for r in eval_rows],"input_tensor_sha256":hashlib.sha256(xtr.tobytes()).hexdigest(),"eval_tensor_sha256":hashlib.sha256(xev.tobytes()).hexdigest(),"started_at_utc":started,"ended_at_utc":datetime.now(timezone.utc).isoformat()}
     (artifact_dir/"fit_metadata.json").write_text(json.dumps(metadata,indent=2)+"\n")
     pd.DataFrame({"Date":[r["Date"] for r in eval_rows],"Y_true":[r["y"] for r in eval_rows],"Probability":preds,"Y_pred":(preds>.5).astype(int)}).to_csv(artifact_dir/"predictions.csv",index=False,float_format="%.17g")
     return preds
+
+def replay_checkpoint(path,xev):
+    """Inference-only reconstruction of trusted local tensor-only checkpoints."""
+    import torch
+    ck=torch.load(path,map_location="cpu",weights_only=True)
+    if ck["architecture"] not in MODELS or xev.ndim!=3 or xev.shape[1:]!=(20,ck["input_size"]):raise ValueError("Checkpoint/input schema mismatch")
+    configure_seed(ck["seed"]);torch.set_num_threads(2)
+    model=build_model(ck["architecture"],ck["input_size"]);model.load_state_dict(ck["state_dict"],strict=True);model.eval()
+    with torch.inference_mode():
+        p=torch.cat([torch.softmax(model(torch.from_numpy(part)),1)[:,1] for part in np.array_split(xev,max(1,(len(xev)+255)//256))]).numpy()
+    expected=ck["probabilities"].numpy()
+    np.testing.assert_allclose(p,expected,atol=1e-7,rtol=0)
+    return p
 
 def preflight_dates(v14,repo):
     from v15_preflight_readonly import audit
     return audit(repo)['groups']
 
 def run(repo,cfg,out,*,cfgpath=None,lockpath=None):
-    require_training(cfg)
     if cfgpath is None or lockpath is None:raise RuntimeError("Separate immutable lock verification required")
-    verified,_=check_lock(repo,cfgpath,lockpath)
+    verified,_=check_lock(repo,cfgpath,lockpath,require_execution=True)
     if cfg!=verified:raise RuntimeError("Config changed after lock check")
+    from v15_job_manifest import build
+    plan=build(repo)
+    if plan!=json.loads((Path(repo)/"artifacts/jof_v15_neural_extension/step4/job_manifest.json").read_text()):raise RuntimeError("Execution plan changed after protocol freeze")
     import torch
     v14=v14_module(repo)
     scorefile=Path(repo)/"artifacts/jof_v14_preregistered_replication/first_run_20261109/v14_scoring_dates.csv"
@@ -185,7 +169,7 @@ def run(repo,cfg,out,*,cfgpath=None,lockpath=None):
                         t0=time.monotonic()
                         stem=f"{market}_{origin}_{start}_{tag}_{seed}"
                         try:
-                            p=fit_predict(name,train,ev,frame,colnames,seed,cfg["epochs"],cfg["device"],cfg=cfg,artifact_dir=out/"fits"/stem)
+                            p=fit_predict(name,train,ev,frame,colnames,seed,cfg["epochs"],cfg["device"],cfg=cfg,artifact_dir=out/"fits"/stem,execution_authorized=True)
                         except Exception as error:
                             (out/"failure.json").write_text(json.dumps({"fit":stem,"error_type":type(error).__name__,"message":str(error),"status":"failed_not_complete"},indent=2)+"\n")
                             raise
@@ -224,7 +208,7 @@ def main():
         print("READ-ONLY PREFLIGHT PASS: "+str(n)+" V14 groups; no model fits")
         return
     if not args.acknowledge_compute:raise SystemExit("Training requires explicit --acknowledge-compute")
-    cfg,head=check_lock(args.repo,args.config,args.lock)
+    cfg,head=check_lock(args.repo,args.config,args.lock,require_execution=True)
     if args.out is None:raise RuntimeError("--out is required for training")
     if args.out.resolve().is_relative_to(args.repo.resolve()):raise RuntimeError("Write future training outputs outside protected checkout")
     if args.out.exists():raise RuntimeError("Refusing to overwrite a previous result directory")

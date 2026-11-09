@@ -31,9 +31,9 @@ def validate_config(cfg):
  if cfg.get('log_representation_provenance',{}).get('classification')!='new_prespecified':raise ValueError('V15 LOG is a new five-market adaptation, not exact historical replication')
  return True
 
-def require_training(cfg):
+def require_training(cfg,execution_authorized=False):
  validate_config(cfg)
- if cfg.get('status')!='LOCKED' or cfg.get('permission_to_train') is not True:raise RuntimeError('DRAFT: fitting is forbidden')
+ if cfg.get('status')!='LOCKED' or execution_authorized is not True:raise RuntimeError('No external execution authorization: fitting is forbidden')
 
 def integrity(raw,features,cols):
  if not raw.index.equals(features.index) or raw.index.has_duplicates or not raw.index.is_monotonic_increasing:raise ValueError('Invalid or mismatched chronological index')

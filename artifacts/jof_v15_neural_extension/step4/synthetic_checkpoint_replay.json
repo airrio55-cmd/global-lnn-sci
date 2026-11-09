@@ -1,0 +1,202 @@
+[
+  {
+    "Market": "SP500",
+    "Architecture": "LSTM",
+    "Representation": "RAW",
+    "random_initialization_only": true,
+    "epochs_trained": 0,
+    "state_dict_bytes": 297835,
+    "max_replay_error": 0.0,
+    "safe_tensor_only_load": true
+  },
+  {
+    "Market": "SP500",
+    "Architecture": "LTC",
+    "Representation": "RAW",
+    "random_initialization_only": true,
+    "epochs_trained": 0,
+    "state_dict_bytes": 372123,
+    "max_replay_error": 0.0,
+    "safe_tensor_only_load": true
+  },
+  {
+    "Market": "SP500",
+    "Architecture": "CfC",
+    "Representation": "RAW",
+    "random_initialization_only": true,
+    "epochs_trained": 0,
+    "state_dict_bytes": 343970,
+    "max_replay_error": 0.0,
+    "safe_tensor_only_load": true
+  },
+  {
+    "Market": "SP500",
+    "Architecture": "CfC",
+    "Representation": "LOG",
+    "random_initialization_only": true,
+    "epochs_trained": 0,
+    "state_dict_bytes": 338338,
+    "max_replay_error": 0.0,
+    "safe_tensor_only_load": true
+  },
+  {
+    "Market": "NASDAQ100",
+    "Architecture": "LSTM",
+    "Representation": "RAW",
+    "random_initialization_only": true,
+    "epochs_trained": 0,
+    "state_dict_bytes": 291691,
+    "max_replay_error": 0.0,
+    "safe_tensor_only_load": true
+  },
+  {
+    "Market": "NASDAQ100",
+    "Architecture": "LTC",
+    "Representation": "RAW",
+    "random_initialization_only": true,
+    "epochs_trained": 0,
+    "state_dict_bytes": 364443,
+    "max_replay_error": 0.0,
+    "safe_tensor_only_load": true
+  },
+  {
+    "Market": "NASDAQ100",
+    "Architecture": "CfC",
+    "Representation": "RAW",
+    "random_initialization_only": true,
+    "epochs_trained": 0,
+    "state_dict_bytes": 342434,
+    "max_replay_error": 0.0,
+    "safe_tensor_only_load": true
+  },
+  {
+    "Market": "NASDAQ100",
+    "Architecture": "CfC",
+    "Representation": "LOG",
+    "random_initialization_only": true,
+    "epochs_trained": 0,
+    "state_dict_bytes": 338338,
+    "max_replay_error": 0.0,
+    "safe_tensor_only_load": true
+  },
+  {
+    "Market": "NIKKEI225",
+    "Architecture": "LSTM",
+    "Representation": "RAW",
+    "random_initialization_only": true,
+    "epochs_trained": 0,
+    "state_dict_bytes": 293739,
+    "max_replay_error": 0.0,
+    "safe_tensor_only_load": true
+  },
+  {
+    "Market": "NIKKEI225",
+    "Architecture": "LTC",
+    "Representation": "RAW",
+    "random_initialization_only": true,
+    "epochs_trained": 0,
+    "state_dict_bytes": 367003,
+    "max_replay_error": 0.0,
+    "safe_tensor_only_load": true
+  },
+  {
+    "Market": "NIKKEI225",
+    "Architecture": "CfC",
+    "Representation": "RAW",
+    "random_initialization_only": true,
+    "epochs_trained": 0,
+    "state_dict_bytes": 342946,
+    "max_replay_error": 0.0,
+    "safe_tensor_only_load": true
+  },
+  {
+    "Market": "NIKKEI225",
+    "Architecture": "CfC",
+    "Representation": "LOG",
+    "random_initialization_only": true,
+    "epochs_trained": 0,
+    "state_dict_bytes": 338338,
+    "max_replay_error": 0.0,
+    "safe_tensor_only_load": true
+  },
+  {
+    "Market": "EUROSTOXX50",
+    "Architecture": "LSTM",
+    "Representation": "RAW",
+    "random_initialization_only": true,
+    "epochs_trained": 0,
+    "state_dict_bytes": 293739,
+    "max_replay_error": 0.0,
+    "safe_tensor_only_load": true
+  },
+  {
+    "Market": "EUROSTOXX50",
+    "Architecture": "LTC",
+    "Representation": "RAW",
+    "random_initialization_only": true,
+    "epochs_trained": 0,
+    "state_dict_bytes": 367003,
+    "max_replay_error": 0.0,
+    "safe_tensor_only_load": true
+  },
+  {
+    "Market": "EUROSTOXX50",
+    "Architecture": "CfC",
+    "Representation": "RAW",
+    "random_initialization_only": true,
+    "epochs_trained": 0,
+    "state_dict_bytes": 342946,
+    "max_replay_error": 0.0,
+    "safe_tensor_only_load": true
+  },
+  {
+    "Market": "EUROSTOXX50",
+    "Architecture": "CfC",
+    "Representation": "LOG",
+    "random_initialization_only": true,
+    "epochs_trained": 0,
+    "state_dict_bytes": 338338,
+    "max_replay_error": 0.0,
+    "safe_tensor_only_load": true
+  },
+  {
+    "Market": "KOSPI200",
+    "Architecture": "LSTM",
+    "Representation": "RAW",
+    "random_initialization_only": true,
+    "epochs_trained": 0,
+    "state_dict_bytes": 287595,
+    "max_replay_error": 0.0,
+    "safe_tensor_only_load": true
+  },
+  {
+    "Market": "KOSPI200",
+    "Architecture": "LTC",
+    "Representation": "RAW",
+    "random_initialization_only": true,
+    "epochs_trained": 0,
+    "state_dict_bytes": 359323,
+    "max_replay_error": 0.0,
+    "safe_tensor_only_load": true
+  },
+  {
+    "Market": "KOSPI200",
+    "Architecture": "CfC",
+    "Representation": "RAW",
+    "random_initialization_only": true,
+    "epochs_trained": 0,
+    "state_dict_bytes": 341410,
+    "max_replay_error": 0.0,
+    "safe_tensor_only_load": true
+  },
+  {
+    "Market": "KOSPI200",
+    "Architecture": "CfC",
+    "Representation": "LOG",
+    "random_initialization_only": true,
+    "epochs_trained": 0,
+    "state_dict_bytes": 338338,
+    "max_replay_error": 0.0,
+    "safe_tensor_only_load": true
+  }
+]

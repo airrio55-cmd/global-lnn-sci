@@ -1,3 +1,5 @@
+> Historical STEP3 page. STEP4 supersedes its draft-readiness status; see STEP4_REPORT.md and V15_LOCK_RECORD.md for the frozen anchor and authorization limits. Earlier audit/ records remain historical, not claims about changed code.
+
 # V15 integrated code audit — draft only
 
 The complete runner, representation gate, read-only real-data preflight, forward-only tests, structural analysis validator and regression tests are now present in this folder. No separate ZIP is needed. See [AUDIT_REPORT.md](AUDIT_REPORT.md) for changes, test evidence, static H1/H1b/H2/H3 review and remaining risks.

@@ -51,8 +51,7 @@ def validate_predictions(repo,inp):
 
 def analysis(repo,source,out,*,config=None,lock=None):
     if config is None or lock is None:raise RuntimeError("DRAFT: analysis/AUC disabled without separate authorization and immutable lock")
-    cfg,_=check_lock(repo,config,lock)
-    if cfg.get("permission_to_analyze") is not True:raise RuntimeError("AUC/analysis permission not enabled")
+    cfg,_=check_lock(repo,config,lock,require_analysis=True)
     completion=json.loads((Path(source).parent/"completion_manifest.json").read_text())
     if completion.get("fit_count")!=1080 or completion.get("prediction_sha256")!=sha(source):raise ValueError("Predictions not a complete frozen1080fit run")
     if Path(out).resolve().is_relative_to(Path(repo).resolve()):raise ValueError("Write future analysis outside the protected checkout")

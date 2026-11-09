@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "syntax_import": true,
+  "environment_version_code_binary_hashes": true,
+  "V14_scoring_date_groups": 60,
+  "V14_refit_folds": 90,
+  "forward_determinism_checks": 60,
+  "synthetic_untrained_checkpoint_replay_checks": 20,
+  "all_1080_manifest_jobs_unique_and_match_runtime_plan": true,
+  "checkpoint_save_restore_static_review": true,
+  "H1_H1b_H2_H3_static_review_only": true,
+  "model_training_calls": 0,
+  "AUC_calls": 0,
+  "H1_H3_execution_calls": 0,
+  "optimizer_backward_calls": 0,
+  "actual_experiment_checkpoints_created": 0,
+  "temporary_random_checkpoint_fixtures_removed": true
+}

@@ -1,0 +1,26 @@
+{
+  "status": "PASS_READY_TO_FREEZE",
+  "checks": {
+    "STEP3 original audit/code/input hash chain": "PASS",
+    "Syntax/import,all V15 modules": "PASS",
+    "Fixed4branches+derivedensemble,seeds42/52/62,CE60,H=W20": "PASS",
+    "V14 annual validation/test refit plan and scoring dates60groups": "PASS",
+    "Split label endpoints/train-onlyscalers/futureperturbation90folds": "PASS",
+    "Same-seed CPU forward60checks": "PASS",
+    "Untrained temporary checkpoint save/replay20checks": "PASS",
+    "H1/H1b/H2/H3 static scope and gates;no inference executed": "PASS",
+    "Unique1080job manifest:720validation+360test": "PASS",
+    "Environment versions+code/binary attestation": "PASS",
+    "Six regression tests,including draft no-fit/AUC guards": "PASS",
+    "V14/manuscripts/main preservation": "PASS"
+  },
+  "critical_unresolved_issues": [],
+  "execution_authorized": false,
+  "analysis_authorized": false,
+  "training_runs": 0,
+  "AUC_calls": 0,
+  "H1_H3_executions": 0,
+  "checkpoint_fixtures": "untrained temporary fixtures removed",
+  "version": "V15.0",
+  "preserved_remote_main_sha": "3324ead54266b07df176d312b6604289b50523a8"
+}

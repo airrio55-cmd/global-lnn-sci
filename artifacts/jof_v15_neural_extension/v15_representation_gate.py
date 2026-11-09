@@ -12,5 +12,5 @@ def validate_representation(config_path,repo_root,require_locked=False):
  for rel,expected in inventory.items():
   p=(root/rel).resolve()
   if not p.is_relative_to(root) or not p.is_file() or sha(p)!=expected:raise ValueError('Invalid or changed frozen source: '+rel)
- if require_locked and (cfg.get('status')!='LOCKED' or cfg.get('permission_to_train') is not True):raise ValueError('Draft config: full fit forbidden')
+ if require_locked and cfg.get('status')!='LOCKED':raise ValueError('Draft config: full fit forbidden')
  return True

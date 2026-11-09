@@ -65,13 +65,17 @@
       "artifacts/jof_v14_preregistered_replication/first_run_20261109/v14_unit_level.csv": "dc837415b85c64ec5107c4d7c762b423f10e8cfa06c3402efdaed87b95017aa4",
       "artifacts/jof_v14_preregistered_replication/first_run_20261109/v14_input_inventory.json": "992f3202f85963339262d51d3e0c063c3e3d7513b74992f02d0a76a6048cbd0a",
       "artifacts/jof_v15_neural_extension/test_v15_audit.py": "64cfc777f2a725b74d265b905f085da7115f2357120f0c43afd51a150c4b96b2",
-      "artifacts/jof_v15_neural_extension/v15_analysis_draft.py": "179ed77da3e2037b189ab20ad6b8bc36e7c72541eef36162a4d85b9eaa4f29e2",
+      "artifacts/jof_v15_neural_extension/v15_analysis_draft.py": "e5916ece5d1a3a0f638e30a3179c440bdf79f8e38cfac17bc1ec06be271cc591",
       "artifacts/jof_v15_neural_extension/v15_audit_only.py": "a89c2f7a50901dd59d54afe1e8637a4520ae73091573570c2c53ee73a5050ed0",
-      "artifacts/jof_v15_neural_extension/v15_common.py": "d45258f7383563f4a05731a450b2d3c838ddc962069cf1dac326bec76c42c59a",
-      "artifacts/jof_v15_neural_extension/v15_locked_runner.py": "17a487b6232c45838aabfe66b9b278e3ed7891fcf826fe955b5e2705246232a6",
+      "artifacts/jof_v15_neural_extension/v15_common.py": "a954811da07e949a38233e3df064612718cfddf13f19a600c65bfa23e5b46f4a",
+      "artifacts/jof_v15_neural_extension/v15_environment.py": "0af8943e0a5cb6f0422ffe59312315dec469218a6446dbe4abf156d5027e6188",
+      "artifacts/jof_v15_neural_extension/v15_job_manifest.py": "50b1f5473ac5c6f5ff6a06e10f54a152387d7ab152a78495aa79c2b98ddda4f2",
+      "artifacts/jof_v15_neural_extension/v15_locked_runner.py": "5e7b00bc49512a44e144cb379f3aa1485f2f7eef8d61f6a610e65075ab3a7d24",
+      "artifacts/jof_v15_neural_extension/v15_locking.py": "e73673af04e2f3642961390830558b91f71f78ed9229d19e8e79dc9c5762547b",
       "artifacts/jof_v15_neural_extension/v15_preflight_readonly.py": "515adc8b1ee6ca0fb2339bf24bfc18b37b74dd904f320b456fe50f7cac2682ea",
-      "artifacts/jof_v15_neural_extension/v15_representation_gate.py": "84d4a1b993bea844fd064089d6a9365961a0894405709c1e9bed796c10f5f94e",
-      "artifacts/jof_v15_neural_extension/v15_smoke_no_fit.py": "3f7a5dbb3461038d1d97596c87d14c97663687dd3b1c98475c4aae5dd60c86f5"
+      "artifacts/jof_v15_neural_extension/v15_representation_gate.py": "13a553fc46dc3e23a17beca10aede771eeac8d3001ac47793969b861f5f56e19",
+      "artifacts/jof_v15_neural_extension/v15_smoke_no_fit.py": "3f7a5dbb3461038d1d97596c87d14c97663687dd3b1c98475c4aae5dd60c86f5",
+      "artifacts/jof_v15_neural_extension/v15_step4_tests.py": "d9ac59171b93cc34af4dd691d62c87f07803193bbfed82ac32d3c1f88ef6b122"
     }
   },
   "blocking_checks": [

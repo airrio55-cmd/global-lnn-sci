@@ -1,0 +1,34 @@
+{
+  "method": "64sample forward-only median3 after1warmup; all1080 planned train sizes/60epochs/batch64; no backward or training benchmark",
+  "cpu_threads_per_job": 2,
+  "training_forward_equivalent_hours": 28.994804428180213,
+  "estimated_training_hours_range": [
+    86.98441328454064,
+    231.9584354254417
+  ],
+  "multiplier_assumption": "3to8x forward-only time for autograd,backward,optimizer,checkpoint and I/O; uncalibrated and hardware-dependent",
+  "optimizer_steps_planned": 1431360,
+  "state_dict_total_bytes_estimated": 361794060,
+  "per_fit_eval_rows_total": 334968,
+  "checkpoint_and_metadata_disk_reserve_bytes": 3221225472,
+  "recommended_RAM_per_serial_job_GiB": [
+    8,
+    16
+  ],
+  "RAM_basis": {
+    "LTC_dense_float32_intermediate_GiB": 0.46875,
+    "retained_intermediate_multiplier_assumption": [
+      4,
+      12
+    ],
+    "note": "20steps x6 default ODE unfolds; backward retention not measured.8to16GiB is a conservative reservation, not observed training usage"
+  },
+  "observed_peak_audit_RSS_GiB": 0.7473983764648438,
+  "machine": {
+    "cpu_count_visible": 5,
+    "cpu_quota": "400000 100000",
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41"
+  },
+  "no_runtime_guarantee": true,
+  "concurrency_not_benchmarked": true
+}

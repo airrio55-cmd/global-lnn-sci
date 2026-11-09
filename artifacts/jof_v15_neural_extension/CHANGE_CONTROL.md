@@ -1,0 +1,9 @@
+# V15 lock and amendment policy
+
+V15.0 is anchored by the payload SHA in V15_LOCK_RECORD.md/json and its complete SHA256 inventory. The second, record-only commit exists to record the first commit's SHA without self-reference. Verification accepts an ancestry-linked descendant only if all frozen files exactly match the anchor. Branch movement never changes the experiment's reference SHA. Git SHA/content hashes provide immutable identity; repository administrators' ability to delete or move refs is not claimed to be technically disabled.
+
+STEP4 changes before freeze: environment attestation/version pins; complete1080-job plan; safe checkpoint replay verification; separation of protocol freeze from external run permission; ancestry/hash-based lock verification; expanded no-fit tests. All are documented, tested and frozen before any V15 outcome. STEP3 audit evidence remains historical and is bound to its original code snapshot, with an explicit verification chain to STEP4.
+
+Any later numerical/algorithmic, input, config or environment change belongs in a new version directory (e.g.jof_v15_1_neural_extension) with CHANGELOG, reason, old/new hashes, affected tests, new lock SHA/time and separate approval. Never silently update the original lock or old results. Preserve failed/interrupted attempts. Record original vs corrected runs and protocol implications. Result-driven tuning remains forbidden.
+
+Current authorization is freeze/verification only. Future run permission may be provided externally using the exact frozen anchor/inventory and explicit CLI opt-in; this changes authorization only, not code, data, configuration, seeds,scoring or analysis. The repository lock record has both execution_authorized=false and analysis_authorized=false. Do not create a run merely by copying this record.
