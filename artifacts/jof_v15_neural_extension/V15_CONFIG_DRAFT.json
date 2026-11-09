@@ -1,5 +1,6 @@
 {
   "status": "DRAFT",
+  "permission_to_train": false,
   "epochs": 60,
   "device": "cpu",
   "seeds": [
@@ -7,14 +8,43 @@
     52,
     62
   ],
-  "raw_representation": "existing COMMON_LOCAL ordered manifest columns",
-  "log_representation": "log-return-based; exact historical feature mapping unresolved",
+  "raw_representation": "frozen per-market COMMON_LOCAL",
+  "log_representation": "new cross-market adaptation of historical CfC LOG 2-feature input",
   "log_columns": {
-    "SP500": [],
-    "NASDAQ100": [],
-    "NIKKEI225": [],
-    "EUROSTOXX50": [],
-    "KOSPI200": []
+    "SP500": [
+      "Log_Ret",
+      "Disparity20"
+    ],
+    "NASDAQ100": [
+      "Log_Ret",
+      "Disparity20"
+    ],
+    "NIKKEI225": [
+      "Log_Ret",
+      "Disparity20"
+    ],
+    "EUROSTOXX50": [
+      "Log_Ret",
+      "Disparity20"
+    ],
+    "KOSPI200": [
+      "Log_Ret",
+      "Disparity20"
+    ]
   },
-  "permission_to_train": false
+  "ensemble": "CfC_RAW_0.5 + CfC_LOG_0.5; seed mean after matched-seed pair",
+  "log_representation_provenance": {
+    "classification": "new_prespecified",
+    "source_description": "Earlier JKSCI KOSPI200 manuscript documents CfC LOG [Log_Ret, Disparity], but V15 uses frozen [Log_Ret, Disparity20] across five markets. Historical identity not claimed.",
+    "formula": "Reuse exact existing frozen Log_Ret and Disparity20 column values; transformation provenance of source features must be audited.",
+    "time_alignment_rule": "Only frozen t-20 through t-1 features at forecast t. Score exactly V14 RAW-eligible dates.",
+    "source_file_sha256": {}
+  },
+  "blocking_checks": [
+    "Confirm source feature formulas and release-time availability",
+    "Fill and verify source_file_sha256 for all five frozen input files and source code",
+    "Commit full runtime code and test with real repository data",
+    "Approve 60 epochs and loss CE; retain frozen V14 files",
+    "Create immutable lock commit and external lock record"
+  ]
 }
