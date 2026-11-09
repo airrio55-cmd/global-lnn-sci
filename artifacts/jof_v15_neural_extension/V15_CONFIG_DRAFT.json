@@ -1,0 +1,20 @@
+{
+  "status": "DRAFT",
+  "epochs": 60,
+  "device": "cpu",
+  "seeds": [
+    42,
+    52,
+    62
+  ],
+  "raw_representation": "existing COMMON_LOCAL ordered manifest columns",
+  "log_representation": "log-return-based; exact historical feature mapping unresolved",
+  "log_columns": {
+    "SP500": [],
+    "NASDAQ100": [],
+    "NIKKEI225": [],
+    "EUROSTOXX50": [],
+    "KOSPI200": []
+  },
+  "permission_to_train": false
+}
