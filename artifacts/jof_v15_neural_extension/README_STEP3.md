@@ -1,19 +1,18 @@
-# V15 STEP 3 integration status — DRAFT, not locked
+# V15 draft — historical CfC ensemble source recovered
 
-Branch: `v15-neural-extension-step3-draft`
+**Status:** DRAFT, NOT LOCKED, NO V15 TRAINING. The V14 locked scripts, output files, and manuscript are unchanged.
 
-The V15 protocol and blocked configuration are staged here. **No neural experiment has run and no V15 protocol has been locked.** The frozen V14 source, V14 results, and V14.2 manuscript must not be changed.
+Earlier Korean JKSCI manuscript and Figure 1 explicitly define KOSPI200 **CfC** ensemble: RAW [Log_Ret, Foreign_Net, Nasdaq, SOX, Disparity] (5 variables), LOG [Log_Ret, Disparity] (2 variables), score average 0.5/0.5 and W=20. The previous assumption of an LTC ensemble was incorrect.
 
-## Research audit
+V15 proposes an **adapted, new cross-market** CfC ensemble, using the frozen market-specific COMMON_LOCAL columns for RAW and [Log_Ret, Disparity20] for LOG. The latter must not be described as reproducing the original two-feature Disparity series. The original notebook defines Log_Ret = diff(log(Close)) and Disparity20 = Close / rolling_mean_20(Close) - 1. Do not regenerate or refresh frozen input data; verify its hashes instead.
 
-RAW = original frozen COMMON_LOCAL input variables. LOG = log-return-based variables, **not** merely taking a convenient subset of COMMON_LOCAL. The default branch does not contain a verified pre-existing RAW/LOG LNN Ensemble implementation. Frozen features contain `Log_Ret` and, for some markets, `DXY_LogRet1` and `DXY_LogRet5`; their presence does not determine the old LOG branch.
+The V15 architecture comparison is LSTM, LTC RAW, CfC RAW, and the diagnostic CfC RAW/LOG ensemble. Trainable branches: LSTM RAW, LTC RAW, CfC RAW, CfC LOG. Four fits per market/origin/seed/fold, 1,080 fits in the full planned study. V14 held-out comparison and H1-H3 remain fixed in the draft protocol.
 
-## Blocking steps before lock
+**Important:** Complete Python runner sources are in the separately delivered V15 package and are NOT YET entirely present in this GitHub branch. Do not run or lock this branch. Preflight with real market CSVs, ncps runtime tests, and independent review are still pending. CE loss and 60 fixed epochs are proposed V15 settings (the historical KOSPI200 ensemble used a different FocalLoss setting). GitHub branch is not a validated executable release.
 
-1. Verify and record the old LOG feature-generation formula, all input columns per market, date alignment, and input hashes. If irretrievable, label it a newly specified LOG variant, not reproduction.
-2. Copy the tested V15 STEP 3 Python code package into this folder; review all imports and link data manifests.
-3. Run synthetic preflight, then read-only repository preflight matching all 60 V14 market-origin-period scoring-date groups. **Do not fit models** during preflight.
-4. Confirm fixed 60 epochs and environment including torch/ncps versions. Verify CPU reproducibility and original topology.
-5. Commit all source and immutable inputs, create a separate lock record with commit SHA + SHA256 inventory, then and only then allow full execution.
-
-**Present repository scope:** draft protocol, config, this integration status. The full Python package is available separately as a downloadable artifact, not yet committed to this branch. Do not claim this branch is executable or ready for lock.
+Blocking criteria:
+1. Review frozen Disparity20/Log_Ret feature formula provenance, as-of timing and input hashes.
+2. Commit and review complete Python runner/tests, validate matched V14 RAW scoring dates in 60 groups.
+3. Pass torch/ncps deterministic smoke tests without performing the historical experimental fit.
+4. Explicitly approve 60 epochs + CE and lock an immutable commit; write external lock SHA/inventory.
+5. Only after these steps may the full rolling-origin neural experiment begin.
