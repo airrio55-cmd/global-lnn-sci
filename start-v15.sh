@@ -3,12 +3,11 @@ set -euo pipefail
 here=$(cd -- "$(dirname -- "$0")" && pwd)
 repo="$HOME/global-lnn-sci"
 image='global-lnn-sci-v15-runtime:locked-d866841'
-expected_image='sha256:cb7fdf00a342e756668faec689892d6d90c72fd0a3c13b8912ba9021d365de48'
 command -v python3 >/dev/null
 [[ -d "$repo/.git" ]] || { echo 'STOP: frozen experiment repository missing'; exit 1; }
 sudo -v
 sudo service docker start
-[[ $(sudo docker image inspect "$image" --format '{{.Id}}') == "$expected_image" ]] || { echo 'STOP: image ID mismatch'; exit 1; }
+sudo docker image inspect "$image" | python3 "$here/verify-runtime-image.py"
 [[ -z $(sudo docker ps -aq --filter 'label=org.global-lnn-sci.v15=true') ]] || { echo 'STOP: previous V15 container exists. No duplicate execution or automatic resume.'; exit 1; }
 python3 - "$HOME" "$repo" <<'PY'
 import pathlib,sys,json,subprocess,os
@@ -32,7 +31,7 @@ PY
 run_id="v15_0_$(date -u +%Y%m%dT%H%M%SZ)"
 run="$HOME/v15-runs/$run_id"
 mkdir -p "$run/operations"
-cp "$here/run-v15-container.py" "$here/start-v15.sh" "$here/status-v15.sh" "$run/operations/"
+cp "$here/run-v15-container.py" "$here/start-v15.sh" "$here/status-v15.sh" "$here/verify-runtime-image.py" "$run/operations/"
 python3 - "$repo" "$run" "$run_id" <<'PY'
 import json,pathlib,sys,datetime,hashlib
 repo=pathlib.Path(sys.argv[1]);run=pathlib.Path(sys.argv[2]);rid=sys.argv[3]

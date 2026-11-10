@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "classic_config_ID_accepted": true,
+  "original_archive_OCI_manifest_ID_accepted": true,
+  "different_ID_or_layer_or_environment_or_entrypoint_rejected": true,
+  "protocol_or_runtime_binaries_changed": false,
+  "training_started": false
+}
