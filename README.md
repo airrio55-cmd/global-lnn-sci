@@ -34,3 +34,7 @@ Never publish experiment outcomes as complete merely because this runtime loads.
 ## Execution helpers added after company-PC preflight
 
 See OPERATIONS.md for the run authorization,single-launch,progress,integrity and failure policy. `start-v15.sh` launches the unchanged frozen runner; `status-v15.sh` reads actual Docker/process/job state. Operations source is outside the frozen payload and snapshotted per attempt. No model or statistical rule is changed by these helpers.
+
+## V15.1 procedural recovery after the interrupted company-PC run
+
+See v15_1/README.md and v15_1/RECOVERY_PROTOCOL.md. Preparation revalidates the original SHA-verified backup and completed jobs in read-only mounts and creates independent copies in a fresh attempt. It does not train or analyze. This is a versioned dispatch amendment,not a change to the frozen scientific payload. Execute recovery only after company-PC readiness review;keep the original run,container and backup.

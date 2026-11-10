@@ -1,0 +1,18 @@
+{
+  "version": "V15.1-procedural-job-recovery",
+  "base_payload_commit": "d866841eeb87c63f42bd10240c7acc06ee7dbe49",
+  "files_sha256": {
+    "README.md": "1b1fe503b41beb280a355660f1afb62eaa5508a142837d3c64dc661c9a780b79",
+    "RECOVERY_PROTOCOL.md": "23bf364de36bd21581b799dab3da9cf0395f0a2e1c9d87ceaccd097e4f366f84",
+    "base_v15_0_ops.py": "b5d999677d19214e9c1d4d079c2e209b8f470f569e49cbc804ec93c9d89707f5",
+    "controller.py": "8df7d8e2d712a422eb4300259aafe27954d87304dd611f8d21f5346b3027b383",
+    "execute-recovery.sh": "babe76a4715b5f1936dc88233128b08f393936379f785bf86b612be7023c4d12",
+    "prepare-recovery.sh": "532b39bbc70dd5758ab435eb83c131fd9222acd05ab3fa3d8cdb20ca4e86700e",
+    "prepare.py": "a60f18679d263cba873b663e5cfb3ae723daaf2b27de75f34a34a51ae650f526",
+    "test_recovery_no_fit.py": "e4e4d49a493ae0b79b852204480644d81c77ef540900fcee3f93a53da94a6a2e",
+    "worker.py": "4ac5720ee226c563a015c0c7a40a02d17d02c99fa1490076dd7ddbec15ac35d4"
+  },
+  "scientific_protocol_changed": false,
+  "execution_control_changed": true,
+  "preparation_does_not_train": true
+}

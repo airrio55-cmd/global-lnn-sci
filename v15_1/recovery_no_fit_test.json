@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "synthetic_only": true,
+  "backup_and_source_inventory_verified": true,
+  "source_files_unchanged": true,
+  "byte_copies_not_hardlinks": true,
+  "partial_job_excluded_for_full_restart": true,
+  "cache_reuse_no_fitting_no_RNG_consumption": true,
+  "cache_miss_arguments_forwarded_unchanged_to_mock": true,
+  "recorded_complete_checksum_corruption_rejected": true,
+  "real_predictive_fits": 0,
+  "AUC_calls": 0,
+  "backward_calls": 0,
+  "temporary_fixtures_removed": true
+}
