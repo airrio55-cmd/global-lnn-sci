@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "synthetic_completed_artifact_validation": true,
+  "corrupt_probability_rejected": true,
+  "read_only_image_optimizer_constructor_only": true,
+  "training_steps": 0,
+  "backward_calls": 0,
+  "AUC_calls": 0,
+  "temporary_synthetic_fixtures_removed": true
+}

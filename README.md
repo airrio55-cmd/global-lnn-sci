@@ -30,3 +30,7 @@ After validation, load using `sudo docker load -i v15-runtime-locked-d866841.tar
 The runtime contains third-party Python packages and system libraries with their installed license notices. Python's license is retained in its standard library and package license metadata is included. Git binary version2.52.0 is included for local immutable-source verification; corresponding upstream source: https://www.kernel.org/pub/software/scm/git/git-2.52.0.tar.xz . System-library versions and source notices can be obtained from their upstream projects; this is a transport of the audited environment, not a newly claimed software implementation. Dockerfile and build recipe are provided for inspection; rebuilding does not imply identical bytes unless the exact source runtime and system binaries match.
 
 Never publish experiment outcomes as complete merely because this runtime loads. The frozen runner has no skip-completed/resume functionality; interrupted attempts must be preserved and reviewed rather than silently restarted over completed jobs. Keep Windows powered on and prevent sleep/reboot only under company policy before a separately confirmed training launch.
+
+## Execution helpers added after company-PC preflight
+
+See OPERATIONS.md for the run authorization,single-launch,progress,integrity and failure policy. `start-v15.sh` launches the unchanged frozen runner; `status-v15.sh` reads actual Docker/process/job state. Operations source is outside the frozen payload and snapshotted per attempt. No model or statistical rule is changed by these helpers.
