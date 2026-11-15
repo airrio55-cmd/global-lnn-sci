@@ -1,0 +1,11 @@
+{
+  "version": "V15.2-validation-only",
+  "base_payload_commit": "d866841eeb87c63f42bd10240c7acc06ee7dbe49",
+  "original_analysis_sha256": "e5916ece5d1a3a0f638e30a3179c440bdf79f8e38cfac17bc1ec06be271cc591",
+  "patched_analysis_sha256": "fd881b5a09c76ddf529aa0d904aacbe636d32a9308e2c283e25ceebcc3a18370",
+  "statistical_function_AST_unchanged": true,
+  "validation": "Exact equality at original float32 calculation precision",
+  "training_performed": false,
+  "predictions_modified": false,
+  "numerical_tolerance_increased": false
+}

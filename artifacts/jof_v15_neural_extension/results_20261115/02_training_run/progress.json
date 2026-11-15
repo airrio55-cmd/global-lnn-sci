@@ -1,0 +1,19 @@
+{
+  "state": "RECOVERY_ATTEMPT_FAILED_PRESERVE_AND_REPREPARE",
+  "planned": 1080,
+  "completed": 1080,
+  "failed": 0,
+  "running": 0,
+  "pending": 0,
+  "active_job": "KOSPI200_O6_2020_CfC_LOG_62",
+  "first_epoch_observed_at_utc": "2026-11-11T23:07:57.473995+00:00",
+  "wrapper_started_at_utc": "2026-11-11T23:07:09.969859+00:00",
+  "updated_at_utc": "2026-11-13T17:22:48.163537+00:00",
+  "analysis": "NOT_STARTED_OR_FAILED",
+  "resume_supported": true,
+  "resume_mode": "verified_complete_jobs_only;incomplete_job_restarts_epoch1",
+  "recovery_version": "V15.1",
+  "reused_jobs": 345,
+  "new_completed": 735,
+  "locked_commit": "d866841eeb87c63f42bd10240c7acc06ee7dbe49"
+}

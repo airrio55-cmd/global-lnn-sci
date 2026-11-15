@@ -1,0 +1,187 @@
+{
+  "analysis": "V15 neural extension; exploratory historical pre-specification, not prospective",
+  "H1_mean_models": [
+    "LSTM",
+    "LTC_RAW",
+    "CfC_RAW"
+  ],
+  "H3_models": [
+    "LSTM",
+    "LTC_RAW",
+    "CfC_RAW"
+  ],
+  "model_delta_summary": {
+    "LSTM": {
+      "mean": 0.02884787921146959,
+      "median": 0.039210277761931256
+    },
+    "LTC_RAW": {
+      "mean": 0.015708961601837084,
+      "median": 0.03062079317794497
+    },
+    "CfC_RAW": {
+      "mean": 0.040875292252542446,
+      "median": 0.056581115671183346
+    },
+    "CfC_LOG": {
+      "mean": 0.022585345828163163,
+      "median": 0.02775330201532375
+    },
+    "CfC_ENSEMBLE": {
+      "mean": 0.040035069445953385,
+      "median": 0.06176252814792249
+    }
+  },
+  "H1": {
+    "N": 28,
+    "rho": -0.6124794745484401,
+    "nominal_p": 0.00019998000199980003,
+    "circular": {
+      "total": 5400,
+      "tail_fraction": 0.00037037037037037035,
+      "synchronized_n": 6,
+      "synchronized_tail_fraction": 0.16666666666666666
+    },
+    "diagnostics": {
+      "market_fixed_effect_slope": -0.1162916573350475,
+      "leave_one_market_out": {
+        "SP500": -0.58399209486166,
+        "NASDAQ100": -0.632411067193676,
+        "NIKKEI225": -0.6363636363636365,
+        "EUROSTOXX50": -0.6883116883116884,
+        "KOSPI200": -0.5448898927159798
+      },
+      "within_market_rho": {
+        "SP500": -0.7,
+        "NASDAQ100": -0.7,
+        "NIKKEI225": -0.6,
+        "EUROSTOXX50": -0.5428571428571429,
+        "KOSPI200": -1.0
+      },
+      "centered_rank_corr": -0.7103448275862069
+    }
+  },
+  "H1b": {
+    "N": 28,
+    "rho": 0.49972632731253414,
+    "nominal_p": 0.0115988401159884,
+    "circular": {
+      "total": 5400,
+      "tail_fraction": 0.017222222222222222,
+      "synchronized_n": 6,
+      "synchronized_tail_fraction": 0.16666666666666666
+    },
+    "diagnostics": {
+      "market_fixed_effect_slope": 0.34795119764532073,
+      "leave_one_market_out": {
+        "SP500": 0.4723320158102767,
+        "NASDAQ100": 0.6531620553359684,
+        "NIKKEI225": 0.5019762845849802,
+        "EUROSTOXX50": 0.4500282326369283,
+        "KOSPI200": 0.42970073404856013
+      },
+      "within_market_rho": {
+        "SP500": 0.7,
+        "NASDAQ100": -0.3,
+        "NIKKEI225": 0.6,
+        "EUROSTOXX50": 0.7142857142857143,
+        "KOSPI200": 1.0
+      },
+      "centered_rank_corr": 0.613793103448276
+    },
+    "Holm3": 0.0347965203479652
+  },
+  "H2_Momentum60": {
+    "N": 30,
+    "rho": -0.3543937708565072,
+    "nominal_p": 0.0287971202879712,
+    "circular": {
+      "total": 7776,
+      "tail_fraction": 0.034079218106995886,
+      "synchronized_n": 6,
+      "synchronized_tail_fraction": 0.16666666666666666
+    },
+    "diagnostics": {
+      "market_fixed_effect_slope": -0.14981533041855727,
+      "leave_one_market_out": {
+        "SP500": -0.3808695652173913,
+        "NASDAQ100": -0.23217391304347823,
+        "NIKKEI225": -0.40434782608695646,
+        "EUROSTOXX50": -0.3869565217391304,
+        "KOSPI200": -0.36
+      },
+      "within_market_rho": {
+        "SP500": -0.2571428571428572,
+        "NASDAQ100": -0.6571428571428573,
+        "NIKKEI225": -0.08571428571428573,
+        "EUROSTOXX50": -0.3142857142857143,
+        "KOSPI200": -0.48571428571428577
+      },
+      "centered_rank_corr": -0.36
+    },
+    "Holm3": 0.0575942405759424
+  },
+  "H2_Persistence": {
+    "N": 30,
+    "rho": -0.3325917686318131,
+    "nominal_p": 0.0552944705529447,
+    "circular": {
+      "total": 7776,
+      "tail_fraction": 0.08847736625514403,
+      "synchronized_n": 6,
+      "synchronized_tail_fraction": 0.5
+    },
+    "diagnostics": {
+      "market_fixed_effect_slope": -0.16194221760264277,
+      "leave_one_market_out": {
+        "SP500": -0.3695652173913043,
+        "NASDAQ100": -0.2982608695652174,
+        "NIKKEI225": -0.38956521739130434,
+        "EUROSTOXX50": -0.3008695652173913,
+        "KOSPI200": -0.32
+      },
+      "within_market_rho": {
+        "SP500": 0.08571428571428573,
+        "NASDAQ100": -0.6571428571428573,
+        "NIKKEI225": -0.08571428571428573,
+        "EUROSTOXX50": -0.6571428571428573,
+        "KOSPI200": -0.5428571428571429
+      },
+      "centered_rank_corr": -0.37142857142857133
+    },
+    "Holm3": 0.0575942405759424
+  },
+  "H3": {
+    "negative": 85,
+    "evaluable": 90,
+    "planned": 90,
+    "no_independent_unit_p": true
+  },
+  "H1_alignment_prerequisite": {
+    "negative": 26,
+    "planned": 30,
+    "evaluable": 30,
+    "met": true
+  },
+  "H1_label": "not fully evaluable under locked 30-unit design; Nominally supported under a non-exact permutation diagnostic",
+  "H3_CfC_ENSEMBLE": {
+    "negative": 29,
+    "evaluable": 30,
+    "planned": 30,
+    "descriptive_only": true
+  },
+  "seed_H1_direction": {
+    "42": {
+      "rho": -0.5626710454296661,
+      "n": 28
+    },
+    "52": {
+      "rho": -0.5112205801860974,
+      "n": 28
+    },
+    "62": {
+      "rho": -0.5987958401751505,
+      "n": 28
+    }
+  }
+}

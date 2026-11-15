@@ -1,0 +1,13 @@
+{
+  "python": "3.12.14",
+  "platform": "Linux-6.18.58.1-microsoft-standard-WSL2-x86_64-with-glibc2.41",
+  "device": "cpu",
+  "CUBLAS_WORKSPACE_CONFIG": null,
+  "packages": {
+    "torch": "2.14.1+cpu",
+    "ncps": "1.0.1",
+    "numpy": "2.5.4",
+    "pandas": "3.0.6",
+    "scikit-learn": "1.9.1"
+  }
+}

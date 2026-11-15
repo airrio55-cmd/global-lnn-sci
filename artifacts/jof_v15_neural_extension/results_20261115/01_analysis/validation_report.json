@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "completed_job_artifacts_checked": 1080,
+  "float32_ensemble_exact": true,
+  "one_float32_step_corruption_rejected": true,
+  "predictions_sha256": "71da5806ba5de6d42d62e7c47a553f015bd82426513ea02abd691d610d04c756",
+  "original_predictions_unchanged": true,
+  "training_performed": false,
+  "AUC_performed": false
+}

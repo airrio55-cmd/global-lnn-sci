@@ -1,0 +1,9 @@
+{
+  "status": "READY_FOR_SEPARATE_RECOVERY_EXECUTION",
+  "reused_jobs": 345,
+  "new_fits_required": 735,
+  "new_training_started": false,
+  "analysis_executed": false,
+  "recovery_plan_sha256": "452dd93c386bc493631a31109767994de8510b2fc75b32bd3e8e30e54a0769dc",
+  "code_manifest_sha256": "f726e0cb65a7145cff88107604af8dbaf25a10a368a300ba2b6dc742f77769c6"
+}
