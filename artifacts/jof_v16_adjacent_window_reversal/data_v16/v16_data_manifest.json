@@ -1,0 +1,86 @@
+{
+  "retrieved_utc": "2026-11-15T09:39:39.436268+00:00",
+  "source": "Yahoo Finance via yfinance",
+  "yfinance": "1.8.0",
+  "pandas": "2.2.3",
+  "python": "3.12.16",
+  "start": "1996-01-01",
+  "end_exclusive": "2022-01-31",
+  "field": "Close (auto_adjust=False)",
+  "files": {
+    "FTSE100": {
+      "ticker": "^FTSE",
+      "rows": 6589,
+      "first": "1996-01-02",
+      "last": "2022-01-28",
+      "sha256": "889ebbf86f5358ccb7290787ebb671049d5ecb5bdf3eabf0097cb155e7df4a22"
+    },
+    "DAX": {
+      "ticker": "^GDAXI",
+      "rows": 6606,
+      "first": "1996-01-02",
+      "last": "2022-01-28",
+      "sha256": "268556aac8ef85020e689360172620c69b0b4608e75d6be80f210fc39bb28e1e"
+    },
+    "HANGSENG": {
+      "ticker": "^HSI",
+      "rows": 6434,
+      "first": "1996-01-02",
+      "last": "2022-01-28",
+      "sha256": "3ba3948eedf9c16a6756959487cc52da4f9aa2b0e710357a02cfb7dbdf7428b0"
+    },
+    "TSX": {
+      "ticker": "^GSPTSE",
+      "rows": 6555,
+      "first": "1996-01-02",
+      "last": "2022-01-28",
+      "sha256": "d220cf7f29a9e283b346fc7be5ee06952b338d8d8c6ca4837cd556b4b1cc3191"
+    },
+    "ASX200": {
+      "ticker": "^AXJO",
+      "rows": 6591,
+      "first": "1996-01-02",
+      "last": "2022-01-28",
+      "sha256": "071429d048537b5f12565fb1959f8b7b607663e11575e1659c94c97f68d752f4"
+    },
+    "TAIEX": {
+      "ticker": "^TWII",
+      "rows": 6036,
+      "first": "1997-07-02",
+      "last": "2022-01-26",
+      "sha256": "4fc4ca4081c87c6e33d13154e1cc854289ab5047246a0b7b34fb9ad436d5d492"
+    },
+    "SP500": {
+      "ticker": "^GSPC",
+      "rows": 6566,
+      "first": "1996-01-02",
+      "last": "2022-01-28",
+      "sha256": "0b8a849904491994f634f78fde465697f4c26518aaadbd83f3b290daf0e8499f"
+    },
+    "NASDAQ100": {
+      "ticker": "^NDX",
+      "rows": 6566,
+      "first": "1996-01-02",
+      "last": "2022-01-28",
+      "sha256": "cded6603e2ac78c2df3c8af0735a46d25bbd85592f94fa85597db21c96948a40"
+    },
+    "NIKKEI225": {
+      "ticker": "^N225",
+      "rows": 6394,
+      "first": "1996-01-04",
+      "last": "2022-01-28",
+      "sha256": "4f22a345e63e108f26602d06050e3847e391dca9e791988b2c83a7d297bd0db7"
+    },
+    "EUROSTOXX50": {
+      "ticker": "^STOXX50E",
+      "rows": 3717,
+      "first": "2007-03-30",
+      "last": "2022-01-28",
+      "sha256": "6a3648c11e6df2f909d6d14cb43acebb94f9b28090e99ee429a8448ab8aa9834"
+    },
+    "KOSPI200": {
+      "ticker": "^KS200",
+      "status": "no data returned"
+    }
+  }
+}

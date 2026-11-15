@@ -1,0 +1,6 @@
+$^KS200: possibly delisted; no price data found  (1d 1996-01-01 -> 2022-01-31)
+
+1 Failed download:
+['^KS200']: possibly delisted; no price data found  (1d 1996-01-01 -> 2022-01-31)
+{"FTSE100": 6589, "DAX": 6606, "HANGSENG": 6434, "TSX": 6555, "ASX200": 6591, "TAIEX": 6036, "SP500": 6566, "NASDAQ100": 6566, "NIKKEI225": 6394, "EUROSTOXX50": 3717, "KOSPI200": "no data returned"}
+attempt 2: some tickers returned no data; retrying in 90s
