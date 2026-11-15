@@ -1,0 +1,78 @@
+name: V16 locked adjacent-window reversal run
+on:
+  push:
+    branches: [v16-adjacent-window-reversal]
+    paths:
+      - '.github/workflows/v16-locked-run.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  locked-v16:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      D: artifacts/jof_v16_adjacent_window_reversal
+      LOCK_SHA: 30eac7e55493d28881c2bafaa814af545473f10c
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify locked files are unchanged since the lock commit
+        run: |
+          git diff --exit-code $LOCK_SHA -- $D/V16_ADJACENT_WINDOW_REVERSAL_PROTOCOL.md $D/v16_locked.py $D/v16_fetch_data.py
+          sha256sum $D/V16_ADJACENT_WINDOW_REVERSAL_PROTOCOL.md $D/v16_locked.py $D/v16_fetch_data.py | tee locked_files.sha256
+      - name: Install dependencies
+        run: |
+          python -m pip install numpy==2.2.6 pandas==2.2.3 scipy==1.15.3 yfinance
+          python -m pip freeze > pip_freeze.txt
+          python -m py_compile $D/v16_locked.py $D/v16_fetch_data.py
+      - name: Configure git
+        run: |
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config user.name "github-actions[bot]"
+      - name: Step 2 - freeze data once (no targets, signals or effects)
+        run: |
+          set -euo pipefail
+          mkdir -p $D/run
+          for attempt in 1 2 3; do
+            python $D/v16_fetch_data.py --out $D/data_v16 2>&1 | tee $D/run/fetch_attempt_$attempt.log
+            if ! grep -q '"no data returned"' $D/data_v16/v16_data_manifest.json; then break; fi
+            echo "attempt $attempt: some tickers returned no data; retrying in 90s" | tee -a $D/run/fetch_attempt_$attempt.log
+            sleep 90
+          done
+          cp locked_files.sha256 pip_freeze.txt $D/run/
+          git add $D/data_v16 $D/run
+          git commit -m "V16 step 2: freeze Yahoo index closes once (no effects computed); lock $LOCK_SHA"
+          git push
+      - name: Step 3 - preflight (dates and signal-group counts only)
+        run: |
+          set -euo pipefail
+          python $D/v16_locked.py --data $D/data_v16 --out $D/preflight --preflight 2>&1 | tee $D/run/preflight.log
+          git add $D/preflight $D/run
+          git commit -m "V16 step 3: preflight inventory and block eligibility (no target labels)"
+          git push
+      - name: Step 5 - single locked analysis run
+        run: |
+          set -euo pipefail
+          python $D/v16_locked.py --data $D/data_v16 --out $D/results 2>&1 | tee $D/run/analysis.log
+          git add $D/results $D/run
+          git commit -m "V16 step 5: single locked analysis run, outputs committed unchanged"
+          git push
+      - name: Upload everything
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: v16-locked-run
+          path: |
+            ${{ env.D }}/data_v16/
+            ${{ env.D }}/preflight/
+            ${{ env.D }}/results/
+            ${{ env.D }}/run/
+          if-no-files-found: warn
+          retention-days: 90
