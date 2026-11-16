@@ -1,0 +1,10 @@
+{
+  "stage": "STEP4A2_PUBLIC_PRESERVATION",
+  "existing_file_count": 938,
+  "changed_file_count": 0,
+  "all_unchanged": true,
+  "old_completed_models_preserved": 60,
+  "private_preservation_manifest_sha256": "efcf08ce581a347206e4fa09d183d5a8e87ae89e2e1bc677e8ace2505bdfac30",
+  "baseline_snapshot_sha256": "78be035840da7522cbb2be497e3680094991eb67bf19d5785f4a66d8a6389341",
+  "disclosure": "Private file paths/contents omitted; detailed per-file verification remains local"
+}

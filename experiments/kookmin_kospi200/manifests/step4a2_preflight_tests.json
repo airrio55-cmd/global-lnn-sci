@@ -1,0 +1,54 @@
+{
+  "passed": 12,
+  "failed": 0,
+  "tests": [
+    {
+      "id": "test_01_scope_authorized40",
+      "status": "PASS"
+    },
+    {
+      "id": "test_02_reject_extra_origin_seed_budget_GPU",
+      "status": "PASS"
+    },
+    {
+      "id": "test_03_master_original_flags_sha",
+      "status": "PASS"
+    },
+    {
+      "id": "test_04_old60_outputs_arrays_scalers_history_hashes",
+      "status": "PASS"
+    },
+    {
+      "id": "test_05_identical_learning_kernel_and_source_pins",
+      "status": "PASS"
+    },
+    {
+      "id": "test_06_exact40_unique_grid",
+      "status": "PASS"
+    },
+    {
+      "id": "test_07_boundaries_purge_unknown",
+      "status": "PASS"
+    },
+    {
+      "id": "test_08_arrays_shape_feature_order_train_scaler",
+      "status": "PASS"
+    },
+    {
+      "id": "test_09_per_origin_access_barrier",
+      "status": "PASS"
+    },
+    {
+      "id": "test_10_manual_train_only_and_fixed_offsets",
+      "status": "PASS"
+    },
+    {
+      "id": "test_11_resources_versions_no_model_import",
+      "status": "PASS"
+    },
+    {
+      "id": "test_12_prefix_and_exact_horizon_dates",
+      "status": "PASS"
+    }
+  ]
+}

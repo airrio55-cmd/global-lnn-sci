@@ -1,0 +1,58 @@
+{
+  "source_status": "BOTH_UNVERIFIED",
+  "price_selected": false,
+  "rows": [
+    {
+      "origin": "O4",
+      "partition": "train",
+      "shape": [
+        3129,
+        20,
+        2
+      ],
+      "float32_elements_different": 124980,
+      "windows_with_any_difference": 3129,
+      "maximum_absolute_scaled_feature_difference": 0.5528469383716583,
+      "label_differences": 0
+    },
+    {
+      "origin": "O4",
+      "partition": "validation",
+      "shape": [
+        225,
+        20,
+        2
+      ],
+      "float32_elements_different": 8980,
+      "windows_with_any_difference": 225,
+      "maximum_absolute_scaled_feature_difference": 0.0003666877746582031,
+      "label_differences": 0
+    },
+    {
+      "origin": "O5",
+      "partition": "train",
+      "shape": [
+        3374,
+        20,
+        2
+      ],
+      "float32_elements_different": 134840,
+      "windows_with_any_difference": 3374,
+      "maximum_absolute_scaled_feature_difference": 0.5556200072169304,
+      "label_differences": 0
+    },
+    {
+      "origin": "O5",
+      "partition": "validation",
+      "shape": [
+        224,
+        20,
+        2
+      ],
+      "float32_elements_different": 8960,
+      "windows_with_any_difference": 224,
+      "maximum_absolute_scaled_feature_difference": 0.00067901611328125,
+      "label_differences": 0
+    }
+  ]
+}

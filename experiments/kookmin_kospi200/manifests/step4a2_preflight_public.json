@@ -1,0 +1,63 @@
+{
+  "stage": "STEP4A2_PUBLIC_PREFLIGHT",
+  "status": "PASS",
+  "gates": [
+    {
+      "id": "master_config_and_source_freeze",
+      "status": "PASS"
+    },
+    {
+      "id": "old60_completed_hashes",
+      "status": "PASS"
+    },
+    {
+      "id": "O4_O5_master_arrays_exact",
+      "status": "PASS"
+    },
+    {
+      "id": "official_session20_horizon",
+      "status": "PASS"
+    },
+    {
+      "id": "O4_O5_boundaries3129_225_3374_224",
+      "status": "PASS"
+    },
+    {
+      "id": "Train20purge_Validation20UNKNOWN",
+      "status": "PASS"
+    },
+    {
+      "id": "Train_only_scaler_commonVolMask",
+      "status": "PASS"
+    },
+    {
+      "id": "feature_order_dtype_finite",
+      "status": "PASS"
+    },
+    {
+      "id": "perOrigin_Test_price_block",
+      "status": "PASS"
+    },
+    {
+      "id": "exact40_job_grid",
+      "status": "PASS"
+    },
+    {
+      "id": "learning_kernel_same_sha",
+      "status": "PASS"
+    },
+    {
+      "id": "environment_and_current_resources",
+      "status": "PASS"
+    }
+  ],
+  "authorized_new_fits": 40,
+  "preserved_prior_completed_fits": 60,
+  "old_artifact_hash_check_count": 282,
+  "master_config_sha256": "f4ea7a18d7812b00b8c581191a110f63a6799a22e066484ec251ee32f7912c5c",
+  "pilot_config_sha256": "b4d6c9e40971847354e4fd6c171cf261cdea0a7a61ae1e1ecff2e3c7b8178458",
+  "private_preflight_sha256": "1df1eeac343467f81f49ded99457a9a1a62c1e35501a2225a77e5f5a61eac718",
+  "data_status": "BOTH_UNVERIFIED",
+  "PIT_status": "BLOCKED",
+  "disclosure": "Private dataset paths, scaler values, complete reused records and input contents omitted; full manifest remains local"
+}
