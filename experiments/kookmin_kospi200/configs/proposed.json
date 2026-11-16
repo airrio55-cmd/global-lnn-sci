@@ -73,5 +73,8 @@
     20,
     40,
     60
-  ]
+  ],
+  "superseded_by": "experiment_config.json",
+  "data_period_status": "USER_APPROVED",
+  "use_2026_for_targets": false
 }

@@ -1,0 +1,35 @@
+{
+  "profile": "original_single_seed_reference_only",
+  "training_enabled": false,
+  "hmm_fit_enabled": false,
+  "period": {
+    "start": "2010-01-01",
+    "end": "2025-12-31",
+    "use_2026_for_targets": false
+  },
+  "window": "t-20 through t-1",
+  "include_t": false,
+  "seeds": [
+    42
+  ],
+  "amp": "original automatically on CUDA; reference only",
+  "raw_offsets": [
+    101,
+    201,
+    301,
+    401,
+    501
+  ],
+  "log_offsets": [
+    111,
+    211,
+    311,
+    411,
+    511
+  ],
+  "hybrid_formula": "0.7*LNN_ensemble+0.3*RNN_ensemble",
+  "notebook_target_bug": "shift(-20) comparison casts missing future to 0; prohibited in new pipeline",
+  "execution_status": "REFERENCE_ONLY_BLOCKED",
+  "same_condition_comparison_with_corrected": false,
+  "note": "Cutoff and nullable-target rules mandatory even for future reproduction; cannot claim exact historical reproduction after repairs."
+}

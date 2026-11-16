@@ -1,29 +1,42 @@
-# 수정 전후 검증 계획
+# STEP2 검증 계획과 현재 상태
 
-현재까지: 원본 JSON·소스 정적 비교, 독립 pandas 재현 및 합성 검사7개 PASS. 모델/HMM 미실행. 모델 성능·수렴·GPU 재현성은 미검증이다.
+확정 기간: **2010-01-01~2025-12-31**. 2026 관측은 모든 분석 입력·피처·학습·검증·테스트·HMM·Rolling-Origin·ablation·LTC 및 타깃 확인에 사용 금지. 원본은 보존하며 파생 데이터에서 먼저 날짜 필터를 적용한다. 모델/HMM 학습·GPU·실제 모델 forward·checkpoint 로드 금지. `training_enabled=false` 유지.
 
-| 항목 | 수정 전 증거 | 수정 후 합격 기준 | 시점 |
-|---|---|---|---|
-| 원본 보존 | 8개 입력 SHA-256 | 모든 원본 해시 동일; 보호경로 변경0 | 매 변경 |
-| Target tail | 마지막20개가0으로 잘못 확정 | nullable20개, 평가 제외, 기존 확정 label 동일 | 학습 전 |
-| trading calendar | 20행 shift | 검증된 KRX 세션20개 label_end, 중복·누락·휴장 구분 | 학습 전 |
-| PIT feature | 날짜 join, bfill 위험 | 모든 available_at<=decision_at; NY DST·미/한 휴일·조기폐장 fixtures | 학습 전 |
-| 미래값 불변성 | bfill sentinel이 과거를 바꿈 | cutoff 뒤 원천 값을 극단값/삭제로 바꿔도 과거 피처·예측용 입력 동일 | 학습 전 |
-| fill 정책 | US101개씩 ffill, bfill0 | bfill 금지, feature별 max_age/flow 규칙, 채움 lineage·건수 | 학습 전 |
-| split/purge | 원시경계 다음 구간에 label_end 존재 | train/valid label_end가 해당 다음 cutoff보다 이전; label/window 날짜 key | 학습 전 |
-| scaler | 기존 train-only fit | future sentinel 변경 시 train 통계 동일; train 밖 fit 금지 | 학습 전 |
-| 입력 품질 | NaN0이나 KOSPI0값·SOX Volume0 | 범위/단위/공급처/개정·비유한값 검증; 금지 필드 사용 중단 | 학습 전 |
-| 사양 동등성 | AMP/log offset/Hybrid 차이 | config snapshot, 모델 식·feature order·dtype·seed 동일 | 학습 전 |
-| EarlyStopping | 순서에 따라 재정의 | 단일 정의, 고정 score sequence로 best deepcopy·patience·동점 검증 | 수정 구현 후 |
-| scheduler | 100epoch OneCycle+earlystop | batch step 수 일치, LR trace, AMP skip 처리 규칙 | 승인된 smoke |
-| 모델 smoke | 미실행 | 작은 합성 자료 forward/backward·shape·finite gradient·parameter count | 학습 승인 후 |
-| 재현성 | deterministic 실패 무시 | 같은 env/seed 두 실행 예측 동등 또는 사전 tolerance, 로그 보존 | 학습 승인 후 |
-| test 격리 | train 함수가 Xte 받음 | 학습 함수 test 미수신, test label 변조가 checkpoint 선택에 영향0 | 승인된 smoke |
-| HMM causal | 전체 test predict+test median | 뒤 관측 perturb 시 앞 filtering 상태/확률 불변; train-only state map | HMM 승인 후 |
-| HMM collapse | test median으로 위장 | 실패/collapse 명시, 해당 비교 제외 규칙 고정, fallback 별도명 | HMM 승인 후 |
-| 시드 pooling | 같은 날짜를5/10회 복제 | 복제만으로 시장 날짜 수·유효 표본 증가 금지, date-key paired bootstrap | 통계 구현 후 |
-| 통계 | iid exact 검정·다중비교 | toy null·paired block·Holm 검증, block20/40/60 사전 지정 | 통계 구현 후 |
-| LTC tau | 원본 없음 | 버전 소스 확인, 단위·양수·finite, 고정 conductance toy식과 일치 | 분석 승인 후 |
-| 보고 무결성 | 주석/실제20일 불일치 | fold·seed·사양·제외수·실패수 모두 표기; 결과 선택 보고 금지 | 최종 |
+이번 실행은 표준 unittest와 pandas/numpy/scipy/sklearn 데이터·합성 수학 검사만 포함한다. StandardScaler의 합성 Train fit는 정규화 검증이며 모델/HMM 학습이 아니다. bootstrap은 합성100날짜에서 블록별30회로 계산 동작만 검증했다. 실제 연구 추론 설정은20/40/60·10000회·Holm으로 고정돼 있으며 실자료 검정은 실행하지 않았다. LTC는 손으로 구성한 숫자 snapshot만 계산했고 어떤 모델 forward도 하지 않았다.
 
-순서: 원본 증거 보존 → 정적 수정·데이터 gate → 수정 사양 검토 → 명시적 학습/HMM 승인 → smoke·budget → 전체 고정 실험. 수정 전후의 성능 수치는 현재 생성하지 않는다. 모델 smoke나 HMM causal 검사는 실제 fit를 포함할 수 있으므로 이번 단계에 실행하지 않는다.
+| 검증 | 이번 결과 | 최종 학습 전 합격 기준 |
+|---|---|---|
+| 원본 보존 | PASS: 노트북3·CSV5 SHA-256 동일 | 원본·기존 결과·보호경로 변경0 |
+| cutoff | PASS: 원천별2010이전/2026 제외수 기록 | 모든 downstream 관측·label_end가 기간 안 |
+| 2026 sentinel | PASS: 2026 종가 변경/삭제해도 기간내 자료 동일 | 미국·외국인 포함 전 upstream PIT lineage에도 적용 |
+| nullable tail | PASS: 달력 합성20세션 unknown, 파일 tail20개 후보 unknown | 실제 KRX 달력에서 label_end 확정; unknown→0 금지 |
+| 실제 달력·가격 | BLOCKED: 외국인 대비 KOSPI 부재 날짜45개 | KRX 공식 세션·가격·누락 대조; 행shift 금지 |
+| PIT 구현 | PASS: 미국 DST·주말·조기폐장 합성 schedule | 원천 schedule·실제 공표시각·latency 증빙 |
+| 실제 변수 가용성 | BLOCKED: KOSPI·미국·외국인 증빙 없음 | 18:00 계약 충족·단위/시장/개정·max_age 승인 |
+| 미래 perturbation | PASS: 미래 값 변경/삭제에 과거 선택 동일 | 실제 데이터 가용성 검증 후 같은 검사 |
+| bfill/무제한 ffill | PASS: 코드에 사용 없음; stale/no-prior BLOCKED | 관측 age·출처·available_at·차단 이유 기록 |
+| Rolling-Origin/purge | PASS: 합성15구간과 strict label_end 검사 | 실제15구간 경계·확정표본수는 현재 BLOCKED |
+| window 계약 | PASS: t포함/t제외 구분, 과거 history 재사용 | 원본참조/수정 config 분리·동등비교 금지 |
+| scaler | PASS: Train-only fit·미래값 불변·feature 순서 | 실제 Train feature dates·통계 lineage 저장 |
+| 모델·seed·feature | PASS: 설정 및 선언형3000 job 검사 | 실제 모델 런타임 검증은 STEP3 승인 후 |
+| 앙상블 | PASS: 같은 Origin/Seed/date만 결합, 누락 시 차단 | LTC RAW/LOG .5:.5, Hybrid .7LNN+.3RNN_RAW |
+| HMM causal | PASS: 합성 supplied parameter forward prefix 불변·연속 filtering | 실제 fit 금지; 나중에 Train-only fit lineage 증명 |
+| Train 레짐 | PASS: Train 임계값·명칭, test 요청/collapse 차단 | 실제 train state·수렴 기록; test median 대체 금지 |
+| 시드 비독립성 | PASS: seed복제 시 시장날짜100개 유지 | 날짜단위 paired 비교; 시드 연결 McNemar 주분석 금지 |
+| 통계 | PASS: 블록20/40/60·Holm 합성 계산 | 실자료10000회·고정 family·block감도 전부 보고 |
+| LTC 인터페이스 | PASS: snapshot 식·입력/은닉 의존성·단위 미확정 차단 | 실자료는 버전·소스·단위·checkpoint lineage 확인 후 |
+| provenance/가공파일 | BLOCKED | 가공파일 생성 코드·기간내 재생성 및 source lineage |
+| no-training/no-tuning | PASS: AST 금지 호출·모델 import 없음, 실행 gate false | 실자료 outcome을 보고 config 변경 금지 |
+
+검사 명령(네트워크/모델 불필요):
+
+```bash
+python experiments/kookmin_kospi200/tools/step2_preflight.py
+python experiments/kookmin_kospi200/tests/test_step2.py
+```
+
+`originals/`에 manifest와 동일한 사용자 원본8개가 필요하다. 공개 브랜치에는 원본과 전체 notebook source/diff를 올리지 않는다. `tools/static_audit.py`의 이전 전체기간 재현 runner는 비활성화하고 기존 STEP1 결과는 그대로 보존한다.
+
+KRX 달력 fixture는 **합성 테스트용**으로만 verified이고 실자료 캘린더 인증이 아니다. 실자료 observed dates를 verified=True로 우회하지 않는다. 실제 `rolling_origin_manifest.csv`의 상태는 BLOCKED, 확정 표본 수는 빈칸이다. 날짜필터 후 KOSPI3894행, feature-ready3854행, 유효 label 후보3834개, t포함window 후보3815개는 참고 수치이며 최종 실행 데이터로 사용하지 않는다.
+
+향후 순서: 공식 달력·가격/가용시각 증빙 → 모든 BLOCKED 해소 → manifests 재생성·future perturbation 재검증 → 사양/실행 규모 검토 → 명시적 STEP3 학습 승인 → 모델 smoke/benchmark. 현재 학습을 시작할 수 없다.

@@ -1,0 +1,28 @@
+{
+  "scope": "PIT output per sample and variable, currently blocked; data_lineage.csv is source inventory only",
+  "required": [
+    "sample_date",
+    "decision_at",
+    "variable",
+    "source_date",
+    "observed_at",
+    "available_at",
+    "source",
+    "source_sha256",
+    "record_id",
+    "age",
+    "availability_age",
+    "availability_evidence",
+    "status",
+    "reason"
+  ],
+  "timestamp_policy": "aware UTC internals; source timezone preserved in metadata; no inferred publication times",
+  "source_period": "2010-01-01 through 2025-12-31 only",
+  "selected_input_rule": "available_at<=decision_at AND observation_age<=approved max_age",
+  "source_timezone_requirements": {
+    "Nasdaq": "America/New_York session schedule",
+    "SOX": "America/New_York session schedule",
+    "KOSPI_Close": "Asia/Seoul verified close release",
+    "Foreign_Net": "Asia/Seoul verified release/revision policy"
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "scope": "synthetic/data-only; no neural/HMM fit or model forward",
+  "tests": [
+    {
+      "test": "test_01_original_hashes",
+      "status": "PASS"
+    },
+    {
+      "test": "test_02_cutoff_before_labels_and_2026_perturbation",
+      "status": "PASS"
+    },
+    {
+      "test": "test_03_nullable_tail_and_actual_calendar_endpoint",
+      "status": "PASS"
+    },
+    {
+      "test": "test_04_unverified_calendar_blocks",
+      "status": "PASS"
+    },
+    {
+      "test": "test_05_release_dst_and_different_calendar",
+      "status": "PASS"
+    },
+    {
+      "test": "test_06_future_perturbation",
+      "status": "PASS"
+    },
+    {
+      "test": "test_07_stale_no_prior_and_no_bfill",
+      "status": "PASS"
+    },
+    {
+      "test": "test_08_unknown_availability_and_foreign_block",
+      "status": "PASS"
+    },
+    {
+      "test": "test_09_schedule_handles_dst_early_close",
+      "status": "PASS"
+    },
+    {
+      "test": "test_10_origins_purge_and_tail",
+      "status": "PASS"
+    },
+    {
+      "test": "test_11_window_contract_and_history_reuse",
+      "status": "PASS"
+    },
+    {
+      "test": "test_12_train_only_scaler_future_invariance",
+      "status": "PASS"
+    },
+    {
+      "test": "test_13_configuration_and_ensemble",
+      "status": "PASS"
+    },
+    {
+      "test": "test_14_ablation_common_dates_and_order",
+      "status": "PASS"
+    },
+    {
+      "test": "test_15_hmm_filter_future_invariance_and_continuation",
+      "status": "PASS"
+    },
+    {
+      "test": "test_16_train_regime_reference_and_no_fallback",
+      "status": "PASS"
+    },
+    {
+      "test": "test_17_no_seed_pseudoreplication",
+      "status": "PASS"
+    },
+    {
+      "test": "test_18_bootstrap_blocks_and_holm",
+      "status": "PASS"
+    },
+    {
+      "test": "test_19_tau_synthetic_algebra_only",
+      "status": "PASS"
+    },
+    {
+      "test": "test_20_no_training_imports_or_execution_paths",
+      "status": "PASS"
+    },
+    {
+      "test": "test_21_production_manifests_remain_blocked",
+      "status": "PASS"
+    },
+    {
+      "test": "test_22_period_gates_and_hmm_train_plan",
+      "status": "PASS"
+    },
+    {
+      "test": "test_23_keyed_ensemble_and_declarative_jobs",
+      "status": "PASS"
+    }
+  ],
+  "passed": 23,
+  "failed": 0
+}

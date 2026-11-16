@@ -1,0 +1,261 @@
+{
+  "schema_version": 2,
+  "stage": "STEP2",
+  "training_enabled": false,
+  "hmm_fit_enabled": false,
+  "gpu_enabled": false,
+  "checkpoint_load_enabled": false,
+  "model_forward_enabled": false,
+  "main_merge_allowed": false,
+  "period": {
+    "start": "2010-01-01",
+    "end": "2025-12-31",
+    "use_2026_for_targets": false
+  },
+  "period_status": "USER_APPROVED",
+  "execution_status": "BLOCKED_PENDING_PROVENANCE",
+  "prediction_contract": {
+    "timezone": "Asia/Seoul",
+    "time": "18:00",
+    "include_t": true,
+    "status": "PROPOSED_AVAILABILITY_BLOCKED",
+    "window": "t-19 through t inclusive",
+    "target": "int(Close[t+20_KRX_sessions] > Close[t]); unknown remains nullable"
+  },
+  "model": {
+    "hidden_size": 128,
+    "layers": 1,
+    "dropout": 0.2,
+    "window": 20,
+    "horizon": 20,
+    "batch": 64,
+    "max_epochs": 100,
+    "patience": 10,
+    "selection_metric": "balanced_accuracy",
+    "optimizer": "AdamW",
+    "lr": 0.005,
+    "weight_decay": 0.0001,
+    "scheduler": "OneCycleLR",
+    "focal_gamma": 2,
+    "focal_alpha": 0.25,
+    "gradient_clip": 1.0,
+    "dtype": "float32",
+    "amp": false,
+    "threshold": 0.5
+  },
+  "models": [
+    "RNN",
+    "LSTM",
+    "GRU",
+    "LTC",
+    "CfC"
+  ],
+  "channels": [
+    "RAW",
+    "LOG"
+  ],
+  "features": {
+    "RAW": [
+      "Log_Ret",
+      "Foreign_Net",
+      "Nasdaq",
+      "SOX",
+      "Disparity"
+    ],
+    "LOG": [
+      "Log_Ret",
+      "Disparity"
+    ]
+  },
+  "ablations": {
+    "F0": [
+      "Log_Ret",
+      "Foreign_Net",
+      "Nasdaq",
+      "SOX",
+      "Disparity"
+    ],
+    "F1": [
+      "Log_Ret",
+      "Disparity"
+    ],
+    "F2": [
+      "Log_Ret",
+      "Nasdaq",
+      "SOX",
+      "Disparity"
+    ],
+    "F3": [
+      "Log_Ret",
+      "Foreign_Net",
+      "SOX",
+      "Disparity"
+    ],
+    "F4": [
+      "Log_Ret",
+      "Foreign_Net",
+      "Nasdaq",
+      "Disparity"
+    ],
+    "F5": [
+      "Log_Ret",
+      "Disparity",
+      "Foreign_Net"
+    ]
+  },
+  "seeds": [
+    2,
+    12,
+    22,
+    32,
+    42,
+    52,
+    62,
+    72,
+    82,
+    92
+  ],
+  "seed_offsets": {
+    "RNN_RAW": 101,
+    "RNN_LOG": 102,
+    "LSTM_RAW": 201,
+    "LSTM_LOG": 202,
+    "GRU_RAW": 301,
+    "GRU_LOG": 302,
+    "LTC_RAW": 401,
+    "LTC_LOG": 402,
+    "CfC_RAW": 501,
+    "CfC_LOG": 502
+  },
+  "ensembles": {
+    "LNN Ensemble": "0.5 * same_seed_LTC_RAW + 0.5 * same_seed_LTC_LOG",
+    "Hybrid_SOTA": "0.7 * LNN Ensemble + 0.3 * same_seed_RNN_RAW"
+  },
+  "origins": [
+    {
+      "origin": "O1",
+      "train_start": 2010,
+      "train_end": 2019,
+      "validation_year": 2020,
+      "test_year": 2021
+    },
+    {
+      "origin": "O2",
+      "train_start": 2010,
+      "train_end": 2020,
+      "validation_year": 2021,
+      "test_year": 2022
+    },
+    {
+      "origin": "O3",
+      "train_start": 2010,
+      "train_end": 2021,
+      "validation_year": 2022,
+      "test_year": 2023
+    },
+    {
+      "origin": "O4",
+      "train_start": 2010,
+      "train_end": 2022,
+      "validation_year": 2023,
+      "test_year": 2024
+    },
+    {
+      "origin": "O5",
+      "train_start": 2010,
+      "train_end": 2023,
+      "validation_year": 2024,
+      "test_year": 2025
+    }
+  ],
+  "purge_rule": "train.label_end < validation_start; validation.label_end < test_start",
+  "scaler": "StandardScaler; only fold Train feature rows; provenance recorded",
+  "calendar": {
+    "status": "BLOCKED",
+    "source": null,
+    "sha256": null,
+    "verified": false
+  },
+  "availability": {
+    "KOSPI_Close": {
+      "status": "BLOCKED",
+      "source": null,
+      "availability_evidence": null,
+      "max_age": null
+    },
+    "Foreign_Net": {
+      "status": "BLOCKED",
+      "source": null,
+      "availability_evidence": null,
+      "max_age": null
+    },
+    "Nasdaq": {
+      "status": "BLOCKED",
+      "source": null,
+      "availability_evidence": null,
+      "max_age": null
+    },
+    "SOX": {
+      "status": "BLOCKED",
+      "source": null,
+      "availability_evidence": null,
+      "max_age": null
+    }
+  },
+  "foreign_conservative_proposal": "exclude until unit/market/release evidence; alternatively previous-session value only after verified release + max_age approval; no fabricated timestamp",
+  "hmm": {
+    "fit_enabled": false,
+    "fit_partition": "train",
+    "covariance": "full",
+    "states": 2,
+    "n_iter": 2000,
+    "tol": 0.0001,
+    "min_covar": 0.0001,
+    "initialization_seeds": [
+      2,
+      12,
+      22,
+      32,
+      42,
+      52,
+      62,
+      72,
+      82,
+      92
+    ],
+    "selection": "train_log_likelihood",
+    "decode": "forward_filter",
+    "manual_quantiles": [
+      30,
+      70
+    ],
+    "state_naming": "train_mean_volatility",
+    "test_median_fallback": false
+  },
+  "bootstrap": {
+    "block_lengths": [
+      20,
+      40,
+      60
+    ],
+    "replicates": 10000,
+    "seed": 20261116,
+    "correction": "Holm"
+  },
+  "primary_statistic": "paired date-level seed-mean balanced-accuracy difference; equal-origin weighting",
+  "seed_concatenated_mcnemar_primary": false,
+  "ltc_tau": {
+    "execution_enabled": false,
+    "ncps_reference_commit": "695ec22d7d1831f2ced67346ef7d2f08c525bd47",
+    "runtime_version_status": "BLOCKED",
+    "elapsed_time_unit": null,
+    "definition": "frozen-state conductance tau; not nonlinear Jacobian eigen-timescale"
+  },
+  "guards": {
+    "bfill_allowed": false,
+    "unbounded_ffill_allowed": false,
+    "require_verified_calendar": true,
+    "require_verified_availability": true,
+    "test_based_tuning_allowed": false
+  }
+}
