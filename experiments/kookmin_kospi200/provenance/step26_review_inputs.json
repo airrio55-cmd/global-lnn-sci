@@ -1,0 +1,175 @@
+{
+  "baseline_commit": "ea94ddc242fbd07c8ae0aa4f7a99df020e2824b6",
+  "checked_date_kst": "2026-11-16",
+  "inputs_reviewed_before_edits": [
+    {
+      "path": "manifests/step25_gate_results.json",
+      "sha256": "fcd89bf7f06678a3c80311ae6a304ec71a77f3bb8e70e37bc7cb02e3a60052df"
+    },
+    {
+      "path": "manifests/kospi_official_close_supplement.csv",
+      "sha256": "9ce5eebac51743215f3c8ca8f8bb2437c5425fc532ba7fd57ee49cb90e5f2222"
+    },
+    {
+      "path": "manifests/kospi_missing_dates_audit.csv",
+      "sha256": "9c086c539a9bd5dc18c31adba871d8793a27eb6a1d2719ccad7dcbd7bd0c5a7d"
+    },
+    {
+      "path": "manifests/us_dst_transition_checks.csv",
+      "sha256": "45a278b494e490812dd3acde799bd59f9985785affc63c4696d549238dddced3"
+    },
+    {
+      "path": "manifests/krx_sessions_2010_2025.csv",
+      "sha256": "c426702db216604d70f15973654d204a3e6afdb8cef1ef1f62169bb0a0667d6c"
+    },
+    {
+      "path": "manifests/step2_test_results.json",
+      "sha256": "fbf968f5d766437139d931a10dcd655ba580e441651a2e5a6c64addec679c33d"
+    },
+    {
+      "path": "manifests/step2_preflight_gates.json",
+      "sha256": "c0fd9ab1648ffd119c22a7b6ee6e66ff3c0ca63a5a7bdb59fe6948da1797d301"
+    },
+    {
+      "path": "manifests/us_mapping_summary.json",
+      "sha256": "36cb1e9f145f560299d919e095f87e3b6d33c63bcfb14761920d97dc8bd19437"
+    },
+    {
+      "path": "manifests/krx_calendar_verification.csv",
+      "sha256": "814c72e426b9b40609055c7cc969bab29f2959ba4de1231f8582388a15238919"
+    },
+    {
+      "path": "manifests/data_lineage.csv",
+      "sha256": "29844470a5017b8686ca8f2bab16fbfaa899ffafa6cc283bed22beedbc962d3d"
+    },
+    {
+      "path": "manifests/step25_analysis_summary.json",
+      "sha256": "40732a4cd5998b67590ad6d38f11425f926f987c12bd6d1028506316c67f75d4"
+    },
+    {
+      "path": "manifests/foreign_net_provenance.json",
+      "sha256": "e9c2d72e5913fca5784fdd4b11b6511954fd7fbeac5321d7a2e47a5ee3dcf6de"
+    },
+    {
+      "path": "manifests/data_cutoff_manifest.json",
+      "sha256": "a019365d0d98064c466b65f7742e7adcb0f481d0b4bd8e2fe83726f9e649633b"
+    },
+    {
+      "path": "manifests/us_official_schedule_2021_2025.csv",
+      "sha256": "b163f4de4cbe06cab02493b3b05182f40370b8886e34b3a2303f64a7cae6e404"
+    },
+    {
+      "path": "manifests/us_market_availability_audit.csv",
+      "sha256": "2ca2c9d9b99be68878b9954227cf73cfded4114c2c5d6be464b38e059ea69a1f"
+    },
+    {
+      "path": "manifests/step25_test_results.json",
+      "sha256": "d9a8adc61911893e603bbca14647f30c2a4c38ae38570fbd9355fa6ad2a9bbe8"
+    },
+    {
+      "path": "manifests/us_verified_special_dates.csv",
+      "sha256": "52eefde4b33c1a708482b4fee9c0670b17506493406a9ec35b61e6fc43c26979"
+    },
+    {
+      "path": "manifests/rolling_origin_manifest.csv",
+      "sha256": "8a32a3601052e969f753fb234aa795445d878e1c95935041fd81eb3b2c9fee4c"
+    },
+    {
+      "path": "manifests/step25_label_diagnostics.json",
+      "sha256": "7eebf1aad9a49add16fc6ccb4e375c081a433c461a95045d41268fe86c8feb32"
+    },
+    {
+      "path": "manifests/lineage_schema.json",
+      "sha256": "f108a200577ecc5a7cb68939fd6e360ff9a1b11feeff8b376d547d2baea0a9a0"
+    },
+    {
+      "path": "provenance/step25_source_catalog.json",
+      "sha256": "84b71354023f454602971e8c781092bbb50cee568662337ac6ffec8ad8f6670f"
+    },
+    {
+      "path": "provenance/step25_review_inputs.json",
+      "sha256": "2b8ba6cfc092973b37433c08b9fb37aedc39238e48d5039197cbf73efa080d66"
+    },
+    {
+      "path": "provenance/krx_calendar_provenance.json",
+      "sha256": "fd8965e0b7ae5f7b5b3b845bf83184a1944154cc587750541b3caed508ba09fa"
+    },
+    {
+      "path": "provenance/ltc_version_verification.json",
+      "sha256": "0e348d3567e7a7f125e01ccd13c7cb2cc020e81062b462db353e8ec8213064d2"
+    },
+    {
+      "path": "provenance/kospi_close_provenance.json",
+      "sha256": "e22816c5a9cfbe3289a4242e23735f56b6e4089b8c73c5c06ce9e99b542a2756"
+    },
+    {
+      "path": "provenance/processed_formula_verification.json",
+      "sha256": "7dc2568a3bf1c9dea8dbceb625a02acfea348e9e317b690fba9d255f87f6bc50"
+    },
+    {
+      "path": "reports/STEP2_PREFLIGHT_KO.md",
+      "sha256": "66ea6ae8b513b5a14c439c78ca272cd3ca8065d6658ec502b4a328ff6c20defe"
+    },
+    {
+      "path": "reports/STEP25_READINESS_KO.md",
+      "sha256": "da96f484f2474263a84bc6ad43ef33bb2b6c12d45e2238887a8c5b6e3257a90d"
+    },
+    {
+      "path": "reports/PROTOCOL_KO.md",
+      "sha256": "d52352001d13c7baeb220ab47b3a5d458aaee70c7c0ada629d5056145bf2ebfa"
+    },
+    {
+      "path": "reports/TEST_PLAN_KO.md",
+      "sha256": "5d4d1e24e79be49dc6f5fbad21abb1fe944931b9917ee992b7d77ea53e4f9df6"
+    },
+    {
+      "path": "reports/STEP25_BLOCKERS_KO.md",
+      "sha256": "a28f3296eaa1a20232cf27aacf3616359208a0a1f688c1293ad9717abdfaff9b"
+    },
+    {
+      "path": "reports/AUDIT_KO.md",
+      "sha256": "30b4cc56e2b0e660473dd64aac03aa6d660767c349dc78ec4a214016c3cde293"
+    },
+    {
+      "path": "reports/STEP25_DATA_VERIFICATION_KO.md",
+      "sha256": "408058c868d965578b9ec4d5e7ac398cc1183fd1f228fb1d9245f1e0cc9ac662"
+    },
+    {
+      "path": "reports/STEP2_BLOCKERS_KO.md",
+      "sha256": "ff79f8d9ebf4b64a43745bda451b9ad2b2e64f8ccd5e437dce5233c06132b8e8"
+    },
+    {
+      "path": "reports/STEP2_REPORT_KO.md",
+      "sha256": "45f9da5d723166c75aa3dd8594ad9aebbaf73bea3f89375aad125743bdd87c7f"
+    },
+    {
+      "path": "src/kospi200/tau.py",
+      "sha256": "6f55e6e5fe009faaa1befad3732cb92d7128fda1c1057bbcc44ea78fb63a69f4"
+    },
+    {
+      "path": "src/kospi200/__init__.py",
+      "sha256": "8277e4b5ab4be0263966de5c99dd53400b44ed12748f5b24467ec62d697a2aab"
+    },
+    {
+      "path": "src/kospi200/specs.py",
+      "sha256": "3e50190f44ee644412e32d5ebc8474af301762ab13f676d4c6d6f520a045d9af"
+    },
+    {
+      "path": "src/kospi200/regimes.py",
+      "sha256": "b7889f00264b6ecd6481e9e83cc8c756b3b83f57ed95d88e877abc816251b885"
+    },
+    {
+      "path": "src/kospi200/data.py",
+      "sha256": "8761182107a2e5c3b9830ed6a295258c97574dee502b8bdcde1e202a5df8dc01"
+    },
+    {
+      "path": "src/kospi200/folds.py",
+      "sha256": "94c9d800d7f8056a95664e35839d339c25e7dbc58cc090febeb83945461400ea"
+    },
+    {
+      "path": "src/kospi200/statistics.py",
+      "sha256": "792a14871779c8ace106d6cba5bea93714fa134fae01a3f32046cbb7e23ecda0"
+    }
+  ],
+  "protection": "Historical reports/manifests/results and original files left unchanged"
+}

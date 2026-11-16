@@ -1,0 +1,236 @@
+{
+  "stage": "STEP2.6",
+  "checked_date_kst": "2026-11-16",
+  "period": [
+    "2010-01-01",
+    "2025-12-31"
+  ],
+  "input_files": [
+    {
+      "file": "KOSPI 200 종가.xlsx",
+      "exists": false,
+      "sha256": null,
+      "bytes": null,
+      "status": "BLOCKED_MISSING"
+    },
+    {
+      "file": "KOSPI200_누락45일_종가_보완.csv",
+      "exists": true,
+      "sha256": "86ec5203ab99d931688627c380bce5b81bf416ff204e518772aa54a9ed71d513",
+      "bytes": 870,
+      "status": "PASS_PRESENT"
+    },
+    {
+      "file": "KOSPI200_누락45일_종가_보완.xlsx",
+      "exists": true,
+      "sha256": "db2e6e049e89ef2563a0ada75f043bc65d3fa576e66ac5d5ba00229111af25ef",
+      "bytes": 5547,
+      "status": "PASS_PRESENT"
+    }
+  ],
+  "full_excel_validation": null,
+  "full_excel_common_comparisons_performed": 0,
+  "full_excel_price_conflicts": null,
+  "integrity": {
+    "original": {
+      "raw_rows": 3935,
+      "in_period_rows": 3894,
+      "excluded_before_2010": 0,
+      "excluded_2026_or_later": 41,
+      "source_sorted_ascending": true,
+      "source_sorted_descending": false,
+      "invalid_in_period_prices": 0,
+      "duplicate_dates": 0
+    },
+    "supplement_csv": {
+      "raw_rows": 45,
+      "in_period_rows": 45,
+      "excluded_before_2010": 0,
+      "excluded_2026_or_later": 0,
+      "source_sorted_ascending": true,
+      "source_sorted_descending": false,
+      "invalid_in_period_prices": 0,
+      "duplicate_dates": 0
+    },
+    "supplement_xlsx": {
+      "raw_rows": 45,
+      "in_period_rows": 45,
+      "excluded_before_2010": 0,
+      "excluded_2026_or_later": 0,
+      "source_sorted_ascending": true,
+      "source_sorted_descending": false,
+      "invalid_in_period_prices": 0,
+      "duplicate_dates": 0
+    },
+    "rows": 3939,
+    "supplement_counted_once": true,
+    "official_source_verified": false,
+    "status": "PASS_USER_SUPPLIED_NUMERIC_SESSION_INTEGRITY"
+  },
+  "label_audit": {
+    "comparison_scope": "Cutoff-first original observed-row reference, not exact historical notebook results",
+    "old_known": {
+      "known": 3874,
+      "down_or_equal": 1718,
+      "up": 2156,
+      "up_ratio": 0.5565307176045431
+    },
+    "new_known": {
+      "known": 3919,
+      "down_or_equal": 1737,
+      "up": 2182,
+      "up_ratio": 0.5567746874202603
+    },
+    "legacy_bug_demo_distribution": {
+      "known": 3894,
+      "down_or_equal": 1738,
+      "up": 2156,
+      "up_ratio": 0.5536723163841808
+    },
+    "old_unknown": 20,
+    "new_unknown": 20,
+    "horizon_discrepancies_before": 664,
+    "horizon_discrepancies_after_session_id_repair": 0,
+    "common_known_compared": 3874,
+    "common_Target_changes": 47,
+    "common_down_to_up": 21,
+    "common_up_to_down": 26,
+    "old_unknown_to_new_known_on_common_dates": 0,
+    "last_valid_base": "2025-12-01",
+    "last_label_end": "2025-12-30",
+    "unknown_start": "2025-12-02",
+    "unknown_end": "2025-12-30",
+    "feature_ready": 3899,
+    "feature_ready_known_labels": 3879,
+    "window20_include_t_known_labels": 3860,
+    "feature_formula_policy": "Log_Ret=ln(C/C.shift(1)); Disparity=C/C.rolling(20).mean()-1; Vol_Regime=Log_Ret.rolling(40).std(ddof=1)",
+    "feature_formula_changed": false,
+    "2026_prices_used": 0,
+    "model_metrics_generated": false,
+    "price_source_certification": "NOT_KRX_OFFICIAL_VERIFIED"
+  },
+  "feature_data_effects": {
+    "Log_Ret": {
+      "common_finite_rows": 3893,
+      "exact_value_differences": 42,
+      "differences_over_1e_minus12": 42,
+      "max_absolute_difference": 0.030331762114771357
+    },
+    "Disparity": {
+      "common_finite_rows": 3875,
+      "exact_value_differences": 638,
+      "differences_over_1e_minus12": 638,
+      "max_absolute_difference": 0.010119318460082627
+    },
+    "Vol_Regime": {
+      "common_finite_rows": 3854,
+      "exact_value_differences": 3854,
+      "differences_over_1e_minus12": 1073,
+      "max_absolute_difference": 0.003026915368999957
+    }
+  },
+  "derived_artifacts": [
+    {
+      "file": "data/derived/historical_baseline_label_comparison_private.csv",
+      "sha256": "f70cb4a40c43959cc3734475e149eea4cf01a3032eb9b1075aa39969c6614b83",
+      "bytes": 205842,
+      "publication": "LOCAL_ONLY_LICENSE_SOURCE_UNCONFIRMED"
+    },
+    {
+      "file": "data/derived/kospi200_close_completed_2010_2025.csv",
+      "sha256": "34d93185f9a6a2083af6d1e6530dbbf1b696b36c65c67ae85ea1745de04b7369",
+      "bytes": 612585,
+      "publication": "LOCAL_ONLY_LICENSE_SOURCE_UNCONFIRMED"
+    },
+    {
+      "file": "data/derived/kospi200_local_features_2010_2025.csv",
+      "sha256": "43f43c9d4b908b49d97022595708a1fb4fa4c8af36472b09b61ac263707dc437",
+      "bytes": 299342,
+      "publication": "LOCAL_ONLY_LICENSE_SOURCE_UNCONFIRMED"
+    },
+    {
+      "file": "data/derived/kospi200_targets_20sessions_2010_2025.csv",
+      "sha256": "37eb80f7e181793d7b28d918262c7720545ec2930bdc8f70f4917eff6b147127",
+      "bytes": 903015,
+      "publication": "LOCAL_ONLY_LICENSE_SOURCE_UNCONFIRMED"
+    }
+  ],
+  "source_url": null,
+  "provider": "UNKNOWN",
+  "extraction_date": "UNKNOWN",
+  "revision_policy": "UNKNOWN",
+  "source_sheet_claims": [
+    {
+      "항목": "원본 업로드 파일",
+      "내용": "KOSPI 200 종가.xlsx"
+    },
+    {
+      "항목": "원본 코드",
+      "내용": "I.101 / I31000040F"
+    },
+    {
+      "항목": "원본 데이터 기간",
+      "내용": "2010-01-04 ~ 2025-12-30"
+    },
+    {
+      "항목": "추출된 누락 종가",
+      "내용": "45 / 45"
+    },
+    {
+      "항목": "원본 데이터 행 수",
+      "내용": "3,939"
+    },
+    {
+      "항목": "참고",
+      "내용": "원본 파일 표기: 종가지수(포인트), 일간. 공급처/공표시각은 별도 확인 필요."
+    }
+  ],
+  "gate_checks": [
+    {
+      "id": "FULL_EXCEL_PRESENT",
+      "status": "BLOCKED",
+      "reason": "KOSPI 200 종가.xlsx not found"
+    },
+    {
+      "id": "COMMON_3894_PRICE_COMPARISON",
+      "status": "BLOCKED",
+      "reason": "Full Excel missing; zero comparisons; conflict count unknown"
+    },
+    {
+      "id": "OFFICIAL_PRICE_PROVENANCE",
+      "status": "BLOCKED",
+      "reason": "User-supplied agreement is not official provider/extraction/revision certification"
+    },
+    {
+      "id": "DOMESTIC_CLOSE_18KST_AVAILABILITY",
+      "status": "BLOCKED",
+      "reason": "Original and supplement publication timing unknown"
+    },
+    {
+      "id": "EXTERNAL_5FEATURE_PIT",
+      "status": "BLOCKED",
+      "reason": "Foreign_Net/Nasdaq/SOX availability unverified"
+    },
+    {
+      "id": "ORIGINAL_RUNTIME_CHECKPOINT",
+      "status": "BLOCKED",
+      "reason": "Original ncps/hmmlearn versions, dt unit and checkpoint compatibility remain unresolved"
+    },
+    {
+      "id": "PUBLIC_RAW_DATA_LICENSE",
+      "status": "BLOCKED",
+      "reason": "No raw/derived prices or full daily targets/features published"
+    }
+  ],
+  "B02_restoration_status": "PASS_USER_SUPPLIED_VERIFIED_MATCH",
+  "B02_official_price_status": "BLOCKED",
+  "all_2026_input_target_HMM_ablation_tau_observations_used": 0,
+  "training_enabled": false,
+  "hmm_fit_enabled": false,
+  "GPU_executed": false,
+  "model_forward_executed": false,
+  "checkpoint_loaded": false,
+  "new_model_performance_or_pvalues_generated": false,
+  "STEP3_smoke_ready": false,
+  "future_target_invariance_contract": "Only labels with label_end<=perturbation cutoff must remain unchanged when prices strictly after that cutoff change. Prices inside a target horizon are expected to affect that target."
+}

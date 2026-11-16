@@ -30,3 +30,11 @@
 - 가공9열후보식3854행일치하나생성코드/출처확정아님. 외국인당일입력차단유지.
 - 저장torch2.10.0+cpu확인,원본ncps/hmmlearn버전미상. ncps1.0.1공식배포와고정소스LTC파일동일검증. wrapper implicit=True/cell직접False차이때문에τ인터페이스의모드추정을금지하고explicit bool필수화.설치/모델forward없음.
 - STEP2회귀23+STEP2.5검사11=34PASS/0FAIL.신경망/HMM fit/GPU/checkpoint로드/패키지설치0.새보고3개·manifest·provenance추가,현재gate갱신.원본·과거결과·V14/V15·lock·main불변.
+
+## STEP2.6 / 2026-11-16
+
+- 전체 KOSPI 200 종가.xlsx 부재를 확인했다. 공통3894일 신규 가격 대조0건, 충돌 건수UNKNOWN으로 남겼다. 전체 Excel이 존재한다고 가정하거나 보완 Excel의 출처 시트를 전체 데이터로 대체하지 않았다.
+- 사용자 보완CSV/XLSX의45개 날짜·종가가 일치함을 확인하고 CSV를 한 번만 병합했다. 기존3894개 종가를 그대로 보존한3939행 로컬 파생물을 생성했다. 보완 상태는 USER_SUPPLIED_VERIFIED_MATCH, 공식가격인증은 아니다. OHLC/Volume은 생성하지 않았다.
+- 실제 session_id+20으로3919known/20UNKNOWN. 끝20일은2025-12-02~12-30, 마지막 기준일12-01. 원본 관측행20 horizon과의 날짜차이664건을 새 타깃에서는0건으로 해소했다. 공통known3874개 중47개 Target이 달라졌다. 모델 성능/p값은 생성하지 않았다.
+- 원래 local feature 식을 유지하여 warm-up40일 제외3899행, t포함20window·known label 적격3860개를 계산했다.5개 origin별 domestic supplied-value structural counts와 official/PIT 미확정을 별도로 기록했다.
+- reports/STEP26_*.md4개, 요청 manifest·provenance·테스트·재현코드 추가. raw/derived 가격·전체 Target/피처는 로컬 보존하고 공개 GitHub에는 재배포하지 않는다. .gitignore로 보호한다. 원본8개와 보완2개 해시, 과거 보고/결과, Notebook·V14/V15·lock·main은 보존한다.

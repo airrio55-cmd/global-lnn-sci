@@ -33,3 +33,11 @@
 `reports/STEP25_DATA_VERIFICATION_KO.md`, `STEP25_BLOCKERS_KO.md`, `STEP25_READINESS_KO.md`와 `manifests/step25_gate_results.json`이 최신 판정이다. B01은 공식 KRX3939세션으로PASS, 나머지는PARTIAL/BLOCKED이며 STEP3 smoke는 시작할 수 없다. 원본/과거 보고는 역사적 기록으로 보존한다.
 
 `tests/test_step25.py`는 확보한 evidence와 날짜·시각 규칙만 검사한다. `tools/step25_verify.py <local_source_directory>`는 로컬에 보존한 공식 조회 응답·공식 PDF의 검증 추출 metadata와 사용자원본으로 진단물을 재생성한다. raw자료/PDF/원본CSV/wheel은 공개 브랜치에 게시하지 않았다. source catalog의 URL·파라미터·해시로 출처를 추적한다. STEP2 preflight runner는 최신 manifest를 과거진단으로 덮어쓰지 않도록 차단한다.
+
+## STEP2.6 최신 상태
+
+전체 `KOSPI 200 종가.xlsx`는 작업 환경에 없다. 공통3894일의 신규 Excel 가격 대조·충돌 검사는 BLOCKED다. 보완 CSV/XLSX의45개 값은 서로 일치하므로 중복 합산 없이 기존 종가에 추가했다. 국내 파생물3939행은 USER_SUPPLIED 수준이며 공식 원천·PIT 인증은 아니다.
+
+최신 문서: reports/STEP26_PRICE_RECONCILIATION_KO.md, STEP26_LABEL_AUDIT_KO.md, STEP26_ROLLING_ORIGIN_KO.md, STEP26_BLOCKERS_KO.md. 국내 수치·날짜·label 구조적격과 외부5피처 PIT 적격을 구분한다. 학습은 차단 상태다.
+
+로컬 데이터 생성: `python experiments/kookmin_kospi200/tools/step26_reconcile.py`. 기존23+11검사를 보존하며 신규18검사를 함께 실행: `python experiments/kookmin_kospi200/tools/step26_tests.py`. 현재 공급처/라이선스 미확정이므로 data/user_supplied·data/derived의 가격·전체 일별 Target/피처는 공개 GitHub에 올리지 않는다. 공개 원천의 세션 달력, 날짜/상태 감사, 집계와 해시만 포함한다.

@@ -260,5 +260,15 @@
     "require_verified_calendar": true,
     "require_verified_availability": true,
     "test_based_tuning_allowed": false
+  },
+  "step26": {
+    "execution_status": "BLOCKED_FULL_EXCEL_PROVENANCE_PIT_RUNTIME",
+    "full_excel_status": "BLOCKED_MISSING",
+    "domestic_price_integrity": "PASS_USER_SUPPLIED_NUMERIC_SESSION_INTEGRITY",
+    "domestic_derived_file": "data/derived/kospi200_close_completed_2010_2025.csv",
+    "official_price_certification": false,
+    "full_5feature_PIT_ready": false,
+    "training_enabled": false,
+    "hmm_fit_enabled": false
   }
 }

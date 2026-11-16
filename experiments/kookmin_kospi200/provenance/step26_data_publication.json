@@ -1,0 +1,55 @@
+{
+  "checked_date_kst": "2026-11-16",
+  "inputs": [
+    {
+      "file": "KOSPI 200 종가.xlsx",
+      "exists": false,
+      "sha256": null,
+      "bytes": null,
+      "status": "BLOCKED_MISSING"
+    },
+    {
+      "file": "KOSPI200_누락45일_종가_보완.csv",
+      "exists": true,
+      "sha256": "86ec5203ab99d931688627c380bce5b81bf416ff204e518772aa54a9ed71d513",
+      "bytes": 870,
+      "status": "PASS_PRESENT"
+    },
+    {
+      "file": "KOSPI200_누락45일_종가_보완.xlsx",
+      "exists": true,
+      "sha256": "db2e6e049e89ef2563a0ada75f043bc65d3fa576e66ac5d5ba00229111af25ef",
+      "bytes": 5547,
+      "status": "PASS_PRESENT"
+    }
+  ],
+  "derived_artifacts": [
+    {
+      "file": "data/derived/historical_baseline_label_comparison_private.csv",
+      "sha256": "f70cb4a40c43959cc3734475e149eea4cf01a3032eb9b1075aa39969c6614b83",
+      "bytes": 205842,
+      "publication": "LOCAL_ONLY_LICENSE_SOURCE_UNCONFIRMED"
+    },
+    {
+      "file": "data/derived/kospi200_close_completed_2010_2025.csv",
+      "sha256": "34d93185f9a6a2083af6d1e6530dbbf1b696b36c65c67ae85ea1745de04b7369",
+      "bytes": 612585,
+      "publication": "LOCAL_ONLY_LICENSE_SOURCE_UNCONFIRMED"
+    },
+    {
+      "file": "data/derived/kospi200_local_features_2010_2025.csv",
+      "sha256": "43f43c9d4b908b49d97022595708a1fb4fa4c8af36472b09b61ac263707dc437",
+      "bytes": 299342,
+      "publication": "LOCAL_ONLY_LICENSE_SOURCE_UNCONFIRMED"
+    },
+    {
+      "file": "data/derived/kospi200_targets_20sessions_2010_2025.csv",
+      "sha256": "37eb80f7e181793d7b28d918262c7720545ec2930bdc8f70f4917eff6b147127",
+      "bytes": 903015,
+      "publication": "LOCAL_ONLY_LICENSE_SOURCE_UNCONFIRMED"
+    }
+  ],
+  "raw_price_target_feature_series_publication_allowed": false,
+  "public_audit_policy": "Dates, flags, input/artifact hashes and aggregate counts only; raw prices and daily labels/features remain local",
+  "comparison_policy": "Original prices preserved. Full Excel missing is BLOCKED, not assumed equal or conflict-free."
+}

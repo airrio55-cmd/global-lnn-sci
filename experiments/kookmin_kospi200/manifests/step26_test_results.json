@@ -1,0 +1,256 @@
+{
+  "scope": "Historical 23+11 implementation tests retained; 18 new price/label/feature/data-only tests; no model scoring",
+  "passed": 52,
+  "failed": 0,
+  "blocked_gates": 7,
+  "tests": [
+    {
+      "test": "test_step2.Step2Tests.test_01_original_hashes",
+      "status": "PASS"
+    },
+    {
+      "test": "test_step2.Step2Tests.test_02_cutoff_before_labels_and_2026_perturbation",
+      "status": "PASS"
+    },
+    {
+      "test": "test_step2.Step2Tests.test_03_nullable_tail_and_actual_calendar_endpoint",
+      "status": "PASS"
+    },
+    {
+      "test": "test_step2.Step2Tests.test_04_unverified_calendar_blocks",
+      "status": "PASS"
+    },
+    {
+      "test": "test_step2.Step2Tests.test_05_release_dst_and_different_calendar",
+      "status": "PASS"
+    },
+    {
+      "test": "test_step2.Step2Tests.test_06_future_perturbation",
+      "status": "PASS"
+    },
+    {
+      "test": "test_step2.Step2Tests.test_07_stale_no_prior_and_no_bfill",
+      "status": "PASS"
+    },
+    {
+      "test": "test_step2.Step2Tests.test_08_unknown_availability_and_foreign_block",
+      "status": "PASS"
+    },
+    {
+      "test": "test_step2.Step2Tests.test_09_schedule_handles_dst_early_close",
+      "status": "PASS"
+    },
+    {
+      "test": "test_step2.Step2Tests.test_10_origins_purge_and_tail",
+      "status": "PASS"
+    },
+    {
+      "test": "test_step2.Step2Tests.test_11_window_contract_and_history_reuse",
+      "status": "PASS"
+    },
+    {
+      "test": "test_step2.Step2Tests.test_12_train_only_scaler_future_invariance",
+      "status": "PASS"
+    },
+    {
+      "test": "test_step2.Step2Tests.test_13_configuration_and_ensemble",
+      "status": "PASS"
+    },
+    {
+      "test": "test_step2.Step2Tests.test_14_ablation_common_dates_and_order",
+      "status": "PASS"
+    },
+    {
+      "test": "test_step2.Step2Tests.test_15_hmm_filter_future_invariance_and_continuation",
+      "status": "PASS"
+    },
+    {
+      "test": "test_step2.Step2Tests.test_16_train_regime_reference_and_no_fallback",
+      "status": "PASS"
+    },
+    {
+      "test": "test_step2.Step2Tests.test_17_no_seed_pseudoreplication",
+      "status": "PASS"
+    },
+    {
+      "test": "test_step2.Step2Tests.test_18_bootstrap_blocks_and_holm",
+      "status": "PASS"
+    },
+    {
+      "test": "test_step2.Step2Tests.test_19_tau_synthetic_algebra_only",
+      "status": "PASS"
+    },
+    {
+      "test": "test_step2.Step2Tests.test_20_no_training_imports_or_execution_paths",
+      "status": "PASS"
+    },
+    {
+      "test": "test_step2.Step2Tests.test_21_production_manifests_remain_blocked",
+      "status": "PASS"
+    },
+    {
+      "test": "test_step2.Step2Tests.test_22_period_gates_and_hmm_train_plan",
+      "status": "PASS"
+    },
+    {
+      "test": "test_step2.Step2Tests.test_23_keyed_ensemble_and_declarative_jobs",
+      "status": "PASS"
+    },
+    {
+      "test": "test_step25.Step25Tests.test_01_official_sessions_and_calendar_hash",
+      "status": "PASS"
+    },
+    {
+      "test": "test_step25.Step25Tests.test_02_all45_dates_open_but_no_fabricated_closes",
+      "status": "PASS"
+    },
+    {
+      "test": "test_step25.Step25Tests.test_03_real_session20_offsets_and_tail",
+      "status": "PASS"
+    },
+    {
+      "test": "test_step25.Step25Tests.test_04_original_hashes_unchanged",
+      "status": "PASS"
+    },
+    {
+      "test": "test_step25.Step25Tests.test_05_actual_origin_boundaries_and_blocked_counts",
+      "status": "PASS"
+    },
+    {
+      "test": "test_step25.Step25Tests.test_06_64_dst_clock_rules",
+      "status": "PASS"
+    },
+    {
+      "test": "test_step25.Step25Tests.test_07_early_closes_and_no_2026_schedule",
+      "status": "PASS"
+    },
+    {
+      "test": "test_step25.Step25Tests.test_08_future_schedule_perturbation_does_not_change_past_candidates",
+      "status": "PASS"
+    },
+    {
+      "test": "test_step25.Step25Tests.test_09_gate_safety_foreign_and_no_run_flags",
+      "status": "PASS"
+    },
+    {
+      "test": "test_step25.Step25Tests.test_10_processed_recipe_not_claimed_as_provenance",
+      "status": "PASS"
+    },
+    {
+      "test": "test_step25.Step25Tests.test_11_ltc_reference_and_explicit_constraint_mode",
+      "status": "PASS"
+    },
+    {
+      "test": "test_step26.Step26Tests.test_01_exact45_and_csv_xlsx_single_count",
+      "status": "PASS"
+    },
+    {
+      "test": "test_step26.Step26Tests.test_02_3939_official_sessions_and_no_close_gaps",
+      "status": "PASS"
+    },
+    {
+      "test": "test_step26.Step26Tests.test_03_original3894_prices_preserved_exactly",
+      "status": "PASS"
+    },
+    {
+      "test": "test_step26.Step26Tests.test_04_full_excel_unavailable_is_blocked_not_equal",
+      "status": "PASS"
+    },
+    {
+      "test": "test_step26.Step26Tests.test_05_no_official_source_overclaim",
+      "status": "PASS"
+    },
+    {
+      "test": "test_step26.Step26Tests.test_06_exact20_horizon_and_tail20_unknown",
+      "status": "PASS"
+    },
+    {
+      "test": "test_step26.Step26Tests.test_07_2026_perturbation_excluded_before_labels",
+      "status": "PASS"
+    },
+    {
+      "test": "test_step26.Step26Tests.test_08_trailing_features_future_invariance",
+      "status": "PASS"
+    },
+    {
+      "test": "test_step26.Step26Tests.test_09_mature_targets_future_invariance",
+      "status": "PASS"
+    },
+    {
+      "test": "test_step26.Step26Tests.test_10_price_inside_horizon_can_change_target",
+      "status": "PASS"
+    },
+    {
+      "test": "test_step26.Step26Tests.test_11_fold_purging_and_no_boundary_violations",
+      "status": "PASS"
+    },
+    {
+      "test": "test_step26.Step26Tests.test_12_features_match_notebook_definitions",
+      "status": "PASS"
+    },
+    {
+      "test": "test_step26.Step26Tests.test_13_window20_include_t_count_and_no_auto_zero_fill",
+      "status": "PASS"
+    },
+    {
+      "test": "test_step26.Step26Tests.test_14_664_discrepancies_repaired_and_distribution",
+      "status": "PASS"
+    },
+    {
+      "test": "test_step26.Step26Tests.test_15_original8_and_supplement2_hashes",
+      "status": "PASS"
+    },
+    {
+      "test": "test_step26.Step26Tests.test_16_reject_duplicate_bad_prices_and_supplement_mismatch",
+      "status": "PASS"
+    },
+    {
+      "test": "test_step26.Step26Tests.test_17_conflict_detection_does_not_replace_original",
+      "status": "PASS"
+    },
+    {
+      "test": "test_step26.Step26Tests.test_18_external_PIT_and_training_gates_remain_blocked",
+      "status": "PASS"
+    }
+  ],
+  "BLOCKED": [
+    {
+      "id": "FULL_EXCEL_PRESENT",
+      "status": "BLOCKED",
+      "reason": "KOSPI 200 종가.xlsx not found"
+    },
+    {
+      "id": "COMMON_3894_PRICE_COMPARISON",
+      "status": "BLOCKED",
+      "reason": "Full Excel missing; zero comparisons; conflict count unknown"
+    },
+    {
+      "id": "OFFICIAL_PRICE_PROVENANCE",
+      "status": "BLOCKED",
+      "reason": "User-supplied agreement is not official provider/extraction/revision certification"
+    },
+    {
+      "id": "DOMESTIC_CLOSE_18KST_AVAILABILITY",
+      "status": "BLOCKED",
+      "reason": "Original and supplement publication timing unknown"
+    },
+    {
+      "id": "EXTERNAL_5FEATURE_PIT",
+      "status": "BLOCKED",
+      "reason": "Foreign_Net/Nasdaq/SOX availability unverified"
+    },
+    {
+      "id": "ORIGINAL_RUNTIME_CHECKPOINT",
+      "status": "BLOCKED",
+      "reason": "Original ncps/hmmlearn versions, dt unit and checkpoint compatibility remain unresolved"
+    },
+    {
+      "id": "PUBLIC_RAW_DATA_LICENSE",
+      "status": "BLOCKED",
+      "reason": "No raw/derived prices or full daily targets/features published"
+    }
+  ],
+  "training_enabled": false,
+  "hmm_fit_enabled": false,
+  "new_performance_metrics_generated": false
+}
