@@ -1,0 +1,64 @@
+{
+  "checked_date": "2026-11-16",
+  "authorization": "User requested installation during STEP2.7; installation/import only",
+  "environment": "separate venv /workspace/venvs/kookmin-step27 with system-site-packages",
+  "python": "3.12.14",
+  "versions": {
+    "torch": "2.10.0+cpu",
+    "ncps": "1.0.1",
+    "hmmlearn": "0.3.3",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "scikit-learn": "1.8.0",
+    "scipy": "1.17.0",
+    "future": "1.0.0",
+    "sympy": "1.14.0",
+    "networkx": "3.7",
+    "filelock": "4.2.4",
+    "fsspec": "2026.9.0",
+    "jinja2": "3.1.6",
+    "MarkupSafe": "3.0.3"
+  },
+  "status": "PASS_INSTALL_AND_IMPORT_ONLY",
+  "source_evidence": {
+    "LTC": {
+      "source_sha256": "bbf3127013d3969994ecf0debf4eb37b56db750475ee71646a9decdf1aaf3026",
+      "constructor_signature": "(input_size: int, units, return_sequences: bool = True, batch_first: bool = True, mixed_memory: bool = False, input_mapping='affine', output_mapping='affine', ode_unfolds=6, epsilon=1e-08, implicit_param_constraints=True)"
+    },
+    "LTCCell": {
+      "source_sha256": "167a9d6e1f4dc653ce21420010709e1c995716e53ad0d8bbc2d53c19c40b123f",
+      "constructor_signature": "(wiring, in_features=None, input_mapping='affine', output_mapping='affine', ode_unfolds=6, epsilon=1e-08, implicit_param_constraints=False)"
+    },
+    "CfC": {
+      "source_sha256": "3e5c1ddf4bf0829cfaa9c6415d30b8081fdaf2e1f681d02631c497626b67f0ea",
+      "constructor_signature": "(input_size: Union[int, ncps.wirings.wirings.Wiring], units, proj_size: Optional[int] = None, return_sequences: bool = True, batch_first: bool = True, mixed_memory: bool = False, mode: str = 'default', activation: str = 'lecun_tanh', backbone_units: Optional[int] = None, backbone_layers: Optional[int] = None, backbone_dropout: Optional[int] = None)"
+    },
+    "GaussianHMM": {
+      "source_sha256": "f01a75d2c9b7109ebd26ab6b91a33b7179a8fd4e79fb132130b70436ff347521",
+      "constructor_signature": "(n_components=1, covariance_type='diag', min_covar=0.001, startprob_prior=1.0, transmat_prior=1.0, means_prior=0, means_weight=0, covars_prior=0.01, covars_weight=1, algorithm='viterbi', random_state=None, n_iter=10, tol=0.01, verbose=False, params='stmc', init_params='stmc', implementation='log')"
+    }
+  },
+  "wrapper_implicit_param_constraints": true,
+  "cuda_build": null,
+  "GPU_queried": false,
+  "model_constructed": false,
+  "model_forward": false,
+  "neural_training": false,
+  "hmm_fit": false,
+  "checkpoint_loaded": false,
+  "original_ncps_hmmlearn_version_verified": false,
+  "pin_rationale": {
+    "torch": "Stored notebook output 2.10.0+cpu",
+    "ncps": "Previously audited official reference wheel 1.0.1, not proven original version",
+    "hmmlearn": "0.3.3 verification candidate; original version unknown"
+  },
+  "source_urls": [
+    "https://download.pytorch.org/whl/cpu/torch/",
+    "https://pypi.org/pypi/ncps/1.0.1/json",
+    "https://pypi.org/pypi/hmmlearn/0.3.3/json"
+  ],
+  "limitations": [
+    "Import success does not certify architecture behavior, deterministic training, checkpoint compatibility or original environment",
+    "venv reuses existing numerical dependencies; full environment reconstitution not certified"
+  ]
+}

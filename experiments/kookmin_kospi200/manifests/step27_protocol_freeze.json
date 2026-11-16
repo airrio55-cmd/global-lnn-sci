@@ -1,0 +1,28 @@
+{
+  "checked_date": "2026-11-16",
+  "status": "PASS_SPECIFICATION_SNAPSHOT_ONLY",
+  "execution_permission": false,
+  "artifacts": [
+    {
+      "file": "configs/experiment_config.json",
+      "sha256": "03fc9333fd9f0adefe98d879cfe0bb155a04444db4c2d665b9d0e945149ee26a"
+    },
+    {
+      "file": "configs/step27_smoke_config.json",
+      "sha256": "7561fd02a2d8a125e594dd0d0708af3f2a411ec6eec88d0d4afdb66b8655a827"
+    },
+    {
+      "file": "reports/PROTOCOL_KO.md",
+      "sha256": "d52352001d13c7baeb220ab47b3a5d458aaee70c7c0ada629d5056145bf2ebfa"
+    },
+    {
+      "file": "src/kospi200/manual_evaluation.py",
+      "sha256": "e1e1ad9cde026eedc5bf57ed5f809a65f9839aa13d99000af92e0a8eafc79a67"
+    },
+    {
+      "file": "src/kospi200/smoke_preparation.py",
+      "sha256": "f43a6b862a576be1c20c0c940e5fde2432c1f629c0e570d6f0933d4a8e62bf34"
+    }
+  ],
+  "change_policy": "Any future specification change gets a new version and reason; no Test-outcome tuning"
+}

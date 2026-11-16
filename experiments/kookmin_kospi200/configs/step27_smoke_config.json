@@ -1,0 +1,97 @@
+{
+  "training_enabled": false,
+  "hmm_fit_enabled": false,
+  "gpu_enabled": false,
+  "executable": false,
+  "status": "BLOCKED_NO_EXECUTION",
+  "unmet_gates": [
+    "data_validation",
+    "input_time_contract",
+    "model_environment",
+    "explicit_step3_execution_approval"
+  ],
+  "origin": "O1",
+  "feature_spec": "F1",
+  "seed": 2,
+  "models": [
+    "RNN",
+    "LSTM",
+    "GRU",
+    "LTC",
+    "CfC"
+  ],
+  "channels": [
+    "RAW",
+    "LOG"
+  ],
+  "features": {
+    "RAW": [
+      "Log_Ret",
+      "Disparity"
+    ],
+    "LOG": [
+      "Log_Ret",
+      "Disparity"
+    ]
+  },
+  "model_settings": {
+    "hidden_size": 128,
+    "layers": 1,
+    "dropout": 0.2,
+    "window": 20,
+    "horizon": 20,
+    "batch": 64,
+    "max_epochs": 100,
+    "patience": 10,
+    "selection_metric": "balanced_accuracy",
+    "optimizer": "AdamW",
+    "lr": 0.005,
+    "weight_decay": 0.0001,
+    "scheduler": "OneCycleLR",
+    "focal_gamma": 2,
+    "focal_alpha": 0.25,
+    "gradient_clip": 1.0,
+    "dtype": "float32",
+    "amp": false,
+    "threshold": 0.5
+  },
+  "future_smoke_limit": {
+    "training_batches": 1,
+    "validation_batches": 1,
+    "test_access": false
+  },
+  "limitation": "Future batch limit is an implementation smoke, not a performance experiment; no Test access",
+  "manual_regime": {
+    "reference_partition": "train",
+    "quantiles": [
+      30,
+      70
+    ],
+    "method": "linear",
+    "test_recalculation_allowed": false,
+    "single_class_metrics": "BA/MacroF1 null; support and available-class recall reported",
+    "HMM_table_separate": true
+  },
+  "source_notebook_sha256": "b9e8542fc5783bc5dc734ddfd7bdfe69db26d4b540cde93ae3a722596485c1e7",
+  "original_definition_manifest": "provenance/step27_notebook_source_references.json",
+  "seed_offsets": {
+    "RNN_RAW": 101,
+    "RNN_LOG": 102,
+    "LSTM_RAW": 201,
+    "LSTM_LOG": 202,
+    "GRU_RAW": 301,
+    "GRU_LOG": 302,
+    "LTC_RAW": 401,
+    "LTC_LOG": 402,
+    "CfC_RAW": 501,
+    "CfC_LOG": 502
+  },
+  "original_focal_loss_semantics": "alpha globally multiplies focal CE, not class-dependent alpha_t",
+  "future_gpu_conditions": [
+    "Separate explicit execution approval",
+    "All mandatory evidence gates PASS",
+    "Pinned torch/CUDA/ncps versions and device identity",
+    "FP32 AMP disabled; no silent CPU/GPU substitution",
+    "Record determinism and CUBLAS setup before process launch"
+  ]
+}

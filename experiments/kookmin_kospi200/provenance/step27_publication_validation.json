@@ -1,0 +1,23 @@
+{
+  "checked_date": "2026-11-16",
+  "public_file": "manifests/step27_price_conflicts.csv",
+  "sha256": "979d77be6fa0159c94c6afdb2819319fcd7b0ec26e97a9563801625b1090919b",
+  "rows": 3750,
+  "columns": [
+    "Date",
+    "exact_match",
+    "within_1e_minus9",
+    "rounded_2dp_match",
+    "status",
+    "original_source_file",
+    "new_source_file",
+    "original_source_sha256",
+    "new_source_sha256",
+    "source_url",
+    "verification_level"
+  ],
+  "price_columns_present": false,
+  "daily_targets_or_features_present": false,
+  "policy": "Public dates, Boolean comparison flags, source filenames/hashes and status strings only; numeric prices/differences excluded. Full detail stays local and is not committed.",
+  "automatic_review_initial_rejection": "Tree rejected for possible private prices in conflict CSV; safer alternative removes all three price/difference columns entirely."
+}

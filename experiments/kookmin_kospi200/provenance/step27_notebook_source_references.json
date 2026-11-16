@@ -1,0 +1,719 @@
+{
+  "checked_date": "2026-11-16",
+  "cell_numbering": "actual notebook cells 1-based, not comment numbers",
+  "references": [
+    {
+      "notebook": "single",
+      "cell": 6,
+      "source_sha256": "46625e401a3a9ff0efe991c5587cc3f026875ff26a161f475f99f18bc5355134",
+      "selected_lines": []
+    },
+    {
+      "notebook": "single",
+      "cell": 8,
+      "source_sha256": "b057cdc0735ce6a131b8fa1a38dc986c3ab0fbce8f1ef155335bccc5763ee9a2",
+      "selected_lines": []
+    },
+    {
+      "notebook": "single",
+      "cell": 9,
+      "source_sha256": "77a75859699fbd5c59438391fe02e4662e9998353bb6febf684a0d66acb61528",
+      "selected_lines": [
+        {
+          "line": 32,
+          "text": "df_main['Vol_Regime'] = df_main['Log_Ret'].rolling(40).std()"
+        }
+      ]
+    },
+    {
+      "notebook": "single",
+      "cell": 11,
+      "source_sha256": "96bcf7caee4ee8bbc286c4fdc4fecf83a9744480681112b2baa1f3456e9b3fed",
+      "selected_lines": [
+        {
+          "line": 11,
+          "text": "test_vol = d_test_main['Vol_Regime'].values[window_size:]"
+        },
+        {
+          "line": 12,
+          "text": "low_threshold = np.percentile(test_vol, 30)"
+        },
+        {
+          "line": 13,
+          "text": "high_threshold = np.percentile(test_vol, 70)"
+        },
+        {
+          "line": 15,
+          "text": "manual_mask_low  = test_vol <= low_threshold"
+        },
+        {
+          "line": 16,
+          "text": "manual_mask_high = test_vol >= high_threshold"
+        },
+        {
+          "line": 17,
+          "text": "manual_mask_mid  = (test_vol > low_threshold) & (test_vol < high_threshold)"
+        },
+        {
+          "line": 70,
+          "text": "if not (len(y_test_true) == len(manual_mask_low) == len(manual_mask_mid) == len(manual_mask_high) == len(hmm_states)):"
+        },
+        {
+          "line": 73,
+          "text": "f\"manual_low({len(manual_mask_low)}), hmm_states({len(hmm_states)})\""
+        },
+        {
+          "line": 77,
+          "text": "'Low_Vol': manual_mask_low,"
+        },
+        {
+          "line": 78,
+          "text": "'Mid_Vol': manual_mask_mid,"
+        },
+        {
+          "line": 79,
+          "text": "'High_Vol': manual_mask_high,"
+        }
+      ]
+    },
+    {
+      "notebook": "single",
+      "cell": 12,
+      "source_sha256": "c1d33b611724104f7902965b798bcb0fae7cf5fbcbd338f9de67209075930483",
+      "selected_lines": [
+        {
+          "line": 63,
+          "text": "bacc = balanced_accuracy_score(yv_cpu, vpreds)"
+        },
+        {
+          "line": 80,
+          "text": "def calculate_metrics(y_t, y_p):"
+        },
+        {
+          "line": 85,
+          "text": "balanced_accuracy_score(y_t, y_p),"
+        }
+      ]
+    },
+    {
+      "notebook": "single",
+      "cell": 14,
+      "source_sha256": "9b591873493cab76f9117cc4308c435756a784bd3f9ca039e41bbe6feb12cb94",
+      "selected_lines": [
+        {
+          "line": 87,
+          "text": "mets = calculate_metrics(y_test_true, preds)"
+        }
+      ]
+    },
+    {
+      "notebook": "single",
+      "cell": 15,
+      "source_sha256": "53d2b1ddc79eaf9d983fb235bf293a36e2f53a59c5d6600f0469ad607b19bec5",
+      "selected_lines": []
+    },
+    {
+      "notebook": "single",
+      "cell": 16,
+      "source_sha256": "9fb5faefe0a1d3d9f15adc7f2fb85238170f58ff5069fced0e945b7e09fa1fc8",
+      "selected_lines": [
+        {
+          "line": 15,
+          "text": "for reg_name in REGIME_NAMES:"
+        },
+        {
+          "line": 16,
+          "text": "regime_agg[model_name][reg_name] = []"
+        },
+        {
+          "line": 24,
+          "text": "regime_agg[model_name][reg_name].append("
+        },
+        {
+          "line": 25,
+          "text": "calculate_metrics(y_test_true[mask], preds)"
+        },
+        {
+          "line": 32,
+          "text": "seed_metrics = np.array(regime_agg[name][reg], dtype=float)"
+        },
+        {
+          "line": 34,
+          "text": "mean_mets = np.mean(seed_metrics, axis=0)"
+        }
+      ]
+    },
+    {
+      "notebook": "single",
+      "cell": 17,
+      "source_sha256": "0bb826068c6ce378fa2ef8337651b1dea0c7e622b7f3bb0736deee969f486d91",
+      "selected_lines": [
+        {
+          "line": 7,
+          "text": "seed_metrics = np.array(regime_agg[name][f'HMM_{s}'], dtype=float)"
+        },
+        {
+          "line": 9,
+          "text": "mean_mets = np.mean(seed_metrics, axis=0)"
+        }
+      ]
+    },
+    {
+      "notebook": "10seed",
+      "cell": 6,
+      "source_sha256": "46625e401a3a9ff0efe991c5587cc3f026875ff26a161f475f99f18bc5355134",
+      "selected_lines": []
+    },
+    {
+      "notebook": "10seed",
+      "cell": 8,
+      "source_sha256": "b057cdc0735ce6a131b8fa1a38dc986c3ab0fbce8f1ef155335bccc5763ee9a2",
+      "selected_lines": []
+    },
+    {
+      "notebook": "10seed",
+      "cell": 9,
+      "source_sha256": "6f3dbe959ac322ccc52846cc5c0753995ac0876ff73cc0fe18f3fbe72a497230",
+      "selected_lines": [
+        {
+          "line": 32,
+          "text": "df_main['Vol_Regime'] = df_main['Log_Ret'].rolling(40).std()"
+        }
+      ]
+    },
+    {
+      "notebook": "10seed",
+      "cell": 11,
+      "source_sha256": "cc476bb0ff55b382ac9aada5a5a4d7dbfbd1a39f1513be5d333321934639f156",
+      "selected_lines": [
+        {
+          "line": 11,
+          "text": "test_vol = d_test_main['Vol_Regime'].values[WINDOW_SIZE:]"
+        },
+        {
+          "line": 13,
+          "text": "low_threshold = np.percentile(test_vol, 30)"
+        },
+        {
+          "line": 14,
+          "text": "high_threshold = np.percentile(test_vol, 70)"
+        },
+        {
+          "line": 16,
+          "text": "manual_mask_low  = test_vol <= low_threshold"
+        },
+        {
+          "line": 17,
+          "text": "manual_mask_high = test_vol >= high_threshold"
+        },
+        {
+          "line": 18,
+          "text": "manual_mask_mid  = (test_vol > low_threshold) & (test_vol < high_threshold)"
+        },
+        {
+          "line": 116,
+          "text": "if not (len(y_test_true) == len(manual_mask_high) == len(hmm_states)):"
+        },
+        {
+          "line": 119,
+          "text": "f\"manual_mask({len(manual_mask_high)}), hmm_states({len(hmm_states)})\""
+        },
+        {
+          "line": 126,
+          "text": "print(f'📊 수동레짐 분포: High({np.sum(manual_mask_high)}), Mid({np.sum(manual_mask_mid)}), Low({np.sum(manual_mask_low)})')"
+        }
+      ]
+    },
+    {
+      "notebook": "10seed",
+      "cell": 12,
+      "source_sha256": "d604e84e91e46f62b086b26d9a20b1b0adb2e10db585546a084f314ec2b1d332",
+      "selected_lines": [
+        {
+          "line": 66,
+          "text": "bacc = balanced_accuracy_score(yv_cpu, vpreds)"
+        },
+        {
+          "line": 83,
+          "text": "def calculate_metrics(y_t, y_p):"
+        },
+        {
+          "line": 88,
+          "text": "balanced_accuracy_score(y_t, y_p),"
+        }
+      ]
+    },
+    {
+      "notebook": "10seed",
+      "cell": 14,
+      "source_sha256": "e6583505a25f3698818bcf27f7b8228aa7ea4e72bbce6165b1a2664efdac108e",
+      "selected_lines": [
+        {
+          "line": 25,
+          "text": "test_vol = d_test_main['Vol_Regime'].values[WINDOW_SIZE:]"
+        },
+        {
+          "line": 27,
+          "text": "low_threshold = np.percentile(test_vol, 30)"
+        },
+        {
+          "line": 28,
+          "text": "high_threshold = np.percentile(test_vol, 70)"
+        },
+        {
+          "line": 30,
+          "text": "manual_mask_low  = test_vol <= low_threshold"
+        },
+        {
+          "line": 31,
+          "text": "manual_mask_high = test_vol >= high_threshold"
+        },
+        {
+          "line": 32,
+          "text": "manual_mask_mid  = (test_vol > low_threshold) & (test_vol < high_threshold)"
+        },
+        {
+          "line": 88,
+          "text": "if not (len(y_test_true) == len(manual_mask_high) == len(hmm_states)):"
+        },
+        {
+          "line": 91,
+          "text": "f\"manual_mask({len(manual_mask_high)}), hmm_states({len(hmm_states)})\""
+        },
+        {
+          "line": 101,
+          "text": "return manual_mask_low, manual_mask_mid, manual_mask_high, hmm_states, hmm_state_summary"
+        },
+        {
+          "line": 162,
+          "text": "mets = calculate_metrics(y_test_true, preds)"
+        },
+        {
+          "line": 167,
+          "text": "manual_mask_low, manual_mask_mid, manual_mask_high, hmm_states, hmm_state_summary = compute_regime_masks()"
+        },
+        {
+          "line": 170,
+          "text": "for reg_name, mask in [('Low_Vol', manual_mask_low), ('Mid_Vol', manual_mask_mid), ('High_Vol', manual_mask_high)]:"
+        },
+        {
+          "line": 172,
+          "text": "regime_agg[name][reg_name].append("
+        },
+        {
+          "line": 173,
+          "text": "calculate_metrics(y_test_true[mask], (probs[mask] > THRESHOLD).astype(int))"
+        },
+        {
+          "line": 178,
+          "text": "regime_agg[name][f'HMM_{i}'].append("
+        },
+        {
+          "line": 179,
+          "text": "calculate_metrics(y_test_true[mask], (probs[mask] > THRESHOLD).astype(int))"
+        },
+        {
+          "line": 189,
+          "text": "manual_mask_low, manual_mask_mid, manual_mask_high, hmm_states, hmm_state_summary = compute_regime_masks()"
+        }
+      ]
+    },
+    {
+      "notebook": "10seed",
+      "cell": 15,
+      "source_sha256": "53d2b1ddc79eaf9d983fb235bf293a36e2f53a59c5d6600f0469ad607b19bec5",
+      "selected_lines": []
+    },
+    {
+      "notebook": "10seed",
+      "cell": 16,
+      "source_sha256": "3f225d4608923db417045398f0c6f71650e40d156d73c7827bb98d10754ae9c5",
+      "selected_lines": [
+        {
+          "line": 9,
+          "text": "seed_metrics = np.array(regime_agg[name][reg], dtype=float)"
+        },
+        {
+          "line": 11,
+          "text": "mean_mets = np.mean(seed_metrics, axis=0)"
+        }
+      ]
+    },
+    {
+      "notebook": "10seed",
+      "cell": 17,
+      "source_sha256": "e78e65041715e275592e00f1e9dabed6aeb72d450bb956853053db6f8230290a",
+      "selected_lines": [
+        {
+          "line": 7,
+          "text": "seed_metrics = np.array(regime_agg[name][f'HMM_{s}'], dtype=float)"
+        },
+        {
+          "line": 9,
+          "text": "mean_mets = np.mean(seed_metrics, axis=0)"
+        }
+      ]
+    },
+    {
+      "notebook": "5seed",
+      "cell": 6,
+      "source_sha256": "46625e401a3a9ff0efe991c5587cc3f026875ff26a161f475f99f18bc5355134",
+      "selected_lines": []
+    },
+    {
+      "notebook": "5seed",
+      "cell": 8,
+      "source_sha256": "b057cdc0735ce6a131b8fa1a38dc986c3ab0fbce8f1ef155335bccc5763ee9a2",
+      "selected_lines": []
+    },
+    {
+      "notebook": "5seed",
+      "cell": 9,
+      "source_sha256": "4d293329f96d8b9fa4bee99ccf947906e9554d4460f9fcc2ccd6870340cd9a9b",
+      "selected_lines": [
+        {
+          "line": 32,
+          "text": "df_main['Vol_Regime'] = df_main['Log_Ret'].rolling(40).std()"
+        }
+      ]
+    },
+    {
+      "notebook": "5seed",
+      "cell": 11,
+      "source_sha256": "cc476bb0ff55b382ac9aada5a5a4d7dbfbd1a39f1513be5d333321934639f156",
+      "selected_lines": [
+        {
+          "line": 11,
+          "text": "test_vol = d_test_main['Vol_Regime'].values[WINDOW_SIZE:]"
+        },
+        {
+          "line": 13,
+          "text": "low_threshold = np.percentile(test_vol, 30)"
+        },
+        {
+          "line": 14,
+          "text": "high_threshold = np.percentile(test_vol, 70)"
+        },
+        {
+          "line": 16,
+          "text": "manual_mask_low  = test_vol <= low_threshold"
+        },
+        {
+          "line": 17,
+          "text": "manual_mask_high = test_vol >= high_threshold"
+        },
+        {
+          "line": 18,
+          "text": "manual_mask_mid  = (test_vol > low_threshold) & (test_vol < high_threshold)"
+        },
+        {
+          "line": 116,
+          "text": "if not (len(y_test_true) == len(manual_mask_high) == len(hmm_states)):"
+        },
+        {
+          "line": 119,
+          "text": "f\"manual_mask({len(manual_mask_high)}), hmm_states({len(hmm_states)})\""
+        },
+        {
+          "line": 126,
+          "text": "print(f'📊 수동레짐 분포: High({np.sum(manual_mask_high)}), Mid({np.sum(manual_mask_mid)}), Low({np.sum(manual_mask_low)})')"
+        }
+      ]
+    },
+    {
+      "notebook": "5seed",
+      "cell": 12,
+      "source_sha256": "d604e84e91e46f62b086b26d9a20b1b0adb2e10db585546a084f314ec2b1d332",
+      "selected_lines": [
+        {
+          "line": 66,
+          "text": "bacc = balanced_accuracy_score(yv_cpu, vpreds)"
+        },
+        {
+          "line": 83,
+          "text": "def calculate_metrics(y_t, y_p):"
+        },
+        {
+          "line": 88,
+          "text": "balanced_accuracy_score(y_t, y_p),"
+        }
+      ]
+    },
+    {
+      "notebook": "5seed",
+      "cell": 14,
+      "source_sha256": "6cf509028dad54546e5d4d458fa8f9c50c05fad738991f07b1f0724309a80081",
+      "selected_lines": [
+        {
+          "line": 25,
+          "text": "test_vol = d_test_main['Vol_Regime'].values[WINDOW_SIZE:]"
+        },
+        {
+          "line": 27,
+          "text": "low_threshold = np.percentile(test_vol, 30)"
+        },
+        {
+          "line": 28,
+          "text": "high_threshold = np.percentile(test_vol, 70)"
+        },
+        {
+          "line": 30,
+          "text": "manual_mask_low  = test_vol <= low_threshold"
+        },
+        {
+          "line": 31,
+          "text": "manual_mask_high = test_vol >= high_threshold"
+        },
+        {
+          "line": 32,
+          "text": "manual_mask_mid  = (test_vol > low_threshold) & (test_vol < high_threshold)"
+        },
+        {
+          "line": 88,
+          "text": "if not (len(y_test_true) == len(manual_mask_high) == len(hmm_states)):"
+        },
+        {
+          "line": 91,
+          "text": "f\"manual_mask({len(manual_mask_high)}), hmm_states({len(hmm_states)})\""
+        },
+        {
+          "line": 101,
+          "text": "return manual_mask_low, manual_mask_mid, manual_mask_high, hmm_states, hmm_state_summary"
+        },
+        {
+          "line": 162,
+          "text": "mets = calculate_metrics(y_test_true, preds)"
+        },
+        {
+          "line": 167,
+          "text": "manual_mask_low, manual_mask_mid, manual_mask_high, hmm_states, hmm_state_summary = compute_regime_masks()"
+        },
+        {
+          "line": 170,
+          "text": "for reg_name, mask in [('Low_Vol', manual_mask_low), ('Mid_Vol', manual_mask_mid), ('High_Vol', manual_mask_high)]:"
+        },
+        {
+          "line": 172,
+          "text": "regime_agg[name][reg_name].append("
+        },
+        {
+          "line": 173,
+          "text": "calculate_metrics(y_test_true[mask], (probs[mask] > THRESHOLD).astype(int))"
+        },
+        {
+          "line": 178,
+          "text": "regime_agg[name][f'HMM_{i}'].append("
+        },
+        {
+          "line": 179,
+          "text": "calculate_metrics(y_test_true[mask], (probs[mask] > THRESHOLD).astype(int))"
+        },
+        {
+          "line": 189,
+          "text": "manual_mask_low, manual_mask_mid, manual_mask_high, hmm_states, hmm_state_summary = compute_regime_masks()"
+        }
+      ]
+    },
+    {
+      "notebook": "5seed",
+      "cell": 15,
+      "source_sha256": "53d2b1ddc79eaf9d983fb235bf293a36e2f53a59c5d6600f0469ad607b19bec5",
+      "selected_lines": []
+    },
+    {
+      "notebook": "5seed",
+      "cell": 16,
+      "source_sha256": "3f225d4608923db417045398f0c6f71650e40d156d73c7827bb98d10754ae9c5",
+      "selected_lines": [
+        {
+          "line": 9,
+          "text": "seed_metrics = np.array(regime_agg[name][reg], dtype=float)"
+        },
+        {
+          "line": 11,
+          "text": "mean_mets = np.mean(seed_metrics, axis=0)"
+        }
+      ]
+    },
+    {
+      "notebook": "5seed",
+      "cell": 17,
+      "source_sha256": "e78e65041715e275592e00f1e9dabed6aeb72d450bb956853053db6f8230290a",
+      "selected_lines": [
+        {
+          "line": 7,
+          "text": "seed_metrics = np.array(regime_agg[name][f'HMM_{s}'], dtype=float)"
+        },
+        {
+          "line": 9,
+          "text": "mean_mets = np.mean(seed_metrics, axis=0)"
+        }
+      ]
+    }
+  ],
+  "definition_bundles": [
+    {
+      "notebook": "kospi200_gpu_friendly_sota_fixed_20260309_junho_DEVICE_fixed_HMM_updated_11models_HMMsafe_mcnemar(단일시드_20일).ipynb",
+      "notebook_sha256": "aaf5232ce74a3d67ee863eac817e2c7f167941099e4d3166ed4e6a39b7c19a63",
+      "definitions": {
+        "FocalLoss": {
+          "cell": 6,
+          "line_start": 6,
+          "line_end": 16,
+          "sha256": "99f31d22f4549d6b370b5a7ede5e2606830b7b20dd66f834fd6e3b3eb2174b7d"
+        },
+        "init_weights": {
+          "cell": 8,
+          "line_start": 5,
+          "line_end": 9,
+          "sha256": "721f2894a7a6f3dc3518f3e80bd17dd7a04ab08f9cdd47762de6212d7e674697"
+        },
+        "RecurrentModel": {
+          "cell": 8,
+          "line_start": 11,
+          "line_end": 34,
+          "sha256": "00844fd26fe3794dff89218879151544efe4b34cb07df9bd038f45e1dceec621"
+        },
+        "LNNModel": {
+          "cell": 8,
+          "line_start": 36,
+          "line_end": 48,
+          "sha256": "ff2ec3b49fb1a96848b9a51aec6dbf4abfac5efdb02fa8fa10f48da77a7e0a7b"
+        },
+        "CfCModel": {
+          "cell": 8,
+          "line_start": 50,
+          "line_end": 62,
+          "sha256": "2907b0ff7cc2dd6da70b9f9da189004de8f5e2d1fd8f2a06d14aeb26f438ebef"
+        },
+        "EarlyStopping": {
+          "cell": 8,
+          "line_start": 81,
+          "line_end": 97,
+          "sha256": "33cf7570f484ca16345bac03ca3ae23aaed56159bd463f22d113031b94a1414c"
+        },
+        "train_model": {
+          "cell": 12,
+          "line_start": 9,
+          "line_end": 78,
+          "sha256": "9dbcc93a992af7d36457be87a79dc2d591371161312bbf26881461f0296ee8a6"
+        },
+        "calculate_metrics": {
+          "cell": 12,
+          "line_start": 80,
+          "line_end": 90,
+          "sha256": "2a90cd93e8b713468679c079868294a76126a00aac71cd48a9693c2e039bdf35"
+        }
+      }
+    },
+    {
+      "notebook": "kospi200_gpu_friendly_sota_fixed_20260311_junho_DEVICE_fixed_HMM_updated(10개시드_20일).ipynb",
+      "notebook_sha256": "b9e8542fc5783bc5dc734ddfd7bdfe69db26d4b540cde93ae3a722596485c1e7",
+      "definitions": {
+        "FocalLoss": {
+          "cell": 6,
+          "line_start": 6,
+          "line_end": 16,
+          "sha256": "99f31d22f4549d6b370b5a7ede5e2606830b7b20dd66f834fd6e3b3eb2174b7d"
+        },
+        "init_weights": {
+          "cell": 8,
+          "line_start": 5,
+          "line_end": 9,
+          "sha256": "721f2894a7a6f3dc3518f3e80bd17dd7a04ab08f9cdd47762de6212d7e674697"
+        },
+        "RecurrentModel": {
+          "cell": 8,
+          "line_start": 11,
+          "line_end": 34,
+          "sha256": "00844fd26fe3794dff89218879151544efe4b34cb07df9bd038f45e1dceec621"
+        },
+        "LNNModel": {
+          "cell": 8,
+          "line_start": 36,
+          "line_end": 48,
+          "sha256": "ff2ec3b49fb1a96848b9a51aec6dbf4abfac5efdb02fa8fa10f48da77a7e0a7b"
+        },
+        "CfCModel": {
+          "cell": 8,
+          "line_start": 50,
+          "line_end": 62,
+          "sha256": "2907b0ff7cc2dd6da70b9f9da189004de8f5e2d1fd8f2a06d14aeb26f438ebef"
+        },
+        "EarlyStopping": {
+          "cell": 8,
+          "line_start": 81,
+          "line_end": 97,
+          "sha256": "33cf7570f484ca16345bac03ca3ae23aaed56159bd463f22d113031b94a1414c"
+        },
+        "train_model": {
+          "cell": 12,
+          "line_start": 8,
+          "line_end": 81,
+          "sha256": "6b37393c443b5856a15c17c861e78b7d472728c30e9cee6a985ce65fb7c07c08"
+        },
+        "calculate_metrics": {
+          "cell": 12,
+          "line_start": 83,
+          "line_end": 93,
+          "sha256": "2a90cd93e8b713468679c079868294a76126a00aac71cd48a9693c2e039bdf35"
+        }
+      }
+    },
+    {
+      "notebook": "kospi200_gpu_friendly_sota_fixed_20260311_junho_DEVICE_fixed_HMM_updated(5개시드_20일).ipynb",
+      "notebook_sha256": "5574c75c7343c308859c850d8f5ea5e697a49a40c82ee47165c3e1c05ef5c625",
+      "definitions": {
+        "FocalLoss": {
+          "cell": 6,
+          "line_start": 6,
+          "line_end": 16,
+          "sha256": "99f31d22f4549d6b370b5a7ede5e2606830b7b20dd66f834fd6e3b3eb2174b7d"
+        },
+        "init_weights": {
+          "cell": 8,
+          "line_start": 5,
+          "line_end": 9,
+          "sha256": "721f2894a7a6f3dc3518f3e80bd17dd7a04ab08f9cdd47762de6212d7e674697"
+        },
+        "RecurrentModel": {
+          "cell": 8,
+          "line_start": 11,
+          "line_end": 34,
+          "sha256": "00844fd26fe3794dff89218879151544efe4b34cb07df9bd038f45e1dceec621"
+        },
+        "LNNModel": {
+          "cell": 8,
+          "line_start": 36,
+          "line_end": 48,
+          "sha256": "ff2ec3b49fb1a96848b9a51aec6dbf4abfac5efdb02fa8fa10f48da77a7e0a7b"
+        },
+        "CfCModel": {
+          "cell": 8,
+          "line_start": 50,
+          "line_end": 62,
+          "sha256": "2907b0ff7cc2dd6da70b9f9da189004de8f5e2d1fd8f2a06d14aeb26f438ebef"
+        },
+        "EarlyStopping": {
+          "cell": 8,
+          "line_start": 81,
+          "line_end": 97,
+          "sha256": "33cf7570f484ca16345bac03ca3ae23aaed56159bd463f22d113031b94a1414c"
+        },
+        "train_model": {
+          "cell": 12,
+          "line_start": 8,
+          "line_end": 81,
+          "sha256": "6b37393c443b5856a15c17c861e78b7d472728c30e9cee6a985ce65fb7c07c08"
+        },
+        "calculate_metrics": {
+          "cell": 12,
+          "line_start": 83,
+          "line_end": 93,
+          "sha256": "2a90cd93e8b713468679c079868294a76126a00aac71cd48a9693c2e039bdf35"
+        }
+      }
+    }
+  ],
+  "historical_outputs_executed": false
+}
