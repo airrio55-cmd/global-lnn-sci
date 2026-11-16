@@ -1,0 +1,50 @@
+[
+  {
+    "filename": "KOSPI_200.csv",
+    "bytes": 365594,
+    "sha256": "7612a3ea53427dcf0148ab6b1e22f34500e6bff6fe1f23e2da793e40b0b82c50",
+    "source": "user attachment; upstream provider unverified"
+  },
+  {
+    "filename": "processed_regression_data.csv",
+    "bytes": 572337,
+    "sha256": "70dc3634b11fbf9acf34e2b78933d4259e4741eb4c9a8946b17e94362775d17e",
+    "source": "user attachment; upstream provider unverified"
+  },
+  {
+    "filename": "Foreigner_Net.csv",
+    "bytes": 137327,
+    "sha256": "091e61ed5311108628ee18aa2d98c4f374b21a51d10986a0b5e492de5caf2cf8",
+    "source": "user attachment; upstream provider unverified"
+  },
+  {
+    "filename": "SOX.csv",
+    "bytes": 337910,
+    "sha256": "4e8c27c9890ff1e94642c3c5a2ed4a6b6bd8eaa7ddbe3cc15e3203c57b4d6a44",
+    "source": "user attachment; upstream provider unverified"
+  },
+  {
+    "filename": "kospi200_gpu_friendly_sota_fixed_20260311_junho_DEVICE_fixed_HMM_updated(5개시드_20일).ipynb",
+    "bytes": 74700,
+    "sha256": "5574c75c7343c308859c850d8f5ea5e697a49a40c82ee47165c3e1c05ef5c625",
+    "source": "user attachment; upstream provider unverified"
+  },
+  {
+    "filename": "kospi200_gpu_friendly_sota_fixed_20260309_junho_DEVICE_fixed_HMM_updated_11models_HMMsafe_mcnemar(단일시드_20일).ipynb",
+    "bytes": 50759,
+    "sha256": "aaf5232ce74a3d67ee863eac817e2c7f167941099e4d3166ed4e6a39b7c19a63",
+    "source": "user attachment; upstream provider unverified"
+  },
+  {
+    "filename": "Nasdaq.csv",
+    "bytes": 352798,
+    "sha256": "802a49d6474cf5f497727d413515be15e783789098cdff5f9af3137151da2b6f",
+    "source": "user attachment; upstream provider unverified"
+  },
+  {
+    "filename": "kospi200_gpu_friendly_sota_fixed_20260311_junho_DEVICE_fixed_HMM_updated(10개시드_20일).ipynb",
+    "bytes": 75547,
+    "sha256": "b9e8542fc5783bc5dc734ddfd7bdfe69db26d4b540cde93ae3a722596485c1e7",
+    "source": "user attachment; upstream provider unverified"
+  }
+]

@@ -1,0 +1,77 @@
+{
+  "status": "proposal_not_approved",
+  "training_enabled": false,
+  "hmm_fit_enabled": false,
+  "main_merge_allowed": false,
+  "baseline_commit": "3324ead54266b07df176d312b6604289b50523a8",
+  "seed_list": [
+    2,
+    12,
+    22,
+    32,
+    42,
+    52,
+    62,
+    72,
+    82,
+    92
+  ],
+  "horizon_krx_sessions": 20,
+  "window_sessions": 20,
+  "hidden_size": 128,
+  "layers": 1,
+  "dropout": 0.2,
+  "max_epochs": 100,
+  "patience": 10,
+  "batch_size": 64,
+  "threshold": 0.5,
+  "amp": false,
+  "primary_metric": "balanced_accuracy",
+  "optimizer": {
+    "name": "AdamW",
+    "lr": 0.005,
+    "weight_decay": 0.0001
+  },
+  "scheduler": "OneCycleLR",
+  "loss": {
+    "name": "FocalLoss",
+    "alpha": 0.25,
+    "gamma": 2
+  },
+  "hybrid_formula": "0.7 * LNN_ensemble + 0.3 * RNN_raw",
+  "data_period_proposal": [
+    "2010-01-01",
+    "2025-12-31"
+  ],
+  "decision_time_proposal": "18:00 Asia/Seoul on KRX session t; window includes t",
+  "foreign_availability": "unverified; conservative lag requires approval",
+  "origins": 5,
+  "test_years": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+  ],
+  "feature_specs": 6,
+  "hmm_seed_list": [
+    2,
+    12,
+    22,
+    32,
+    42,
+    52,
+    62,
+    72,
+    82,
+    92
+  ],
+  "purge_rule": "label_end < next_cutoff",
+  "hmm_decoding": "forward_filter_only",
+  "bootstrap_replicates_proposal": 10000,
+  "bootstrap_block_sessions": [
+    20,
+    40,
+    60
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "scope": "data-only synthetic/reproduction tests, no learning or HMM fitting",
+  "checks": [
+    {
+      "test": "original_target_tail_is_twenty_false_zeros",
+      "status": "PASS"
+    },
+    {
+      "test": "proposed_nullable_target_keeps_twenty_unknown",
+      "status": "PASS"
+    },
+    {
+      "test": "known_target_values_preserved",
+      "status": "PASS"
+    },
+    {
+      "test": "proposed_purge_keeps_all_label_ends_before_cutoff",
+      "status": "PASS"
+    },
+    {
+      "test": "bfill_future_sentinel_changes_past",
+      "status": "PASS"
+    },
+    {
+      "test": "ffill_does_not_pull_future_into_leading_gap",
+      "status": "PASS"
+    },
+    {
+      "test": "seed_pooling_repeats_discordances_without_new_dates",
+      "status": "PASS"
+    }
+  ]
+}

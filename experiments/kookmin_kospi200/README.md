@@ -10,7 +10,7 @@
 - `evidence/input_manifest.json`: 첨부8파일 SHA-256·크기.
 - `evidence/data_inventory.json`: CSV별 범위·결측·중복·0값·출처 상태.
 - `evidence/data_only_checks.json`, `static_tests.json`: 학습 없는 재현·7검사.
-- `evidence/*_cells.txt`, `cell_comparison.csv`, `*.diff`: 원본 셀 증거.
+- `evidence/cell_comparison.csv`: 셀 소스 해시·동일 여부. 전체 셀 소스(`*_cells.txt`)와 전체 diff는 작업 환경 전용이며 공개 브랜치에서 제외한다.
 - `configs/proposed.json`: 비실행 사양; 승인 또는 preregistration lock가 아님.
 - `CHANGELOG.md`: 이번 준비 작업과 미구현 수정안.
 
@@ -19,4 +19,3 @@
 `python experiments/kookmin_kospi200/tools/static_audit.py`는 pandas/numpy를 사용하여 소스·데이터만 읽고 evidence를 재생성한다. 모델 패키지 import, notebook execution, fit, GPU 작업은 없다. 데이터와 SHA-256을 먼저 검증해야 한다. 학습 진입점과 자동 workflow는 제공하지 않는다.
 
 저장된 과거 notebook 출력은 새 실행 결과가 아니다. 미확정 target 제거·PIT 결합·purging 등 모델 코드 수정은 **제안** 상태다. main 병합·학습은 승인되지 않았다.
-

@@ -1,0 +1,72 @@
+{
+  "method": "independent pandas data-only reproduction; no notebook cells executed",
+  "join_missing": {
+    "Close": 0,
+    "Foreign_Net": 0,
+    "Nasdaq": 101,
+    "SOX": 101
+  },
+  "ffill_filled": {
+    "Close": 0,
+    "Foreign_Net": 0,
+    "Nasdaq": 101,
+    "SOX": 101
+  },
+  "bfill_filled": {
+    "Close": 0,
+    "Foreign_Net": 0,
+    "Nasdaq": 0,
+    "SOX": 0
+  },
+  "US_dates_lost_before_ffill": 233,
+  "retained_rows": 3895,
+  "unresolved_tail_labels": 20,
+  "unresolved_tail_start": "2026-02-02",
+  "tail_zero_labels": 20,
+  "splits": [
+    {
+      "name": "train",
+      "rows": 2337,
+      "start": "2010-03-04",
+      "end": "2019-10-24",
+      "scored_rows": 2317,
+      "scored_start": "2010-04-01"
+    },
+    {
+      "name": "validation",
+      "rows": 779,
+      "start": "2019-10-25",
+      "end": "2022-12-20",
+      "scored_rows": 759,
+      "scored_start": "2019-11-22"
+    },
+    {
+      "name": "test",
+      "rows": 779,
+      "start": "2022-12-21",
+      "end": "2026-03-05",
+      "scored_rows": 759,
+      "scored_start": "2023-01-19"
+    }
+  ],
+  "boundary_checks": [
+    {
+      "next_partition_start": "2019-10-25",
+      "previous_last_label_end": "2019-11-21",
+      "next_first_scored_label_start": "2019-11-22",
+      "purge_rows_under_strict_partition_cutoff": 20
+    },
+    {
+      "next_partition_start": "2022-12-21",
+      "previous_last_label_end": "2023-01-18",
+      "next_first_scored_label_start": "2023-01-19",
+      "purge_rows_under_strict_partition_cutoff": 20
+    }
+  ],
+  "processed_checks": {
+    "used_by_notebooks": false,
+    "close_max_abs_error": 2.842170943040401e-14,
+    "target_ret20_max_abs_error": 2.0122792321330962e-16,
+    "sox_lag1_max_abs_error": 0.0
+  }
+}

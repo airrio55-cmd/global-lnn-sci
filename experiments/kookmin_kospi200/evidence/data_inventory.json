@@ -1,0 +1,220 @@
+[
+  {
+    "file": "Nasdaq.csv",
+    "rows": 4067,
+    "columns": [
+      "Date",
+      "Close",
+      "High",
+      "Low",
+      "Open",
+      "Volume"
+    ],
+    "date_min": "2010-01-04",
+    "date_max": "2026-03-05",
+    "date_duplicates": 0,
+    "unparseable_dates": 0,
+    "sorted_ascending": true,
+    "missing": {
+      "Date": 0,
+      "Close": 0,
+      "High": 0,
+      "Low": 0,
+      "Open": 0,
+      "Volume": 0
+    },
+    "zeros": {
+      "Close": 0,
+      "High": 0,
+      "Low": 0,
+      "Open": 0,
+      "Volume": 0
+    },
+    "nonfinite_numeric": {
+      "Close": 0,
+      "High": 0,
+      "Low": 0,
+      "Open": 0,
+      "Volume": 0
+    },
+    "sha256": "802a49d6474cf5f497727d413515be15e783789098cdff5f9af3137151da2b6f",
+    "upstream_provider": "not documented in attachments",
+    "available_at": "not provided"
+  },
+  {
+    "file": "KOSPI_200.csv",
+    "rows": 3935,
+    "columns": [
+      "Date",
+      "종가",
+      "고가",
+      "저가",
+      "시가",
+      "거래량"
+    ],
+    "date_min": "2010-01-04",
+    "date_max": "2026-03-05",
+    "date_duplicates": 0,
+    "unparseable_dates": 0,
+    "sorted_ascending": true,
+    "missing": {
+      "Date": 0,
+      "종가": 0,
+      "고가": 0,
+      "저가": 0,
+      "시가": 0,
+      "거래량": 0
+    },
+    "zeros": {
+      "종가": 0,
+      "고가": 1,
+      "저가": 1,
+      "시가": 1,
+      "거래량": 1
+    },
+    "nonfinite_numeric": {
+      "종가": 0,
+      "고가": 0,
+      "저가": 0,
+      "시가": 0,
+      "거래량": 0
+    },
+    "sha256": "7612a3ea53427dcf0148ab6b1e22f34500e6bff6fe1f23e2da793e40b0b82c50",
+    "upstream_provider": "not documented in attachments",
+    "available_at": "not provided"
+  },
+  {
+    "file": "Foreigner_Net.csv",
+    "rows": 5000,
+    "columns": [
+      "날짜",
+      "개인",
+      "외국인",
+      "기관"
+    ],
+    "date_min": "2005-11-24",
+    "date_max": "2026-03-05",
+    "date_duplicates": 0,
+    "unparseable_dates": 0,
+    "sorted_ascending": true,
+    "missing": {
+      "날짜": 0,
+      "개인": 0,
+      "외국인": 0,
+      "기관": 0
+    },
+    "zeros": {
+      "개인": 2,
+      "외국인": 3,
+      "기관": 0
+    },
+    "nonfinite_numeric": {
+      "개인": 0,
+      "외국인": 0,
+      "기관": 0
+    },
+    "sha256": "091e61ed5311108628ee18aa2d98c4f374b21a51d10986a0b5e492de5caf2cf8",
+    "upstream_provider": "not documented in attachments",
+    "available_at": "not provided"
+  },
+  {
+    "file": "processed_regression_data.csv",
+    "rows": 3854,
+    "columns": [
+      "Date",
+      "KOSPI200",
+      "Vol",
+      "Foreigner",
+      "Nasdaq",
+      "SOX",
+      "Nasdaq_Ret20",
+      "Foreigner_NetBuy20",
+      "SOX_Lag1",
+      "Target_Ret20"
+    ],
+    "date_min": "2010-02-01",
+    "date_max": "2025-12-01",
+    "date_duplicates": 0,
+    "unparseable_dates": 0,
+    "sorted_ascending": true,
+    "missing": {
+      "Date": 0,
+      "KOSPI200": 0,
+      "Vol": 0,
+      "Foreigner": 0,
+      "Nasdaq": 0,
+      "SOX": 0,
+      "Nasdaq_Ret20": 0,
+      "Foreigner_NetBuy20": 0,
+      "SOX_Lag1": 0,
+      "Target_Ret20": 0
+    },
+    "zeros": {
+      "KOSPI200": 0,
+      "Vol": 0,
+      "Foreigner": 2,
+      "Nasdaq": 0,
+      "SOX": 0,
+      "Nasdaq_Ret20": 0,
+      "Foreigner_NetBuy20": 0,
+      "SOX_Lag1": 0,
+      "Target_Ret20": 2
+    },
+    "nonfinite_numeric": {
+      "KOSPI200": 0,
+      "Vol": 0,
+      "Foreigner": 0,
+      "Nasdaq": 0,
+      "SOX": 0,
+      "Nasdaq_Ret20": 0,
+      "Foreigner_NetBuy20": 0,
+      "SOX_Lag1": 0,
+      "Target_Ret20": 0
+    },
+    "sha256": "70dc3634b11fbf9acf34e2b78933d4259e4741eb4c9a8946b17e94362775d17e",
+    "upstream_provider": "not documented in attachments",
+    "available_at": "not provided"
+  },
+  {
+    "file": "SOX.csv",
+    "rows": 4067,
+    "columns": [
+      "Date",
+      "Close",
+      "High",
+      "Low",
+      "Open",
+      "Volume"
+    ],
+    "date_min": "2010-01-04",
+    "date_max": "2026-03-05",
+    "date_duplicates": 0,
+    "unparseable_dates": 0,
+    "sorted_ascending": true,
+    "missing": {
+      "Date": 0,
+      "Close": 0,
+      "High": 0,
+      "Low": 0,
+      "Open": 0,
+      "Volume": 0
+    },
+    "zeros": {
+      "Close": 0,
+      "High": 0,
+      "Low": 0,
+      "Open": 0,
+      "Volume": 4067
+    },
+    "nonfinite_numeric": {
+      "Close": 0,
+      "High": 0,
+      "Low": 0,
+      "Open": 0,
+      "Volume": 0
+    },
+    "sha256": "4e8c27c9890ff1e94642c3c5a2ed4a6b6bd8eaa7ddbe3cc15e3203c57b4d6a44",
+    "upstream_provider": "not documented in attachments",
+    "available_at": "not provided"
+  }
+]
