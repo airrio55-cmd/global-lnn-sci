@@ -1,0 +1,37 @@
+{
+  "stage": "STEP3D",
+  "approved_by": "user",
+  "approval_reference": "Current user request STEP3D O3 limited 20-fit pilot; prior identical completed fits detected and reused",
+  "requested_scope": {
+    "origin": "O3",
+    "seeds": [
+      2,
+      12
+    ],
+    "candidates": [
+      "A",
+      "B"
+    ],
+    "models": [
+      "RNN",
+      "LSTM",
+      "GRU",
+      "LTC",
+      "CfC"
+    ],
+    "features": [
+      "Log_Ret",
+      "Disparity"
+    ],
+    "maximum_new_fits": 20
+  },
+  "execution_policy": "REUSE_EXACT_COMPLETED_IDENTITIES_ONLY",
+  "new_training_authorized_for_this_runner": false,
+  "training_enabled": false,
+  "hmm_fit_enabled": false,
+  "new_fit_execution_enabled": false,
+  "full460_authorized": false,
+  "Test_authorized": false,
+  "GPU_authorized": false,
+  "master_config_sha256": "f4ea7a18d7812b00b8c581191a110f63a6799a22e066484ec251ee32f7912c5c"
+}

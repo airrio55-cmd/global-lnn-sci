@@ -1,0 +1,1281 @@
+{
+  "stage": "STEP3D",
+  "checked_at_kst": "2026-11-17T08:19:11.975473+09:00",
+  "new_checks_PASS": 313,
+  "new_checks_FAIL": 0,
+  "regression_suites": [
+    {
+      "suite": "test_step4a1_preflight",
+      "tests": 12,
+      "passed": 12,
+      "failed": 0
+    },
+    {
+      "suite": "test_step4a1_results",
+      "tests": 14,
+      "passed": 14,
+      "failed": 0
+    }
+  ],
+  "checks": [
+    {
+      "id": "master_config_and_production_flags",
+      "status": "PASS"
+    },
+    {
+      "id": "master_artifacts_and_frozen_reports",
+      "status": "PASS"
+    },
+    {
+      "id": "pinned_environment",
+      "status": "PASS"
+    },
+    {
+      "id": "exact_existing40",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O1_seed2_A_RNN_best.pt",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O1_seed2_A_RNN_latest.pt",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O1_seed2_A_RNN_history.json",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O1_seed2_A_RNN_validation_predictions_private.npz",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O1_seed2_A_LSTM_best.pt",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O1_seed2_A_LSTM_latest.pt",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O1_seed2_A_LSTM_history.json",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O1_seed2_A_LSTM_validation_predictions_private.npz",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O1_seed2_A_GRU_best.pt",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O1_seed2_A_GRU_latest.pt",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O1_seed2_A_GRU_history.json",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O1_seed2_A_GRU_validation_predictions_private.npz",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O1_seed2_A_LTC_best.pt",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O1_seed2_A_LTC_latest.pt",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O1_seed2_A_LTC_history.json",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O1_seed2_A_LTC_validation_predictions_private.npz",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O1_seed2_A_CfC_best.pt",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O1_seed2_A_CfC_latest.pt",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O1_seed2_A_CfC_history.json",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O1_seed2_A_CfC_validation_predictions_private.npz",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O1_seed2_B_RNN_best.pt",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O1_seed2_B_RNN_latest.pt",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O1_seed2_B_RNN_history.json",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O1_seed2_B_RNN_validation_predictions_private.npz",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O1_seed2_B_LSTM_best.pt",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O1_seed2_B_LSTM_latest.pt",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O1_seed2_B_LSTM_history.json",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O1_seed2_B_LSTM_validation_predictions_private.npz",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O1_seed2_B_GRU_best.pt",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O1_seed2_B_GRU_latest.pt",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O1_seed2_B_GRU_history.json",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O1_seed2_B_GRU_validation_predictions_private.npz",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O1_seed2_B_LTC_best.pt",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O1_seed2_B_LTC_latest.pt",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O1_seed2_B_LTC_history.json",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O1_seed2_B_LTC_validation_predictions_private.npz",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O1_seed2_B_CfC_best.pt",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O1_seed2_B_CfC_latest.pt",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O1_seed2_B_CfC_history.json",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O1_seed2_B_CfC_validation_predictions_private.npz",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O1_seed12_A_RNN_best.pt",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O1_seed12_A_RNN_latest.pt",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O1_seed12_A_RNN_history.json",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O1_seed12_A_RNN_validation_predictions_private.npz",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O1_seed12_A_LSTM_best.pt",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O1_seed12_A_LSTM_latest.pt",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O1_seed12_A_LSTM_history.json",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O1_seed12_A_LSTM_validation_predictions_private.npz",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O1_seed12_A_GRU_best.pt",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O1_seed12_A_GRU_latest.pt",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O1_seed12_A_GRU_history.json",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O1_seed12_A_GRU_validation_predictions_private.npz",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O1_seed12_A_LTC_best.pt",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O1_seed12_A_LTC_latest.pt",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O1_seed12_A_LTC_history.json",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O1_seed12_A_LTC_validation_predictions_private.npz",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O1_seed12_A_CfC_best.pt",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O1_seed12_A_CfC_latest.pt",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O1_seed12_A_CfC_history.json",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O1_seed12_A_CfC_validation_predictions_private.npz",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O1_seed12_B_RNN_best.pt",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O1_seed12_B_RNN_latest.pt",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O1_seed12_B_RNN_history.json",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O1_seed12_B_RNN_validation_predictions_private.npz",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O1_seed12_B_LSTM_best.pt",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O1_seed12_B_LSTM_latest.pt",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O1_seed12_B_LSTM_history.json",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O1_seed12_B_LSTM_validation_predictions_private.npz",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O1_seed12_B_GRU_best.pt",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O1_seed12_B_GRU_latest.pt",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O1_seed12_B_GRU_history.json",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O1_seed12_B_GRU_validation_predictions_private.npz",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O1_seed12_B_LTC_best.pt",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O1_seed12_B_LTC_latest.pt",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O1_seed12_B_LTC_history.json",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O1_seed12_B_LTC_validation_predictions_private.npz",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O1_seed12_B_CfC_best.pt",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O1_seed12_B_CfC_latest.pt",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O1_seed12_B_CfC_history.json",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O1_seed12_B_CfC_validation_predictions_private.npz",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O2_seed2_A_RNN_best.pt",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O2_seed2_A_RNN_latest.pt",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O2_seed2_A_RNN_history.json",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O2_seed2_A_RNN_validation_predictions_private.npz",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O2_seed2_A_LSTM_best.pt",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O2_seed2_A_LSTM_latest.pt",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O2_seed2_A_LSTM_history.json",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O2_seed2_A_LSTM_validation_predictions_private.npz",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O2_seed2_A_GRU_best.pt",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O2_seed2_A_GRU_latest.pt",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O2_seed2_A_GRU_history.json",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O2_seed2_A_GRU_validation_predictions_private.npz",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O2_seed2_A_LTC_best.pt",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O2_seed2_A_LTC_latest.pt",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O2_seed2_A_LTC_history.json",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O2_seed2_A_LTC_validation_predictions_private.npz",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O2_seed2_A_CfC_best.pt",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O2_seed2_A_CfC_latest.pt",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O2_seed2_A_CfC_history.json",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O2_seed2_A_CfC_validation_predictions_private.npz",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O2_seed2_B_RNN_best.pt",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O2_seed2_B_RNN_latest.pt",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O2_seed2_B_RNN_history.json",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O2_seed2_B_RNN_validation_predictions_private.npz",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O2_seed2_B_LSTM_best.pt",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O2_seed2_B_LSTM_latest.pt",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O2_seed2_B_LSTM_history.json",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O2_seed2_B_LSTM_validation_predictions_private.npz",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O2_seed2_B_GRU_best.pt",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O2_seed2_B_GRU_latest.pt",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O2_seed2_B_GRU_history.json",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O2_seed2_B_GRU_validation_predictions_private.npz",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O2_seed2_B_LTC_best.pt",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O2_seed2_B_LTC_latest.pt",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O2_seed2_B_LTC_history.json",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O2_seed2_B_LTC_validation_predictions_private.npz",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O2_seed2_B_CfC_best.pt",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O2_seed2_B_CfC_latest.pt",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O2_seed2_B_CfC_history.json",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O2_seed2_B_CfC_validation_predictions_private.npz",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O2_seed12_A_RNN_best.pt",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O2_seed12_A_RNN_latest.pt",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O2_seed12_A_RNN_history.json",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O2_seed12_A_RNN_validation_predictions_private.npz",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O2_seed12_A_LSTM_best.pt",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O2_seed12_A_LSTM_latest.pt",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O2_seed12_A_LSTM_history.json",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O2_seed12_A_LSTM_validation_predictions_private.npz",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O2_seed12_A_GRU_best.pt",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O2_seed12_A_GRU_latest.pt",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O2_seed12_A_GRU_history.json",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O2_seed12_A_GRU_validation_predictions_private.npz",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O2_seed12_A_LTC_best.pt",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O2_seed12_A_LTC_latest.pt",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O2_seed12_A_LTC_history.json",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O2_seed12_A_LTC_validation_predictions_private.npz",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O2_seed12_A_CfC_best.pt",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O2_seed12_A_CfC_latest.pt",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O2_seed12_A_CfC_history.json",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O2_seed12_A_CfC_validation_predictions_private.npz",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O2_seed12_B_RNN_best.pt",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O2_seed12_B_RNN_latest.pt",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O2_seed12_B_RNN_history.json",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O2_seed12_B_RNN_validation_predictions_private.npz",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O2_seed12_B_LSTM_best.pt",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O2_seed12_B_LSTM_latest.pt",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O2_seed12_B_LSTM_history.json",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O2_seed12_B_LSTM_validation_predictions_private.npz",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O2_seed12_B_GRU_best.pt",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O2_seed12_B_GRU_latest.pt",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O2_seed12_B_GRU_history.json",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O2_seed12_B_GRU_validation_predictions_private.npz",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O2_seed12_B_LTC_best.pt",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O2_seed12_B_LTC_latest.pt",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O2_seed12_B_LTC_history.json",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O2_seed12_B_LTC_validation_predictions_private.npz",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O2_seed12_B_CfC_best.pt",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O2_seed12_B_CfC_latest.pt",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O2_seed12_B_CfC_history.json",
+      "status": "PASS"
+    },
+    {
+      "id": "old40_O2_seed12_B_CfC_validation_predictions_private.npz",
+      "status": "PASS"
+    },
+    {
+      "id": "exact20_previously_completed_O3",
+      "status": "PASS"
+    },
+    {
+      "id": "frozen_O3_config_worker_manager",
+      "status": "PASS"
+    },
+    {
+      "id": "same_model_hyperparameters_offsets",
+      "status": "PASS"
+    },
+    {
+      "id": "identical_learning_kernel_bytes",
+      "status": "PASS"
+    },
+    {
+      "id": "A_array_file_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "A_metadata_file_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "A_date_file_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "A_price_file_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "A_regime_file_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "A_price_prefix_2022_only",
+      "status": "PASS"
+    },
+    {
+      "id": "A_reconstructed_arrays_exact",
+      "status": "PASS"
+    },
+    {
+      "id": "A_dates_labels_scaler_manual_exact",
+      "status": "PASS"
+    },
+    {
+      "id": "A_purge20_unknown20_boundaries",
+      "status": "PASS"
+    },
+    {
+      "id": "B_array_file_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "B_metadata_file_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "B_date_file_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "B_price_file_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "B_regime_file_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "B_price_prefix_2022_only",
+      "status": "PASS"
+    },
+    {
+      "id": "B_reconstructed_arrays_exact",
+      "status": "PASS"
+    },
+    {
+      "id": "B_dates_labels_scaler_manual_exact",
+      "status": "PASS"
+    },
+    {
+      "id": "B_purge20_unknown20_boundaries",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed2_A_RNN_best.pt_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed2_A_RNN_latest.pt_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed2_A_RNN_history.json_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed2_A_RNN_validation_predictions_private.npz_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed2_A_RNN_checkpoint_verification.json_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed2_A_RNN_first_max_BA_and_existing_restore_evidence",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed2_A_LSTM_best.pt_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed2_A_LSTM_latest.pt_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed2_A_LSTM_history.json_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed2_A_LSTM_validation_predictions_private.npz_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed2_A_LSTM_checkpoint_verification.json_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed2_A_LSTM_first_max_BA_and_existing_restore_evidence",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed2_A_GRU_best.pt_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed2_A_GRU_latest.pt_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed2_A_GRU_history.json_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed2_A_GRU_validation_predictions_private.npz_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed2_A_GRU_checkpoint_verification.json_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed2_A_GRU_first_max_BA_and_existing_restore_evidence",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed2_A_LTC_best.pt_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed2_A_LTC_latest.pt_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed2_A_LTC_history.json_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed2_A_LTC_validation_predictions_private.npz_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed2_A_LTC_checkpoint_verification.json_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed2_A_LTC_first_max_BA_and_existing_restore_evidence",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed2_A_CfC_best.pt_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed2_A_CfC_latest.pt_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed2_A_CfC_history.json_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed2_A_CfC_validation_predictions_private.npz_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed2_A_CfC_checkpoint_verification.json_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed2_A_CfC_first_max_BA_and_existing_restore_evidence",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed2_B_RNN_best.pt_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed2_B_RNN_latest.pt_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed2_B_RNN_history.json_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed2_B_RNN_validation_predictions_private.npz_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed2_B_RNN_checkpoint_verification.json_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed2_B_RNN_first_max_BA_and_existing_restore_evidence",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed2_B_LSTM_best.pt_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed2_B_LSTM_latest.pt_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed2_B_LSTM_history.json_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed2_B_LSTM_validation_predictions_private.npz_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed2_B_LSTM_checkpoint_verification.json_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed2_B_LSTM_first_max_BA_and_existing_restore_evidence",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed2_B_GRU_best.pt_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed2_B_GRU_latest.pt_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed2_B_GRU_history.json_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed2_B_GRU_validation_predictions_private.npz_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed2_B_GRU_checkpoint_verification.json_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed2_B_GRU_first_max_BA_and_existing_restore_evidence",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed2_B_LTC_best.pt_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed2_B_LTC_latest.pt_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed2_B_LTC_history.json_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed2_B_LTC_validation_predictions_private.npz_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed2_B_LTC_checkpoint_verification.json_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed2_B_LTC_first_max_BA_and_existing_restore_evidence",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed2_B_CfC_best.pt_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed2_B_CfC_latest.pt_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed2_B_CfC_history.json_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed2_B_CfC_validation_predictions_private.npz_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed2_B_CfC_checkpoint_verification.json_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed2_B_CfC_first_max_BA_and_existing_restore_evidence",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed12_A_RNN_best.pt_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed12_A_RNN_latest.pt_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed12_A_RNN_history.json_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed12_A_RNN_validation_predictions_private.npz_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed12_A_RNN_checkpoint_verification.json_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed12_A_RNN_first_max_BA_and_existing_restore_evidence",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed12_A_LSTM_best.pt_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed12_A_LSTM_latest.pt_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed12_A_LSTM_history.json_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed12_A_LSTM_validation_predictions_private.npz_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed12_A_LSTM_checkpoint_verification.json_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed12_A_LSTM_first_max_BA_and_existing_restore_evidence",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed12_A_GRU_best.pt_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed12_A_GRU_latest.pt_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed12_A_GRU_history.json_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed12_A_GRU_validation_predictions_private.npz_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed12_A_GRU_checkpoint_verification.json_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed12_A_GRU_first_max_BA_and_existing_restore_evidence",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed12_A_LTC_best.pt_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed12_A_LTC_latest.pt_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed12_A_LTC_history.json_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed12_A_LTC_validation_predictions_private.npz_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed12_A_LTC_checkpoint_verification.json_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed12_A_LTC_first_max_BA_and_existing_restore_evidence",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed12_A_CfC_best.pt_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed12_A_CfC_latest.pt_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed12_A_CfC_history.json_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed12_A_CfC_validation_predictions_private.npz_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed12_A_CfC_checkpoint_verification.json_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed12_A_CfC_first_max_BA_and_existing_restore_evidence",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed12_B_RNN_best.pt_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed12_B_RNN_latest.pt_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed12_B_RNN_history.json_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed12_B_RNN_validation_predictions_private.npz_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed12_B_RNN_checkpoint_verification.json_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed12_B_RNN_first_max_BA_and_existing_restore_evidence",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed12_B_LSTM_best.pt_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed12_B_LSTM_latest.pt_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed12_B_LSTM_history.json_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed12_B_LSTM_validation_predictions_private.npz_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed12_B_LSTM_checkpoint_verification.json_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed12_B_LSTM_first_max_BA_and_existing_restore_evidence",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed12_B_GRU_best.pt_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed12_B_GRU_latest.pt_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed12_B_GRU_history.json_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed12_B_GRU_validation_predictions_private.npz_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed12_B_GRU_checkpoint_verification.json_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed12_B_GRU_first_max_BA_and_existing_restore_evidence",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed12_B_LTC_best.pt_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed12_B_LTC_latest.pt_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed12_B_LTC_history.json_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed12_B_LTC_validation_predictions_private.npz_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed12_B_LTC_checkpoint_verification.json_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed12_B_LTC_first_max_BA_and_existing_restore_evidence",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed12_B_CfC_best.pt_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed12_B_CfC_latest.pt_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed12_B_CfC_history.json_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed12_B_CfC_validation_predictions_private.npz_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed12_B_CfC_checkpoint_verification.json_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_seed12_B_CfC_first_max_BA_and_existing_restore_evidence",
+      "status": "PASS"
+    },
+    {
+      "id": "test_step4a1_preflight_read_only_regression",
+      "status": "PASS"
+    },
+    {
+      "id": "test_step4a1_results_read_only_regression",
+      "status": "PASS"
+    },
+    {
+      "id": "no_torch_or_hmm_import",
+      "status": "PASS"
+    },
+    {
+      "id": "report_runtime_and_reuse_only_smoke",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_metrics_exact20_and_support",
+      "status": "PASS"
+    },
+    {
+      "id": "O1_O2_O3_aggregate60_unique",
+      "status": "PASS"
+    },
+    {
+      "id": "all_previous_files_byte_unchanged",
+      "status": "PASS"
+    }
+  ],
+  "BLOCKED": [
+    "price_source_certification",
+    "historical_18KST_production_PIT"
+  ],
+  "new_training_runner_smoke": "NOT_APPLICABLE_REUSE_ONLY",
+  "protected_files": 1450,
+  "changed_old_files": 0
+}
