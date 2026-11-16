@@ -19,7 +19,7 @@ def find_one(name):
     return options[0]
 
 def run():
-    args=argparse.ArgumentParser();args.add_argument('--full-excel',type=Path);args.add_argument('--full-sheet');args.add_argument('--full-date-column');args.add_argument('--full-close-column');a=args.parse_args()
+    args=argparse.ArgumentParser();args.add_argument('--full-excel',type=Path);args.add_argument('--full-skiprows',type=int,default=0);args.add_argument('--full-sheet');args.add_argument('--full-date-column');args.add_argument('--full-close-column');a=args.parse_args()
     csv=find_one('KOSPI200_누락45일_종가_보완.csv');xlsx=find_one('KOSPI200_누락45일_종가_보완.xlsx');full=a.full_excel or find_one('KOSPI 200 종가.xlsx')
     if csv is None or xlsx is None:raise BlockedError('Required 45-row CSV/XLSX missing; do not create supplements')
     if full is not None and not full.is_file():raise BlockedError('Explicit full Excel path missing')
@@ -33,8 +33,11 @@ def run():
         if not destination.exists():shutil.copy2(p,destination)
     if full:
         if not all([a.full_sheet,a.full_date_column,a.full_close_column]):raise BlockedError('Full Excel requires explicit sheet/date/close column arguments; no guessed mappings')
-        raw_full=pd.read_excel(full,sheet_name=a.full_sheet);full_frame=raw_full.rename(columns={a.full_date_column:'Date',a.full_close_column:'Close'})[['Date','Close']]
+        raw_full=pd.read_excel(full,sheet_name=a.full_sheet,skiprows=a.full_skiprows,header=None,names=['Date','Close','Unused'])
+        if (a.full_date_column,a.full_close_column)!=('Date','Close'):raise BlockedError('Explicit no-header mapping requires Date,Close positional names')
+        full_frame=raw_full[['Date','Close']]
         validated,full_details=validate_prices(full_frame)
+        full_details.update({'sheet':a.full_sheet,'skipped_metadata_rows':a.full_skiprows,'mapping':'A=Date,B=Close; no header','supplier_verified':False})
     else:full_frame=None;full_details=None
     original_path=ROOT/'originals/KOSPI_200.csv';orig=pd.read_csv(original_path,float_precision='round_trip').rename(columns={'종가':'Close'})[['Date','Close']]
     supp=pd.read_csv(csv,float_precision='round_trip');sx=pd.read_excel(xlsx,sheet_name='누락 45일').rename(columns={'날짜 (Date)':'Date','KOSPI 200 종가':'Close'})[['Date','Close']]
@@ -48,6 +51,13 @@ def run():
         compared.to_csv(derived/'kospi_price_reconciliation_private.csv',index=False,float_format='%.17g')
         public=compared.drop(columns=['Close_original','Close_excel','difference']).copy();public['difference']='WITHHELD_SOURCE_LICENSE_UNCONFIRMED'
         conflicts=int(compared['exact_match'].eq(False).sum());performed=len(compared)
+        full_details['common_exact_matches']=int(compared.exact_match.sum())
+        full_details['common_rounded_2dp_matches']=int(compared.rounded_2dp_match.sum())
+        full_details['common_within_1e_minus9_matches']=int(compared.within_1e_minus9.sum())
+        full_details['maximum_absolute_price_difference']=float(compared.difference.abs().max())
+        sv=validate_prices(supp)[0].set_index('Date').Close;fv=validated.set_index('Date').Close
+        full_details['supplement_45_exact_matches']=int(sv.eq(fv.reindex(sv.index)).sum())
+        if full_details['supplement_45_exact_matches']!=45:raise BlockedError('Full Excel and supplement price conflict; no substitution')
     else:
         public=compared;conflicts=None;performed=0
     public.to_csv(m/'kospi_price_reconciliation.csv',index=False)
@@ -78,7 +88,7 @@ def run():
         folds.loc[i,'max_label_end']=str(label.loc[retained,'label_end'].max().date()) if len(t) else ''
         folds.loc[i,'label_end_cutoff_violations']=int(label.loc[retained,'label_end'].ge(pd.Timestamp(row.next_cutoff)).sum()) if row.next_cutoff else 0
     folds=folds.rename(columns={'eligible_samples':'domestic_supplied_value_structural_samples','status':'structural_status'})
-    folds['structural_status']='PASS_USER_SUPPLIED_NUMERIC_SESSION_LABEL_INTEGRITY';folds['official_price_reconciled_samples']='';folds['domestic_PIT_verified_samples']='';folds['external_5feature_PIT_verified_samples']='';folds['execution_status']='BLOCKED_FULL_EXCEL_SOURCE_PIT_RUNTIME'
+    folds['structural_status']='PASS_USER_SUPPLIED_NUMERIC_SESSION_LABEL_INTEGRITY';folds['official_price_reconciled_samples']='';folds['domestic_PIT_verified_samples']='';folds['external_5feature_PIT_verified_samples']='';folds['execution_status']='BLOCKED_SOURCE_PIT_RUNTIME'
     folds.to_csv(m/'step26_rolling_origin_manifest.csv',index=False)
     # Exact formulas unchanged; measure data/calendar effects only, never model metrics.
     old=validate_prices(orig)[0].set_index('Date').Close
@@ -90,7 +100,7 @@ def run():
     artifacts=[]
     for p in sorted(derived.glob('*.csv')):artifacts.append({'file':'data/derived/'+p.name,'sha256':sha256(p),'bytes':p.stat().st_size,'publication':'LOCAL_ONLY_LICENSE_SOURCE_UNCONFIRMED'})
     blocked=[{'id':'FULL_EXCEL_PRESENT','status':'BLOCKED' if not full else 'PASS','reason':'KOSPI 200 종가.xlsx not found' if not full else 'Present'},
-       {'id':'COMMON_3894_PRICE_COMPARISON','status':'BLOCKED' if not full else 'PASS_EXECUTED','reason':'Full Excel missing; zero comparisons; conflict count unknown' if not full else 'Differences recorded, neither source assumed true'},
+       {'id':'COMMON_3894_PRICE_COMPARISON','status':'BLOCKED' if not full else 'PASS','reason':'Full Excel missing; zero comparisons; conflict count unknown' if not full else 'Differences recorded, neither source assumed true'},
        {'id':'OFFICIAL_PRICE_PROVENANCE','status':'BLOCKED','reason':'User-supplied agreement is not official provider/extraction/revision certification'},
        {'id':'DOMESTIC_CLOSE_18KST_AVAILABILITY','status':'BLOCKED','reason':'Original and supplement publication timing unknown'},
        {'id':'EXTERNAL_5FEATURE_PIT','status':'BLOCKED','reason':'Foreign_Net/Nasdaq/SOX availability unverified'},
@@ -106,6 +116,6 @@ def run():
        'model_forward_executed':False,'checkpoint_loaded':False,'new_model_performance_or_pvalues_generated':False,'STEP3_smoke_ready':False,
        'future_target_invariance_contract':'Only labels with label_end<=perturbation cutoff must remain unchanged when prices strictly after that cutoff change. Prices inside a target horizon are expected to affect that target.'}
     save_json(m/'step26_cutoff_label_audit.json',out)
-    save_json(ROOT/'provenance/step26_data_publication.json',{'checked_date_kst':CHECKED,'inputs':inputs,'derived_artifacts':artifacts,'raw_price_target_feature_series_publication_allowed':False,'public_audit_policy':'Dates, flags, input/artifact hashes and aggregate counts only; raw prices and daily labels/features remain local','comparison_policy':'Original prices preserved. Full Excel missing is BLOCKED, not assumed equal or conflict-free.'})
+    save_json(ROOT/'provenance/step26_data_publication.json',{'checked_date_kst':CHECKED,'inputs':inputs,'derived_artifacts':artifacts,'raw_price_target_feature_series_publication_allowed':False,'public_audit_policy':'Dates, flags, input/artifact hashes and aggregate counts only; raw prices and daily labels/features remain local','comparison_policy':'Original prices preserved. Full Excel is a comparison-only source; numeric differences are recorded without substitution.'})
     print(json.dumps({'integrity':integrity,'full_excel_present':full is not None,'price_conflicts':conflicts,'label_audit':summary,'folds':folds[['origin','partition','raw_rows','window_eligible_before_purge','purged_labels','domestic_supplied_value_structural_samples','up_ratio']].to_dict('records')},ensure_ascii=False,indent=2))
 if __name__=='__main__':run()

@@ -28,3 +28,7 @@
 `manifests/step26_rolling_origin_manifest.csv`에는 raw 경계, 첫·마지막 적격 기준일, min/max label_end, purge 전후 수, 클래스 비율과 cutoff 위반 수를 기록했다. 기존 STEP2.5 rolling_origin_manifest.csv는 그대로 보존했다.
 
 국내 구조 적격은 PASS_USER_SUPPLIED_NUMERIC_SESSION_LABEL_INTEGRITY다. official_price_reconciled_samples, domestic_PIT_verified_samples, external_5feature_PIT_verified_samples는 모두 빈칸이며 execution_status는 BLOCKED다. 이 표의 국내 종가 표본 수를 외국인·NASDAQ·SOX까지 사용 가능한 확정5변수 표본 수라고 해석하지 않는다.
+
+## 전체 Excel 수령 후 재검증 (2026-11-16)
+
+전체 Excel 3939세션과 보완45일을 확인했고 공통3894일 가격을 대조했다. 기존 가격은 교체하지 않았으므로 종가·Target·피처 파생파일 및 본문의 국내 구조 표본 수는 그대로다. exact 차이3750건(소수2자리 차이2건)은 가격 대조 보고서에 기록했고 원천 판정은 BLOCKED다. 마지막20세션 UNKNOWN, 2026년 사용0, 외부5피처 PIT 및 STEP3 실행 BLOCKED를 유지한다. 학습이나 새로운 성능·p값 산출은 없었다.

@@ -1,8 +1,8 @@
 {
-  "scope": "Historical 23+11 implementation tests retained; 18 new price/label/feature/data-only tests; no model scoring",
-  "passed": 52,
+  "scope": "Historical 23+11 implementation tests retained; 19 new price/label/feature/data-only tests; no model scoring",
+  "passed": 53,
   "failed": 0,
-  "blocked_gates": 7,
+  "blocked_gates": 6,
   "tests": [
     {
       "test": "test_step2.Step2Tests.test_01_original_hashes",
@@ -211,19 +211,13 @@
     {
       "test": "test_step26.Step26Tests.test_18_external_PIT_and_training_gates_remain_blocked",
       "status": "PASS"
+    },
+    {
+      "test": "test_step26.Step26Tests.test_19_full_workbook_complete_and_45_prices_match",
+      "status": "PASS"
     }
   ],
   "BLOCKED": [
-    {
-      "id": "FULL_EXCEL_PRESENT",
-      "status": "BLOCKED",
-      "reason": "KOSPI 200 종가.xlsx not found"
-    },
-    {
-      "id": "COMMON_3894_PRICE_COMPARISON",
-      "status": "BLOCKED",
-      "reason": "Full Excel missing; zero comparisons; conflict count unknown"
-    },
     {
       "id": "OFFICIAL_PRICE_PROVENANCE",
       "status": "BLOCKED",
@@ -248,6 +242,11 @@
       "id": "PUBLIC_RAW_DATA_LICENSE",
       "status": "BLOCKED",
       "reason": "No raw/derived prices or full daily targets/features published"
+    },
+    {
+      "id": "PRICE_CONFLICT_RESOLUTION",
+      "status": "BLOCKED",
+      "reason": "Observed price differences require review; no silent substitution"
     }
   ],
   "training_enabled": false,

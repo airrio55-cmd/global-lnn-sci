@@ -27,7 +27,10 @@ class Step26Tests(unittest.TestCase):
  def test_04_full_excel_unavailable_is_blocked_not_equal(self):
   # The missing actual input is reported as BLOCKED, never a false successful comparison.
   m=full_excel_comparison(self.original,None,calendar=self.cal)
-  self.assertEqual(len(m),3894);self.assertTrue(m.status.eq('BLOCKED_FULL_EXCEL_MISSING').all());self.assertTrue(m.exact_match.isna().all());self.assertIsNone(self.audit['full_excel_price_conflicts'])
+  self.assertEqual(len(m),3894);self.assertTrue(m.status.eq('BLOCKED_FULL_EXCEL_MISSING').all());self.assertTrue(m.exact_match.isna().all())
+ def test_19_full_workbook_complete_and_45_prices_match(self):
+  d=self.audit['full_excel_validation'];self.assertEqual(self.audit['full_excel_common_comparisons_performed'],3894);self.assertEqual(d['supplement_45_exact_matches'],45)
+  m=pd.read_csv(R/'manifests/kospi_price_reconciliation.csv');self.assertEqual(len(m),3894);self.assertFalse(m.exact_match.isna().any())
  def test_05_no_official_source_overclaim(self):
   x=self.completed.query("original_or_supplement=='supplement'")
   self.assertTrue(x.source_type.eq('USER_SUPPLIED_VERIFIED_MATCH').all());self.assertFalse(self.audit['integrity']['official_source_verified']);self.assertFalse(self.completed.source_type.eq('KRX_OFFICIAL_VERIFIED').any())

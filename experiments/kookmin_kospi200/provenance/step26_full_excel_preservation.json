@@ -1,0 +1,114 @@
+{
+  "checked_date": "2026-11-16",
+  "checks": [
+    {
+      "file": "originals/kospi200_gpu_friendly_sota_fixed_20260311_junho_DEVICE_fixed_HMM_updated(10개시드_20일).ipynb",
+      "before_sha256": "b9e8542fc5783bc5dc734ddfd7bdfe69db26d4b540cde93ae3a722596485c1e7",
+      "after_sha256": "b9e8542fc5783bc5dc734ddfd7bdfe69db26d4b540cde93ae3a722596485c1e7",
+      "status": "PASS"
+    },
+    {
+      "file": "originals/Nasdaq.csv",
+      "before_sha256": "802a49d6474cf5f497727d413515be15e783789098cdff5f9af3137151da2b6f",
+      "after_sha256": "802a49d6474cf5f497727d413515be15e783789098cdff5f9af3137151da2b6f",
+      "status": "PASS"
+    },
+    {
+      "file": "originals/KOSPI_200.csv",
+      "before_sha256": "7612a3ea53427dcf0148ab6b1e22f34500e6bff6fe1f23e2da793e40b0b82c50",
+      "after_sha256": "7612a3ea53427dcf0148ab6b1e22f34500e6bff6fe1f23e2da793e40b0b82c50",
+      "status": "PASS"
+    },
+    {
+      "file": "originals/Foreigner_Net.csv",
+      "before_sha256": "091e61ed5311108628ee18aa2d98c4f374b21a51d10986a0b5e492de5caf2cf8",
+      "after_sha256": "091e61ed5311108628ee18aa2d98c4f374b21a51d10986a0b5e492de5caf2cf8",
+      "status": "PASS"
+    },
+    {
+      "file": "originals/processed_regression_data.csv",
+      "before_sha256": "70dc3634b11fbf9acf34e2b78933d4259e4741eb4c9a8946b17e94362775d17e",
+      "after_sha256": "70dc3634b11fbf9acf34e2b78933d4259e4741eb4c9a8946b17e94362775d17e",
+      "status": "PASS"
+    },
+    {
+      "file": "originals/kospi200_gpu_friendly_sota_fixed_20260309_junho_DEVICE_fixed_HMM_updated_11models_HMMsafe_mcnemar(단일시드_20일).ipynb",
+      "before_sha256": "aaf5232ce74a3d67ee863eac817e2c7f167941099e4d3166ed4e6a39b7c19a63",
+      "after_sha256": "aaf5232ce74a3d67ee863eac817e2c7f167941099e4d3166ed4e6a39b7c19a63",
+      "status": "PASS"
+    },
+    {
+      "file": "originals/SOX.csv",
+      "before_sha256": "4e8c27c9890ff1e94642c3c5a2ed4a6b6bd8eaa7ddbe3cc15e3203c57b4d6a44",
+      "after_sha256": "4e8c27c9890ff1e94642c3c5a2ed4a6b6bd8eaa7ddbe3cc15e3203c57b4d6a44",
+      "status": "PASS"
+    },
+    {
+      "file": "originals/kospi200_gpu_friendly_sota_fixed_20260311_junho_DEVICE_fixed_HMM_updated(5개시드_20일).ipynb",
+      "before_sha256": "5574c75c7343c308859c850d8f5ea5e697a49a40c82ee47165c3e1c05ef5c625",
+      "after_sha256": "5574c75c7343c308859c850d8f5ea5e697a49a40c82ee47165c3e1c05ef5c625",
+      "status": "PASS"
+    },
+    {
+      "file": "reports/STEP2_PREFLIGHT_KO.md",
+      "before_sha256": "66ea6ae8b513b5a14c439c78ca272cd3ca8065d6658ec502b4a328ff6c20defe",
+      "after_sha256": "66ea6ae8b513b5a14c439c78ca272cd3ca8065d6658ec502b4a328ff6c20defe",
+      "status": "PASS"
+    },
+    {
+      "file": "reports/STEP25_READINESS_KO.md",
+      "before_sha256": "da96f484f2474263a84bc6ad43ef33bb2b6c12d45e2238887a8c5b6e3257a90d",
+      "after_sha256": "da96f484f2474263a84bc6ad43ef33bb2b6c12d45e2238887a8c5b6e3257a90d",
+      "status": "PASS"
+    },
+    {
+      "file": "reports/STEP25_BLOCKERS_KO.md",
+      "before_sha256": "a28f3296eaa1a20232cf27aacf3616359208a0a1f688c1293ad9717abdfaff9b",
+      "after_sha256": "a28f3296eaa1a20232cf27aacf3616359208a0a1f688c1293ad9717abdfaff9b",
+      "status": "PASS"
+    },
+    {
+      "file": "reports/STEP25_DATA_VERIFICATION_KO.md",
+      "before_sha256": "408058c868d965578b9ec4d5e7ac398cc1183fd1f228fb1d9245f1e0cc9ac662",
+      "after_sha256": "408058c868d965578b9ec4d5e7ac398cc1183fd1f228fb1d9245f1e0cc9ac662",
+      "status": "PASS"
+    },
+    {
+      "file": "reports/STEP2_BLOCKERS_KO.md",
+      "before_sha256": "ff79f8d9ebf4b64a43745bda451b9ad2b2e64f8ccd5e437dce5233c06132b8e8",
+      "after_sha256": "ff79f8d9ebf4b64a43745bda451b9ad2b2e64f8ccd5e437dce5233c06132b8e8",
+      "status": "PASS"
+    },
+    {
+      "file": "reports/STEP2_REPORT_KO.md",
+      "before_sha256": "45f9da5d723166c75aa3dd8594ad9aebbaf73bea3f89375aad125743bdd87c7f",
+      "after_sha256": "45f9da5d723166c75aa3dd8594ad9aebbaf73bea3f89375aad125743bdd87c7f",
+      "status": "PASS"
+    },
+    {
+      "file": "data/derived/kospi200_close_completed_2010_2025.csv",
+      "before_sha256": "34d93185f9a6a2083af6d1e6530dbbf1b696b36c65c67ae85ea1745de04b7369",
+      "after_sha256": "34d93185f9a6a2083af6d1e6530dbbf1b696b36c65c67ae85ea1745de04b7369",
+      "status": "PASS"
+    },
+    {
+      "file": "data/derived/kospi200_targets_20sessions_2010_2025.csv",
+      "before_sha256": "37eb80f7e181793d7b28d918262c7720545ec2930bdc8f70f4917eff6b147127",
+      "after_sha256": "37eb80f7e181793d7b28d918262c7720545ec2930bdc8f70f4917eff6b147127",
+      "status": "PASS"
+    },
+    {
+      "file": "data/derived/kospi200_local_features_2010_2025.csv",
+      "before_sha256": "43f43c9d4b908b49d97022595708a1fb4fa4c8af36472b09b61ac263707dc437",
+      "after_sha256": "43f43c9d4b908b49d97022595708a1fb4fa4c8af36472b09b61ac263707dc437",
+      "status": "PASS"
+    }
+  ],
+  "source": "User attachment; no authenticated public supplier URL",
+  "metadata_claims": {
+    "index": "I.101",
+    "item": "I31000040F",
+    "reported_last_updated": "2026-11-16 11:28:12",
+    "historical_available_at_verified": false
+  }
+}

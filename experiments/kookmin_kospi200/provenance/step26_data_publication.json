@@ -3,10 +3,10 @@
   "inputs": [
     {
       "file": "KOSPI 200 종가.xlsx",
-      "exists": false,
-      "sha256": null,
-      "bytes": null,
-      "status": "BLOCKED_MISSING"
+      "exists": true,
+      "sha256": "13e34b707d64585fb2f94a828cd387fb89956ae935e27b4ccc9c02e2a2fbdd21",
+      "bytes": 81443,
+      "status": "PASS_PRESENT"
     },
     {
       "file": "KOSPI200_누락45일_종가_보완.csv",
@@ -47,9 +47,15 @@
       "sha256": "37eb80f7e181793d7b28d918262c7720545ec2930bdc8f70f4917eff6b147127",
       "bytes": 903015,
       "publication": "LOCAL_ONLY_LICENSE_SOURCE_UNCONFIRMED"
+    },
+    {
+      "file": "data/derived/kospi_price_reconciliation_private.csv",
+      "sha256": "83467999afed3e0b49ebf205c293a949d0815ecbdd6112167f6be02bde0d845c",
+      "bytes": 455849,
+      "publication": "LOCAL_ONLY_LICENSE_SOURCE_UNCONFIRMED"
     }
   ],
   "raw_price_target_feature_series_publication_allowed": false,
   "public_audit_policy": "Dates, flags, input/artifact hashes and aggregate counts only; raw prices and daily labels/features remain local",
-  "comparison_policy": "Original prices preserved. Full Excel missing is BLOCKED, not assumed equal or conflict-free."
+  "comparison_policy": "Original prices preserved. Full Excel is a comparison-only source; numeric differences are recorded without substitution."
 }

@@ -8,10 +8,10 @@
   "input_files": [
     {
       "file": "KOSPI 200 종가.xlsx",
-      "exists": false,
-      "sha256": null,
-      "bytes": null,
-      "status": "BLOCKED_MISSING"
+      "exists": true,
+      "sha256": "13e34b707d64585fb2f94a828cd387fb89956ae935e27b4ccc9c02e2a2fbdd21",
+      "bytes": 81443,
+      "status": "PASS_PRESENT"
     },
     {
       "file": "KOSPI200_누락45일_종가_보완.csv",
@@ -28,9 +28,27 @@
       "status": "PASS_PRESENT"
     }
   ],
-  "full_excel_validation": null,
-  "full_excel_common_comparisons_performed": 0,
-  "full_excel_price_conflicts": null,
+  "full_excel_validation": {
+    "raw_rows": 3939,
+    "in_period_rows": 3939,
+    "excluded_before_2010": 0,
+    "excluded_2026_or_later": 0,
+    "source_sorted_ascending": true,
+    "source_sorted_descending": false,
+    "invalid_in_period_prices": 0,
+    "duplicate_dates": 0,
+    "sheet": "Sheet1",
+    "skipped_metadata_rows": 16,
+    "mapping": "A=Date,B=Close; no header",
+    "supplier_verified": false,
+    "common_exact_matches": 144,
+    "common_rounded_2dp_matches": 3892,
+    "common_within_1e_minus9_matches": 144,
+    "maximum_absolute_price_difference": 2.5800024414062364,
+    "supplement_45_exact_matches": 45
+  },
+  "full_excel_common_comparisons_performed": 3894,
+  "full_excel_price_conflicts": 3750,
   "integrity": {
     "original": {
       "raw_rows": 3935,
@@ -153,6 +171,12 @@
       "sha256": "37eb80f7e181793d7b28d918262c7720545ec2930bdc8f70f4917eff6b147127",
       "bytes": 903015,
       "publication": "LOCAL_ONLY_LICENSE_SOURCE_UNCONFIRMED"
+    },
+    {
+      "file": "data/derived/kospi_price_reconciliation_private.csv",
+      "sha256": "83467999afed3e0b49ebf205c293a949d0815ecbdd6112167f6be02bde0d845c",
+      "bytes": 455849,
+      "publication": "LOCAL_ONLY_LICENSE_SOURCE_UNCONFIRMED"
     }
   ],
   "source_url": null,
@@ -188,13 +212,13 @@
   "gate_checks": [
     {
       "id": "FULL_EXCEL_PRESENT",
-      "status": "BLOCKED",
-      "reason": "KOSPI 200 종가.xlsx not found"
+      "status": "PASS",
+      "reason": "Present"
     },
     {
       "id": "COMMON_3894_PRICE_COMPARISON",
-      "status": "BLOCKED",
-      "reason": "Full Excel missing; zero comparisons; conflict count unknown"
+      "status": "PASS",
+      "reason": "Differences recorded, neither source assumed true"
     },
     {
       "id": "OFFICIAL_PRICE_PROVENANCE",
@@ -220,6 +244,11 @@
       "id": "PUBLIC_RAW_DATA_LICENSE",
       "status": "BLOCKED",
       "reason": "No raw/derived prices or full daily targets/features published"
+    },
+    {
+      "id": "PRICE_CONFLICT_RESOLUTION",
+      "status": "BLOCKED",
+      "reason": "Observed price differences require review; no silent substitution"
     }
   ],
   "B02_restoration_status": "PASS_USER_SUPPLIED_VERIFIED_MATCH",

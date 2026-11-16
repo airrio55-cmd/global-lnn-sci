@@ -38,3 +38,7 @@
 - 실제 session_id+20으로3919known/20UNKNOWN. 끝20일은2025-12-02~12-30, 마지막 기준일12-01. 원본 관측행20 horizon과의 날짜차이664건을 새 타깃에서는0건으로 해소했다. 공통known3874개 중47개 Target이 달라졌다. 모델 성능/p값은 생성하지 않았다.
 - 원래 local feature 식을 유지하여 warm-up40일 제외3899행, t포함20window·known label 적격3860개를 계산했다.5개 origin별 domestic supplied-value structural counts와 official/PIT 미확정을 별도로 기록했다.
 - reports/STEP26_*.md4개, 요청 manifest·provenance·테스트·재현코드 추가. raw/derived 가격·전체 Target/피처는 로컬 보존하고 공개 GitHub에는 재배포하지 않는다. .gitignore로 보호한다. 원본8개와 보완2개 해시, 과거 보고/결과, Notebook·V14/V15·lock·main은 보존한다.
+
+## STEP2.6 전체 Excel 추가 검증 — 2026-11-16
+
+전체3939세션·보완45일 일치 확인. 공통3894일 exact144건, 소수2자리3892건 일치; 두 자리 불일치2건은 별도 기록하고 원본 가격 유지. 전체파일 부재 차단을 해제했으나 가격 원천·PIT·runtime·라이선스는 미확정이다. 원자료와 가격 상세표는 공개하지 않는다. 학습/HMM fit 비활성 유지.

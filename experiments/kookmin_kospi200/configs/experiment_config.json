@@ -262,8 +262,8 @@
     "test_based_tuning_allowed": false
   },
   "step26": {
-    "execution_status": "BLOCKED_FULL_EXCEL_PROVENANCE_PIT_RUNTIME",
-    "full_excel_status": "BLOCKED_MISSING",
+    "execution_status": "BLOCKED_PRICE_CONFLICT_PROVENANCE_PIT_RUNTIME",
+    "full_excel_status": "PASS_PRESENT_3939_SESSIONS",
     "domestic_price_integrity": "PASS_USER_SUPPLIED_NUMERIC_SESSION_INTEGRITY",
     "domestic_derived_file": "data/derived/kospi200_close_completed_2010_2025.csv",
     "official_price_certification": false,

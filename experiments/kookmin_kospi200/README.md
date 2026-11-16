@@ -36,8 +36,12 @@
 
 ## STEP2.6 최신 상태
 
-전체 `KOSPI 200 종가.xlsx`는 작업 환경에 없다. 공통3894일의 신규 Excel 가격 대조·충돌 검사는 BLOCKED다. 보완 CSV/XLSX의45개 값은 서로 일치하므로 중복 합산 없이 기존 종가에 추가했다. 국내 파생물3939행은 USER_SUPPLIED 수준이며 공식 원천·PIT 인증은 아니다.
+전체 `KOSPI 200 종가.xlsx`를 수령하여3939세션과 공통3894일 가격 대조를 완료했다. 가격 차이의 원천 판정은 BLOCKED다. 보완 CSV/XLSX의45개 값은 서로 일치하므로 중복 합산 없이 기존 종가에 추가했다. 국내 파생물3939행은 USER_SUPPLIED 수준이며 공식 원천·PIT 인증은 아니다.
 
 최신 문서: reports/STEP26_PRICE_RECONCILIATION_KO.md, STEP26_LABEL_AUDIT_KO.md, STEP26_ROLLING_ORIGIN_KO.md, STEP26_BLOCKERS_KO.md. 국내 수치·날짜·label 구조적격과 외부5피처 PIT 적격을 구분한다. 학습은 차단 상태다.
 
-로컬 데이터 생성: `python experiments/kookmin_kospi200/tools/step26_reconcile.py`. 기존23+11검사를 보존하며 신규18검사를 함께 실행: `python experiments/kookmin_kospi200/tools/step26_tests.py`. 현재 공급처/라이선스 미확정이므로 data/user_supplied·data/derived의 가격·전체 일별 Target/피처는 공개 GitHub에 올리지 않는다. 공개 원천의 세션 달력, 날짜/상태 감사, 집계와 해시만 포함한다.
+로컬 데이터 생성: `python experiments/kookmin_kospi200/tools/step26_reconcile.py --full-sheet Sheet1 --full-skiprows 16 --full-date-column Date --full-close-column Close`. 기존23+11검사를 보존하며 신규19검사를 함께 실행: `python experiments/kookmin_kospi200/tools/step26_tests.py`. 현재 공급처/라이선스 미확정이므로 data/user_supplied·data/derived의 가격·전체 일별 Target/피처는 공개 GitHub에 올리지 않는다. 공개 원천의 세션 달력, 날짜/상태 감사, 집계와 해시만 포함한다.
+
+## STEP2.6 전체 Excel 추가 검증 — 2026-11-16
+
+전체3939세션·보완45일 일치 확인. 공통3894일 exact144건, 소수2자리3892건 일치; 두 자리 불일치2건은 별도 기록하고 원본 가격 유지. 전체파일 부재 차단을 해제했으나 가격 원천·PIT·runtime·라이선스는 미확정이다. 원자료와 가격 상세표는 공개하지 않는다. 학습/HMM fit 비활성 유지.
