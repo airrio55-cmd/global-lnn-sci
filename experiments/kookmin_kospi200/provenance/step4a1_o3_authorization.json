@@ -1,0 +1,23 @@
+{
+  "approved": true,
+  "approved_by": "user",
+  "approval_reference": "Current user STEP4A-1 pasted request: O3 only, Seeds2/12, A/B,5 models, max20 CPU Train/Validation fits",
+  "request_file_sha256": "01e1b0039b8dbce4e008af848b642c7006363d3436af3d0d033e66a9cd939e3f",
+  "approved_at_kst": "2026-11-16T20:45:33.299325+09:00",
+  "scope": "STEP4A1_O3_AB_SEEDS2_12_F1_CPU",
+  "config_sha256": "101f1ef711aa963f5eecc7d85b53fff0a5acf376d4799d1bbc942e5c2053d854",
+  "worker_sha256": "00947e4d33be7d9b891ea18441fbfff0d37b648befa9bfae65614a354fd255ad",
+  "manager_sha256": "436d98b9a5fd28271c169d20f287fb626a9d4619f7407dfe7f141b3365def80c",
+  "preflight_sha256": "84d3b1c0540d71ed835a337e056234972bec1659d079992e412d6140bb7f8ffa",
+  "master_config_sha256": "f4ea7a18d7812b00b8c581191a110f63a6799a22e066484ec251ee32f7912c5c",
+  "max_new_fits": 20,
+  "permits_Test": false,
+  "permits_HMM_fit": false,
+  "permits_GPU": false,
+  "old40_refit_authorized": false,
+  "acknowledges_BOTH_UNVERIFIED": true,
+  "permits_O4_O5": false,
+  "permits_seed22plus": false,
+  "permits_tau_forward": false,
+  "permits_confirmatory_pvalues": false
+}

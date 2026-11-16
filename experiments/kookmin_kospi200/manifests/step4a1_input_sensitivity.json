@@ -1,0 +1,32 @@
+{
+  "source_status": "BOTH_UNVERIFIED",
+  "price_selected": false,
+  "rows": [
+    {
+      "origin": "O3",
+      "partition": "train",
+      "shape": [
+        2883,
+        20,
+        2
+      ],
+      "float32_elements_different": 115260,
+      "windows_with_any_difference": 2883,
+      "maximum_absolute_scaled_feature_difference": 0.5567907765507698,
+      "label_differences": 0
+    },
+    {
+      "origin": "O3",
+      "partition": "validation",
+      "shape": [
+        226,
+        20,
+        2
+      ],
+      "float32_elements_different": 9040,
+      "windows_with_any_difference": 226,
+      "maximum_absolute_scaled_feature_difference": 0.0003190040588378906,
+      "label_differences": 0
+    }
+  ]
+}
