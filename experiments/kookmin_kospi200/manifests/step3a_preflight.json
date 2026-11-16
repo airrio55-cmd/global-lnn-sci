@@ -1,0 +1,351 @@
+{
+  "stage": "STEP3A",
+  "prepared_at_kst": "2026-11-16T15:32:01.337798+09:00",
+  "run_directory": "data/derived/step3a_pilot_20261116T153159_KST",
+  "calendar": {
+    "full_file": "manifests/krx_sessions_2010_2025.csv",
+    "full_sha256": "c426702db216604d70f15973654d204a3e6afdb8cef1ef1f62169bb0a0667d6c",
+    "full_sessions": 3939,
+    "staged_file": "data/derived/step3a_pilot_20261116T153159_KST/inputs/calendar_O1_private.csv",
+    "staged_sha256": "2ddaea353f706136a36cac6057fa34caa29f6bc36e9afb1a3503c526fd10b5e2",
+    "staged_sessions": 2714
+  },
+  "source_inputs": [
+    {
+      "file": "originals/KOSPI_200.csv",
+      "sha256": "7612a3ea53427dcf0148ab6b1e22f34500e6bff6fe1f23e2da793e40b0b82c50",
+      "status": "PASS",
+      "access": "byte hash only"
+    },
+    {
+      "file": "originals/processed_regression_data.csv",
+      "sha256": "70dc3634b11fbf9acf34e2b78933d4259e4741eb4c9a8946b17e94362775d17e",
+      "status": "PASS",
+      "access": "byte hash only"
+    },
+    {
+      "file": "originals/Foreigner_Net.csv",
+      "sha256": "091e61ed5311108628ee18aa2d98c4f374b21a51d10986a0b5e492de5caf2cf8",
+      "status": "PASS",
+      "access": "byte hash only"
+    },
+    {
+      "file": "originals/SOX.csv",
+      "sha256": "4e8c27c9890ff1e94642c3c5a2ed4a6b6bd8eaa7ddbe3cc15e3203c57b4d6a44",
+      "status": "PASS",
+      "access": "byte hash only"
+    },
+    {
+      "file": "originals/kospi200_gpu_friendly_sota_fixed_20260311_junho_DEVICE_fixed_HMM_updated(5개시드_20일).ipynb",
+      "sha256": "5574c75c7343c308859c850d8f5ea5e697a49a40c82ee47165c3e1c05ef5c625",
+      "status": "PASS",
+      "access": "byte hash only"
+    },
+    {
+      "file": "originals/kospi200_gpu_friendly_sota_fixed_20260309_junho_DEVICE_fixed_HMM_updated_11models_HMMsafe_mcnemar(단일시드_20일).ipynb",
+      "sha256": "aaf5232ce74a3d67ee863eac817e2c7f167941099e4d3166ed4e6a39b7c19a63",
+      "status": "PASS",
+      "access": "byte hash only"
+    },
+    {
+      "file": "originals/Nasdaq.csv",
+      "sha256": "802a49d6474cf5f497727d413515be15e783789098cdff5f9af3137151da2b6f",
+      "status": "PASS",
+      "access": "byte hash only"
+    },
+    {
+      "file": "originals/kospi200_gpu_friendly_sota_fixed_20260311_junho_DEVICE_fixed_HMM_updated(10개시드_20일).ipynb",
+      "sha256": "b9e8542fc5783bc5dc734ddfd7bdfe69db26d4b540cde93ae3a722596485c1e7",
+      "status": "PASS",
+      "access": "byte hash only"
+    },
+    {
+      "file": "originals/KOSPI_200.csv",
+      "sha256": "7612a3ea53427dcf0148ab6b1e22f34500e6bff6fe1f23e2da793e40b0b82c50",
+      "status": "PASS",
+      "access": "byte hash only"
+    },
+    {
+      "file": "data/user_supplied/KOSPI 200 종가.xlsx",
+      "sha256": "13e34b707d64585fb2f94a828cd387fb89956ae935e27b4ccc9c02e2a2fbdd21",
+      "status": "PASS",
+      "access": "byte hash only"
+    },
+    {
+      "file": "data/user_supplied/KOSPI200_누락45일_종가_보완.csv",
+      "sha256": "86ec5203ab99d931688627c380bce5b81bf416ff204e518772aa54a9ed71d513",
+      "status": "PASS",
+      "access": "byte hash only"
+    },
+    {
+      "file": "data/user_supplied/KOSPI200_누락45일_종가_보완.xlsx",
+      "sha256": "db2e6e049e89ef2563a0ada75f043bc65d3fa576e66ac5d5ba00229111af25ef",
+      "status": "PASS",
+      "access": "byte hash only"
+    }
+  ],
+  "datasets": {
+    "A": {
+      "full_candidate_file": "data/derived/step28_candidate_A_close_private.csv",
+      "full_candidate_sha256": "187c988b63f8e555d2e3da5c779a3e409eb6df62386d3625fd7c2f9f72d59551",
+      "full_session_count_verified_by_prior_audit_and_same_file_hash": 3939,
+      "price_file": "data/derived/step3a_pilot_20261116T153159_KST/inputs/candidate_A_O1_prices_private.csv",
+      "price_sha256": "2dd8d12663c68a9fa296e918104f15dfe5fda18b7eae9619829aad1d3398de07",
+      "array_file": "data/derived/step3a_pilot_20261116T153159_KST/inputs/candidate_A_O1_arrays_private.npz",
+      "array_sha256": "7075dcb22bfd9dbba0799d98c2a1acc701a9e6b74d75c20e9d6fa5fa1d3cfb14",
+      "date_file": "data/derived/step3a_pilot_20261116T153159_KST/inputs/candidate_A_O1_dates_private.json",
+      "date_sha256": "b3fab6b95886da517698e023443ffd301f48daa481007aa13f8a178d4d18392d",
+      "metadata_file": "data/derived/step3a_pilot_20261116T153159_KST/inputs/candidate_A_O1_metadata_private.json",
+      "metadata_sha256": "ff8a33d33c4dc745c7ec5c690512c1980c1e9482034d4bc8264a380a6c659202",
+      "date_information_sha256": "299bdd3c84031b36c02797eb577ebf6028768c1aa229b7227016aeb9190393b9",
+      "metadata": {
+        "price_rows": 2714,
+        "price_start": "2010-01-04",
+        "price_end": "2020-12-30",
+        "test_price_rows_read": 0,
+        "train_boundary_start": "2010-01-04",
+        "train_boundary_end": "2019-12-30",
+        "validation_boundary_start": "2020-01-02",
+        "validation_boundary_end": "2020-12-30",
+        "train_samples": 2387,
+        "validation_samples": 228,
+        "train_purged": 20,
+        "validation_unknown_excluded": 20,
+        "train_first_sample": "2010-03-30",
+        "train_last_sample": "2019-11-29",
+        "validation_first_sample": "2020-01-02",
+        "validation_last_sample": "2020-12-01",
+        "train_max_label_end": "2019-12-30",
+        "validation_max_label_end": "2020-12-30",
+        "train_label_cutoff_violations": 0,
+        "validation_future_endpoint_violations": 0,
+        "feature_order": [
+          "Log_Ret",
+          "Disparity"
+        ],
+        "auxiliary_not_model_input": [
+          "Vol_Regime"
+        ],
+        "window": 20,
+        "include_t": true,
+        "common_Vol_Regime_window_mask": true,
+        "2026_observations_used": 0,
+        "scaler": {
+          "fit_start": "2010-03-03",
+          "fit_end": "2019-11-29",
+          "fit_rows": 2406,
+          "feature_order": [
+            "Log_Ret",
+            "Disparity"
+          ],
+          "source_partition": "train",
+          "mean": [
+            0.00011192089798204888,
+            0.0012878617574139703
+          ],
+          "scale": [
+            0.009832339633483981,
+            0.023295956442666917
+          ],
+          "var": [
+            9.66749026681799e-05,
+            0.0005427015865786342
+          ]
+        },
+        "class_counts": {
+          "train": {
+            "0": 1071,
+            "1": 1316
+          },
+          "validation": {
+            "0": 70,
+            "1": 158
+          }
+        }
+      },
+      "provider_status": "BOTH_UNVERIFIED",
+      "production_PIT_status": "BLOCKED",
+      "price_selected_as_main": false
+    },
+    "B": {
+      "full_candidate_file": "data/derived/step28_candidate_B_close_private.csv",
+      "full_candidate_sha256": "c7c9bb434605d240e1791c76fb2a270479d649444cf874c68aa097e2c0a337ef",
+      "full_session_count_verified_by_prior_audit_and_same_file_hash": 3939,
+      "price_file": "data/derived/step3a_pilot_20261116T153159_KST/inputs/candidate_B_O1_prices_private.csv",
+      "price_sha256": "46ef9a2e3f02773c6ca2562e688db75e05da0b948ecdfcf74ceec137ac3d6822",
+      "array_file": "data/derived/step3a_pilot_20261116T153159_KST/inputs/candidate_B_O1_arrays_private.npz",
+      "array_sha256": "64c1f057e8ee93381616d4b3ae6b7a4b932d119d0ec0dc8ea88c80a77efb4a1c",
+      "date_file": "data/derived/step3a_pilot_20261116T153159_KST/inputs/candidate_B_O1_dates_private.json",
+      "date_sha256": "b3fab6b95886da517698e023443ffd301f48daa481007aa13f8a178d4d18392d",
+      "metadata_file": "data/derived/step3a_pilot_20261116T153159_KST/inputs/candidate_B_O1_metadata_private.json",
+      "metadata_sha256": "836f05c505e4dff65c3c75969cd4c0dcd7fa3b7e9509e8f9eff11b277bddd74f",
+      "date_information_sha256": "299bdd3c84031b36c02797eb577ebf6028768c1aa229b7227016aeb9190393b9",
+      "metadata": {
+        "price_rows": 2714,
+        "price_start": "2010-01-04",
+        "price_end": "2020-12-30",
+        "test_price_rows_read": 0,
+        "train_boundary_start": "2010-01-04",
+        "train_boundary_end": "2019-12-30",
+        "validation_boundary_start": "2020-01-02",
+        "validation_boundary_end": "2020-12-30",
+        "train_samples": 2387,
+        "validation_samples": 228,
+        "train_purged": 20,
+        "validation_unknown_excluded": 20,
+        "train_first_sample": "2010-03-30",
+        "train_last_sample": "2019-11-29",
+        "validation_first_sample": "2020-01-02",
+        "validation_last_sample": "2020-12-01",
+        "train_max_label_end": "2019-12-30",
+        "validation_max_label_end": "2020-12-30",
+        "train_label_cutoff_violations": 0,
+        "validation_future_endpoint_violations": 0,
+        "feature_order": [
+          "Log_Ret",
+          "Disparity"
+        ],
+        "auxiliary_not_model_input": [
+          "Vol_Regime"
+        ],
+        "window": 20,
+        "include_t": true,
+        "common_Vol_Regime_window_mask": true,
+        "2026_observations_used": 0,
+        "scaler": {
+          "fit_start": "2010-03-03",
+          "fit_end": "2019-11-29",
+          "fit_rows": 2406,
+          "feature_order": [
+            "Log_Ret",
+            "Disparity"
+          ],
+          "source_partition": "train",
+          "mean": [
+            0.00011192090461419224,
+            0.0012878617536748952
+          ],
+          "scale": [
+            0.009832339620052257,
+            0.023295956214187254
+          ],
+          "var": [
+            9.667490240404937e-05,
+            0.0005427015759333298
+          ]
+        },
+        "class_counts": {
+          "train": {
+            "0": 1071,
+            "1": 1316
+          },
+          "validation": {
+            "0": 70,
+            "1": 158
+          }
+        }
+      },
+      "provider_status": "BOTH_UNVERIFIED",
+      "production_PIT_status": "BLOCKED",
+      "price_selected_as_main": false
+    }
+  },
+  "gates": [
+    {
+      "id": "whole_input_SHA256",
+      "status": "PASS",
+      "evidence": "All original/source/candidate hashes match preserved evidence"
+    },
+    {
+      "id": "A_B_composition_provenance",
+      "status": "PASS",
+      "evidence": "Prior A=original3894+45 once; B=Excel3939; hashes identical; sources remain unverified"
+    },
+    {
+      "id": "official_3939_sessions",
+      "status": "PASS",
+      "evidence": "Prior full comparison + immutable full file identity; O1 prefix2714 dates/IDs rechecked directly"
+    },
+    {
+      "id": "no_2026_observations",
+      "status": "PASS",
+      "evidence": "Only <=2020 price rows parsed into staged inputs"
+    },
+    {
+      "id": "exact_Train_Validation_boundaries",
+      "status": "PASS",
+      "evidence": "Train2010-2019/Validation2020; 2387/228 eligible for both"
+    },
+    {
+      "id": "label_purging",
+      "status": "PASS",
+      "evidence": "20 Train labels purged; strict label_end before Validation start; violations0"
+    },
+    {
+      "id": "future_endpoint_block",
+      "status": "PASS",
+      "evidence": "Final20 Validation labels unknown/excluded; max endpoint2020-12-30"
+    },
+    {
+      "id": "Train_only_scaler",
+      "status": "PASS",
+      "evidence": "Fit union of retained Train input dates only; 2406 rows ending2019-11-29"
+    },
+    {
+      "id": "window_alignment",
+      "status": "PASS",
+      "evidence": "20 actual sessions t-19..t; F1 order preserved; common Vol_Regime mask"
+    },
+    {
+      "id": "Test_isolation",
+      "status": "PASS",
+      "evidence": "Source reader consumes exactly2714 prefix rows; no post-2020 price row iteration; runtime staged whitelist"
+    },
+    {
+      "id": "five_model_CPU_synthetic_compatibility",
+      "status": "PASS",
+      "evidence": "STEP29 five models70checksPASS; pinned environment unchanged"
+    },
+    {
+      "id": "Pilot_authorization_budget",
+      "status": "PASS",
+      "evidence": "Current user explicit retrospective O1 A/B F1 CPU authorization; fixed10 fits/100epochs/patience10"
+    }
+  ],
+  "all_execution_preflight_gates_PASS": true,
+  "source_PIT_exception": "User explicitly authorizes retrospective exploratory Pilot despite unknown source/vintage; production gates unchanged, never promoted",
+  "production_training_enabled": false,
+  "hmm_fit_enabled": false,
+  "price_source_status": "BOTH_UNVERIFIED",
+  "production_PIT_status": "BLOCKED",
+  "environment_versions": {
+    "torch": "2.10.0+cpu",
+    "ncps": "1.0.1",
+    "hmmlearn": "0.3.3",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "scikit-learn": "1.8.0",
+    "scipy": "1.17.0",
+    "future": "1.0.0",
+    "sympy": "1.14.0",
+    "networkx": "3.7",
+    "filelock": "4.2.4",
+    "fsspec": "2026.9.0",
+    "jinja2": "3.1.6",
+    "MarkupSafe": "3.0.3"
+  },
+  "synthetic_compatibility_manifest_sha256": "c2818eb1c5e89b9f4e25c8470b34a93841d4bf08d5432540d8aa476686a1710f",
+  "A_B_same_date_and_label_arrays": true,
+  "A_B_scaled_input_exact_equal": {
+    "train": false,
+    "validation": false
+  },
+  "A_B_max_scaled_input_abs_difference": {
+    "train": 1.1593103408813477e-05,
+    "validation": 1.0848045349121094e-05
+  },
+  "full_price_value_rows_parsed_after_2020": 0,
+  "HMM_fit": false,
+  "GPU": false,
+  "Test_predictions": false
+}

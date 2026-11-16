@@ -61,3 +61,7 @@ F1필수A와확장B gate를분리했다. 실제Smoke 실행코드를runtime/step
 사용자의 독립 합성 CPU 승인 범위에서 5개 모델을 각각2회, 매번 합성 Train/Validation batch각1개·optimizer update1회로 검사했다. 실제 source/hash를 검증한 모델/FocalLoss를 재사용했고 전체Notebook·시장데이터모델·HMM·GPU는 실행하지 않았다. 생성/parameter count/forward/backward/finite gradients/clip/AdamW/OneCycle/checkpoint/정확재현성70판정 PASS, 총합성update10회다. 기존90개 회귀검사와 별도13개 제어검사도PASS다.
 
 모든가격/PIT production gate와 training_enabled=false/hmm_fit_enabled=false는 유지했다. A/B는BOTH_UNVERIFIED, 자료선택미승인이다. RAW5피처는정적검사만이며2피처 합성실행을전체실험완료로표시하지않는다. 새 synthetic config·독립승인·runner·manifest와reports/STEP29_*.md4개를추가했다. 합성배열/checkpoint는새로컬ignored디렉터리에만보존한다. 기존158개 산출물·원본·JOF V14/V15·main은보존했다. 본실험준비체크리스트는manifests/step29_main_experiment_checklist.json이다.
+
+## STEP3A / 2026-11-16
+
+사용자가 별도로 승인한 회고적 CPU Pilot으로 O1/A-B/F1/Seed2의10 fit을 시작했고 10개 완료, 0개 실패했다. Train2387/Validation228, Train20purge·Validation20UNKNOWN 제외, Test/GPU/HMM/전체RO/Ablation0. 모든 설정과A/B source 미확정·production false gate를 유지했다. loss/Validation 진단·EarlyStopping·checkpoint/RNG 복원 기록을 새 로컬 경로에 보존했다. 원자료·일별Target·확률·모델 가중치는 공개하지 않는다. 집계CSV/곡선·STEP3A 보고서4개와 독립승인·코드/해시만 감사 브랜치에 게시한다.

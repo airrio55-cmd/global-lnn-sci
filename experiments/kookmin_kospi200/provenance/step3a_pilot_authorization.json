@@ -1,0 +1,21 @@
+{
+  "scope": "STEP3A_RETROSPECTIVE_O1_AB_F1_CPU_PILOT",
+  "approved": true,
+  "approved_by": "user",
+  "approval_reference": "Current STEP3A user request explicitly authorizes retrospective exploratory O1 A/B two-feature CPU Train/Validation Pilot, at most10 model fits,100epochs each,patience10; noTest/HMM/GPU/fullRO/Ablation",
+  "recorded_at_kst": "2026-11-16T15:38:09.557025+09:00",
+  "config_sha256": "fe0b2cc106f1d1e09a64ba414e60237cd7b2714b6db762debc216cf7c21864af",
+  "runner_sha256": "34281dfd1e80be36427f3cd1fe0f0a07c626d11363c54ed223512c21eeee6489",
+  "preflight_sha256": "fd5fba34473d9b1f7b853455cd7c00faaceb655cd0b957a2cee4528af4eb0cc7",
+  "permits_Test": false,
+  "permits_HMM_fit": false,
+  "permits_GPU": false,
+  "production_training_authorized": false,
+  "production_PIT_exceptions_waived": false,
+  "retrospective_pilot_only_explicit_source_limitations": true,
+  "max_distinct_fits": 10,
+  "max_epochs_per_fit": 100,
+  "patience": 10,
+  "price_candidate_selection_authorized": false,
+  "resume_same_incomplete_fits_authorized": true
+}

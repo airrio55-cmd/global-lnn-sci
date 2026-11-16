@@ -1,0 +1,128 @@
+{
+  "checked_date_kst": "2026-11-16",
+  "publication_scope": "Code, aggregate Train/Validation diagnostics, epoch aggregate curves and hashes only",
+  "raw_price_series_published": false,
+  "daily_targets_published": false,
+  "daily_probabilities_published": false,
+  "checkpoints_published": false,
+  "public_files": [
+    {
+      "file": "CHANGELOG.md",
+      "sha256": "fc09f59d4367eea089386dac306291053d2df329108c7271449bc2d371096956"
+    },
+    {
+      "file": "README.md",
+      "sha256": "75adb809817625d223ab5e0d3772c83e709f02ebb34560a89030944f1b4fdd2a"
+    },
+    {
+      "file": "configs/step3a_pilot_config.json",
+      "sha256": "fe0b2cc106f1d1e09a64ba414e60237cd7b2714b6db762debc216cf7c21864af"
+    },
+    {
+      "file": "manifests/step3a_epoch_history.csv",
+      "sha256": "527695b01fb56dbeee29b78467e3259749a797ab8dc78dcea303f32f7ca06d68"
+    },
+    {
+      "file": "manifests/step3a_execution_manifest.json",
+      "sha256": "96248324681545772cd568cba10277494dd377d48a1f3372f167b307c0bf8d0c"
+    },
+    {
+      "file": "manifests/step3a_pilot_metrics.csv",
+      "sha256": "9d1b1ed940ba68d0434142a51b3e747c2178eb81fb5f4f8136c758fd112791b5"
+    },
+    {
+      "file": "manifests/step3a_pilot_runs.csv",
+      "sha256": "ec5e13efcf2926cf35ef05cc83b4a87acc4da4384783c8c7b5b03daeb9ea1732"
+    },
+    {
+      "file": "manifests/step3a_postrun_tests.json",
+      "sha256": "93c7c3c1423bb41f24d6f6d60059dd306bba5d507cd6abc84184c44b9115d162"
+    },
+    {
+      "file": "manifests/step3a_preflight.json",
+      "sha256": "fd5fba34473d9b1f7b853455cd7c00faaceb655cd0b957a2cee4528af4eb0cc7"
+    },
+    {
+      "file": "manifests/step3a_preflight_tests.json",
+      "sha256": "14c44fcac6785f5f93e577f6eaf86193d38575c2be26c410a9388c1a7c8f3620"
+    },
+    {
+      "file": "manifests/step3a_verification_summary.json",
+      "sha256": "d24478c9d7ac3a3ac4e2eb5a0a1d6d38719a677c6caa7f14b8e758959924fdb5"
+    },
+    {
+      "file": "provenance/step3a_pilot_authorization.json",
+      "sha256": "44c60124bb00121908b89850ebfde12a88ead4411db23075f19f329b641ea18a"
+    },
+    {
+      "file": "provenance/step3a_preservation.json",
+      "sha256": "8ebf3406cb1c889daab9c2de342af156266c28fd51e7ebf9018c6fd1a9dc0f1c"
+    },
+    {
+      "file": "provenance/step3a_review_inputs.json",
+      "sha256": "683b096ea1bb51b39ed7b9c16690950093e33c09c2aab20234bdac2d6145e06c"
+    },
+    {
+      "file": "reports/STEP3A_A_B_COMPARISON_KO.md",
+      "sha256": "ab2600eaba50eb9707038fb75865ba5d29e86388485a777d7055a174e420d402"
+    },
+    {
+      "file": "reports/STEP3A_EXECUTION_AUDIT_KO.md",
+      "sha256": "2a053086c33b2c4b21a1ef31b97f77cbd70df7a4a85732aa29f7f3eaaad37c33"
+    },
+    {
+      "file": "reports/STEP3A_NEXT_GATES_KO.md",
+      "sha256": "ec44bf76ec14071b2530150d1cb7f83092422161127701fc43900e38347721c6"
+    },
+    {
+      "file": "reports/STEP3A_PILOT_RESULTS_KO.md",
+      "sha256": "5d28d7ce940fa97b118f3bfc298b046d06bbc36b6539924ac11506db051cc556"
+    },
+    {
+      "file": "reports/assets/step3a_loss_curves.svg",
+      "sha256": "c2fea512b6117aaa09a9b904e11ba8bb78d305c02de1fd8012e4d6a5c72c01b9"
+    },
+    {
+      "file": "reports/assets/step3a_validation_ba_curves.svg",
+      "sha256": "897f384b6ec1300beec8e357c75093968f0b42a892b9cd6588243578b1cc3f08"
+    },
+    {
+      "file": "runtime/step3a_pilot.py",
+      "sha256": "34281dfd1e80be36427f3cd1fe0f0a07c626d11363c54ed223512c21eeee6489"
+    },
+    {
+      "file": "src/kospi200/pilot_data.py",
+      "sha256": "d2467df781ef70f685ecb0318137ed604c6e75270dbefd657c03d082b0316a4a"
+    },
+    {
+      "file": "tests/test_step3a_preflight.py",
+      "sha256": "4af3a9d22e4de6a00d792cb1eebe5fa1b74ba8018960064d8d725038f831cc6e"
+    },
+    {
+      "file": "tests/test_step3a_results.py",
+      "sha256": "050fa4f1c5e12e4beeecb04ef15cd0bc981f0d8b83f46e41e3f10359f7a89c19"
+    },
+    {
+      "file": "tools/step3a_pilot.py",
+      "sha256": "9e6821d57dee49a19f427c65d3a380028fb10efa9ddce974a4804fd01c19e46e"
+    },
+    {
+      "file": "tools/step3a_prepare.py",
+      "sha256": "587accaad2eedf5d76599a5c286741e90c43b21cfff430bf16a0d711acf512ce"
+    },
+    {
+      "file": "tools/step3a_report.py",
+      "sha256": "7fc566a183da3ffae157e535b25783166fabc2e9928d9f6780ed3dd277671a63"
+    }
+  ],
+  "protected_prior_artifacts_unchanged": 190,
+  "model_fits": 10,
+  "source_status": "BOTH_UNVERIFIED",
+  "production_PIT_status": "BLOCKED",
+  "production_training_enabled": false,
+  "hmm_fit_enabled": false,
+  "pilot_execution_enabled": true,
+  "actual_Test_predictions": 0,
+  "HMM_fit": false,
+  "GPU": false
+}

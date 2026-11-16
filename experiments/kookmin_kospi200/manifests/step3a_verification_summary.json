@@ -1,0 +1,32 @@
+{
+  "checked_at_kst": "2026-11-16T16:01:40.012509+09:00",
+  "operational_preflight_gates": {
+    "PASS": 12,
+    "FAIL": 0
+  },
+  "preflight_unit_tests": {
+    "passed": 10,
+    "failed": 0,
+    "scope": "O1-only data/authorization tests; no model/Test execution"
+  },
+  "postrun_tests": {
+    "passed": 12,
+    "failed": 0,
+    "scope": "O1 Pilot records/validation/checkpoints only; no additional model fitting or Test access"
+  },
+  "completed_models": 10,
+  "failed_or_divergent_models": 0,
+  "checkpoint_selected_validation_match_PASS": 10,
+  "epoch1_resume_and_RNG_PASS": 10,
+  "harness_issue_corrected": {
+    "issue": "Initial post-run unittest class attribute run shadowed TestCase.run",
+    "correction": "Renamed path attribute to run_directory; only test harness changed",
+    "model_training_repeated": false,
+    "models_or_hyperparameters_changed": false,
+    "initial_error_message": "TypeError: 'PosixPath' object is not callable (post-run unittest harness; no model error)",
+    "corrected_test_log_local": "/workspace/work/step3a/postrun_tests.log"
+  },
+  "scope": "Only O1 data/records/Validation/checkpoints; no legacy Test-reading regression suite rerun",
+  "production_training_enabled": false,
+  "hmm_fit_enabled": false
+}

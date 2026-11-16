@@ -1,0 +1,131 @@
+{
+  "execution_mode": "STEP3A_RETROSPECTIVE_O1_AB_F1_CPU_PILOT",
+  "pilot_execution_enabled": true,
+  "training_enabled": false,
+  "hmm_fit_enabled": false,
+  "gpu_enabled": false,
+  "production_gate_override": false,
+  "origin": "O1",
+  "base_seed": 2,
+  "price_candidates": [
+    "A",
+    "B"
+  ],
+  "models": [
+    "RNN",
+    "LSTM",
+    "GRU",
+    "LTC",
+    "CfC"
+  ],
+  "feature_order": [
+    "Log_Ret",
+    "Disparity"
+  ],
+  "device": "cpu",
+  "amp": false,
+  "dtype": "float32",
+  "max_fit_attempts": 10,
+  "test_access": false,
+  "pilot_price_cutoff": "2020-12-31",
+  "research_end_date": "2025-12-31",
+  "retrospective_only": true,
+  "main_price_selection_allowed": false,
+  "model_settings": {
+    "hidden_size": 128,
+    "layers": 1,
+    "dropout": 0.2,
+    "window": 20,
+    "horizon": 20,
+    "batch": 64,
+    "max_epochs": 100,
+    "patience": 10,
+    "selection_metric": "balanced_accuracy",
+    "optimizer": "AdamW",
+    "lr": 0.005,
+    "weight_decay": 0.0001,
+    "scheduler": "OneCycleLR",
+    "focal_gamma": 2,
+    "focal_alpha": 0.25,
+    "gradient_clip": 1.0,
+    "dtype": "float32",
+    "amp": false,
+    "threshold": 0.5
+  },
+  "model_seed_offsets": {
+    "RNN": 101,
+    "LSTM": 201,
+    "GRU": 301,
+    "LTC": 401,
+    "CfC": 501
+  },
+  "single_2feature_case_per_architecture_no_RAW_LOG_loop": true,
+  "source_notebook_sha256": "b9e8542fc5783bc5dc734ddfd7bdfe69db26d4b540cde93ae3a722596485c1e7",
+  "original_definition_hashes": {
+    "FocalLoss": "99f31d22f4549d6b370b5a7ede5e2606830b7b20dd66f834fd6e3b3eb2174b7d",
+    "init_weights": "721f2894a7a6f3dc3518f3e80bd17dd7a04ab08f9cdd47762de6212d7e674697",
+    "RecurrentModel": "00844fd26fe3794dff89218879151544efe4b34cb07df9bd038f45e1dceec621",
+    "LNNModel": "ff2ec3b49fb1a96848b9a51aec6dbf4abfac5efdb02fa8fa10f48da77a7e0a7b",
+    "CfCModel": "2907b0ff7cc2dd6da70b9f9da189004de8f5e2d1fd8f2a06d14aeb26f438ebef"
+  },
+  "run_directory": "data/derived/step3a_pilot_20261116T153159_KST",
+  "environment_versions": {
+    "torch": "2.10.0+cpu",
+    "ncps": "1.0.1",
+    "hmmlearn": "0.3.3",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "scikit-learn": "1.8.0",
+    "scipy": "1.17.0",
+    "future": "1.0.0",
+    "sympy": "1.14.0",
+    "networkx": "3.7",
+    "filelock": "4.2.4",
+    "fsspec": "2026.9.0",
+    "jinja2": "3.1.6",
+    "MarkupSafe": "3.0.3"
+  },
+  "implementation_artifacts": [
+    {
+      "file": "runtime/step3a_pilot.py",
+      "sha256": "34281dfd1e80be36427f3cd1fe0f0a07c626d11363c54ed223512c21eeee6489"
+    },
+    {
+      "file": "src/kospi200/pilot_data.py",
+      "sha256": "d2467df781ef70f685ecb0318137ed604c6e75270dbefd657c03d082b0316a4a"
+    },
+    {
+      "file": "src/kospi200/data.py",
+      "sha256": "8761182107a2e5c3b9830ed6a295258c97574dee502b8bdcde1e202a5df8dc01"
+    },
+    {
+      "file": "src/kospi200/folds.py",
+      "sha256": "94c9d800d7f8056a95664e35839d339c25e7dbc58cc090febeb83945461400ea"
+    },
+    {
+      "file": "src/kospi200/smoke_preparation.py",
+      "sha256": "f43a6b862a576be1c20c0c940e5fde2432c1f629c0e570d6f0933d4a8e62bf34"
+    },
+    {
+      "file": "runtime/step29_synthetic_smoke.py",
+      "sha256": "bbdff72425860e08878c5a99e148b80bd832570fd54fbb8bc698b27142818de7"
+    },
+    {
+      "file": "tools/step3a_prepare.py",
+      "sha256": "587accaad2eedf5d76599a5c286741e90c43b21cfff430bf16a0d711acf512ce"
+    }
+  ],
+  "eligibility_mask": "STEP28 common local Log_Ret/Disparity/Vol_Regime 20-input-window eligibility; model inputs ONLY Log_Ret,Disparity",
+  "selection_metric": "Validation balanced accuracy only; strict >; ties increment counter",
+  "production_source_status": "BOTH_UNVERIFIED",
+  "production_PIT_status": "BLOCKED",
+  "resume_policy": "Same identity/config/data/code; completed fits skipped; restore latest committed epoch; no new trial. An interrupted uncommitted epoch is discarded/replayed from checkpoint.",
+  "data_access_policy": "Full-source hashes and prior audit for3939 completeness, exact2714-row pre2021 price prefix staging; model process cannot open original full price files",
+  "claims_excluded": [
+    "real-time availability",
+    "investment returns",
+    "complete exclusion of leakage",
+    "confirmatory generalization",
+    "final A/B price source choice"
+  ]
+}
