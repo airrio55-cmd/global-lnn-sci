@@ -1,0 +1,1407 @@
+{
+  "checked_at": "2026-11-16T01:34:23.522559+00:00",
+  "raw_document_storage": "work/step25_sources only; raw pages/PDFs/wheel and source prices not published",
+  "sources": [
+    {
+      "id": "KRX_HOLIDAYS",
+      "url": "https://open.krx.co.kr/contents/MKD/01/0110/01100305/MKD01100305.jsp",
+      "checked_at": "2026-11-16T01:17:40.093273+00:00",
+      "use": "evidence research only; not source-price provenance",
+      "limitation": "current page may not establish historical policy",
+      "http_status": 200,
+      "final_url": "https://open.krx.co.kr/contents/MKD/01/0110/01100305/MKD01100305.jsp",
+      "content_type": "text/html;charset=UTF-8",
+      "bytes": 226622,
+      "sha256": "212b7af5f73a6dbb3ca12094b004d8847622e03aa6403cfdadb4bb0ba9c16d5d",
+      "checked_date_kst": "2026-11-16",
+      "semantic_status": "RETRIEVED_REQUIRES_SCOPE_INTERPRETATION"
+    },
+    {
+      "id": "KRX_RULES",
+      "url": "https://regulation.krx.co.kr/contents/RGL/03/03010100/RGL03010100T1.jsp",
+      "checked_at": "2026-11-16T01:17:40.094149+00:00",
+      "use": "evidence research only; not source-price provenance",
+      "limitation": "current page may not establish historical policy",
+      "http_status": 200,
+      "final_url": "https://regulation.krx.co.kr/contents/RGL/03/03010100/RGL03010100T1.jsp",
+      "content_type": "text/html;charset=UTF-8",
+      "bytes": 4278,
+      "sha256": "fb10f1d109b37e8ab1f06c277a7f4a091a73fd398e4c7b3890caae12efdc1ffb",
+      "checked_date_kst": "2026-11-16",
+      "semantic_status": "RETRIEVED_REQUIRES_SCOPE_INTERPRETATION"
+    },
+    {
+      "id": "KRX_DATA",
+      "url": "https://data.krx.co.kr/contents/MDC/MAIN/main/index.cmd",
+      "checked_at": "2026-11-16T01:17:40.094563+00:00",
+      "use": "evidence research only; not source-price provenance",
+      "limitation": "current page may not establish historical policy",
+      "http_status": 200,
+      "final_url": "https://data.krx.co.kr/contents/MDC/MAIN/main/index.cmd",
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 556585,
+      "sha256": "ec3e7f1443477a283e77c4412acf207cf42008433b244e726a6a26cc9e0a1f34",
+      "checked_date_kst": "2026-11-16",
+      "semantic_status": "RETRIEVED_REQUIRES_SCOPE_INTERPRETATION"
+    },
+    {
+      "id": "KRX_OPENAPI",
+      "url": "https://openapi.krx.co.kr/contents/OPP/MAIN/main/index.cmd",
+      "checked_at": "2026-11-16T01:17:40.094974+00:00",
+      "use": "evidence research only; not source-price provenance",
+      "limitation": "current page may not establish historical policy",
+      "http_status": 200,
+      "final_url": "https://openapi.krx.co.kr/contents/OPP/MAIN/main/index.cmd",
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 17946,
+      "sha256": "69a8a39670bae502168ca72a80935fbc850ea30d71e9e45b93033db80ff68092",
+      "checked_date_kst": "2026-11-16",
+      "semantic_status": "RETRIEVED_REQUIRES_SCOPE_INTERPRETATION"
+    },
+    {
+      "id": "NASDAQ_CALENDAR",
+      "url": "https://www.nasdaqtrader.com/Trader.aspx?id=Calendar",
+      "checked_at": "2026-11-16T01:17:40.095490+00:00",
+      "use": "evidence research only; not source-price provenance",
+      "limitation": "current page may not establish historical policy",
+      "http_status": 200,
+      "final_url": "https://www.nasdaqtrader.com/Trader.aspx?id=Calendar",
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 54662,
+      "sha256": "a0ff8591b44872d3614f802834a9352cb6df8691ca6dd12929cf9fadb2a58c68",
+      "checked_date_kst": "2026-11-16",
+      "semantic_status": "RETRIEVED_REQUIRES_SCOPE_INTERPRETATION"
+    },
+    {
+      "id": "NASDAQ_CLASSIC_CALENDAR",
+      "url": "https://classic.nasdaqtrader.com/Trader.aspx?id=Calendar",
+      "checked_at": "2026-11-16T01:17:40.096472+00:00",
+      "use": "evidence research only; not source-price provenance",
+      "limitation": "current page may not establish historical policy",
+      "http_status": 200,
+      "final_url": "https://classic.nasdaqtrader.com/Trader.aspx?id=Calendar",
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 54662,
+      "sha256": "7e06b617a3c1db11f33df27eb161a82b37639a8d1e42da36f3c938dbc5ba00f8",
+      "checked_date_kst": "2026-11-16",
+      "semantic_status": "RETRIEVED_REQUIRES_SCOPE_INTERPRETATION"
+    },
+    {
+      "id": "NASDAQ_HOURS",
+      "url": "https://www.nasdaq.com/stock-market-trading-hours-for-nasdaq",
+      "checked_at": "2026-11-16T01:17:40.457845+00:00",
+      "use": "evidence research only; not source-price provenance",
+      "limitation": "current page may not establish historical policy",
+      "http_status": 200,
+      "final_url": "https://www.nasdaq.com/market-activity/stock-market-holiday-schedule",
+      "content_type": "text/html; charset=UTF-8",
+      "bytes": 174353,
+      "sha256": "611150563bbec81e69e7b9b00cf40564ba7ca00a9a1b2000d846217d9a05924b",
+      "checked_date_kst": "2026-11-16",
+      "semantic_status": "RETRIEVED_REQUIRES_SCOPE_INTERPRETATION"
+    },
+    {
+      "id": "SOX_METHOD",
+      "url": "https://indexes.nasdaqomx.com/docs/methodology_SOX.pdf",
+      "checked_at": "2026-11-16T01:17:40.521322+00:00",
+      "use": "evidence research only; not source-price provenance",
+      "limitation": "current page may not establish historical policy",
+      "http_status": 200,
+      "final_url": "https://indexes.nasdaqomx.com/docs/methodology_SOX.pdf",
+      "content_type": "application/pdf",
+      "bytes": 218911,
+      "sha256": "e96818a4b50c948b612a50f2ee593f6f2bc72bcc04171e9708a50cc807804566",
+      "checked_date_kst": "2026-11-16",
+      "semantic_status": "RETRIEVED_REQUIRES_SCOPE_INTERPRETATION"
+    },
+    {
+      "id": "COMP_METHOD",
+      "url": "https://indexes.nasdaq.com/docs/Methodology_COMP.pdf",
+      "checked_at": "2026-11-16T01:17:40.864314+00:00",
+      "use": "evidence research only; not source-price provenance",
+      "limitation": "current page may not establish historical policy",
+      "http_status": 200,
+      "final_url": "https://indexes.nasdaq.com/docs/Methodology_COMP.pdf",
+      "content_type": "application/pdf",
+      "bytes": 155047,
+      "sha256": "db74f7e92857d3fafba93c60061abb25d59b461d9a8da48e2887e3ff78e13bbe",
+      "checked_date_kst": "2026-11-16",
+      "semantic_status": "RETRIEVED_REQUIRES_SCOPE_INTERPRETATION"
+    },
+    {
+      "id": "NIST_DST",
+      "url": "https://www.nist.gov/pml/time-and-frequency-division/popular-links/daylight-saving-time-dst",
+      "checked_at": "2026-11-16T01:17:40.882409+00:00",
+      "use": "evidence research only; not source-price provenance",
+      "limitation": "current page may not establish historical policy",
+      "http_status": 200,
+      "final_url": "https://www.nist.gov/pml/time-and-frequency-division/popular-links/daylight-saving-time-dst",
+      "content_type": "text/html; charset=UTF-8",
+      "bytes": 90316,
+      "sha256": "40ec8503a1bb689f832a4b44eb6a4b6c44d2615fd8ee7f8e7b362465315accae",
+      "checked_date_kst": "2026-11-16",
+      "semantic_status": "RETRIEVED_REQUIRES_SCOPE_INTERPRETATION"
+    },
+    {
+      "id": "NASDAQ_OFFICIAL_CLOSE",
+      "url": "https://indexes.nasdaq.com/docs/Nasdaq_Official_Benchmark_Index_Value.pdf",
+      "checked_at": "2026-11-16T01:17:40.948885+00:00",
+      "use": "evidence research only; not source-price provenance",
+      "limitation": "current page may not establish historical policy",
+      "http_status": 200,
+      "final_url": "https://indexes.nasdaq.com/docs/Nasdaq_Official_Benchmark_Index_Value.pdf",
+      "content_type": "application/pdf",
+      "bytes": 126024,
+      "sha256": "9beaa4dd064106a03f1c2107d65979b5a5b96e9a9314e903714b0d5f30a35e79",
+      "checked_date_kst": "2026-11-16",
+      "semantic_status": "RETRIEVED_REQUIRES_SCOPE_INTERPRETATION"
+    },
+    {
+      "id": "KRX_CALENDAR_JS",
+      "url": "https://open.krx.co.kr/contents/MKD/01/0110/01100305/mkd01100305.js",
+      "checked_at": "2026-11-16T01:18:44.439053+00:00",
+      "use": "evidence research only; not source-price provenance",
+      "limitation": "current page may not establish historical policy",
+      "http_status": 200,
+      "final_url": "https://open.krx.co.kr/contents/MKD/01/0110/01100305/mkd01100305.js",
+      "content_type": "application/javascript",
+      "bytes": 2407,
+      "sha256": "ae9d68337f2d9faca54e5c35400a29ca602797984e9f57db354c7cde0765fd60",
+      "checked_date_kst": "2026-11-16",
+      "semantic_status": "RETRIEVED_REQUIRES_SCOPE_INTERPRETATION"
+    },
+    {
+      "id": "KRX_FUNC_JS",
+      "url": "https://open.krx.co.kr/res/pc/js/func.js",
+      "checked_at": "2026-11-16T01:18:44.439723+00:00",
+      "use": "evidence research only; not source-price provenance",
+      "limitation": "current page may not establish historical policy",
+      "http_status": 200,
+      "final_url": "https://open.krx.co.kr/res/pc/js/func.js",
+      "content_type": "application/javascript",
+      "bytes": 81908,
+      "sha256": "cab74607624937e462755d6e0651d8347cbf75b2415ef21b145554b8fc09536d",
+      "checked_date_kst": "2026-11-16",
+      "semantic_status": "RETRIEVED_REQUIRES_SCOPE_INTERPRETATION"
+    },
+    {
+      "id": "KRX_API_USAGE",
+      "url": "https://openapi.krx.co.kr/contents/OPP/INFO/OPPINFO003.jsp",
+      "checked_at": "2026-11-16T01:18:44.440296+00:00",
+      "use": "evidence research only; not source-price provenance",
+      "limitation": "current page may not establish historical policy",
+      "http_status": 200,
+      "final_url": "https://openapi.krx.co.kr/contents/OPP/INFO/OPPINFO003.jsp",
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 18980,
+      "sha256": "9fdcfcef63ef306b3d50a8111b1e0cabc6811916a42f0612241794651cd7e822",
+      "checked_date_kst": "2026-11-16",
+      "semantic_status": "RETRIEVED_REQUIRES_SCOPE_INTERPRETATION"
+    },
+    {
+      "id": "KRX_CASH_HOURS",
+      "url": "https://regulation.krx.co.kr/contents/RGL/03/03010101/RGL03010101T1.jsp",
+      "checked_at": "2026-11-16T01:18:44.441121+00:00",
+      "use": "evidence research only; not source-price provenance",
+      "limitation": "current page may not establish historical policy",
+      "access_status": "FAILED",
+      "error": "HTTP Error 404: Not Found",
+      "checked_date_kst": "2026-11-16",
+      "semantic_status": "FAILED"
+    },
+    {
+      "id": "NASDAQ_COMP_OLD",
+      "url": "https://indexes-qc.nasdaqomx.com/docs/methodology_COMP.pdf",
+      "checked_at": "2026-11-16T01:18:44.441931+00:00",
+      "use": "evidence research only; not source-price provenance",
+      "limitation": "current page may not establish historical policy",
+      "access_status": "FAILED",
+      "error": "HTTP Error 403: Forbidden",
+      "checked_date_kst": "2026-11-16",
+      "semantic_status": "FAILED"
+    },
+    {
+      "id": "NASDAQ_CAL_2010",
+      "url": "https://www.nasdaqtrader.com/content/technicalsupport/2010tradingcalendar.pdf",
+      "checked_at": "2026-11-16T01:18:44.594211+00:00",
+      "use": "evidence research only; not source-price provenance",
+      "limitation": "current page may not establish historical policy",
+      "http_status": 200,
+      "final_url": "https://www.nasdaqtrader.com/Trader.aspx?id=http404",
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 43028,
+      "sha256": "8f46b5bc31d5c023dc8df424e94f546dd01980d44115dfc1502d813575baf4ff",
+      "checked_date_kst": "2026-11-16",
+      "semantic_status": "FAILED_EXPECTED_PDF_RECEIVED_HTML_ERROR_PAGE"
+    },
+    {
+      "id": "NASDAQ_CAL_2011",
+      "url": "https://www.nasdaqtrader.com/content/technicalsupport/2011tradingcalendar.pdf",
+      "checked_at": "2026-11-16T01:18:44.597329+00:00",
+      "use": "evidence research only; not source-price provenance",
+      "limitation": "current page may not establish historical policy",
+      "http_status": 200,
+      "final_url": "https://www.nasdaqtrader.com/Trader.aspx?id=http404",
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 43027,
+      "sha256": "fee08ca3899d611c82ca310e2320d7614c41627ba0f3248e00dcabf3b5a90b6a",
+      "checked_date_kst": "2026-11-16",
+      "semantic_status": "FAILED_EXPECTED_PDF_RECEIVED_HTML_ERROR_PAGE"
+    },
+    {
+      "id": "NASDAQ_CAL_2012",
+      "url": "https://www.nasdaqtrader.com/content/technicalsupport/2012tradingcalendar.pdf",
+      "checked_at": "2026-11-16T01:18:44.809849+00:00",
+      "use": "evidence research only; not source-price provenance",
+      "limitation": "current page may not establish historical policy",
+      "http_status": 200,
+      "final_url": "https://www.nasdaqtrader.com/Trader.aspx?id=http404",
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 43027,
+      "sha256": "292d7825c1346083fdcdb9597351af1098c91154e7389e35390980bda774e6bf",
+      "checked_date_kst": "2026-11-16",
+      "semantic_status": "FAILED_EXPECTED_PDF_RECEIVED_HTML_ERROR_PAGE"
+    },
+    {
+      "id": "NASDAQ_CAL_2013",
+      "url": "https://www.nasdaqtrader.com/content/technicalsupport/2013tradingcalendar.pdf",
+      "checked_at": "2026-11-16T01:18:45.002194+00:00",
+      "use": "evidence research only; not source-price provenance",
+      "limitation": "current page may not establish historical policy",
+      "http_status": 200,
+      "final_url": "https://www.nasdaqtrader.com/Trader.aspx?id=http404",
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 43028,
+      "sha256": "e8ce97e695b0cf61d051bfa7610c4cf9ecbf64123219a9803a5d0113aa9c5b9b",
+      "checked_date_kst": "2026-11-16",
+      "semantic_status": "FAILED_EXPECTED_PDF_RECEIVED_HTML_ERROR_PAGE"
+    },
+    {
+      "id": "NASDAQ_CAL_2014",
+      "url": "https://www.nasdaqtrader.com/content/technicalsupport/2014tradingcalendar.pdf",
+      "checked_at": "2026-11-16T01:18:45.039881+00:00",
+      "use": "evidence research only; not source-price provenance",
+      "limitation": "current page may not establish historical policy",
+      "http_status": 200,
+      "final_url": "https://www.nasdaqtrader.com/Trader.aspx?id=http404",
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 43028,
+      "sha256": "308bf053afb0a8b7bc7f4b1dbcd227c354720d1626f5c7d5676678a5057c9223",
+      "checked_date_kst": "2026-11-16",
+      "semantic_status": "FAILED_EXPECTED_PDF_RECEIVED_HTML_ERROR_PAGE"
+    },
+    {
+      "id": "NASDAQ_CAL_2015",
+      "url": "https://www.nasdaqtrader.com/content/technicalsupport/2015tradingcalendar.pdf",
+      "checked_at": "2026-11-16T01:18:45.085775+00:00",
+      "use": "evidence research only; not source-price provenance",
+      "limitation": "current page may not establish historical policy",
+      "http_status": 200,
+      "final_url": "https://www.nasdaqtrader.com/Trader.aspx?id=http404",
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 43028,
+      "sha256": "624e34d44b387994a12e2dd2babd662c7a902862fbe4fbd41c4245bf37b22a8d",
+      "checked_date_kst": "2026-11-16",
+      "semantic_status": "FAILED_EXPECTED_PDF_RECEIVED_HTML_ERROR_PAGE"
+    },
+    {
+      "id": "NASDAQ_CAL_2016",
+      "url": "https://www.nasdaqtrader.com/content/technicalsupport/2016tradingcalendar.pdf",
+      "checked_at": "2026-11-16T01:18:45.092266+00:00",
+      "use": "evidence research only; not source-price provenance",
+      "limitation": "current page may not establish historical policy",
+      "http_status": 200,
+      "final_url": "https://www.nasdaqtrader.com/Trader.aspx?id=http404",
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 43028,
+      "sha256": "f27cd1de595bba2c51120c27f15d6ccf76d65aaa554caa72e80ef391e478b6f9",
+      "checked_date_kst": "2026-11-16",
+      "semantic_status": "FAILED_EXPECTED_PDF_RECEIVED_HTML_ERROR_PAGE"
+    },
+    {
+      "id": "NASDAQ_CAL_2017",
+      "url": "https://www.nasdaqtrader.com/content/technicalsupport/2017tradingcalendar.pdf",
+      "checked_at": "2026-11-16T01:18:45.246373+00:00",
+      "use": "evidence research only; not source-price provenance",
+      "limitation": "current page may not establish historical policy",
+      "http_status": 200,
+      "final_url": "https://www.nasdaqtrader.com/Trader.aspx?id=http404",
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 43029,
+      "sha256": "2a0823a8713e4538e39d9619894bff97e87c0ee1857e0bcf7ae26efc1793e325",
+      "checked_date_kst": "2026-11-16",
+      "semantic_status": "FAILED_EXPECTED_PDF_RECEIVED_HTML_ERROR_PAGE"
+    },
+    {
+      "id": "NASDAQ_CAL_2018",
+      "url": "https://www.nasdaqtrader.com/content/technicalsupport/2018tradingcalendar.pdf",
+      "checked_at": "2026-11-16T01:18:45.260969+00:00",
+      "use": "evidence research only; not source-price provenance",
+      "limitation": "current page may not establish historical policy",
+      "http_status": 200,
+      "final_url": "https://www.nasdaqtrader.com/Trader.aspx?id=http404",
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 43029,
+      "sha256": "2c166f7fb0904a813a1ad80732eafa78e9d90924b89d65e38fc9719a52462375",
+      "checked_date_kst": "2026-11-16",
+      "semantic_status": "FAILED_EXPECTED_PDF_RECEIVED_HTML_ERROR_PAGE"
+    },
+    {
+      "id": "NASDAQ_CAL_2019",
+      "url": "https://www.nasdaqtrader.com/content/technicalsupport/2019tradingcalendar.pdf",
+      "checked_at": "2026-11-16T01:18:45.266666+00:00",
+      "use": "evidence research only; not source-price provenance",
+      "limitation": "current page may not establish historical policy",
+      "http_status": 200,
+      "final_url": "https://www.nasdaqtrader.com/Trader.aspx?id=http404",
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 43028,
+      "sha256": "09d16e8f3e379b6e6cbfa5d26476b8a9fa6e424d228bb2bbcc3378065f3f54e3",
+      "checked_date_kst": "2026-11-16",
+      "semantic_status": "FAILED_EXPECTED_PDF_RECEIVED_HTML_ERROR_PAGE"
+    },
+    {
+      "id": "NASDAQ_CAL_2020",
+      "url": "https://www.nasdaqtrader.com/content/technicalsupport/2020tradingcalendar.pdf",
+      "checked_at": "2026-11-16T01:18:45.319922+00:00",
+      "use": "evidence research only; not source-price provenance",
+      "limitation": "current page may not establish historical policy",
+      "http_status": 200,
+      "final_url": "https://www.nasdaqtrader.com/Trader.aspx?id=http404",
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 43028,
+      "sha256": "c0747b2333d1779245acc7cef67c1caddb9b15411712c50bc15658b365c712d4",
+      "checked_date_kst": "2026-11-16",
+      "semantic_status": "FAILED_EXPECTED_PDF_RECEIVED_HTML_ERROR_PAGE"
+    },
+    {
+      "id": "NASDAQ_CAL_2021",
+      "url": "https://www.nasdaqtrader.com/content/technicalsupport/2021tradingcalendar.pdf",
+      "checked_at": "2026-11-16T01:18:45.395832+00:00",
+      "use": "evidence research only; not source-price provenance",
+      "limitation": "current page may not establish historical policy",
+      "http_status": 200,
+      "final_url": "https://www.nasdaqtrader.com/content/technicalsupport/2021tradingcalendar.pdf",
+      "content_type": "application/pdf",
+      "bytes": 86671,
+      "sha256": "cb79aa6a25698c658027cc6decdfcfd05ad35a8f39b5bc2a28d612918cd060a8",
+      "checked_date_kst": "2026-11-16",
+      "semantic_status": "RETRIEVED_REQUIRES_SCOPE_INTERPRETATION"
+    },
+    {
+      "id": "NASDAQ_CAL_2022",
+      "url": "https://www.nasdaqtrader.com/content/technicalsupport/2022tradingcalendar.pdf",
+      "checked_at": "2026-11-16T01:18:45.451945+00:00",
+      "use": "evidence research only; not source-price provenance",
+      "limitation": "current page may not establish historical policy",
+      "http_status": 200,
+      "final_url": "https://www.nasdaqtrader.com/content/technicalsupport/2022tradingcalendar.pdf",
+      "content_type": "application/pdf",
+      "bytes": 120950,
+      "sha256": "c886ec149e38d2cc84f33355c600d59d946a270fce6054323df147b4dd50b6ce",
+      "checked_date_kst": "2026-11-16",
+      "semantic_status": "RETRIEVED_REQUIRES_SCOPE_INTERPRETATION"
+    },
+    {
+      "id": "NASDAQ_CAL_2023",
+      "url": "https://www.nasdaqtrader.com/content/technicalsupport/2023tradingcalendar.pdf",
+      "checked_at": "2026-11-16T01:18:45.459529+00:00",
+      "use": "evidence research only; not source-price provenance",
+      "limitation": "current page may not establish historical policy",
+      "http_status": 200,
+      "final_url": "https://www.nasdaqtrader.com/content/technicalsupport/2023tradingcalendar.pdf",
+      "content_type": "application/pdf",
+      "bytes": 274749,
+      "sha256": "3781aa7ec98e429b39c9b1cbdb3677043b8ba622084b8c9d5e10fd7836d9a13b",
+      "checked_date_kst": "2026-11-16",
+      "semantic_status": "RETRIEVED_REQUIRES_SCOPE_INTERPRETATION"
+    },
+    {
+      "id": "NASDAQ_CAL_2024",
+      "url": "https://www.nasdaqtrader.com/content/technicalsupport/2024tradingcalendar.pdf",
+      "checked_at": "2026-11-16T01:18:45.502845+00:00",
+      "use": "evidence research only; not source-price provenance",
+      "limitation": "current page may not establish historical policy",
+      "http_status": 200,
+      "final_url": "https://www.nasdaqtrader.com/content/technicalsupport/2024tradingcalendar.pdf",
+      "content_type": "application/pdf",
+      "bytes": 105969,
+      "sha256": "5a417265c706abe1e2eaa24e0c1fde1787e79fdd472eca105466a019f8ff1101",
+      "checked_date_kst": "2026-11-16",
+      "semantic_status": "RETRIEVED_REQUIRES_SCOPE_INTERPRETATION"
+    },
+    {
+      "id": "NASDAQ_CAL_2025",
+      "url": "https://www.nasdaqtrader.com/content/technicalsupport/2025tradingcalendar.pdf",
+      "checked_at": "2026-11-16T01:18:45.511015+00:00",
+      "use": "evidence research only; not source-price provenance",
+      "limitation": "current page may not establish historical policy",
+      "http_status": 200,
+      "final_url": "https://www.nasdaqtrader.com/content/technicalsupport/2025tradingcalendar.pdf",
+      "content_type": "application/pdf",
+      "bytes": 146717,
+      "sha256": "fb761082d449ef76461d2ca8448ccebb79862a0acd124fad2e914469c9086037",
+      "checked_date_kst": "2026-11-16",
+      "semantic_status": "RETRIEVED_REQUIRES_SCOPE_INTERPRETATION"
+    },
+    {
+      "id": "KRX_INDEX_PAGE",
+      "url": "https://data.krx.co.kr/contents/MDC/STAT/standard/MDCSTAT00301.jsp",
+      "checked_at": "2026-11-16T01:22:19.535092+00:00",
+      "use": "evidence research only; not source-price provenance",
+      "limitation": "current page may not establish historical policy",
+      "http_status": 200,
+      "final_url": "https://data.krx.co.kr/contents/MDC/STAT/standard/MDCSTAT00301.jsp",
+      "content_type": "text/html;charset=UTF-8",
+      "bytes": 2952,
+      "sha256": "60206037d44be1558a87c22a2b84751a064abebafbd89a69faed95977048a42f",
+      "checked_date_kst": "2026-11-16",
+      "semantic_status": "FAILED_ERROR_OR_REDIRECT_PAGE_NOT_REQUESTED_CONTENT"
+    },
+    {
+      "id": "KRX_INDEX_HOME",
+      "url": "https://index.krx.co.kr/contents/MKD/03/0304/03040101/MKD03040101.jsp",
+      "checked_at": "2026-11-16T01:22:19.536029+00:00",
+      "use": "evidence research only; not source-price provenance",
+      "limitation": "current page may not establish historical policy",
+      "access_status": "FAILED",
+      "error": "HTTP Error 404: Not Found",
+      "checked_date_kst": "2026-11-16",
+      "semantic_status": "FAILED"
+    },
+    {
+      "id": "KRX_API_SERVICES",
+      "url": "https://openapi.krx.co.kr/contents/OPP/INFO/service/OPPINFO004.cmd",
+      "checked_at": "2026-11-16T01:22:19.537365+00:00",
+      "use": "evidence research only; not source-price provenance",
+      "limitation": "current page may not establish historical policy",
+      "http_status": 200,
+      "final_url": "https://openapi.krx.co.kr/contents/OPP/INFO/service/OPPINFO004.cmd",
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 28577,
+      "sha256": "75862141539a47bb445a9041beb31d10106dcc960fd458bac26ea0eb90fc58b4",
+      "checked_date_kst": "2026-11-16",
+      "semantic_status": "RETRIEVED_REQUIRES_SCOPE_INTERPRETATION"
+    },
+    {
+      "id": "KRX_DISTRIBUTION",
+      "url": "https://openapi.krx.co.kr/contents/OPP/DATA/OPPDATA002.jsp",
+      "checked_at": "2026-11-16T01:22:19.538032+00:00",
+      "use": "evidence research only; not source-price provenance",
+      "limitation": "current page may not establish historical policy",
+      "http_status": 200,
+      "final_url": "https://openapi.krx.co.kr/contents/OPP/DATA/OPPDATA002.jsp",
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 24741,
+      "sha256": "7677a4ce12c5182eeef28ee431c9e29796649ff64366bd5168276c884642e8d1",
+      "checked_date_kst": "2026-11-16",
+      "semantic_status": "RETRIEVED_REQUIRES_SCOPE_INTERPRETATION"
+    },
+    {
+      "id": "NASDAQ_CLOSURE_SANDY1",
+      "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ETA2012-44",
+      "checked_at": "2026-11-16T01:22:19.541243+00:00",
+      "use": "evidence research only; not source-price provenance",
+      "limitation": "current page may not establish historical policy",
+      "http_status": 200,
+      "final_url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ETA2012-44",
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 60425,
+      "sha256": "823b3e9de380209cd2a2e9070a7df3b2c2389921c66ba242e4be16a814f9244f",
+      "checked_date_kst": "2026-11-16",
+      "semantic_status": "RETRIEVED_REQUIRES_SCOPE_INTERPRETATION"
+    },
+    {
+      "id": "NASDAQ_CLOSURE_SANDY2",
+      "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ETA2012-45",
+      "checked_at": "2026-11-16T01:22:19.895839+00:00",
+      "use": "evidence research only; not source-price provenance",
+      "limitation": "current page may not establish historical policy",
+      "http_status": 200,
+      "final_url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ETA2012-45",
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 60130,
+      "sha256": "f7fadb6a2db79c1ef0658e3defb42026829592a469c07910b4035001499bd907",
+      "checked_date_kst": "2026-11-16",
+      "semantic_status": "RETRIEVED_REQUIRES_SCOPE_INTERPRETATION"
+    },
+    {
+      "id": "NASDAQ_CLOSURE_BUSH",
+      "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ETA2018-98",
+      "checked_at": "2026-11-16T01:22:19.911870+00:00",
+      "use": "evidence research only; not source-price provenance",
+      "limitation": "current page may not establish historical policy",
+      "http_status": 200,
+      "final_url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ETA2018-98",
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 56896,
+      "sha256": "8b7e517b6d7b0a39ce3b8cc12b2b0ed2597a78085482fb02db17dbf15e62394d",
+      "checked_date_kst": "2026-11-16",
+      "semantic_status": "RETRIEVED_REQUIRES_SCOPE_INTERPRETATION"
+    },
+    {
+      "id": "NASDAQ_CLOSURE_CARTER",
+      "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ETA2025-1",
+      "checked_at": "2026-11-16T01:22:19.940070+00:00",
+      "use": "evidence research only; not source-price provenance",
+      "limitation": "current page may not establish historical policy",
+      "http_status": 200,
+      "final_url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ETA2025-1",
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 65201,
+      "sha256": "7a1b3a016f85756054cdc48726dbe4e6c9c77ae4d0b1828a3d60d8e5f57ba66a",
+      "checked_date_kst": "2026-11-16",
+      "semantic_status": "RETRIEVED_REQUIRES_SCOPE_INTERPRETATION"
+    },
+    {
+      "id": "NCPS_PYPI",
+      "url": "https://pypi.org/pypi/ncps/json",
+      "checked_at": "2026-11-16T01:22:19.985326+00:00",
+      "use": "evidence research only; not source-price provenance",
+      "limitation": "current page may not establish historical policy",
+      "http_status": 200,
+      "final_url": "https://pypi.org/pypi/ncps/json",
+      "content_type": "application/json",
+      "bytes": 16444,
+      "sha256": "efc4f7cec05f1a2a5d659d7a8f1f25985c9e5e49597b27a94f0f1776a65c9a14",
+      "checked_date_kst": "2026-11-16",
+      "semantic_status": "RETRIEVED_REQUIRES_SCOPE_INTERPRETATION"
+    },
+    {
+      "id": "HMMLEARN_PYPI",
+      "url": "https://pypi.org/pypi/hmmlearn/json",
+      "checked_at": "2026-11-16T01:22:20.024558+00:00",
+      "use": "evidence research only; not source-price provenance",
+      "limitation": "current page may not establish historical policy",
+      "http_status": 200,
+      "final_url": "https://pypi.org/pypi/hmmlearn/json",
+      "content_type": "application/json",
+      "bytes": 204098,
+      "sha256": "afcc6c1ac7102249a9f498478a72c07aecbf6fb3499c4794f581d6ebe88c44b5",
+      "checked_date_kst": "2026-11-16",
+      "semantic_status": "RETRIEVED_REQUIRES_SCOPE_INTERPRETATION"
+    },
+    {
+      "id": "TORCH_PYPI",
+      "url": "https://pypi.org/pypi/torch/2.10.0/json",
+      "checked_at": "2026-11-16T01:22:20.145317+00:00",
+      "use": "evidence research only; not source-price provenance",
+      "limitation": "current page may not establish historical policy",
+      "http_status": 200,
+      "final_url": "https://pypi.org/pypi/torch/2.10.0/json",
+      "content_type": "application/json",
+      "bytes": 66266,
+      "sha256": "79c588ea124ff13baa6b73517978c34cf63e4e8218a054c01aa4540248d2c706",
+      "checked_date_kst": "2026-11-16",
+      "semantic_status": "RETRIEVED_REQUIRES_SCOPE_INTERPRETATION"
+    },
+    {
+      "id": "NCPS_LTC_CELL",
+      "url": "https://raw.githubusercontent.com/mlech26l/ncps/695ec22d7d1831f2ced67346ef7d2f08c525bd47/ncps/torch/ltc_cell.py",
+      "checked_at": "2026-11-16T01:22:20.284126+00:00",
+      "use": "evidence research only; not source-price provenance",
+      "limitation": "current page may not establish historical policy",
+      "http_status": 200,
+      "final_url": "https://raw.githubusercontent.com/mlech26l/ncps/695ec22d7d1831f2ced67346ef7d2f08c525bd47/ncps/torch/ltc_cell.py",
+      "content_type": "text/plain; charset=utf-8",
+      "bytes": 10431,
+      "sha256": "167a9d6e1f4dc653ce21420010709e1c995716e53ad0d8bbc2d53c19c40b123f",
+      "checked_date_kst": "2026-11-16",
+      "semantic_status": "RETRIEVED_REQUIRES_SCOPE_INTERPRETATION"
+    },
+    {
+      "id": "NCPS_LTC_WRAPPER",
+      "url": "https://raw.githubusercontent.com/mlech26l/ncps/695ec22d7d1831f2ced67346ef7d2f08c525bd47/ncps/torch/ltc.py",
+      "checked_at": "2026-11-16T01:22:20.341684+00:00",
+      "use": "evidence research only; not source-price provenance",
+      "limitation": "current page may not establish historical policy",
+      "http_status": 200,
+      "final_url": "https://raw.githubusercontent.com/mlech26l/ncps/695ec22d7d1831f2ced67346ef7d2f08c525bd47/ncps/torch/ltc.py",
+      "content_type": "text/plain; charset=utf-8",
+      "bytes": 7572,
+      "sha256": "bbf3127013d3969994ecf0debf4eb37b56db750475ee71646a9decdf1aaf3026",
+      "checked_date_kst": "2026-11-16",
+      "semantic_status": "RETRIEVED_REQUIRES_SCOPE_INTERPRETATION"
+    },
+    {
+      "id": "TORCH_SERIALIZATION",
+      "url": "https://docs.pytorch.org/docs/stable/notes/serialization.html",
+      "checked_at": "2026-11-16T01:22:20.405410+00:00",
+      "use": "evidence research only; not source-price provenance",
+      "limitation": "current page may not establish historical policy",
+      "http_status": 200,
+      "final_url": "https://docs.pytorch.org/docs/stable/notes/serialization.html",
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 788,
+      "sha256": "aee411e889724b1654206195186fbd51d1546ed7ca4aeed3cb23658a113ba14c",
+      "checked_date_kst": "2026-11-16",
+      "semantic_status": "FAILED_ERROR_OR_REDIRECT_PAGE_NOT_REQUESTED_CONTENT"
+    },
+    {
+      "id": "HMMLEARN_API",
+      "url": "https://hmmlearn.readthedocs.io/en/stable/api.html",
+      "checked_at": "2026-11-16T01:22:20.427749+00:00",
+      "use": "evidence research only; not source-price provenance",
+      "limitation": "current page may not establish historical policy",
+      "http_status": 200,
+      "final_url": "https://hmmlearn.readthedocs.io/en/stable/api.html",
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 595833,
+      "sha256": "9a07c65c1f1dc544a34e57bc61967f485b68b2aa34bfae8158a9210031eb8069",
+      "checked_date_kst": "2026-11-16",
+      "semantic_status": "RETRIEVED_REQUIRES_SCOPE_INTERPRETATION"
+    },
+    {
+      "id": "NASDAQ_EARLY_2010",
+      "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=dtn2010-039",
+      "checked_at": "2026-11-16T01:31:13.836687+00:00",
+      "use": "evidence research only; not source-price provenance",
+      "limitation": "current page may not establish historical policy",
+      "http_status": 200,
+      "final_url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=dtn2010-039",
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 69014,
+      "sha256": "52f8e2bd15abc51331a2d8014ff8570313ec03a6debb4a56510714ba348d3bcf",
+      "checked_date_kst": "2026-11-16",
+      "semantic_status": "RETRIEVED_REQUIRES_SCOPE_INTERPRETATION"
+    },
+    {
+      "id": "NASDAQ_EARLY_2020",
+      "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ETA+2020-76",
+      "checked_at": "2026-11-16T01:31:13.837394+00:00",
+      "use": "evidence research only; not source-price provenance",
+      "limitation": "current page may not establish historical policy",
+      "http_status": 200,
+      "final_url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ETA+2020-76",
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 73215,
+      "sha256": "db88201d36c0e3336780107cd20267a3261a3673d99d4066a629b6bcc4b18d04",
+      "checked_date_kst": "2026-11-16",
+      "semantic_status": "RETRIEVED_REQUIRES_SCOPE_INTERPRETATION"
+    },
+    {
+      "id": "NASDAQ_EARLY_FEED_HISTORICAL",
+      "url": "https://www.nasdaqtrader.com/content/technicalsupport/dataproducts/GDPEarlyCloseSchedule.pdf",
+      "checked_at": "2026-11-16T01:31:13.837846+00:00",
+      "use": "evidence research only; not source-price provenance",
+      "limitation": "current page may not establish historical policy",
+      "http_status": 200,
+      "final_url": "https://www.nasdaqtrader.com/content/technicalsupport/dataproducts/GDPEarlyCloseSchedule.pdf",
+      "content_type": "application/pdf",
+      "bytes": 226336,
+      "sha256": "20afeae37493b15f1acac15eaaacc6f8ba0abfa9c745eddda56ad16aef93c256",
+      "checked_date_kst": "2026-11-16",
+      "semantic_status": "RETRIEVED_REQUIRES_SCOPE_INTERPRETATION"
+    },
+    {
+      "id": "KRX_HOLIDAY_2010",
+      "url": "https://open.krx.co.kr/contents/OPN/99/OPN99000001.jspx",
+      "method": "POST",
+      "checked_at": "2026-11-16T01:20:25.219412+00:00",
+      "params": {
+        "search_bas_yy": "2010",
+        "gridTp": "KRX",
+        "bld": "MKD/01/0110/01100305/mkd01100305_01"
+      },
+      "use": "weekday closures for cash KRX session reconstruction",
+      "limitation": "verify year coverage and returned dates; empty/error is not zero holidays",
+      "http_status": 200,
+      "bytes": 1142,
+      "sha256": "d90cb8c73639bc81d1d24d2bc11c7ec44f28d256dee759f4f4f09f565418f392",
+      "holiday_rows": 10,
+      "first": [
+        {
+          "calnd_dd": "2010-01-01",
+          "dy_tp_cd": "FRI",
+          "calnd_dd_dy": "2010-01-01 (FRI)",
+          "kr_dy_tp": "금요일",
+          "holdy_nm": ""
+        }
+      ],
+      "last": [
+        {
+          "calnd_dd": "2010-12-31",
+          "dy_tp_cd": "FRI",
+          "calnd_dd_dy": "2010-12-31 (FRI)",
+          "kr_dy_tp": "금요일",
+          "holdy_nm": ""
+        }
+      ],
+      "checked_date_kst": "2026-11-16",
+      "semantic_status": "RETRIEVED_REQUIRES_SCOPE_INTERPRETATION"
+    },
+    {
+      "id": "KRX_HOLIDAY_2011",
+      "url": "https://open.krx.co.kr/contents/OPN/99/OPN99000001.jspx",
+      "method": "POST",
+      "checked_at": "2026-11-16T01:20:26.212839+00:00",
+      "params": {
+        "search_bas_yy": "2011",
+        "gridTp": "KRX",
+        "bld": "MKD/01/0110/01100305/mkd01100305_01"
+      },
+      "use": "weekday closures for cash KRX session reconstruction",
+      "limitation": "verify year coverage and returned dates; empty/error is not zero holidays",
+      "http_status": 200,
+      "bytes": 1368,
+      "sha256": "db3e2c6fe0b8cd44785a6ade10ba7e2e7a463ef8e0bd08f050be152f6734748c",
+      "holiday_rows": 12,
+      "first": [
+        {
+          "calnd_dd": "2011-02-02",
+          "dy_tp_cd": "WED",
+          "calnd_dd_dy": "2011-02-02 (WED)",
+          "kr_dy_tp": "수요일",
+          "holdy_nm": ""
+        }
+      ],
+      "last": [
+        {
+          "calnd_dd": "2011-12-30",
+          "dy_tp_cd": "FRI",
+          "calnd_dd_dy": "2011-12-30 (FRI)",
+          "kr_dy_tp": "금요일",
+          "holdy_nm": ""
+        }
+      ],
+      "checked_date_kst": "2026-11-16",
+      "semantic_status": "RETRIEVED_REQUIRES_SCOPE_INTERPRETATION"
+    },
+    {
+      "id": "KRX_HOLIDAY_2012",
+      "url": "https://open.krx.co.kr/contents/OPN/99/OPN99000001.jspx",
+      "method": "POST",
+      "checked_at": "2026-11-16T01:20:26.997546+00:00",
+      "params": {
+        "search_bas_yy": "2012",
+        "gridTp": "KRX",
+        "bld": "MKD/01/0110/01100305/mkd01100305_01"
+      },
+      "use": "weekday closures for cash KRX session reconstruction",
+      "limitation": "verify year coverage and returned dates; empty/error is not zero holidays",
+      "http_status": 200,
+      "bytes": 1481,
+      "sha256": "11be2d02bcdac123dfbb452cd936f6414c745ee84e8a76893e6aa7427f262470",
+      "holiday_rows": 13,
+      "first": [
+        {
+          "calnd_dd": "2012-01-23",
+          "dy_tp_cd": "MON",
+          "calnd_dd_dy": "2012-01-23 (MON)",
+          "kr_dy_tp": "월요일",
+          "holdy_nm": ""
+        }
+      ],
+      "last": [
+        {
+          "calnd_dd": "2012-12-31",
+          "dy_tp_cd": "MON",
+          "calnd_dd_dy": "2012-12-31 (MON)",
+          "kr_dy_tp": "월요일",
+          "holdy_nm": ""
+        }
+      ],
+      "checked_date_kst": "2026-11-16",
+      "semantic_status": "RETRIEVED_REQUIRES_SCOPE_INTERPRETATION"
+    },
+    {
+      "id": "KRX_HOLIDAY_2013",
+      "url": "https://open.krx.co.kr/contents/OPN/99/OPN99000001.jspx",
+      "method": "POST",
+      "checked_at": "2026-11-16T01:20:27.778779+00:00",
+      "params": {
+        "search_bas_yy": "2013",
+        "gridTp": "KRX",
+        "bld": "MKD/01/0110/01100305/mkd01100305_01"
+      },
+      "use": "weekday closures for cash KRX session reconstruction",
+      "limitation": "verify year coverage and returned dates; empty/error is not zero holidays",
+      "http_status": 200,
+      "bytes": 1594,
+      "sha256": "f9d1884d25f1597aaf2ef64a6a9bf52be57d0c65e4be27355c163d3d1dee83d0",
+      "holiday_rows": 14,
+      "first": [
+        {
+          "calnd_dd": "2013-01-01",
+          "dy_tp_cd": "TUE",
+          "calnd_dd_dy": "2013-01-01 (TUE)",
+          "kr_dy_tp": "화요일",
+          "holdy_nm": ""
+        }
+      ],
+      "last": [
+        {
+          "calnd_dd": "2013-12-31",
+          "dy_tp_cd": "TUE",
+          "calnd_dd_dy": "2013-12-31 (TUE)",
+          "kr_dy_tp": "화요일",
+          "holdy_nm": ""
+        }
+      ],
+      "checked_date_kst": "2026-11-16",
+      "semantic_status": "RETRIEVED_REQUIRES_SCOPE_INTERPRETATION"
+    },
+    {
+      "id": "KRX_HOLIDAY_2014",
+      "url": "https://open.krx.co.kr/contents/OPN/99/OPN99000001.jspx",
+      "method": "POST",
+      "checked_at": "2026-11-16T01:20:28.340354+00:00",
+      "params": {
+        "search_bas_yy": "2014",
+        "gridTp": "KRX",
+        "bld": "MKD/01/0110/01100305/mkd01100305_01"
+      },
+      "use": "weekday closures for cash KRX session reconstruction",
+      "limitation": "verify year coverage and returned dates; empty/error is not zero holidays",
+      "http_status": 200,
+      "bytes": 1891,
+      "sha256": "128ef24ac742ed45e3f7d841702fe2d1525fb22d32c9a385ddf8281e09f17061",
+      "holiday_rows": 16,
+      "first": [
+        {
+          "calnd_dd": "2014-01-01",
+          "dy_tp_cd": "WED",
+          "calnd_dd_dy": "2014-01-01",
+          "kr_dy_tp": "수요일",
+          "holdy_nm": "신정"
+        }
+      ],
+      "last": [
+        {
+          "calnd_dd": "2014-12-31",
+          "dy_tp_cd": "WED",
+          "calnd_dd_dy": "2014-12-31",
+          "kr_dy_tp": "수요일",
+          "holdy_nm": "연말휴장일"
+        }
+      ],
+      "checked_date_kst": "2026-11-16",
+      "semantic_status": "RETRIEVED_REQUIRES_SCOPE_INTERPRETATION"
+    },
+    {
+      "id": "KRX_HOLIDAY_2015",
+      "url": "https://open.krx.co.kr/contents/OPN/99/OPN99000001.jspx",
+      "method": "POST",
+      "checked_at": "2026-11-16T01:20:28.956328+00:00",
+      "params": {
+        "search_bas_yy": "2015",
+        "gridTp": "KRX",
+        "bld": "MKD/01/0110/01100305/mkd01100305_01"
+      },
+      "use": "weekday closures for cash KRX session reconstruction",
+      "limitation": "verify year coverage and returned dates; empty/error is not zero holidays",
+      "http_status": 200,
+      "bytes": 1561,
+      "sha256": "4de8828cb20011b17c52d53944f15c3389038a920638b88e1f1ade4e061a87a0",
+      "holiday_rows": 13,
+      "first": [
+        {
+          "calnd_dd": "2015-01-01",
+          "dy_tp_cd": "THU",
+          "calnd_dd_dy": "2015-01-01",
+          "kr_dy_tp": "목요일",
+          "holdy_nm": "신정"
+        }
+      ],
+      "last": [
+        {
+          "calnd_dd": "2015-12-31",
+          "dy_tp_cd": "THU",
+          "calnd_dd_dy": "2015-12-31",
+          "kr_dy_tp": "목요일",
+          "holdy_nm": "연말휴장일"
+        }
+      ],
+      "checked_date_kst": "2026-11-16",
+      "semantic_status": "RETRIEVED_REQUIRES_SCOPE_INTERPRETATION"
+    },
+    {
+      "id": "KRX_HOLIDAY_2016",
+      "url": "https://open.krx.co.kr/contents/OPN/99/OPN99000001.jspx",
+      "method": "POST",
+      "checked_at": "2026-11-16T01:20:29.685310+00:00",
+      "params": {
+        "search_bas_yy": "2016",
+        "gridTp": "KRX",
+        "bld": "MKD/01/0110/01100305/mkd01100305_01"
+      },
+      "use": "weekday closures for cash KRX session reconstruction",
+      "limitation": "verify year coverage and returned dates; empty/error is not zero holidays",
+      "http_status": 200,
+      "bytes": 1759,
+      "sha256": "7d56306ee656a890264dd64e3a8ceab9aeac8b21fcbbc7151b3cc327b81a238a",
+      "holiday_rows": 15,
+      "first": [
+        {
+          "calnd_dd": "2016-01-01",
+          "dy_tp_cd": "FRI",
+          "calnd_dd_dy": "2016-01-01",
+          "kr_dy_tp": "금요일",
+          "holdy_nm": "신정"
+        }
+      ],
+      "last": [
+        {
+          "calnd_dd": "2016-12-30",
+          "dy_tp_cd": "FRI",
+          "calnd_dd_dy": "2016-12-30",
+          "kr_dy_tp": "금요일",
+          "holdy_nm": "연말휴장일"
+        }
+      ],
+      "checked_date_kst": "2026-11-16",
+      "semantic_status": "RETRIEVED_REQUIRES_SCOPE_INTERPRETATION"
+    },
+    {
+      "id": "KRX_HOLIDAY_2017",
+      "url": "https://open.krx.co.kr/contents/OPN/99/OPN99000001.jspx",
+      "method": "POST",
+      "checked_at": "2026-11-16T01:20:30.468104+00:00",
+      "params": {
+        "search_bas_yy": "2017",
+        "gridTp": "KRX",
+        "bld": "MKD/01/0110/01100305/mkd01100305_01"
+      },
+      "use": "weekday closures for cash KRX session reconstruction",
+      "limitation": "verify year coverage and returned dates; empty/error is not zero holidays",
+      "http_status": 200,
+      "bytes": 2035,
+      "sha256": "156b006a45a8704f21141a4b66ce4216d5691c2d9415b7c9387250ff0fe749b7",
+      "holiday_rows": 17,
+      "first": [
+        {
+          "calnd_dd": "2017-01-27",
+          "dy_tp_cd": "FRI",
+          "calnd_dd_dy": "2017-01-27",
+          "kr_dy_tp": "금요일",
+          "holdy_nm": "설날"
+        }
+      ],
+      "last": [
+        {
+          "calnd_dd": "2017-12-29",
+          "dy_tp_cd": "FRI",
+          "calnd_dd_dy": "2017-12-29",
+          "kr_dy_tp": "금요일",
+          "holdy_nm": "연말휴장일"
+        }
+      ],
+      "checked_date_kst": "2026-11-16",
+      "semantic_status": "RETRIEVED_REQUIRES_SCOPE_INTERPRETATION"
+    },
+    {
+      "id": "KRX_HOLIDAY_2018",
+      "url": "https://open.krx.co.kr/contents/OPN/99/OPN99000001.jspx",
+      "method": "POST",
+      "checked_at": "2026-11-16T01:20:31.217748+00:00",
+      "params": {
+        "search_bas_yy": "2018",
+        "gridTp": "KRX",
+        "bld": "MKD/01/0110/01100305/mkd01100305_01"
+      },
+      "use": "weekday closures for cash KRX session reconstruction",
+      "limitation": "verify year coverage and returned dates; empty/error is not zero holidays",
+      "http_status": 200,
+      "bytes": 2018,
+      "sha256": "32a42d2ba4629d469919fbcfe3fb433b740df1f1dc65ae55f1533291acbba160",
+      "holiday_rows": 17,
+      "first": [
+        {
+          "calnd_dd": "2018-01-01",
+          "dy_tp_cd": "MON",
+          "calnd_dd_dy": "2018-01-01",
+          "kr_dy_tp": "월요일",
+          "holdy_nm": "신정"
+        }
+      ],
+      "last": [
+        {
+          "calnd_dd": "2018-12-31",
+          "dy_tp_cd": "MON",
+          "calnd_dd_dy": "2018-12-31",
+          "kr_dy_tp": "월요일",
+          "holdy_nm": "연말휴장일"
+        }
+      ],
+      "checked_date_kst": "2026-11-16",
+      "semantic_status": "RETRIEVED_REQUIRES_SCOPE_INTERPRETATION"
+    },
+    {
+      "id": "KRX_HOLIDAY_2019",
+      "url": "https://open.krx.co.kr/contents/OPN/99/OPN99000001.jspx",
+      "method": "POST",
+      "checked_at": "2026-11-16T01:20:31.713663+00:00",
+      "params": {
+        "search_bas_yy": "2019",
+        "gridTp": "KRX",
+        "bld": "MKD/01/0110/01100305/mkd01100305_01"
+      },
+      "use": "weekday closures for cash KRX session reconstruction",
+      "limitation": "verify year coverage and returned dates; empty/error is not zero holidays",
+      "http_status": 200,
+      "bytes": 1763,
+      "sha256": "1f236aacdc73eab0d7cd6120e190492e76434f0d73815be9ce4862c252ded24f",
+      "holiday_rows": 15,
+      "first": [
+        {
+          "calnd_dd": "2019-01-01",
+          "dy_tp_cd": "TUE",
+          "calnd_dd_dy": "2019-01-01",
+          "kr_dy_tp": "화요일",
+          "holdy_nm": "신정"
+        }
+      ],
+      "last": [
+        {
+          "calnd_dd": "2019-12-31",
+          "dy_tp_cd": "TUE",
+          "calnd_dd_dy": "2019-12-31",
+          "kr_dy_tp": "화요일",
+          "holdy_nm": "연말휴장일"
+        }
+      ],
+      "checked_date_kst": "2026-11-16",
+      "semantic_status": "RETRIEVED_REQUIRES_SCOPE_INTERPRETATION"
+    },
+    {
+      "id": "KRX_HOLIDAY_2020",
+      "url": "https://open.krx.co.kr/contents/OPN/99/OPN99000001.jspx",
+      "method": "POST",
+      "checked_at": "2026-11-16T01:20:32.561561+00:00",
+      "params": {
+        "search_bas_yy": "2020",
+        "gridTp": "KRX",
+        "bld": "MKD/01/0110/01100305/mkd01100305_01"
+      },
+      "use": "weekday closures for cash KRX session reconstruction",
+      "limitation": "verify year coverage and returned dates; empty/error is not zero holidays",
+      "http_status": 200,
+      "bytes": 1674,
+      "sha256": "8e9e2a618804ee41c7585ff8a3221c724bad7402f0e8ed2dbb08d572a751eb6b",
+      "holiday_rows": 14,
+      "first": [
+        {
+          "calnd_dd": "2020-01-01",
+          "dy_tp_cd": "WED",
+          "calnd_dd_dy": "2020-01-01",
+          "kr_dy_tp": "수요일",
+          "holdy_nm": "신정"
+        }
+      ],
+      "last": [
+        {
+          "calnd_dd": "2020-12-31",
+          "dy_tp_cd": "THU",
+          "calnd_dd_dy": "2020-12-31",
+          "kr_dy_tp": "목요일",
+          "holdy_nm": "연말휴장일"
+        }
+      ],
+      "checked_date_kst": "2026-11-16",
+      "semantic_status": "RETRIEVED_REQUIRES_SCOPE_INTERPRETATION"
+    },
+    {
+      "id": "KRX_HOLIDAY_2021",
+      "url": "https://open.krx.co.kr/contents/OPN/99/OPN99000001.jspx",
+      "method": "POST",
+      "checked_at": "2026-11-16T01:20:33.140117+00:00",
+      "params": {
+        "search_bas_yy": "2021",
+        "gridTp": "KRX",
+        "bld": "MKD/01/0110/01100305/mkd01100305_01"
+      },
+      "use": "weekday closures for cash KRX session reconstruction",
+      "limitation": "verify year coverage and returned dates; empty/error is not zero holidays",
+      "http_status": 200,
+      "bytes": 1559,
+      "sha256": "c616686118021a7cfdfec194fcef2c7c141ccf1eaf3cf81249f62921cd405e94",
+      "holiday_rows": 13,
+      "first": [
+        {
+          "calnd_dd": "2021-01-01",
+          "dy_tp_cd": "FRI",
+          "calnd_dd_dy": "2021-01-01",
+          "kr_dy_tp": "금요일",
+          "holdy_nm": "신정"
+        }
+      ],
+      "last": [
+        {
+          "calnd_dd": "2021-12-31",
+          "dy_tp_cd": "FRI",
+          "calnd_dd_dy": "2021-12-31",
+          "kr_dy_tp": "금요일",
+          "holdy_nm": "연말휴장일"
+        }
+      ],
+      "checked_date_kst": "2026-11-16",
+      "semantic_status": "RETRIEVED_REQUIRES_SCOPE_INTERPRETATION"
+    },
+    {
+      "id": "KRX_HOLIDAY_2022",
+      "url": "https://open.krx.co.kr/contents/OPN/99/OPN99000001.jspx",
+      "method": "POST",
+      "checked_at": "2026-11-16T01:20:33.747235+00:00",
+      "params": {
+        "search_bas_yy": "2022",
+        "gridTp": "KRX",
+        "bld": "MKD/01/0110/01100305/mkd01100305_01"
+      },
+      "use": "weekday closures for cash KRX session reconstruction",
+      "limitation": "verify year coverage and returned dates; empty/error is not zero holidays",
+      "http_status": 200,
+      "bytes": 1679,
+      "sha256": "04f80316e207cd1e1f0d1be7e054594643c9e33433d0a2ffd54a302deb9ce66b",
+      "holiday_rows": 14,
+      "first": [
+        {
+          "calnd_dd": "2022-01-31",
+          "dy_tp_cd": "MON",
+          "calnd_dd_dy": "2022-01-31",
+          "kr_dy_tp": "월요일",
+          "holdy_nm": "설날"
+        }
+      ],
+      "last": [
+        {
+          "calnd_dd": "2022-12-30",
+          "dy_tp_cd": "FRI",
+          "calnd_dd_dy": "2022-12-30",
+          "kr_dy_tp": "금요일",
+          "holdy_nm": "연말휴장일"
+        }
+      ],
+      "checked_date_kst": "2026-11-16",
+      "semantic_status": "RETRIEVED_REQUIRES_SCOPE_INTERPRETATION"
+    },
+    {
+      "id": "KRX_HOLIDAY_2023",
+      "url": "https://open.krx.co.kr/contents/OPN/99/OPN99000001.jspx",
+      "method": "POST",
+      "checked_at": "2026-11-16T01:20:34.258997+00:00",
+      "params": {
+        "search_bas_yy": "2023",
+        "gridTp": "KRX",
+        "bld": "MKD/01/0110/01100305/mkd01100305_01"
+      },
+      "use": "weekday closures for cash KRX session reconstruction",
+      "limitation": "verify year coverage and returned dates; empty/error is not zero holidays",
+      "http_status": 200,
+      "bytes": 1795,
+      "sha256": "3cb70ddbe626ab148ccdb5555b5212198471a07726ebf8e1c5ece4e826107bf2",
+      "holiday_rows": 15,
+      "first": [
+        {
+          "calnd_dd": "2023-01-23",
+          "dy_tp_cd": "MON",
+          "calnd_dd_dy": "2023-01-23",
+          "kr_dy_tp": "월요일",
+          "holdy_nm": "설날"
+        }
+      ],
+      "last": [
+        {
+          "calnd_dd": "2023-12-29",
+          "dy_tp_cd": "FRI",
+          "calnd_dd_dy": "2023-12-29",
+          "kr_dy_tp": "금요일",
+          "holdy_nm": "연말휴장일"
+        }
+      ],
+      "checked_date_kst": "2026-11-16",
+      "semantic_status": "RETRIEVED_REQUIRES_SCOPE_INTERPRETATION"
+    },
+    {
+      "id": "KRX_HOLIDAY_2024",
+      "url": "https://open.krx.co.kr/contents/OPN/99/OPN99000001.jspx",
+      "method": "POST",
+      "checked_at": "2026-11-16T01:20:34.829467+00:00",
+      "params": {
+        "search_bas_yy": "2024",
+        "gridTp": "KRX",
+        "bld": "MKD/01/0110/01100305/mkd01100305_01"
+      },
+      "use": "weekday closures for cash KRX session reconstruction",
+      "limitation": "verify year coverage and returned dates; empty/error is not zero holidays",
+      "http_status": 200,
+      "bytes": 2143,
+      "sha256": "d5961ae5998036cc1710fe28e22d324db0233b570dd5c417b088fba1408f857f",
+      "holiday_rows": 18,
+      "first": [
+        {
+          "calnd_dd": "2024-01-01",
+          "dy_tp_cd": "MON",
+          "calnd_dd_dy": "2024-01-01",
+          "kr_dy_tp": "월요일",
+          "holdy_nm": "신정"
+        }
+      ],
+      "last": [
+        {
+          "calnd_dd": "2024-12-31",
+          "dy_tp_cd": "TUE",
+          "calnd_dd_dy": "2024-12-31",
+          "kr_dy_tp": "화요일",
+          "holdy_nm": "연말휴장일"
+        }
+      ],
+      "checked_date_kst": "2026-11-16",
+      "semantic_status": "RETRIEVED_REQUIRES_SCOPE_INTERPRETATION"
+    },
+    {
+      "id": "KRX_HOLIDAY_2025",
+      "url": "https://open.krx.co.kr/contents/OPN/99/OPN99000001.jspx",
+      "method": "POST",
+      "checked_at": "2026-11-16T01:20:35.317420+00:00",
+      "params": {
+        "search_bas_yy": "2025",
+        "gridTp": "KRX",
+        "bld": "MKD/01/0110/01100305/mkd01100305_01"
+      },
+      "use": "weekday closures for cash KRX session reconstruction",
+      "limitation": "verify year coverage and returned dates; empty/error is not zero holidays",
+      "http_status": 200,
+      "bytes": 2270,
+      "sha256": "c90dcd0f9fd59498f239bbed32f63a300d64f25f9e03020f26a15c40cf017fa8",
+      "holiday_rows": 19,
+      "first": [
+        {
+          "calnd_dd": "2025-01-01",
+          "dy_tp_cd": "WED",
+          "calnd_dd_dy": "2025-01-01",
+          "kr_dy_tp": "수요일",
+          "holdy_nm": "신정"
+        }
+      ],
+      "last": [
+        {
+          "calnd_dd": "2025-12-31",
+          "dy_tp_cd": "WED",
+          "calnd_dd_dy": "2025-12-31",
+          "kr_dy_tp": "수요일",
+          "holdy_nm": "연말휴장일"
+        }
+      ],
+      "checked_date_kst": "2026-11-16",
+      "semantic_status": "RETRIEVED_REQUIRES_SCOPE_INTERPRETATION"
+    },
+    {
+      "id": "KRX_PUBLIC_SESSION_PAGE",
+      "url": "https://open.krx.co.kr/contents/MKD/01/0110/01100305/MKD01100305.jsp",
+      "method": "GET",
+      "checked_at": "2026-11-16T01:19:35.200016+00:00",
+      "params": {},
+      "http_status": 200,
+      "bytes": 226622,
+      "sha256": "9a5deb2f87d4c8ace295620c4ab1b21062e3e91a29ed6807bb4f39012ee06de3",
+      "content_type": "text/html;charset=UTF-8",
+      "use": "Official-source verification research, not price-vintage proof",
+      "limitation": "Retrieval alone does not establish full historical coverage or supplied CSV origin",
+      "checked_date_kst": "2026-11-16",
+      "semantic_status": "RETRIEVED_REQUIRES_SCOPE_INTERPRETATION"
+    },
+    {
+      "id": "KRX_PUBLIC_CALENDAR_OTP",
+      "url": "https://open.krx.co.kr/contents/COM/GenerateOTP.jspx",
+      "method": "GET",
+      "checked_at": "2026-11-16T01:19:35.715265+00:00",
+      "params": {
+        "name": "form",
+        "bld": "MKD/01/0110/01100305/mkd01100305_01"
+      },
+      "http_status": 200,
+      "bytes": 216,
+      "sha256": "21ae87f892c8057d36883affca967f3cf9bbc919543066e83f8a6b2e99c4dc99",
+      "content_type": "text/html;charset=UTF-8",
+      "use": "Official-source verification research, not price-vintage proof",
+      "limitation": "Form token not published; not an account credential or evidence of price access",
+      "checked_date_kst": "2026-11-16",
+      "semantic_status": "RETRIEVED_REQUIRES_SCOPE_INTERPRETATION"
+    },
+    {
+      "id": "KRX_HOLIDAY_2025",
+      "url": "https://open.krx.co.kr/contents/OPN/99/OPN99000001.jspx",
+      "method": "POST",
+      "checked_at": "2026-11-16T01:19:36.290784+00:00",
+      "params": {
+        "search_bas_yy": "2025",
+        "gridTp": "KRX",
+        "pagePath": "/contents/MKD/01/0110/01100305/MKD01100305.jsp"
+      },
+      "http_status": 200,
+      "bytes": 2270,
+      "sha256": "c90dcd0f9fd59498f239bbed32f63a300d64f25f9e03020f26a15c40cf017fa8",
+      "content_type": "text/html;charset=UTF-8",
+      "use": "Official-source verification research, not price-vintage proof",
+      "limitation": "Retrieval alone does not establish full historical coverage or supplied CSV origin",
+      "checked_date_kst": "2026-11-16",
+      "semantic_status": "RETRIEVED_REQUIRES_SCOPE_INTERPRETATION"
+    },
+    {
+      "id": "KRX_INDEX_2025_QUERY",
+      "url": "https://data.krx.co.kr/comm/bldAttendant/getJsonData.cmd",
+      "method": "POST",
+      "checked_at": "2026-11-16T01:19:36.718100+00:00",
+      "params": {
+        "bld": "dbms/MDC/STAT/standard/MDCSTAT00301",
+        "locale": "ko_KR",
+        "indIdx": "1",
+        "indIdx2": "028",
+        "strtDd": "20250101",
+        "endDd": "20251231",
+        "csvxls_isNo": "false"
+      },
+      "error": "HTTP Error 400: Bad Request",
+      "use": "Official-source verification research, not price-vintage proof",
+      "limitation": "Retrieval alone does not establish full historical coverage or supplied CSV origin",
+      "checked_date_kst": "2026-11-16",
+      "semantic_status": "FAILED"
+    },
+    {
+      "id": "KRX_OFFICIAL_PRICE_POST",
+      "url": "https://data.krx.co.kr/comm/bldAttendant/getJsonData.cmd",
+      "method": "POST",
+      "params": {
+        "bld": "dbms/MDC/STAT/standard/MDCSTAT00301",
+        "locale": "ko_KR",
+        "indIdx": "1",
+        "indIdx2": "028",
+        "strtDd": "20100101",
+        "endDd": "20251231",
+        "csvxls_isNo": "false"
+      },
+      "checked_at": "2026-11-16T01:27:43.756240+00:00",
+      "http_status": 400,
+      "sha256": "377b375adcc04b5ba5998c978372401a4c6327ccc218e17e383f72861085cb95",
+      "bytes": 6,
+      "preview": "LOGOUT",
+      "use": "Official-source verification research, not price-vintage proof",
+      "limitation": "Retrieval alone does not establish full historical coverage or supplied CSV origin",
+      "checked_date_kst": "2026-11-16",
+      "semantic_status": "FAILED"
+    },
+    {
+      "id": "KRX_OFFICIAL_PRICE_GET",
+      "url": "https://data.krx.co.kr/comm/bldAttendant/getJsonData.cmd",
+      "method": "GET",
+      "params": {
+        "bld": "dbms/MDC/STAT/standard/MDCSTAT00301",
+        "locale": "ko_KR",
+        "indIdx": "1",
+        "indIdx2": "028",
+        "strtDd": "20100101",
+        "endDd": "20251231",
+        "csvxls_isNo": "false"
+      },
+      "checked_at": "2026-11-16T01:27:45.205227+00:00",
+      "http_status": 400,
+      "sha256": "377b375adcc04b5ba5998c978372401a4c6327ccc218e17e383f72861085cb95",
+      "bytes": 6,
+      "preview": "LOGOUT",
+      "use": "Official-source verification research, not price-vintage proof",
+      "limitation": "Retrieval alone does not establish full historical coverage or supplied CSV origin",
+      "checked_date_kst": "2026-11-16",
+      "semantic_status": "FAILED"
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "checked_at": "2026-11-16T01:34:23.522559+00:00",
+  "labels": {
+    "status": "DIAGNOSTIC_ONLY_ORIGINAL_PRICES_NOT_OFFICIALLY_RECONCILED",
+    "calendar_verified": true,
+    "actual_sessions": 3939,
+    "original_price_rows": 3894,
+    "missing_current_close": 45,
+    "label_status_counts": {
+      "confirmed": 3833,
+      "missing_current_close": 45,
+      "missing_KRX_endpoint_close": 41,
+      "horizon_outside_approved_period": 20
+    },
+    "known_original_price_labels_on_calendar": 3833,
+    "feature_ready_rows": 2781,
+    "feature_ready_known_labels": 2747,
+    "window20_include_t_candidates": 2467,
+    "row20_vs_KRX20_different_label_end": 664,
+    "last_valid_base_date_on_calendar": "2025-12-01",
+    "last_label_end": "2025-12-30",
+    "unknown_tail": 20,
+    "confirmed_production_samples": null,
+    "limitation": "Calendar endpoint dates verified; original price values and feature availability remain uncertified."
+  },
+  "us_mapping": {
+    "checked_at": "2026-11-16T01:34:23.522559+00:00",
+    "scope": "2021-2025 verified market-close calendar candidate; NOT provider PIT input mapping",
+    "KRX_decision_dates": 3939,
+    "verified_calendar_candidate_dates": 1224,
+    "older_or_no_prior_verified_schedule": 2715,
+    "same_date_ffill_differs_from_completed_session": 1184,
+    "joined_KR_shift1_differs": 52,
+    "source_US_shift1_differs": 42,
+    "provider_PIT_verified_dates": 0,
+    "official_US_sessions_by_year": {
+      "2021": 252,
+      "2022": 251,
+      "2023": 250,
+      "2024": 252,
+      "2025": 250
+    },
+    "early_closes_verified_2021_2025": 10,
+    "full_2010_2020_calendar_status": "BLOCKED; PDF URL probes returned HTML error bodies",
+    "DST_clock_probes": 64,
+    "limitations": [
+      "No 0-second publisher delay assumed.",
+      "latest_completed_session is a diagnostic calendar candidate, never populated as production_PIT_date.",
+      "Regular-session close is not index-finalization or CSV-publication time.",
+      "Nasdaq/SOX share source-date arrays, so one mapping row covers both; price values not published."
+    ]
+  },
+  "original_integrity": "PASS",
+  "model_training": 0,
+  "hmm_fit": 0,
+  "GPU": 0,
+  "model_forward": 0,
+  "checkpoint_load": 0,
+  "package_install": 0
+}

@@ -13,7 +13,7 @@
     "use_2026_for_targets": false
   },
   "period_status": "USER_APPROVED",
-  "execution_status": "BLOCKED_PENDING_PROVENANCE",
+  "execution_status": "BLOCKED_OFFICIAL_PRICES_PIT_AND_RUNTIME",
   "prediction_contract": {
     "timezone": "Asia/Seoul",
     "time": "18:00",
@@ -171,10 +171,12 @@
   "purge_rule": "train.label_end < validation_start; validation.label_end < test_start",
   "scaler": "StandardScaler; only fold Train feature rows; provenance recorded",
   "calendar": {
-    "status": "BLOCKED",
-    "source": null,
-    "sha256": null,
-    "verified": false
+    "status": "PASS",
+    "source": "https://open.krx.co.kr/contents/MKD/01/0110/01100305/MKD01100305.jsp",
+    "sha256": "c426702db216604d70f15973654d204a3e6afdb8cef1ef1f62169bb0a0667d6c",
+    "verified": true,
+    "session_file": "manifests/krx_sessions_2010_2025.csv",
+    "count": 3939
   },
   "availability": {
     "KOSPI_Close": {
@@ -249,7 +251,8 @@
     "ncps_reference_commit": "695ec22d7d1831f2ced67346ef7d2f08c525bd47",
     "runtime_version_status": "BLOCKED",
     "elapsed_time_unit": null,
-    "definition": "frozen-state conductance tau; not nonlinear Jacobian eigen-timescale"
+    "definition": "frozen-state conductance tau; not nonlinear Jacobian eigen-timescale",
+    "constraint_mode": "MUST_BE_EXPLICIT_FROM_ACTUAL_WRAPPER_METADATA"
   },
   "guards": {
     "bfill_allowed": false,

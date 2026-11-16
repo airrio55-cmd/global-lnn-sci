@@ -27,3 +27,9 @@
 검사는 `python experiments/kookmin_kospi200/tools/step2_preflight.py` 후 `python experiments/kookmin_kospi200/tests/test_step2.py`로 실행한다. 이전 `tools/static_audit.py`는전체기간재현을막기위해비활성화했다. 기존STEP1 evidence·AUDIT_KO.md는당시원본문제의역사적증거로보존하며새분석입력으로사용하지않는다.
 
 구현검사23PASS/0FAIL이나실자료7BLOCKED다. 공식KRX달력·누락가격·실제공표시각·runtime단위없이는STEP3학습을시작할수없다. `manifests/`의candidate수와observed경계를확정실험표본/실제KRX경계로오해하지않는다. 원본3노트북과CSV5파일은공개브랜치에업로드하지않는다.
+
+## STEP2.5 최신 상태
+
+`reports/STEP25_DATA_VERIFICATION_KO.md`, `STEP25_BLOCKERS_KO.md`, `STEP25_READINESS_KO.md`와 `manifests/step25_gate_results.json`이 최신 판정이다. B01은 공식 KRX3939세션으로PASS, 나머지는PARTIAL/BLOCKED이며 STEP3 smoke는 시작할 수 없다. 원본/과거 보고는 역사적 기록으로 보존한다.
+
+`tests/test_step25.py`는 확보한 evidence와 날짜·시각 규칙만 검사한다. `tools/step25_verify.py <local_source_directory>`는 로컬에 보존한 공식 조회 응답·공식 PDF의 검증 추출 metadata와 사용자원본으로 진단물을 재생성한다. raw자료/PDF/원본CSV/wheel은 공개 브랜치에 게시하지 않았다. source catalog의 URL·파라미터·해시로 출처를 추적한다. STEP2 preflight runner는 최신 manifest를 과거진단으로 덮어쓰지 않도록 차단한다.

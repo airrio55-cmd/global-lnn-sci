@@ -10,6 +10,8 @@ from kospi200.specs import validate_config
 
 
 def run():
+    if (ROOT/"manifests/step25_gate_results.json").exists():
+        raise SystemExit("STEP2 snapshot runner superseded by STEP2.5; use tools/step25_verify.py with original source evidence, do not overwrite verified manifests.")
     c=json.loads((ROOT/'configs/experiment_config.json').read_text());validate_config(c)
     originals=ROOT/'originals';manifest=json.loads((ROOT/'evidence/input_manifest.json').read_text())
     for item in manifest:

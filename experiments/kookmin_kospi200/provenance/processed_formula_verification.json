@@ -1,0 +1,114 @@
+{
+  "status": "PARTIAL",
+  "checked_at": "2026-11-16T01:34:23.522559+00:00",
+  "input_sources": [
+    {
+      "file": "KOSPI_200.csv",
+      "sha256": "7612a3ea53427dcf0148ab6b1e22f34500e6bff6fe1f23e2da793e40b0b82c50",
+      "url": null,
+      "origin": "user_attachment_not_upstream_attestation"
+    },
+    {
+      "file": "processed_regression_data.csv",
+      "sha256": "70dc3634b11fbf9acf34e2b78933d4259e4741eb4c9a8946b17e94362775d17e",
+      "url": null,
+      "origin": "user_attachment_not_upstream_attestation"
+    },
+    {
+      "file": "Foreigner_Net.csv",
+      "sha256": "091e61ed5311108628ee18aa2d98c4f374b21a51d10986a0b5e492de5caf2cf8",
+      "url": null,
+      "origin": "user_attachment_not_upstream_attestation"
+    },
+    {
+      "file": "SOX.csv",
+      "sha256": "4e8c27c9890ff1e94642c3c5a2ed4a6b6bd8eaa7ddbe3cc15e3203c57b4d6a44",
+      "url": null,
+      "origin": "user_attachment_not_upstream_attestation"
+    },
+    {
+      "file": "Nasdaq.csv",
+      "sha256": "802a49d6474cf5f497727d413515be15e783789098cdff5f9af3137151da2b6f",
+      "url": null,
+      "origin": "user_attachment_not_upstream_attestation"
+    }
+  ],
+  "generation_code_found": false,
+  "revision_history_found": false,
+  "used_in_default_experiment": false,
+  "formulas": [
+    {
+      "column": "KOSPI200",
+      "candidate_formula": "KOSPI_200.Close",
+      "matched_rows": 3854,
+      "total_rows": 3854,
+      "max_absolute_error": 2.842170943040401e-14,
+      "status": "NUMERIC_MATCH_NOT_GENERATOR_PROVENANCE"
+    },
+    {
+      "column": "Vol",
+      "candidate_formula": "KOSPI_200.Volume",
+      "matched_rows": 3854,
+      "total_rows": 3854,
+      "max_absolute_error": 0.0,
+      "status": "NUMERIC_MATCH_NOT_GENERATOR_PROVENANCE"
+    },
+    {
+      "column": "Foreigner",
+      "candidate_formula": "Foreign_Net same date",
+      "matched_rows": 3854,
+      "total_rows": 3854,
+      "max_absolute_error": 0.0,
+      "status": "NUMERIC_MATCH_NOT_GENERATOR_PROVENANCE"
+    },
+    {
+      "column": "Nasdaq",
+      "candidate_formula": "same-date Nasdaq Close joined on observed KOSPI rows then ffill",
+      "matched_rows": 3854,
+      "total_rows": 3854,
+      "max_absolute_error": 0.0,
+      "status": "NUMERIC_MATCH_NOT_GENERATOR_PROVENANCE"
+    },
+    {
+      "column": "SOX",
+      "candidate_formula": "same-date SOX Close joined on observed KOSPI rows then ffill",
+      "matched_rows": 3854,
+      "total_rows": 3854,
+      "max_absolute_error": 0.0,
+      "status": "NUMERIC_MATCH_NOT_GENERATOR_PROVENANCE"
+    },
+    {
+      "column": "Nasdaq_Ret20",
+      "candidate_formula": "Nasdaq / Nasdaq.shift(20 observed KOSPI rows) - 1",
+      "matched_rows": 3854,
+      "total_rows": 3854,
+      "max_absolute_error": 9.974659986866641e-17,
+      "status": "NUMERIC_MATCH_NOT_GENERATOR_PROVENANCE"
+    },
+    {
+      "column": "Foreigner_NetBuy20",
+      "candidate_formula": "Foreigner.rolling(20 observed KOSPI rows).sum()",
+      "matched_rows": 3854,
+      "total_rows": 3854,
+      "max_absolute_error": 0.0,
+      "status": "NUMERIC_MATCH_NOT_GENERATOR_PROVENANCE"
+    },
+    {
+      "column": "SOX_Lag1",
+      "candidate_formula": "SOX.shift(1 observed KOSPI row)",
+      "matched_rows": 3854,
+      "total_rows": 3854,
+      "max_absolute_error": 0.0,
+      "status": "NUMERIC_MATCH_NOT_GENERATOR_PROVENANCE"
+    },
+    {
+      "column": "Target_Ret20",
+      "candidate_formula": "Close.shift(-20 observed KOSPI rows)/Close-1",
+      "matched_rows": 3854,
+      "total_rows": 3854,
+      "max_absolute_error": 2.0122792321330962e-16,
+      "status": "NUMERIC_MATCH_NOT_GENERATOR_PROVENANCE"
+    }
+  ],
+  "limitation": "A numerically matching candidate recipe is not proof of author, extraction process, revisions or PIT safety."
+}

@@ -1,0 +1,30 @@
+{
+  "status": "BLOCKED",
+  "checked_at": "2026-11-16T01:34:23.522559+00:00",
+  "file": "Foreigner_Net.csv",
+  "sha256": "091e61ed5311108628ee18aa2d98c4f374b21a51d10986a0b5e492de5caf2cf8",
+  "source_url": null,
+  "official_reference_url": "https://data.krx.co.kr/contents/MDC/MAIN/main/index.cmd",
+  "market_scope": "UNKNOWN",
+  "instrument_scope": "UNKNOWN",
+  "amount_or_quantity": "UNKNOWN",
+  "unit": "UNKNOWN",
+  "sign_definition": "UNKNOWN",
+  "provisional_or_final": "UNKNOWN",
+  "first_publication_at": null,
+  "revision_policy": "UNKNOWN",
+  "same_day_input_allowed": false,
+  "source_collection_code_found": false,
+  "alternative_A": {
+    "definition": "Foreign_Net excluded under predeclared F1/F2 specifications; no outcome-based choice",
+    "feasible_without_foreign_provenance": true,
+    "still_requires_other_gates": true
+  },
+  "alternative_B": {
+    "definition": "previous-session flow only after verified actual release and approved max_age",
+    "status": "BLOCKED",
+    "reason": "One-session lag does not prove availability when release policy is unknown"
+  },
+  "selection_policy": "No model performance examined; no new A/B selection made",
+  "limitation": "Investor category column names and matching KRX dates do not establish market scope, cash/futures, units, or timing."
+}

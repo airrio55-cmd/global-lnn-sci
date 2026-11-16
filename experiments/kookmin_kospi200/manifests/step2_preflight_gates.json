@@ -37,5 +37,8 @@
   "hmm_fit_enabled": false,
   "gpu_enabled": false,
   "model_forward_enabled": false,
-  "note": "Test PASS means synthetic/static implementation behavior, not real data provenance clearance."
+  "note": "Test PASS means synthetic/static implementation behavior, not real data provenance clearance.",
+  "superseded_by": "step25_gate_results.json",
+  "current_calendar_gate": "PASS",
+  "historical_stage2_snapshot": true
 }

@@ -1,0 +1,87 @@
+{
+  "baseline_commit": "81010974d4f56c5c02bc028af20e6bab356ae0e4",
+  "checked_date_kst": "2026-11-16",
+  "scope": "Required documents/manifests and implementation read before STEP2.5 edits; immutable baseline links",
+  "inputs": [
+    {
+      "path": "experiments/kookmin_kospi200/manifests/data_cutoff_manifest.json",
+      "baseline_git_blob_sha": "da486249ce52c58cd9efd961a9a66b7f12dc0edf",
+      "url": "https://github.com/airrio55-cmd/global-lnn-sci/blob/81010974d4f56c5c02bc028af20e6bab356ae0e4/experiments/kookmin_kospi200/manifests/data_cutoff_manifest.json"
+    },
+    {
+      "path": "experiments/kookmin_kospi200/manifests/rolling_origin_manifest.csv",
+      "baseline_git_blob_sha": "3824ba6c6bf522ea3ad6fb8118295c952b0a252d",
+      "url": "https://github.com/airrio55-cmd/global-lnn-sci/blob/81010974d4f56c5c02bc028af20e6bab356ae0e4/experiments/kookmin_kospi200/manifests/rolling_origin_manifest.csv"
+    },
+    {
+      "path": "experiments/kookmin_kospi200/manifests/step2_preflight_gates.json",
+      "baseline_git_blob_sha": "b58afcaed130fe80839c6de325f6aa07bb9f3087",
+      "url": "https://github.com/airrio55-cmd/global-lnn-sci/blob/81010974d4f56c5c02bc028af20e6bab356ae0e4/experiments/kookmin_kospi200/manifests/step2_preflight_gates.json"
+    },
+    {
+      "path": "experiments/kookmin_kospi200/reports/AUDIT_KO.md",
+      "baseline_git_blob_sha": "ba0d1a8513157972401f4f821297d1a2a02adc94",
+      "url": "https://github.com/airrio55-cmd/global-lnn-sci/blob/81010974d4f56c5c02bc028af20e6bab356ae0e4/experiments/kookmin_kospi200/reports/AUDIT_KO.md"
+    },
+    {
+      "path": "experiments/kookmin_kospi200/reports/PROTOCOL_KO.md",
+      "baseline_git_blob_sha": "1d7fb988d5a1faeca31e59d137032d7a3017f5c8",
+      "url": "https://github.com/airrio55-cmd/global-lnn-sci/blob/81010974d4f56c5c02bc028af20e6bab356ae0e4/experiments/kookmin_kospi200/reports/PROTOCOL_KO.md"
+    },
+    {
+      "path": "experiments/kookmin_kospi200/reports/STEP2_BLOCKERS_KO.md",
+      "baseline_git_blob_sha": "a3f6d33e9405184225076e13230df098970fd6a6",
+      "url": "https://github.com/airrio55-cmd/global-lnn-sci/blob/81010974d4f56c5c02bc028af20e6bab356ae0e4/experiments/kookmin_kospi200/reports/STEP2_BLOCKERS_KO.md"
+    },
+    {
+      "path": "experiments/kookmin_kospi200/reports/STEP2_PREFLIGHT_KO.md",
+      "baseline_git_blob_sha": "30413f5b2f8fbcc1985620256f950522763e582a",
+      "url": "https://github.com/airrio55-cmd/global-lnn-sci/blob/81010974d4f56c5c02bc028af20e6bab356ae0e4/experiments/kookmin_kospi200/reports/STEP2_PREFLIGHT_KO.md"
+    },
+    {
+      "path": "experiments/kookmin_kospi200/reports/STEP2_REPORT_KO.md",
+      "baseline_git_blob_sha": "13d0bad39796baf7b0b739b00453828dee61d13e",
+      "url": "https://github.com/airrio55-cmd/global-lnn-sci/blob/81010974d4f56c5c02bc028af20e6bab356ae0e4/experiments/kookmin_kospi200/reports/STEP2_REPORT_KO.md"
+    },
+    {
+      "path": "experiments/kookmin_kospi200/reports/TEST_PLAN_KO.md",
+      "baseline_git_blob_sha": "af4e2117db22ecfc55f5513cf10a0834b779b384",
+      "url": "https://github.com/airrio55-cmd/global-lnn-sci/blob/81010974d4f56c5c02bc028af20e6bab356ae0e4/experiments/kookmin_kospi200/reports/TEST_PLAN_KO.md"
+    },
+    {
+      "path": "experiments/kookmin_kospi200/src/kospi200/__init__.py",
+      "baseline_git_blob_sha": "332393deda183acd53fc525855d7235fd5a2216f",
+      "url": "https://github.com/airrio55-cmd/global-lnn-sci/blob/81010974d4f56c5c02bc028af20e6bab356ae0e4/experiments/kookmin_kospi200/src/kospi200/__init__.py"
+    },
+    {
+      "path": "experiments/kookmin_kospi200/src/kospi200/data.py",
+      "baseline_git_blob_sha": "295399a98e8ce78d3cab99092a6b2a543a2236c7",
+      "url": "https://github.com/airrio55-cmd/global-lnn-sci/blob/81010974d4f56c5c02bc028af20e6bab356ae0e4/experiments/kookmin_kospi200/src/kospi200/data.py"
+    },
+    {
+      "path": "experiments/kookmin_kospi200/src/kospi200/folds.py",
+      "baseline_git_blob_sha": "f39356b2af62ab48892911884fb9922894bd9e29",
+      "url": "https://github.com/airrio55-cmd/global-lnn-sci/blob/81010974d4f56c5c02bc028af20e6bab356ae0e4/experiments/kookmin_kospi200/src/kospi200/folds.py"
+    },
+    {
+      "path": "experiments/kookmin_kospi200/src/kospi200/regimes.py",
+      "baseline_git_blob_sha": "92a55be49c8fb508e5b871f2c38d9b2d13cc36f9",
+      "url": "https://github.com/airrio55-cmd/global-lnn-sci/blob/81010974d4f56c5c02bc028af20e6bab356ae0e4/experiments/kookmin_kospi200/src/kospi200/regimes.py"
+    },
+    {
+      "path": "experiments/kookmin_kospi200/src/kospi200/specs.py",
+      "baseline_git_blob_sha": "3bca20aafeade5ccd3e0099a4f28b4bc1c9567a8",
+      "url": "https://github.com/airrio55-cmd/global-lnn-sci/blob/81010974d4f56c5c02bc028af20e6bab356ae0e4/experiments/kookmin_kospi200/src/kospi200/specs.py"
+    },
+    {
+      "path": "experiments/kookmin_kospi200/src/kospi200/statistics.py",
+      "baseline_git_blob_sha": "e17c856148ed508c7c58a2db000a6cf09f5c3c79",
+      "url": "https://github.com/airrio55-cmd/global-lnn-sci/blob/81010974d4f56c5c02bc028af20e6bab356ae0e4/experiments/kookmin_kospi200/src/kospi200/statistics.py"
+    },
+    {
+      "path": "experiments/kookmin_kospi200/src/kospi200/tau.py",
+      "baseline_git_blob_sha": "cd2efa0bcb544dbf7857697bda3444d1f4dde753",
+      "url": "https://github.com/airrio55-cmd/global-lnn-sci/blob/81010974d4f56c5c02bc028af20e6bab356ae0e4/experiments/kookmin_kospi200/src/kospi200/tau.py"
+    }
+  ]
+}

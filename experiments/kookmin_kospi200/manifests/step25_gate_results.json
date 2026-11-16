@@ -1,0 +1,100 @@
+{
+  "stage": "STEP2.5",
+  "checked_date_kst": "2026-11-16",
+  "training_enabled": false,
+  "hmm_fit_enabled": false,
+  "gpu_enabled": false,
+  "model_forward_enabled": false,
+  "checkpoint_load_enabled": false,
+  "execution_status": "BLOCKED",
+  "gate_results": [
+    {
+      "id": "B01",
+      "status": "PASS",
+      "execution_gate": "PASS",
+      "evidence": [
+        "provenance/krx_calendar_provenance.json",
+        "manifests/krx_calendar_verification.csv"
+      ],
+      "scope": "KRX cash-market sessions3939,2010-2025 official holidays + weekday rules",
+      "remaining": "None for date calendar; prices separate"
+    },
+    {
+      "id": "B02",
+      "status": "PARTIAL",
+      "execution_gate": "BLOCKED",
+      "evidence": [
+        "manifests/kospi_missing_dates_audit.csv",
+        "provenance/step25_source_catalog.json"
+      ],
+      "scope": "All45 dates confirmed open and absent in KOSPI CSV",
+      "remaining": "Official KOSPI200 close/calculation evidence for each day; price query HTTP400 LOGOUT"
+    },
+    {
+      "id": "B03",
+      "status": "PARTIAL",
+      "execution_gate": "BLOCKED",
+      "evidence": [
+        "provenance/step25_source_catalog.json"
+      ],
+      "scope": "Official KRX market/publication product references found; original SHA preserved",
+      "remaining": "Original CSV provider/extraction/revisions/18:00 publication lineage unknown; no official-price comparison"
+    },
+    {
+      "id": "B04",
+      "status": "PARTIAL",
+      "execution_gate": "BLOCKED",
+      "evidence": [
+        "manifests/us_mapping_summary.json",
+        "manifests/us_official_schedule_2021_2025.csv",
+        "manifests/us_dst_transition_checks.csv"
+      ],
+      "scope": "Official2021-25 calendar,10 early closes;64 clock checks over2010-25; special older alerts",
+      "remaining": "Complete official2010-20 calendar, historical index-finalization rules, CSV-provider available_at and max_age unknown"
+    },
+    {
+      "id": "B05",
+      "status": "BLOCKED",
+      "execution_gate": "BLOCKED",
+      "evidence": [
+        "manifests/foreign_net_provenance.json"
+      ],
+      "scope": "Unit/market/publication not established; no same-day use",
+      "remaining": "Source metadata,scope,units,sign,release/revision proof"
+    },
+    {
+      "id": "B06",
+      "status": "PARTIAL",
+      "execution_gate": "BLOCKED",
+      "evidence": [
+        "provenance/processed_formula_verification.json"
+      ],
+      "scope": "Nine numeric columns match candidate formulas on3854 rows; basic input excluded",
+      "remaining": "Generation code and PIT/revision lineage unverified"
+    },
+    {
+      "id": "B07",
+      "status": "PARTIAL",
+      "execution_gate": "BLOCKED",
+      "evidence": [
+        "provenance/ltc_version_verification.json"
+      ],
+      "scope": "Storedtorch2.10.0+cpu; ncps1.0.1 reference sources byte-identical to pinnedcommit",
+      "remaining": "Originalncps/hmmlearn versions/checkpoint/runtime/dt physical units unverified"
+    }
+  ],
+  "official_KRX_sessions": 3939,
+  "original_KOSPI_rows_in_period": 3894,
+  "official_close_supplement_rows": 0,
+  "confirmed_model_samples": null,
+  "STEP3_smoke_ready": false,
+  "STEP3_data_only_review_allowed": true,
+  "no_2026_observation_use": true,
+  "validation": {
+    "step2_regression_passed": 23,
+    "step25_passed": 11,
+    "failed": 0,
+    "provider_PIT_actual_data_test": "BLOCKED",
+    "all_original_hashes_unchanged": true
+  }
+}

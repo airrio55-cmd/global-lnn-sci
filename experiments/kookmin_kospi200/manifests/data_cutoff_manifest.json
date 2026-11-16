@@ -61,8 +61,8 @@
   "hmm_fit_calls": 0,
   "model_forward_calls": 0,
   "checkpoint_load_calls": 0,
-  "calendar_status": "BLOCKED",
-  "calendar_evidence": "Source KOSPI dates only; full official KRX calendar/price reconciliation missing",
+  "calendar_status": "PASS",
+  "calendar_evidence": "provenance/krx_calendar_provenance.json",
   "foreign_dates_absent_in_kospi_count": 45,
   "foreign_dates_absent_in_kospi": [
     "2010-02-22",
@@ -126,7 +126,7 @@
     "last_label_end_candidate": "2025-12-30"
   },
   "confirmed_production_sample_count": null,
-  "candidate_status": "BLOCKED_NOT_KRX_CERTIFIED_NOT_PIT_READY",
+  "candidate_status": "BLOCKED_ORIGINAL_PRICES_AND_PIT_NOT_CERTIFIED",
   "processed_target_recomputed_inside_cutoff_matches": true,
   "feature_values_generated_for_model": false,
   "availability_status": {
@@ -140,5 +140,12 @@
     "2026 rows inspected only for exclusion counts/hash integrity; never used in features/targets.",
     "2025-12-31 US source dates remain inside date filter but cannot match earlier KRX decisions if released later.",
     "Original audit evidence remains historical and is not an analysis input."
-  ]
+  ],
+  "candidate_counts_scope": "Historical STEP2 observed-row diagnostic; use step25_label_diagnostics.json for official-calendar-axis diagnostics",
+  "official_calendar_verification": {
+    "sessions": 3939,
+    "missing_original_dates": 45,
+    "non_session_original_dates": 0,
+    "production_samples": null
+  }
 }

@@ -1,0 +1,27 @@
+{
+  "checked_at": "2026-11-16T01:34:23.522559+00:00",
+  "scope": "2021-2025 verified market-close calendar candidate; NOT provider PIT input mapping",
+  "KRX_decision_dates": 3939,
+  "verified_calendar_candidate_dates": 1224,
+  "older_or_no_prior_verified_schedule": 2715,
+  "same_date_ffill_differs_from_completed_session": 1184,
+  "joined_KR_shift1_differs": 52,
+  "source_US_shift1_differs": 42,
+  "provider_PIT_verified_dates": 0,
+  "official_US_sessions_by_year": {
+    "2021": 252,
+    "2022": 251,
+    "2023": 250,
+    "2024": 252,
+    "2025": 250
+  },
+  "early_closes_verified_2021_2025": 10,
+  "full_2010_2020_calendar_status": "BLOCKED; PDF URL probes returned HTML error bodies",
+  "DST_clock_probes": 64,
+  "limitations": [
+    "No 0-second publisher delay assumed.",
+    "latest_completed_session is a diagnostic calendar candidate, never populated as production_PIT_date.",
+    "Regular-session close is not index-finalization or CSV-publication time.",
+    "Nasdaq/SOX share source-date arrays, so one mapping row covers both; price values not published."
+  ]
+}

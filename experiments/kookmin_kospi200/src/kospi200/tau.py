@@ -11,13 +11,15 @@ from .data import BlockedError
 REFERENCE_SHA='695ec22d7d1831f2ced67346ef7d2f08c525bd47'
 
 def time_constants(inputs, hidden, params, *, input_mapping='affine',
-                   implicit_constraints=False, dt_unit=None, source_commit=None):
+                   implicit_constraints=None, dt_unit=None, source_commit=None):
     """Arrays at a specified solver substep, NOT a model trajectory simulation.
 
     tau_raw=cm/gleak; tau_effective=cm/(gleak+sum sensory+sum recurrent).
     Units follow trained elapsed_time; default ncps 1.0 is not inherently a KRX day.
     cm/dt solver coefficient is intentionally not part of physical conductance.
     """
+    if not isinstance(implicit_constraints,bool):
+        raise BlockedError('Explicit LTC wrapper/cell positive-parameter constraint mode required')
     if source_commit!=REFERENCE_SHA or dt_unit is None:
         raise BlockedError('ncps version/source and elapsed_time units must be verified')
     x=np.asarray(inputs,dtype=float);h=np.asarray(hidden,dtype=float)

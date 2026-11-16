@@ -21,3 +21,12 @@
 실행: 데이터·합성23PASS/0FAIL, 실자료7BLOCKED. KOSPI3935→3894,2026제외41,마지막unknown20,기준일후보2025-12-01. 공식KRX달력과공표시각미확정으로확정표본수null.
 
 이전STEP1 전체기간재현 runner비활성화. STEP1 evidence·원본·기존결과·main·JOF V14/V15·lock·workflow미수정. 모델/HMM fit·GPU·실제model forward·checkpoint로드·실자료검정·결과기반튜닝0.
+
+## STEP2.5 / 2026-11-16
+
+- KRX 공식 연도별 휴장일16개 응답+평일규칙으로3939세션확정. B01 PASS. 원본3894날짜 중중복/비거래일0,45개부재모두개장일. 공식가격조회HTTP400 LOGOUT으로보완가격0행, B02 PARTIAL.
+- 공식세션20 horizon에서 원본20행과 endpoint날짜664건차이. 중간가격NaN유지,확정표본수null. 실제2022시작01-03으로manifest경계수정.2025마지막20unknown·2026배제유지.
+- 미국2021~2025공식calendar·조기폐장10일·특이휴장·2010~2025DST64probe 확인.1224개시장종료candidate에서same-date/shift1과날짜차이1184/52/42. provider available_at·생산PIT입력은미확정으로모두BLOCKED.
+- 가공9열후보식3854행일치하나생성코드/출처확정아님. 외국인당일입력차단유지.
+- 저장torch2.10.0+cpu확인,원본ncps/hmmlearn버전미상. ncps1.0.1공식배포와고정소스LTC파일동일검증. wrapper implicit=True/cell직접False차이때문에τ인터페이스의모드추정을금지하고explicit bool필수화.설치/모델forward없음.
+- STEP2회귀23+STEP2.5검사11=34PASS/0FAIL.신경망/HMM fit/GPU/checkpoint로드/패키지설치0.새보고3개·manifest·provenance추가,현재gate갱신.원본·과거결과·V14/V15·lock·main불변.

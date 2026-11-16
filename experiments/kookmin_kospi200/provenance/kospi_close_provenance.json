@@ -1,0 +1,22 @@
+{
+  "status": "PARTIAL",
+  "checked_date_kst": "2026-11-16",
+  "input_file": "KOSPI_200.csv",
+  "input_sha256": "7612a3ea53427dcf0148ab6b1e22f34500e6bff6fe1f23e2da793e40b0b82c50",
+  "nominal_index": "KOSPI200 user-attested; official original provider identification unavailable",
+  "original_provider": null,
+  "original_download_method": null,
+  "original_extraction_code_found": false,
+  "revision_policy": null,
+  "official_price_matches": null,
+  "missing_date_official_close_rows_retrieved": 0,
+  "same_day_18KST_allowed": false,
+  "official_reference_urls": [
+    "https://openapi.krx.co.kr/contents/OPP/DATA/OPPDATA002.jsp",
+    "https://openapi.krx.co.kr/contents/OPP/INFO/OPPINFO003.jsp"
+  ],
+  "repository_reference_url": "https://github.com/airrio55-cmd/global-lnn-sci/blob/81010974d4f56c5c02bc028af20e6bab356ae0e4/data/KOSPI200_provenance.json",
+  "repository_collection_reference_url": "https://github.com/airrio55-cmd/global-lnn-sci/blob/81010974d4f56c5c02bc028af20e6bab356ae0e4/artifacts/kospi200/acquire_inputs.py",
+  "use": "Gate B03 provenance only; repository acquisition helper preserves user target rather than verifying its upstream provider",
+  "limitation": "Hash identity is not KRX source or publication-vintage certification. Current EOD product timing cannot be assigned to this unidentified CSV."
+}

@@ -1,0 +1,7 @@
+{
+  "scope": "evidence/data/clock/numeric snapshot checks only",
+  "passed": 11,
+  "failed": 0,
+  "market_close_candidate_perturbation": "PASS",
+  "provider_PIT_real_data_perturbation": "BLOCKED_RELEASE_TIMESTAMPS_UNKNOWN"
+}

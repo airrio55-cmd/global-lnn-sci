@@ -125,9 +125,9 @@ class Step2Tests(unittest.TestCase):
         np.testing.assert_allclose(holm([.01,.04,.03]),[.03,.06,.06])
     def test_19_tau_synthetic_algebra_only(self):
         p=dict(cm=np.ones(2)*2,gleak=np.ones(2),w=np.ones((2,2)),mu=np.zeros((2,2)),sigma=np.ones((2,2)),sensory_w=np.ones((1,2)),sensory_mu=np.zeros((1,2)),sensory_sigma=np.ones((1,2)),sparsity_mask=np.ones((2,2)),sensory_sparsity_mask=np.ones((1,2)),input_w=np.ones(1),input_b=np.zeros(1))
-        a=time_constants([[0.]],[[0.,0.]],p,dt_unit='synthetic_step',source_commit=REFERENCE_SHA)
+        a=time_constants([[0.]],[[0.,0.]],p,implicit_constraints=False,dt_unit='synthetic_step',source_commit=REFERENCE_SHA)
         np.testing.assert_allclose(a['tau_raw'],[[2.,2.]]);np.testing.assert_allclose(a['tau_effective'],[[.8,.8]])
-        b=time_constants([[5.]],[[5.,5.]],p,dt_unit='synthetic_step',source_commit=REFERENCE_SHA)
+        b=time_constants([[5.]],[[5.,5.]],p,implicit_constraints=False,dt_unit='synthetic_step',source_commit=REFERENCE_SHA)
         self.assertTrue((b['tau_effective']<a['tau_effective']).all())
         with self.assertRaises(BlockedError):time_constants([[0.]],[[0.,0.]],p)
     def test_20_no_training_imports_or_execution_paths(self):

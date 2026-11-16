@@ -1,0 +1,76 @@
+{
+  "status": "PARTIAL",
+  "checked_at": "2026-11-16T01:34:23.522559+00:00",
+  "notebooks": [
+    {
+      "file": "kospi200_gpu_friendly_sota_fixed_20260311_junho_DEVICE_fixed_HMM_updated(10개시드_20일).ipynb",
+      "sha256": "b9e8542fc5783bc5dc734ddfd7bdfe69db26d4b540cde93ae3a722596485c1e7",
+      "python_metadata": "3.12.0",
+      "stored_torch_output": "2.10.0+cpu",
+      "stored_cuda_available": false,
+      "ncps_version": null,
+      "hmmlearn_version": null,
+      "limitation": "Stored notebook output only, not a current run or proof of every historical training environment"
+    },
+    {
+      "file": "kospi200_gpu_friendly_sota_fixed_20260309_junho_DEVICE_fixed_HMM_updated_11models_HMMsafe_mcnemar(단일시드_20일).ipynb",
+      "sha256": "aaf5232ce74a3d67ee863eac817e2c7f167941099e4d3166ed4e6a39b7c19a63",
+      "python_metadata": "3.12.0",
+      "stored_torch_output": "2.10.0+cpu",
+      "stored_cuda_available": false,
+      "ncps_version": null,
+      "hmmlearn_version": null,
+      "limitation": "Stored notebook output only, not a current run or proof of every historical training environment"
+    },
+    {
+      "file": "kospi200_gpu_friendly_sota_fixed_20260311_junho_DEVICE_fixed_HMM_updated(5개시드_20일).ipynb",
+      "sha256": "5574c75c7343c308859c850d8f5ea5e697a49a40c82ee47165c3e1c05ef5c625",
+      "python_metadata": "3.12.0",
+      "stored_torch_output": "2.10.0+cpu",
+      "stored_cuda_available": false,
+      "ncps_version": null,
+      "hmmlearn_version": null,
+      "limitation": "Stored notebook output only, not a current run or proof of every historical training environment"
+    }
+  ],
+  "root_requirements_url": "https://github.com/airrio55-cmd/global-lnn-sci/blob/81010974d4f56c5c02bc028af20e6bab356ae0e4/requirements.txt",
+  "root_requirements_version_pins": false,
+  "ncps_reference_distribution": {
+    "package": "ncps",
+    "version": "1.0.1",
+    "url": "https://files.pythonhosted.org/packages/1e/cb/3e7c0b5f0d1dfeea92dbe99a77d4831ac8e871a985c779479cc804aa665f/ncps-1.0.1-py3-none-any.whl",
+    "metadata_url": "https://pypi.org/pypi/ncps/1.0.1/json",
+    "checked_at": "2026-11-16T01:26:25.700750+00:00",
+    "wheel_sha256": "249b2a62c38608df62d454fe20f4e880f74c27ef97ea3a45e101d47b1b273fb5",
+    "release_uploaded_at": "2024-08-14T13:38:29.456067Z",
+    "installed": false,
+    "executed": false,
+    "limitation": "reference candidate only; uploaded notebook ncps version unknown",
+    "files": {
+      "ncps/torch/ltc.py": {
+        "sha256": "bbf3127013d3969994ecf0debf4eb37b56db750475ee71646a9decdf1aaf3026"
+      },
+      "ncps/torch/ltc_cell.py": {
+        "sha256": "167a9d6e1f4dc653ce21420010709e1c995716e53ad0d8bbc2d53c19c40b123f"
+      },
+      "ncps/__init__.py": {
+        "sha256": "6aa10ee86433da898c5224852f621e4daa19d3130a5b1095af3d0d275cf30939"
+      }
+    }
+  },
+  "reference_commit": "695ec22d7d1831f2ced67346ef7d2f08c525bd47",
+  "reference_cell_matches_ncps_1_0_1_bytewise": true,
+  "reference_wrapper_matches_ncps_1_0_1_bytewise": true,
+  "wrapper_default_implicit_constraints": true,
+  "cell_direct_default_implicit_constraints": false,
+  "ode_unfolds_default": 6,
+  "timespans_omitted_elapsed_time": 1.0,
+  "tau_raw": "positive(cm)/positive(gleak)",
+  "tau_effective": "positive(cm)/(positive(gleak)+sum(g_recurrent(hidden))+sum(g_sensory(mapped_inputs)))",
+  "tau_interpretation": "Frozen-state/input conductance time constant; not full nonlinear Jacobian timescale",
+  "dt_unit": "UNKNOWN_PHYSICAL_UNIT; one numerical step when timespans omitted, not proved one day",
+  "checkpoint_compatibility": "BLOCKED_NOT_LOADED_OR_TESTED",
+  "installed_packages": false,
+  "model_forward": false,
+  "limitation": "Reference source equivalence is not proof the original notebooks used ncps 1.0.1. Original ncps/hmmlearn lock and compatible checkpoints still required."
+}

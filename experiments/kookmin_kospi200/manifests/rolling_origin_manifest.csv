@@ -1,16 +1,16 @@
-origin,partition,observed_boundary_start,observed_boundary_end,rows_before_label_filter,unknown_labels,candidate_purged,candidate_input_ineligible,candidate_samples,candidate_first_sample,candidate_last_sample,next_cutoff,confirmed_samples,status,reason
-O1,train,2010-01-04,2019-12-30,2423,0,20,59,2344,2010-03-31,2019-11-29,2020-01-02,,BLOCKED,KRX_calendar_and_PIT_availability_unverified
-O1,validation,2020-01-02,2020-12-30,248,0,20,0,228,2020-01-02,2020-12-01,2021-01-04,,BLOCKED,KRX_calendar_and_PIT_availability_unverified
-O1,test,2021-01-04,2021-12-30,248,0,0,0,248,2021-01-04,2021-12-30,,,BLOCKED,KRX_calendar_and_PIT_availability_unverified
-O2,train,2010-01-04,2020-12-30,2671,0,20,59,2592,2010-03-31,2020-12-01,2021-01-04,,BLOCKED,KRX_calendar_and_PIT_availability_unverified
-O2,validation,2021-01-04,2021-12-30,248,0,20,0,228,2021-01-04,2021-12-02,2022-01-04,,BLOCKED,KRX_calendar_and_PIT_availability_unverified
-O2,test,2022-01-04,2022-12-29,244,0,0,0,244,2022-01-04,2022-12-29,,,BLOCKED,KRX_calendar_and_PIT_availability_unverified
-O3,train,2010-01-04,2021-12-30,2919,0,20,59,2840,2010-03-31,2021-12-02,2022-01-04,,BLOCKED,KRX_calendar_and_PIT_availability_unverified
-O3,validation,2022-01-04,2022-12-29,244,0,20,0,224,2022-01-04,2022-12-01,2023-01-02,,BLOCKED,KRX_calendar_and_PIT_availability_unverified
-O3,test,2023-01-02,2023-12-28,245,0,0,0,245,2023-01-02,2023-12-28,,,BLOCKED,KRX_calendar_and_PIT_availability_unverified
-O4,train,2010-01-04,2022-12-29,3163,0,20,59,3084,2010-03-31,2022-12-01,2023-01-02,,BLOCKED,KRX_calendar_and_PIT_availability_unverified
-O4,validation,2023-01-02,2023-12-28,245,0,20,0,225,2023-01-02,2023-11-29,2024-01-02,,BLOCKED,KRX_calendar_and_PIT_availability_unverified
-O4,test,2024-01-02,2024-12-30,244,0,0,0,244,2024-01-02,2024-12-30,,,BLOCKED,KRX_calendar_and_PIT_availability_unverified
-O5,train,2010-01-04,2023-12-28,3408,0,20,59,3329,2010-03-31,2023-11-29,2024-01-02,,BLOCKED,KRX_calendar_and_PIT_availability_unverified
-O5,validation,2024-01-02,2024-12-30,244,0,20,0,224,2024-01-02,2024-11-29,2025-01-02,,BLOCKED,KRX_calendar_and_PIT_availability_unverified
-O5,test,2025-01-02,2025-12-30,242,20,0,0,222,2025-01-02,2025-12-01,,,BLOCKED,KRX_calendar_and_PIT_availability_unverified
+origin,partition,official_boundary_start,official_boundary_end,raw_rows,unknown_labels,purged_labels,input_ineligible_after_label_filter,diagnostic_available_price_samples,diagnostic_first_sample,diagnostic_last_sample,next_cutoff,status,confirmed_samples,calendar_status,reason,diagnostic_max_label_end
+O1,train,2010-01-04,2019-12-30,2466,82,20,1248,1116,2010-05-19,2019-11-29,2020-01-02,BLOCKED,,PASS,Official_price_provenance_and_PIT_unverified; no price imputation,2019-12-30
+O1,validation,2020-01-02,2020-12-30,248,0,20,0,228,2020-01-02,2020-12-01,2021-01-04,BLOCKED,,PASS,Official_price_provenance_and_PIT_unverified; no price imputation,2020-12-30
+O1,test,2021-01-04,2021-12-30,248,1,0,0,247,2021-01-04,2021-12-30,,BLOCKED,,PASS,Official_price_provenance_and_PIT_unverified; no price imputation,2022-01-28
+O2,train,2010-01-04,2020-12-30,2714,82,20,1248,1364,2010-05-19,2020-12-01,2021-01-04,BLOCKED,,PASS,Official_price_provenance_and_PIT_unverified; no price imputation,2020-12-30
+O2,validation,2021-01-04,2021-12-30,248,1,19,0,228,2021-01-04,2021-12-02,2022-01-03,BLOCKED,,PASS,Official_price_provenance_and_PIT_unverified; no price imputation,2021-12-30
+O2,test,2022-01-03,2022-12-29,246,3,0,118,125,2022-04-04,2022-12-29,,BLOCKED,,PASS,Official_price_provenance_and_PIT_unverified; no price imputation,2023-01-31
+O3,train,2010-01-04,2021-12-30,2962,83,19,1248,1612,2010-05-19,2021-12-02,2022-01-03,BLOCKED,,PASS,Official_price_provenance_and_PIT_unverified; no price imputation,2021-12-30
+O3,validation,2022-01-03,2022-12-29,246,3,20,118,105,2022-04-04,2022-12-01,2023-01-02,BLOCKED,,PASS,Official_price_provenance_and_PIT_unverified; no price imputation,2022-12-29
+O3,test,2023-01-02,2023-12-28,245,0,0,0,245,2023-01-02,2023-12-28,,BLOCKED,,PASS,Official_price_provenance_and_PIT_unverified; no price imputation,2024-01-29
+O4,train,2010-01-04,2022-12-29,3208,86,20,1366,1736,2010-05-19,2022-12-01,2023-01-02,BLOCKED,,PASS,Official_price_provenance_and_PIT_unverified; no price imputation,2022-12-29
+O4,validation,2023-01-02,2023-12-28,245,0,20,0,225,2023-01-02,2023-11-29,2024-01-02,BLOCKED,,PASS,Official_price_provenance_and_PIT_unverified; no price imputation,2023-12-28
+O4,test,2024-01-02,2024-12-30,244,0,0,0,244,2024-01-02,2024-12-30,,BLOCKED,,PASS,Official_price_provenance_and_PIT_unverified; no price imputation,2025-02-04
+O5,train,2010-01-04,2023-12-28,3453,86,20,1366,1981,2010-05-19,2023-11-29,2024-01-02,BLOCKED,,PASS,Official_price_provenance_and_PIT_unverified; no price imputation,2023-12-28
+O5,validation,2024-01-02,2024-12-30,244,0,20,0,224,2024-01-02,2024-11-29,2025-01-02,BLOCKED,,PASS,Official_price_provenance_and_PIT_unverified; no price imputation,2024-12-30
+O5,test,2025-01-02,2025-12-30,242,20,0,0,222,2025-01-02,2025-12-01,,BLOCKED,,PASS,Official_price_provenance_and_PIT_unverified; no price imputation,2025-12-30
