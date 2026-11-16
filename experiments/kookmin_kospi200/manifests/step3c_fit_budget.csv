@@ -1,0 +1,13 @@
+scenario,planned_total_fits,confirmed_reusable_fits,planned_new_fits,basis,execution_authorized
+F1_A,250,20,230,"one price, one F1 stream",False
+F1_B,250,20,230,"one price, one F1 stream",False
+F1_AB,500,40,460,"domestic baseline, current exact scope",False
+FULL_RAW_LOG_ONE_PRICE,500,0,500,legacy500 definition: two channels and one price,False
+FULL_RAW_LOG_AB,1000,0,1000,"additional to F1, LOG offset mismatch prevents automatic reuse",False
+LTC_RAW_LOG_AB_SUBSET,200,0,200,subset of1000; do not add twice,False
+ENSEMBLE_PROBABILITY_COMBINATION,0,0,0,no neural fit,False
+ABLATION6_TWO_CHANNELS_ONE_PRICE_NAIVE,3000,0,3000,"legacy3000, no dedup",False
+ABLATION6_TWO_CHANNELS_AB_NAIVE,6000,0,6000,"includes FULL F0, no dedup",False
+ABLATION_AB_INCREMENT_OVER_FULL_NAIVE,5000,0,5000,6000minus1000,False
+ABLATION_AB_LOG_DEDUP_CONDITIONAL,3500,0,3500,only if exact common dates/scaler/arrays/seed/source match; reuse unconfirmed,False
+ABLATION_AB_INCREMENT_OVER_FULL_DEDUP_CONDITIONAL,2500,0,2500,3500minus1000 if identity verified,False

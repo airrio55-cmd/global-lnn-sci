@@ -1,0 +1,827 @@
+{
+  "checked_at_kst": "2026-11-16T18:59:56.065162+09:00",
+  "artifacts": [
+    {
+      "file": "configs/experiment_config.json",
+      "sha256": "03fc9333fd9f0adefe98d879cfe0bb155a04444db4c2d665b9d0e945149ee26a",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "configs/original_reproduction_config.json",
+      "sha256": "3b58f664f91e429da297c313639c5e9c283d44b07b9cb35cef0012a5fb8c7c86",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "configs/step3a_pilot_config.json",
+      "sha256": "fe0b2cc106f1d1e09a64ba414e60237cd7b2714b6db762debc216cf7c21864af",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "configs/step29_synthetic_smoke_config.json",
+      "sha256": "3f59531c0a3cc43e89c28458ee1c80b18abc916fb87be7b3dcd51777116ca86e",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "configs/step3b_pilot_config.json",
+      "sha256": "9a5a5f95c98d188c79ac197590052673ea627db0d70958455b0a1eee3c8bacdc",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "configs/proposed.json",
+      "sha256": "6cbfa5e91b3e9661ee52f73eb5a1833369772d29e4cc1b35075372babc896016",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "configs/step28_smoke_config.json",
+      "sha256": "67b08fcfa1e9908d71c20afef52b686dd68648822bbb31bf15dc3416712ac2ca",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "configs/step27_smoke_config.json",
+      "sha256": "7561fd02a2d8a125e594dd0d0708af3f2a411ec6eec88d0d4afdb66b8655a827",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "manifests/step3b_execution_manifest.json",
+      "sha256": "307f40a41e20fe9a28af6a035ac61f0f59541c0b1392a0e17ad43a20d6829701",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "manifests/step3a_preflight_tests.json",
+      "sha256": "14c44fcac6785f5f93e577f6eaf86193d38575c2be26c410a9388c1a7c8f3620",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "manifests/step28_price_sensitivity.json",
+      "sha256": "a1d1ccb6975412d9695d1d352f461518667a080d415cf2bc86b12aabe711e645",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "manifests/step25_gate_results.json",
+      "sha256": "fcd89bf7f06678a3c80311ae6a304ec71a77f3bb8e70e37bc7cb02e3a60052df",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "manifests/step3b_seed_stability.csv",
+      "sha256": "c45a5b24ea0d443fd3777730354c7b6beab6988920d6d9cad5e597bfdfc6fe6f",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "manifests/step3b_runs.csv",
+      "sha256": "acbf66df84253de984b84b77ba2581fac74b5704e4be21db8b68326afaa27a08",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "manifests/step28_protocol_freeze.json",
+      "sha256": "186e8e64b933bab94d8915d96d95789ae7535eeea2daeb12ae3e8d5b33a4b737",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "manifests/step28_test_results.json",
+      "sha256": "d4c7c3f5f1e00ab3de881c9c5e07768671fc23513efad63f1a7a9c8a36693793",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "manifests/step27_origin_manifest.csv",
+      "sha256": "84a2932abd5ea90268a6265f01c1d87d25bb70b5b7128987a2a241f5c96f29d1",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "manifests/step29_main_experiment_checklist.json",
+      "sha256": "b7efeeef9be77628982bca295057a6e05e49d80429b7ab98fe95b2c086670b73",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "manifests/step3b_metrics.csv",
+      "sha256": "e0f53de55b947600a33fa8a0fb540d5f3272edafec4f4f655639ce90a782444e",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "manifests/step29_runtime_environment.json",
+      "sha256": "9417387976b44da95dd0def43ca2ae779dd7f3cb7c5e4da5d87d22508cf68383",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "manifests/step3b_input_sensitivity.json",
+      "sha256": "10c852cd55f88ef14d0c4ef2852e52b968bcce8fb30138edd0c56ab76861777b",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "manifests/kospi_official_close_supplement.csv",
+      "sha256": "9ce5eebac51743215f3c8ca8f8bb2437c5425fc532ba7fd57ee49cb90e5f2222",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "manifests/step26_test_results.json",
+      "sha256": "6c1fc4e4611d41f78df59d5367fd1be3e228c7ca5e630d53089f59f842f9ab18",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "manifests/step27_historical_hmm_metrics.csv",
+      "sha256": "f2a21fc8b3dc0de2fc84602b3d31e16d2e42097c281950fb01403b6671adbed5",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "manifests/step29_data_provenance.json",
+      "sha256": "9d10581aef10fea017c10082cbdb189b87e1c2a84af133b4877853c6391367b3",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "manifests/step3b_postrun_tests.json",
+      "sha256": "4c635f33cb5ee9ef2cace6974506fa05b538674661fc44e81a04bf6fe5984f3a",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "manifests/step3b_price_sensitivity.csv",
+      "sha256": "94d42b92f6b2880860e8fe91aab2908142714db0e4604c7fd84ecf1044823582",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "manifests/kospi_missing_dates_audit.csv",
+      "sha256": "9c086c539a9bd5dc18c31adba871d8793a27eb6a1d2719ccad7dcbd7bd0c5a7d",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "manifests/step26_historical_horizon_audit.csv",
+      "sha256": "10429ca9ce7aff757fd0fab1fcef0b7ab99cedb1518628a35aa6c7923182be33",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "manifests/us_dst_transition_checks.csv",
+      "sha256": "45a278b494e490812dd3acde799bd59f9985785affc63c4696d549238dddced3",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "manifests/krx_sessions_2010_2025.csv",
+      "sha256": "c426702db216604d70f15973654d204a3e6afdb8cef1ef1f62169bb0a0667d6c",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "manifests/step2_test_results.json",
+      "sha256": "fbf968f5d766437139d931a10dcd655ba580e441651a2e5a6c64addec679c33d",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "manifests/step2_preflight_gates.json",
+      "sha256": "c0fd9ab1648ffd119c22a7b6ee6e66ff3c0ca63a5a7bdb59fe6948da1797d301",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "manifests/step3b_preflight_tests.json",
+      "sha256": "084ce13ac737404985dec237b9ab404fed44bd445fcdcbeb9f3475c6115892a8",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "manifests/step28_gate_results.json",
+      "sha256": "123a677c7e5f510f0eabdef42f41b8a893a88fead72fe17929b339d22b311632",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "manifests/step3a_preflight.json",
+      "sha256": "fd5fba34473d9b1f7b853455cd7c00faaceb655cd0b957a2cee4528af4eb0cc7",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "manifests/step26_cutoff_label_audit.json",
+      "sha256": "6fa422c867b6c713e35224f3bf8df1a4683e0879d227b0212449806ceb29b22a",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "manifests/step3b_analysis_summary.json",
+      "sha256": "3429a5396d78997474a76f0cde5a8c3c47132fecaf64ac348162a9b8aab4b3b5",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "manifests/step27_test_results.json",
+      "sha256": "5b0522ba97d29efb2172ad6dbe1468524266331d195d0689d8046cc0d7ecea97",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "manifests/step27_model_environment.json",
+      "sha256": "ac2938d710e407ab0d6998f813dcdc9791846efc4d75b794e9bdfaf708186403",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "manifests/step27_data_validation.json",
+      "sha256": "275e88b34e5d0873c37af611d087a9165a70b68f265fa9c62f5a6842eea84fe8",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "manifests/step3a_epoch_history.csv",
+      "sha256": "527695b01fb56dbeee29b78467e3259749a797ab8dc78dcea303f32f7ca06d68",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "manifests/step3a_verification_summary.json",
+      "sha256": "d24478c9d7ac3a3ac4e2eb5a0a1d6d38719a677c6caa7f14b8e758959924fdb5",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "manifests/us_mapping_summary.json",
+      "sha256": "36cb1e9f145f560299d919e095f87e3b6d33c63bcfb14761920d97dc8bd19437",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "manifests/step27_protocol_freeze.json",
+      "sha256": "e7509a0d4886f48ec1a057a9d1eca31c91c27682287204ccca750e468e56dc05",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "manifests/step3b_manual_regime_metrics.csv",
+      "sha256": "c865519803a157859ade58dd55ea66ad8424204de9fe2a37242bab556c25afbc",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "manifests/krx_calendar_verification.csv",
+      "sha256": "814c72e426b9b40609055c7cc969bab29f2959ba4de1231f8582388a15238919",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "manifests/data_lineage.csv",
+      "sha256": "29844470a5017b8686ca8f2bab16fbfaa899ffafa6cc283bed22beedbc962d3d",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "manifests/step25_analysis_summary.json",
+      "sha256": "40732a4cd5998b67590ad6d38f11425f926f987c12bd6d1028506316c67f75d4",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "manifests/step26_rolling_origin_manifest.csv",
+      "sha256": "70a5693f06c297c513111ad29dd72e36c155b1bf82e5c0f623eefea2a4b2acfd",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "manifests/step3b_LTC_diagnostics.csv",
+      "sha256": "a8b9880f2b437a4dc986805ecf14a6feaaf05c2da2a180fe9aa7744ff7da3c95",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "manifests/step3b_origin_stability.csv",
+      "sha256": "77d3e558d9b92725380932c7b51c1c1659ef5bed36a98bc31580e48ebeb2fd0a",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "manifests/step29_test_results.json",
+      "sha256": "6435034c2b93d974c2634e5728ccc5759943f2e59d3fce947c3abe8713d0ae49",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "manifests/kospi_supplement_45_audit.csv",
+      "sha256": "bff260a308a073b0eec21356461946c8ce0762740ddeff1f193abcf3226be769",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "manifests/step3a_pilot_runs.csv",
+      "sha256": "ec5e13efcf2926cf35ef05cc83b4a87acc4da4384783c8c7b5b03daeb9ea1732",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "manifests/step27_historical_manual_per_seed.csv",
+      "sha256": "080145e653c3d326acba6978f45b6a9b3a1027b70d42d15aae5c76be2125f99a",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "manifests/step27_price_conflicts.csv",
+      "sha256": "979d77be6fa0159c94c6afdb2819319fcd7b0ec26e97a9563801625b1090919b",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "manifests/step27_historical_hmm_per_seed.csv",
+      "sha256": "a94cdbb3dee11bcffed30b05711201ffc912890a1fca10c6d33e1984fe5ca2a7",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "manifests/foreign_net_provenance.json",
+      "sha256": "e9c2d72e5913fca5784fdd4b11b6511954fd7fbeac5321d7a2e47a5ee3dcf6de",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "manifests/data_cutoff_manifest.json",
+      "sha256": "a019365d0d98064c466b65f7742e7adcb0f481d0b4bd8e2fe83726f9e649633b",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "manifests/us_official_schedule_2021_2025.csv",
+      "sha256": "b163f4de4cbe06cab02493b3b05182f40370b8886e34b3a2303f64a7cae6e404",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "manifests/step3b_verification_summary.json",
+      "sha256": "3c50fd73638cd3154bffef93e170a1c02c5ee5aead17fbbec01bc8cc35be7879",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "manifests/us_market_availability_audit.csv",
+      "sha256": "2ca2c9d9b99be68878b9954227cf73cfded4114c2c5d6be464b38e059ea69a1f",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "manifests/step29_smoke_results.json",
+      "sha256": "c2818eb1c5e89b9f4e25c8470b34a93841d4bf08d5432540d8aa476686a1710f",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "manifests/step25_test_results.json",
+      "sha256": "d9a8adc61911893e603bbca14647f30c2a4c38ae38570fbd9355fa6ad2a9bbe8",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "manifests/step3b_preflight.json",
+      "sha256": "b8b18e5669bb145579d5c6458c298a923c0e3a875872fadbba491953e532d2dc",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "manifests/step3a_postrun_tests.json",
+      "sha256": "93c7c3c1423bb41f24d6f6d60059dd306bba5d507cd6abc84184c44b9115d162",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "manifests/step3a_execution_manifest.json",
+      "sha256": "96248324681545772cd568cba10277494dd377d48a1f3372f167b307c0bf8d0c",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "manifests/step3b_manual_regime_summary.csv",
+      "sha256": "b5eb2804003964f652e845a50283606db185dcf39175ed43099dcc465a283064",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "manifests/kospi_price_reconciliation.csv",
+      "sha256": "4d806aeaddbd0c75c006123078ae77d48d14cb6e45fc0a81c021dd77d2bb32eb",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "manifests/us_verified_special_dates.csv",
+      "sha256": "52eefde4b33c1a708482b4fee9c0670b17506493406a9ec35b61e6fc43c26979",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "manifests/rolling_origin_manifest.csv",
+      "sha256": "8a32a3601052e969f753fb234aa795445d878e1c95935041fd81eb3b2c9fee4c",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "manifests/step3b_epoch_history.csv",
+      "sha256": "7a0cf2304e840c88e88daf14153fcb620959860f107195e0461ef57b48be4310",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "manifests/step25_label_diagnostics.json",
+      "sha256": "7eebf1aad9a49add16fc6ccb4e375c081a433c461a95045d41268fe86c8feb32",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "manifests/step27_historical_manual_metrics.csv",
+      "sha256": "507a213c6bc342719baa157244ba5f5f84599052000d2d39c82fb3b775a15c83",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "manifests/lineage_schema.json",
+      "sha256": "f108a200577ecc5a7cb68939fd6e360ff9a1b11feeff8b376d547d2baea0a9a0",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "manifests/step3a_pilot_metrics.csv",
+      "sha256": "9d1b1ed940ba68d0434142a51b3e747c2178eb81fb5f4f8136c758fd112791b5",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "provenance/step27_notebook_source_references.json",
+      "sha256": "61411e484cb89dc64e961bb91633782559dca25eaaa41f0573e721015d45fffb",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "provenance/step29_execution_record.json",
+      "sha256": "ff394c26ff8d12d4618dec49f202c0023840c38648f54434870a51b314e3a5cd",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "provenance/step27_publication_validation.json",
+      "sha256": "8ded0d993610d18dcb3f98ef8030a3dcf950dc7305c1909cb6efc262a4b82264",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "provenance/step25_source_catalog.json",
+      "sha256": "84b71354023f454602971e8c781092bbb50cee568662337ac6ffec8ad8f6670f",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "provenance/step25_review_inputs.json",
+      "sha256": "2b8ba6cfc092973b37433c08b9fb37aedc39238e48d5039197cbf73efa080d66",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "provenance/step3b_preservation.json",
+      "sha256": "dcc613c3c9c2d066fd2f7cec161bc7a61bd4e154a273de9b013f6737e95d19a8",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "provenance/step3b_pilot_authorization.json",
+      "sha256": "c5699d14588a3686a5d3e78e4f35043fab1cbeb9f77576e4f5d0bbfeb61dd73e",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "provenance/krx_calendar_provenance.json",
+      "sha256": "fd8965e0b7ae5f7b5b3b845bf83184a1944154cc587750541b3caed508ba09fa",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "provenance/step26_review_inputs.json",
+      "sha256": "b53078cb6d997d9385502e8c542ebed390c0acac287ca64d2df1e3a79a3febc9",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "provenance/step3a_pilot_authorization.json",
+      "sha256": "44c60124bb00121908b89850ebfde12a88ead4411db23075f19f329b641ea18a",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "provenance/ltc_version_verification.json",
+      "sha256": "0e348d3567e7a7f125e01ccd13c7cb2cc020e81062b462db353e8ec8213064d2",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "provenance/kospi_close_provenance.json",
+      "sha256": "e22816c5a9cfbe3289a4242e23735f56b6e4089b8c73c5c06ce9e99b542a2756",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "provenance/step3a_publication_validation.json",
+      "sha256": "ec1f9e02d43388f5479a585dd915d800a3e8774aad81ce7aba52dac4ca843409",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "provenance/step26_data_publication.json",
+      "sha256": "4c2c1d0bc8002f847204141791006b0a1cd32d3ae43a7e7aefb9baf664a4367f",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "provenance/step26_full_excel_preservation.json",
+      "sha256": "43a266977df11ff81cd256cb297ad5fcc625b40120393de574d144aaea000e38",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "provenance/step27_isolated_environment.json",
+      "sha256": "48e0a49891be1d48abfcdec2a6ba9898233fc8778490eecb282bb5ab4200b4d8",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "provenance/step29_synthetic_authorization.json",
+      "sha256": "c6f541c07b969e7f83d1a1dac57101b61f1c779bee47ee7abd81b90b28f9e793",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "provenance/processed_formula_verification.json",
+      "sha256": "7dc2568a3bf1c9dea8dbceb625a02acfea348e9e317b690fba9d255f87f6bc50",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "provenance/step3a_review_inputs.json",
+      "sha256": "683b096ea1bb51b39ed7b9c16690950093e33c09c2aab20234bdac2d6145e06c",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "provenance/step29_publication_validation.json",
+      "sha256": "a3a82a95ad94215b8557aa009d071d5b3bf640f99f1bc2ba33112bc8a9558158",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "provenance/step28_preservation.json",
+      "sha256": "7db9e74d87a2bac4c02436a33637bb5dac400b458eda3acdfc88aabfad976a28",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "provenance/step3a_preservation.json",
+      "sha256": "8ebf3406cb1c889daab9c2de342af156266c28fd51e7ebf9018c6fd1a9dc0f1c",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "provenance/step29_preservation.json",
+      "sha256": "77ee730c5e961db8009d822e0d2bfc32de785dde59d6a826eb5315f46334a6ea",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "provenance/step28_publication_validation.json",
+      "sha256": "c42df604f4c91cbfcf5264c784ac645c38c3076435f2ad1b15258dade0e1890d",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "provenance/step28_source_checks.json",
+      "sha256": "e357be654e87043ea8a79911bba13d969cd395c69713a4a74b344a0baf02aea8",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "provenance/step27_preservation.json",
+      "sha256": "77fca4e56ec6087ed802e437a0ce2e2b6ce5588900b42654ffcbba1ca08f05ae",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "reports/STEP27_ROLLING_ORIGIN_KO.md",
+      "sha256": "500a55e88ec73494ae46629cc3592441535220f59672c083b4bb8aa5a995de8a",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "reports/STEP28_PRICE_CONFLICT_KO.md",
+      "sha256": "27915c72301c5a238ca55fa117b9cf808aeb0f3f972e65749e56740f557211f5",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "reports/STEP2_PREFLIGHT_KO.md",
+      "sha256": "66ea6ae8b513b5a14c439c78ca272cd3ca8065d6658ec502b4a328ff6c20defe",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "reports/STEP3B_ORIGIN_STABILITY_KO.md",
+      "sha256": "f354bed2a11462e5aa888bfc2196286f1957ddd8ea631b9bc7b54695d8221df8",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "reports/STEP26_BLOCKERS_KO.md",
+      "sha256": "2731b6cda0a2d927455484d5e3593cbf6e314a1e9ca2273295c88a37c21a1730",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "reports/STEP27_READINESS_KO.md",
+      "sha256": "9ef717ebb01f7a7c3e3afb7bc55dddf3066ca2ea5f919d9efc7f169e4b547e5a",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "reports/STEP28_BLOCKERS_KO.md",
+      "sha256": "0126709845d5f7760d34b2e2481da82e1c1f32420956113077619f7167eb9af1",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "reports/STEP28_DATA_DECISION_KO.md",
+      "sha256": "b37b54a9fb06f489b5ec1f1922fa1c86935ebc6e5617a4b26bdf835c63abdfe5",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "reports/STEP3B_MANUAL_REGIME_KO.md",
+      "sha256": "05c109aad71e5fce5fb948125e3394f388050e43ed0e014b204f1b430c4eff8c",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "reports/STEP25_READINESS_KO.md",
+      "sha256": "da96f484f2474263a84bc6ad43ef33bb2b6c12d45e2238887a8c5b6e3257a90d",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "reports/STEP27_MANUAL_REGIME_AUDIT_KO.md",
+      "sha256": "fcd2e512c9708af99ba3e088f20ab9c456b1e942557ec043964e6d81f03ff325",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "reports/STEP26_PRICE_RECONCILIATION_KO.md",
+      "sha256": "94c304571ac83741591d91e82050f9ee5007f8cd16a51f45cc63aade9f28a77a",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "reports/STEP3A_NEXT_GATES_KO.md",
+      "sha256": "ec44bf76ec14071b2530150d1cb7f83092422161127701fc43900e38347721c6",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "reports/STEP3A_EXECUTION_AUDIT_KO.md",
+      "sha256": "2a053086c33b2c4b21a1ef31b97f77cbd70df7a4a85732aa29f7f3eaaad37c33",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "reports/STEP26_LABEL_AUDIT_KO.md",
+      "sha256": "89877b4d01681dcd9cfb99c73a381a35f5cd5ff4e0fd696b676f4db407d85f87",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "reports/STEP29_DATA_DECISION_KO.md",
+      "sha256": "ad34ceac697e76dde670ab1cad7f0b39416d89701407b9d4b8f39921a557a1a4",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "reports/STEP3B_SEED_STABILITY_KO.md",
+      "sha256": "918dd6de27620ef6fb87b4a9917d507e960b0d179b31b34218f5402c3a8592d5",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "reports/STEP27_FULL_PRICE_AUDIT_KO.md",
+      "sha256": "2ef5d4fa2e7f56c401d56980f1f66209e0daeaae07f946deae02ae48c68572f8",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "reports/STEP27_BLOCKERS_KO.md",
+      "sha256": "8ce255a128121497d1bcdc01a84ef1c895edb05818603e81e2015629c01194d3",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "reports/STEP3A_PILOT_RESULTS_KO.md",
+      "sha256": "5d28d7ce940fa97b118f3bfc298b046d06bbc36b6539924ac11506db051cc556",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "reports/PROTOCOL_KO.md",
+      "sha256": "d52352001d13c7baeb220ab47b3a5d458aaee70c7c0ada629d5056145bf2ebfa",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "reports/STEP29_READINESS_KO.md",
+      "sha256": "09481ef74dcdcb3291fb5cddb21a7557701651a9e2e961d426fbc9a9978f413e",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "reports/STEP28_MANUAL_HMM_PLAN_KO.md",
+      "sha256": "001e90b1f40807c99f9ea7868468a963e0948c9c1e1ea8d313be100241a3f0d3",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "reports/TEST_PLAN_KO.md",
+      "sha256": "5d4d1e24e79be49dc6f5fbad21abb1fe944931b9917ee992b7d77ea53e4f9df6",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "reports/STEP3B_EXECUTION_AUDIT_KO.md",
+      "sha256": "9b1388f74eac7cf9ec8e96b1aea07a671000c113d3466641534ff80ffe1f0410",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "reports/STEP25_BLOCKERS_KO.md",
+      "sha256": "a28f3296eaa1a20232cf27aacf3616359208a0a1f688c1293ad9717abdfaff9b",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "reports/AUDIT_KO.md",
+      "sha256": "30b4cc56e2b0e660473dd64aac03aa6d660767c349dc78ec4a214016c3cde293",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "reports/STEP3B_RESULTS_KO.md",
+      "sha256": "8e983206e90dba94c293df6330dcd92f4a7cc92f86e26a036f7336e355a99a41",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "reports/STEP3B_NEXT_GATES_KO.md",
+      "sha256": "4ac8c84dedccd752f4c3432892cb6f8459951bdc2a05b0f4d059cc1ed8d2b494",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "reports/STEP26_ROLLING_ORIGIN_KO.md",
+      "sha256": "bc35481fc81ffb24004ac3ed2921c192cfcc8b04356182c8201b15af9831d6b1",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "reports/STEP28_F1_READINESS_KO.md",
+      "sha256": "074fa4edb9940d993ec61f80e8c2e63a0411877e9b416c018227705f637a3734",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "reports/STEP25_DATA_VERIFICATION_KO.md",
+      "sha256": "408058c868d965578b9ec4d5e7ac398cc1183fd1f228fb1d9245f1e0cc9ac662",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "reports/STEP29_SYNTHETIC_SMOKE_KO.md",
+      "sha256": "b9ffe3c3fde6349ea6ced0190f5c2bb11600a807c4de92215d1be7d157327243",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "reports/STEP2_BLOCKERS_KO.md",
+      "sha256": "ff79f8d9ebf4b64a43745bda451b9ad2b2e64f8ccd5e437dce5233c06132b8e8",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "reports/STEP29_ENVIRONMENT_KO.md",
+      "sha256": "dce89d807889e2d427f798311af3fdef526f48551f900dcda631ab7fb3e1eb98",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "reports/STEP3A_A_B_COMPARISON_KO.md",
+      "sha256": "ab2600eaba50eb9707038fb75865ba5d29e86388485a777d7055a174e420d402",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "reports/STEP2_REPORT_KO.md",
+      "sha256": "45f9da5d723166c75aa3dd8594ad9aebbaf73bea3f89375aad125743bdd87c7f",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "runtime/step3b_worker.py",
+      "sha256": "cc57070603b2e830097ded3edc36cb10302493a381b86bbbdceaeb4ce2d200c3",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "runtime/step28_smoke_runtime.py",
+      "sha256": "90ce86a1d28cbbfb569d972af8bd6bd06991f4975ec69ead8063ecb1510ea9b7",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "runtime/__init__.py",
+      "sha256": "1dc4ed47383e1e48370f4b954ccd19330c8b6e0b6ebe6d0ae6047fbd1f03d5c3",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "runtime/step3b_manager.py",
+      "sha256": "bae3b4c2b7c799c8720b305afb164db3788f21d5e3d74661f315847a6647c480",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "runtime/step29_synthetic_smoke.py",
+      "sha256": "bbdff72425860e08878c5a99e148b80bd832570fd54fbb8bc698b27142818de7",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "runtime/step3a_pilot.py",
+      "sha256": "34281dfd1e80be36427f3cd1fe0f0a07c626d11363c54ed223512c21eeee6489",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "reports/assets/step3a_loss_curves.svg",
+      "sha256": "c2fea512b6117aaa09a9b904e11ba8bb78d305c02de1fd8012e4d6a5c72c01b9",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "reports/assets/step3a_validation_ba_curves.svg",
+      "sha256": "897f384b6ec1300beec8e357c75093968f0b42a892b9cd6588243578b1cc3f08",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "reports/assets/step3b_LTC_epoch_diagnostics.svg",
+      "sha256": "3a13bf90ade2ddcce60de15f6c906a3630b882a441af719e58f46dcc27e8428e",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "reports/assets/step3b_validation_BA.svg",
+      "sha256": "5d06d08759e06f902b5c0d9e4c47837ef765da2b8ae44ea2e1ca7851795a9a63",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "src/kospi200/tau.py",
+      "sha256": "6f55e6e5fe009faaa1befad3732cb92d7128fda1c1057bbcc44ea78fb63a69f4",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "src/kospi200/rolling_pilot_data.py",
+      "sha256": "5cb2548afb34dd2a731b6cedeebaa4fe4f6a0b3c24cee36e9fd35678c664e81e",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "src/kospi200/__init__.py",
+      "sha256": "8277e4b5ab4be0263966de5c99dd53400b44ed12748f5b24467ec62d697a2aab",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "src/kospi200/specs.py",
+      "sha256": "3e50190f44ee644412e32d5ebc8474af301762ab13f676d4c6d6f520a045d9af",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "src/kospi200/regimes.py",
+      "sha256": "b7889f00264b6ecd6481e9e83cc8c756b3b83f57ed95d88e877abc816251b885",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "src/kospi200/data.py",
+      "sha256": "8761182107a2e5c3b9830ed6a295258c97574dee502b8bdcde1e202a5df8dc01",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "src/kospi200/paired_regime_evaluation.py",
+      "sha256": "d8af6a80b73d7986df7f1169727c7cf6ba15a8b9ebfb8e874897ccc93f5e58e4",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "src/kospi200/price_sensitivity.py",
+      "sha256": "0b0b9a1d452c9b4e18988a20e703dda5453af726c9f2e614b9d70e5c3643314c",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "src/kospi200/smoke_preparation.py",
+      "sha256": "f43a6b862a576be1c20c0c940e5fde2432c1f629c0e570d6f0933d4a8e62bf34",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "src/kospi200/folds.py",
+      "sha256": "94c9d800d7f8056a95664e35839d339c25e7dbc58cc090febeb83945461400ea",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "src/kospi200/manual_evaluation.py",
+      "sha256": "e1e1ad9cde026eedc5bf57ed5f809a65f9839aa13d99000af92e0a8eafc79a67",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "src/kospi200/pilot_data.py",
+      "sha256": "d2467df781ef70f685ecb0318137ed604c6e75270dbefd657c03d082b0316a4a",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "src/kospi200/reconciliation.py",
+      "sha256": "2def8435ad5114bea65762be3407337a6688d201d5568b18fb01a5120cb3e9d8",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    },
+    {
+      "file": "src/kospi200/statistics.py",
+      "sha256": "792a14871779c8ace106d6cba5bea93714fa134fae01a3f32046cbb7e23ecda0",
+      "use": "prior evidence/reference only; no result-based specification tuning"
+    }
+  ],
+  "input_request_file_sha256": "17ceee75a517a56fa4a0958237b863afe63137498f2d1ac4e9ee16da3c7a0f02",
+  "pasted_text_is_user_request": true
+}

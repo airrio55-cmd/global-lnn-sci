@@ -1,0 +1,522 @@
+{
+  "execution_mode": "STEP3C_RETROSPECTIVE_F1_CPU",
+  "pilot_execution_enabled": false,
+  "training_enabled": false,
+  "hmm_fit_enabled": false,
+  "gpu_enabled": false,
+  "production_gate_override": false,
+  "device": "cpu",
+  "amp": false,
+  "feature_order": [
+    "Log_Ret",
+    "Disparity"
+  ],
+  "origins": [
+    "O1",
+    "O2",
+    "O3",
+    "O4",
+    "O5"
+  ],
+  "seeds": [
+    2,
+    12,
+    22,
+    32,
+    42,
+    52,
+    62,
+    72,
+    82,
+    92
+  ],
+  "price_candidates": [
+    "A",
+    "B"
+  ],
+  "models": [
+    "RNN",
+    "LSTM",
+    "GRU",
+    "LTC",
+    "CfC"
+  ],
+  "max_new_fits": 460,
+  "reused_fits": 40,
+  "independent_Test_access": false,
+  "model_settings": {
+    "hidden_size": 128,
+    "layers": 1,
+    "dropout": 0.2,
+    "window": 20,
+    "horizon": 20,
+    "batch": 64,
+    "max_epochs": 100,
+    "patience": 10,
+    "selection_metric": "balanced_accuracy",
+    "optimizer": "AdamW",
+    "lr": 0.005,
+    "weight_decay": 0.0001,
+    "scheduler": "OneCycleLR",
+    "focal_gamma": 2,
+    "focal_alpha": 0.25,
+    "gradient_clip": 1.0,
+    "dtype": "float32",
+    "amp": false,
+    "threshold": 0.5
+  },
+  "model_seed_offsets": {
+    "RNN": 101,
+    "LSTM": 201,
+    "GRU": 301,
+    "LTC": 401,
+    "CfC": 501
+  },
+  "source_notebook_file": "originals/kospi200_gpu_friendly_sota_fixed_20260311_junho_DEVICE_fixed_HMM_updated(10개시드_20일).ipynb",
+  "source_notebook_sha256": "b9e8542fc5783bc5dc734ddfd7bdfe69db26d4b540cde93ae3a722596485c1e7",
+  "original_definition_hashes": {
+    "FocalLoss": "99f31d22f4549d6b370b5a7ede5e2606830b7b20dd66f834fd6e3b3eb2174b7d",
+    "init_weights": "721f2894a7a6f3dc3518f3e80bd17dd7a04ab08f9cdd47762de6212d7e674697",
+    "RecurrentModel": "00844fd26fe3794dff89218879151544efe4b34cb07df9bd038f45e1dceec621",
+    "LNNModel": "ff2ec3b49fb1a96848b9a51aec6dbf4abfac5efdb02fa8fa10f48da77a7e0a7b",
+    "CfCModel": "2907b0ff7cc2dd6da70b9f9da189004de8f5e2d1fd8f2a06d14aeb26f438ebef"
+  },
+  "environment_versions": {
+    "torch": "2.10.0+cpu",
+    "ncps": "1.0.1",
+    "hmmlearn": "0.3.3",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "scikit-learn": "1.8.0",
+    "scipy": "1.17.0",
+    "future": "1.0.0",
+    "sympy": "1.14.0",
+    "networkx": "3.7",
+    "filelock": "4.2.4",
+    "fsspec": "2026.9.0",
+    "jinja2": "3.1.6",
+    "MarkupSafe": "3.0.3"
+  },
+  "environment_sha256": "a08a66d21e0347868e5d6b423cb755e55a5aab5a4af0f798730e38bd46490ee5",
+  "run_directory": "data/derived/step3c_prepared_20261116T184438_KST",
+  "implementation_artifacts": [
+    {
+      "file": "runtime/step3c_worker.py",
+      "sha256": "cab790fbc023567612e1f1e2789e40e89667c854aee4499c98bd7b418583fe33"
+    },
+    {
+      "file": "runtime/step3c_manager.py",
+      "sha256": "90576c03005b60f98e755a93f5a368c289f3388764d834b1f24e635cbf6bbb97"
+    },
+    {
+      "file": "src/kospi200/master_protocol.py",
+      "sha256": "9a6e24f1de9effb13c40f5a9482905125db09edd73730701165f4e22a33c955e"
+    },
+    {
+      "file": "src/kospi200/master_data.py",
+      "sha256": "2b3fa3406b1c9aadfc95af4589149adabbe346303d50cc505442101c2ba78729"
+    },
+    {
+      "file": "src/kospi200/data.py",
+      "sha256": "8761182107a2e5c3b9830ed6a295258c97574dee502b8bdcde1e202a5df8dc01"
+    },
+    {
+      "file": "src/kospi200/folds.py",
+      "sha256": "94c9d800d7f8056a95664e35839d339c25e7dbc58cc090febeb83945461400ea"
+    },
+    {
+      "file": "src/kospi200/manual_evaluation.py",
+      "sha256": "e1e1ad9cde026eedc5bf57ed5f809a65f9839aa13d99000af92e0a8eafc79a67"
+    },
+    {
+      "file": "src/kospi200/pilot_data.py",
+      "sha256": "d2467df781ef70f685ecb0318137ed604c6e75270dbefd657c03d082b0316a4a"
+    },
+    {
+      "file": "src/kospi200/smoke_preparation.py",
+      "sha256": "f43a6b862a576be1c20c0c940e5fde2432c1f629c0e570d6f0933d4a8e62bf34"
+    },
+    {
+      "file": "runtime/step29_synthetic_smoke.py",
+      "sha256": "bbdff72425860e08878c5a99e148b80bd832570fd54fbb8bc698b27142818de7"
+    },
+    {
+      "file": "tools/step3c_worker.py",
+      "sha256": "fa77fd48f00d810bbee36f86817bc85c599e47e22f927239b66f376552defc2c"
+    },
+    {
+      "file": "tools/step3c_pilot.py",
+      "sha256": "4db275d72c368cad77941085ec506b579ce48c1c70313e6252aec45b5a984e40"
+    },
+    {
+      "file": "tools/step3c_prepare.py",
+      "sha256": "cda97a77a8a4c9d654534ef150164413e2d0bb8ef7b1f601d4c5ceb56f82f085"
+    },
+    {
+      "file": "src/kospi200/master_statistics.py",
+      "sha256": "852f37a542086e6490742e9e696e812a8d95c38303ce010155d76299aa7c515a"
+    },
+    {
+      "file": "src/kospi200/master_tau.py",
+      "sha256": "21135e4c2e7c0457a17d85a86a75a7519ff86ddd3789794686a3b9b811eadcaa"
+    },
+    {
+      "file": "src/kospi200/tau.py",
+      "sha256": "6f55e6e5fe009faaa1befad3732cb92d7128fda1c1057bbcc44ea78fb63a69f4"
+    },
+    {
+      "file": "src/kospi200/statistics.py",
+      "sha256": "792a14871779c8ace106d6cba5bea93714fa134fae01a3f32046cbb7e23ecda0"
+    },
+    {
+      "file": "src/kospi200/regimes.py",
+      "sha256": "b7889f00264b6ecd6481e9e83cc8c756b3b83f57ed95d88e877abc816251b885"
+    },
+    {
+      "file": "src/kospi200/specs.py",
+      "sha256": "3e50190f44ee644412e32d5ebc8474af301762ab13f676d4c6d6f520a045d9af"
+    },
+    {
+      "file": "tools/step3c_freeze.py",
+      "sha256": "0db92b36331553f7f87770af23e38251d609bbc83b346375ab0bcdd2a77461db"
+    },
+    {
+      "file": "src/kospi200/master_ensemble.py",
+      "sha256": "741c2aca093b44b75bd67b294086ab63b432e47bb4190b01a986ca053fb6400a"
+    }
+  ],
+  "scheduling": {
+    "maximum_worker_processes": 2,
+    "maximum_concurrent_LTC": 1,
+    "torch_threads_per_worker": 1
+  },
+  "resource_evidence": {
+    "cgroup_CPU_cores": 2,
+    "memory_bytes": 8589934592,
+    "LTC_serialized_for_memory": true
+  },
+  "source_status": "BOTH_UNVERIFIED",
+  "production_PIT_status": "BLOCKED",
+  "main_price_selection_allowed": false,
+  "epoch_limit": 100,
+  "patience": 10,
+  "selection": "Validation BA only, strict greater; ties increment patience",
+  "independent_Test_price_cutoffs": {
+    "O1": "2020-12-31",
+    "O2": "2021-12-31",
+    "O3": "2022-12-31",
+    "O4": "2023-12-31",
+    "O5": "2024-12-31"
+  },
+  "manual_regime_policy": "Train-only raw Vol_Regime30/70(linear), retained Train base dates, fixed before training; one-class BA/MacroF1 null; no Validation refit",
+  "resume_policy": "Unique identity lock + global LTC memory lock; completed/failed cases not retrained; surviving workers attached; epoch-boundary resume only",
+  "statistics_policy": "Two seeds only, descriptive sample std ddof1; not confirmatory stability; no seed/model/source selection from Validation",
+  "stage": "STEP3C",
+  "new_fit_execution_enabled": false,
+  "total_fit_budget": 500,
+  "price_selection": "PENDING",
+  "research_design_selection": "PENDING",
+  "research_design_options": [
+    "EXTERNAL_EVIDENCE_PRIMARY_PLUS_SENSITIVITY",
+    "PARALLEL_AB_RETROSPECTIVE_ONLY"
+  ],
+  "period": {
+    "start": "2010-01-01",
+    "end": "2025-12-31",
+    "use_2026_for_targets": false
+  },
+  "prediction_contract": {
+    "timezone": "Asia/Seoul",
+    "time": "18:00",
+    "window": "t-19 through t inclusive",
+    "horizon_KRX_sessions": 20,
+    "target": "I(Close[t+20]>Close[t]); missing future is UNKNOWN",
+    "available_at": "UNKNOWN",
+    "same_day_production_PIT": "BLOCKED"
+  },
+  "resources_current": {
+    "checked_at_kst": "2026-11-16T18:44:38.498297+09:00",
+    "os_cpu_count": 3,
+    "cpu_max": "200000 100000",
+    "memory_max_bytes": 8589934592,
+    "memory_current_bytes": 270737408,
+    "python": "3.12.14",
+    "versions": {
+      "torch": "2.10.0+cpu",
+      "ncps": "1.0.1",
+      "hmmlearn": "0.3.3",
+      "numpy": "2.3.5",
+      "pandas": "2.2.3",
+      "scikit-learn": "1.8.0",
+      "scipy": "1.17.0",
+      "future": "1.0.0",
+      "sympy": "1.14.0",
+      "networkx": "3.7",
+      "filelock": "4.2.4",
+      "fsspec": "2026.9.0",
+      "jinja2": "3.1.6",
+      "MarkupSafe": "3.0.3"
+    },
+    "gpu_execution": false,
+    "cpu_quota_cores": 2.0
+  },
+  "per_origin_maximum_price_year": {
+    "O1": 2020,
+    "O2": 2021,
+    "O3": 2022,
+    "O4": 2023,
+    "O5": 2024
+  },
+  "manual_regime": {
+    "variable": "Log_Ret.rolling(40).std(ddof=1)",
+    "quantiles": [
+      30,
+      70
+    ],
+    "method": "linear",
+    "reference": "purged retained Train base dates",
+    "empty_or_single_true_class_BA_MacroF1": null,
+    "refit_on_validation_or_test": false
+  },
+  "hmm": {
+    "fit_enabled": false,
+    "states": 2,
+    "covariance_type": "full",
+    "n_iter": 2000,
+    "tol": 0.0001,
+    "min_covar": 0.0001,
+    "initialization_seeds": [
+      2,
+      12,
+      22,
+      32,
+      42,
+      52,
+      62,
+      72,
+      82,
+      92
+    ],
+    "selection": "maximum converged finite Train log likelihood; ties smallest seed",
+    "state_names": "ascending Train observation mean Vol_Regime",
+    "emission_features": [
+      "Vol_Regime"
+    ],
+    "scaler": "Train only",
+    "filtering": "forward only; carry posterior through bridge dates",
+    "failure": "BLOCKED; no Test median or replacement initializations"
+  },
+  "bootstrap": {
+    "block_lengths": [
+      20,
+      40,
+      60
+    ],
+    "replicates": 10000,
+    "seed": 20261116,
+    "metric_primary": "Balanced Accuracy",
+    "secondary": [
+      "Macro F1",
+      "Brier",
+      "Recall0",
+      "Recall1"
+    ],
+    "resampling_unit": "paired contiguous market-date blocks within Origin; same indices across models and all seeds",
+    "seed_aggregation": "mean of per-seed metrics; no probability averaging or market-sample multiplication",
+    "origin_weight": "equal",
+    "primary_family": [
+      {
+        "candidate": "A",
+        "model_a": "RNN",
+        "model_b": "LSTM",
+        "alternative": "two-sided",
+        "estimand": "equal-Origin mean of seed-wise metric differences"
+      },
+      {
+        "candidate": "A",
+        "model_a": "RNN",
+        "model_b": "GRU",
+        "alternative": "two-sided",
+        "estimand": "equal-Origin mean of seed-wise metric differences"
+      },
+      {
+        "candidate": "A",
+        "model_a": "RNN",
+        "model_b": "LTC",
+        "alternative": "two-sided",
+        "estimand": "equal-Origin mean of seed-wise metric differences"
+      },
+      {
+        "candidate": "A",
+        "model_a": "RNN",
+        "model_b": "CfC",
+        "alternative": "two-sided",
+        "estimand": "equal-Origin mean of seed-wise metric differences"
+      },
+      {
+        "candidate": "A",
+        "model_a": "LSTM",
+        "model_b": "GRU",
+        "alternative": "two-sided",
+        "estimand": "equal-Origin mean of seed-wise metric differences"
+      },
+      {
+        "candidate": "A",
+        "model_a": "LSTM",
+        "model_b": "LTC",
+        "alternative": "two-sided",
+        "estimand": "equal-Origin mean of seed-wise metric differences"
+      },
+      {
+        "candidate": "A",
+        "model_a": "LSTM",
+        "model_b": "CfC",
+        "alternative": "two-sided",
+        "estimand": "equal-Origin mean of seed-wise metric differences"
+      },
+      {
+        "candidate": "A",
+        "model_a": "GRU",
+        "model_b": "LTC",
+        "alternative": "two-sided",
+        "estimand": "equal-Origin mean of seed-wise metric differences"
+      },
+      {
+        "candidate": "A",
+        "model_a": "GRU",
+        "model_b": "CfC",
+        "alternative": "two-sided",
+        "estimand": "equal-Origin mean of seed-wise metric differences"
+      },
+      {
+        "candidate": "A",
+        "model_a": "LTC",
+        "model_b": "CfC",
+        "alternative": "two-sided",
+        "estimand": "equal-Origin mean of seed-wise metric differences"
+      },
+      {
+        "candidate": "B",
+        "model_a": "RNN",
+        "model_b": "LSTM",
+        "alternative": "two-sided",
+        "estimand": "equal-Origin mean of seed-wise metric differences"
+      },
+      {
+        "candidate": "B",
+        "model_a": "RNN",
+        "model_b": "GRU",
+        "alternative": "two-sided",
+        "estimand": "equal-Origin mean of seed-wise metric differences"
+      },
+      {
+        "candidate": "B",
+        "model_a": "RNN",
+        "model_b": "LTC",
+        "alternative": "two-sided",
+        "estimand": "equal-Origin mean of seed-wise metric differences"
+      },
+      {
+        "candidate": "B",
+        "model_a": "RNN",
+        "model_b": "CfC",
+        "alternative": "two-sided",
+        "estimand": "equal-Origin mean of seed-wise metric differences"
+      },
+      {
+        "candidate": "B",
+        "model_a": "LSTM",
+        "model_b": "GRU",
+        "alternative": "two-sided",
+        "estimand": "equal-Origin mean of seed-wise metric differences"
+      },
+      {
+        "candidate": "B",
+        "model_a": "LSTM",
+        "model_b": "LTC",
+        "alternative": "two-sided",
+        "estimand": "equal-Origin mean of seed-wise metric differences"
+      },
+      {
+        "candidate": "B",
+        "model_a": "LSTM",
+        "model_b": "CfC",
+        "alternative": "two-sided",
+        "estimand": "equal-Origin mean of seed-wise metric differences"
+      },
+      {
+        "candidate": "B",
+        "model_a": "GRU",
+        "model_b": "LTC",
+        "alternative": "two-sided",
+        "estimand": "equal-Origin mean of seed-wise metric differences"
+      },
+      {
+        "candidate": "B",
+        "model_a": "GRU",
+        "model_b": "CfC",
+        "alternative": "two-sided",
+        "estimand": "equal-Origin mean of seed-wise metric differences"
+      },
+      {
+        "candidate": "B",
+        "model_a": "LTC",
+        "model_b": "CfC",
+        "alternative": "two-sided",
+        "estimand": "equal-Origin mean of seed-wise metric differences"
+      }
+    ],
+    "holm_family": "all20 A/B pairwise model comparisons, separately for each prespecified block length",
+    "secondary_family_size": 80,
+    "origin_diagnostic_family_size": 100,
+    "invalid_single_class_resamples": "report invalid count; fail if >10%; never silently fill",
+    "failed_or_missing_seed": "keep roster; inference BLOCKED until all10 common seeds available",
+    "post_test_family_change": false,
+    "ensemble_primary_family_size": 6,
+    "origin_secondary_pvalues": "NOT_PLANNED_DESCRIPTIVE_ONLY"
+  },
+  "channels_full": {
+    "RAW": [
+      "Log_Ret",
+      "Foreign_Net",
+      "Nasdaq",
+      "SOX",
+      "Disparity"
+    ],
+    "LOG": [
+      "Log_Ret",
+      "Disparity"
+    ]
+  },
+  "seed_offsets_full": {
+    "RAW": {
+      "RNN": 101,
+      "LSTM": 201,
+      "GRU": 301,
+      "LTC": 401,
+      "CfC": 501
+    },
+    "LOG": {
+      "RNN": 102,
+      "LSTM": 202,
+      "GRU": 302,
+      "LTC": 402,
+      "CfC": 502
+    }
+  },
+  "ensemble": {
+    "LNN Single": "LTC_RAW",
+    "LNN Ensemble": "0.5*LTC_RAW+0.5*LTC_LOG",
+    "Hybrid_SOTA": "0.7*LNN_Ensemble+0.3*RNN_RAW",
+    "fit_cost": 0,
+    "F1_only_is_original_ensemble_reproduction": false
+  },
+  "learning_kernel_sha256": "676cff063a52141a62fef3f9cda96db582fb75a8a831f54b1a18d3aba91eff09",
+  "prior_scope_authorization_reusable": false,
+  "execution_status": "PREPARED_NOT_AUTHORIZED",
+  "specification_status": "FROZEN_CONDITIONAL_PRICE_AND_RESEARCH_DESIGN_PENDING",
+  "hypothesis_registration_limit": "Historical paper outcomes and Pilot Validation already observed; this freeze is before new independent Test evaluation, not evidence of previously unseen data",
+  "fit_budget_definition": "500 AB one-F1-stream base fits; 40 exact-contract reuse;460 planned new; excludes full RAW5/LOG2, ensembles,HMM,Ablation",
+  "learning_kernel_scope": "STEP3B substring from def equal through end unchanged; scope validation, metadata and dynamic Validation length adapted; whole orchestration file SHA differs and is recorded",
+  "Test_history_exposure": "O1 Test2021 already observed as STEP3B O2 Validation; historical paper Test outcomes also exist; no pristine prospective holdout claim"
+}

@@ -1,0 +1,18 @@
+{
+  "approved": false,
+  "approved_by": null,
+  "scope": "STEP3C_RETROSPECTIVE_F1_CPU",
+  "config_sha256": "f4ea7a18d7812b00b8c581191a110f63a6799a22e066484ec251ee32f7912c5c",
+  "worker_sha256": "cab790fbc023567612e1f1e2789e40e89667c854aee4499c98bd7b418583fe33",
+  "manager_sha256": "90576c03005b60f98e755a93f5a368c289f3388764d834b1f24e635cbf6bbb97",
+  "preflight_sha256": "cf0884e576ad19d234c2cbebb169112c409010e72675b46ea3cc4df9261284f7",
+  "max_new_fits": 460,
+  "permits_Test": false,
+  "permits_HMM_fit": false,
+  "permits_GPU": false,
+  "old40_refit_authorized": false,
+  "acknowledges_BOTH_UNVERIFIED": false,
+  "retrospective_only": true,
+  "release_required": "New separately approved execution release; STEP3C frozen new_fit_execution_enabled=false rejects this template",
+  "approval_reference": null
+}

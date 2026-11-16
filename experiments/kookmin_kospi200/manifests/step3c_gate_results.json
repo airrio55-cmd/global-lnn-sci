@@ -1,0 +1,149 @@
+{
+  "stage": "STEP3C",
+  "checked_at_kst": "2026-11-16T18:59:56.065162+09:00",
+  "specification": "FROZEN_WITH_EXPLICIT_PENDING_DECISIONS",
+  "price_selection": "PENDING",
+  "research_design_selection": "PENDING",
+  "price_source_status": "BOTH_UNVERIFIED",
+  "available_at": "UNKNOWN",
+  "confirmatory_or_production_PIT_execution": "BLOCKED",
+  "retrospective_protocol_preparation": "PASS",
+  "retrospective_execution": "BLOCKED_SEPARATE_DESIGN_DECISION_AND_APPROVAL_REQUIRED",
+  "A": [
+    {
+      "id": "A_PRICE_SOURCE_AND_SELECTION",
+      "status": "BLOCKED",
+      "evidence": "BOTH_UNVERIFIED; primary price PENDING; provider/revision policy unknown"
+    },
+    {
+      "id": "A_HISTORICAL_AVAILABILITY_AT18",
+      "status": "BLOCKED",
+      "evidence": "available_at/first release/revisions/collection latency UNKNOWN"
+    },
+    {
+      "id": "A_PROTOCOL_AND_HASHES",
+      "status": "PASS",
+      "evidence": "f4ea7a18d7812b00b8c581191a110f63a6799a22e066484ec251ee32f7912c5c"
+    },
+    {
+      "id": "A_TRAIN_VALID_TEST_BOUNDARIES",
+      "status": "PASS",
+      "evidence": "5Origin metadata fixed; Train/Validation prefix staging only; independent Test evaluation0"
+    },
+    {
+      "id": "A_EXECUTION_BUDGET_AND_APPROVAL",
+      "status": "BLOCKED",
+      "evidence": "500total/40reuse/460new frozen; no new execution approval"
+    },
+    {
+      "id": "A_HISTORICALLY_UNSEEN_TEST_CLAIM",
+      "status": "BLOCKED",
+      "evidence": "O1 Test2021 already STEP3B O2 Validation; historical paper outcomes observed"
+    }
+  ],
+  "B": [
+    {
+      "id": "B_AB_UNVERIFIED_DISCLOSED",
+      "status": "PASS"
+    },
+    {
+      "id": "B_RETROSPECTIVE_SCOPE_PREREGISTRATION",
+      "status": "PASS",
+      "evidence": "Fixed artifacts before new Test evaluation, not a claim of preregistration before any historical observation"
+    },
+    {
+      "id": "B_INDEPENDENT_PRICE_DATA_AND_FITS",
+      "status": "PASS"
+    },
+    {
+      "id": "B_POSTVALIDATION_PRICE_BLOCK",
+      "status": "PASS"
+    },
+    {
+      "id": "B_NO_VALIDATION_DRIVEN_SPEC_CHANGE",
+      "status": "PASS"
+    },
+    {
+      "id": "B_EXPLORATORY_REPORTING",
+      "status": "PASS"
+    },
+    {
+      "id": "B_USER_DESIGN_CHOICE",
+      "status": "PENDING",
+      "evidence": "User has not chosen design1/2 or primary price"
+    },
+    {
+      "id": "B_NEW_EXECUTION_APPROVAL",
+      "status": "BLOCKED",
+      "evidence": "Template approved=false; frozen config rejects execution"
+    }
+  ],
+  "structural_gates": [
+    {
+      "id": "calendar3939",
+      "status": "PASS"
+    },
+    {
+      "id": "period2025_cutoff",
+      "status": "PASS"
+    },
+    {
+      "id": "prefix_no_postvalidation_prices",
+      "status": "PASS"
+    },
+    {
+      "id": "train_validation_purge",
+      "status": "PASS"
+    },
+    {
+      "id": "train_only_scaler",
+      "status": "PASS"
+    },
+    {
+      "id": "feature_order_and_mask",
+      "status": "PASS"
+    },
+    {
+      "id": "source_environment_pins",
+      "status": "PASS"
+    },
+    {
+      "id": "40_complete_hashes",
+      "status": "PASS"
+    },
+    {
+      "id": "40_array_date_scaler_identity",
+      "status": "PASS"
+    },
+    {
+      "id": "identical_step3b_learning_kernel",
+      "status": "PASS"
+    },
+    {
+      "id": "500_grid40reused460new",
+      "status": "PASS"
+    },
+    {
+      "id": "no_new_fit_or_Test_evaluation",
+      "status": "PASS"
+    }
+  ],
+  "tests": {
+    "passed": 18,
+    "failed": 0
+  },
+  "new_fit_budget": 460,
+  "completed_reuse": 40,
+  "new_fits_executed": 0,
+  "Test_evaluations": 0,
+  "HMM_fit": 0,
+  "GPU": 0,
+  "market_2026_used": 0,
+  "config_sha256": "f4ea7a18d7812b00b8c581191a110f63a6799a22e066484ec251ee32f7912c5c",
+  "training_enabled": false,
+  "hmm_fit_enabled": false,
+  "new_fit_execution_enabled": false,
+  "raw5_external_features": "BLOCKED",
+  "raw5_LOG2_runtime_validation": "NOT_EXECUTED_THIS_STAGE",
+  "forward_tau_extraction": "BLOCKED_SEPARATE_APPROVAL"
+}
