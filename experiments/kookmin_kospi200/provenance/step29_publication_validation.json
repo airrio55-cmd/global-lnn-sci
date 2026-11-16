@@ -1,0 +1,92 @@
+{
+  "checked_date_kst": "2026-11-16",
+  "public_files": [
+    {
+      "file": "CHANGELOG.md",
+      "sha256": "47a655db78f02af249a1fb9e7f4b5059cc52839b264b01b1a3aa022bc719f445"
+    },
+    {
+      "file": "README.md",
+      "sha256": "a66f05576b15aec2660e6bd458e5bf416551a6f9f86f8be8ccb30ff19a73bd74"
+    },
+    {
+      "file": "configs/step29_synthetic_smoke_config.json",
+      "sha256": "3f59531c0a3cc43e89c28458ee1c80b18abc916fb87be7b3dcd51777116ca86e"
+    },
+    {
+      "file": "manifests/step29_data_provenance.json",
+      "sha256": "9d10581aef10fea017c10082cbdb189b87e1c2a84af133b4877853c6391367b3"
+    },
+    {
+      "file": "manifests/step29_main_experiment_checklist.json",
+      "sha256": "b7efeeef9be77628982bca295057a6e05e49d80429b7ab98fe95b2c086670b73"
+    },
+    {
+      "file": "manifests/step29_runtime_environment.json",
+      "sha256": "9417387976b44da95dd0def43ca2ae779dd7f3cb7c5e4da5d87d22508cf68383"
+    },
+    {
+      "file": "manifests/step29_smoke_results.json",
+      "sha256": "c2818eb1c5e89b9f4e25c8470b34a93841d4bf08d5432540d8aa476686a1710f"
+    },
+    {
+      "file": "manifests/step29_test_results.json",
+      "sha256": "6435034c2b93d974c2634e5728ccc5759943f2e59d3fce947c3abe8713d0ae49"
+    },
+    {
+      "file": "provenance/step29_execution_record.json",
+      "sha256": "ff394c26ff8d12d4618dec49f202c0023840c38648f54434870a51b314e3a5cd"
+    },
+    {
+      "file": "provenance/step29_preservation.json",
+      "sha256": "77ee730c5e961db8009d822e0d2bfc32de785dde59d6a826eb5315f46334a6ea"
+    },
+    {
+      "file": "provenance/step29_synthetic_authorization.json",
+      "sha256": "c6f541c07b969e7f83d1a1dac57101b61f1c779bee47ee7abd81b90b28f9e793"
+    },
+    {
+      "file": "reports/STEP29_DATA_DECISION_KO.md",
+      "sha256": "ad34ceac697e76dde670ab1cad7f0b39416d89701407b9d4b8f39921a557a1a4"
+    },
+    {
+      "file": "reports/STEP29_ENVIRONMENT_KO.md",
+      "sha256": "dce89d807889e2d427f798311af3fdef526f48551f900dcda631ab7fb3e1eb98"
+    },
+    {
+      "file": "reports/STEP29_READINESS_KO.md",
+      "sha256": "09481ef74dcdcb3291fb5cddb21a7557701651a9e2e961d426fbc9a9978f413e"
+    },
+    {
+      "file": "reports/STEP29_SYNTHETIC_SMOKE_KO.md",
+      "sha256": "b9ffe3c3fde6349ea6ced0190f5c2bb11600a807c4de92215d1be7d157327243"
+    },
+    {
+      "file": "runtime/step29_synthetic_smoke.py",
+      "sha256": "bbdff72425860e08878c5a99e148b80bd832570fd54fbb8bc698b27142818de7"
+    },
+    {
+      "file": "tests/test_step29.py",
+      "sha256": "f52f7a837c48bcc352948be4ab54bc1bf25c336d08ee380da8e0917fae446875"
+    },
+    {
+      "file": "tools/step29_regression.py",
+      "sha256": "53875837c6b7e28207cac76037428557ea86847c109d4502276fe77980c72f1f"
+    },
+    {
+      "file": "tools/step29_synthetic_smoke.py",
+      "sha256": "48c7dfb1266d6a3f44c83abf6f721952a63e131d3f15e35a898ea5f56c58c4bf"
+    }
+  ],
+  "excluded": "All data/ and originals/ files, all .pt checkpoints, synthetic .npz arrays, private logs, raw financial data and full Notebook",
+  "all_checkpoint_and_synthetic_array_files_local_only": true,
+  "prior_protected_artifacts_unchanged": 158,
+  "synthetic_updates_executed": 10,
+  "real_financial_training_executed": false,
+  "training_enabled": false,
+  "hmm_fit_enabled": false,
+  "production_gates_unchanged": true,
+  "full_notebook_executed": false,
+  "HMM_fit_executed": false,
+  "GPU_executed": false
+}

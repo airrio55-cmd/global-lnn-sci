@@ -1,0 +1,183 @@
+{
+  "checked_at_kst": "2026-11-16T14:57:01.321282+09:00",
+  "period": {
+    "start": "2010-01-01",
+    "end": "2025-12-31",
+    "use_2026_for_targets": false
+  },
+  "origins": [
+    {
+      "origin": "O1",
+      "train_start": 2010,
+      "train_end": 2019,
+      "validation_year": 2020,
+      "test_year": 2021
+    },
+    {
+      "origin": "O2",
+      "train_start": 2010,
+      "train_end": 2020,
+      "validation_year": 2021,
+      "test_year": 2022
+    },
+    {
+      "origin": "O3",
+      "train_start": 2010,
+      "train_end": 2021,
+      "validation_year": 2022,
+      "test_year": 2023
+    },
+    {
+      "origin": "O4",
+      "train_start": 2010,
+      "train_end": 2022,
+      "validation_year": 2023,
+      "test_year": 2024
+    },
+    {
+      "origin": "O5",
+      "train_start": 2010,
+      "train_end": 2023,
+      "validation_year": 2024,
+      "test_year": 2025
+    }
+  ],
+  "seeds": [
+    2,
+    12,
+    22,
+    32,
+    42,
+    52,
+    62,
+    72,
+    82,
+    92
+  ],
+  "seed_offsets": {
+    "RNN_RAW": 101,
+    "RNN_LOG": 102,
+    "LSTM_RAW": 201,
+    "LSTM_LOG": 202,
+    "GRU_RAW": 301,
+    "GRU_LOG": 302,
+    "LTC_RAW": 401,
+    "LTC_LOG": 402,
+    "CfC_RAW": 501,
+    "CfC_LOG": 502
+  },
+  "training_enabled": false,
+  "hmm_fit_enabled": false,
+  "F1_real_data_readiness": "BLOCKED",
+  "full_5feature_readiness": "BLOCKED",
+  "checklist": [
+    {
+      "id": "price_source",
+      "status": "BLOCKED",
+      "requirement_or_evidence": "Select A/B before real training based on verified supplier/definition/revision evidence; both currently unverified"
+    },
+    {
+      "id": "prediction_decision_time",
+      "status": "BLOCKED",
+      "requirement_or_evidence": "Existing t18:00 KST include_t proposal unchanged; explicit approval/evidence or new separately approved contract needed"
+    },
+    {
+      "id": "input_availability",
+      "status": "BLOCKED",
+      "requirement_or_evidence": "Supplier-specific historical available_at, initial/corrected vintage and collection latency for domestic Close"
+    },
+    {
+      "id": "KRX_calendar",
+      "status": "PASS",
+      "requirement_or_evidence": "3939 official sessions; existing calendar source/hash and regression unchanged"
+    },
+    {
+      "id": "20_session_labels",
+      "status": "PASS",
+      "requirement_or_evidence": "Candidate diagnostics3919 known/20UNKNOWN; no2026 targets; selected-source finalization pending"
+    },
+    {
+      "id": "label_purging",
+      "status": "PASS",
+      "requirement_or_evidence": "Train label_end<Validation start; Validation label_end<Test start; existing regressions"
+    },
+    {
+      "id": "train_only_scaler",
+      "status": "PASS",
+      "requirement_or_evidence": "Existing diagnostic Train-only fit/lineage and perturbation; final-source lineage must be frozen"
+    },
+    {
+      "id": "manual_train_threshold",
+      "status": "PASS",
+      "requirement_or_evidence": "Train30/70 quantiles and one-class null rules implemented; freeze selected-source references before real execution"
+    },
+    {
+      "id": "HMM_train_fit_forward_filter",
+      "status": "BLOCKED",
+      "requirement_or_evidence": "Plan fixed; actual HMM fit not authorized/executed. Future fit Train-only, forward posterior continuity, fixed Train names, no fallback"
+    },
+    {
+      "id": "origin_seed_specification",
+      "status": "PASS",
+      "requirement_or_evidence": "O1-O5; ten fixed seeds and unchanged architecture/channel offsets; no origin/seed selection from Test"
+    },
+    {
+      "id": "model_2feature_CPU_compatibility",
+      "status": "PASS",
+      "requirement_or_evidence": "Five models synthetic constructor/forward/backward/checkpoint/repro passed in pinned candidate environment only"
+    },
+    {
+      "id": "RAW_5feature_execution",
+      "status": "BLOCKED",
+      "requirement_or_evidence": "Static parameter counts only; runtime verification not authorized"
+    },
+    {
+      "id": "checkpoint_results_resume",
+      "status": "BLOCKED",
+      "requirement_or_evidence": "Synthetic state/optimizer/scheduler restoration PASS; full real-data early-stop/epoch/batch/scaler/lineage/RNG/DataLoader resumption not executed"
+    },
+    {
+      "id": "statistical_tests",
+      "status": "PASS",
+      "requirement_or_evidence": "Protocol: date-paired moving-block20/40/60,10000replicates,Holm; no seed-concatenated McNemar; real-data inference not executed"
+    },
+    {
+      "id": "data_code_SHA256",
+      "status": "PASS",
+      "requirement_or_evidence": "Prior hashes preserved; synthetic config/source/runner/checkpoint hashes recorded; freeze final source/code before real experiment"
+    },
+    {
+      "id": "full_5feature_external_PIT",
+      "status": "BLOCKED",
+      "requirement_or_evidence": "Foreign_Net scope/unit/release and Nasdaq/SOX supplier-PIT remain unresolved"
+    },
+    {
+      "id": "separate_real_data_execution_approval",
+      "status": "BLOCKED",
+      "requirement_or_evidence": "Synthetic-only authorization does not permit STEP3 financial-data training, Test access, HMM fit, GPU, Rolling-Origin or Ablation"
+    }
+  ],
+  "future_resume_required_fields": [
+    "model",
+    "optimizer",
+    "scheduler",
+    "early_stopping",
+    "epoch",
+    "batch_position",
+    "scaler",
+    "feature_order",
+    "candidate_and_data_SHA256",
+    "origin",
+    "seed",
+    "fit_label_end_cutoffs",
+    "Train_manual_thresholds",
+    "Python_RNG",
+    "NumPy_RNG",
+    "Torch_CPU_RNG",
+    "DataLoader_generator_state",
+    "environment_versions",
+    "code_SHA256"
+  ],
+  "historical_environment_equivalence_claimed": false,
+  "scope_limit": "Synthetic CPU F1-shaped2-feature compatibility does not certify market performance or production PIT"
+}

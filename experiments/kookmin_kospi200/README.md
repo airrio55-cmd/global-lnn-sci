@@ -55,3 +55,9 @@
 A(원본+45일)·B(전체Excel)를로컬분리하고3919개known label·label_end 차이0을확인했다. 두실질적가격충돌은미해결이다. 나머지3892일은float32 roundtrip과일치하며3748일수치표현차이를구분했다. 피처·Train-only레짐임계값·5Origin·Scaler민감도를학습없이감사했다. 공식가격조회는두날짜모두403으로실패했고소스/PIT를인증하지않았다. 실제두날짜수치와전체후보시계열은공개하지않는다.
 
 F1필수A와확장B gate를분리했다. 실제Smoke 실행코드를runtime/step28_smoke_runtime.py와tools/step28_smoke.py에작성했으나호출하지않았다. 원본정의/고정hyperparameter·CPU/시드·checkpoint·재현성·Test접근금지를포함하며현재flags=false와별도승인부재로차단된다. 순수감사src의기존비학습검사도그대로유지했다.90 PASS/0 FAIL, 필수A 2PASS·1PARTIAL·2BLOCKED,별도실행승인BLOCKED.외부B는F1 gate가아니지만F1자체가격/PIT/호환성은필수다. reports/STEP28_*.md5개와요청manifest/config를추가했고기존결과·main/JOF는보존했다.
+
+## STEP2.9 / 2026-11-16
+
+사용자의 독립 합성 CPU 승인 범위에서 5개 모델을 각각2회, 매번 합성 Train/Validation batch각1개·optimizer update1회로 검사했다. 실제 source/hash를 검증한 모델/FocalLoss를 재사용했고 전체Notebook·시장데이터모델·HMM·GPU는 실행하지 않았다. 생성/parameter count/forward/backward/finite gradients/clip/AdamW/OneCycle/checkpoint/정확재현성70판정 PASS, 총합성update10회다. 기존90개 회귀검사와 별도13개 제어검사도PASS다.
+
+모든가격/PIT production gate와 training_enabled=false/hmm_fit_enabled=false는 유지했다. A/B는BOTH_UNVERIFIED, 자료선택미승인이다. RAW5피처는정적검사만이며2피처 합성실행을전체실험완료로표시하지않는다. 새 synthetic config·독립승인·runner·manifest와reports/STEP29_*.md4개를추가했다. 합성배열/checkpoint는새로컬ignored디렉터리에만보존한다. 기존158개 산출물·원본·JOF V14/V15·main은보존했다. 본실험준비체크리스트는manifests/step29_main_experiment_checklist.json이다.

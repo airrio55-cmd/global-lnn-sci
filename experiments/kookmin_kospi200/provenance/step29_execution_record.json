@@ -1,0 +1,13 @@
+{
+  "checked_at_kst": "2026-11-16T14:58:13.596260+09:00",
+  "authorization_sha256": "c6f541c07b969e7f83d1a1dac57101b61f1c779bee47ee7abd81b90b28f9e793",
+  "config_sha256": "3f59531c0a3cc43e89c28458ee1c80b18abc916fb87be7b3dcd51777116ca86e",
+  "runner_sha256": "bbdff72425860e08878c5a99e148b80bd832570fd54fbb8bc698b27142818de7",
+  "result_sha256": "c2818eb1c5e89b9f4e25c8470b34a93841d4bf08d5432540d8aa476686a1710f",
+  "completed": true,
+  "synthetic_optimizer_updates_consumed": 10,
+  "authorized_optimizer_updates_maximum": 10,
+  "additional_execution_requires_fresh_user_authorization": true,
+  "production_approval_created": false,
+  "local_output_directory": "data/derived/step29_synthetic_20261116T145248_KST"
+}

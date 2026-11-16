@@ -1,0 +1,49 @@
+{
+  "checked_at_kst": "2026-11-16T14:57:01.321282+09:00",
+  "status": "BOTH_UNVERIFIED",
+  "selected_candidate": null,
+  "price_selection_authorized": false,
+  "candidates": [
+    {
+      "candidate": "A",
+      "file": "data/derived/step28_candidate_A_close_private.csv",
+      "sha256": "187c988b63f8e555d2e3da5c779a3e409eb6df62386d3625fd7c2f9f72d59551",
+      "unchanged": true,
+      "rows_from_prior_audit": 3939,
+      "supplier": null,
+      "revision_policy": null,
+      "historical_18KST_available_at": null,
+      "source_verification": "USER_SUPPLIED_NOT_OFFICIAL_VERIFIED"
+    },
+    {
+      "candidate": "B",
+      "file": "data/derived/step28_candidate_B_close_private.csv",
+      "sha256": "c7c9bb434605d240e1791c76fb2a270479d649444cf874c68aa097e2c0a337ef",
+      "unchanged": true,
+      "rows_from_prior_audit": 3939,
+      "supplier": null,
+      "revision_policy": null,
+      "historical_18KST_available_at": null,
+      "source_verification": "USER_SUPPLIED_NOT_OFFICIAL_VERIFIED"
+    }
+  ],
+  "upstream_file_hashes": {
+    "KOSPI_200.csv": "7612a3ea53427dcf0148ab6b1e22f34500e6bff6fe1f23e2da793e40b0b82c50",
+    "KOSPI 200 종가.xlsx": "13e34b707d64585fb2f94a828cd387fb89956ae935e27b4ccc9c02e2a2fbdd21",
+    "KOSPI200_누락45일_종가_보완.csv": "86ec5203ab99d931688627c380bce5b81bf416ff204e518772aa54a9ed71d513",
+    "KOSPI200_누락45일_종가_보완.xlsx": "db2e6e049e89ef2563a0ada75f043bc65d3fa576e66ac5d5ba00229111af25ef"
+  },
+  "new_official_price_evidence_obtained": false,
+  "last_official_attempts_source": "provenance/step28_source_checks.json",
+  "prior_official_price_http_status": [
+    403,
+    403
+  ],
+  "unresolved_material_conflict_dates": [
+    "2021-04-23",
+    "2021-05-06"
+  ],
+  "evidence_limit": "Integrity/provenance recheck only, no new price judgement or model performance; original source/revision/18:00 vintage unknown",
+  "synthetic_model_training_reads_financial_data": false,
+  "regression_process_note": "User-authorized existing 90 data/static regressions read existing audit datasets in a separate non-model-training process"
+}

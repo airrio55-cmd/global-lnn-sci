@@ -1,0 +1,127 @@
+{
+  "execution_mode": "STEP29_SYNTHETIC_CPU_ONLY",
+  "synthetic_execution_enabled": true,
+  "training_enabled": false,
+  "hmm_fit_enabled": false,
+  "gpu_enabled": false,
+  "market_data_access": false,
+  "production_gate_override": false,
+  "device": "cpu",
+  "dtype": "float32",
+  "amp": false,
+  "models": [
+    "RNN",
+    "LSTM",
+    "GRU",
+    "LTC",
+    "CfC"
+  ],
+  "input_shape": [
+    64,
+    20,
+    2
+  ],
+  "target_shape": [
+    64
+  ],
+  "target_dtype": "int64",
+  "repetitions": 2,
+  "train_batches_per_repetition": 1,
+  "validation_batches_per_repetition": 1,
+  "optimizer_updates_per_repetition": 1,
+  "raw_log_experiment_executed": false,
+  "base_seed": 2,
+  "synthetic_data_seed": 2,
+  "model_seed_offsets": {
+    "RNN": 101,
+    "LSTM": 201,
+    "GRU": 301,
+    "LTC": 401,
+    "CfC": 501
+  },
+  "seed_policy": "base seed 2 + frozen architecture RAW offset; one channel-agnostic synthetic 2-feature case per model; no RAW/LOG experiment",
+  "model_settings": {
+    "hidden_size": 128,
+    "layers": 1,
+    "dropout": 0.2,
+    "window": 20,
+    "horizon": 20,
+    "batch": 64,
+    "max_epochs": 100,
+    "patience": 10,
+    "selection_metric": "balanced_accuracy",
+    "optimizer": "AdamW",
+    "lr": 0.005,
+    "weight_decay": 0.0001,
+    "scheduler": "OneCycleLR",
+    "focal_gamma": 2,
+    "focal_alpha": 0.25,
+    "gradient_clip": 1.0,
+    "dtype": "float32",
+    "amp": false,
+    "threshold": 0.5
+  },
+  "source_notebook_sha256": "b9e8542fc5783bc5dc734ddfd7bdfe69db26d4b540cde93ae3a722596485c1e7",
+  "original_definition_hashes": {
+    "FocalLoss": "99f31d22f4549d6b370b5a7ede5e2606830b7b20dd66f834fd6e3b3eb2174b7d",
+    "init_weights": "721f2894a7a6f3dc3518f3e80bd17dd7a04ab08f9cdd47762de6212d7e674697",
+    "RecurrentModel": "00844fd26fe3794dff89218879151544efe4b34cb07df9bd038f45e1dceec621",
+    "LNNModel": "ff2ec3b49fb1a96848b9a51aec6dbf4abfac5efdb02fa8fa10f48da77a7e0a7b",
+    "CfCModel": "2907b0ff7cc2dd6da70b9f9da189004de8f5e2d1fd8f2a06d14aeb26f438ebef"
+  },
+  "environment_packages": [
+    "torch",
+    "ncps",
+    "hmmlearn",
+    "numpy",
+    "pandas",
+    "scikit-learn",
+    "scipy",
+    "future",
+    "sympy",
+    "networkx",
+    "filelock",
+    "fsspec",
+    "jinja2",
+    "MarkupSafe"
+  ],
+  "expected_environment_versions": {
+    "torch": "2.10.0+cpu",
+    "ncps": "1.0.1",
+    "hmmlearn": "0.3.3",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "scikit-learn": "1.8.0",
+    "scipy": "1.17.0",
+    "future": "1.0.0",
+    "sympy": "1.14.0",
+    "networkx": "3.7",
+    "filelock": "4.2.4",
+    "fsspec": "2026.9.0",
+    "jinja2": "3.1.6",
+    "MarkupSafe": "3.0.3"
+  },
+  "ncps_reference_hashes": {
+    "LTC": "bbf3127013d3969994ecf0debf4eb37b56db750475ee71646a9decdf1aaf3026",
+    "LTCCell": "167a9d6e1f4dc653ce21420010709e1c995716e53ad0d8bbc2d53c19c40b123f"
+  },
+  "execution_limits": {
+    "model_cases": 5,
+    "repetitions_per_model": 2,
+    "maximum_optimizer_updates_total": 10,
+    "epochs_run": 0,
+    "test_batches": 0,
+    "HMM_fit": 0,
+    "GPU": false
+  },
+  "scheduler_plan": {
+    "epochs_argument": 100,
+    "steps_per_epoch_argument": 1,
+    "total_steps": 100,
+    "scheduler_steps_per_repetition": 1,
+    "note": "Matches original OneCycleLR on a one-batch synthetic loader; no epoch loop"
+  },
+  "raw_5feature_execution_authorized": false,
+  "actual_market_training_authorized": false,
+  "synthetic_data_represents_market_prices": false
+}

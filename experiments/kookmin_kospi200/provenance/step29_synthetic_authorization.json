@@ -1,0 +1,17 @@
+{
+  "scope": "STEP29_SYNTHETIC_CPU_ONLY",
+  "approved": true,
+  "approved_by": "user",
+  "approval_reference": "Current user STEP2.9 request: independent synthetic CPU Smoke Test only; 5 models, 2 repetitions, max 1 optimizer update per model per repetition",
+  "recorded_at_kst": "2026-11-16T14:52:48.911793+09:00",
+  "config_sha256": "3f59531c0a3cc43e89c28458ee1c80b18abc916fb87be7b3dcd51777116ca86e",
+  "runner_sha256": "bbdff72425860e08878c5a99e148b80bd832570fd54fbb8bc698b27142818de7",
+  "permits_production_training": false,
+  "permits_HMM_fit": false,
+  "permits_GPU": false,
+  "permits_actual_Test_access": false,
+  "permits_full_Notebook_execution": false,
+  "production_gate_changes_authorized": false,
+  "price_A_B_selection_authorized": false,
+  "authorization_is_not_STEP3_real_data_approval": true
+}

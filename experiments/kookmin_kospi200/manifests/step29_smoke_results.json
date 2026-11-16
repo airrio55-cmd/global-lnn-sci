@@ -1,0 +1,909 @@
+{
+  "stage": "STEP2.9",
+  "checked_at_kst": "2026-11-16T14:52:56.863975+09:00",
+  "execution_mode": "STEP29_SYNTHETIC_CPU_ONLY",
+  "status": "PASS",
+  "training_enabled": false,
+  "hmm_fit_enabled": false,
+  "synthetic_execution_authorized": true,
+  "production_gate_override": false,
+  "production_training_executed": false,
+  "HMM_fit_executed": false,
+  "GPU_executed": false,
+  "actual_Test_accessed": false,
+  "full_Notebook_executed": false,
+  "epoch_loop_executed": false,
+  "base_seed": 2,
+  "synthetic_data_seed": 2,
+  "fixture": {
+    "train": {
+      "input_shape": [
+        64,
+        20,
+        2
+      ],
+      "input_dtype": "float32",
+      "target_shape": [
+        64
+      ],
+      "target_dtype": "int64",
+      "finite": true,
+      "class_counts": {
+        "0": 32,
+        "1": 32
+      },
+      "input_sha256": "28da001f578a7a26cbd4a6adee427542ef2055220e229a33f00053161b785fc5",
+      "target_sha256": "71d9d65d60410067adb3b2b3d601dee113e9d41b8c750cf8fb08a1022d2df465"
+    },
+    "validation": {
+      "input_shape": [
+        64,
+        20,
+        2
+      ],
+      "input_dtype": "float32",
+      "target_shape": [
+        64
+      ],
+      "target_dtype": "int64",
+      "finite": true,
+      "class_counts": {
+        "0": 32,
+        "1": 32
+      },
+      "input_sha256": "142f30c8deaac14c540936b161a1cd6e8cf9ba4f598d80f6b84f1fafb420dfe1",
+      "target_sha256": "51eca413abaae257a1e09ae4df0a16b6012c908d92b0c4d27f8b6367baa3cf65"
+    }
+  },
+  "models": [
+    {
+      "model": "RNN",
+      "input_kind": "SYNTHETIC_2_FEATURES_NO_RAW_LOG_EXPERIMENT",
+      "repetitions": [
+        {
+          "repetition": 1,
+          "effective_seed": 103,
+          "optimizer_updates": 1,
+          "scheduler_steps": 1,
+          "checks": {
+            "constructor": true,
+            "parameter_count": true,
+            "forward": true,
+            "output_shape": true,
+            "focal_loss": true,
+            "backward": true,
+            "gradient_finite": true,
+            "gradient_clipping": true,
+            "optimizer_step": true,
+            "scheduler_step": true,
+            "checkpoint_save": true,
+            "checkpoint_restore": true,
+            "restored_logits_equal": true
+          },
+          "status": "PASS",
+          "parameters": {
+            "trainable": 17154,
+            "total_registered": 17154
+          },
+          "input_shape": [
+            64,
+            20,
+            2
+          ],
+          "output_shape": [
+            64,
+            2
+          ],
+          "input_dtype": "torch.float32",
+          "device": "cpu",
+          "train_loss_finite": true,
+          "train_loss_synthetic_only": 0.04310410097241402,
+          "trainable_tensors": 6,
+          "gradient_tensors": 6,
+          "gradient_finite": true,
+          "gradient_norm_before_clip": 0.09192117303609848,
+          "gradient_norm_after_clip": 0.09192117303609848,
+          "scheduler_horizon": {
+            "epochs_argument": 100,
+            "steps_per_epoch_argument": 1,
+            "total_steps": 100,
+            "performed_steps": 1,
+            "epoch_loop_executed": false
+          },
+          "validation_loss_finite": true,
+          "validation_loss_synthetic_only": 0.04497282952070236,
+          "train_logits_sha256": "44a289e1afbfc8e2a3efcf03a3f2fa7a705f2590061a1864a1e5f5cd6948746c",
+          "validation_logits_sha256": "488e60f40c537fe9663370db1746f960a8bc0594a3ab913043fac0fdaeefb2cf",
+          "trained_state_sha256": "459a9f0c522c37b0bb60634ecf2f20f22b2e7a72cc65534db81aa8230c1ca5e9",
+          "restored_state_sha256": "459a9f0c522c37b0bb60634ecf2f20f22b2e7a72cc65534db81aa8230c1ca5e9",
+          "checkpoint_file": "data/derived/step29_synthetic_20261116T145248_KST/RNN_repeat1.pt",
+          "checkpoint_sha256": "55f02a402870821086e07a96f656d9f6d3728dd71759bc21d683c319bbf909ec",
+          "new_train_batches": 1,
+          "new_validation_batches": 1,
+          "validation_replay_for_checkpoint": 1,
+          "test_batches": 0
+        },
+        {
+          "repetition": 2,
+          "effective_seed": 103,
+          "optimizer_updates": 1,
+          "scheduler_steps": 1,
+          "checks": {
+            "constructor": true,
+            "parameter_count": true,
+            "forward": true,
+            "output_shape": true,
+            "focal_loss": true,
+            "backward": true,
+            "gradient_finite": true,
+            "gradient_clipping": true,
+            "optimizer_step": true,
+            "scheduler_step": true,
+            "checkpoint_save": true,
+            "checkpoint_restore": true,
+            "restored_logits_equal": true
+          },
+          "status": "PASS",
+          "parameters": {
+            "trainable": 17154,
+            "total_registered": 17154
+          },
+          "input_shape": [
+            64,
+            20,
+            2
+          ],
+          "output_shape": [
+            64,
+            2
+          ],
+          "input_dtype": "torch.float32",
+          "device": "cpu",
+          "train_loss_finite": true,
+          "train_loss_synthetic_only": 0.04310410097241402,
+          "trainable_tensors": 6,
+          "gradient_tensors": 6,
+          "gradient_finite": true,
+          "gradient_norm_before_clip": 0.09192117303609848,
+          "gradient_norm_after_clip": 0.09192117303609848,
+          "scheduler_horizon": {
+            "epochs_argument": 100,
+            "steps_per_epoch_argument": 1,
+            "total_steps": 100,
+            "performed_steps": 1,
+            "epoch_loop_executed": false
+          },
+          "validation_loss_finite": true,
+          "validation_loss_synthetic_only": 0.04497282952070236,
+          "train_logits_sha256": "44a289e1afbfc8e2a3efcf03a3f2fa7a705f2590061a1864a1e5f5cd6948746c",
+          "validation_logits_sha256": "488e60f40c537fe9663370db1746f960a8bc0594a3ab913043fac0fdaeefb2cf",
+          "trained_state_sha256": "459a9f0c522c37b0bb60634ecf2f20f22b2e7a72cc65534db81aa8230c1ca5e9",
+          "restored_state_sha256": "459a9f0c522c37b0bb60634ecf2f20f22b2e7a72cc65534db81aa8230c1ca5e9",
+          "checkpoint_file": "data/derived/step29_synthetic_20261116T145248_KST/RNN_repeat2.pt",
+          "checkpoint_sha256": "898e747251f7e76937b105cad03a037452d97b999fc7e37f6a839cb28710745b",
+          "new_train_batches": 1,
+          "new_validation_batches": 1,
+          "validation_replay_for_checkpoint": 1,
+          "test_batches": 0
+        }
+      ],
+      "checks": {
+        "constructor": "PASS",
+        "parameter_count": "PASS",
+        "forward": "PASS",
+        "output_shape": "PASS",
+        "focal_loss": "PASS",
+        "backward": "PASS",
+        "gradient_finite": "PASS",
+        "gradient_clipping": "PASS",
+        "optimizer_step": "PASS",
+        "scheduler_step": "PASS",
+        "checkpoint_save": "PASS",
+        "checkpoint_restore": "PASS",
+        "restored_logits_equal": "PASS",
+        "same_seed_repeat_equal": "PASS"
+      },
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "model": "LSTM",
+      "input_kind": "SYNTHETIC_2_FEATURES_NO_RAW_LOG_EXPERIMENT",
+      "repetitions": [
+        {
+          "repetition": 1,
+          "effective_seed": 203,
+          "optimizer_updates": 1,
+          "scheduler_steps": 1,
+          "checks": {
+            "constructor": true,
+            "parameter_count": true,
+            "forward": true,
+            "output_shape": true,
+            "focal_loss": true,
+            "backward": true,
+            "gradient_finite": true,
+            "gradient_clipping": true,
+            "optimizer_step": true,
+            "scheduler_step": true,
+            "checkpoint_save": true,
+            "checkpoint_restore": true,
+            "restored_logits_equal": true
+          },
+          "status": "PASS",
+          "parameters": {
+            "trainable": 67842,
+            "total_registered": 67842
+          },
+          "input_shape": [
+            64,
+            20,
+            2
+          ],
+          "output_shape": [
+            64,
+            2
+          ],
+          "input_dtype": "torch.float32",
+          "device": "cpu",
+          "train_loss_finite": true,
+          "train_loss_synthetic_only": 0.043782226741313934,
+          "trainable_tensors": 6,
+          "gradient_tensors": 6,
+          "gradient_finite": true,
+          "gradient_norm_before_clip": 0.025533601641654968,
+          "gradient_norm_after_clip": 0.025533603504300117,
+          "scheduler_horizon": {
+            "epochs_argument": 100,
+            "steps_per_epoch_argument": 1,
+            "total_steps": 100,
+            "performed_steps": 1,
+            "epoch_loop_executed": false
+          },
+          "validation_loss_finite": true,
+          "validation_loss_synthetic_only": 0.043286580592393875,
+          "train_logits_sha256": "e61a3133b128dc4facd62fb771bf9342d071baac9c91f931f7824f8471e992b0",
+          "validation_logits_sha256": "75e9994ee9ed3b812c94cdcadfeecd8de1dcd3cb78bd04e02572f663383f55d1",
+          "trained_state_sha256": "fe8bf34853770bc577103840a59b3f734032c189924ce69d9bf44f61baa7a7bf",
+          "restored_state_sha256": "fe8bf34853770bc577103840a59b3f734032c189924ce69d9bf44f61baa7a7bf",
+          "checkpoint_file": "data/derived/step29_synthetic_20261116T145248_KST/LSTM_repeat1.pt",
+          "checkpoint_sha256": "8cecf3c6c225c852bb1d3ec0d3d21699a94cb07ba362e74fb4bd416615ac5fc5",
+          "new_train_batches": 1,
+          "new_validation_batches": 1,
+          "validation_replay_for_checkpoint": 1,
+          "test_batches": 0
+        },
+        {
+          "repetition": 2,
+          "effective_seed": 203,
+          "optimizer_updates": 1,
+          "scheduler_steps": 1,
+          "checks": {
+            "constructor": true,
+            "parameter_count": true,
+            "forward": true,
+            "output_shape": true,
+            "focal_loss": true,
+            "backward": true,
+            "gradient_finite": true,
+            "gradient_clipping": true,
+            "optimizer_step": true,
+            "scheduler_step": true,
+            "checkpoint_save": true,
+            "checkpoint_restore": true,
+            "restored_logits_equal": true
+          },
+          "status": "PASS",
+          "parameters": {
+            "trainable": 67842,
+            "total_registered": 67842
+          },
+          "input_shape": [
+            64,
+            20,
+            2
+          ],
+          "output_shape": [
+            64,
+            2
+          ],
+          "input_dtype": "torch.float32",
+          "device": "cpu",
+          "train_loss_finite": true,
+          "train_loss_synthetic_only": 0.043782226741313934,
+          "trainable_tensors": 6,
+          "gradient_tensors": 6,
+          "gradient_finite": true,
+          "gradient_norm_before_clip": 0.025533601641654968,
+          "gradient_norm_after_clip": 0.025533603504300117,
+          "scheduler_horizon": {
+            "epochs_argument": 100,
+            "steps_per_epoch_argument": 1,
+            "total_steps": 100,
+            "performed_steps": 1,
+            "epoch_loop_executed": false
+          },
+          "validation_loss_finite": true,
+          "validation_loss_synthetic_only": 0.043286580592393875,
+          "train_logits_sha256": "e61a3133b128dc4facd62fb771bf9342d071baac9c91f931f7824f8471e992b0",
+          "validation_logits_sha256": "75e9994ee9ed3b812c94cdcadfeecd8de1dcd3cb78bd04e02572f663383f55d1",
+          "trained_state_sha256": "fe8bf34853770bc577103840a59b3f734032c189924ce69d9bf44f61baa7a7bf",
+          "restored_state_sha256": "fe8bf34853770bc577103840a59b3f734032c189924ce69d9bf44f61baa7a7bf",
+          "checkpoint_file": "data/derived/step29_synthetic_20261116T145248_KST/LSTM_repeat2.pt",
+          "checkpoint_sha256": "4681759f737eec5a0bd4189f2148759360873269cb9f84313199b85f75dc657f",
+          "new_train_batches": 1,
+          "new_validation_batches": 1,
+          "validation_replay_for_checkpoint": 1,
+          "test_batches": 0
+        }
+      ],
+      "checks": {
+        "constructor": "PASS",
+        "parameter_count": "PASS",
+        "forward": "PASS",
+        "output_shape": "PASS",
+        "focal_loss": "PASS",
+        "backward": "PASS",
+        "gradient_finite": "PASS",
+        "gradient_clipping": "PASS",
+        "optimizer_step": "PASS",
+        "scheduler_step": "PASS",
+        "checkpoint_save": "PASS",
+        "checkpoint_restore": "PASS",
+        "restored_logits_equal": "PASS",
+        "same_seed_repeat_equal": "PASS"
+      },
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "model": "GRU",
+      "input_kind": "SYNTHETIC_2_FEATURES_NO_RAW_LOG_EXPERIMENT",
+      "repetitions": [
+        {
+          "repetition": 1,
+          "effective_seed": 303,
+          "optimizer_updates": 1,
+          "scheduler_steps": 1,
+          "checks": {
+            "constructor": true,
+            "parameter_count": true,
+            "forward": true,
+            "output_shape": true,
+            "focal_loss": true,
+            "backward": true,
+            "gradient_finite": true,
+            "gradient_clipping": true,
+            "optimizer_step": true,
+            "scheduler_step": true,
+            "checkpoint_save": true,
+            "checkpoint_restore": true,
+            "restored_logits_equal": true
+          },
+          "status": "PASS",
+          "parameters": {
+            "trainable": 50946,
+            "total_registered": 50946
+          },
+          "input_shape": [
+            64,
+            20,
+            2
+          ],
+          "output_shape": [
+            64,
+            2
+          ],
+          "input_dtype": "torch.float32",
+          "device": "cpu",
+          "train_loss_finite": true,
+          "train_loss_synthetic_only": 0.04633891582489014,
+          "trainable_tensors": 6,
+          "gradient_tensors": 6,
+          "gradient_finite": true,
+          "gradient_norm_before_clip": 0.09154916554689407,
+          "gradient_norm_after_clip": 0.09154917299747467,
+          "scheduler_horizon": {
+            "epochs_argument": 100,
+            "steps_per_epoch_argument": 1,
+            "total_steps": 100,
+            "performed_steps": 1,
+            "epoch_loop_executed": false
+          },
+          "validation_loss_finite": true,
+          "validation_loss_synthetic_only": 0.04796924069523811,
+          "train_logits_sha256": "1cf916cb06e740d5b9210797374098e5c108bfa2b64bf9e08dd6d7be3dc24613",
+          "validation_logits_sha256": "7692ec424b22895aeaaf286d5dc8f1e31fa4029454ff65e9584b2aef07e6757c",
+          "trained_state_sha256": "47cd2ecb07383600b2c7c34470f131754292a71af58222898aca8c42c3ec9ead",
+          "restored_state_sha256": "47cd2ecb07383600b2c7c34470f131754292a71af58222898aca8c42c3ec9ead",
+          "checkpoint_file": "data/derived/step29_synthetic_20261116T145248_KST/GRU_repeat1.pt",
+          "checkpoint_sha256": "efaaab631850dd5b5ba862eeda61175a52cc86dea85d4615182215507c9c25e7",
+          "new_train_batches": 1,
+          "new_validation_batches": 1,
+          "validation_replay_for_checkpoint": 1,
+          "test_batches": 0
+        },
+        {
+          "repetition": 2,
+          "effective_seed": 303,
+          "optimizer_updates": 1,
+          "scheduler_steps": 1,
+          "checks": {
+            "constructor": true,
+            "parameter_count": true,
+            "forward": true,
+            "output_shape": true,
+            "focal_loss": true,
+            "backward": true,
+            "gradient_finite": true,
+            "gradient_clipping": true,
+            "optimizer_step": true,
+            "scheduler_step": true,
+            "checkpoint_save": true,
+            "checkpoint_restore": true,
+            "restored_logits_equal": true
+          },
+          "status": "PASS",
+          "parameters": {
+            "trainable": 50946,
+            "total_registered": 50946
+          },
+          "input_shape": [
+            64,
+            20,
+            2
+          ],
+          "output_shape": [
+            64,
+            2
+          ],
+          "input_dtype": "torch.float32",
+          "device": "cpu",
+          "train_loss_finite": true,
+          "train_loss_synthetic_only": 0.04633891582489014,
+          "trainable_tensors": 6,
+          "gradient_tensors": 6,
+          "gradient_finite": true,
+          "gradient_norm_before_clip": 0.09154916554689407,
+          "gradient_norm_after_clip": 0.09154917299747467,
+          "scheduler_horizon": {
+            "epochs_argument": 100,
+            "steps_per_epoch_argument": 1,
+            "total_steps": 100,
+            "performed_steps": 1,
+            "epoch_loop_executed": false
+          },
+          "validation_loss_finite": true,
+          "validation_loss_synthetic_only": 0.04796924069523811,
+          "train_logits_sha256": "1cf916cb06e740d5b9210797374098e5c108bfa2b64bf9e08dd6d7be3dc24613",
+          "validation_logits_sha256": "7692ec424b22895aeaaf286d5dc8f1e31fa4029454ff65e9584b2aef07e6757c",
+          "trained_state_sha256": "47cd2ecb07383600b2c7c34470f131754292a71af58222898aca8c42c3ec9ead",
+          "restored_state_sha256": "47cd2ecb07383600b2c7c34470f131754292a71af58222898aca8c42c3ec9ead",
+          "checkpoint_file": "data/derived/step29_synthetic_20261116T145248_KST/GRU_repeat2.pt",
+          "checkpoint_sha256": "caa7981bc9e26d2fe3ce90bc4520ecbd3418b0d9019a0eb389703725583f50e1",
+          "new_train_batches": 1,
+          "new_validation_batches": 1,
+          "validation_replay_for_checkpoint": 1,
+          "test_batches": 0
+        }
+      ],
+      "checks": {
+        "constructor": "PASS",
+        "parameter_count": "PASS",
+        "forward": "PASS",
+        "output_shape": "PASS",
+        "focal_loss": "PASS",
+        "backward": "PASS",
+        "gradient_finite": "PASS",
+        "gradient_clipping": "PASS",
+        "optimizer_step": "PASS",
+        "scheduler_step": "PASS",
+        "checkpoint_save": "PASS",
+        "checkpoint_restore": "PASS",
+        "restored_logits_equal": "PASS",
+        "same_seed_repeat_equal": "PASS"
+      },
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "model": "LTC",
+      "input_kind": "SYNTHETIC_2_FEATURES_NO_RAW_LOG_EXPERIMENT",
+      "repetitions": [
+        {
+          "repetition": 1,
+          "effective_seed": 403,
+          "optimizer_updates": 1,
+          "scheduler_steps": 1,
+          "checks": {
+            "constructor": true,
+            "parameter_count": true,
+            "forward": true,
+            "output_shape": true,
+            "focal_loss": true,
+            "backward": true,
+            "gradient_finite": true,
+            "gradient_clipping": true,
+            "optimizer_step": true,
+            "scheduler_step": true,
+            "checkpoint_save": true,
+            "checkpoint_restore": true,
+            "restored_logits_equal": true
+          },
+          "status": "PASS",
+          "parameters": {
+            "trainable": 67462,
+            "total_registered": 84102
+          },
+          "LTC_implicit_param_constraints": true,
+          "LTC_positive_function": "Softplus",
+          "LTC_solver_substeps": 6,
+          "input_shape": [
+            64,
+            20,
+            2
+          ],
+          "output_shape": [
+            64,
+            2
+          ],
+          "input_dtype": "torch.float32",
+          "device": "cpu",
+          "train_loss_finite": true,
+          "train_loss_synthetic_only": 0.04692041501402855,
+          "trainable_tensors": 17,
+          "gradient_tensors": 17,
+          "gradient_finite": true,
+          "gradient_norm_before_clip": 0.031055215746164322,
+          "gradient_norm_after_clip": 0.031055215746164322,
+          "scheduler_horizon": {
+            "epochs_argument": 100,
+            "steps_per_epoch_argument": 1,
+            "total_steps": 100,
+            "performed_steps": 1,
+            "epoch_loop_executed": false
+          },
+          "validation_loss_finite": true,
+          "validation_loss_synthetic_only": 0.044133372604846954,
+          "train_logits_sha256": "c89f1e0a24b24418164a1978de9c1fa88ea6506f3b77a6f6dfa26d93342f16f1",
+          "validation_logits_sha256": "792600626b77a25dafe770854e5a04366a6e62e798605dabfff8522cd8a345ab",
+          "trained_state_sha256": "ceeb9c9970279d31ed14b22f10bd576aa07dde9e1554ff95b0c826a2e55fd875",
+          "restored_state_sha256": "ceeb9c9970279d31ed14b22f10bd576aa07dde9e1554ff95b0c826a2e55fd875",
+          "checkpoint_file": "data/derived/step29_synthetic_20261116T145248_KST/LTC_repeat1.pt",
+          "checkpoint_sha256": "776d7d94c7fb944c87737fa09a87ef2b63e71d71c966b1ca6b21713e4fc6484a",
+          "new_train_batches": 1,
+          "new_validation_batches": 1,
+          "validation_replay_for_checkpoint": 1,
+          "test_batches": 0
+        },
+        {
+          "repetition": 2,
+          "effective_seed": 403,
+          "optimizer_updates": 1,
+          "scheduler_steps": 1,
+          "checks": {
+            "constructor": true,
+            "parameter_count": true,
+            "forward": true,
+            "output_shape": true,
+            "focal_loss": true,
+            "backward": true,
+            "gradient_finite": true,
+            "gradient_clipping": true,
+            "optimizer_step": true,
+            "scheduler_step": true,
+            "checkpoint_save": true,
+            "checkpoint_restore": true,
+            "restored_logits_equal": true
+          },
+          "status": "PASS",
+          "parameters": {
+            "trainable": 67462,
+            "total_registered": 84102
+          },
+          "LTC_implicit_param_constraints": true,
+          "LTC_positive_function": "Softplus",
+          "LTC_solver_substeps": 6,
+          "input_shape": [
+            64,
+            20,
+            2
+          ],
+          "output_shape": [
+            64,
+            2
+          ],
+          "input_dtype": "torch.float32",
+          "device": "cpu",
+          "train_loss_finite": true,
+          "train_loss_synthetic_only": 0.04692041501402855,
+          "trainable_tensors": 17,
+          "gradient_tensors": 17,
+          "gradient_finite": true,
+          "gradient_norm_before_clip": 0.031055215746164322,
+          "gradient_norm_after_clip": 0.031055215746164322,
+          "scheduler_horizon": {
+            "epochs_argument": 100,
+            "steps_per_epoch_argument": 1,
+            "total_steps": 100,
+            "performed_steps": 1,
+            "epoch_loop_executed": false
+          },
+          "validation_loss_finite": true,
+          "validation_loss_synthetic_only": 0.044133372604846954,
+          "train_logits_sha256": "c89f1e0a24b24418164a1978de9c1fa88ea6506f3b77a6f6dfa26d93342f16f1",
+          "validation_logits_sha256": "792600626b77a25dafe770854e5a04366a6e62e798605dabfff8522cd8a345ab",
+          "trained_state_sha256": "ceeb9c9970279d31ed14b22f10bd576aa07dde9e1554ff95b0c826a2e55fd875",
+          "restored_state_sha256": "ceeb9c9970279d31ed14b22f10bd576aa07dde9e1554ff95b0c826a2e55fd875",
+          "checkpoint_file": "data/derived/step29_synthetic_20261116T145248_KST/LTC_repeat2.pt",
+          "checkpoint_sha256": "51e8c0ddfe451a540f26decc9e867219fbc40697a334870b020057f04b1ce758",
+          "new_train_batches": 1,
+          "new_validation_batches": 1,
+          "validation_replay_for_checkpoint": 1,
+          "test_batches": 0
+        }
+      ],
+      "checks": {
+        "constructor": "PASS",
+        "parameter_count": "PASS",
+        "forward": "PASS",
+        "output_shape": "PASS",
+        "focal_loss": "PASS",
+        "backward": "PASS",
+        "gradient_finite": "PASS",
+        "gradient_clipping": "PASS",
+        "optimizer_step": "PASS",
+        "scheduler_step": "PASS",
+        "checkpoint_save": "PASS",
+        "checkpoint_restore": "PASS",
+        "restored_logits_equal": "PASS",
+        "same_seed_repeat_equal": "PASS"
+      },
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "model": "CfC",
+      "input_kind": "SYNTHETIC_2_FEATURES_NO_RAW_LOG_EXPERIMENT",
+      "repetitions": [
+        {
+          "repetition": 1,
+          "effective_seed": 503,
+          "optimizer_updates": 1,
+          "scheduler_steps": 1,
+          "checks": {
+            "constructor": true,
+            "parameter_count": true,
+            "forward": true,
+            "output_shape": true,
+            "focal_loss": true,
+            "backward": true,
+            "gradient_finite": true,
+            "gradient_clipping": true,
+            "optimizer_step": true,
+            "scheduler_step": true,
+            "checkpoint_save": true,
+            "checkpoint_restore": true,
+            "restored_logits_equal": true
+          },
+          "status": "PASS",
+          "parameters": {
+            "trainable": 83074,
+            "total_registered": 83074
+          },
+          "input_shape": [
+            64,
+            20,
+            2
+          ],
+          "output_shape": [
+            64,
+            2
+          ],
+          "input_dtype": "torch.float32",
+          "device": "cpu",
+          "train_loss_finite": true,
+          "train_loss_synthetic_only": 0.0440247468650341,
+          "trainable_tensors": 12,
+          "gradient_tensors": 12,
+          "gradient_finite": true,
+          "gradient_norm_before_clip": 0.10808145254850388,
+          "gradient_norm_after_clip": 0.10808145999908447,
+          "scheduler_horizon": {
+            "epochs_argument": 100,
+            "steps_per_epoch_argument": 1,
+            "total_steps": 100,
+            "performed_steps": 1,
+            "epoch_loop_executed": false
+          },
+          "validation_loss_finite": true,
+          "validation_loss_synthetic_only": 0.04750160127878189,
+          "train_logits_sha256": "04ee4b0f63adde05f88e393deea3a75351b7b1eb52f5e8bae90bfd53119e8f83",
+          "validation_logits_sha256": "ad4e77d2df64fb279a2944061c54adbd928224e4da6ce7a4c1cdf89e2cf480b7",
+          "trained_state_sha256": "d2923884edadb81975d957844b16060ca6f8301efc2e891c081fade8956c3a33",
+          "restored_state_sha256": "d2923884edadb81975d957844b16060ca6f8301efc2e891c081fade8956c3a33",
+          "checkpoint_file": "data/derived/step29_synthetic_20261116T145248_KST/CfC_repeat1.pt",
+          "checkpoint_sha256": "4d0b7ab24b781bb82ecba1b3784317a92031d1b601f601fe981ee1af1fed3762",
+          "new_train_batches": 1,
+          "new_validation_batches": 1,
+          "validation_replay_for_checkpoint": 1,
+          "test_batches": 0
+        },
+        {
+          "repetition": 2,
+          "effective_seed": 503,
+          "optimizer_updates": 1,
+          "scheduler_steps": 1,
+          "checks": {
+            "constructor": true,
+            "parameter_count": true,
+            "forward": true,
+            "output_shape": true,
+            "focal_loss": true,
+            "backward": true,
+            "gradient_finite": true,
+            "gradient_clipping": true,
+            "optimizer_step": true,
+            "scheduler_step": true,
+            "checkpoint_save": true,
+            "checkpoint_restore": true,
+            "restored_logits_equal": true
+          },
+          "status": "PASS",
+          "parameters": {
+            "trainable": 83074,
+            "total_registered": 83074
+          },
+          "input_shape": [
+            64,
+            20,
+            2
+          ],
+          "output_shape": [
+            64,
+            2
+          ],
+          "input_dtype": "torch.float32",
+          "device": "cpu",
+          "train_loss_finite": true,
+          "train_loss_synthetic_only": 0.0440247468650341,
+          "trainable_tensors": 12,
+          "gradient_tensors": 12,
+          "gradient_finite": true,
+          "gradient_norm_before_clip": 0.10808145254850388,
+          "gradient_norm_after_clip": 0.10808145999908447,
+          "scheduler_horizon": {
+            "epochs_argument": 100,
+            "steps_per_epoch_argument": 1,
+            "total_steps": 100,
+            "performed_steps": 1,
+            "epoch_loop_executed": false
+          },
+          "validation_loss_finite": true,
+          "validation_loss_synthetic_only": 0.04750160127878189,
+          "train_logits_sha256": "04ee4b0f63adde05f88e393deea3a75351b7b1eb52f5e8bae90bfd53119e8f83",
+          "validation_logits_sha256": "ad4e77d2df64fb279a2944061c54adbd928224e4da6ce7a4c1cdf89e2cf480b7",
+          "trained_state_sha256": "d2923884edadb81975d957844b16060ca6f8301efc2e891c081fade8956c3a33",
+          "restored_state_sha256": "d2923884edadb81975d957844b16060ca6f8301efc2e891c081fade8956c3a33",
+          "checkpoint_file": "data/derived/step29_synthetic_20261116T145248_KST/CfC_repeat2.pt",
+          "checkpoint_sha256": "90f5d46028344540edf149cf3b52215259d7d647b4bda578a16bbfe61651e588",
+          "new_train_batches": 1,
+          "new_validation_batches": 1,
+          "validation_replay_for_checkpoint": 1,
+          "test_batches": 0
+        }
+      ],
+      "checks": {
+        "constructor": "PASS",
+        "parameter_count": "PASS",
+        "forward": "PASS",
+        "output_shape": "PASS",
+        "focal_loss": "PASS",
+        "backward": "PASS",
+        "gradient_finite": "PASS",
+        "gradient_clipping": "PASS",
+        "optimizer_step": "PASS",
+        "scheduler_step": "PASS",
+        "checkpoint_save": "PASS",
+        "checkpoint_restore": "PASS",
+        "restored_logits_equal": "PASS",
+        "same_seed_repeat_equal": "PASS"
+      },
+      "status": "PASS",
+      "error": null
+    }
+  ],
+  "optimizer_updates_total": 10,
+  "optimizer_updates_budget": 10,
+  "model_cases": 5,
+  "repetitions_per_model": 2,
+  "check_counts": {
+    "PASS": 70,
+    "FAIL": 0,
+    "BLOCKED": 0
+  },
+  "source_notebook_sha256": "b9e8542fc5783bc5dc734ddfd7bdfe69db26d4b540cde93ae3a722596485c1e7",
+  "original_source_lineage": {
+    "FocalLoss": {
+      "cell_1based": 6,
+      "line_start_1based": 6,
+      "line_end_1based": 16,
+      "sha256": "99f31d22f4549d6b370b5a7ede5e2606830b7b20dd66f834fd6e3b3eb2174b7d"
+    },
+    "init_weights": {
+      "cell_1based": 8,
+      "line_start_1based": 5,
+      "line_end_1based": 9,
+      "sha256": "721f2894a7a6f3dc3518f3e80bd17dd7a04ab08f9cdd47762de6212d7e674697"
+    },
+    "RecurrentModel": {
+      "cell_1based": 8,
+      "line_start_1based": 11,
+      "line_end_1based": 34,
+      "sha256": "00844fd26fe3794dff89218879151544efe4b34cb07df9bd038f45e1dceec621"
+    },
+    "LNNModel": {
+      "cell_1based": 8,
+      "line_start_1based": 36,
+      "line_end_1based": 48,
+      "sha256": "ff2ec3b49fb1a96848b9a51aec6dbf4abfac5efdb02fa8fa10f48da77a7e0a7b"
+    },
+    "CfCModel": {
+      "cell_1based": 8,
+      "line_start_1based": 50,
+      "line_end_1based": 62,
+      "sha256": "2907b0ff7cc2dd6da70b9f9da189004de8f5e2d1fd8f2a06d14aeb26f438ebef"
+    }
+  },
+  "config_sha256": "3f59531c0a3cc43e89c28458ee1c80b18abc916fb87be7b3dcd51777116ca86e",
+  "authorization_sha256": "c6f541c07b969e7f83d1a1dac57101b61f1c779bee47ee7abd81b90b28f9e793",
+  "runner_sha256": "bbdff72425860e08878c5a99e148b80bd832570fd54fbb8bc698b27142818de7",
+  "input_is_market_simulation": false,
+  "financial_performance_metrics_generated": false,
+  "RAW_5feature_runtime_status": "BLOCKED_NOT_AUTHORIZED",
+  "RAW_5feature_static_parameter_counts": {
+    "RNN": {
+      "trainable": 17538,
+      "nontrainable_registered": 0,
+      "total_registered": 17538,
+      "status": "STATIC_FORMULA_ONLY",
+      "runtime_verified": false
+    },
+    "LSTM": {
+      "trainable": 69378,
+      "nontrainable_registered": 0,
+      "total_registered": 69378,
+      "status": "STATIC_FORMULA_ONLY",
+      "runtime_verified": false
+    },
+    "GRU": {
+      "trainable": 52098,
+      "nontrainable_registered": 0,
+      "total_registered": 52098,
+      "status": "STATIC_FORMULA_ONLY",
+      "runtime_verified": false
+    },
+    "LTC": {
+      "trainable": 69004,
+      "nontrainable_registered": 17024,
+      "total_registered": 86028,
+      "status": "STATIC_FORMULA_ONLY",
+      "runtime_verified": false
+    },
+    "CfC": {
+      "trainable": 83458,
+      "nontrainable_registered": 0,
+      "total_registered": 83458,
+      "status": "STATIC_FORMULA_ONLY",
+      "runtime_verified": false
+    }
+  },
+  "file_access_barrier": {
+    "financial_read_attempts": 0,
+    "financial_reads_allowed": 0,
+    "model_source_notebook_reads": 1
+  },
+  "local_output_directory": "data/derived/step29_synthetic_20261116T145248_KST",
+  "checkpoint_and_npz_publication_allowed": false,
+  "version_differences_changed_to_pass": false
+}

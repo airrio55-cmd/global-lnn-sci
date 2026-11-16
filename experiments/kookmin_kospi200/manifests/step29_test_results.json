@@ -1,0 +1,544 @@
+{
+  "checked_stage": "STEP2.9",
+  "historical_90_regression": {
+    "passed": 90,
+    "failed": 0,
+    "tests": [
+      {
+        "test": "test_step2.Step2Tests.test_01_original_hashes",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step2.Step2Tests.test_02_cutoff_before_labels_and_2026_perturbation",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step2.Step2Tests.test_03_nullable_tail_and_actual_calendar_endpoint",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step2.Step2Tests.test_04_unverified_calendar_blocks",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step2.Step2Tests.test_05_release_dst_and_different_calendar",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step2.Step2Tests.test_06_future_perturbation",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step2.Step2Tests.test_07_stale_no_prior_and_no_bfill",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step2.Step2Tests.test_08_unknown_availability_and_foreign_block",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step2.Step2Tests.test_09_schedule_handles_dst_early_close",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step2.Step2Tests.test_10_origins_purge_and_tail",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step2.Step2Tests.test_11_window_contract_and_history_reuse",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step2.Step2Tests.test_12_train_only_scaler_future_invariance",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step2.Step2Tests.test_13_configuration_and_ensemble",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step2.Step2Tests.test_14_ablation_common_dates_and_order",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step2.Step2Tests.test_15_hmm_filter_future_invariance_and_continuation",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step2.Step2Tests.test_16_train_regime_reference_and_no_fallback",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step2.Step2Tests.test_17_no_seed_pseudoreplication",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step2.Step2Tests.test_18_bootstrap_blocks_and_holm",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step2.Step2Tests.test_19_tau_synthetic_algebra_only",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step2.Step2Tests.test_20_no_training_imports_or_execution_paths",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step2.Step2Tests.test_21_production_manifests_remain_blocked",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step2.Step2Tests.test_22_period_gates_and_hmm_train_plan",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step2.Step2Tests.test_23_keyed_ensemble_and_declarative_jobs",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step25.Step25Tests.test_01_official_sessions_and_calendar_hash",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step25.Step25Tests.test_02_all45_dates_open_but_no_fabricated_closes",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step25.Step25Tests.test_03_real_session20_offsets_and_tail",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step25.Step25Tests.test_04_original_hashes_unchanged",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step25.Step25Tests.test_05_actual_origin_boundaries_and_blocked_counts",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step25.Step25Tests.test_06_64_dst_clock_rules",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step25.Step25Tests.test_07_early_closes_and_no_2026_schedule",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step25.Step25Tests.test_08_future_schedule_perturbation_does_not_change_past_candidates",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step25.Step25Tests.test_09_gate_safety_foreign_and_no_run_flags",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step25.Step25Tests.test_10_processed_recipe_not_claimed_as_provenance",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step25.Step25Tests.test_11_ltc_reference_and_explicit_constraint_mode",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step26.Step26Tests.test_01_exact45_and_csv_xlsx_single_count",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step26.Step26Tests.test_02_3939_official_sessions_and_no_close_gaps",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step26.Step26Tests.test_03_original3894_prices_preserved_exactly",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step26.Step26Tests.test_04_full_excel_unavailable_is_blocked_not_equal",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step26.Step26Tests.test_05_no_official_source_overclaim",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step26.Step26Tests.test_06_exact20_horizon_and_tail20_unknown",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step26.Step26Tests.test_07_2026_perturbation_excluded_before_labels",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step26.Step26Tests.test_08_trailing_features_future_invariance",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step26.Step26Tests.test_09_mature_targets_future_invariance",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step26.Step26Tests.test_10_price_inside_horizon_can_change_target",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step26.Step26Tests.test_11_fold_purging_and_no_boundary_violations",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step26.Step26Tests.test_12_features_match_notebook_definitions",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step26.Step26Tests.test_13_window20_include_t_count_and_no_auto_zero_fill",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step26.Step26Tests.test_14_664_discrepancies_repaired_and_distribution",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step26.Step26Tests.test_15_original8_and_supplement2_hashes",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step26.Step26Tests.test_16_reject_duplicate_bad_prices_and_supplement_mismatch",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step26.Step26Tests.test_17_conflict_detection_does_not_replace_original",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step26.Step26Tests.test_18_external_PIT_and_training_gates_remain_blocked",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step26.Step26Tests.test_19_full_workbook_complete_and_45_prices_match",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step27.Step27Tests.test_01_full_excel_identity_and_quality",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step27.Step27Tests.test_02_all_three_price_comparisons",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step27.Step27Tests.test_03_conflicts_redacted_and_no_finalization",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step27.Step27Tests.test_04_exact45_and_horizon47_causes",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step27.Step27Tests.test_05_origins_purge_window_and_class_counts",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step27.Step27Tests.test_06_tail_and_no_2026",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step27.Step27Tests.test_07_frozen_train_quantiles_and_future_perturbation",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step27.Step27Tests.test_08_test_thresholds_and_collapsed_quantiles_rejected",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step27.Step27Tests.test_09_manual_boundary_membership_disjoint",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step27.Step27Tests.test_10_single_class_empty_and_binary_metrics",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step27.Step27Tests.test_11_seed_replication_does_not_pool_and_hmm_separate",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step27.Step27Tests.test_12_historical_outputs_not_fabricated",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step27.Step27Tests.test_13_source_definitions_preserved_as_text",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step27.Step27Tests.test_14_static_parameter_counts_not_runtime_claims",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step27.Step27Tests.test_15_smoke_fails_closed_and_hyperparameters_frozen",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step27.Step27Tests.test_16_no_model_execution_calls_or_imports_in_new_modules",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step27.Step27Tests.test_17_protocol_freeze_and_prior_artifacts",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step27.Step27Tests.test_18_domestic_feature_prefix_invariance",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step27.Step27Tests.test_19_isolated_install_import_not_original_runtime_proof",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step28.Step28Tests.test_01_two_conflicts_recomputed_from_raw_sources",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step28.Step28Tests.test_02_remaining3892_float32_explanation",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step28.Step28Tests.test_03_candidates_sessions_tail_and_label_invariance",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step28.Step28Tests.test_04_feature_sensitivity_attribution",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step28.Step28Tests.test_05_origin_membership_purging_unchanged",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step28.Step28Tests.test_06_F1_inputs_and_O1_no_test_prices_labels",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step28.Step28Tests.test_07_future_test_and_2026_perturbation_no_batch_change",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step28.Step28Tests.test_08_train_only_scaler_future_invariance",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step28.Step28Tests.test_09_manual_references_train_only",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step28.Step28Tests.test_10_hmm_causal_filter_future_invariance_no_fit",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step28.Step28Tests.test_11_shared_evaluation_single_class_and_separate_tables",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step28.Step28Tests.test_12_execution_denied_current_flags",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step28.Step28Tests.test_13_extensions_B_do_not_unnecessarily_block_F1",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step28.Step28Tests.test_14_each_A_gate_and_bound_approval_required",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step28.Step28Tests.test_15_scope_and_prediction_contract_cannot_drift",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step28.Step28Tests.test_16_runtime_source_static_compile_and_guard_before_model_import",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step28.Step28Tests.test_17_prior_hashes_and_frozen_implementation",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step28.Step28Tests.test_18_official_failure_not_certified_and_private_numbers_local",
+        "status": "PASS"
+      }
+    ]
+  },
+  "post_run_control_tests": {
+    "passed": 13,
+    "failed": 0,
+    "tests": [
+      {
+        "test": "test_step29.Step29Controls.test_01_independent_scope_and_authorization_hashes",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step29.Step29Controls.test_02_scope_rejects_financial_paths_and_excess_budget",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step29.Step29Controls.test_03_approval_does_not_authorize_production",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step29.Step29Controls.test_04_actual_five_model_matrix",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step29.Step29Controls.test_05_actual_parameter_counts",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step29.Step29Controls.test_06_fixture_classes_dtype_and_shapes",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step29.Step29Controls.test_07_exact_budget_gradients_and_checkpoints",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step29.Step29Controls.test_08_no_financial_read_or_test_epoch_GPU_HMM",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step29.Step29Controls.test_09_environment_and_LTC_constraint",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step29.Step29Controls.test_10_original_source_hashes_and_cell_locations",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step29.Step29Controls.test_11_no_RAW_LOG_or_5feature_execution_claim",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step29.Step29Controls.test_12_current_synthetic_scope_cannot_forge_or_drift",
+        "status": "PASS"
+      },
+      {
+        "test": "test_step29.Step29Controls.test_13_entrypoint_rejects_consumed_approval_without_running_models",
+        "status": "PASS"
+      }
+    ]
+  },
+  "synthetic_execution_checks": {
+    "counts": {
+      "PASS": 70,
+      "FAIL": 0,
+      "BLOCKED": 0
+    },
+    "model_checks": [
+      {
+        "model": "RNN",
+        "status": "PASS",
+        "checks": {
+          "constructor": "PASS",
+          "parameter_count": "PASS",
+          "forward": "PASS",
+          "output_shape": "PASS",
+          "focal_loss": "PASS",
+          "backward": "PASS",
+          "gradient_finite": "PASS",
+          "gradient_clipping": "PASS",
+          "optimizer_step": "PASS",
+          "scheduler_step": "PASS",
+          "checkpoint_save": "PASS",
+          "checkpoint_restore": "PASS",
+          "restored_logits_equal": "PASS",
+          "same_seed_repeat_equal": "PASS"
+        }
+      },
+      {
+        "model": "LSTM",
+        "status": "PASS",
+        "checks": {
+          "constructor": "PASS",
+          "parameter_count": "PASS",
+          "forward": "PASS",
+          "output_shape": "PASS",
+          "focal_loss": "PASS",
+          "backward": "PASS",
+          "gradient_finite": "PASS",
+          "gradient_clipping": "PASS",
+          "optimizer_step": "PASS",
+          "scheduler_step": "PASS",
+          "checkpoint_save": "PASS",
+          "checkpoint_restore": "PASS",
+          "restored_logits_equal": "PASS",
+          "same_seed_repeat_equal": "PASS"
+        }
+      },
+      {
+        "model": "GRU",
+        "status": "PASS",
+        "checks": {
+          "constructor": "PASS",
+          "parameter_count": "PASS",
+          "forward": "PASS",
+          "output_shape": "PASS",
+          "focal_loss": "PASS",
+          "backward": "PASS",
+          "gradient_finite": "PASS",
+          "gradient_clipping": "PASS",
+          "optimizer_step": "PASS",
+          "scheduler_step": "PASS",
+          "checkpoint_save": "PASS",
+          "checkpoint_restore": "PASS",
+          "restored_logits_equal": "PASS",
+          "same_seed_repeat_equal": "PASS"
+        }
+      },
+      {
+        "model": "LTC",
+        "status": "PASS",
+        "checks": {
+          "constructor": "PASS",
+          "parameter_count": "PASS",
+          "forward": "PASS",
+          "output_shape": "PASS",
+          "focal_loss": "PASS",
+          "backward": "PASS",
+          "gradient_finite": "PASS",
+          "gradient_clipping": "PASS",
+          "optimizer_step": "PASS",
+          "scheduler_step": "PASS",
+          "checkpoint_save": "PASS",
+          "checkpoint_restore": "PASS",
+          "restored_logits_equal": "PASS",
+          "same_seed_repeat_equal": "PASS"
+        }
+      },
+      {
+        "model": "CfC",
+        "status": "PASS",
+        "checks": {
+          "constructor": "PASS",
+          "parameter_count": "PASS",
+          "forward": "PASS",
+          "output_shape": "PASS",
+          "focal_loss": "PASS",
+          "backward": "PASS",
+          "gradient_finite": "PASS",
+          "gradient_clipping": "PASS",
+          "optimizer_step": "PASS",
+          "scheduler_step": "PASS",
+          "checkpoint_save": "PASS",
+          "checkpoint_restore": "PASS",
+          "restored_logits_equal": "PASS",
+          "same_seed_repeat_equal": "PASS"
+        }
+      }
+    ]
+  },
+  "regression_scope": "Existing data-only/static/synthetic-array audit tests; separate process from synthetic NN smoke. No financial data fed to models.",
+  "synthetic_runner_reexecuted_by_tests": false,
+  "production_training_enabled": false,
+  "hmm_fit_enabled": false,
+  "real_data_training": "BLOCKED",
+  "RAW_5feature_execution": "BLOCKED_NOT_AUTHORIZED",
+  "HMM_fit": "BLOCKED_NOT_AUTHORIZED",
+  "GPU_execution": "BLOCKED_NOT_AUTHORIZED"
+}
