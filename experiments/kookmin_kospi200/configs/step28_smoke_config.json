@@ -1,0 +1,148 @@
+{
+  "stage": "STEP2.8_PREPARED_NOT_EXECUTED",
+  "training_enabled": false,
+  "hmm_fit_enabled": false,
+  "gpu_enabled": false,
+  "device": "cpu",
+  "origin": "O1",
+  "seed": 2,
+  "feature_spec": "F1",
+  "models": [
+    "RNN",
+    "LSTM",
+    "GRU",
+    "LTC",
+    "CfC"
+  ],
+  "channels": [
+    "RAW",
+    "LOG"
+  ],
+  "features": {
+    "RAW": [
+      "Log_Ret",
+      "Disparity"
+    ],
+    "LOG": [
+      "Log_Ret",
+      "Disparity"
+    ]
+  },
+  "model_settings": {
+    "hidden_size": 128,
+    "layers": 1,
+    "dropout": 0.2,
+    "window": 20,
+    "horizon": 20,
+    "batch": 64,
+    "max_epochs": 100,
+    "patience": 10,
+    "selection_metric": "balanced_accuracy",
+    "optimizer": "AdamW",
+    "lr": 0.005,
+    "weight_decay": 0.0001,
+    "scheduler": "OneCycleLR",
+    "focal_gamma": 2,
+    "focal_alpha": 0.25,
+    "gradient_clip": 1.0,
+    "dtype": "float32",
+    "amp": false,
+    "threshold": 0.5
+  },
+  "seed_offsets": {
+    "RNN_RAW": 101,
+    "RNN_LOG": 102,
+    "LSTM_RAW": 201,
+    "LSTM_LOG": 202,
+    "GRU_RAW": 301,
+    "GRU_LOG": 302,
+    "LTC_RAW": 401,
+    "LTC_LOG": 402,
+    "CfC_RAW": 501,
+    "CfC_LOG": 502
+  },
+  "prediction_contract": {
+    "time": "18:00",
+    "timezone": "Asia/Seoul",
+    "include_t": true
+  },
+  "eligibility_policy": "STEP27 common local-feature 20-window mask; F1 inputs remain two domestic features only",
+  "train_batches": 1,
+  "validation_batches": 1,
+  "reproducibility_repetitions": 2,
+  "planned_model_channel_cases": 10,
+  "planned_training_batch_steps_including_repetition": 20,
+  "test_access": false,
+  "selected_candidate": null,
+  "selected_price_sha256": null,
+  "calendar_sha256": "c426702db216604d70f15973654d204a3e6afdb8cef1ef1f62169bb0a0667d6c",
+  "source_notebook_sha256": "b9e8542fc5783bc5dc734ddfd7bdfe69db26d4b540cde93ae3a722596485c1e7",
+  "original_definition_hashes": {
+    "FocalLoss": "99f31d22f4549d6b370b5a7ede5e2606830b7b20dd66f834fd6e3b3eb2174b7d",
+    "init_weights": "721f2894a7a6f3dc3518f3e80bd17dd7a04ab08f9cdd47762de6212d7e674697",
+    "RecurrentModel": "00844fd26fe3794dff89218879151544efe4b34cb07df9bd038f45e1dceec621",
+    "LNNModel": "ff2ec3b49fb1a96848b9a51aec6dbf4abfac5efdb02fa8fa10f48da77a7e0a7b",
+    "CfCModel": "2907b0ff7cc2dd6da70b9f9da189004de8f5e2d1fd8f2a06d14aeb26f438ebef"
+  },
+  "runtime_versions": {
+    "torch": "2.10.0+cpu",
+    "ncps": "1.0.1"
+  },
+  "optional_hmm_runtime_reference": {
+    "hmmlearn": "0.3.3"
+  },
+  "approval_required": {
+    "scope": "STEP3_F1_O1_SEED2_CPU_SMOKE_ONLY",
+    "approved_by": "user",
+    "bind": [
+      "config_sha256",
+      "gates_sha256"
+    ]
+  },
+  "checkpoint_policy": "New ignored local derived directory; weights_only load; exact model/optimizer/scheduler and validation-logit roundtrip",
+  "manual_regime": {
+    "variable": "Vol_Regime",
+    "definition": "Log_Ret.rolling(40).std(ddof=1)",
+    "quantiles": [
+      30,
+      70
+    ],
+    "method": "linear",
+    "reference": "retained Train dates, STEP27 common local-feature-window policy",
+    "validation_test_refit": false,
+    "single_class_BA_MacroF1": null
+  },
+  "hmm_plan": {
+    "fit_enabled": false,
+    "fit_partition": "train",
+    "covariance": "full",
+    "states": 2,
+    "n_iter": 2000,
+    "tol": 0.0001,
+    "min_covar": 0.0001,
+    "initialization_seeds": [
+      2,
+      12,
+      22,
+      32,
+      42,
+      52,
+      62,
+      72,
+      82,
+      92
+    ],
+    "selection": "train_log_likelihood",
+    "decode": "forward_filter",
+    "manual_quantiles": [
+      30,
+      70
+    ],
+    "state_naming": "train_mean_volatility",
+    "test_median_fallback": false
+  },
+  "external_feature_blocks_are_F1_prerequisites": false,
+  "historical_checkpoint_compatibility_required_for_new_F1_training": false,
+  "original_loss_semantics": "alpha globally multiplies Focal CE, not alpha_t class weighting",
+  "protocol_change_requires_new_version": true
+}

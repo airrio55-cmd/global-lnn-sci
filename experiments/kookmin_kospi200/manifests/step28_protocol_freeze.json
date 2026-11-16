@@ -1,0 +1,36 @@
+{
+  "checked_date": "2026-11-16",
+  "status": "PASS_VERSIONED_SPECIFICATION_ONLY",
+  "parent_protocol": "reports/PROTOCOL_KO.md",
+  "parent_protocol_sha256": "d52352001d13c7baeb220ab47b3a5d458aaee70c7c0ada629d5056145bf2ebfa",
+  "config_file": "configs/step28_smoke_config.json",
+  "config_sha256": "67b08fcfa1e9908d71c20afef52b686dd68648822bbb31bf15dc3416712ac2ca",
+  "implementation_artifacts": [
+    {
+      "file": "runtime/step28_smoke_runtime.py",
+      "sha256": "90ce86a1d28cbbfb569d972af8bd6bd06991f4975ec69ead8063ecb1510ea9b7"
+    },
+    {
+      "file": "src/kospi200/price_sensitivity.py",
+      "sha256": "0b0b9a1d452c9b4e18988a20e703dda5453af726c9f2e614b9d70e5c3643314c"
+    },
+    {
+      "file": "src/kospi200/paired_regime_evaluation.py",
+      "sha256": "d8af6a80b73d7986df7f1169727c7cf6ba15a8b9ebfb8e874897ccc93f5e58e4"
+    },
+    {
+      "file": "src/kospi200/manual_evaluation.py",
+      "sha256": "e1e1ad9cde026eedc5bf57ed5f809a65f9839aa13d99000af92e0a8eafc79a67"
+    },
+    {
+      "file": "src/kospi200/regimes.py",
+      "sha256": "b7889f00264b6ecd6481e9e83cc8c756b3b83f57ed95d88e877abc816251b885"
+    },
+    {
+      "file": "tools/step28_smoke.py",
+      "sha256": "835e263c722839a37516445c0c9bdaceee9b2b53e9e62b71ef6288c37346ad90"
+    }
+  ],
+  "final_price_selected": false,
+  "execution_authorized": false
+}

@@ -1,0 +1,64 @@
+{
+  "checked_date": "2026-11-16",
+  "F1_overall_status": "BLOCKED",
+  "STEP3_smoke_status": "BLOCKED",
+  "training_enabled": false,
+  "hmm_fit_enabled": false,
+  "mandatory_A": {
+    "final_price_source": {
+      "status": "BLOCKED",
+      "selected_candidate": null,
+      "reason": "A/B have same labels but unverified source/revisions; source must be selected before training"
+    },
+    "calendar_labels": {
+      "status": "PASS",
+      "reason": "Both 3939 sessions,3919known/20UNKNOWN,20-session labels,purging,Train-only scaler verified as diagnostics"
+    },
+    "domestic_input_time_contract": {
+      "status": "BLOCKED",
+      "reason": "Neither unidentified supplier has historical 18:00 availability/revision evidence"
+    },
+    "model_library_compatibility": {
+      "status": "PARTIAL",
+      "reason": "Installation/import/source signatures PASS; construction/forward/backward/checkpoint smoke never executed"
+    },
+    "protocol_frozen": {
+      "status": "PASS",
+      "reason": "STEP2.8 versioned specification and implementation hash snapshot; price choice pending, flags false"
+    }
+  },
+  "extensions_B": {
+    "Foreign_Net_source": {
+      "status": "BLOCKED"
+    },
+    "Nasdaq_SOX_PIT": {
+      "status": "BLOCKED"
+    },
+    "full_5feature_experiment": {
+      "status": "BLOCKED"
+    },
+    "full_feature_ablation": {
+      "status": "BLOCKED"
+    },
+    "LTC_tau_actual_forward": {
+      "status": "BLOCKED"
+    },
+    "historical_ncps_hmmlearn_checkpoint_reproduction": {
+      "status": "BLOCKED",
+      "reason": "Not required to claim a separately preregistered new F1 candidate-environment experiment; historical equivalence cannot be claimed"
+    }
+  },
+  "separate_execution_approval": {
+    "status": "BLOCKED",
+    "scope": "STEP3_F1_O1_SEED2_CPU_SMOKE_ONLY",
+    "reason": "STEP2.8 authorizes code/data audit only"
+  },
+  "F1_does_not_require_extension_B": true,
+  "HMM_fit_executed": false,
+  "model_forward_executed": false,
+  "checkpoint_loaded": false,
+  "GPU_executed": false,
+  "models_trained": 0,
+  "new_model_performance_generated": false,
+  "2026_market_observations_used": 0
+}

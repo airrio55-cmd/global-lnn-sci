@@ -1,0 +1,1127 @@
+{
+  "sessions": 3939,
+  "known_labels_A": 3919,
+  "known_labels_B": 3919,
+  "unknown_labels_A": 20,
+  "unknown_labels_B": 20,
+  "known_label_differences": 0,
+  "down_to_up": 0,
+  "up_to_down": 0,
+  "label_end_differences": 0,
+  "features": {
+    "Log_Ret": {
+      "finite_pairs": 3938,
+      "missing_mask_differences": 0,
+      "exact_differences": 3916,
+      "over_1e_minus12": 3916,
+      "over_1e_minus6": 4,
+      "over_1e_minus3": 4,
+      "max_absolute_difference": 0.006065634686798029,
+      "mean_absolute_difference": 3.7982046465391225e-06
+    },
+    "Disparity": {
+      "finite_pairs": 3920,
+      "missing_mask_differences": 0,
+      "exact_differences": 3919,
+      "over_1e_minus12": 3919,
+      "over_1e_minus6": 28,
+      "over_1e_minus3": 2,
+      "max_absolute_difference": 0.005661849340678593,
+      "mean_absolute_difference": 3.5713959360445818e-06
+    },
+    "Vol_Regime": {
+      "finite_pairs": 3899,
+      "missing_mask_differences": 0,
+      "exact_differences": 3899,
+      "over_1e_minus12": 3899,
+      "over_1e_minus6": 49,
+      "over_1e_minus3": 0,
+      "max_absolute_difference": 0.00014647337481532834,
+      "mean_absolute_difference": 1.059157008976786e-06
+    }
+  },
+  "origins": [
+    {
+      "origin": "O1",
+      "partition": "train",
+      "common_regime_samples_A": 2387,
+      "common_regime_samples_B": 2387,
+      "common_date_membership_changes": 0,
+      "F1_input_only_samples_A": 2408,
+      "F1_input_only_samples_B": 2408,
+      "F1_date_membership_changes": 0
+    },
+    {
+      "origin": "O1",
+      "partition": "validation",
+      "common_regime_samples_A": 228,
+      "common_regime_samples_B": 228,
+      "common_date_membership_changes": 0,
+      "F1_input_only_samples_A": 228,
+      "F1_input_only_samples_B": 228,
+      "F1_date_membership_changes": 0
+    },
+    {
+      "origin": "O1",
+      "partition": "test",
+      "common_regime_samples_A": 248,
+      "common_regime_samples_B": 248,
+      "common_date_membership_changes": 0,
+      "F1_input_only_samples_A": 248,
+      "F1_input_only_samples_B": 248,
+      "F1_date_membership_changes": 0
+    },
+    {
+      "origin": "O2",
+      "partition": "train",
+      "common_regime_samples_A": 2635,
+      "common_regime_samples_B": 2635,
+      "common_date_membership_changes": 0,
+      "F1_input_only_samples_A": 2656,
+      "F1_input_only_samples_B": 2656,
+      "F1_date_membership_changes": 0
+    },
+    {
+      "origin": "O2",
+      "partition": "validation",
+      "common_regime_samples_A": 228,
+      "common_regime_samples_B": 228,
+      "common_date_membership_changes": 0,
+      "F1_input_only_samples_A": 228,
+      "F1_input_only_samples_B": 228,
+      "F1_date_membership_changes": 0
+    },
+    {
+      "origin": "O2",
+      "partition": "test",
+      "common_regime_samples_A": 246,
+      "common_regime_samples_B": 246,
+      "common_date_membership_changes": 0,
+      "F1_input_only_samples_A": 246,
+      "F1_input_only_samples_B": 246,
+      "F1_date_membership_changes": 0
+    },
+    {
+      "origin": "O3",
+      "partition": "train",
+      "common_regime_samples_A": 2883,
+      "common_regime_samples_B": 2883,
+      "common_date_membership_changes": 0,
+      "F1_input_only_samples_A": 2904,
+      "F1_input_only_samples_B": 2904,
+      "F1_date_membership_changes": 0
+    },
+    {
+      "origin": "O3",
+      "partition": "validation",
+      "common_regime_samples_A": 226,
+      "common_regime_samples_B": 226,
+      "common_date_membership_changes": 0,
+      "F1_input_only_samples_A": 226,
+      "F1_input_only_samples_B": 226,
+      "F1_date_membership_changes": 0
+    },
+    {
+      "origin": "O3",
+      "partition": "test",
+      "common_regime_samples_A": 245,
+      "common_regime_samples_B": 245,
+      "common_date_membership_changes": 0,
+      "F1_input_only_samples_A": 245,
+      "F1_input_only_samples_B": 245,
+      "F1_date_membership_changes": 0
+    },
+    {
+      "origin": "O4",
+      "partition": "train",
+      "common_regime_samples_A": 3129,
+      "common_regime_samples_B": 3129,
+      "common_date_membership_changes": 0,
+      "F1_input_only_samples_A": 3150,
+      "F1_input_only_samples_B": 3150,
+      "F1_date_membership_changes": 0
+    },
+    {
+      "origin": "O4",
+      "partition": "validation",
+      "common_regime_samples_A": 225,
+      "common_regime_samples_B": 225,
+      "common_date_membership_changes": 0,
+      "F1_input_only_samples_A": 225,
+      "F1_input_only_samples_B": 225,
+      "F1_date_membership_changes": 0
+    },
+    {
+      "origin": "O4",
+      "partition": "test",
+      "common_regime_samples_A": 244,
+      "common_regime_samples_B": 244,
+      "common_date_membership_changes": 0,
+      "F1_input_only_samples_A": 244,
+      "F1_input_only_samples_B": 244,
+      "F1_date_membership_changes": 0
+    },
+    {
+      "origin": "O5",
+      "partition": "train",
+      "common_regime_samples_A": 3374,
+      "common_regime_samples_B": 3374,
+      "common_date_membership_changes": 0,
+      "F1_input_only_samples_A": 3395,
+      "F1_input_only_samples_B": 3395,
+      "F1_date_membership_changes": 0
+    },
+    {
+      "origin": "O5",
+      "partition": "validation",
+      "common_regime_samples_A": 224,
+      "common_regime_samples_B": 224,
+      "common_date_membership_changes": 0,
+      "F1_input_only_samples_A": 224,
+      "F1_input_only_samples_B": 224,
+      "F1_date_membership_changes": 0
+    },
+    {
+      "origin": "O5",
+      "partition": "test",
+      "common_regime_samples_A": 222,
+      "common_regime_samples_B": 222,
+      "common_date_membership_changes": 0,
+      "F1_input_only_samples_A": 222,
+      "F1_input_only_samples_B": 222,
+      "F1_date_membership_changes": 0
+    }
+  ],
+  "manual_thresholds": [
+    {
+      "origin": "O1",
+      "reference": "STEP27 retained Train base dates; common local feature-window mask",
+      "train_rows_A": 2387,
+      "train_rows_B": 2387,
+      "low_A": 0.007395781194783369,
+      "low_B": 0.007395778369943021,
+      "high_A": 0.009469417424932673,
+      "high_B": 0.009469417559428008,
+      "low_delta": -2.8248403477482142e-09,
+      "high_delta": 1.3449533500797806e-10,
+      "validation_test_refit": false,
+      "train_manual_membership_changes": 0,
+      "validation_manual_membership_changes": 0,
+      "test_manual_membership_changes": 4
+    },
+    {
+      "origin": "O2",
+      "reference": "STEP27 retained Train base dates; common local feature-window mask",
+      "train_rows_A": 2635,
+      "train_rows_B": 2635,
+      "low_A": 0.007589725396008875,
+      "low_B": 0.007589727638523563,
+      "high_A": 0.010163297194739948,
+      "high_B": 0.010163301928026907,
+      "low_delta": 2.242514687833541e-09,
+      "high_delta": 4.7332869585609005e-09,
+      "validation_test_refit": false,
+      "train_manual_membership_changes": 0,
+      "validation_manual_membership_changes": 1,
+      "test_manual_membership_changes": 0
+    },
+    {
+      "origin": "O3",
+      "reference": "STEP27 retained Train base dates; common local feature-window mask",
+      "train_rows_A": 2883,
+      "train_rows_B": 2883,
+      "low_A": 0.007659558104293528,
+      "low_B": 0.007655982316426718,
+      "high_A": 0.01029771489571626,
+      "high_B": 0.010297709869497941,
+      "low_delta": -3.57578786681044e-06,
+      "high_delta": -5.026218318285314e-09,
+      "validation_test_refit": false,
+      "train_manual_membership_changes": 2,
+      "validation_manual_membership_changes": 0,
+      "test_manual_membership_changes": 0
+    },
+    {
+      "origin": "O4",
+      "reference": "STEP27 retained Train base dates; common local feature-window mask",
+      "train_rows_A": 3129,
+      "train_rows_B": 3129,
+      "low_A": 0.007767799132471026,
+      "low_B": 0.007764876470012275,
+      "high_A": 0.01079350992826308,
+      "high_B": 0.010793518284472914,
+      "low_delta": -2.92266245875087e-06,
+      "high_delta": 8.356209833457195e-09,
+      "validation_test_refit": false,
+      "train_manual_membership_changes": 8,
+      "validation_manual_membership_changes": 0,
+      "test_manual_membership_changes": 0
+    },
+    {
+      "origin": "O5",
+      "reference": "STEP27 retained Train base dates; common local feature-window mask",
+      "train_rows_A": 3374,
+      "train_rows_B": 3374,
+      "low_A": 0.007805093289630756,
+      "low_B": 0.007802809543055098,
+      "high_A": 0.010865960473885111,
+      "high_B": 0.010865960332869564,
+      "low_delta": -2.2837465756576913e-06,
+      "high_delta": -1.4101554646206438e-10,
+      "validation_test_refit": false,
+      "train_manual_membership_changes": 4,
+      "validation_manual_membership_changes": 0,
+      "test_manual_membership_changes": 0
+    }
+  ],
+  "Train_only_scaler_diagnostics": [
+    {
+      "origin": "O1",
+      "fit_start": "2010-03-03",
+      "fit_end": "2019-11-29",
+      "fit_rows": 2406,
+      "feature_order": [
+        "Log_Ret",
+        "Disparity"
+      ],
+      "source_partition": "train",
+      "fit_policy": "union of retained Train input-window dates; no validation/test",
+      "fit_max_before_validation": true
+    },
+    {
+      "origin": "O2",
+      "fit_start": "2010-03-03",
+      "fit_end": "2020-12-01",
+      "fit_rows": 2654,
+      "feature_order": [
+        "Log_Ret",
+        "Disparity"
+      ],
+      "source_partition": "train",
+      "fit_policy": "union of retained Train input-window dates; no validation/test",
+      "fit_max_before_validation": true
+    },
+    {
+      "origin": "O3",
+      "fit_start": "2010-03-03",
+      "fit_end": "2021-12-02",
+      "fit_rows": 2902,
+      "feature_order": [
+        "Log_Ret",
+        "Disparity"
+      ],
+      "source_partition": "train",
+      "fit_policy": "union of retained Train input-window dates; no validation/test",
+      "fit_max_before_validation": true
+    },
+    {
+      "origin": "O4",
+      "fit_start": "2010-03-03",
+      "fit_end": "2022-12-01",
+      "fit_rows": 3148,
+      "feature_order": [
+        "Log_Ret",
+        "Disparity"
+      ],
+      "source_partition": "train",
+      "fit_policy": "union of retained Train input-window dates; no validation/test",
+      "fit_max_before_validation": true
+    },
+    {
+      "origin": "O5",
+      "fit_start": "2010-03-03",
+      "fit_end": "2023-11-29",
+      "fit_rows": 3393,
+      "feature_order": [
+        "Log_Ret",
+        "Disparity"
+      ],
+      "source_partition": "train",
+      "fit_policy": "union of retained Train input-window dates; no validation/test",
+      "fit_max_before_validation": true
+    }
+  ],
+  "final_source_selected": null,
+  "model_performance_estimated": false,
+  "2026_prices_used": 0,
+  "attribution": {
+    "two_conflict_dates_only": {
+      "sessions": 3939,
+      "known_labels_A": 3919,
+      "known_labels_B": 3919,
+      "unknown_labels_A": 20,
+      "unknown_labels_B": 20,
+      "known_label_differences": 0,
+      "down_to_up": 0,
+      "up_to_down": 0,
+      "label_end_differences": 0,
+      "features": {
+        "Log_Ret": {
+          "finite_pairs": 3938,
+          "missing_mask_differences": 0,
+          "exact_differences": 4,
+          "over_1e_minus12": 4,
+          "over_1e_minus6": 4,
+          "over_1e_minus3": 4,
+          "max_absolute_difference": 0.006065617395161185,
+          "mean_absolute_difference": 3.768703233837928e-06
+        },
+        "Disparity": {
+          "finite_pairs": 3920,
+          "missing_mask_differences": 0,
+          "exact_differences": 41,
+          "over_1e_minus12": 28,
+          "over_1e_minus6": 28,
+          "over_1e_minus3": 2,
+          "max_absolute_difference": 0.0056618575846104635,
+          "mean_absolute_difference": 3.5502536094409974e-06
+        },
+        "Vol_Regime": {
+          "finite_pairs": 3899,
+          "missing_mask_differences": 0,
+          "exact_differences": 773,
+          "over_1e_minus12": 49,
+          "over_1e_minus6": 49,
+          "over_1e_minus3": 0,
+          "max_absolute_difference": 0.000146472077963887,
+          "mean_absolute_difference": 1.0543269436536547e-06
+        }
+      },
+      "origins": [
+        {
+          "origin": "O1",
+          "partition": "train",
+          "common_regime_samples_A": 2387,
+          "common_regime_samples_B": 2387,
+          "common_date_membership_changes": 0,
+          "F1_input_only_samples_A": 2408,
+          "F1_input_only_samples_B": 2408,
+          "F1_date_membership_changes": 0
+        },
+        {
+          "origin": "O1",
+          "partition": "validation",
+          "common_regime_samples_A": 228,
+          "common_regime_samples_B": 228,
+          "common_date_membership_changes": 0,
+          "F1_input_only_samples_A": 228,
+          "F1_input_only_samples_B": 228,
+          "F1_date_membership_changes": 0
+        },
+        {
+          "origin": "O1",
+          "partition": "test",
+          "common_regime_samples_A": 248,
+          "common_regime_samples_B": 248,
+          "common_date_membership_changes": 0,
+          "F1_input_only_samples_A": 248,
+          "F1_input_only_samples_B": 248,
+          "F1_date_membership_changes": 0
+        },
+        {
+          "origin": "O2",
+          "partition": "train",
+          "common_regime_samples_A": 2635,
+          "common_regime_samples_B": 2635,
+          "common_date_membership_changes": 0,
+          "F1_input_only_samples_A": 2656,
+          "F1_input_only_samples_B": 2656,
+          "F1_date_membership_changes": 0
+        },
+        {
+          "origin": "O2",
+          "partition": "validation",
+          "common_regime_samples_A": 228,
+          "common_regime_samples_B": 228,
+          "common_date_membership_changes": 0,
+          "F1_input_only_samples_A": 228,
+          "F1_input_only_samples_B": 228,
+          "F1_date_membership_changes": 0
+        },
+        {
+          "origin": "O2",
+          "partition": "test",
+          "common_regime_samples_A": 246,
+          "common_regime_samples_B": 246,
+          "common_date_membership_changes": 0,
+          "F1_input_only_samples_A": 246,
+          "F1_input_only_samples_B": 246,
+          "F1_date_membership_changes": 0
+        },
+        {
+          "origin": "O3",
+          "partition": "train",
+          "common_regime_samples_A": 2883,
+          "common_regime_samples_B": 2883,
+          "common_date_membership_changes": 0,
+          "F1_input_only_samples_A": 2904,
+          "F1_input_only_samples_B": 2904,
+          "F1_date_membership_changes": 0
+        },
+        {
+          "origin": "O3",
+          "partition": "validation",
+          "common_regime_samples_A": 226,
+          "common_regime_samples_B": 226,
+          "common_date_membership_changes": 0,
+          "F1_input_only_samples_A": 226,
+          "F1_input_only_samples_B": 226,
+          "F1_date_membership_changes": 0
+        },
+        {
+          "origin": "O3",
+          "partition": "test",
+          "common_regime_samples_A": 245,
+          "common_regime_samples_B": 245,
+          "common_date_membership_changes": 0,
+          "F1_input_only_samples_A": 245,
+          "F1_input_only_samples_B": 245,
+          "F1_date_membership_changes": 0
+        },
+        {
+          "origin": "O4",
+          "partition": "train",
+          "common_regime_samples_A": 3129,
+          "common_regime_samples_B": 3129,
+          "common_date_membership_changes": 0,
+          "F1_input_only_samples_A": 3150,
+          "F1_input_only_samples_B": 3150,
+          "F1_date_membership_changes": 0
+        },
+        {
+          "origin": "O4",
+          "partition": "validation",
+          "common_regime_samples_A": 225,
+          "common_regime_samples_B": 225,
+          "common_date_membership_changes": 0,
+          "F1_input_only_samples_A": 225,
+          "F1_input_only_samples_B": 225,
+          "F1_date_membership_changes": 0
+        },
+        {
+          "origin": "O4",
+          "partition": "test",
+          "common_regime_samples_A": 244,
+          "common_regime_samples_B": 244,
+          "common_date_membership_changes": 0,
+          "F1_input_only_samples_A": 244,
+          "F1_input_only_samples_B": 244,
+          "F1_date_membership_changes": 0
+        },
+        {
+          "origin": "O5",
+          "partition": "train",
+          "common_regime_samples_A": 3374,
+          "common_regime_samples_B": 3374,
+          "common_date_membership_changes": 0,
+          "F1_input_only_samples_A": 3395,
+          "F1_input_only_samples_B": 3395,
+          "F1_date_membership_changes": 0
+        },
+        {
+          "origin": "O5",
+          "partition": "validation",
+          "common_regime_samples_A": 224,
+          "common_regime_samples_B": 224,
+          "common_date_membership_changes": 0,
+          "F1_input_only_samples_A": 224,
+          "F1_input_only_samples_B": 224,
+          "F1_date_membership_changes": 0
+        },
+        {
+          "origin": "O5",
+          "partition": "test",
+          "common_regime_samples_A": 222,
+          "common_regime_samples_B": 222,
+          "common_date_membership_changes": 0,
+          "F1_input_only_samples_A": 222,
+          "F1_input_only_samples_B": 222,
+          "F1_date_membership_changes": 0
+        }
+      ],
+      "manual_thresholds": [
+        {
+          "origin": "O1",
+          "reference": "STEP27 retained Train base dates; common local feature-window mask",
+          "train_rows_A": 2387,
+          "train_rows_B": 2387,
+          "low_A": 0.007395781194783369,
+          "low_B": 0.007395781194783369,
+          "high_A": 0.009469417424932673,
+          "high_B": 0.009469417424932673,
+          "low_delta": 0.0,
+          "high_delta": 0.0,
+          "validation_test_refit": false,
+          "train_manual_membership_changes": 0,
+          "validation_manual_membership_changes": 0,
+          "test_manual_membership_changes": 4
+        },
+        {
+          "origin": "O2",
+          "reference": "STEP27 retained Train base dates; common local feature-window mask",
+          "train_rows_A": 2635,
+          "train_rows_B": 2635,
+          "low_A": 0.007589725396008875,
+          "low_B": 0.007589725396008875,
+          "high_A": 0.010163297194739948,
+          "high_B": 0.010163297194739948,
+          "low_delta": 0.0,
+          "high_delta": 0.0,
+          "validation_test_refit": false,
+          "train_manual_membership_changes": 0,
+          "validation_manual_membership_changes": 1,
+          "test_manual_membership_changes": 0
+        },
+        {
+          "origin": "O3",
+          "reference": "STEP27 retained Train base dates; common local feature-window mask",
+          "train_rows_A": 2883,
+          "train_rows_B": 2883,
+          "low_A": 0.007659558104293528,
+          "low_B": 0.0076559774718276625,
+          "high_A": 0.01029771489571626,
+          "high_B": 0.01029771489571626,
+          "low_delta": -3.5806324658656935e-06,
+          "high_delta": 0.0,
+          "validation_test_refit": false,
+          "train_manual_membership_changes": 2,
+          "validation_manual_membership_changes": 0,
+          "test_manual_membership_changes": 0
+        },
+        {
+          "origin": "O4",
+          "reference": "STEP27 retained Train base dates; common local feature-window mask",
+          "train_rows_A": 3129,
+          "train_rows_B": 3129,
+          "low_A": 0.007767799132471026,
+          "low_B": 0.007764875185610797,
+          "high_A": 0.01079350992826308,
+          "high_B": 0.01079350992826308,
+          "low_delta": -2.9239468602292734e-06,
+          "high_delta": 0.0,
+          "validation_test_refit": false,
+          "train_manual_membership_changes": 8,
+          "validation_manual_membership_changes": 0,
+          "test_manual_membership_changes": 0
+        },
+        {
+          "origin": "O5",
+          "reference": "STEP27 retained Train base dates; common local feature-window mask",
+          "train_rows_A": 3374,
+          "train_rows_B": 3374,
+          "low_A": 0.007805093289630756,
+          "low_B": 0.007802810786207757,
+          "high_A": 0.010865960473885111,
+          "high_B": 0.010865960473885111,
+          "low_delta": -2.2825034229987523e-06,
+          "high_delta": 0.0,
+          "validation_test_refit": false,
+          "train_manual_membership_changes": 4,
+          "validation_manual_membership_changes": 0,
+          "test_manual_membership_changes": 0
+        }
+      ],
+      "Train_only_scaler_diagnostics": [
+        {
+          "origin": "O1",
+          "fit_start": "2010-03-03",
+          "fit_end": "2019-11-29",
+          "fit_rows": 2406,
+          "feature_order": [
+            "Log_Ret",
+            "Disparity"
+          ],
+          "source_partition": "train",
+          "fit_policy": "union of retained Train input-window dates; no validation/test",
+          "fit_max_before_validation": true
+        },
+        {
+          "origin": "O2",
+          "fit_start": "2010-03-03",
+          "fit_end": "2020-12-01",
+          "fit_rows": 2654,
+          "feature_order": [
+            "Log_Ret",
+            "Disparity"
+          ],
+          "source_partition": "train",
+          "fit_policy": "union of retained Train input-window dates; no validation/test",
+          "fit_max_before_validation": true
+        },
+        {
+          "origin": "O3",
+          "fit_start": "2010-03-03",
+          "fit_end": "2021-12-02",
+          "fit_rows": 2902,
+          "feature_order": [
+            "Log_Ret",
+            "Disparity"
+          ],
+          "source_partition": "train",
+          "fit_policy": "union of retained Train input-window dates; no validation/test",
+          "fit_max_before_validation": true
+        },
+        {
+          "origin": "O4",
+          "fit_start": "2010-03-03",
+          "fit_end": "2022-12-01",
+          "fit_rows": 3148,
+          "feature_order": [
+            "Log_Ret",
+            "Disparity"
+          ],
+          "source_partition": "train",
+          "fit_policy": "union of retained Train input-window dates; no validation/test",
+          "fit_max_before_validation": true
+        },
+        {
+          "origin": "O5",
+          "fit_start": "2010-03-03",
+          "fit_end": "2023-11-29",
+          "fit_rows": 3393,
+          "feature_order": [
+            "Log_Ret",
+            "Disparity"
+          ],
+          "source_partition": "train",
+          "fit_policy": "union of retained Train input-window dates; no validation/test",
+          "fit_max_before_validation": true
+        }
+      ],
+      "final_source_selected": null,
+      "model_performance_estimated": false,
+      "2026_prices_used": 0
+    },
+    "other_dates_precision_only": {
+      "sessions": 3939,
+      "known_labels_A": 3919,
+      "known_labels_B": 3919,
+      "unknown_labels_A": 20,
+      "unknown_labels_B": 20,
+      "known_label_differences": 0,
+      "down_to_up": 0,
+      "up_to_down": 0,
+      "label_end_differences": 0,
+      "features": {
+        "Log_Ret": {
+          "finite_pairs": 3938,
+          "missing_mask_differences": 0,
+          "exact_differences": 3916,
+          "over_1e_minus12": 3916,
+          "over_1e_minus6": 0,
+          "over_1e_minus3": 0,
+          "max_absolute_difference": 1.1405121649009364e-07,
+          "mean_absolute_difference": 2.9527315297318767e-08
+        },
+        "Disparity": {
+          "finite_pairs": 3920,
+          "missing_mask_differences": 0,
+          "exact_differences": 3919,
+          "over_1e_minus12": 3919,
+          "over_1e_minus6": 0,
+          "over_1e_minus3": 0,
+          "max_absolute_difference": 6.436217825367407e-08,
+          "mean_absolute_difference": 2.1263544378715966e-08
+        },
+        "Vol_Regime": {
+          "finite_pairs": 3899,
+          "missing_mask_differences": 0,
+          "exact_differences": 3899,
+          "over_1e_minus12": 3899,
+          "over_1e_minus6": 0,
+          "over_1e_minus3": 0,
+          "max_absolute_difference": 2.4211279260957785e-08,
+          "mean_absolute_difference": 4.84119467690885e-09
+        }
+      },
+      "origins": [
+        {
+          "origin": "O1",
+          "partition": "train",
+          "common_regime_samples_A": 2387,
+          "common_regime_samples_B": 2387,
+          "common_date_membership_changes": 0,
+          "F1_input_only_samples_A": 2408,
+          "F1_input_only_samples_B": 2408,
+          "F1_date_membership_changes": 0
+        },
+        {
+          "origin": "O1",
+          "partition": "validation",
+          "common_regime_samples_A": 228,
+          "common_regime_samples_B": 228,
+          "common_date_membership_changes": 0,
+          "F1_input_only_samples_A": 228,
+          "F1_input_only_samples_B": 228,
+          "F1_date_membership_changes": 0
+        },
+        {
+          "origin": "O1",
+          "partition": "test",
+          "common_regime_samples_A": 248,
+          "common_regime_samples_B": 248,
+          "common_date_membership_changes": 0,
+          "F1_input_only_samples_A": 248,
+          "F1_input_only_samples_B": 248,
+          "F1_date_membership_changes": 0
+        },
+        {
+          "origin": "O2",
+          "partition": "train",
+          "common_regime_samples_A": 2635,
+          "common_regime_samples_B": 2635,
+          "common_date_membership_changes": 0,
+          "F1_input_only_samples_A": 2656,
+          "F1_input_only_samples_B": 2656,
+          "F1_date_membership_changes": 0
+        },
+        {
+          "origin": "O2",
+          "partition": "validation",
+          "common_regime_samples_A": 228,
+          "common_regime_samples_B": 228,
+          "common_date_membership_changes": 0,
+          "F1_input_only_samples_A": 228,
+          "F1_input_only_samples_B": 228,
+          "F1_date_membership_changes": 0
+        },
+        {
+          "origin": "O2",
+          "partition": "test",
+          "common_regime_samples_A": 246,
+          "common_regime_samples_B": 246,
+          "common_date_membership_changes": 0,
+          "F1_input_only_samples_A": 246,
+          "F1_input_only_samples_B": 246,
+          "F1_date_membership_changes": 0
+        },
+        {
+          "origin": "O3",
+          "partition": "train",
+          "common_regime_samples_A": 2883,
+          "common_regime_samples_B": 2883,
+          "common_date_membership_changes": 0,
+          "F1_input_only_samples_A": 2904,
+          "F1_input_only_samples_B": 2904,
+          "F1_date_membership_changes": 0
+        },
+        {
+          "origin": "O3",
+          "partition": "validation",
+          "common_regime_samples_A": 226,
+          "common_regime_samples_B": 226,
+          "common_date_membership_changes": 0,
+          "F1_input_only_samples_A": 226,
+          "F1_input_only_samples_B": 226,
+          "F1_date_membership_changes": 0
+        },
+        {
+          "origin": "O3",
+          "partition": "test",
+          "common_regime_samples_A": 245,
+          "common_regime_samples_B": 245,
+          "common_date_membership_changes": 0,
+          "F1_input_only_samples_A": 245,
+          "F1_input_only_samples_B": 245,
+          "F1_date_membership_changes": 0
+        },
+        {
+          "origin": "O4",
+          "partition": "train",
+          "common_regime_samples_A": 3129,
+          "common_regime_samples_B": 3129,
+          "common_date_membership_changes": 0,
+          "F1_input_only_samples_A": 3150,
+          "F1_input_only_samples_B": 3150,
+          "F1_date_membership_changes": 0
+        },
+        {
+          "origin": "O4",
+          "partition": "validation",
+          "common_regime_samples_A": 225,
+          "common_regime_samples_B": 225,
+          "common_date_membership_changes": 0,
+          "F1_input_only_samples_A": 225,
+          "F1_input_only_samples_B": 225,
+          "F1_date_membership_changes": 0
+        },
+        {
+          "origin": "O4",
+          "partition": "test",
+          "common_regime_samples_A": 244,
+          "common_regime_samples_B": 244,
+          "common_date_membership_changes": 0,
+          "F1_input_only_samples_A": 244,
+          "F1_input_only_samples_B": 244,
+          "F1_date_membership_changes": 0
+        },
+        {
+          "origin": "O5",
+          "partition": "train",
+          "common_regime_samples_A": 3374,
+          "common_regime_samples_B": 3374,
+          "common_date_membership_changes": 0,
+          "F1_input_only_samples_A": 3395,
+          "F1_input_only_samples_B": 3395,
+          "F1_date_membership_changes": 0
+        },
+        {
+          "origin": "O5",
+          "partition": "validation",
+          "common_regime_samples_A": 224,
+          "common_regime_samples_B": 224,
+          "common_date_membership_changes": 0,
+          "F1_input_only_samples_A": 224,
+          "F1_input_only_samples_B": 224,
+          "F1_date_membership_changes": 0
+        },
+        {
+          "origin": "O5",
+          "partition": "test",
+          "common_regime_samples_A": 222,
+          "common_regime_samples_B": 222,
+          "common_date_membership_changes": 0,
+          "F1_input_only_samples_A": 222,
+          "F1_input_only_samples_B": 222,
+          "F1_date_membership_changes": 0
+        }
+      ],
+      "manual_thresholds": [
+        {
+          "origin": "O1",
+          "reference": "STEP27 retained Train base dates; common local feature-window mask",
+          "train_rows_A": 2387,
+          "train_rows_B": 2387,
+          "low_A": 0.007395781194783369,
+          "low_B": 0.007395778369943021,
+          "high_A": 0.009469417424932673,
+          "high_B": 0.009469417559428008,
+          "low_delta": -2.8248403477482142e-09,
+          "high_delta": 1.3449533500797806e-10,
+          "validation_test_refit": false,
+          "train_manual_membership_changes": 0,
+          "validation_manual_membership_changes": 0,
+          "test_manual_membership_changes": 0
+        },
+        {
+          "origin": "O2",
+          "reference": "STEP27 retained Train base dates; common local feature-window mask",
+          "train_rows_A": 2635,
+          "train_rows_B": 2635,
+          "low_A": 0.007589725396008875,
+          "low_B": 0.007589727638523563,
+          "high_A": 0.010163297194739948,
+          "high_B": 0.010163301928026907,
+          "low_delta": 2.242514687833541e-09,
+          "high_delta": 4.7332869585609005e-09,
+          "validation_test_refit": false,
+          "train_manual_membership_changes": 0,
+          "validation_manual_membership_changes": 0,
+          "test_manual_membership_changes": 0
+        },
+        {
+          "origin": "O3",
+          "reference": "STEP27 retained Train base dates; common local feature-window mask",
+          "train_rows_A": 2883,
+          "train_rows_B": 2883,
+          "low_A": 0.007659558104293528,
+          "low_B": 0.007659563342190295,
+          "high_A": 0.01029771489571626,
+          "high_B": 0.010297709869497941,
+          "low_delta": 5.237896766492611e-09,
+          "high_delta": -5.026218318285314e-09,
+          "validation_test_refit": false,
+          "train_manual_membership_changes": 0,
+          "validation_manual_membership_changes": 0,
+          "test_manual_membership_changes": 0
+        },
+        {
+          "origin": "O4",
+          "reference": "STEP27 retained Train base dates; common local feature-window mask",
+          "train_rows_A": 3129,
+          "train_rows_B": 3129,
+          "low_A": 0.007767799132471026,
+          "low_B": 0.007767801034712801,
+          "high_A": 0.01079350992826308,
+          "high_B": 0.010793518284472912,
+          "low_delta": 1.9022417746886178e-09,
+          "high_delta": 8.356209831722472e-09,
+          "validation_test_refit": false,
+          "train_manual_membership_changes": 0,
+          "validation_manual_membership_changes": 0,
+          "test_manual_membership_changes": 0
+        },
+        {
+          "origin": "O5",
+          "reference": "STEP27 retained Train base dates; common local feature-window mask",
+          "train_rows_A": 3374,
+          "train_rows_B": 3374,
+          "low_A": 0.007805093289630756,
+          "low_B": 0.007805089489189532,
+          "high_A": 0.010865960473885111,
+          "high_B": 0.010865960332869564,
+          "low_delta": -3.800441223875128e-09,
+          "high_delta": -1.4101554646206438e-10,
+          "validation_test_refit": false,
+          "train_manual_membership_changes": 0,
+          "validation_manual_membership_changes": 0,
+          "test_manual_membership_changes": 0
+        }
+      ],
+      "Train_only_scaler_diagnostics": [
+        {
+          "origin": "O1",
+          "fit_start": "2010-03-03",
+          "fit_end": "2019-11-29",
+          "fit_rows": 2406,
+          "feature_order": [
+            "Log_Ret",
+            "Disparity"
+          ],
+          "source_partition": "train",
+          "fit_policy": "union of retained Train input-window dates; no validation/test",
+          "fit_max_before_validation": true
+        },
+        {
+          "origin": "O2",
+          "fit_start": "2010-03-03",
+          "fit_end": "2020-12-01",
+          "fit_rows": 2654,
+          "feature_order": [
+            "Log_Ret",
+            "Disparity"
+          ],
+          "source_partition": "train",
+          "fit_policy": "union of retained Train input-window dates; no validation/test",
+          "fit_max_before_validation": true
+        },
+        {
+          "origin": "O3",
+          "fit_start": "2010-03-03",
+          "fit_end": "2021-12-02",
+          "fit_rows": 2902,
+          "feature_order": [
+            "Log_Ret",
+            "Disparity"
+          ],
+          "source_partition": "train",
+          "fit_policy": "union of retained Train input-window dates; no validation/test",
+          "fit_max_before_validation": true
+        },
+        {
+          "origin": "O4",
+          "fit_start": "2010-03-03",
+          "fit_end": "2022-12-01",
+          "fit_rows": 3148,
+          "feature_order": [
+            "Log_Ret",
+            "Disparity"
+          ],
+          "source_partition": "train",
+          "fit_policy": "union of retained Train input-window dates; no validation/test",
+          "fit_max_before_validation": true
+        },
+        {
+          "origin": "O5",
+          "fit_start": "2010-03-03",
+          "fit_end": "2023-11-29",
+          "fit_rows": 3393,
+          "feature_order": [
+            "Log_Ret",
+            "Disparity"
+          ],
+          "source_partition": "train",
+          "fit_policy": "union of retained Train input-window dates; no validation/test",
+          "fit_max_before_validation": true
+        }
+      ],
+      "final_source_selected": null,
+      "model_performance_estimated": false,
+      "2026_prices_used": 0
+    },
+    "warning": "Effects may interact; do not assume arithmetic additivity of thresholds/labels. No source choice from model performance."
+  },
+  "price_comparison": {
+    "common_dates": 3894,
+    "exact_matches": 144,
+    "within_1e_minus9_matches": 144,
+    "rounded_2dp_matches": 3892,
+    "remaining_dates_float32_roundtrip_matches": 3892,
+    "remaining_exact_matches": 144,
+    "remaining_precision_only_differences": 3748,
+    "material_conflict_dates": [
+      "2021-04-23",
+      "2021-05-06"
+    ],
+    "precision_interpretation": "All other common values equal float64(float32(Excel)); compatible with float32 representation, not proof of original processing history",
+    "material_cause": "UNKNOWN; not explained by float32 roundtrip; source/revision/misrecording not distinguished"
+  },
+  "checked_date": "2026-11-16",
+  "period": [
+    "2010-01-01",
+    "2025-12-31"
+  ],
+  "candidate_definitions": {
+    "A": "Preserved original 3894 closes + supplied missing 45 once",
+    "B": "Full Excel 3939 closes"
+  },
+  "source_hashes": {
+    "KOSPI_200.csv": "7612a3ea53427dcf0148ab6b1e22f34500e6bff6fe1f23e2da793e40b0b82c50",
+    "KOSPI 200 종가.xlsx": "13e34b707d64585fb2f94a828cd387fb89956ae935e27b4ccc9c02e2a2fbdd21",
+    "KOSPI200_누락45일_종가_보완.csv": "86ec5203ab99d931688627c380bce5b81bf416ff204e518772aa54a9ed71d513",
+    "KOSPI200_누락45일_종가_보완.xlsx": "db2e6e049e89ef2563a0ada75f043bc65d3fa576e66ac5d5ba00229111af25ef"
+  },
+  "candidate_artifacts": [
+    {
+      "candidate": "A",
+      "kind": "close",
+      "file": "data/derived/step28_candidate_A_close_private.csv",
+      "sha256": "187c988b63f8e555d2e3da5c779a3e409eb6df62386d3625fd7c2f9f72d59551",
+      "publication": "LOCAL_ONLY"
+    },
+    {
+      "candidate": "A",
+      "kind": "targets",
+      "file": "data/derived/step28_candidate_A_targets_private.csv",
+      "sha256": "03db5f140485d6fd7098825a3a2553fcd9813322800c9b59df8cad74249b0f9d",
+      "publication": "LOCAL_ONLY"
+    },
+    {
+      "candidate": "A",
+      "kind": "features",
+      "file": "data/derived/step28_candidate_A_features_private.csv",
+      "sha256": "43f43c9d4b908b49d97022595708a1fb4fa4c8af36472b09b61ac263707dc437",
+      "publication": "LOCAL_ONLY"
+    },
+    {
+      "candidate": "B",
+      "kind": "close",
+      "file": "data/derived/step28_candidate_B_close_private.csv",
+      "sha256": "c7c9bb434605d240e1791c76fb2a270479d649444cf874c68aa097e2c0a337ef",
+      "publication": "LOCAL_ONLY"
+    },
+    {
+      "candidate": "B",
+      "kind": "targets",
+      "file": "data/derived/step28_candidate_B_targets_private.csv",
+      "sha256": "03db5f140485d6fd7098825a3a2553fcd9813322800c9b59df8cad74249b0f9d",
+      "publication": "LOCAL_ONLY"
+    },
+    {
+      "candidate": "B",
+      "kind": "features",
+      "file": "data/derived/step28_candidate_B_features_private.csv",
+      "sha256": "06c02f404cb3ddc2b2547de0be789261e040a4c070f6a80a295f33028fdc4326",
+      "publication": "LOCAL_ONLY"
+    }
+  ],
+  "private_detail_file": "data/derived/step28_two_price_conflicts_private.csv",
+  "private_report_file": "data/derived/STEP28_PRICE_CONFLICT_PRIVATE_KO.md",
+  "raw_prices_published": false,
+  "final_data_status": "BLOCKED_PRICE_SOURCE_NOT_SELECTED",
+  "cause_of_label_differences_step26_vs_original": "47 horizon-correction changes, distinct from current A-vs-B comparison",
+  "last_valid_base": "2025-12-01",
+  "last_label_end": "2025-12-30",
+  "training_enabled": false,
+  "hmm_fit_enabled": false
+}

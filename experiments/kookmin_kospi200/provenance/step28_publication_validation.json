@@ -1,0 +1,105 @@
+{
+  "checked_date": "2026-11-16",
+  "publication_policy": "Code, source/failure provenance, aggregated sensitivity and validation only; no raw prices, price rows, daily labels/features, private report or checkpoints",
+  "public_files": [
+    {
+      "file": "CHANGELOG.md",
+      "sha256": "6dd6182eb9d1247efded54c413e0d4aff63835f9d5bb530673b882d8e0a29bc9"
+    },
+    {
+      "file": "README.md",
+      "sha256": "b784fd54358118dcc56bc9357ad8588479d511d75832154968b21b2d8cb52fd2"
+    },
+    {
+      "file": "configs/step28_smoke_config.json",
+      "sha256": "67b08fcfa1e9908d71c20afef52b686dd68648822bbb31bf15dc3416712ac2ca"
+    },
+    {
+      "file": "manifests/step28_gate_results.json",
+      "sha256": "123a677c7e5f510f0eabdef42f41b8a893a88fead72fe17929b339d22b311632"
+    },
+    {
+      "file": "manifests/step28_price_sensitivity.json",
+      "sha256": "a1d1ccb6975412d9695d1d352f461518667a080d415cf2bc86b12aabe711e645"
+    },
+    {
+      "file": "manifests/step28_protocol_freeze.json",
+      "sha256": "186e8e64b933bab94d8915d96d95789ae7535eeea2daeb12ae3e8d5b33a4b737"
+    },
+    {
+      "file": "manifests/step28_test_results.json",
+      "sha256": "d4c7c3f5f1e00ab3de881c9c5e07768671fc23513efad63f1a7a9c8a36693793"
+    },
+    {
+      "file": "provenance/step28_preservation.json",
+      "sha256": "7db9e74d87a2bac4c02436a33637bb5dac400b458eda3acdfc88aabfad976a28"
+    },
+    {
+      "file": "provenance/step28_source_checks.json",
+      "sha256": "e357be654e87043ea8a79911bba13d969cd395c69713a4a74b344a0baf02aea8"
+    },
+    {
+      "file": "reports/STEP28_BLOCKERS_KO.md",
+      "sha256": "0126709845d5f7760d34b2e2481da82e1c1f32420956113077619f7167eb9af1"
+    },
+    {
+      "file": "reports/STEP28_DATA_DECISION_KO.md",
+      "sha256": "b37b54a9fb06f489b5ec1f1922fa1c86935ebc6e5617a4b26bdf835c63abdfe5"
+    },
+    {
+      "file": "reports/STEP28_F1_READINESS_KO.md",
+      "sha256": "074fa4edb9940d993ec61f80e8c2e63a0411877e9b416c018227705f637a3734"
+    },
+    {
+      "file": "reports/STEP28_MANUAL_HMM_PLAN_KO.md",
+      "sha256": "001e90b1f40807c99f9ea7868468a963e0948c9c1e1ea8d313be100241a3f0d3"
+    },
+    {
+      "file": "reports/STEP28_PRICE_CONFLICT_KO.md",
+      "sha256": "27915c72301c5a238ca55fa117b9cf808aeb0f3f972e65749e56740f557211f5"
+    },
+    {
+      "file": "runtime/__init__.py",
+      "sha256": "1dc4ed47383e1e48370f4b954ccd19330c8b6e0b6ebe6d0ae6047fbd1f03d5c3"
+    },
+    {
+      "file": "runtime/step28_smoke_runtime.py",
+      "sha256": "90ce86a1d28cbbfb569d972af8bd6bd06991f4975ec69ead8063ecb1510ea9b7"
+    },
+    {
+      "file": "src/kospi200/paired_regime_evaluation.py",
+      "sha256": "d8af6a80b73d7986df7f1169727c7cf6ba15a8b9ebfb8e874897ccc93f5e58e4"
+    },
+    {
+      "file": "src/kospi200/price_sensitivity.py",
+      "sha256": "0b0b9a1d452c9b4e18988a20e703dda5453af726c9f2e614b9d70e5c3643314c"
+    },
+    {
+      "file": "tests/test_step28.py",
+      "sha256": "80b6604c2729b033e4874f393e0622bf1e46bcc6159dab6ce0955c18ec17cbae"
+    },
+    {
+      "file": "tools/step28_audit.py",
+      "sha256": "1df87770634b686f3472f8c49f688d8b02d770ce7230c79ea2b11f49e389bbc9"
+    },
+    {
+      "file": "tools/step28_smoke.py",
+      "sha256": "835e263c722839a37516445c0c9bdaceee9b2b53e9e62b71ef6288c37346ad90"
+    },
+    {
+      "file": "tools/step28_tests.py",
+      "sha256": "517372f6b31940a3dade320e2e9a075fd850c593d466b47d42c3fb481e0beb3c"
+    }
+  ],
+  "raw_prices_in_public_files": false,
+  "ignored_private_files": [
+    "data/derived/STEP28_PRICE_CONFLICT_PRIVATE_KO.md",
+    "data/derived/step28_two_price_conflicts_private.csv",
+    "data/derived/step28_candidate_A_*_private.csv",
+    "data/derived/step28_candidate_B_*_private.csv"
+  ],
+  "training_enabled": false,
+  "hmm_fit_enabled": false,
+  "smoke_executor_called": false,
+  "protected_previous_artifacts_unchanged": 129
+}

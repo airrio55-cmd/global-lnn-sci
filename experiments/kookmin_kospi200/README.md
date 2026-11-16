@@ -49,3 +49,9 @@
 ## STEP2.7 / 2026-11-16
 
 전체 Excel3939세션·공통3894일·누락45일을 다시 검증했다. exact 차이3750건, 소수2자리 차이2건은 미해결로 최종 데이터 확정 BLOCKED다. 기존 후보 가격·레이블·결과는 보존했다.5Origin 구조 진단과 F1 입력전용/변동성레짐 적격을 구분했다. 원본 수동레짐99행·HMM66행 저장출력을 별도 보존하고 다중시드 개별수동495행은 null/BLOCKED로 표시했다. Train-only 레짐/단일클래스 정책·비실행 Smoke config·사양해시를 추가했다. 사용자 요청으로 별도CPU venv에 torch2.10.0+cpu/ncps1.0.1/hmmlearn0.3.3 설치/import만 확인했다. 원본환경 동등성은 미인증.72 PASS/0 FAIL, 실행gate4 BLOCKED. 학습/HMM fit/모델생성·forward/GPU0, 원자료·가격상세 비공개, main/JOF V14/V15 불변. 최신 보고는 reports/STEP27_*.md5개, 검사는 tools/step27_tests.py다.
+
+## STEP2.8 / 2026-11-16
+
+A(원본+45일)·B(전체Excel)를로컬분리하고3919개known label·label_end 차이0을확인했다. 두실질적가격충돌은미해결이다. 나머지3892일은float32 roundtrip과일치하며3748일수치표현차이를구분했다. 피처·Train-only레짐임계값·5Origin·Scaler민감도를학습없이감사했다. 공식가격조회는두날짜모두403으로실패했고소스/PIT를인증하지않았다. 실제두날짜수치와전체후보시계열은공개하지않는다.
+
+F1필수A와확장B gate를분리했다. 실제Smoke 실행코드를runtime/step28_smoke_runtime.py와tools/step28_smoke.py에작성했으나호출하지않았다. 원본정의/고정hyperparameter·CPU/시드·checkpoint·재현성·Test접근금지를포함하며현재flags=false와별도승인부재로차단된다. 순수감사src의기존비학습검사도그대로유지했다.90 PASS/0 FAIL, 필수A 2PASS·1PARTIAL·2BLOCKED,별도실행승인BLOCKED.외부B는F1 gate가아니지만F1자체가격/PIT/호환성은필수다. reports/STEP28_*.md5개와요청manifest/config를추가했고기존결과·main/JOF는보존했다.

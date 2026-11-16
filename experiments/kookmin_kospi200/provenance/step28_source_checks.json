@@ -1,0 +1,63 @@
+{
+  "checked_date": "2026-11-16",
+  "official_price_attempts": [
+    {
+      "date": "20210423",
+      "url": "https://data.krx.co.kr/comm/bldAttendant/getJsonData.cmd",
+      "method": "POST",
+      "params": {
+        "bld": "dbms/MDC/STAT/standard/MDCSTAT00301",
+        "locale": "ko_KR",
+        "indIdx": "1",
+        "indIdx2": "028",
+        "strtDd": "20210423",
+        "endDd": "20210423",
+        "csvxls_isNo": "false"
+      },
+      "http_status": 403,
+      "bytes": 2421,
+      "sha256": "f6c70a41288693f9ab44ca945865bcf46578214b05d43b3aabf1e03ff040279b",
+      "checked_at": "2026-11-16T03:50:46.564123+00:00",
+      "status": "BLOCKED_UNVERIFIED_RESPONSE"
+    },
+    {
+      "date": "20210506",
+      "url": "https://data.krx.co.kr/comm/bldAttendant/getJsonData.cmd",
+      "method": "POST",
+      "params": {
+        "bld": "dbms/MDC/STAT/standard/MDCSTAT00301",
+        "locale": "ko_KR",
+        "indIdx": "1",
+        "indIdx2": "028",
+        "strtDd": "20210506",
+        "endDd": "20210506",
+        "csvxls_isNo": "false"
+      },
+      "http_status": 403,
+      "bytes": 2421,
+      "sha256": "f6c70a41288693f9ab44ca945865bcf46578214b05d43b3aabf1e03ff040279b",
+      "checked_at": "2026-11-16T03:50:47.318795+00:00",
+      "status": "BLOCKED_UNVERIFIED_RESPONSE"
+    }
+  ],
+  "official_prices_retrieved": 0,
+  "verified_supplier_for_A": null,
+  "verified_supplier_for_B": null,
+  "timing_evidence": {
+    "url": "https://openapi.krx.co.kr/contents/OPP/DATA/OPPDATA002.jsp",
+    "checked_date": "2026-11-16",
+    "access_method": "web tool page open",
+    "web_snapshot_sha256": "934abfbf3076e4a4d9a19c4b7d201222b0f52b6c89c0c8abca9c3f851ab6e71c",
+    "snapshot_hash_scope": "Local saved web tool result bundle, NOT origin HTML bytes",
+    "current_page_summary": "KRX EOD first distribution 16:00, second 18:10",
+    "limitation": "Current product-level schedule cannot certify either unidentified supplier historical availability at 18:00. No zero provider delay assumed.",
+    "direct_http_snapshot_attempt": {
+      "url": "https://openapi.krx.co.kr/contents/OPP/DATA/OPPDATA002.jsp",
+      "status": "BLOCKED",
+      "error": "HTTP Error 403: Forbidden"
+    }
+  },
+  "official_crosscheck_status": "BLOCKED",
+  "alternative_access": "Authorized KRX price export / approved KRX OpenAPI access; authenticated supplier vintage/revision documentation",
+  "search_check": "Public searches of both exact dates and values found no usable authenticated closing-price evidence; search snippets were not accepted as price verification"
+}
