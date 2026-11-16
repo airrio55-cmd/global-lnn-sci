@@ -1,0 +1,20 @@
+{
+  "all_combinations": 40,
+  "reused_STEP3A": 10,
+  "new_planned_STEP3B": 30,
+  "completed_total": 40,
+  "failed_total": 0,
+  "blocked_total": 0,
+  "source_stage_counts": {
+    "STEP3B_NEW": 30,
+    "STEP3A_REUSED": 10
+  },
+  "manual_metric_rows": 120,
+  "manual_single_class_or_empty_rows": 20,
+  "sample_std_ddof": 1,
+  "two_seed_std_is_exploratory_only": true,
+  "source_model_seed_selected": false,
+  "HMM_fit": false,
+  "independent_Test_evaluation": false,
+  "original_and_new_results_separated": true
+}

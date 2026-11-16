@@ -65,3 +65,7 @@ F1필수A와확장B gate를분리했다. 실제Smoke 실행코드를runtime/step
 ## STEP3A / 2026-11-16
 
 사용자가 별도로 승인한 회고적 CPU Pilot으로 O1/A-B/F1/Seed2의10 fit을 시작했고 10개 완료, 0개 실패했다. Train2387/Validation228, Train20purge·Validation20UNKNOWN 제외, Test/GPU/HMM/전체RO/Ablation0. 모든 설정과A/B source 미확정·production false gate를 유지했다. loss/Validation 진단·EarlyStopping·checkpoint/RNG 복원 기록을 새 로컬 경로에 보존했다. 원자료·일별Target·확률·모델 가중치는 공개하지 않는다. 집계CSV/곡선·STEP3A 보고서4개와 독립승인·코드/해시만 감사 브랜치에 게시한다.
+
+## STEP3B / 2026-11-16
+
+사용자가 승인한 O1/O2·Seed2/12·A/B·F1 CPU Train/Validation Pilot으로 기존 STEP3A10개는 재학습하지 않고 신규30개 중 30개 완료, 0개 실패, 0개 BLOCKED로 기록했다. Train2387(O1)/2635(O2), Validation각228, Train20purge·Validation20UNKNOWN 제외, 독립 Test/HMM/GPU/2026사용0이다. 두 Seed의 표준편차는 탐색적 진단이며 주 분석 가격·모델·Seed를 선택하지 않았다. A/B BOTH_UNVERIFIED·production-PIT BLOCKED·production flags=false 유지. 수동 레짐 Train-only30/70 및 한 클래스/빈 레짐 null 정책을 적용했다. 새 실행 코드·검증·집계·보고서만 게시하고 원자료·일별Target·확률·checkpoint는 로컬 ignored 경로에 보존한다. 최신 보고서는 reports/STEP3B_*.md 6개다.

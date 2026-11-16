@@ -1,0 +1,66 @@
+{
+  "scope": "Origin-specific staged prefix arrays only; no model fitting/Test data",
+  "source_status": "BOTH_UNVERIFIED",
+  "rows": [
+    {
+      "origin": "O1",
+      "partition": "train",
+      "shape": [
+        2387,
+        20,
+        2
+      ],
+      "float32_elements_different": 92880,
+      "windows_with_any_difference": 2387,
+      "maximum_absolute_scaled_feature_difference": 1.1593103408813477e-05,
+      "labels_different": 0,
+      "dates_identical": true,
+      "price_source_selected": false
+    },
+    {
+      "origin": "O1",
+      "partition": "validation",
+      "shape": [
+        228,
+        20,
+        2
+      ],
+      "float32_elements_different": 8802,
+      "windows_with_any_difference": 228,
+      "maximum_absolute_scaled_feature_difference": 1.0848045349121094e-05,
+      "labels_different": 0,
+      "dates_identical": true,
+      "price_source_selected": false
+    },
+    {
+      "origin": "O2",
+      "partition": "train",
+      "shape": [
+        2635,
+        20,
+        2
+      ],
+      "float32_elements_different": 102700,
+      "windows_with_any_difference": 2635,
+      "maximum_absolute_scaled_feature_difference": 1.049041748046875e-05,
+      "labels_different": 0,
+      "dates_identical": true,
+      "price_source_selected": false
+    },
+    {
+      "origin": "O2",
+      "partition": "validation",
+      "shape": [
+        228,
+        20,
+        2
+      ],
+      "float32_elements_different": 8861,
+      "windows_with_any_difference": 228,
+      "maximum_absolute_scaled_feature_difference": 0.5587161332368851,
+      "labels_different": 0,
+      "dates_identical": true,
+      "price_source_selected": false
+    }
+  ]
+}

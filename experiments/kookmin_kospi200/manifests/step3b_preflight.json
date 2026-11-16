@@ -1,0 +1,1581 @@
+{
+  "stage": "STEP3B",
+  "prepared_at_kst": "2026-11-16T16:57:42.246097+09:00",
+  "run_directory": "data/derived/step3b_pilot_20261116T165739_KST",
+  "reused_STEP3A": [
+    {
+      "run_id": "O1_seed2_A_RNN",
+      "origin": "O1",
+      "seed": 2,
+      "candidate": "A",
+      "model": "RNN",
+      "source_stage": "STEP3A_REUSED",
+      "source_run_id": "A_RNN",
+      "source_directory": "data/derived/step3a_pilot_20261116T153159_KST/A_RNN",
+      "record": {
+        "run_id": "A_RNN",
+        "candidate": "A",
+        "model": "RNN",
+        "base_seed": 2,
+        "effective_seed": 103,
+        "status": "COMPLETED",
+        "epochs_completed": 28,
+        "best_validation_epoch": 18,
+        "train_samples": 2387,
+        "validation_samples": 228,
+        "started_at_kst": "2026-11-16T15:38:42.108531+09:00",
+        "finished_at_kst": "2026-11-16T15:38:47.495603+09:00",
+        "error": null,
+        "input_data_sha256": "7075dcb22bfd9dbba0799d98c2a1acc701a9e6b74d75c20e9d6fa5fa1d3cfb14",
+        "code_sha256": "34281dfd1e80be36427f3cd1fe0f0a07c626d11363c54ed223512c21eeee6489",
+        "epoch1_resume_roundtrip": true,
+        "RNG_restore_exact": true,
+        "checkpoint_restore": true,
+        "last_validation_BA": 0.42197106690777575,
+        "elapsed_training_seconds": 5.221419537992915,
+        "metrics": {
+          "validation_BA": 0.49556962025316453,
+          "macro_f1": 0.48838968307994857,
+          "recall0": 0.2,
+          "recall1": 0.7911392405063291,
+          "accuracy": 0.6096491228070176,
+          "brier": 0.2448625451593325,
+          "prediction_positive_rate": 0.793859649122807,
+          "prediction_status": "TWO_CLASS_PREDICTION"
+        },
+        "prediction_status": "TWO_CLASS_PREDICTION",
+        "best_checkpoint_sha256": "2c6bfa7f98c9adf8a14d4216f883d7aa0643dbf8340a713bd50f737f010498e9",
+        "latest_checkpoint_sha256": "3028d8bf9312e9db9820071792c26e0c27f87d374b88dcfeedffc702fea946dc",
+        "history_sha256": "71f3ee175518a23f3300d6021f96c4460fca163eecb92d6b304d49bbf8eac1b0",
+        "validation_predictions_sha256": "bb1104e39b7b1ecf4c2465627482e6e69a74109e7933986c2b3fa13e6e3822f3",
+        "epochs_with_degenerate_prediction": 0,
+        "full_fresh_retrain_reproducibility_executed": false,
+        "early_stopping_selection_verified": true
+      }
+    },
+    {
+      "run_id": "O1_seed2_A_LSTM",
+      "origin": "O1",
+      "seed": 2,
+      "candidate": "A",
+      "model": "LSTM",
+      "source_stage": "STEP3A_REUSED",
+      "source_run_id": "A_LSTM",
+      "source_directory": "data/derived/step3a_pilot_20261116T153159_KST/A_LSTM",
+      "record": {
+        "run_id": "A_LSTM",
+        "candidate": "A",
+        "model": "LSTM",
+        "base_seed": 2,
+        "effective_seed": 203,
+        "status": "COMPLETED",
+        "epochs_completed": 32,
+        "best_validation_epoch": 22,
+        "train_samples": 2387,
+        "validation_samples": 228,
+        "started_at_kst": "2026-11-16T15:38:47.500730+09:00",
+        "finished_at_kst": "2026-11-16T15:39:00.065527+09:00",
+        "error": null,
+        "input_data_sha256": "7075dcb22bfd9dbba0799d98c2a1acc701a9e6b74d75c20e9d6fa5fa1d3cfb14",
+        "code_sha256": "34281dfd1e80be36427f3cd1fe0f0a07c626d11363c54ed223512c21eeee6489",
+        "epoch1_resume_roundtrip": true,
+        "RNG_restore_exact": true,
+        "checkpoint_restore": true,
+        "last_validation_BA": 0.45316455696202534,
+        "elapsed_training_seconds": 12.362206037014403,
+        "metrics": {
+          "validation_BA": 0.56500904159132,
+          "macro_f1": 0.5390620308653096,
+          "recall0": 0.5857142857142857,
+          "recall1": 0.5443037974683544,
+          "accuracy": 0.5570175438596491,
+          "brier": 0.26631786923946177,
+          "prediction_positive_rate": 0.5043859649122807,
+          "prediction_status": "TWO_CLASS_PREDICTION"
+        },
+        "prediction_status": "TWO_CLASS_PREDICTION",
+        "best_checkpoint_sha256": "8d1c68f460800c33ce6d0c1903d46120561e6461c40ced3d23e787624cd37fe5",
+        "latest_checkpoint_sha256": "8d7b1ec3df29c9fbbe6e7d55e317c3f24da44f321ccaab1996819cd7ec22e899",
+        "history_sha256": "5ef5133d8ba6c2e5e75465085347bf4e8c593ca96d86533dc3244ea9dbc9bc78",
+        "validation_predictions_sha256": "900eb0a003589ef1afc9da469f05e75d089a2da0475cc8e992e2ac0144172a3f",
+        "epochs_with_degenerate_prediction": 0,
+        "full_fresh_retrain_reproducibility_executed": false,
+        "early_stopping_selection_verified": true
+      }
+    },
+    {
+      "run_id": "O1_seed2_A_GRU",
+      "origin": "O1",
+      "seed": 2,
+      "candidate": "A",
+      "model": "GRU",
+      "source_stage": "STEP3A_REUSED",
+      "source_run_id": "A_GRU",
+      "source_directory": "data/derived/step3a_pilot_20261116T153159_KST/A_GRU",
+      "record": {
+        "run_id": "A_GRU",
+        "candidate": "A",
+        "model": "GRU",
+        "base_seed": 2,
+        "effective_seed": 303,
+        "status": "COMPLETED",
+        "epochs_completed": 24,
+        "best_validation_epoch": 14,
+        "train_samples": 2387,
+        "validation_samples": 228,
+        "started_at_kst": "2026-11-16T15:39:00.072844+09:00",
+        "finished_at_kst": "2026-11-16T15:39:10.568894+09:00",
+        "error": null,
+        "input_data_sha256": "7075dcb22bfd9dbba0799d98c2a1acc701a9e6b74d75c20e9d6fa5fa1d3cfb14",
+        "code_sha256": "34281dfd1e80be36427f3cd1fe0f0a07c626d11363c54ed223512c21eeee6489",
+        "epoch1_resume_roundtrip": true,
+        "RNG_restore_exact": true,
+        "checkpoint_restore": true,
+        "last_validation_BA": 0.5014466546112116,
+        "elapsed_training_seconds": 10.338523182002973,
+        "metrics": {
+          "validation_BA": 0.5479204339963833,
+          "macro_f1": 0.5476190476190476,
+          "recall0": 0.2857142857142857,
+          "recall1": 0.810126582278481,
+          "accuracy": 0.6491228070175439,
+          "brier": 0.23680715938764632,
+          "prediction_positive_rate": 0.7807017543859649,
+          "prediction_status": "TWO_CLASS_PREDICTION"
+        },
+        "prediction_status": "TWO_CLASS_PREDICTION",
+        "best_checkpoint_sha256": "f777de5e24abdd5b9a97fa121b1647ee4c0f8769b064007b28b21cb4188c02a7",
+        "latest_checkpoint_sha256": "350bafcd6ee5e1c02b87493d2ff6edb71a4ddb80c1fd2dc1350c2612b85ac256",
+        "history_sha256": "94e83ff49d935d26e39eb58a25d5fc4caea86cc13395b7a12bc6ccb3dd05ed35",
+        "validation_predictions_sha256": "0dfb36e87d33a31df0c2c67d7d376a8138543ac8873c512901c3fa399b82f126",
+        "epochs_with_degenerate_prediction": 0,
+        "full_fresh_retrain_reproducibility_executed": false,
+        "early_stopping_selection_verified": true
+      }
+    },
+    {
+      "run_id": "O1_seed2_A_LTC",
+      "origin": "O1",
+      "seed": 2,
+      "candidate": "A",
+      "model": "LTC",
+      "source_stage": "STEP3A_REUSED",
+      "source_run_id": "A_LTC",
+      "source_directory": "data/derived/step3a_pilot_20261116T153159_KST/A_LTC",
+      "record": {
+        "run_id": "A_LTC",
+        "candidate": "A",
+        "model": "LTC",
+        "base_seed": 2,
+        "effective_seed": 403,
+        "status": "COMPLETED",
+        "epochs_completed": 16,
+        "best_validation_epoch": 6,
+        "train_samples": 2387,
+        "validation_samples": 228,
+        "started_at_kst": "2026-11-16T15:39:10.575512+09:00",
+        "finished_at_kst": "2026-11-16T15:48:20.797589+09:00",
+        "error": null,
+        "input_data_sha256": "7075dcb22bfd9dbba0799d98c2a1acc701a9e6b74d75c20e9d6fa5fa1d3cfb14",
+        "code_sha256": "34281dfd1e80be36427f3cd1fe0f0a07c626d11363c54ed223512c21eeee6489",
+        "epoch1_resume_roundtrip": true,
+        "RNG_restore_exact": true,
+        "checkpoint_restore": true,
+        "last_validation_BA": 0.5,
+        "elapsed_training_seconds": 547.5123051490009,
+        "metrics": {
+          "validation_BA": 0.5119349005424955,
+          "macro_f1": 0.4857142857142857,
+          "recall0": 0.5428571428571428,
+          "recall1": 0.4810126582278481,
+          "accuracy": 0.5,
+          "brier": 0.2485228115980649,
+          "prediction_positive_rate": 0.47368421052631576,
+          "prediction_status": "TWO_CLASS_PREDICTION"
+        },
+        "prediction_status": "TWO_CLASS_PREDICTION",
+        "best_checkpoint_sha256": "4fccd6654108c3669c4ab5e18aca8acd35922011f40ab33ed5b18124f20e0b73",
+        "latest_checkpoint_sha256": "66860c60dbb18fd4e85a57c9eeab13939b832c35b29a99e9473cfdf7c9c1b7c9",
+        "history_sha256": "6ec74548a5214310a06eda5c7f08ba99422769de20cdd0639e106b2b2fbc4509",
+        "validation_predictions_sha256": "5fffd693b11cbf3b4c2fa61a6906fce625f41d317c4276ad5bc05de2a163847a",
+        "epochs_with_degenerate_prediction": 11,
+        "full_fresh_retrain_reproducibility_executed": false,
+        "early_stopping_selection_verified": true
+      }
+    },
+    {
+      "run_id": "O1_seed2_A_CfC",
+      "origin": "O1",
+      "seed": 2,
+      "candidate": "A",
+      "model": "CfC",
+      "source_stage": "STEP3A_REUSED",
+      "source_run_id": "A_CfC",
+      "source_directory": "data/derived/step3a_pilot_20261116T153159_KST/A_CfC",
+      "record": {
+        "run_id": "A_CfC",
+        "candidate": "A",
+        "model": "CfC",
+        "base_seed": 2,
+        "effective_seed": 503,
+        "status": "COMPLETED",
+        "epochs_completed": 16,
+        "best_validation_epoch": 6,
+        "train_samples": 2387,
+        "validation_samples": 228,
+        "started_at_kst": "2026-11-16T15:48:20.806453+09:00",
+        "finished_at_kst": "2026-11-16T15:48:33.250950+09:00",
+        "error": null,
+        "input_data_sha256": "7075dcb22bfd9dbba0799d98c2a1acc701a9e6b74d75c20e9d6fa5fa1d3cfb14",
+        "code_sha256": "34281dfd1e80be36427f3cd1fe0f0a07c626d11363c54ed223512c21eeee6489",
+        "epoch1_resume_roundtrip": true,
+        "RNG_restore_exact": true,
+        "checkpoint_restore": true,
+        "last_validation_BA": 0.45904159132007233,
+        "elapsed_training_seconds": 12.227235695998388,
+        "metrics": {
+          "validation_BA": 0.5750452079566003,
+          "macro_f1": 0.5737179487179487,
+          "recall0": 0.42857142857142855,
+          "recall1": 0.7215189873417721,
+          "accuracy": 0.631578947368421,
+          "brier": 0.24592538836548086,
+          "prediction_positive_rate": 0.6754385964912281,
+          "prediction_status": "TWO_CLASS_PREDICTION"
+        },
+        "prediction_status": "TWO_CLASS_PREDICTION",
+        "best_checkpoint_sha256": "e5c1f2f59c701e4493d87bb9a56ec2c2c0efd094403c2222437ff7a71fca877c",
+        "latest_checkpoint_sha256": "e6ef3ac052fe11a3bd0e6af079f91439d8daf9430f96f9bbe14fe6f78c669aa2",
+        "history_sha256": "af78ff8ce0603cfc7bba262de63ba77b2f88f7f674cf721a115bb16803caee30",
+        "validation_predictions_sha256": "42de7da43134815fb3c2dffd47f99cf839e3d07fe32b77c8c5d11aeeb2530b6f",
+        "epochs_with_degenerate_prediction": 0,
+        "full_fresh_retrain_reproducibility_executed": false,
+        "early_stopping_selection_verified": true
+      }
+    },
+    {
+      "run_id": "O1_seed2_B_RNN",
+      "origin": "O1",
+      "seed": 2,
+      "candidate": "B",
+      "model": "RNN",
+      "source_stage": "STEP3A_REUSED",
+      "source_run_id": "B_RNN",
+      "source_directory": "data/derived/step3a_pilot_20261116T153159_KST/B_RNN",
+      "record": {
+        "run_id": "B_RNN",
+        "candidate": "B",
+        "model": "RNN",
+        "base_seed": 2,
+        "effective_seed": 103,
+        "status": "COMPLETED",
+        "epochs_completed": 28,
+        "best_validation_epoch": 18,
+        "train_samples": 2387,
+        "validation_samples": 228,
+        "started_at_kst": "2026-11-16T15:48:33.259822+09:00",
+        "finished_at_kst": "2026-11-16T15:48:38.436476+09:00",
+        "error": null,
+        "input_data_sha256": "64c1f057e8ee93381616d4b3ae6b7a4b932d119d0ec0dc8ea88c80a77efb4a1c",
+        "code_sha256": "34281dfd1e80be36427f3cd1fe0f0a07c626d11363c54ed223512c21eeee6489",
+        "epoch1_resume_roundtrip": true,
+        "RNG_restore_exact": true,
+        "checkpoint_restore": true,
+        "last_validation_BA": 0.42197106690777575,
+        "elapsed_training_seconds": 5.0038273990030575,
+        "metrics": {
+          "validation_BA": 0.49556962025316453,
+          "macro_f1": 0.48838968307994857,
+          "recall0": 0.2,
+          "recall1": 0.7911392405063291,
+          "accuracy": 0.6096491228070176,
+          "brier": 0.24486255083849368,
+          "prediction_positive_rate": 0.793859649122807,
+          "prediction_status": "TWO_CLASS_PREDICTION"
+        },
+        "prediction_status": "TWO_CLASS_PREDICTION",
+        "best_checkpoint_sha256": "e878a2f219bb372c4fb04c9573230264ccf9ef62e68ef1c56bdb2eeb8faa9931",
+        "latest_checkpoint_sha256": "59f991e6566cdb847c2522bf3711db21dba2284c014bcac6a03fc6ce27974296",
+        "history_sha256": "ce972a3bbd03aa18c4d903a87526cffa0970181ed7fa0a5118281fb97b9c30b8",
+        "validation_predictions_sha256": "a83082389d3fbbcb26ae406e2f3a2712b4e3e4310df1b830a88c60e5a25878f5",
+        "epochs_with_degenerate_prediction": 0,
+        "full_fresh_retrain_reproducibility_executed": false,
+        "early_stopping_selection_verified": true
+      }
+    },
+    {
+      "run_id": "O1_seed2_B_LSTM",
+      "origin": "O1",
+      "seed": 2,
+      "candidate": "B",
+      "model": "LSTM",
+      "source_stage": "STEP3A_REUSED",
+      "source_run_id": "B_LSTM",
+      "source_directory": "data/derived/step3a_pilot_20261116T153159_KST/B_LSTM",
+      "record": {
+        "run_id": "B_LSTM",
+        "candidate": "B",
+        "model": "LSTM",
+        "base_seed": 2,
+        "effective_seed": 203,
+        "status": "COMPLETED",
+        "epochs_completed": 40,
+        "best_validation_epoch": 30,
+        "train_samples": 2387,
+        "validation_samples": 228,
+        "started_at_kst": "2026-11-16T15:48:38.444436+09:00",
+        "finished_at_kst": "2026-11-16T15:48:53.050180+09:00",
+        "error": null,
+        "input_data_sha256": "64c1f057e8ee93381616d4b3ae6b7a4b932d119d0ec0dc8ea88c80a77efb4a1c",
+        "code_sha256": "34281dfd1e80be36427f3cd1fe0f0a07c626d11363c54ed223512c21eeee6489",
+        "epoch1_resume_roundtrip": true,
+        "RNG_restore_exact": true,
+        "checkpoint_restore": true,
+        "last_validation_BA": 0.4507233273056058,
+        "elapsed_training_seconds": 14.310161576013343,
+        "metrics": {
+          "validation_BA": 0.6116636528028934,
+          "macro_f1": 0.5963761324586068,
+          "recall0": 0.5714285714285714,
+          "recall1": 0.6518987341772152,
+          "accuracy": 0.6271929824561403,
+          "brier": 0.2424513533767447,
+          "prediction_positive_rate": 0.5833333333333334,
+          "prediction_status": "TWO_CLASS_PREDICTION"
+        },
+        "prediction_status": "TWO_CLASS_PREDICTION",
+        "best_checkpoint_sha256": "d84897f1368276fe70d542775f2a222e01bfcddd993d84d995f6aa9be61dcdaf",
+        "latest_checkpoint_sha256": "325a0f7668ab62d4edd5827ddb54834fd9fb8e4e653a997a1899206f8a6e32af",
+        "history_sha256": "952431ad35f08cb488fb3f6b6c18a1b5c8fc0c945c4956b9225d5e720ebc1c63",
+        "validation_predictions_sha256": "b0ce4dd13ee8c297e41af575cf58c88fd4b89cb38292bdbe30c8b24cd2421485",
+        "epochs_with_degenerate_prediction": 0,
+        "full_fresh_retrain_reproducibility_executed": false,
+        "early_stopping_selection_verified": true
+      }
+    },
+    {
+      "run_id": "O1_seed2_B_GRU",
+      "origin": "O1",
+      "seed": 2,
+      "candidate": "B",
+      "model": "GRU",
+      "source_stage": "STEP3A_REUSED",
+      "source_run_id": "B_GRU",
+      "source_directory": "data/derived/step3a_pilot_20261116T153159_KST/B_GRU",
+      "record": {
+        "run_id": "B_GRU",
+        "candidate": "B",
+        "model": "GRU",
+        "base_seed": 2,
+        "effective_seed": 303,
+        "status": "COMPLETED",
+        "epochs_completed": 24,
+        "best_validation_epoch": 14,
+        "train_samples": 2387,
+        "validation_samples": 228,
+        "started_at_kst": "2026-11-16T15:48:53.059136+09:00",
+        "finished_at_kst": "2026-11-16T15:49:03.145017+09:00",
+        "error": null,
+        "input_data_sha256": "64c1f057e8ee93381616d4b3ae6b7a4b932d119d0ec0dc8ea88c80a77efb4a1c",
+        "code_sha256": "34281dfd1e80be36427f3cd1fe0f0a07c626d11363c54ed223512c21eeee6489",
+        "epoch1_resume_roundtrip": true,
+        "RNG_restore_exact": true,
+        "checkpoint_restore": true,
+        "last_validation_BA": 0.5014466546112116,
+        "elapsed_training_seconds": 9.920293384995603,
+        "metrics": {
+          "validation_BA": 0.5479204339963833,
+          "macro_f1": 0.5476190476190476,
+          "recall0": 0.2857142857142857,
+          "recall1": 0.810126582278481,
+          "accuracy": 0.6491228070175439,
+          "brier": 0.23680714503306252,
+          "prediction_positive_rate": 0.7807017543859649,
+          "prediction_status": "TWO_CLASS_PREDICTION"
+        },
+        "prediction_status": "TWO_CLASS_PREDICTION",
+        "best_checkpoint_sha256": "1d4bb0957d08587d33b3620d9fa83e72110c18965e966b903335aae50efdb666",
+        "latest_checkpoint_sha256": "53c20e91fb22b41da8408539e224043eef3ebdd56255d12f1ad9ecfa579bc2c9",
+        "history_sha256": "00e51833b99c94553cd730182ef1e676724d97f0ce4f07c53f9d075d0fdb7149",
+        "validation_predictions_sha256": "539310bd2d9cc92b80854b428c4b181d451a268c0dc81d439c2fac20caa6a632",
+        "epochs_with_degenerate_prediction": 0,
+        "full_fresh_retrain_reproducibility_executed": false,
+        "early_stopping_selection_verified": true
+      }
+    },
+    {
+      "run_id": "O1_seed2_B_LTC",
+      "origin": "O1",
+      "seed": 2,
+      "candidate": "B",
+      "model": "LTC",
+      "source_stage": "STEP3A_REUSED",
+      "source_run_id": "B_LTC",
+      "source_directory": "data/derived/step3a_pilot_20261116T153159_KST/B_LTC",
+      "record": {
+        "run_id": "B_LTC",
+        "candidate": "B",
+        "model": "LTC",
+        "base_seed": 2,
+        "effective_seed": 403,
+        "status": "COMPLETED",
+        "epochs_completed": 16,
+        "best_validation_epoch": 6,
+        "train_samples": 2387,
+        "validation_samples": 228,
+        "started_at_kst": "2026-11-16T15:49:03.155145+09:00",
+        "finished_at_kst": "2026-11-16T15:57:51.505782+09:00",
+        "error": null,
+        "input_data_sha256": "64c1f057e8ee93381616d4b3ae6b7a4b932d119d0ec0dc8ea88c80a77efb4a1c",
+        "code_sha256": "34281dfd1e80be36427f3cd1fe0f0a07c626d11363c54ed223512c21eeee6489",
+        "epoch1_resume_roundtrip": true,
+        "RNG_restore_exact": true,
+        "checkpoint_restore": true,
+        "last_validation_BA": 0.5,
+        "elapsed_training_seconds": 525.7432181239965,
+        "metrics": {
+          "validation_BA": 0.5119349005424955,
+          "macro_f1": 0.4857142857142857,
+          "recall0": 0.5428571428571428,
+          "recall1": 0.4810126582278481,
+          "accuracy": 0.5,
+          "brier": 0.24852281272947713,
+          "prediction_positive_rate": 0.47368421052631576,
+          "prediction_status": "TWO_CLASS_PREDICTION"
+        },
+        "prediction_status": "TWO_CLASS_PREDICTION",
+        "best_checkpoint_sha256": "9aafa4d6337c53c358faa3458b88dca74443fb80130cf8c08a1771625aa2fd75",
+        "latest_checkpoint_sha256": "5fbf68d364f7be75e61e77101e96bf628f4a30f0cba8485a4795fd9c70d2dc3a",
+        "history_sha256": "1aaed8ad4dd51880e7cf8c892ae071d39cccd08f062c98e9df39164972cf75d3",
+        "validation_predictions_sha256": "51eab31d65b9a15ad309f2f15100268dbf8ebdd2b28cf1aec19304831bf8fec3",
+        "epochs_with_degenerate_prediction": 11,
+        "full_fresh_retrain_reproducibility_executed": false,
+        "early_stopping_selection_verified": true
+      }
+    },
+    {
+      "run_id": "O1_seed2_B_CfC",
+      "origin": "O1",
+      "seed": 2,
+      "candidate": "B",
+      "model": "CfC",
+      "source_stage": "STEP3A_REUSED",
+      "source_run_id": "B_CfC",
+      "source_directory": "data/derived/step3a_pilot_20261116T153159_KST/B_CfC",
+      "record": {
+        "run_id": "B_CfC",
+        "candidate": "B",
+        "model": "CfC",
+        "base_seed": 2,
+        "effective_seed": 503,
+        "status": "COMPLETED",
+        "epochs_completed": 16,
+        "best_validation_epoch": 6,
+        "train_samples": 2387,
+        "validation_samples": 228,
+        "started_at_kst": "2026-11-16T15:57:51.516865+09:00",
+        "finished_at_kst": "2026-11-16T15:58:03.464042+09:00",
+        "error": null,
+        "input_data_sha256": "64c1f057e8ee93381616d4b3ae6b7a4b932d119d0ec0dc8ea88c80a77efb4a1c",
+        "code_sha256": "34281dfd1e80be36427f3cd1fe0f0a07c626d11363c54ed223512c21eeee6489",
+        "epoch1_resume_roundtrip": true,
+        "RNG_restore_exact": true,
+        "checkpoint_restore": true,
+        "last_validation_BA": 0.4693490054249548,
+        "elapsed_training_seconds": 11.767781013008062,
+        "metrics": {
+          "validation_BA": 0.5750452079566003,
+          "macro_f1": 0.5737179487179487,
+          "recall0": 0.42857142857142855,
+          "recall1": 0.7215189873417721,
+          "accuracy": 0.631578947368421,
+          "brier": 0.24592543912015322,
+          "prediction_positive_rate": 0.6754385964912281,
+          "prediction_status": "TWO_CLASS_PREDICTION"
+        },
+        "prediction_status": "TWO_CLASS_PREDICTION",
+        "best_checkpoint_sha256": "24b68d2f55658ace40daebe5aeaa5b01a8b0fbaee2f7a3b96c68711107b82c9f",
+        "latest_checkpoint_sha256": "0cd9795839f4ce7459a98e159d962642263a600f6a45ea5a93fb3e9aa26616a6",
+        "history_sha256": "b371f80440584296af46220dfbcb0141726a64429cc4f9a18c8fff2804e6dad4",
+        "validation_predictions_sha256": "6b06166211801a141b1852b06d8cf167a6c1ca8d06565da91e963e4e96181c84",
+        "epochs_with_degenerate_prediction": 0,
+        "full_fresh_retrain_reproducibility_executed": false,
+        "early_stopping_selection_verified": true
+      }
+    }
+  ],
+  "preserved_hash_checks": [
+    {
+      "file": "runtime/step3a_pilot.py",
+      "sha256": "34281dfd1e80be36427f3cd1fe0f0a07c626d11363c54ed223512c21eeee6489",
+      "status": "PASS"
+    },
+    {
+      "file": "src/kospi200/pilot_data.py",
+      "sha256": "d2467df781ef70f685ecb0318137ed604c6e75270dbefd657c03d082b0316a4a",
+      "status": "PASS"
+    },
+    {
+      "file": "src/kospi200/data.py",
+      "sha256": "8761182107a2e5c3b9830ed6a295258c97574dee502b8bdcde1e202a5df8dc01",
+      "status": "PASS"
+    },
+    {
+      "file": "src/kospi200/folds.py",
+      "sha256": "94c9d800d7f8056a95664e35839d339c25e7dbc58cc090febeb83945461400ea",
+      "status": "PASS"
+    },
+    {
+      "file": "src/kospi200/smoke_preparation.py",
+      "sha256": "f43a6b862a576be1c20c0c940e5fde2432c1f629c0e570d6f0933d4a8e62bf34",
+      "status": "PASS"
+    },
+    {
+      "file": "runtime/step29_synthetic_smoke.py",
+      "sha256": "bbdff72425860e08878c5a99e148b80bd832570fd54fbb8bc698b27142818de7",
+      "status": "PASS"
+    },
+    {
+      "file": "tools/step3a_prepare.py",
+      "sha256": "587accaad2eedf5d76599a5c286741e90c43b21cfff430bf16a0d711acf512ce",
+      "status": "PASS"
+    },
+    {
+      "file": "data/derived/step3a_pilot_20261116T153159_KST/A_RNN/best.pt",
+      "sha256": "2c6bfa7f98c9adf8a14d4216f883d7aa0643dbf8340a713bd50f737f010498e9",
+      "status": "PASS"
+    },
+    {
+      "file": "data/derived/step3a_pilot_20261116T153159_KST/A_RNN/latest.pt",
+      "sha256": "3028d8bf9312e9db9820071792c26e0c27f87d374b88dcfeedffc702fea946dc",
+      "status": "PASS"
+    },
+    {
+      "file": "data/derived/step3a_pilot_20261116T153159_KST/A_RNN/history.json",
+      "sha256": "71f3ee175518a23f3300d6021f96c4460fca163eecb92d6b304d49bbf8eac1b0",
+      "status": "PASS"
+    },
+    {
+      "file": "data/derived/step3a_pilot_20261116T153159_KST/A_RNN/validation_predictions_private.npz",
+      "sha256": "bb1104e39b7b1ecf4c2465627482e6e69a74109e7933986c2b3fa13e6e3822f3",
+      "status": "PASS"
+    },
+    {
+      "file": "data/derived/step3a_pilot_20261116T153159_KST/A_LSTM/best.pt",
+      "sha256": "8d1c68f460800c33ce6d0c1903d46120561e6461c40ced3d23e787624cd37fe5",
+      "status": "PASS"
+    },
+    {
+      "file": "data/derived/step3a_pilot_20261116T153159_KST/A_LSTM/latest.pt",
+      "sha256": "8d7b1ec3df29c9fbbe6e7d55e317c3f24da44f321ccaab1996819cd7ec22e899",
+      "status": "PASS"
+    },
+    {
+      "file": "data/derived/step3a_pilot_20261116T153159_KST/A_LSTM/history.json",
+      "sha256": "5ef5133d8ba6c2e5e75465085347bf4e8c593ca96d86533dc3244ea9dbc9bc78",
+      "status": "PASS"
+    },
+    {
+      "file": "data/derived/step3a_pilot_20261116T153159_KST/A_LSTM/validation_predictions_private.npz",
+      "sha256": "900eb0a003589ef1afc9da469f05e75d089a2da0475cc8e992e2ac0144172a3f",
+      "status": "PASS"
+    },
+    {
+      "file": "data/derived/step3a_pilot_20261116T153159_KST/A_GRU/best.pt",
+      "sha256": "f777de5e24abdd5b9a97fa121b1647ee4c0f8769b064007b28b21cb4188c02a7",
+      "status": "PASS"
+    },
+    {
+      "file": "data/derived/step3a_pilot_20261116T153159_KST/A_GRU/latest.pt",
+      "sha256": "350bafcd6ee5e1c02b87493d2ff6edb71a4ddb80c1fd2dc1350c2612b85ac256",
+      "status": "PASS"
+    },
+    {
+      "file": "data/derived/step3a_pilot_20261116T153159_KST/A_GRU/history.json",
+      "sha256": "94e83ff49d935d26e39eb58a25d5fc4caea86cc13395b7a12bc6ccb3dd05ed35",
+      "status": "PASS"
+    },
+    {
+      "file": "data/derived/step3a_pilot_20261116T153159_KST/A_GRU/validation_predictions_private.npz",
+      "sha256": "0dfb36e87d33a31df0c2c67d7d376a8138543ac8873c512901c3fa399b82f126",
+      "status": "PASS"
+    },
+    {
+      "file": "data/derived/step3a_pilot_20261116T153159_KST/A_LTC/best.pt",
+      "sha256": "4fccd6654108c3669c4ab5e18aca8acd35922011f40ab33ed5b18124f20e0b73",
+      "status": "PASS"
+    },
+    {
+      "file": "data/derived/step3a_pilot_20261116T153159_KST/A_LTC/latest.pt",
+      "sha256": "66860c60dbb18fd4e85a57c9eeab13939b832c35b29a99e9473cfdf7c9c1b7c9",
+      "status": "PASS"
+    },
+    {
+      "file": "data/derived/step3a_pilot_20261116T153159_KST/A_LTC/history.json",
+      "sha256": "6ec74548a5214310a06eda5c7f08ba99422769de20cdd0639e106b2b2fbc4509",
+      "status": "PASS"
+    },
+    {
+      "file": "data/derived/step3a_pilot_20261116T153159_KST/A_LTC/validation_predictions_private.npz",
+      "sha256": "5fffd693b11cbf3b4c2fa61a6906fce625f41d317c4276ad5bc05de2a163847a",
+      "status": "PASS"
+    },
+    {
+      "file": "data/derived/step3a_pilot_20261116T153159_KST/A_CfC/best.pt",
+      "sha256": "e5c1f2f59c701e4493d87bb9a56ec2c2c0efd094403c2222437ff7a71fca877c",
+      "status": "PASS"
+    },
+    {
+      "file": "data/derived/step3a_pilot_20261116T153159_KST/A_CfC/latest.pt",
+      "sha256": "e6ef3ac052fe11a3bd0e6af079f91439d8daf9430f96f9bbe14fe6f78c669aa2",
+      "status": "PASS"
+    },
+    {
+      "file": "data/derived/step3a_pilot_20261116T153159_KST/A_CfC/history.json",
+      "sha256": "af78ff8ce0603cfc7bba262de63ba77b2f88f7f674cf721a115bb16803caee30",
+      "status": "PASS"
+    },
+    {
+      "file": "data/derived/step3a_pilot_20261116T153159_KST/A_CfC/validation_predictions_private.npz",
+      "sha256": "42de7da43134815fb3c2dffd47f99cf839e3d07fe32b77c8c5d11aeeb2530b6f",
+      "status": "PASS"
+    },
+    {
+      "file": "data/derived/step3a_pilot_20261116T153159_KST/B_RNN/best.pt",
+      "sha256": "e878a2f219bb372c4fb04c9573230264ccf9ef62e68ef1c56bdb2eeb8faa9931",
+      "status": "PASS"
+    },
+    {
+      "file": "data/derived/step3a_pilot_20261116T153159_KST/B_RNN/latest.pt",
+      "sha256": "59f991e6566cdb847c2522bf3711db21dba2284c014bcac6a03fc6ce27974296",
+      "status": "PASS"
+    },
+    {
+      "file": "data/derived/step3a_pilot_20261116T153159_KST/B_RNN/history.json",
+      "sha256": "ce972a3bbd03aa18c4d903a87526cffa0970181ed7fa0a5118281fb97b9c30b8",
+      "status": "PASS"
+    },
+    {
+      "file": "data/derived/step3a_pilot_20261116T153159_KST/B_RNN/validation_predictions_private.npz",
+      "sha256": "a83082389d3fbbcb26ae406e2f3a2712b4e3e4310df1b830a88c60e5a25878f5",
+      "status": "PASS"
+    },
+    {
+      "file": "data/derived/step3a_pilot_20261116T153159_KST/B_LSTM/best.pt",
+      "sha256": "d84897f1368276fe70d542775f2a222e01bfcddd993d84d995f6aa9be61dcdaf",
+      "status": "PASS"
+    },
+    {
+      "file": "data/derived/step3a_pilot_20261116T153159_KST/B_LSTM/latest.pt",
+      "sha256": "325a0f7668ab62d4edd5827ddb54834fd9fb8e4e653a997a1899206f8a6e32af",
+      "status": "PASS"
+    },
+    {
+      "file": "data/derived/step3a_pilot_20261116T153159_KST/B_LSTM/history.json",
+      "sha256": "952431ad35f08cb488fb3f6b6c18a1b5c8fc0c945c4956b9225d5e720ebc1c63",
+      "status": "PASS"
+    },
+    {
+      "file": "data/derived/step3a_pilot_20261116T153159_KST/B_LSTM/validation_predictions_private.npz",
+      "sha256": "b0ce4dd13ee8c297e41af575cf58c88fd4b89cb38292bdbe30c8b24cd2421485",
+      "status": "PASS"
+    },
+    {
+      "file": "data/derived/step3a_pilot_20261116T153159_KST/B_GRU/best.pt",
+      "sha256": "1d4bb0957d08587d33b3620d9fa83e72110c18965e966b903335aae50efdb666",
+      "status": "PASS"
+    },
+    {
+      "file": "data/derived/step3a_pilot_20261116T153159_KST/B_GRU/latest.pt",
+      "sha256": "53c20e91fb22b41da8408539e224043eef3ebdd56255d12f1ad9ecfa579bc2c9",
+      "status": "PASS"
+    },
+    {
+      "file": "data/derived/step3a_pilot_20261116T153159_KST/B_GRU/history.json",
+      "sha256": "00e51833b99c94553cd730182ef1e676724d97f0ce4f07c53f9d075d0fdb7149",
+      "status": "PASS"
+    },
+    {
+      "file": "data/derived/step3a_pilot_20261116T153159_KST/B_GRU/validation_predictions_private.npz",
+      "sha256": "539310bd2d9cc92b80854b428c4b181d451a268c0dc81d439c2fac20caa6a632",
+      "status": "PASS"
+    },
+    {
+      "file": "data/derived/step3a_pilot_20261116T153159_KST/B_LTC/best.pt",
+      "sha256": "9aafa4d6337c53c358faa3458b88dca74443fb80130cf8c08a1771625aa2fd75",
+      "status": "PASS"
+    },
+    {
+      "file": "data/derived/step3a_pilot_20261116T153159_KST/B_LTC/latest.pt",
+      "sha256": "5fbf68d364f7be75e61e77101e96bf628f4a30f0cba8485a4795fd9c70d2dc3a",
+      "status": "PASS"
+    },
+    {
+      "file": "data/derived/step3a_pilot_20261116T153159_KST/B_LTC/history.json",
+      "sha256": "1aaed8ad4dd51880e7cf8c892ae071d39cccd08f062c98e9df39164972cf75d3",
+      "status": "PASS"
+    },
+    {
+      "file": "data/derived/step3a_pilot_20261116T153159_KST/B_LTC/validation_predictions_private.npz",
+      "sha256": "51eab31d65b9a15ad309f2f15100268dbf8ebdd2b28cf1aec19304831bf8fec3",
+      "status": "PASS"
+    },
+    {
+      "file": "data/derived/step3a_pilot_20261116T153159_KST/B_CfC/best.pt",
+      "sha256": "24b68d2f55658ace40daebe5aeaa5b01a8b0fbaee2f7a3b96c68711107b82c9f",
+      "status": "PASS"
+    },
+    {
+      "file": "data/derived/step3a_pilot_20261116T153159_KST/B_CfC/latest.pt",
+      "sha256": "0cd9795839f4ce7459a98e159d962642263a600f6a45ea5a93fb3e9aa26616a6",
+      "status": "PASS"
+    },
+    {
+      "file": "data/derived/step3a_pilot_20261116T153159_KST/B_CfC/history.json",
+      "sha256": "b371f80440584296af46220dfbcb0141726a64429cc4f9a18c8fff2804e6dad4",
+      "status": "PASS"
+    },
+    {
+      "file": "data/derived/step3a_pilot_20261116T153159_KST/B_CfC/validation_predictions_private.npz",
+      "sha256": "6b06166211801a141b1852b06d8cf167a6c1ca8d06565da91e963e4e96181c84",
+      "status": "PASS"
+    }
+  ],
+  "datasets": {
+    "O1": {
+      "A": {
+        "origin": "O1",
+        "candidate": "A",
+        "validation_year": 2020,
+        "source_file": "data/derived/step28_candidate_A_close_private.csv",
+        "source_sha256": "187c988b63f8e555d2e3da5c779a3e409eb6df62386d3625fd7c2f9f72d59551",
+        "array_file": "data/derived/step3b_pilot_20261116T165739_KST/inputs/O1/A_arrays_private.npz",
+        "array_sha256": "7075dcb22bfd9dbba0799d98c2a1acc701a9e6b74d75c20e9d6fa5fa1d3cfb14",
+        "price_file": "data/derived/step3b_pilot_20261116T165739_KST/inputs/O1/A_prices_private.csv",
+        "price_sha256": "2dd8d12663c68a9fa296e918104f15dfe5fda18b7eae9619829aad1d3398de07",
+        "date_file": "data/derived/step3b_pilot_20261116T165739_KST/inputs/O1/A_dates_private.json",
+        "date_sha256": "b3fab6b95886da517698e023443ffd301f48daa481007aa13f8a178d4d18392d",
+        "metadata_file": "data/derived/step3b_pilot_20261116T165739_KST/inputs/O1/A_metadata_private.json",
+        "metadata_sha256": "df6e06d4b267e70c59af71e5b3ff524455e32a24176e033c6538d0e335960a16",
+        "regime_file": "data/derived/step3b_pilot_20261116T165739_KST/inputs/O1/A_manual_regimes_private.csv",
+        "regime_sha256": "1bf215a787f85aecc102b02fb9cb2cbb368fb259e669e5bd6651088d08546478",
+        "date_information_sha256": "299bdd3c84031b36c02797eb577ebf6028768c1aa229b7227016aeb9190393b9",
+        "metadata": {
+          "origin": "O1",
+          "validation_year": 2020,
+          "price_rows": 2714,
+          "price_start": "2010-01-04",
+          "price_end": "2020-12-30",
+          "train_samples": 2387,
+          "validation_samples": 228,
+          "train_purged": 20,
+          "validation_unknown_excluded": 20,
+          "train_boundary_start": "2010-01-04",
+          "train_boundary_end": "2019-12-30",
+          "validation_boundary_start": "2020-01-02",
+          "validation_boundary_end": "2020-12-30",
+          "train_first_sample": "2010-03-30",
+          "train_last_sample": "2019-11-29",
+          "validation_first_sample": "2020-01-02",
+          "validation_last_sample": "2020-12-01",
+          "train_max_label_end": "2019-12-30",
+          "validation_max_label_end": "2020-12-30",
+          "train_cutoff_violations": 0,
+          "validation_future_endpoint_violations": 0,
+          "feature_order": [
+            "Log_Ret",
+            "Disparity"
+          ],
+          "common_Vol_Regime_window_mask": true,
+          "scaler": {
+            "fit_start": "2010-03-03",
+            "fit_end": "2019-11-29",
+            "fit_rows": 2406,
+            "feature_order": [
+              "Log_Ret",
+              "Disparity"
+            ],
+            "source_partition": "train",
+            "mean": [
+              0.00011192089798204888,
+              0.0012878617574139703
+            ],
+            "scale": [
+              0.009832339633483981,
+              0.023295956442666917
+            ],
+            "var": [
+              9.66749026681799e-05,
+              0.0005427015865786342
+            ]
+          },
+          "class_counts": {
+            "train": {
+              "0": 1071,
+              "1": 1316
+            },
+            "validation": {
+              "0": 70,
+              "1": 158
+            }
+          },
+          "manual_reference": {
+            "low": 0.007395781194783369,
+            "high": 0.009469417424932673,
+            "partition": "train",
+            "train_start": "2010-03-30",
+            "train_end": "2019-11-29",
+            "rows": 2387,
+            "validation_start": "2020-01-02",
+            "quantiles": [
+              30,
+              70
+            ],
+            "method": "linear",
+            "variable": "Vol_Regime"
+          },
+          "manual_validation_support": [
+            {
+              "regime": "Low_Vol",
+              "n": 0,
+              "n_class0": 0,
+              "n_class1": 0
+            },
+            {
+              "regime": "Mid_Vol",
+              "n": 16,
+              "n_class0": 9,
+              "n_class1": 7
+            },
+            {
+              "regime": "High_Vol",
+              "n": 212,
+              "n_class0": 61,
+              "n_class1": 151
+            }
+          ],
+          "independent_Test_rows": 0,
+          "2026_used": 0
+        },
+        "source_status": "BOTH_UNVERIFIED",
+        "production_PIT": "BLOCKED",
+        "O1_identical_STEP3A_arrays": true
+      },
+      "B": {
+        "origin": "O1",
+        "candidate": "B",
+        "validation_year": 2020,
+        "source_file": "data/derived/step28_candidate_B_close_private.csv",
+        "source_sha256": "c7c9bb434605d240e1791c76fb2a270479d649444cf874c68aa097e2c0a337ef",
+        "array_file": "data/derived/step3b_pilot_20261116T165739_KST/inputs/O1/B_arrays_private.npz",
+        "array_sha256": "64c1f057e8ee93381616d4b3ae6b7a4b932d119d0ec0dc8ea88c80a77efb4a1c",
+        "price_file": "data/derived/step3b_pilot_20261116T165739_KST/inputs/O1/B_prices_private.csv",
+        "price_sha256": "46ef9a2e3f02773c6ca2562e688db75e05da0b948ecdfcf74ceec137ac3d6822",
+        "date_file": "data/derived/step3b_pilot_20261116T165739_KST/inputs/O1/B_dates_private.json",
+        "date_sha256": "b3fab6b95886da517698e023443ffd301f48daa481007aa13f8a178d4d18392d",
+        "metadata_file": "data/derived/step3b_pilot_20261116T165739_KST/inputs/O1/B_metadata_private.json",
+        "metadata_sha256": "ce3ce4d39469b3799084b33eac3dc00e7f1a6d14caa82f3bb14e40b420f433bc",
+        "regime_file": "data/derived/step3b_pilot_20261116T165739_KST/inputs/O1/B_manual_regimes_private.csv",
+        "regime_sha256": "1bf215a787f85aecc102b02fb9cb2cbb368fb259e669e5bd6651088d08546478",
+        "date_information_sha256": "299bdd3c84031b36c02797eb577ebf6028768c1aa229b7227016aeb9190393b9",
+        "metadata": {
+          "origin": "O1",
+          "validation_year": 2020,
+          "price_rows": 2714,
+          "price_start": "2010-01-04",
+          "price_end": "2020-12-30",
+          "train_samples": 2387,
+          "validation_samples": 228,
+          "train_purged": 20,
+          "validation_unknown_excluded": 20,
+          "train_boundary_start": "2010-01-04",
+          "train_boundary_end": "2019-12-30",
+          "validation_boundary_start": "2020-01-02",
+          "validation_boundary_end": "2020-12-30",
+          "train_first_sample": "2010-03-30",
+          "train_last_sample": "2019-11-29",
+          "validation_first_sample": "2020-01-02",
+          "validation_last_sample": "2020-12-01",
+          "train_max_label_end": "2019-12-30",
+          "validation_max_label_end": "2020-12-30",
+          "train_cutoff_violations": 0,
+          "validation_future_endpoint_violations": 0,
+          "feature_order": [
+            "Log_Ret",
+            "Disparity"
+          ],
+          "common_Vol_Regime_window_mask": true,
+          "scaler": {
+            "fit_start": "2010-03-03",
+            "fit_end": "2019-11-29",
+            "fit_rows": 2406,
+            "feature_order": [
+              "Log_Ret",
+              "Disparity"
+            ],
+            "source_partition": "train",
+            "mean": [
+              0.00011192090461419224,
+              0.0012878617536748952
+            ],
+            "scale": [
+              0.009832339620052257,
+              0.023295956214187254
+            ],
+            "var": [
+              9.667490240404937e-05,
+              0.0005427015759333298
+            ]
+          },
+          "class_counts": {
+            "train": {
+              "0": 1071,
+              "1": 1316
+            },
+            "validation": {
+              "0": 70,
+              "1": 158
+            }
+          },
+          "manual_reference": {
+            "low": 0.007395778369943021,
+            "high": 0.009469417559428008,
+            "partition": "train",
+            "train_start": "2010-03-30",
+            "train_end": "2019-11-29",
+            "rows": 2387,
+            "validation_start": "2020-01-02",
+            "quantiles": [
+              30,
+              70
+            ],
+            "method": "linear",
+            "variable": "Vol_Regime"
+          },
+          "manual_validation_support": [
+            {
+              "regime": "Low_Vol",
+              "n": 0,
+              "n_class0": 0,
+              "n_class1": 0
+            },
+            {
+              "regime": "Mid_Vol",
+              "n": 16,
+              "n_class0": 9,
+              "n_class1": 7
+            },
+            {
+              "regime": "High_Vol",
+              "n": 212,
+              "n_class0": 61,
+              "n_class1": 151
+            }
+          ],
+          "independent_Test_rows": 0,
+          "2026_used": 0
+        },
+        "source_status": "BOTH_UNVERIFIED",
+        "production_PIT": "BLOCKED",
+        "O1_identical_STEP3A_arrays": true
+      }
+    },
+    "O2": {
+      "A": {
+        "origin": "O2",
+        "candidate": "A",
+        "validation_year": 2021,
+        "source_file": "data/derived/step28_candidate_A_close_private.csv",
+        "source_sha256": "187c988b63f8e555d2e3da5c779a3e409eb6df62386d3625fd7c2f9f72d59551",
+        "array_file": "data/derived/step3b_pilot_20261116T165739_KST/inputs/O2/A_arrays_private.npz",
+        "array_sha256": "cd2bc87acc7f9ca5ae7f12003cc2f4dab22833a8007e1dabc5f5b3b9f869687e",
+        "price_file": "data/derived/step3b_pilot_20261116T165739_KST/inputs/O2/A_prices_private.csv",
+        "price_sha256": "94c84e09667b6411701c7bc8c3da8e4ad401dca273919359243d4c0efb8a6fa2",
+        "date_file": "data/derived/step3b_pilot_20261116T165739_KST/inputs/O2/A_dates_private.json",
+        "date_sha256": "9aa657f90dc92a1b27ae54c51d26ae39e001e004585794580675e04acb5db49c",
+        "metadata_file": "data/derived/step3b_pilot_20261116T165739_KST/inputs/O2/A_metadata_private.json",
+        "metadata_sha256": "a929f44e860044eb9fd4f4c09f2d8719d34fcd168ae7bdc4f438b2e27463665e",
+        "regime_file": "data/derived/step3b_pilot_20261116T165739_KST/inputs/O2/A_manual_regimes_private.csv",
+        "regime_sha256": "75ab2e4526f50e81f801de86ea19e07a1c50016d59b46d3b57a2967e97f03ce5",
+        "date_information_sha256": "8b65c7dcd02834095265e25a9e749571fa3b6a2757947789509a72ca28f87494",
+        "metadata": {
+          "origin": "O2",
+          "validation_year": 2021,
+          "price_rows": 2962,
+          "price_start": "2010-01-04",
+          "price_end": "2021-12-30",
+          "train_samples": 2635,
+          "validation_samples": 228,
+          "train_purged": 20,
+          "validation_unknown_excluded": 20,
+          "train_boundary_start": "2010-01-04",
+          "train_boundary_end": "2020-12-30",
+          "validation_boundary_start": "2021-01-04",
+          "validation_boundary_end": "2021-12-30",
+          "train_first_sample": "2010-03-30",
+          "train_last_sample": "2020-12-01",
+          "validation_first_sample": "2021-01-04",
+          "validation_last_sample": "2021-12-02",
+          "train_max_label_end": "2020-12-30",
+          "validation_max_label_end": "2021-12-30",
+          "train_cutoff_violations": 0,
+          "validation_future_endpoint_violations": 0,
+          "feature_order": [
+            "Log_Ret",
+            "Disparity"
+          ],
+          "common_Vol_Regime_window_mask": true,
+          "scaler": {
+            "fit_start": "2010-03-03",
+            "fit_end": "2020-12-01",
+            "fit_rows": 2654,
+            "feature_order": [
+              "Log_Ret",
+              "Disparity"
+            ],
+            "source_partition": "train",
+            "mean": [
+              0.00019247384886946961,
+              0.001935610257051391
+            ],
+            "scale": [
+              0.010856380815928149,
+              0.0265185674175616
+            ],
+            "var": [
+              0.00011786100442045272,
+              0.0007032344178797597
+            ]
+          },
+          "class_counts": {
+            "train": {
+              "0": 1145,
+              "1": 1490
+            },
+            "validation": {
+              "0": 131,
+              "1": 97
+            }
+          },
+          "manual_reference": {
+            "low": 0.007589725396008875,
+            "high": 0.010163297194739948,
+            "partition": "train",
+            "train_start": "2010-03-30",
+            "train_end": "2020-12-01",
+            "rows": 2635,
+            "validation_start": "2021-01-04",
+            "quantiles": [
+              30,
+              70
+            ],
+            "method": "linear",
+            "variable": "Vol_Regime"
+          },
+          "manual_validation_support": [
+            {
+              "regime": "Low_Vol",
+              "n": 40,
+              "n_class0": 35,
+              "n_class1": 5
+            },
+            {
+              "regime": "Mid_Vol",
+              "n": 96,
+              "n_class0": 48,
+              "n_class1": 48
+            },
+            {
+              "regime": "High_Vol",
+              "n": 92,
+              "n_class0": 48,
+              "n_class1": 44
+            }
+          ],
+          "independent_Test_rows": 0,
+          "2026_used": 0
+        },
+        "source_status": "BOTH_UNVERIFIED",
+        "production_PIT": "BLOCKED",
+        "O1_identical_STEP3A_arrays": false
+      },
+      "B": {
+        "origin": "O2",
+        "candidate": "B",
+        "validation_year": 2021,
+        "source_file": "data/derived/step28_candidate_B_close_private.csv",
+        "source_sha256": "c7c9bb434605d240e1791c76fb2a270479d649444cf874c68aa097e2c0a337ef",
+        "array_file": "data/derived/step3b_pilot_20261116T165739_KST/inputs/O2/B_arrays_private.npz",
+        "array_sha256": "9ffc79c4f6d2924236ea061fefb1ac1cae0a2be14ca445bb95286f414dd81724",
+        "price_file": "data/derived/step3b_pilot_20261116T165739_KST/inputs/O2/B_prices_private.csv",
+        "price_sha256": "3e805ee01ca79fcb8d4c16699b548f1641120bdbd66564e7a8531a3f8e281cbb",
+        "date_file": "data/derived/step3b_pilot_20261116T165739_KST/inputs/O2/B_dates_private.json",
+        "date_sha256": "9aa657f90dc92a1b27ae54c51d26ae39e001e004585794580675e04acb5db49c",
+        "metadata_file": "data/derived/step3b_pilot_20261116T165739_KST/inputs/O2/B_metadata_private.json",
+        "metadata_sha256": "24d8bbf8f16242468d94a0b691c73ad55b497fc989d2e8e49d43fb9df7ea6ceb",
+        "regime_file": "data/derived/step3b_pilot_20261116T165739_KST/inputs/O2/B_manual_regimes_private.csv",
+        "regime_sha256": "5def10432ba3a661d86de839c8ec3912024b6f93e7c7820593191890de7ade6d",
+        "date_information_sha256": "8b65c7dcd02834095265e25a9e749571fa3b6a2757947789509a72ca28f87494",
+        "metadata": {
+          "origin": "O2",
+          "validation_year": 2021,
+          "price_rows": 2962,
+          "price_start": "2010-01-04",
+          "price_end": "2021-12-30",
+          "train_samples": 2635,
+          "validation_samples": 228,
+          "train_purged": 20,
+          "validation_unknown_excluded": 20,
+          "train_boundary_start": "2010-01-04",
+          "train_boundary_end": "2020-12-30",
+          "validation_boundary_start": "2021-01-04",
+          "validation_boundary_end": "2021-12-30",
+          "train_first_sample": "2010-03-30",
+          "train_last_sample": "2020-12-01",
+          "validation_first_sample": "2021-01-04",
+          "validation_last_sample": "2021-12-02",
+          "train_max_label_end": "2020-12-30",
+          "validation_max_label_end": "2021-12-30",
+          "train_cutoff_violations": 0,
+          "validation_future_endpoint_violations": 0,
+          "feature_order": [
+            "Log_Ret",
+            "Disparity"
+          ],
+          "common_Vol_Regime_window_mask": true,
+          "scaler": {
+            "fit_start": "2010-03-03",
+            "fit_end": "2020-12-01",
+            "fit_rows": 2654,
+            "feature_order": [
+              "Log_Ret",
+              "Disparity"
+            ],
+            "source_partition": "train",
+            "mean": [
+              0.000192473859746039,
+              0.0019356102821860134
+            ],
+            "scale": [
+              0.01085638047674761,
+              0.026518567479679078
+            ],
+            "var": [
+              0.00011786099705590667,
+              0.0007032344211742927
+            ]
+          },
+          "class_counts": {
+            "train": {
+              "0": 1145,
+              "1": 1490
+            },
+            "validation": {
+              "0": 131,
+              "1": 97
+            }
+          },
+          "manual_reference": {
+            "low": 0.007589727638523563,
+            "high": 0.010163301928026907,
+            "partition": "train",
+            "train_start": "2010-03-30",
+            "train_end": "2020-12-01",
+            "rows": 2635,
+            "validation_start": "2021-01-04",
+            "quantiles": [
+              30,
+              70
+            ],
+            "method": "linear",
+            "variable": "Vol_Regime"
+          },
+          "manual_validation_support": [
+            {
+              "regime": "Low_Vol",
+              "n": 41,
+              "n_class0": 36,
+              "n_class1": 5
+            },
+            {
+              "regime": "Mid_Vol",
+              "n": 95,
+              "n_class0": 47,
+              "n_class1": 48
+            },
+            {
+              "regime": "High_Vol",
+              "n": 92,
+              "n_class0": 48,
+              "n_class1": 44
+            }
+          ],
+          "independent_Test_rows": 0,
+          "2026_used": 0
+        },
+        "source_status": "BOTH_UNVERIFIED",
+        "production_PIT": "BLOCKED",
+        "O1_identical_STEP3A_arrays": false
+      }
+    }
+  },
+  "jobs": [
+    {
+      "run_id": "O1_seed12_A_RNN",
+      "origin": "O1",
+      "seed": 12,
+      "candidate": "A",
+      "model": "RNN",
+      "effective_seed": 113
+    },
+    {
+      "run_id": "O1_seed12_A_LSTM",
+      "origin": "O1",
+      "seed": 12,
+      "candidate": "A",
+      "model": "LSTM",
+      "effective_seed": 213
+    },
+    {
+      "run_id": "O1_seed12_A_GRU",
+      "origin": "O1",
+      "seed": 12,
+      "candidate": "A",
+      "model": "GRU",
+      "effective_seed": 313
+    },
+    {
+      "run_id": "O1_seed12_A_LTC",
+      "origin": "O1",
+      "seed": 12,
+      "candidate": "A",
+      "model": "LTC",
+      "effective_seed": 413
+    },
+    {
+      "run_id": "O1_seed12_A_CfC",
+      "origin": "O1",
+      "seed": 12,
+      "candidate": "A",
+      "model": "CfC",
+      "effective_seed": 513
+    },
+    {
+      "run_id": "O1_seed12_B_RNN",
+      "origin": "O1",
+      "seed": 12,
+      "candidate": "B",
+      "model": "RNN",
+      "effective_seed": 113
+    },
+    {
+      "run_id": "O1_seed12_B_LSTM",
+      "origin": "O1",
+      "seed": 12,
+      "candidate": "B",
+      "model": "LSTM",
+      "effective_seed": 213
+    },
+    {
+      "run_id": "O1_seed12_B_GRU",
+      "origin": "O1",
+      "seed": 12,
+      "candidate": "B",
+      "model": "GRU",
+      "effective_seed": 313
+    },
+    {
+      "run_id": "O1_seed12_B_LTC",
+      "origin": "O1",
+      "seed": 12,
+      "candidate": "B",
+      "model": "LTC",
+      "effective_seed": 413
+    },
+    {
+      "run_id": "O1_seed12_B_CfC",
+      "origin": "O1",
+      "seed": 12,
+      "candidate": "B",
+      "model": "CfC",
+      "effective_seed": 513
+    },
+    {
+      "run_id": "O2_seed2_A_RNN",
+      "origin": "O2",
+      "seed": 2,
+      "candidate": "A",
+      "model": "RNN",
+      "effective_seed": 103
+    },
+    {
+      "run_id": "O2_seed2_A_LSTM",
+      "origin": "O2",
+      "seed": 2,
+      "candidate": "A",
+      "model": "LSTM",
+      "effective_seed": 203
+    },
+    {
+      "run_id": "O2_seed2_A_GRU",
+      "origin": "O2",
+      "seed": 2,
+      "candidate": "A",
+      "model": "GRU",
+      "effective_seed": 303
+    },
+    {
+      "run_id": "O2_seed2_A_LTC",
+      "origin": "O2",
+      "seed": 2,
+      "candidate": "A",
+      "model": "LTC",
+      "effective_seed": 403
+    },
+    {
+      "run_id": "O2_seed2_A_CfC",
+      "origin": "O2",
+      "seed": 2,
+      "candidate": "A",
+      "model": "CfC",
+      "effective_seed": 503
+    },
+    {
+      "run_id": "O2_seed2_B_RNN",
+      "origin": "O2",
+      "seed": 2,
+      "candidate": "B",
+      "model": "RNN",
+      "effective_seed": 103
+    },
+    {
+      "run_id": "O2_seed2_B_LSTM",
+      "origin": "O2",
+      "seed": 2,
+      "candidate": "B",
+      "model": "LSTM",
+      "effective_seed": 203
+    },
+    {
+      "run_id": "O2_seed2_B_GRU",
+      "origin": "O2",
+      "seed": 2,
+      "candidate": "B",
+      "model": "GRU",
+      "effective_seed": 303
+    },
+    {
+      "run_id": "O2_seed2_B_LTC",
+      "origin": "O2",
+      "seed": 2,
+      "candidate": "B",
+      "model": "LTC",
+      "effective_seed": 403
+    },
+    {
+      "run_id": "O2_seed2_B_CfC",
+      "origin": "O2",
+      "seed": 2,
+      "candidate": "B",
+      "model": "CfC",
+      "effective_seed": 503
+    },
+    {
+      "run_id": "O2_seed12_A_RNN",
+      "origin": "O2",
+      "seed": 12,
+      "candidate": "A",
+      "model": "RNN",
+      "effective_seed": 113
+    },
+    {
+      "run_id": "O2_seed12_A_LSTM",
+      "origin": "O2",
+      "seed": 12,
+      "candidate": "A",
+      "model": "LSTM",
+      "effective_seed": 213
+    },
+    {
+      "run_id": "O2_seed12_A_GRU",
+      "origin": "O2",
+      "seed": 12,
+      "candidate": "A",
+      "model": "GRU",
+      "effective_seed": 313
+    },
+    {
+      "run_id": "O2_seed12_A_LTC",
+      "origin": "O2",
+      "seed": 12,
+      "candidate": "A",
+      "model": "LTC",
+      "effective_seed": 413
+    },
+    {
+      "run_id": "O2_seed12_A_CfC",
+      "origin": "O2",
+      "seed": 12,
+      "candidate": "A",
+      "model": "CfC",
+      "effective_seed": 513
+    },
+    {
+      "run_id": "O2_seed12_B_RNN",
+      "origin": "O2",
+      "seed": 12,
+      "candidate": "B",
+      "model": "RNN",
+      "effective_seed": 113
+    },
+    {
+      "run_id": "O2_seed12_B_LSTM",
+      "origin": "O2",
+      "seed": 12,
+      "candidate": "B",
+      "model": "LSTM",
+      "effective_seed": 213
+    },
+    {
+      "run_id": "O2_seed12_B_GRU",
+      "origin": "O2",
+      "seed": 12,
+      "candidate": "B",
+      "model": "GRU",
+      "effective_seed": 313
+    },
+    {
+      "run_id": "O2_seed12_B_LTC",
+      "origin": "O2",
+      "seed": 12,
+      "candidate": "B",
+      "model": "LTC",
+      "effective_seed": 413
+    },
+    {
+      "run_id": "O2_seed12_B_CfC",
+      "origin": "O2",
+      "seed": 12,
+      "candidate": "B",
+      "model": "CfC",
+      "effective_seed": 513
+    }
+  ],
+  "gates": [
+    {
+      "id": "STEP3A_10_preserved",
+      "status": "PASS",
+      "evidence": "All completed old identities + best/latest/history/probability hashes match; no rerun"
+    },
+    {
+      "id": "old_configuration_and_source",
+      "status": "PASS",
+      "evidence": "STEP3A config/runtime/data dependencies and exact model source unchanged"
+    },
+    {
+      "id": "candidate_integrity",
+      "status": "PASS",
+      "evidence": "Prior full candidate3939-session source hashes unchanged"
+    },
+    {
+      "id": "origin_boundaries",
+      "status": "PASS",
+      "evidence": "O1<=2020 andO2<=2021 distinct isolated prefixes; no postValidation numeric row parsed"
+    },
+    {
+      "id": "labels_purging",
+      "status": "PASS",
+      "evidence": "Official20-session endpoints; Train20purge; Validation20unknown; violations0"
+    },
+    {
+      "id": "scaler_mask",
+      "status": "PASS",
+      "evidence": "Train-only union of input-window dates; common Vol_Regime mask unchanged"
+    },
+    {
+      "id": "feature_order_shape",
+      "status": "PASS",
+      "evidence": "Log_Ret,Disparity;20x2 CPUfloat32 arrays; O1 bitwise matches STEP3A"
+    },
+    {
+      "id": "fixed_seed_hyperparameters",
+      "status": "PASS",
+      "evidence": "Seeds2/12 + original offsets; all model settings equal STEP3A"
+    },
+    {
+      "id": "new_fit_budget",
+      "status": "PASS",
+      "evidence": "Exactly30 new identities excluding O1Seed2; immutable reuse10"
+    },
+    {
+      "id": "Test_isolation",
+      "status": "PASS",
+      "evidence": "Each worker may only open ownOrigin input subtree and own fit directory"
+    },
+    {
+      "id": "manual_thresholds",
+      "status": "PASS",
+      "evidence": "Train-only30/70 quantiles frozen before predictions; no Validation refit"
+    },
+    {
+      "id": "runtime_environment",
+      "status": "PASS",
+      "evidence": "STEP3A CPU reference package versions unchanged; max2 processes,1LTC"
+    }
+  ],
+  "all_preflight_PASS": true,
+  "environment_versions": {
+    "torch": "2.10.0+cpu",
+    "ncps": "1.0.1",
+    "hmmlearn": "0.3.3",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "scikit-learn": "1.8.0",
+    "scipy": "1.17.0",
+    "future": "1.0.0",
+    "sympy": "1.14.0",
+    "networkx": "3.7",
+    "filelock": "4.2.4",
+    "fsspec": "2026.9.0",
+    "jinja2": "3.1.6",
+    "MarkupSafe": "3.0.3"
+  },
+  "model_settings": {
+    "hidden_size": 128,
+    "layers": 1,
+    "dropout": 0.2,
+    "window": 20,
+    "horizon": 20,
+    "batch": 64,
+    "max_epochs": 100,
+    "patience": 10,
+    "selection_metric": "balanced_accuracy",
+    "optimizer": "AdamW",
+    "lr": 0.005,
+    "weight_decay": 0.0001,
+    "scheduler": "OneCycleLR",
+    "focal_gamma": 2,
+    "focal_alpha": 0.25,
+    "gradient_clip": 1.0,
+    "dtype": "float32",
+    "amp": false,
+    "threshold": 0.5
+  },
+  "model_seed_offsets": {
+    "RNN": 101,
+    "LSTM": 201,
+    "GRU": 301,
+    "LTC": 401,
+    "CfC": 501
+  },
+  "full_calendar_sha256": "c426702db216604d70f15973654d204a3e6afdb8cef1ef1f62169bb0a0667d6c",
+  "full_calendar_count": 3939,
+  "new_fit_budget": 30,
+  "old_fit_reexecution_authorized": false,
+  "source_status": "BOTH_UNVERIFIED",
+  "production_PIT_status": "BLOCKED",
+  "training_enabled": false,
+  "hmm_fit_enabled": false,
+  "Test_evaluation_authorized": false,
+  "2026_used": 0
+}

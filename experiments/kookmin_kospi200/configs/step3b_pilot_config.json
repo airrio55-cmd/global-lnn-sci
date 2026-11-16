@@ -1,0 +1,164 @@
+{
+  "execution_mode": "STEP3B_RETROSPECTIVE_O1_O2_SEEDS2_12_AB_F1_CPU",
+  "pilot_execution_enabled": true,
+  "training_enabled": false,
+  "hmm_fit_enabled": false,
+  "gpu_enabled": false,
+  "production_gate_override": false,
+  "device": "cpu",
+  "amp": false,
+  "feature_order": [
+    "Log_Ret",
+    "Disparity"
+  ],
+  "origins": [
+    "O1",
+    "O2"
+  ],
+  "seeds": [
+    2,
+    12
+  ],
+  "price_candidates": [
+    "A",
+    "B"
+  ],
+  "models": [
+    "RNN",
+    "LSTM",
+    "GRU",
+    "LTC",
+    "CfC"
+  ],
+  "max_new_fits": 30,
+  "reused_fits": 10,
+  "independent_Test_access": false,
+  "model_settings": {
+    "hidden_size": 128,
+    "layers": 1,
+    "dropout": 0.2,
+    "window": 20,
+    "horizon": 20,
+    "batch": 64,
+    "max_epochs": 100,
+    "patience": 10,
+    "selection_metric": "balanced_accuracy",
+    "optimizer": "AdamW",
+    "lr": 0.005,
+    "weight_decay": 0.0001,
+    "scheduler": "OneCycleLR",
+    "focal_gamma": 2,
+    "focal_alpha": 0.25,
+    "gradient_clip": 1.0,
+    "dtype": "float32",
+    "amp": false,
+    "threshold": 0.5
+  },
+  "model_seed_offsets": {
+    "RNN": 101,
+    "LSTM": 201,
+    "GRU": 301,
+    "LTC": 401,
+    "CfC": 501
+  },
+  "source_notebook_file": "originals/kospi200_gpu_friendly_sota_fixed_20260311_junho_DEVICE_fixed_HMM_updated(10개시드_20일).ipynb",
+  "source_notebook_sha256": "b9e8542fc5783bc5dc734ddfd7bdfe69db26d4b540cde93ae3a722596485c1e7",
+  "original_definition_hashes": {
+    "FocalLoss": "99f31d22f4549d6b370b5a7ede5e2606830b7b20dd66f834fd6e3b3eb2174b7d",
+    "init_weights": "721f2894a7a6f3dc3518f3e80bd17dd7a04ab08f9cdd47762de6212d7e674697",
+    "RecurrentModel": "00844fd26fe3794dff89218879151544efe4b34cb07df9bd038f45e1dceec621",
+    "LNNModel": "ff2ec3b49fb1a96848b9a51aec6dbf4abfac5efdb02fa8fa10f48da77a7e0a7b",
+    "CfCModel": "2907b0ff7cc2dd6da70b9f9da189004de8f5e2d1fd8f2a06d14aeb26f438ebef"
+  },
+  "environment_versions": {
+    "torch": "2.10.0+cpu",
+    "ncps": "1.0.1",
+    "hmmlearn": "0.3.3",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "scikit-learn": "1.8.0",
+    "scipy": "1.17.0",
+    "future": "1.0.0",
+    "sympy": "1.14.0",
+    "networkx": "3.7",
+    "filelock": "4.2.4",
+    "fsspec": "2026.9.0",
+    "jinja2": "3.1.6",
+    "MarkupSafe": "3.0.3"
+  },
+  "environment_sha256": "a08a66d21e0347868e5d6b423cb755e55a5aab5a4af0f798730e38bd46490ee5",
+  "run_directory": "data/derived/step3b_pilot_20261116T165739_KST",
+  "implementation_artifacts": [
+    {
+      "file": "runtime/step3b_worker.py",
+      "sha256": "cc57070603b2e830097ded3edc36cb10302493a381b86bbbdceaeb4ce2d200c3"
+    },
+    {
+      "file": "runtime/step3b_manager.py",
+      "sha256": "bae3b4c2b7c799c8720b305afb164db3788f21d5e3d74661f315847a6647c480"
+    },
+    {
+      "file": "src/kospi200/rolling_pilot_data.py",
+      "sha256": "5cb2548afb34dd2a731b6cedeebaa4fe4f6a0b3c24cee36e9fd35678c664e81e"
+    },
+    {
+      "file": "src/kospi200/pilot_data.py",
+      "sha256": "d2467df781ef70f685ecb0318137ed604c6e75270dbefd657c03d082b0316a4a"
+    },
+    {
+      "file": "src/kospi200/data.py",
+      "sha256": "8761182107a2e5c3b9830ed6a295258c97574dee502b8bdcde1e202a5df8dc01"
+    },
+    {
+      "file": "src/kospi200/folds.py",
+      "sha256": "94c9d800d7f8056a95664e35839d339c25e7dbc58cc090febeb83945461400ea"
+    },
+    {
+      "file": "src/kospi200/manual_evaluation.py",
+      "sha256": "e1e1ad9cde026eedc5bf57ed5f809a65f9839aa13d99000af92e0a8eafc79a67"
+    },
+    {
+      "file": "src/kospi200/smoke_preparation.py",
+      "sha256": "f43a6b862a576be1c20c0c940e5fde2432c1f629c0e570d6f0933d4a8e62bf34"
+    },
+    {
+      "file": "runtime/step29_synthetic_smoke.py",
+      "sha256": "bbdff72425860e08878c5a99e148b80bd832570fd54fbb8bc698b27142818de7"
+    },
+    {
+      "file": "tools/step3b_prepare.py",
+      "sha256": "df4ba3e25c92cb5061086d325964a4442cec8d1b2b77d98365230565b027897e"
+    },
+    {
+      "file": "tools/step3b_worker.py",
+      "sha256": "a865f8a9eb2a2951446945dd98b1ec4a5045aa61147334dbf163da4aa326f8d9"
+    },
+    {
+      "file": "tools/step3b_pilot.py",
+      "sha256": "e0e36c4ec4bdb8076fddbda51db2e1239df5b4ceb1408b48f1f5caadb0763c3c"
+    }
+  ],
+  "scheduling": {
+    "maximum_worker_processes": 2,
+    "maximum_concurrent_LTC": 1,
+    "torch_threads_per_worker": 1
+  },
+  "resource_evidence": {
+    "cgroup_CPU_cores": 2,
+    "memory_bytes": 8589934592,
+    "LTC_serialized_for_memory": true
+  },
+  "source_status": "BOTH_UNVERIFIED",
+  "production_PIT_status": "BLOCKED",
+  "main_price_selection_allowed": false,
+  "epoch_limit": 100,
+  "patience": 10,
+  "selection": "Validation BA only, strict greater; ties increment patience",
+  "independent_Test_price_cutoffs": {
+    "O1": "2020-12-31",
+    "O2": "2021-12-31"
+  },
+  "manual_regime_policy": "Train-only raw Vol_Regime30/70(linear), retained Train base dates, fixed before training; one-class BA/MacroF1 null; no Validation refit",
+  "resume_policy": "Unique identity lock + global LTC memory lock; completed/failed cases not retrained; surviving workers attached; epoch-boundary resume only",
+  "statistics_policy": "Two seeds only, descriptive sample std ddof1; not confirmatory stability; no seed/model/source selection from Validation"
+}

@@ -1,0 +1,22 @@
+{
+  "scope": "STEP3B_RETROSPECTIVE_O1_O2_SEEDS2_12_AB_F1_CPU",
+  "approved": true,
+  "approved_by": "user",
+  "approval_reference": "Current STEP3B user instruction: retrospective CPU Train/Validation expansion only, O1/O2 seeds2,12 priceA/B F1 five architectures, reuseold10 and max30 new fits; noTest/HMM/GPU/full5Origin10Seed/Ablation",
+  "recorded_at_kst": "2026-11-16T17:04:17.196096+09:00",
+  "config_sha256": "9a5a5f95c98d188c79ac197590052673ea627db0d70958455b0a1eee3c8bacdc",
+  "worker_sha256": "cc57070603b2e830097ded3edc36cb10302493a381b86bbbdceaeb4ce2d200c3",
+  "manager_sha256": "bae3b4c2b7c799c8720b305afb164db3788f21d5e3d74661f315847a6647c480",
+  "preflight_sha256": "b8b18e5669bb145579d5c6458c298a923c0e3a875872fadbba491953e532d2dc",
+  "permits_Test": false,
+  "permits_HMM_fit": false,
+  "permits_GPU": false,
+  "old10_refit_authorized": false,
+  "production_training_authorized": false,
+  "max_new_fits": 30,
+  "max_epochs": 100,
+  "patience": 10,
+  "resume_same_incomplete_identities_only": true,
+  "manual_Validation_regime_diagnostics_authorized": true,
+  "main_price_source_selection_authorized": false
+}

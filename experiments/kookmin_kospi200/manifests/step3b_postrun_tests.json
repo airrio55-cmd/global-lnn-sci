@@ -1,0 +1,71 @@
+{
+  "passed": 16,
+  "failed": 0,
+  "scope": "Stored Origin-specific Validation/checkpoint/aggregation checks; no refit or Test evaluation",
+  "tests": [
+    {
+      "id": "test_01_40_unique_and30new10reused",
+      "status": "PASS"
+    },
+    {
+      "id": "test_02_original_completion_and_checkpoints_unchanged",
+      "status": "PASS"
+    },
+    {
+      "id": "test_03_no_new_O1_seed2_and_exact_grid",
+      "status": "PASS"
+    },
+    {
+      "id": "test_04_origin_cutoffs_purge_scaler_and_support",
+      "status": "PASS"
+    },
+    {
+      "id": "test_05_best_first_max_and_frozen_earlystop",
+      "status": "PASS"
+    },
+    {
+      "id": "test_06_every_case_reported_no_failed_seed_replacement",
+      "status": "PASS"
+    },
+    {
+      "id": "test_07_new_checkpoints_epoch_batch_rng_hashes",
+      "status": "PASS"
+    },
+    {
+      "id": "test_08_worker_origin_barriers_and_scope",
+      "status": "PASS"
+    },
+    {
+      "id": "test_09_degenerate_ratio_and_flags",
+      "status": "PASS"
+    },
+    {
+      "id": "test_10_manual_support_and_singleclass_null",
+      "status": "PASS"
+    },
+    {
+      "id": "test_11_manual_metrics_same_probabilities_and_date_keys",
+      "status": "PASS"
+    },
+    {
+      "id": "test_12_seed_std_ddof1_n2_and_no_confirmatory_claim",
+      "status": "PASS"
+    },
+    {
+      "id": "test_13_reused_metrics_exactly_step3A",
+      "status": "PASS"
+    },
+    {
+      "id": "test_14_frozen_sources_production_flags_and_source_status",
+      "status": "PASS"
+    },
+    {
+      "id": "test_15_rebuild_origin_arrays_scaler_and20session_labels",
+      "status": "PASS"
+    },
+    {
+      "id": "test_16_allowed_prefix_future_perturbation_and_exact_update_budget",
+      "status": "PASS"
+    }
+  ]
+}

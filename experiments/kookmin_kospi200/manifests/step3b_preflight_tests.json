@@ -1,0 +1,5 @@
+{
+  "passed": 12,
+  "failed": 0,
+  "scope": "preflight data/source/authorization only; no model fitting"
+}
