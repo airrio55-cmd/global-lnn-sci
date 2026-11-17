@@ -1,0 +1,11 @@
+{
+  "stage": "STEP4B_OLD100_EXTENDED_AUDIT",
+  "unique_old_completed": 100,
+  "STEP3D_aliases_checked": 20,
+  "STEP3D_hash_comparisons": 60,
+  "alias_conflicts": 0,
+  "alias_rows_added_to_fit_count": 0,
+  "stored_artifact_hash_checks": 510,
+  "newfits_authorized": 100,
+  "old100_refit": false
+}

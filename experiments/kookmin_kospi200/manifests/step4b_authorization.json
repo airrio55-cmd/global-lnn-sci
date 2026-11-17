@@ -1,0 +1,21 @@
+{
+  "approved": true,
+  "approved_by": "user",
+  "approval_reference": "User STEP4B explicit request: exactly100 CPU retrospective Train/Validation fits; OriginsO1..O5, A/B, Seeds22/32, five F1 models; not remaining400",
+  "approved_at_kst": "2026-11-17T08:40:30.580030+09:00",
+  "scope": "STEP4B_O1_O5_AB_SEEDS22_32_F1_CPU",
+  "config_sha256": "a9aa35031708105ce04b7d79fada02e371dba6832e4c5455df66cee21b61a505",
+  "worker_sha256": "a25bb61b96ad8473a37993699904c7358f77dea4c977cf6ea7740254be0123c5",
+  "manager_sha256": "07ea350cfe138a40177037f6c123dd1d91702c47a6b68262966761be9d279d80",
+  "preflight_sha256": "dd98e2c31f09b3750872f777e1a36300c223b6fd774e57f7635911664dc507fc",
+  "master_config_sha256": "f4ea7a18d7812b00b8c581191a110f63a6799a22e066484ec251ee32f7912c5c",
+  "max_new_fits": 100,
+  "permits_Test": false,
+  "permits_HMM_fit": false,
+  "permits_GPU": false,
+  "old100_refit_authorized": false,
+  "acknowledges_BOTH_UNVERIFIED": true,
+  "permits_seed42plus": false,
+  "permits_tau_forward": false,
+  "permits_confirmatory_pvalues": false
+}

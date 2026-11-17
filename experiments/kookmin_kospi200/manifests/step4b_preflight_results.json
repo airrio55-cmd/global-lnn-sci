@@ -1,0 +1,396 @@
+{
+  "stage": "STEP4B",
+  "status": "PASS",
+  "passed": 95,
+  "failed": 0,
+  "checks": [
+    {
+      "id": "exact_new100_roster",
+      "status": "PASS"
+    },
+    {
+      "id": "approval_scope",
+      "status": "PASS"
+    },
+    {
+      "id": "reject_seeds",
+      "status": "PASS"
+    },
+    {
+      "id": "reject_max_new_fits",
+      "status": "PASS"
+    },
+    {
+      "id": "reject_gpu_enabled",
+      "status": "PASS"
+    },
+    {
+      "id": "reject_training_enabled",
+      "status": "PASS"
+    },
+    {
+      "id": "reject_models",
+      "status": "PASS"
+    },
+    {
+      "id": "frozen_runtime/step4b_worker.py",
+      "status": "PASS"
+    },
+    {
+      "id": "frozen_runtime/step4b_manager.py",
+      "status": "PASS"
+    },
+    {
+      "id": "frozen_runtime/step4b_checkpoint_audit.py",
+      "status": "PASS"
+    },
+    {
+      "id": "frozen_src/kospi200/step4b_scope.py",
+      "status": "PASS"
+    },
+    {
+      "id": "frozen_tools/step4b_worker.py",
+      "status": "PASS"
+    },
+    {
+      "id": "frozen_tools/step4b_pilot.py",
+      "status": "PASS"
+    },
+    {
+      "id": "frozen_tools/step4b_prepare.py",
+      "status": "PASS"
+    },
+    {
+      "id": "frozen_tools/step4b_smoke.py",
+      "status": "PASS"
+    },
+    {
+      "id": "frozen_runtime/step3c_worker.py",
+      "status": "PASS"
+    },
+    {
+      "id": "frozen_runtime/step3c_manager.py",
+      "status": "PASS"
+    },
+    {
+      "id": "frozen_src/kospi200/master_protocol.py",
+      "status": "PASS"
+    },
+    {
+      "id": "frozen_src/kospi200/master_data.py",
+      "status": "PASS"
+    },
+    {
+      "id": "frozen_src/kospi200/data.py",
+      "status": "PASS"
+    },
+    {
+      "id": "frozen_src/kospi200/folds.py",
+      "status": "PASS"
+    },
+    {
+      "id": "frozen_src/kospi200/manual_evaluation.py",
+      "status": "PASS"
+    },
+    {
+      "id": "frozen_src/kospi200/pilot_data.py",
+      "status": "PASS"
+    },
+    {
+      "id": "frozen_src/kospi200/smoke_preparation.py",
+      "status": "PASS"
+    },
+    {
+      "id": "frozen_runtime/step29_synthetic_smoke.py",
+      "status": "PASS"
+    },
+    {
+      "id": "frozen_tools/step3c_worker.py",
+      "status": "PASS"
+    },
+    {
+      "id": "frozen_tools/step3c_pilot.py",
+      "status": "PASS"
+    },
+    {
+      "id": "frozen_tools/step3c_prepare.py",
+      "status": "PASS"
+    },
+    {
+      "id": "frozen_src/kospi200/master_statistics.py",
+      "status": "PASS"
+    },
+    {
+      "id": "frozen_src/kospi200/master_tau.py",
+      "status": "PASS"
+    },
+    {
+      "id": "frozen_src/kospi200/tau.py",
+      "status": "PASS"
+    },
+    {
+      "id": "frozen_src/kospi200/statistics.py",
+      "status": "PASS"
+    },
+    {
+      "id": "frozen_src/kospi200/regimes.py",
+      "status": "PASS"
+    },
+    {
+      "id": "frozen_src/kospi200/specs.py",
+      "status": "PASS"
+    },
+    {
+      "id": "frozen_tools/step3c_freeze.py",
+      "status": "PASS"
+    },
+    {
+      "id": "frozen_src/kospi200/master_ensemble.py",
+      "status": "PASS"
+    },
+    {
+      "id": "O1_actual_worker_barrier",
+      "status": "PASS"
+    },
+    {
+      "id": "O1A_cutoffs",
+      "status": "PASS"
+    },
+    {
+      "id": "O1A_train_scaler",
+      "status": "PASS"
+    },
+    {
+      "id": "O1A_input_shape_dtype_finite",
+      "status": "PASS"
+    },
+    {
+      "id": "O1A_future_feature_perturbation",
+      "status": "PASS"
+    },
+    {
+      "id": "O1A_exact20_label_end",
+      "status": "PASS"
+    },
+    {
+      "id": "O1B_cutoffs",
+      "status": "PASS"
+    },
+    {
+      "id": "O1B_train_scaler",
+      "status": "PASS"
+    },
+    {
+      "id": "O1B_input_shape_dtype_finite",
+      "status": "PASS"
+    },
+    {
+      "id": "O1B_future_feature_perturbation",
+      "status": "PASS"
+    },
+    {
+      "id": "O1B_exact20_label_end",
+      "status": "PASS"
+    },
+    {
+      "id": "O2_actual_worker_barrier",
+      "status": "PASS"
+    },
+    {
+      "id": "O2A_cutoffs",
+      "status": "PASS"
+    },
+    {
+      "id": "O2A_train_scaler",
+      "status": "PASS"
+    },
+    {
+      "id": "O2A_input_shape_dtype_finite",
+      "status": "PASS"
+    },
+    {
+      "id": "O2A_future_feature_perturbation",
+      "status": "PASS"
+    },
+    {
+      "id": "O2A_exact20_label_end",
+      "status": "PASS"
+    },
+    {
+      "id": "O2B_cutoffs",
+      "status": "PASS"
+    },
+    {
+      "id": "O2B_train_scaler",
+      "status": "PASS"
+    },
+    {
+      "id": "O2B_input_shape_dtype_finite",
+      "status": "PASS"
+    },
+    {
+      "id": "O2B_future_feature_perturbation",
+      "status": "PASS"
+    },
+    {
+      "id": "O2B_exact20_label_end",
+      "status": "PASS"
+    },
+    {
+      "id": "O3_actual_worker_barrier",
+      "status": "PASS"
+    },
+    {
+      "id": "O3A_cutoffs",
+      "status": "PASS"
+    },
+    {
+      "id": "O3A_train_scaler",
+      "status": "PASS"
+    },
+    {
+      "id": "O3A_input_shape_dtype_finite",
+      "status": "PASS"
+    },
+    {
+      "id": "O3A_future_feature_perturbation",
+      "status": "PASS"
+    },
+    {
+      "id": "O3A_exact20_label_end",
+      "status": "PASS"
+    },
+    {
+      "id": "O3B_cutoffs",
+      "status": "PASS"
+    },
+    {
+      "id": "O3B_train_scaler",
+      "status": "PASS"
+    },
+    {
+      "id": "O3B_input_shape_dtype_finite",
+      "status": "PASS"
+    },
+    {
+      "id": "O3B_future_feature_perturbation",
+      "status": "PASS"
+    },
+    {
+      "id": "O3B_exact20_label_end",
+      "status": "PASS"
+    },
+    {
+      "id": "O4_actual_worker_barrier",
+      "status": "PASS"
+    },
+    {
+      "id": "O4A_cutoffs",
+      "status": "PASS"
+    },
+    {
+      "id": "O4A_train_scaler",
+      "status": "PASS"
+    },
+    {
+      "id": "O4A_input_shape_dtype_finite",
+      "status": "PASS"
+    },
+    {
+      "id": "O4A_future_feature_perturbation",
+      "status": "PASS"
+    },
+    {
+      "id": "O4A_exact20_label_end",
+      "status": "PASS"
+    },
+    {
+      "id": "O4B_cutoffs",
+      "status": "PASS"
+    },
+    {
+      "id": "O4B_train_scaler",
+      "status": "PASS"
+    },
+    {
+      "id": "O4B_input_shape_dtype_finite",
+      "status": "PASS"
+    },
+    {
+      "id": "O4B_future_feature_perturbation",
+      "status": "PASS"
+    },
+    {
+      "id": "O4B_exact20_label_end",
+      "status": "PASS"
+    },
+    {
+      "id": "O5_actual_worker_barrier",
+      "status": "PASS"
+    },
+    {
+      "id": "O5A_cutoffs",
+      "status": "PASS"
+    },
+    {
+      "id": "O5A_train_scaler",
+      "status": "PASS"
+    },
+    {
+      "id": "O5A_input_shape_dtype_finite",
+      "status": "PASS"
+    },
+    {
+      "id": "O5A_future_feature_perturbation",
+      "status": "PASS"
+    },
+    {
+      "id": "O5A_exact20_label_end",
+      "status": "PASS"
+    },
+    {
+      "id": "O5B_cutoffs",
+      "status": "PASS"
+    },
+    {
+      "id": "O5B_train_scaler",
+      "status": "PASS"
+    },
+    {
+      "id": "O5B_input_shape_dtype_finite",
+      "status": "PASS"
+    },
+    {
+      "id": "O5B_future_feature_perturbation",
+      "status": "PASS"
+    },
+    {
+      "id": "O5B_exact20_label_end",
+      "status": "PASS"
+    },
+    {
+      "id": "new_runner_actual_synthetic_smoke",
+      "status": "PASS"
+    },
+    {
+      "id": "existing_all_files_unchanged",
+      "status": "PASS"
+    },
+    {
+      "id": "public_schema_manifests/step4b_job_roster.csv",
+      "status": "PASS"
+    },
+    {
+      "id": "public_schema_manifests/step4b_baseline100_metrics.csv",
+      "status": "PASS"
+    }
+  ],
+  "config_sha256": "a9aa35031708105ce04b7d79fada02e371dba6832e4c5455df66cee21b61a505",
+  "worker_sha256": "a25bb61b96ad8473a37993699904c7358f77dea4c977cf6ea7740254be0123c5",
+  "runner_smoke_sha256": "1a7062eb7afce41f1b59209381b13bf4ef96d94695c8149a5b7c79fd3ab48409",
+  "old100_preserved": true,
+  "new_fit_budget": 100,
+  "price_PIT_status": "BLOCKED",
+  "source_status": "BOTH_UNVERIFIED",
+  "independent_Test_evaluation_enabled": false
+}

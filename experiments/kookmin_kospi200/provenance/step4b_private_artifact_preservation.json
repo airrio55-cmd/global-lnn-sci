@@ -1,0 +1,59 @@
+{
+  "retained_locally": true,
+  "detailed_artifacts_published": false,
+  "artifacts": [
+    {
+      "file": "manifests/step4b_epoch_history.csv",
+      "sha256": "f1a893fc2a7d4ead9e1e5ee6831d9ce1dcede065b8ba0fc11185240bc2551e69"
+    },
+    {
+      "file": "manifests/step4b_runs.csv",
+      "sha256": "9f0a0e5003606720a32c6e029a3af9d64759061c7bb86594817113755fc5f722"
+    },
+    {
+      "file": "manifests/step4b_metrics.csv",
+      "sha256": "8da2b6bc0516a16fb97e024df4716797bfd3c8437961f46ff157de36a039ce39"
+    },
+    {
+      "file": "manifests/step4b_all200_diagnostic_metrics.csv",
+      "sha256": "5706509dacf967ea95df515a949e6eaaf9665cbb9d2fe518e824c242a8b93a2e"
+    },
+    {
+      "file": "manifests/step4b_origin_cohorts.csv",
+      "sha256": "c262b121fea9f2673bb4bb6ac7e547e39d167b100f5b3c003a9120291e7cd995"
+    },
+    {
+      "file": "manifests/step4b_manual_regime_metrics.csv",
+      "sha256": "3dd2e80dd4a7a3a54c6d2ca426c668d4e418aecec5124d4456b82db176b2168a"
+    },
+    {
+      "file": "reports/STEP4B_100FIT_BASELINE_AUDIT_KO.md",
+      "sha256": "5d1aacd57ceedea17d83f212d7620c1c27feb25a3c4040c4096288b1895da1ad"
+    },
+    {
+      "file": "reports/STEP4B_200FIT_RESULTS_KO.md",
+      "sha256": "57f438cecd7baa065d76fbc1899051af711894f97267b9cdab5541c512c970e2"
+    },
+    {
+      "file": "reports/STEP4B_EXECUTION_AUDIT_KO.md",
+      "sha256": "71278ee475c2d2068b039d6ee2a54244de45b1d5717161656541a2991fddddd2"
+    },
+    {
+      "file": "reports/STEP4B_LTC_DIAGNOSTICS_KO.md",
+      "sha256": "ba5900e6e40041ea1428189d131c018273b8c07067ee1f000c85136dc053099b"
+    },
+    {
+      "file": "reports/STEP4B_NEXT_GATES_KO.md",
+      "sha256": "a9a365d963881bdf88eeb71ff35257a34324cc81ccbf997536a70b47b5ab5cc5"
+    },
+    {
+      "file": "reports/STEP4B_PRICE_SENSITIVITY_KO.md",
+      "sha256": "42dac90bd7770b17f3de78ff970d41141033ff55467e071da4edfa60acb40d23"
+    },
+    {
+      "file": "reports/STEP4B_SEED_STABILITY_KO.md",
+      "sha256": "07f7ba4e72764acd084b4e983de9d75012e2c165ef9839500b227b2a5a2faf3c"
+    }
+  ],
+  "reason": "Automatic approval review restricted detailed per-fit/per-epoch research outputs, class supports and numeric Train thresholds; only multi-fit aggregates and hashes are public."
+}
