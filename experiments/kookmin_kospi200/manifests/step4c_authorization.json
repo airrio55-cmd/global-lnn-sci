@@ -1,0 +1,22 @@
+{
+  "approved": true,
+  "approved_by": "user",
+  "approval_reference": "User STEP4C pasted request: exactly150 retrospective CPU Train/Validation fits; OriginsO1..O5, A/B, Seeds42/52/62, five F1 models; not Seed72/82/92",
+  "request_sha256": "d379e37c64b8fd64b2df013cf39518849623c40f93191d41fd7e78b25d2282ec",
+  "approved_at_kst": "2026-11-17T16:31:10.153942+09:00",
+  "scope": "STEP4C_O1_O5_AB_SEEDS42_52_62_F1_CPU",
+  "config_sha256": "d7f2bfd017bf10f90ab59d5b2a99022caedad4708b712fc971c1850a44eccd5c",
+  "worker_sha256": "13baf6ed14b608c7f2a27c0aaddf7c87cda24c9cd120cdc9aee731643ea8e9c7",
+  "manager_sha256": "fb1513a7d7c96918bf2ff5e1939293b23a314a54d5f2430ec0d472f23fe9e1a0",
+  "preflight_sha256": "5db2194ef8da72b37f2195cbfa3e94eb54fc344315e304fd325cbc25b7fadb45",
+  "master_config_sha256": "f4ea7a18d7812b00b8c581191a110f63a6799a22e066484ec251ee32f7912c5c",
+  "max_new_fits": 150,
+  "permits_Test": false,
+  "permits_HMM_fit": false,
+  "permits_GPU": false,
+  "old200_refit_authorized": false,
+  "acknowledges_BOTH_UNVERIFIED": true,
+  "permits_seed72plus": false,
+  "permits_tau_forward": false,
+  "permits_confirmatory_pvalues": false
+}

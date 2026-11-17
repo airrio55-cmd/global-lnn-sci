@@ -1,0 +1,118 @@
+{
+  "stage": "STEP4C_NEW_RUNNER_SMOKE",
+  "status": "PASS",
+  "config_sha256": "d7f2bfd017bf10f90ab59d5b2a99022caedad4708b712fc971c1850a44eccd5c",
+  "worker_sha256": "13baf6ed14b608c7f2a27c0aaddf7c87cda24c9cd120cdc9aee731643ea8e9c7",
+  "smoke_source_sha256": "5f403e263088bcef638624d430ba5ba6cdaed4e231c362491fd9f5758269117a",
+  "models": [
+    {
+      "model": "RNN",
+      "status": "PASS",
+      "input_shape": [
+        64,
+        20,
+        2
+      ],
+      "output_shape": [
+        64,
+        2
+      ],
+      "parameters": 17154,
+      "loss_finite": true,
+      "gradient_finite": true,
+      "checkpoint_restore_exact": true,
+      "RNG_restore_exact": true,
+      "synthetic_optimizer_updates": 1,
+      "market_optimizer_updates": 0
+    },
+    {
+      "model": "LSTM",
+      "status": "PASS",
+      "input_shape": [
+        64,
+        20,
+        2
+      ],
+      "output_shape": [
+        64,
+        2
+      ],
+      "parameters": 67842,
+      "loss_finite": true,
+      "gradient_finite": true,
+      "checkpoint_restore_exact": true,
+      "RNG_restore_exact": true,
+      "synthetic_optimizer_updates": 1,
+      "market_optimizer_updates": 0
+    },
+    {
+      "model": "GRU",
+      "status": "PASS",
+      "input_shape": [
+        64,
+        20,
+        2
+      ],
+      "output_shape": [
+        64,
+        2
+      ],
+      "parameters": 50946,
+      "loss_finite": true,
+      "gradient_finite": true,
+      "checkpoint_restore_exact": true,
+      "RNG_restore_exact": true,
+      "synthetic_optimizer_updates": 1,
+      "market_optimizer_updates": 0
+    },
+    {
+      "model": "LTC",
+      "status": "PASS",
+      "input_shape": [
+        64,
+        20,
+        2
+      ],
+      "output_shape": [
+        64,
+        2
+      ],
+      "parameters": 67462,
+      "loss_finite": true,
+      "gradient_finite": true,
+      "checkpoint_restore_exact": true,
+      "RNG_restore_exact": true,
+      "synthetic_optimizer_updates": 1,
+      "market_optimizer_updates": 0
+    },
+    {
+      "model": "CfC",
+      "status": "PASS",
+      "input_shape": [
+        64,
+        20,
+        2
+      ],
+      "output_shape": [
+        64,
+        2
+      ],
+      "parameters": 83074,
+      "loss_finite": true,
+      "gradient_finite": true,
+      "checkpoint_restore_exact": true,
+      "RNG_restore_exact": true,
+      "synthetic_optimizer_updates": 1,
+      "market_optimizer_updates": 0
+    }
+  ],
+  "unapproved_entrypoint_rejected": true,
+  "scope_mutations_rejected": 4,
+  "crossOrigin_opens_rejected": 4,
+  "financial_market_inputs_used": 0,
+  "synthetic_only": true,
+  "GPU": 0,
+  "HMM_fit": 0,
+  "master_training_enabled": false,
+  "runner_scope": "New worker entrypoint rejection, valid approval, actual bundle/RNG helper AST, original definitions, forward/backward/optimizer/scheduler/checkpoint on one synthetic batch per model. Full real fit loop not executed by smoke."
+}

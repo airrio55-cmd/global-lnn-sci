@@ -1,0 +1,71 @@
+{
+  "stage": "STEP4C",
+  "execution_mode": "STEP4C_O1_O5_AB_SEEDS42_52_62_F1_CPU",
+  "origins": [
+    "O1",
+    "O2",
+    "O3",
+    "O4",
+    "O5"
+  ],
+  "seeds": [
+    42,
+    52,
+    62
+  ],
+  "price_candidates": [
+    "A",
+    "B"
+  ],
+  "models": [
+    "RNN",
+    "LSTM",
+    "GRU",
+    "LTC",
+    "CfC"
+  ],
+  "max_new_fits": 150,
+  "feature_order": [
+    "Log_Ret",
+    "Disparity"
+  ],
+  "model_settings": {
+    "hidden_size": 128,
+    "layers": 1,
+    "dropout": 0.2,
+    "window": 20,
+    "horizon": 20,
+    "batch": 64,
+    "max_epochs": 100,
+    "patience": 10,
+    "selection_metric": "balanced_accuracy",
+    "optimizer": "AdamW",
+    "lr": 0.005,
+    "weight_decay": 0.0001,
+    "scheduler": "OneCycleLR",
+    "focal_gamma": 2,
+    "focal_alpha": 0.25,
+    "gradient_clip": 1.0,
+    "dtype": "float32",
+    "amp": false,
+    "threshold": 0.5
+  },
+  "model_seed_offsets": {
+    "RNN": 101,
+    "LSTM": 201,
+    "GRU": 301,
+    "LTC": 401,
+    "CfC": 501
+  },
+  "source_status": "BOTH_UNVERIFIED",
+  "master_config_sha256": "f4ea7a18d7812b00b8c581191a110f63a6799a22e066484ec251ee32f7912c5c",
+  "learning_kernel_sha256": "676cff063a52141a62fef3f9cda96db582fb75a8a831f54b1a18d3aba91eff09",
+  "environment_sha256": "a08a66d21e0347868e5d6b423cb755e55a5aab5a4af0f798730e38bd46490ee5",
+  "training_enabled": false,
+  "hmm_fit_enabled": false,
+  "new_fit_execution_enabled": false,
+  "step4c_execution_enabled": true,
+  "gpu_enabled": false,
+  "private_operational_config_sha256": "d7f2bfd017bf10f90ab59d5b2a99022caedad4708b712fc971c1850a44eccd5c",
+  "disclosure": "Redacted public specification; private operational paths and metadata excluded."
+}

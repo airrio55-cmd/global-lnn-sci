@@ -1,0 +1,20 @@
+{
+  "stage": "STEP4C",
+  "old_unique_completed_preserved": 200,
+  "new_fit_budget": 150,
+  "new_completed": 150,
+  "new_failed": 0,
+  "new_blocked": 0,
+  "total_unique_completed": 350,
+  "remaining_unique_fits": 150,
+  "preflight_PASS": 95,
+  "postrun_PASS": 16,
+  "postrun_FAIL": 0,
+  "Test_evaluation": false,
+  "HMM_fit": false,
+  "GPU": false,
+  "training_enabled": false,
+  "hmm_fit_enabled": false,
+  "source_status": "BOTH_UNVERIFIED",
+  "production_PIT": "BLOCKED"
+}

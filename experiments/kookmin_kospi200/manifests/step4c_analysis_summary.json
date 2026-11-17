@@ -1,0 +1,31 @@
+{
+  "stage": "STEP4C",
+  "old_completed_unchanged": 200,
+  "new_planned": 150,
+  "new_completed": 150,
+  "new_failed": 0,
+  "new_blocked": 0,
+  "new_interrupted": 0,
+  "total_actual_completed": 350,
+  "new_epochs": 3052,
+  "new_optimizer_updates": 138677,
+  "new_best_checkpoint_degenerate_cases": 8,
+  "new_checkpoint_audits_PASS": 150,
+  "manual_rows": 1050,
+  "empty_or_single_actual_class_regime_rows": 210,
+  "price_status": "BOTH_UNVERIFIED",
+  "price_source_selected": false,
+  "per_origin_Test_price_values_used": {
+    "O1": 0,
+    "O2": 0,
+    "O3": 0,
+    "O4": 0,
+    "O5": 0
+  },
+  "Test_evaluations": 0,
+  "HMM_fit": 0,
+  "GPU": 0,
+  "tau_forward": 0,
+  "confirmatory_pvalues": 0,
+  "2026_used": 0
+}

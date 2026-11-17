@@ -1,0 +1,11 @@
+{
+  "stage": "STEP4C_OLD200_AUDIT",
+  "unique_old_completed": 200,
+  "duplicate_count": 0,
+  "conflict_count": 0,
+  "STEP3D_aliases_reused_not_counted": 20,
+  "STEP3D_alias_hash_comparisons": 60,
+  "stored_artifact_hash_checks": 1010,
+  "old200_refit": false,
+  "new_fit_budget": 150
+}
