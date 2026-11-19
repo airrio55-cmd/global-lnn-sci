@@ -1,0 +1,78 @@
+{
+  "passed": 18,
+  "failed": 0,
+  "tests": [
+    {
+      "id": "test_01_exact40_new100_diagnostic",
+      "status": "PASS"
+    },
+    {
+      "id": "test_02_approved_origin_seed_model_offsets",
+      "status": "PASS"
+    },
+    {
+      "id": "test_03_old350_hashes_unchanged",
+      "status": "PASS"
+    },
+    {
+      "id": "test_04_master_and_frozen_sources_identical",
+      "status": "PASS"
+    },
+    {
+      "id": "test_05_no_Origin_future_prices_or_label_end",
+      "status": "PASS"
+    },
+    {
+      "id": "test_06_scaler_only_retained_train_input_union",
+      "status": "PASS"
+    },
+    {
+      "id": "test_07_earlystop_first_max_BA_and_counter",
+      "status": "PASS"
+    },
+    {
+      "id": "test_08_history_finite_and_all_epoch_diagnostics",
+      "status": "PASS"
+    },
+    {
+      "id": "test_09_optimizer_scheduler_budget_by_origin",
+      "status": "PASS"
+    },
+    {
+      "id": "test_10_checkpoint_reload_logits_rng_audit",
+      "status": "PASS"
+    },
+    {
+      "id": "test_11_manual_null_policy_and_support",
+      "status": "PASS"
+    },
+    {
+      "id": "test_12_no_Test_GPU_HMM_and_future_access",
+      "status": "PASS"
+    },
+    {
+      "id": "test_13_seed_summary_n2_ddof1_no_seed_pooling",
+      "status": "PASS"
+    },
+    {
+      "id": "test_14_all_existing_files_preserved",
+      "status": "PASS"
+    },
+    {
+      "id": "test_15_ten_seed_median_and_range_with_no_missing_zero_fill",
+      "status": "PASS"
+    },
+    {
+      "id": "test_16_exact10seeds_and_no_double_counted_STEP3D",
+      "status": "PASS"
+    },
+    {
+      "id": "test_17_comparison_readiness_is_Validation_only_no_inference",
+      "status": "PASS"
+    },
+    {
+      "id": "test_18_resume_and_completed_skip_counts_are_observed",
+      "status": "PASS"
+    }
+  ]
+}

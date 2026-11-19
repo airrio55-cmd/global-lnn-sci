@@ -1,0 +1,10 @@
+{
+  "stage": "STEP4D",
+  "old_unique_completed": 350,
+  "duplicates": 0,
+  "conflicts": 0,
+  "STEP3D_aliases_excluded": 20,
+  "old_artifact_hash_checks": 1760,
+  "original_snapshot_files": 4447,
+  "status": "PASS"
+}

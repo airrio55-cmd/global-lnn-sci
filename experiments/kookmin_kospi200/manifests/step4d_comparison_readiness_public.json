@@ -1,0 +1,27 @@
+{
+  "stage": "STEP4D_COMPARISON_INPUT_AUDIT",
+  "status": "PASS",
+  "scope": "Stored Validation alignment only; not independent Test inference readiness",
+  "planned_fit_identities": 500,
+  "actually_completed_fits": 500,
+  "verified_checkpoint_probability_bundles": 500,
+  "paired_validation_cohorts": 10,
+  "primary_family_size": 20,
+  "secondary_family_size": 80,
+  "origin_diagnostic_family_size": 100,
+  "bootstrap_block_lengths": [
+    20,
+    40,
+    60
+  ],
+  "bootstrap_replicates_planned": 10000,
+  "bootstrap_seed": 20261116,
+  "bootstrap_draws_executed": 0,
+  "confirmatory_pvalues_executed": 0,
+  "independent_Test_inputs_read": 0,
+  "independent_Test_predictions_created": 0,
+  "independent_Test_probability_files_verified": 0,
+  "independent_Test_gate": "BLOCKED_PENDING_SEPARATE_APPROVAL_AND_PROTOCOL_GATES",
+  "seed_pooling_as_market_observations": false,
+  "bootstrap_plan_sha256": "32ca54b0501a2ab5eddef5bb8ebc31320807e5076e10f0b20d3bb7e253175c69"
+}
