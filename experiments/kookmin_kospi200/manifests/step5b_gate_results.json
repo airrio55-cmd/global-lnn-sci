@@ -1,0 +1,18 @@
+{
+  "execution_gate": "PASS",
+  "completed": 500,
+  "failed": 0,
+  "BLOCKED": 0,
+  "preflight_PASS": 1707,
+  "unit_tests_PASS": 17,
+  "authorization_tamper_PASS": 6,
+  "runtime_barrier_PASS": 5,
+  "postrun_PASS": 4505,
+  "postrun_FAIL": 0,
+  "policy_consistency": "PASS_VERSIONED_STEP5B_POLICY",
+  "production_PIT": "BLOCKED",
+  "historical_available_at": "UNKNOWN",
+  "source_status": "BOTH_UNVERIFIED",
+  "financial_statistics_executed": 0,
+  "next_experiment_authorized": false
+}
