@@ -1,0 +1,316 @@
+{
+  "stage": "STEP5A",
+  "preparation_validation_PASS": 55,
+  "BLOCKED": 6,
+  "FAIL": 0,
+  "checks": [
+    {
+      "id": "original_notebook_SHA",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "master_SHA",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "master_flags_false",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "500_unique_exact_roster",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "STEP3D_alias20_not_added",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "frozen_sources_step3a_pilot_config.json",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "original_definitions_step3a_pilot_config.json",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "environment_pins_step3a_pilot_config.json",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "frozen_sources_step3b_pilot_config.json",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "original_definitions_step3b_pilot_config.json",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "environment_pins_step3b_pilot_config.json",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "frozen_sources_step4a1_o3_pilot_config.json",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "original_definitions_step4a1_o3_pilot_config.json",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "environment_pins_step4a1_o3_pilot_config.json",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "frozen_sources_step4a2_o4_o5_pilot_config.json",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "original_definitions_step4a2_o4_o5_pilot_config.json",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "environment_pins_step4a2_o4_o5_pilot_config.json",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "frozen_sources_step4b_pilot_config.json",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "original_definitions_step4b_pilot_config.json",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "environment_pins_step4b_pilot_config.json",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "frozen_sources_step4c_pilot_config.json",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "original_definitions_step4c_pilot_config.json",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "environment_pins_step4c_pilot_config.json",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "frozen_sources_step4d_pilot_config.json",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "original_definitions_step4d_pilot_config.json",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "environment_pins_step4d_pilot_config.json",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "frozen_sources_step3c_master_experiment_config.json",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "original_definitions_step3c_master_experiment_config.json",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "environment_pins_step3c_master_experiment_config.json",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "kernel_step3b_worker.py",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "kernel_step3c_worker.py",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "kernel_step4a1_worker.py",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "kernel_step4a2_worker.py",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "kernel_step4b_worker.py",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "kernel_step4c_worker.py",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "kernel_step4d_worker.py",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "current_environment_versions",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "dataset_O1A",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "dataset_O1B",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "dataset_O2A",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "dataset_O2B",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "dataset_O3A",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "dataset_O3B",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "dataset_O4A",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "dataset_O4B",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "dataset_O5A",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "dataset_O5B",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "all500_checkpoint_history_source_hashes",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "official_calendar_SHA_3939",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "official3939_unique_sorted",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "Test_structural_O1",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "Test_structural_O2",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "Test_structural_O3",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "Test_structural_O4",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "Test_structural_O5",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "price_provider_and_revision",
+      "status": "BLOCKED",
+      "detail": "A/B BOTH_UNVERIFIED; main price PENDING"
+    },
+    {
+      "id": "historical18_PIT",
+      "status": "BLOCKED",
+      "detail": "available_at UNKNOWN; production-PIT BLOCKED"
+    },
+    {
+      "id": "actual_Test_input_eligibility",
+      "status": "BLOCKED",
+      "detail": "No Test prices/labels/probabilities read; future own-Origin construction audit required"
+    },
+    {
+      "id": "financial_Test_execution_approval",
+      "status": "BLOCKED",
+      "detail": "approved=false, evaluation enabled=false"
+    },
+    {
+      "id": "statistics_null_policy_consistency",
+      "status": "BLOCKED",
+      "detail": "Frozen master_statistics.metric returns NaN for both recalls if one true class; manual metric retains supported-class recall. Explicit reconciliation approval required before real inference; frozen sources unchanged."
+    },
+    {
+      "id": "full_Ensemble_HMM_tau",
+      "status": "BLOCKED",
+      "detail": "Independent specifications/evidence and approval required"
+    }
+  ],
+  "freeze_verified_models": 500,
+  "freeze_complete": true,
+  "issues": []
+}

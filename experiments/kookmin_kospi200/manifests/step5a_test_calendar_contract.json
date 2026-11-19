@@ -1,0 +1,83 @@
+{
+  "source": "STEP3C structural plan + official KRX calendar only",
+  "session_id_convention": "zero-based global index in official3939 sorted session dates",
+  "calendar_sha256": "c426702db216604d70f15973654d204a3e6afdb8cef1ef1f62169bb0a0667d6c",
+  "origins": [
+    {
+      "origin": "O1",
+      "test_year": 2021,
+      "first_base_date": "2021-01-04",
+      "last_base_date": "2021-12-30",
+      "first_session_id": 2714,
+      "last_session_id": 2961,
+      "min_label_end": "2021-02-01",
+      "max_label_end": "2022-01-28",
+      "planned_known_calendar_bases": 248,
+      "unknown_calendar_bases": 0,
+      "next_year_endpoints_allowed": true,
+      "financial_input_eligibility": "NOT_READ_NOT_CERTIFIED",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "origin": "O2",
+      "test_year": 2022,
+      "first_base_date": "2022-01-03",
+      "last_base_date": "2022-12-29",
+      "first_session_id": 2962,
+      "last_session_id": 3207,
+      "min_label_end": "2022-02-03",
+      "max_label_end": "2023-01-31",
+      "planned_known_calendar_bases": 246,
+      "unknown_calendar_bases": 0,
+      "next_year_endpoints_allowed": true,
+      "financial_input_eligibility": "NOT_READ_NOT_CERTIFIED",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "origin": "O3",
+      "test_year": 2023,
+      "first_base_date": "2023-01-02",
+      "last_base_date": "2023-12-28",
+      "first_session_id": 3208,
+      "last_session_id": 3452,
+      "min_label_end": "2023-02-01",
+      "max_label_end": "2024-01-29",
+      "planned_known_calendar_bases": 245,
+      "unknown_calendar_bases": 0,
+      "next_year_endpoints_allowed": true,
+      "financial_input_eligibility": "NOT_READ_NOT_CERTIFIED",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "origin": "O4",
+      "test_year": 2024,
+      "first_base_date": "2024-01-02",
+      "last_base_date": "2024-12-30",
+      "first_session_id": 3453,
+      "last_session_id": 3696,
+      "min_label_end": "2024-01-30",
+      "max_label_end": "2025-02-04",
+      "planned_known_calendar_bases": 244,
+      "unknown_calendar_bases": 0,
+      "next_year_endpoints_allowed": true,
+      "financial_input_eligibility": "NOT_READ_NOT_CERTIFIED",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "origin": "O5",
+      "test_year": 2025,
+      "first_base_date": "2025-01-02",
+      "last_base_date": "2025-12-01",
+      "first_session_id": 3697,
+      "last_session_id": 3918,
+      "min_label_end": "2025-02-05",
+      "max_label_end": "2025-12-30",
+      "planned_known_calendar_bases": 222,
+      "unknown_calendar_bases": 20,
+      "next_year_endpoints_allowed": false,
+      "financial_input_eligibility": "NOT_READ_NOT_CERTIFIED",
+      "status": "PLANNED_NOT_EXECUTED"
+    }
+  ],
+  "actual_Test_eligibility_validated": false
+}

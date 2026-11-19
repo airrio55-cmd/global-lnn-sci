@@ -1,0 +1,29 @@
+{
+  "approved": false,
+  "approval_reference": null,
+  "scope": "FUTURE_RETROSPECTIVE_ROLLING_ORIGIN_TEST_ONLY",
+  "max_evaluation_identities": 0,
+  "proposed_identity_count": 500,
+  "allow_training": false,
+  "allow_checkpoint_forward_current": false,
+  "allow_HMM": false,
+  "allow_GPU": false,
+  "allow_statistics_current": false,
+  "required_binding_fields": [
+    "approval_reference",
+    "model_source_sha256",
+    "checkpoint_sha256_per_identity",
+    "Test_data_sha256_per_origin_candidate",
+    "scaler_metadata_sha256",
+    "master_config_sha256",
+    "evaluator_source_sha256",
+    "evaluation_periods",
+    "price_candidates",
+    "allowed_read_paths",
+    "evaluation_output_paths",
+    "evaluation_budget",
+    "protocol_sha256"
+  ],
+  "allowed_read_paths": [],
+  "approval_is_not_inherited_from_training": true
+}

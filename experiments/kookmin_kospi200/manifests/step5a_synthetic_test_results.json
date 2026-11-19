@@ -1,0 +1,113 @@
+{
+  "domain": "SYNTHETIC_OR_STRUCTURAL_ONLY",
+  "passed": 26,
+  "failed": 0,
+  "financial_Test_inputs_loaded": 0,
+  "financial_statistical_tests": 0,
+  "tests": [
+    {
+      "id": "test_01_threshold_strict_and_confusion",
+      "status": "PASS"
+    },
+    {
+      "id": "test_02_known_metrics",
+      "status": "PASS"
+    },
+    {
+      "id": "test_03_single_true_class_null",
+      "status": "PASS"
+    },
+    {
+      "id": "test_04_empty_null",
+      "status": "PASS"
+    },
+    {
+      "id": "test_05_missing_invalid_no_zero_fill",
+      "status": "PASS"
+    },
+    {
+      "id": "test_06_domain_guard",
+      "status": "PASS"
+    },
+    {
+      "id": "test_07_seed_metrics_then_mean_no_probability_ensemble",
+      "status": "PASS"
+    },
+    {
+      "id": "test_08_alignment_same_dates_allseeds",
+      "status": "PASS"
+    },
+    {
+      "id": "test_09_missing_seed_date_rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "test_10_A_B_mixing_rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "test_11_duplicate_and_future_rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "test_12_unique_monotone_session_required",
+      "status": "PASS"
+    },
+    {
+      "id": "test_13_same_bootstrap_indices_all_models_seeds",
+      "status": "PASS"
+    },
+    {
+      "id": "test_14_bootstrap_lengths_and_rng_reproducible",
+      "status": "PASS"
+    },
+    {
+      "id": "test_15_discontinuous_sessions_no_cross_gap_block",
+      "status": "PASS"
+    },
+    {
+      "id": "test_16_equal_origin_and_seed_metric_order",
+      "status": "PASS"
+    },
+    {
+      "id": "test_17_invalid_resample_threshold",
+      "status": "PASS"
+    },
+    {
+      "id": "test_18_holm_numeric_reproducible",
+      "status": "PASS"
+    },
+    {
+      "id": "test_19_holm_exact20_80_100_no_deletion",
+      "status": "PASS"
+    },
+    {
+      "id": "test_20_checkpoint_metadata_identity_fixture",
+      "status": "PASS"
+    },
+    {
+      "id": "test_21_financial_entrypoint_zero_reads_even_flag_flip",
+      "status": "PASS"
+    },
+    {
+      "id": "test_22_duplicate_evaluation_ledger",
+      "status": "PASS"
+    },
+    {
+      "id": "test_23_frozen_null_discrepancy_is_explicit",
+      "status": "PASS"
+    },
+    {
+      "id": "test_24_calendar_only_test_structure",
+      "status": "PASS"
+    },
+    {
+      "id": "test_25_execution_flags_and_zero_counts",
+      "status": "PASS"
+    },
+    {
+      "id": "test_26_no_torch_or_model_loading_in_new_evaluator",
+      "status": "PASS"
+    }
+  ]
+}

@@ -1,0 +1,193 @@
+{
+  "stage": "STEP5A",
+  "test_evaluation_enabled": false,
+  "training_enabled": false,
+  "hmm_fit_enabled": false,
+  "new_fit_execution_enabled": false,
+  "master_sha256": "f4ea7a18d7812b00b8c581191a110f63a6799a22e066484ec251ee32f7912c5c",
+  "frozen_roster_sha256": "12d6fad2b24bd1aa8852c68780ce2cf1a88945fab933d0983e9f615e4dc0bf08",
+  "test_plan_sha256": "b7a6f3151ba074669a025eab52c05ef856fa256539721666b5f75b4347ee6f1f",
+  "design": "PARALLEL_AB_RETROSPECTIVE_ONLY",
+  "price_selection": "PENDING",
+  "source_status": "BOTH_UNVERIFIED",
+  "historical_available_at": "UNKNOWN",
+  "production_PIT": "BLOCKED",
+  "threshold": ">0.5",
+  "feature_order": [
+    "Log_Ret",
+    "Disparity"
+  ],
+  "Test_fit_budget": 0,
+  "Test_evaluation_budget_current": 0,
+  "planned_separate_approval_evaluations": 500,
+  "statistics": {
+    "block_lengths": [
+      20,
+      40,
+      60
+    ],
+    "replicates": 10000,
+    "seed": 20261116,
+    "metric_primary": "Balanced Accuracy",
+    "secondary": [
+      "Macro F1",
+      "Brier",
+      "Recall0",
+      "Recall1"
+    ],
+    "resampling_unit": "paired contiguous market-date blocks within Origin; same indices across models and all seeds",
+    "seed_aggregation": "mean of per-seed metrics; no probability averaging or market-sample multiplication",
+    "origin_weight": "equal",
+    "primary_family": [
+      {
+        "candidate": "A",
+        "model_a": "RNN",
+        "model_b": "LSTM",
+        "alternative": "two-sided",
+        "estimand": "equal-Origin mean of seed-wise metric differences"
+      },
+      {
+        "candidate": "A",
+        "model_a": "RNN",
+        "model_b": "GRU",
+        "alternative": "two-sided",
+        "estimand": "equal-Origin mean of seed-wise metric differences"
+      },
+      {
+        "candidate": "A",
+        "model_a": "RNN",
+        "model_b": "LTC",
+        "alternative": "two-sided",
+        "estimand": "equal-Origin mean of seed-wise metric differences"
+      },
+      {
+        "candidate": "A",
+        "model_a": "RNN",
+        "model_b": "CfC",
+        "alternative": "two-sided",
+        "estimand": "equal-Origin mean of seed-wise metric differences"
+      },
+      {
+        "candidate": "A",
+        "model_a": "LSTM",
+        "model_b": "GRU",
+        "alternative": "two-sided",
+        "estimand": "equal-Origin mean of seed-wise metric differences"
+      },
+      {
+        "candidate": "A",
+        "model_a": "LSTM",
+        "model_b": "LTC",
+        "alternative": "two-sided",
+        "estimand": "equal-Origin mean of seed-wise metric differences"
+      },
+      {
+        "candidate": "A",
+        "model_a": "LSTM",
+        "model_b": "CfC",
+        "alternative": "two-sided",
+        "estimand": "equal-Origin mean of seed-wise metric differences"
+      },
+      {
+        "candidate": "A",
+        "model_a": "GRU",
+        "model_b": "LTC",
+        "alternative": "two-sided",
+        "estimand": "equal-Origin mean of seed-wise metric differences"
+      },
+      {
+        "candidate": "A",
+        "model_a": "GRU",
+        "model_b": "CfC",
+        "alternative": "two-sided",
+        "estimand": "equal-Origin mean of seed-wise metric differences"
+      },
+      {
+        "candidate": "A",
+        "model_a": "LTC",
+        "model_b": "CfC",
+        "alternative": "two-sided",
+        "estimand": "equal-Origin mean of seed-wise metric differences"
+      },
+      {
+        "candidate": "B",
+        "model_a": "RNN",
+        "model_b": "LSTM",
+        "alternative": "two-sided",
+        "estimand": "equal-Origin mean of seed-wise metric differences"
+      },
+      {
+        "candidate": "B",
+        "model_a": "RNN",
+        "model_b": "GRU",
+        "alternative": "two-sided",
+        "estimand": "equal-Origin mean of seed-wise metric differences"
+      },
+      {
+        "candidate": "B",
+        "model_a": "RNN",
+        "model_b": "LTC",
+        "alternative": "two-sided",
+        "estimand": "equal-Origin mean of seed-wise metric differences"
+      },
+      {
+        "candidate": "B",
+        "model_a": "RNN",
+        "model_b": "CfC",
+        "alternative": "two-sided",
+        "estimand": "equal-Origin mean of seed-wise metric differences"
+      },
+      {
+        "candidate": "B",
+        "model_a": "LSTM",
+        "model_b": "GRU",
+        "alternative": "two-sided",
+        "estimand": "equal-Origin mean of seed-wise metric differences"
+      },
+      {
+        "candidate": "B",
+        "model_a": "LSTM",
+        "model_b": "LTC",
+        "alternative": "two-sided",
+        "estimand": "equal-Origin mean of seed-wise metric differences"
+      },
+      {
+        "candidate": "B",
+        "model_a": "LSTM",
+        "model_b": "CfC",
+        "alternative": "two-sided",
+        "estimand": "equal-Origin mean of seed-wise metric differences"
+      },
+      {
+        "candidate": "B",
+        "model_a": "GRU",
+        "model_b": "LTC",
+        "alternative": "two-sided",
+        "estimand": "equal-Origin mean of seed-wise metric differences"
+      },
+      {
+        "candidate": "B",
+        "model_a": "GRU",
+        "model_b": "CfC",
+        "alternative": "two-sided",
+        "estimand": "equal-Origin mean of seed-wise metric differences"
+      },
+      {
+        "candidate": "B",
+        "model_a": "LTC",
+        "model_b": "CfC",
+        "alternative": "two-sided",
+        "estimand": "equal-Origin mean of seed-wise metric differences"
+      }
+    ],
+    "holm_family": "all20 A/B pairwise model comparisons, separately for each prespecified block length",
+    "secondary_family_size": 80,
+    "origin_diagnostic_family_size": 100,
+    "invalid_single_class_resamples": "report invalid count; fail if >10%; never silently fill",
+    "failed_or_missing_seed": "keep roster; inference BLOCKED until all10 common seeds available",
+    "post_test_family_change": false,
+    "ensemble_primary_family_size": 6,
+    "origin_secondary_pvalues": "NOT_PLANNED_DESCRIPTIVE_ONLY"
+  },
+  "checkpoint_load_forward_released": false
+}
