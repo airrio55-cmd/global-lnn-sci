@@ -1,0 +1,16 @@
+{
+  "financial_new_input_preflight_PASS": 1148,
+  "financial_new_input_preflight_FAIL": 0,
+  "full_roundtrip_cohorts_PASS": 10,
+  "all_fields_read": 90,
+  "synthetic_recovery_tests_PASS": 6,
+  "frozen_baseline_synthetic_regression_PASS": 14,
+  "independent_release": "PASS",
+  "postrun_PASS": 316,
+  "postrun_FAIL": 0,
+  "original_STEP8B_gates": "FAIL_PRESERVED_NOT_PROMOTED",
+  "STEP8BR_financial_execution": "PASS_40",
+  "production_PIT": "BLOCKED",
+  "public_consistency_tests_PASS": 9,
+  "public_consistency_tests_FAIL": 0
+}

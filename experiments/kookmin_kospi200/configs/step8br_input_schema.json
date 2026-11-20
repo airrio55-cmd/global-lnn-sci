@@ -1,0 +1,38 @@
+{
+  "train_x": [
+    "float64",
+    "N,2"
+  ],
+  "train_y": [
+    "int64",
+    "N"
+  ],
+  "test_x": [
+    "float64",
+    "M,2"
+  ],
+  "test_y": [
+    "int64",
+    "M"
+  ],
+  "dates": [
+    "<U10",
+    "M"
+  ],
+  "session_id": [
+    "int64",
+    "M"
+  ],
+  "label_end": [
+    "<U10",
+    "M"
+  ],
+  "price_close": [
+    "float64",
+    "K"
+  ],
+  "price_dates": [
+    "<U10",
+    "K"
+  ]
+}
