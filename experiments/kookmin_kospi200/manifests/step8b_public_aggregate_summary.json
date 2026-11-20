@@ -1,0 +1,276 @@
+{
+  "scope": "STEP8B_BLOCKED_NO_NEW_FINANCIAL_RESULTS",
+  "baselines": [
+    {
+      "candidate": "A",
+      "baseline": "CLIMATOLOGY",
+      "planned": 5,
+      "completed": 0,
+      "BLOCKED": 5,
+      "Test_BA": null,
+      "Macro_F1": null,
+      "Brier": null,
+      "Recall0": null,
+      "Recall1": null,
+      "reason": "persisted price_dates object dtype; zero evaluations"
+    },
+    {
+      "candidate": "A",
+      "baseline": "LOGISTIC",
+      "planned": 5,
+      "completed": 0,
+      "BLOCKED": 5,
+      "Test_BA": null,
+      "Macro_F1": null,
+      "Brier": null,
+      "Recall0": null,
+      "Recall1": null,
+      "reason": "persisted price_dates object dtype; zero evaluations"
+    },
+    {
+      "candidate": "A",
+      "baseline": "DMA200",
+      "planned": 5,
+      "completed": 0,
+      "BLOCKED": 5,
+      "Test_BA": null,
+      "Macro_F1": null,
+      "Brier": null,
+      "Recall0": null,
+      "Recall1": null,
+      "reason": "persisted price_dates object dtype; zero evaluations"
+    },
+    {
+      "candidate": "A",
+      "baseline": "MOMENTUM60",
+      "planned": 5,
+      "completed": 0,
+      "BLOCKED": 5,
+      "Test_BA": null,
+      "Macro_F1": null,
+      "Brier": null,
+      "Recall0": null,
+      "Recall1": null,
+      "reason": "persisted price_dates object dtype; zero evaluations"
+    },
+    {
+      "candidate": "B",
+      "baseline": "CLIMATOLOGY",
+      "planned": 5,
+      "completed": 0,
+      "BLOCKED": 5,
+      "Test_BA": null,
+      "Macro_F1": null,
+      "Brier": null,
+      "Recall0": null,
+      "Recall1": null,
+      "reason": "persisted price_dates object dtype; zero evaluations"
+    },
+    {
+      "candidate": "B",
+      "baseline": "LOGISTIC",
+      "planned": 5,
+      "completed": 0,
+      "BLOCKED": 5,
+      "Test_BA": null,
+      "Macro_F1": null,
+      "Brier": null,
+      "Recall0": null,
+      "Recall1": null,
+      "reason": "persisted price_dates object dtype; zero evaluations"
+    },
+    {
+      "candidate": "B",
+      "baseline": "DMA200",
+      "planned": 5,
+      "completed": 0,
+      "BLOCKED": 5,
+      "Test_BA": null,
+      "Macro_F1": null,
+      "Brier": null,
+      "Recall0": null,
+      "Recall1": null,
+      "reason": "persisted price_dates object dtype; zero evaluations"
+    },
+    {
+      "candidate": "B",
+      "baseline": "MOMENTUM60",
+      "planned": 5,
+      "completed": 0,
+      "BLOCKED": 5,
+      "Test_BA": null,
+      "Macro_F1": null,
+      "Brier": null,
+      "Recall0": null,
+      "Recall1": null,
+      "reason": "persisted price_dates object dtype; zero evaluations"
+    }
+  ],
+  "existing_NN_reference_only": [
+    {
+      "candidate": "A",
+      "model": "RNN",
+      "source": "existing_STEP5B_metrics_unchanged",
+      "aggregation": "equal10Seed mean within eachOrigin; equal5Origin mean",
+      "n_origins": 5,
+      "n_stored_NN_results": 50,
+      "metrics": {
+        "BA": 0.5183973799288006,
+        "macro_f1": 0.4448416287628534,
+        "brier": 0.2514723645185467,
+        "recall0": 0.3718676523419696,
+        "recall1": 0.6649271075156317,
+        "accuracy": 0.4767528393751361
+      }
+    },
+    {
+      "candidate": "A",
+      "model": "LSTM",
+      "source": "existing_STEP5B_metrics_unchanged",
+      "aggregation": "equal10Seed mean within eachOrigin; equal5Origin mean",
+      "n_origins": 5,
+      "n_stored_NN_results": 50,
+      "metrics": {
+        "BA": 0.518008340351554,
+        "macro_f1": 0.4699510712279512,
+        "brier": 0.2484888483772439,
+        "recall0": 0.32970617918683,
+        "recall1": 0.7063105015162779,
+        "accuracy": 0.5161594509738644
+      }
+    },
+    {
+      "candidate": "A",
+      "model": "GRU",
+      "source": "existing_STEP5B_metrics_unchanged",
+      "aggregation": "equal10Seed mean within eachOrigin; equal5Origin mean",
+      "n_origins": 5,
+      "n_stored_NN_results": 50,
+      "metrics": {
+        "BA": 0.5278441923519104,
+        "macro_f1": 0.47790378899756775,
+        "brier": 0.2522487312947926,
+        "recall0": 0.39660558166096144,
+        "recall1": 0.6590828030428593,
+        "accuracy": 0.509409824020027
+      }
+    },
+    {
+      "candidate": "A",
+      "model": "LTC",
+      "source": "existing_STEP5B_metrics_unchanged",
+      "aggregation": "equal10Seed mean within eachOrigin; equal5Origin mean",
+      "n_origins": 5,
+      "n_stored_NN_results": 50,
+      "metrics": {
+        "BA": 0.53238654989694,
+        "macro_f1": 0.45215440969412163,
+        "brier": 0.2504271945249005,
+        "recall0": 0.46254038568934414,
+        "recall1": 0.6022327141045359,
+        "accuracy": 0.5290086098436095
+      }
+    },
+    {
+      "candidate": "A",
+      "model": "CfC",
+      "source": "existing_STEP5B_metrics_unchanged",
+      "aggregation": "equal10Seed mean within eachOrigin; equal5Origin mean",
+      "n_origins": 5,
+      "n_stored_NN_results": 50,
+      "metrics": {
+        "BA": 0.5321117543233258,
+        "macro_f1": 0.4868332057620104,
+        "brier": 0.24691970533755347,
+        "recall0": 0.3928099685878686,
+        "recall1": 0.6714135400587828,
+        "accuracy": 0.5226346527464965
+      }
+    },
+    {
+      "candidate": "B",
+      "model": "RNN",
+      "source": "existing_STEP5B_metrics_unchanged",
+      "aggregation": "equal10Seed mean within eachOrigin; equal5Origin mean",
+      "n_origins": 5,
+      "n_stored_NN_results": 50,
+      "metrics": {
+        "BA": 0.5201338924446135,
+        "macro_f1": 0.44819108867520396,
+        "brier": 0.2512589458868372,
+        "recall0": 0.3690540930199357,
+        "recall1": 0.6712136918692915,
+        "accuracy": 0.4816749682621362
+      }
+    },
+    {
+      "candidate": "B",
+      "model": "LSTM",
+      "source": "existing_STEP5B_metrics_unchanged",
+      "aggregation": "equal10Seed mean within eachOrigin; equal5Origin mean",
+      "n_origins": 5,
+      "n_stored_NN_results": 50,
+      "metrics": {
+        "BA": 0.5195339437329842,
+        "macro_f1": 0.47313290804889696,
+        "brier": 0.24988942662267422,
+        "recall0": 0.37041629761132516,
+        "recall1": 0.6686515898546433,
+        "accuracy": 0.511738395138893
+      }
+    },
+    {
+      "candidate": "B",
+      "model": "GRU",
+      "source": "existing_STEP5B_metrics_unchanged",
+      "aggregation": "equal10Seed mean within eachOrigin; equal5Origin mean",
+      "n_origins": 5,
+      "n_stored_NN_results": 50,
+      "metrics": {
+        "BA": 0.5278959610626485,
+        "macro_f1": 0.4758028330788418,
+        "brier": 0.2518746738509303,
+        "recall0": 0.390023187059893,
+        "recall1": 0.665768735065404,
+        "accuracy": 0.5068200968531684
+      }
+    },
+    {
+      "candidate": "B",
+      "model": "LTC",
+      "source": "existing_STEP5B_metrics_unchanged",
+      "aggregation": "equal10Seed mean within eachOrigin; equal5Origin mean",
+      "n_origins": 5,
+      "n_stored_NN_results": 50,
+      "metrics": {
+        "BA": 0.5312916041926504,
+        "macro_f1": 0.4532253104633841,
+        "brier": 0.2502275798934886,
+        "recall0": 0.4487399263511171,
+        "recall1": 0.6138432820341839,
+        "accuracy": 0.5340348665069911
+      }
+    },
+    {
+      "candidate": "B",
+      "model": "CfC",
+      "source": "existing_STEP5B_metrics_unchanged",
+      "aggregation": "equal10Seed mean within eachOrigin; equal5Origin mean",
+      "n_origins": 5,
+      "n_stored_NN_results": 50,
+      "metrics": {
+        "BA": 0.5189183568677751,
+        "macro_f1": 0.4744228880159101,
+        "brier": 0.25153516628594946,
+        "recall0": 0.34574124435968445,
+        "recall1": 0.6920954693758659,
+        "accuracy": 0.5116991756364017
+      }
+    }
+  ],
+  "NN_vs_baseline_comparison": "BLOCKED; no baseline metrics",
+  "RQ1_RQ2_RQ3_RQ4_RQ5": "NOT_EVALUATED",
+  "Origin_sensitivity": "baseline results unavailable; no new ranking",
+  "Validation_Test_gap": "NOT_AVAILABLE; no new baseline Validation/Test evaluation",
+  "no_new_statistics": true
+}

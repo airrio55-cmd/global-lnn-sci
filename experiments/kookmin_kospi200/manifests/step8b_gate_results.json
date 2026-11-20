@@ -1,0 +1,14 @@
+{
+  "in_memory_data_preflight_PASS": 1089,
+  "in_memory_preflight_completeness": "INCOMPLETE missing persisted serialization roundtrip",
+  "synthetic_baseline_tests_PASS": 14,
+  "synthetic_storage_remediation_tests_PASS": 3,
+  "postrun_preservation_budget_tests_PASS": 6,
+  "persisted_input_gate_FAIL_cohorts": 10,
+  "financial_units_BLOCKED": 40,
+  "release_status": "CLOSED_AFTER_INPUT_GATE_FAILURE",
+  "production_PIT": "BLOCKED",
+  "financial_gate_changed_to_PASS": false,
+  "remediation_status": "PROPOSAL_SYNTHETIC_ONLY; fresh actual input gates/hashes/release required",
+  "blocked_public_summary_tests_PASS": 6
+}

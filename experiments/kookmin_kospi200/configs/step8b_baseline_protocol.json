@@ -1,0 +1,45 @@
+{
+  "stage": "STEP8B",
+  "status": "FROZEN_BEFORE_FINANCIAL_BASELINE_RESULTS",
+  "models": [
+    "CLIMATOLOGY",
+    "LOGISTIC",
+    "DMA200",
+    "MOMENTUM60"
+  ],
+  "lr_spec": {
+    "C": 1.0,
+    "penalty": "l2",
+    "solver": "lbfgs",
+    "max_iter": 1000,
+    "fit_intercept": true,
+    "class_weight": null,
+    "random_state": 20261120,
+    "tol": 0.0001
+  },
+  "LR_features": [
+    "Log_Ret",
+    "Disparity"
+  ],
+  "LR_input": "current_t_only_no_window_flattening",
+  "scaler_contract": "retained_Train_current_t_only",
+  "climatology": "mean retained purged Train labels; Train single class eligible with explicit flag",
+  "LR_failure": "single Train class/nonconvergence/nonfinite coefficients BLOCKED; no retuning",
+  "rules": {
+    "DMA200": "Close[t] > mean(Close[t-199:t]); includes t; otherwise0",
+    "MOMENTUM60": "Close[t] > Close[t-60]; exact60 official sessions; otherwise0"
+  },
+  "horizon": 20,
+  "threshold": 0.5,
+  "ties": 0,
+  "metric_policy": "STEP5B_TEST_METRICS_V1",
+  "single_actual_class": "BA/MacroF1 null; absent-class Recall null",
+  "rule_probability": "0/1 degenerate probability; not calibrated",
+  "warmup_failure": "BLOCKED; no filling/date changes",
+  "validation_selection": false,
+  "new_pvalues": false,
+  "training_enabled": false,
+  "hmm_fit_enabled": false,
+  "production_PIT": "BLOCKED",
+  "pricing": "BOTH_UNVERIFIED"
+}
