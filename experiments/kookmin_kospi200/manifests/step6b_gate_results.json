@@ -1,0 +1,16 @@
+{
+  "execution_gate": "PASS",
+  "actual_fit_candidates": 100,
+  "selected_and_filtered_cohorts": 10,
+  "blocked_cohorts": 0,
+  "NN_results_evaluated": 500,
+  "preflight_PASS": 549,
+  "synthetic_PASS": 24,
+  "preflight_release_PASS": 10,
+  "runtime_boundary_PASS": 7,
+  "postrun_PASS": 1846,
+  "postrun_FAIL": 0,
+  "production_PIT": "BLOCKED",
+  "source_status": "BOTH_UNVERIFIED",
+  "next_financial_experiment_authorized": false
+}
