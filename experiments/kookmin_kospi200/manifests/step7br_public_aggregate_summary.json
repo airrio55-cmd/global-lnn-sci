@@ -1,0 +1,16 @@
+{
+  "stage": "STEP7BR",
+  "tau100_complete": true,
+  "valid_tau_checkpoints": 100,
+  "whole_Test_degenerate_count": 24,
+  "nondegenerate_count": 76,
+  "comparison": "supplemental posthoc new100, not rewriting old99",
+  "common_Origin_price_cells": 8,
+  "lower_degenerate_tau_in_all_common_cells": true,
+  "nondegenerate_group_unchanged": true,
+  "old99_direction_lower_degenerate_preserved_in100": true,
+  "exact_new_means_quantiles_distributions_and_numeric_deltas": "SUPPRESSED",
+  "reason": "Prior99 aggregate is public. New100 sum/mean/variance/delta permits recovery of single added checkpoint. Complementary suppression extends to Origin/Seed/Price/HMM updates. All actual numeric tables retained ignored private.",
+  "recovery_identity_published": false,
+  "no_new_financial_pvalues": true
+}

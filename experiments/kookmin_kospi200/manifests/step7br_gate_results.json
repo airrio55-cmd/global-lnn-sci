@@ -1,0 +1,13 @@
+{
+  "preflight_PASS": 14,
+  "release_tamper_and_arithmetic_tests_PASS": 10,
+  "recovery_exact_output": "PASS",
+  "all_snapshot_hashes": "PASS",
+  "old99_and_oldBLOCKED_and_scratchSHA": "PASS",
+  "new_forward_budget": "PASS1of1",
+  "Tau100_unique_integration": "PASS",
+  "inverse_singleton_disclosure": "PASS_NUMERIC_UPDATES_SUPPRESSED",
+  "production_PIT": "BLOCKED",
+  "financial_extra_execution": "NOT_AUTHORIZED",
+  "public_accounting_and_nondifferencing_tests_PASS": 7
+}
