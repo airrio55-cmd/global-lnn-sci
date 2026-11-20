@@ -1,0 +1,144 @@
+{
+  "stage": "STEP10",
+  "mandatory_audit_gates": [
+    {
+      "id": 1,
+      "gate": "기존 실험 inventory 일치",
+      "status": "PASS",
+      "evidence": "NN unique roster500, Test result500, baseline40, statistics600, HMM100/selected10, tau99+1; source metadata cross-check"
+    },
+    {
+      "id": 2,
+      "gate": "기존 중요 파일 SHA 불변",
+      "status": "PASS",
+      "evidence": "10048 existing project files hashed at start and end; no differences; prior9B1R and7BR snapshots also checked"
+    },
+    {
+      "id": 3,
+      "gate": "NN500/Test500 보존",
+      "status": "PASS",
+      "evidence": "500 frozen checkpoint/result/probability SHA checks without deserialization; duplicate aliases excluded"
+    },
+    {
+      "id": 4,
+      "gate": "Baseline40 보존",
+      "status": "PASS",
+      "evidence": "40 completed baseline result and saved output/parameter SHA; Logistic10 part of40"
+    },
+    {
+      "id": 5,
+      "gate": "STEP5C 600행 보존",
+      "status": "PASS",
+      "evidence": "600 saved rows unchanged; family/block counts0/0/0,0/0/0,3/2/3 copied"
+    },
+    {
+      "id": 6,
+      "gate": "HMM100/10 보존",
+      "status": "PASS",
+      "evidence": "100 candidate result records; selected10 part of100, all Train-selected; no new fit/filter"
+    },
+    {
+      "id": 7,
+      "gate": "τ 보완통합100/100",
+      "status": "PASS",
+      "evidence": "old99 records exactly reused +1 recovered record;100 unique;24 degenerate and76 nondegenerate"
+    },
+    {
+      "id": 8,
+      "gate": "원STEP7B 실패기록 보존",
+      "status": "PASS",
+      "evidence": "original99PASS/1BLOCKED and failed result/scratch preserved"
+    },
+    {
+      "id": 9,
+      "gate": "원STEP8B 실패기록 보존",
+      "status": "PASS",
+      "evidence": "original40BLOCKED results and pre-recovery scratch preserved; independent8BR40PASS"
+    },
+    {
+      "id": 10,
+      "gate": "STEP9B2 미실행 유지",
+      "status": "PASS",
+      "evidence": "9B1 financial approval=false, zero budgets,9B1R no validated method; no9B2 entrypoint invoked"
+    },
+    {
+      "id": 11,
+      "gate": "신규 금융 fit/forward0",
+      "status": "PASS",
+      "evidence": "stdlib-only audit scripts; no checkpoint loading, inference, optimizer, or numerical market array read"
+    },
+    {
+      "id": 12,
+      "gate": "신규 금융 p값/CI0",
+      "status": "PASS",
+      "evidence": "no resampling/inference runtime; existing pvalues read only, no new pvalue or CI"
+    },
+    {
+      "id": 13,
+      "gate": "모델/가격 사후선택0",
+      "status": "PASS",
+      "evidence": "A/B and all models/Seeds retained; no new execution or price selection"
+    },
+    {
+      "id": 14,
+      "gate": "PIT/가격한계 사실대로 기록",
+      "status": "PASS",
+      "evidence": "BOTH_UNVERIFIED/PENDING/UNKNOWN/BLOCKED explicitly preserved"
+    },
+    {
+      "id": 15,
+      "gate": "RQ1~RQ5 근거표 완성",
+      "status": "PASS",
+      "evidence": "five complete10-column research-question evidence rows with counter-evidence and source pointers"
+    },
+    {
+      "id": 16,
+      "gate": "논문 Table/Figure plan 완성",
+      "status": "PASS",
+      "evidence": "10Table+8Figure specifications include all6 required fields and publication boundary"
+    },
+    {
+      "id": 17,
+      "gate": "Results/Discussion 초안 완성",
+      "status": "PASS",
+      "evidence": "ten-chapter structure; Korean chapter5-10 draft; all financial values traced to saved summaries"
+    },
+    {
+      "id": 18,
+      "gate": "Single-checkpoint 값 공개/역산0",
+      "status": "PASS",
+      "evidence": "allowlist contains no recovered identity/SHA mapping, numeric new100 tau summary/delta/distribution; confidential table excluded"
+    },
+    {
+      "id": 19,
+      "gate": "JOF 프로젝트와 혼합0",
+      "status": "PASS",
+      "evidence": "only new STEP10 paths allowed; no JOF source/results accessed numerically or changed; main checked separately at publication"
+    },
+    {
+      "id": 20,
+      "gate": "기존 결과파일 변경0",
+      "status": "PASS",
+      "evidence": "end byte SHA comparison0 changes across10048 old project files"
+    }
+  ],
+  "mandatory_PASS": 20,
+  "mandatory_FAIL": 0,
+  "mandatory_BLOCKED": 0,
+  "detailed_audit_checks_PASS": 5380,
+  "detailed_audit_checks_FAIL": 0,
+  "reproducibility_freeze": "PASS",
+  "separate_scientific_and_execution_states": {
+    "price_provenance": "BLOCKED_BOTH_UNVERIFIED",
+    "primary_price": "PENDING",
+    "historical18KST_available_at": "UNKNOWN",
+    "production_PIT": "BLOCKED",
+    "STEP9B2": "BLOCKED_METHOD_NOT_VALIDATED_NOT_EXECUTED",
+    "baseline_superiority_inference": "NOT_TESTED",
+    "tau_composition_independent_or_causal_effect": "NOT_IDENTIFIABLE",
+    "new_financial_execution": "NOT_AUTHORIZED_BUDGET0"
+  },
+  "publication_guard": "allowlist staged-byte scan and remote main preservation receipt required",
+  "detailed_numerical_publication": "BLOCKED_BY_AUTOMATIC_APPROVAL_REVIEW_RETAINED_PRIVATE",
+  "public_edition": "REDUCED_EVIDENCE_POINTER_SUMMARIES"
+}

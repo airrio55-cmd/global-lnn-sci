@@ -1,0 +1,296 @@
+{
+  "stage": "STEP10",
+  "version": "DISSERTATION_EVIDENCE_v1",
+  "freeze_kind": "reproducibility snapshot; not price/PIT or inferential certification",
+  "existing_files_in_private_full_byte_snapshot": 10048,
+  "public_source_subset": [
+    {
+      "stage": "STEP4D",
+      "path": "manifests/step4d_verification_summary.json",
+      "sha256": "e6aca29e30b7c7ef2c03cf63cf14a566db26dc7a88637e70583f5f99677525af",
+      "bytes": 1169,
+      "version": "previously approved frozen public artifact",
+      "status": "BYTE_VERIFIED",
+      "source_lineage": "prior stage public publication; private operational inventory excluded"
+    },
+    {
+      "stage": "STEP4D",
+      "path": "reports/STEP4D_500FIT_RESULTS_KO.md",
+      "sha256": "956e73bef77621cc7863b12c321b5f34a9f80d67e68df5afcd9fefa3cba171b7",
+      "bytes": 5756,
+      "version": "previously approved frozen public artifact",
+      "status": "BYTE_VERIFIED",
+      "source_lineage": "prior stage public publication; private operational inventory excluded"
+    },
+    {
+      "stage": "STEP4D",
+      "path": "reports/STEP4D_10SEED_STABILITY_KO.md",
+      "sha256": "9810cabf76c732ccabab8f7f555bddb22f8e9dcc52f0f4b7e1d661e567924e9b",
+      "bytes": 5646,
+      "version": "previously approved frozen public artifact",
+      "status": "BYTE_VERIFIED",
+      "source_lineage": "prior stage public publication; private operational inventory excluded"
+    },
+    {
+      "stage": "STEP5B",
+      "path": "manifests/step5b_public_aggregate_summary.json",
+      "sha256": "9666178087fa0b4154fa0ca5956b2c09870b6475d3e1145f46d7bdb91b31564b",
+      "bytes": 376576,
+      "version": "previously approved frozen public artifact",
+      "status": "BYTE_VERIFIED",
+      "source_lineage": "prior stage public publication; private operational inventory excluded"
+    },
+    {
+      "stage": "STEP5B",
+      "path": "manifests/step5b_execution_summary.json",
+      "sha256": "86eb5bf5993d6ee4a0b83a70e408111300c3c146232aef574937506ff00d3aeb",
+      "bytes": 1879,
+      "version": "previously approved frozen public artifact",
+      "status": "BYTE_VERIFIED",
+      "source_lineage": "prior stage public publication; private operational inventory excluded"
+    },
+    {
+      "stage": "STEP5B",
+      "path": "reports/STEP5B_TEST_RESULTS_KO.md",
+      "sha256": "d7d4b0b5ff759528b5b8ca8997e5dfda93f6a1a9e9ea1e1933a005e411dd9169",
+      "bytes": 8074,
+      "version": "previously approved frozen public artifact",
+      "status": "BYTE_VERIFIED",
+      "source_lineage": "prior stage public publication; private operational inventory excluded"
+    },
+    {
+      "stage": "STEP5C",
+      "path": "manifests/step5c_execution_summary.json",
+      "sha256": "de2f0ea1e7cc3cf8c0c7f4dfdff26d6462b0d3722240a8bf02ac9035c44cff4f",
+      "bytes": 5309,
+      "version": "previously approved frozen public artifact",
+      "status": "BYTE_VERIFIED",
+      "source_lineage": "prior stage public publication; private operational inventory excluded"
+    },
+    {
+      "stage": "STEP5C",
+      "path": "manifests/step5c_public_aggregate_summary.json",
+      "sha256": "44d374957fb06abe8d45b214f55a8534d5634e8ebf5f11369a6d40aade13f6a3",
+      "bytes": 466375,
+      "version": "previously approved frozen public artifact",
+      "status": "BYTE_VERIFIED",
+      "source_lineage": "prior stage public publication; private operational inventory excluded"
+    },
+    {
+      "stage": "STEP5C",
+      "path": "reports/STEP5C_STATISTICAL_RESULTS_KO.md",
+      "sha256": "651292a1f580e04b707e3c5f0a4ede45ee03ba5944c24b4f2ec18840542a89d6",
+      "bytes": 5843,
+      "version": "previously approved frozen public artifact",
+      "status": "BYTE_VERIFIED",
+      "source_lineage": "prior stage public publication; private operational inventory excluded"
+    },
+    {
+      "stage": "STEP6B",
+      "path": "manifests/step6b_execution_summary.json",
+      "sha256": "56f3d049d7a272e1ef2a6316d72915cf5b94ea3f23289df1bd8e60fb4571179e",
+      "bytes": 2592,
+      "version": "previously approved frozen public artifact",
+      "status": "BYTE_VERIFIED",
+      "source_lineage": "prior stage public publication; private operational inventory excluded"
+    },
+    {
+      "stage": "STEP6B",
+      "path": "manifests/step6b_public_aggregate_summary.json",
+      "sha256": "9a0d54b1e199dd82322fd8ecc2c498077e9c838b3aa3f1fd67b03f0923cce5f0",
+      "bytes": 350140,
+      "version": "previously approved frozen public artifact",
+      "status": "BYTE_VERIFIED",
+      "source_lineage": "prior stage public publication; private operational inventory excluded"
+    },
+    {
+      "stage": "STEP7B",
+      "path": "manifests/step7b_execution_summary.json",
+      "sha256": "79330e896f0fcbbff3876d5230321590d608baa4bcb7ad985c0a804786f1076b",
+      "bytes": 1702,
+      "version": "previously approved frozen public artifact",
+      "status": "BYTE_VERIFIED",
+      "source_lineage": "prior stage public publication; private operational inventory excluded"
+    },
+    {
+      "stage": "STEP7B",
+      "path": "reports/STEP7B_TAU_EXTRACTION_RESULTS_KO.md",
+      "sha256": "7c1afaa43861bad0d8d9fb327a92a9c5048aff76d89042b07173421e639aaca4",
+      "bytes": 2691,
+      "version": "previously approved frozen public artifact",
+      "status": "BYTE_VERIFIED",
+      "source_lineage": "prior stage public publication; private operational inventory excluded"
+    },
+    {
+      "stage": "STEP7BR",
+      "path": "manifests/step7br_public_aggregate_summary.json",
+      "sha256": "ba8be830096cc1c735b430475a702833b355ebd5976d365de81f41ba1ca7536b",
+      "bytes": 799,
+      "version": "previously approved frozen public artifact",
+      "status": "BYTE_VERIFIED",
+      "source_lineage": "prior stage public publication; private operational inventory excluded"
+    },
+    {
+      "stage": "STEP7BR",
+      "path": "manifests/step7br_execution_summary.json",
+      "sha256": "725190078e04715471304480da9709310f73582b607be0bb929828c510e30690",
+      "bytes": 1373,
+      "version": "previously approved frozen public artifact",
+      "status": "BYTE_VERIFIED",
+      "source_lineage": "prior stage public publication; private operational inventory excluded"
+    },
+    {
+      "stage": "STEP7BR",
+      "path": "reports/STEP7BR_100_MODEL_INTEGRATION_KO.md",
+      "sha256": "9624be00a9e7d5e9e95aff85abae2bba23bfcab624eb4f1b77abe7ddf8533ce0",
+      "bytes": 1610,
+      "version": "previously approved frozen public artifact",
+      "status": "BYTE_VERIFIED",
+      "source_lineage": "prior stage public publication; private operational inventory excluded"
+    },
+    {
+      "stage": "STEP8B",
+      "path": "manifests/step8b_execution_summary.json",
+      "sha256": "0e3b7a2b4f2e0ed0a93ca2dd1f5692775ab0b9b84e7ce7434383d76e0989c053",
+      "bytes": 1028,
+      "version": "previously approved frozen public artifact",
+      "status": "BYTE_VERIFIED",
+      "source_lineage": "prior stage public publication; private operational inventory excluded"
+    },
+    {
+      "stage": "STEP8BR",
+      "path": "manifests/step8br_public_aggregate_summary.json",
+      "sha256": "f9fa1f700bb79390feba9f188f9bb24c78aa44410116c73059db8d4615fccad8",
+      "bytes": 137684,
+      "version": "previously approved frozen public artifact",
+      "status": "BYTE_VERIFIED",
+      "source_lineage": "prior stage public publication; private operational inventory excluded"
+    },
+    {
+      "stage": "STEP8BR",
+      "path": "manifests/step8br_execution_summary.json",
+      "sha256": "99532edf1054c50f90d7982d4ec53b67be8e863b400d45857c0715f1ca5bdb61",
+      "bytes": 1233,
+      "version": "previously approved frozen public artifact",
+      "status": "BYTE_VERIFIED",
+      "source_lineage": "prior stage public publication; private operational inventory excluded"
+    },
+    {
+      "stage": "STEP8BR",
+      "path": "reports/STEP8BR_NN_VS_BASELINE_KO.md",
+      "sha256": "9ed4966a85981d4dbe6f4662013958441275f99ab2c346674a7a2e429c0633d4",
+      "bytes": 4237,
+      "version": "previously approved frozen public artifact",
+      "status": "BYTE_VERIFIED",
+      "source_lineage": "prior stage public publication; private operational inventory excluded"
+    },
+    {
+      "stage": "STEP9A",
+      "path": "manifests/step9a_evidence_traceability.json",
+      "sha256": "bcaca4da9655f796df6ed26a1c98d243c3ef10b4a0cc723ab71c5e2182209f41",
+      "bytes": 127940,
+      "version": "previously approved frozen public artifact",
+      "status": "BYTE_VERIFIED",
+      "source_lineage": "prior stage public publication; private operational inventory excluded"
+    },
+    {
+      "stage": "STEP9A",
+      "path": "reports/STEP9A_DISSERTATION_STRUCTURE_KO.md",
+      "sha256": "cd40209a56c83dc13c6055a61d2361549cbf1cbee21f496e0433cb113e574011",
+      "bytes": 3952,
+      "version": "previously approved frozen public artifact",
+      "status": "BYTE_VERIFIED",
+      "source_lineage": "prior stage public publication; private operational inventory excluded"
+    },
+    {
+      "stage": "STEP9A",
+      "path": "reports/STEP9A_STATISTICAL_EVIDENCE_KO.md",
+      "sha256": "405ad15a197f71bc3e40d05b52f0fa5d3640c3d224b12cbd754b691a1a92cb1a",
+      "bytes": 2066,
+      "version": "previously approved frozen public artifact",
+      "status": "BYTE_VERIFIED",
+      "source_lineage": "prior stage public publication; private operational inventory excluded"
+    },
+    {
+      "stage": "STEP9B1",
+      "path": "manifests/step9b1_protocol_status.json",
+      "sha256": "c4939a06687806930764b8f5657108d1a34294c6582426400376b2eb26313d23",
+      "bytes": 659,
+      "version": "previously approved frozen public artifact",
+      "status": "BYTE_VERIFIED",
+      "source_lineage": "prior stage public publication; private operational inventory excluded"
+    },
+    {
+      "stage": "STEP9B1",
+      "path": "manifests/step9b1_synthetic_test_summary.json",
+      "sha256": "7c9a96c74b017e6be780d8198a6718371227e8759e333250136ccc576c6756d1",
+      "bytes": 17424,
+      "version": "previously approved frozen public artifact",
+      "status": "BYTE_VERIFIED",
+      "source_lineage": "prior stage public publication; private operational inventory excluded"
+    },
+    {
+      "stage": "STEP9B1R",
+      "path": "manifests/step9b1r_method_review.json",
+      "sha256": "6ab3845891c3dbf94e14c534e9fcceed79d640e00cde64d79ac54264d7fdb861",
+      "bytes": 9117,
+      "version": "previously approved frozen public artifact",
+      "status": "BYTE_VERIFIED",
+      "source_lineage": "prior stage public publication; private operational inventory excluded"
+    },
+    {
+      "stage": "STEP9B1R",
+      "path": "manifests/step9b1r_simulation_summary.json",
+      "sha256": "5663b02affefa8ae68f23550bd3333bdf8d1d88ff9b279a2b248b482f1ca3c6a",
+      "bytes": 483113,
+      "version": "previously approved frozen public artifact",
+      "status": "BYTE_VERIFIED",
+      "source_lineage": "prior stage public publication; private operational inventory excluded"
+    },
+    {
+      "stage": "STEP9B1R",
+      "path": "reports/STEP9B1R_EXECUTION_READINESS_KO.md",
+      "sha256": "0d86e3a782fc437991c641e4465d90e16a4b095401cdef1a2a2cd78a66d09e6f",
+      "bytes": 1660,
+      "version": "previously approved frozen public artifact",
+      "status": "BYTE_VERIFIED",
+      "source_lineage": "prior stage public publication; private operational inventory excluded"
+    }
+  ],
+  "existing_reports_reviewed": 125,
+  "core_result_inventory": {
+    "NN_fits": 500,
+    "NN_Test_evaluations": 500,
+    "statistical_rows": 600,
+    "HMM_candidates": 100,
+    "HMM_selected_models": 10,
+    "baseline_evaluations": 40,
+    "Logistic_fits": 10,
+    "original_tau_PASS": 99,
+    "original_tau_BLOCKED": 1,
+    "recovery_tau_PASS": 1,
+    "integrated_tau": 100,
+    "degenerate_tau": 24,
+    "nondegenerate_tau": 76,
+    "original_STEP8B_BLOCKED": 40,
+    "STEP8BR_PASS": 40,
+    "STEP9B2_financial_pvalues": 0
+  },
+  "lineage_contracts": {
+    "NN": "unique500 reused; STEP3D aliases not added",
+    "tau": "original STEP7B99PASS/1BLOCKED + supplemental STEP7BR1PASS = versioned100",
+    "baseline": "original STEP8B BLOCKED40 retained + independent STEP8BR PASS40",
+    "statistics": "STEP5C600 frozen; STEP9B1/R synthetic only; STEP9B2 NOT_EXECUTED"
+  },
+  "publication_boundary": "public approved documents and aggregates only; full private result/identity/scaler/environment inventory excluded",
+  "metric_contract": "BA=(Recall0+Recall1)/2, Macro F1=(F1(0)+F1(1))/2, Accuracy=정분류/전체, Brier=mean((p−y)^2), Recallk=클래스k 정분류/클래스k support다. 확률 threshold는 p>0.5다. 실제 한 클래스뿐이거나 빈 레짐의 BA/Macro F1은 null, 해당 클래스가 없는 Recall은 null로 보존한다. 실제 두 클래스가 있는데 예측만 한 클래스이면 DEGENERATE_PREDICTION이며 유효 지표를 null로 바꾸지 않는다. 새 지표를 위 식으로 계산하지 않고 기존 저장값만 재사용했다.",
+  "config_policy": "original model and metric contracts unchanged; operational config not republished",
+  "change_policy": "prose editable; numerical results or settings require new version and audit",
+  "price_status": "BOTH_UNVERIFIED",
+  "primary_price": "PENDING",
+  "historical18KST_available_at": "UNKNOWN",
+  "production_PIT": "BLOCKED",
+  "final_preservation": "PASS_START_END_BYTE_SHA_UNCHANGED",
+  "detailed_numerical_publication": "BLOCKED_BY_AUTOMATIC_APPROVAL_REVIEW_RETAINED_PRIVATE",
+  "public_edition": "REDUCED_EVIDENCE_POINTER_SUMMARIES"
+}
