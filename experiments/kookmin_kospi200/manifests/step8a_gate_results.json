@@ -1,0 +1,13 @@
+{
+  "readonly_audit_PASS": 253,
+  "FAIL": 0,
+  "composition_audit": "PASS_DESCRIPTIVE_ONLY",
+  "full_support_effect": "NOT_IDENTIFIABLE",
+  "missing_tau_identity": "BLOCKED_PRESERVED",
+  "baseline_STEP8B": "DRAFT_BLOCKED_PENDING_FREEZE_INPUT_GATES_AND_APPROVAL",
+  "original_Ensemble": "BLOCKED",
+  "production_PIT": "BLOCKED",
+  "singleton_publication": "SUPPRESSED",
+  "summary_consistency_tests_PASS": 9,
+  "summary_consistency_tests_FAIL": 0
+}
