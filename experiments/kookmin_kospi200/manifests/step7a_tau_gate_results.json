@@ -1,0 +1,50 @@
+{
+  "gates": [
+    {
+      "id": "preservation",
+      "status": "PASS",
+      "files": 8635
+    },
+    {
+      "id": "checkpoint_bytes_500",
+      "status": "PASS",
+      "count": 500
+    },
+    {
+      "id": "LTC_private_roster",
+      "status": "PASS",
+      "count": 100
+    },
+    {
+      "id": "synthetic33",
+      "status": "PASS"
+    },
+    {
+      "id": "solver_and_forward_bitwise",
+      "status": "PASS"
+    },
+    {
+      "id": "financial_fail_closed",
+      "status": "PASS"
+    },
+    {
+      "id": "STEP7B_user_authorization",
+      "status": "BLOCKED"
+    },
+    {
+      "id": "financial_payload_compatibility_and_saved_probability_parity",
+      "status": "BLOCKED"
+    },
+    {
+      "id": "historical_provider_PIT",
+      "status": "BLOCKED"
+    },
+    {
+      "id": "financial_resource_and_IO_ledger_runtime",
+      "status": "BLOCKED"
+    }
+  ],
+  "PASS": 6,
+  "FAIL": 0,
+  "BLOCKED": 4
+}

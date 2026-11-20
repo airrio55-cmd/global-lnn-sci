@@ -1,0 +1,146 @@
+{
+  "PASS": 33,
+  "FAIL": 0,
+  "domain": "SYNTHETIC_ONLY",
+  "original_forward_equivalence": "BITWISE",
+  "financial_checkpoint_loads": 0,
+  "financial_forwards": 0,
+  "financial_tau_snapshots": 0,
+  "solver_substep_capture_verified": true,
+  "tau_reference_rtol": 2e-06,
+  "tau_reference_atol": 2e-07,
+  "tests": [
+    {
+      "id": "test_01_raw_tau_positive_once",
+      "status": "PASS"
+    },
+    {
+      "id": "test_02_effective_definition",
+      "status": "PASS"
+    },
+    {
+      "id": "test_03_double_softplus_not_used",
+      "status": "PASS"
+    },
+    {
+      "id": "test_04_sensory_gate_actual_source",
+      "status": "PASS"
+    },
+    {
+      "id": "test_05_recurrent_gate_actual_source",
+      "status": "PASS"
+    },
+    {
+      "id": "test_06_masks_zero_remove_conductance",
+      "status": "PASS"
+    },
+    {
+      "id": "test_07_affine_mapping_exactly_once",
+      "status": "PASS"
+    },
+    {
+      "id": "test_08_hidden_shape_and_step_timing",
+      "status": "PASS"
+    },
+    {
+      "id": "test_09_six_real_substeps_and_timing",
+      "status": "PASS"
+    },
+    {
+      "id": "test_10_elapsed_time_cm_t_and_nonunit_timespans",
+      "status": "PASS"
+    },
+    {
+      "id": "test_11_ode_unfolds_and_constraints",
+      "status": "PASS"
+    },
+    {
+      "id": "test_12_cm_t_not_double_counted",
+      "status": "PASS"
+    },
+    {
+      "id": "test_13_finite_positive_and_NaN_rejection",
+      "status": "PASS"
+    },
+    {
+      "id": "test_14_forward_bitwise_equivalent",
+      "status": "PASS"
+    },
+    {
+      "id": "test_15_final_and_all_step_hidden_bitwise",
+      "status": "PASS"
+    },
+    {
+      "id": "test_16_same_weight_input_tau_reproducible",
+      "status": "PASS"
+    },
+    {
+      "id": "test_17_input_dependence",
+      "status": "PASS"
+    },
+    {
+      "id": "test_18_hidden_dependence",
+      "status": "PASS"
+    },
+    {
+      "id": "test_19_constraint_mode_wrong_blocked",
+      "status": "PASS"
+    },
+    {
+      "id": "test_20_metadata_SHA_missing_blocked",
+      "status": "PASS"
+    },
+    {
+      "id": "test_21_parameter_mutation_detected",
+      "status": "PASS"
+    },
+    {
+      "id": "test_22_ordinary_hook_cannot_see_substeps",
+      "status": "PASS"
+    },
+    {
+      "id": "test_23_identity_mix_blocked",
+      "status": "PASS"
+    },
+    {
+      "id": "test_24_financial_load_forward_blocked",
+      "status": "PASS"
+    },
+    {
+      "id": "test_25_RNG_and_all_parameters_unchanged",
+      "status": "PASS"
+    },
+    {
+      "id": "test_26_every_substep_numpy_reference",
+      "status": "PASS"
+    },
+    {
+      "id": "test_27_observation_entry_is_substep0",
+      "status": "PASS"
+    },
+    {
+      "id": "test_28_reversal_does_not_enter_fixed_state_conductance",
+      "status": "PASS"
+    },
+    {
+      "id": "test_29_original_LNN128_logits_hidden_equivalence",
+      "status": "PASS"
+    },
+    {
+      "id": "test_30_lineage_shape_substep_and_two_dates",
+      "status": "PASS"
+    },
+    {
+      "id": "test_31_per_batch_row_distinct_session_lineage",
+      "status": "PASS"
+    },
+    {
+      "id": "test_32_python_numpy_RNG_not_consumed",
+      "status": "PASS"
+    },
+    {
+      "id": "test_33_training_mode_blocked",
+      "status": "PASS"
+    }
+  ]
+}
