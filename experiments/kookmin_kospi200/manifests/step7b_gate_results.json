@@ -1,0 +1,13 @@
+{
+  "preflight_PASS": 711,
+  "release_PASS": 8,
+  "STEP7A_synthetic_regression_PASS": 33,
+  "postrun_PASS": 110,
+  "postrun_FAIL": 0,
+  "extraction_status": "PARTIAL_BLOCKED",
+  "missing_or_BLOCKED": 1,
+  "production_PIT": "BLOCKED",
+  "future_financial_execution": "NOT_AUTHORIZED",
+  "public_summary_tests_PASS": 8,
+  "public_summary_tests_FAIL": 0
+}
