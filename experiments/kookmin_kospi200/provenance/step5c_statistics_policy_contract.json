@@ -1,0 +1,16 @@
+{
+  "version": "STEP5C_STATISTICS_POLICY_V1",
+  "STEP5B_policy_sha256": "3ff7bb17dc23bc026815861620ce47d33e4112bf5b02160d2d3e24f7e990aee3",
+  "adapter_sha256": "1e44187609b8df23df68967dd1a5c5c5bbe934adaf06d7f4e4c11e8a4b12ab2f",
+  "reason": "Restore only previously fixed STEP5B per-class Recall null semantics; original master/statistics unchanged",
+  "BA_MacroF1": "null if one true class",
+  "Recall0_Recall1": "compute supported class only; missing class null",
+  "Brier_Accuracy": "defined for finite nonempty inputs; empty null",
+  "seed_aggregation": "per-seed metric then mean; no probability averaging",
+  "metric_arithmetic": "FP64 frequency-count vectorization; synthetic parity abs tolerance5e-15; exact RNG index/resume parity",
+  "bootstrap_tail": "(1+count(abs(valid_draw-observed)>=abs(observed)))/(valid_count+1)",
+  "CI": "percentile95; not simultaneous",
+  "pooled_rng": "fresh20261116 for eachblock; draw-major then Origin-major, common allmodel/seed/candidate indices",
+  "Origin_diagnostic_rng": "fresh20261116 separately for eachOrigin/block, matching original bootstrap_effect([Origin]) call; shared within diagnostic family",
+  "invalid_policy": "null retained; >10% invalid =>row BLOCKED; incomplete family => all adjusted decisions BLOCKED"
+}

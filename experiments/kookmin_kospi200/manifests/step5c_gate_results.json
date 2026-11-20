@@ -1,0 +1,16 @@
+{
+  "execution_gate": "PASS",
+  "new_training_inference_permitted": false,
+  "preflight_PASS": 3088,
+  "synthetic_PASS": 21,
+  "synthetic_FAIL": 0,
+  "authorization_PASS": 8,
+  "postrun_PASS": 131,
+  "postrun_FAIL": 0,
+  "computation_complete": true,
+  "row_inference_BLOCKED": 0,
+  "family_Holm_BLOCKED": 0,
+  "production_PIT": "BLOCKED",
+  "price_source": "BOTH_UNVERIFIED",
+  "followup_experiment_authorized": false
+}
