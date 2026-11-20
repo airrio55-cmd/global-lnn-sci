@@ -1,0 +1,105 @@
+{
+  "PASS": 24,
+  "FAIL": 0,
+  "actual_financial_fit_filter": 0,
+  "synthetic_fits": 3,
+  "synthetic_model": "GaussianHMM frozen2000/tol1e-4/mincov1e-4",
+  "tests": [
+    {
+      "id": "test_01_actual_synthetic_fit_reproduces_parameters",
+      "status": "PASS"
+    },
+    {
+      "id": "test_02_holdout_changes_do_not_refit_Train",
+      "status": "PASS"
+    },
+    {
+      "id": "test_03_future_perturbation_past_posterior_exact",
+      "status": "PASS"
+    },
+    {
+      "id": "test_04_forward_is_not_smoothing",
+      "status": "PASS"
+    },
+    {
+      "id": "test_05_bridge_transition_omission_detected",
+      "status": "PASS"
+    },
+    {
+      "id": "test_06_state_label_permutation_preserves_economic_names",
+      "status": "PASS"
+    },
+    {
+      "id": "test_07_nonpositive_covariance_blocked",
+      "status": "PASS"
+    },
+    {
+      "id": "test_08_nonconvergence_and_maxiter_not_accepted",
+      "status": "PASS"
+    },
+    {
+      "id": "test_09_train_one_state_collapse_blocked",
+      "status": "PASS"
+    },
+    {
+      "id": "test_10_all_candidates_invalid_no_fallback",
+      "status": "PASS"
+    },
+    {
+      "id": "test_11_tie_selects_smallest_seed",
+      "status": "PASS"
+    },
+    {
+      "id": "test_12_AB_input_mixing_rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "test_13_Origin_future_boundary_and_Train_dates",
+      "status": "PASS"
+    },
+    {
+      "id": "test_14_empty_and_one_actual_class_null_policy",
+      "status": "PASS"
+    },
+    {
+      "id": "test_15_same_predictions_regime_n_sum",
+      "status": "PASS"
+    },
+    {
+      "id": "test_16_duplicate_missing_nonmonotone_ids",
+      "status": "PASS"
+    },
+    {
+      "id": "test_17_regime_metric_definition_equals_STEP5B",
+      "status": "PASS"
+    },
+    {
+      "id": "test_18_no_reinference_or_threshold_tuning",
+      "status": "PASS"
+    },
+    {
+      "id": "test_19_future_targets_not_filter_inputs",
+      "status": "PASS"
+    },
+    {
+      "id": "test_20_nonfinite_parameters_and_repro_evidence_blocked",
+      "status": "PASS"
+    },
+    {
+      "id": "test_21_Test_one_state_kept_not_refit",
+      "status": "PASS"
+    },
+    {
+      "id": "test_22_financial_entrypoint_always_blocks_before_IO",
+      "status": "PASS"
+    },
+    {
+      "id": "test_23_no_new_seed_or_missing_candidate",
+      "status": "PASS"
+    },
+    {
+      "id": "test_24_raw_Train_names_equal_means_blocked",
+      "status": "PASS"
+    }
+  ]
+}

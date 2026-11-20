@@ -1,0 +1,40 @@
+{
+  "preparation_PASS": 1151,
+  "preparation_FAIL": 0,
+  "synthetic_PASS": 24,
+  "synthetic_FAIL": 0,
+  "execution_gate": "BLOCKED_PREPARATION_ONLY",
+  "BLOCKED": 6,
+  "blockers": [
+    {
+      "id": "STEP6B_separate_approval",
+      "status": "BLOCKED",
+      "reason": "No financial HMM fit/filter release or approval in STEP6A"
+    },
+    {
+      "id": "financial_HMM_Train_input_SHA",
+      "status": "BLOCKED",
+      "reason": "Actual Vol_Regime values not opened; construct and verify only after separate approval"
+    },
+    {
+      "id": "financial_HMM_scaler_and_parameters",
+      "status": "BLOCKED",
+      "reason": "No financial scaler/model fitted"
+    },
+    {
+      "id": "future_filter_and_prediction_join",
+      "status": "BLOCKED",
+      "reason": "Metadata contract only; actual join of frozen probabilities not executed"
+    },
+    {
+      "id": "financial_IO_and_reproducibility",
+      "status": "BLOCKED",
+      "reason": "Bind100 jobs+source/config/environment/input SHA+paths+fit budget and duplicate ledger at release"
+    },
+    {
+      "id": "historical_PIT",
+      "status": "BLOCKED",
+      "reason": "BOTH_UNVERIFIED, available_at UNKNOWN, production-PIT BLOCKED"
+    }
+  ]
+}

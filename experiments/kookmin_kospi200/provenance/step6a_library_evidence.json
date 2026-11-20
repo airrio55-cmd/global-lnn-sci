@@ -1,0 +1,8 @@
+{
+  "source": "installed hmmlearn0.3.3 ConvergenceMonitor.converged",
+  "source_sha256": "e2d32414738cecf24ae2b5b9b52dfb04aa32c31ae2869b070a7e84b44b2e1c12",
+  "reference_URL": "https://github.com/hmmlearn/hmmlearn/blob/0.3.3/src/hmmlearn/base.py",
+  "checked_date_KST": "2026-11-20",
+  "inspection": "Installed source only; no financial observations loaded; external URL not fetched",
+  "finding": "monitor.converged is also true when iter==n_iter; require actual finite tolerance convergence, not cap alone"
+}

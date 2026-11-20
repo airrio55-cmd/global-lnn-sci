@@ -1,0 +1,35 @@
+{
+  "stage": "STEP6A",
+  "execution_status": "PREPARATION_ONLY",
+  "hmm_fit_enabled": false,
+  "origins": [
+    "O1",
+    "O2",
+    "O3",
+    "O4",
+    "O5"
+  ],
+  "price_candidates": [
+    "A",
+    "B"
+  ],
+  "HMM_initialization_seeds": [
+    2,
+    12,
+    22,
+    32,
+    42,
+    52,
+    62,
+    72,
+    82,
+    92
+  ],
+  "candidate_fits_planned": 100,
+  "final_selected_HMMs_planned": 10,
+  "financial_fits_completed": 0,
+  "financial_HMMs_selected": 0,
+  "no_neural_fit_count_increment": true,
+  "individual_job_roster_and_Train_date_mapping": "PRIVATE_LOCAL_ONLY",
+  "per_cohort_Train_counts_and_filtering_ranges_published": false
+}

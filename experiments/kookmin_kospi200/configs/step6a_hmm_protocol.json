@@ -1,0 +1,52 @@
+{
+  "stage": "STEP6A",
+  "hmm_fit_enabled": false,
+  "hmm_filtering_enabled": false,
+  "training_enabled": false,
+  "HMM": {
+    "n_components": 2,
+    "covariance_type": "full",
+    "n_iter": 2000,
+    "tol": 0.0001,
+    "min_covar": 0.0001
+  },
+  "observation": [
+    "Vol_Regime"
+  ],
+  "Vol_Regime": "Log_Ret.rolling(40).std(ddof=1)",
+  "hmm_initialization_seeds": [
+    2,
+    12,
+    22,
+    32,
+    42,
+    52,
+    62,
+    72,
+    82,
+    92
+  ],
+  "candidate_fit_budget_planned": 100,
+  "final_HMMs_planned": 10,
+  "actual_financial_fits": 0,
+  "actual_financial_filtering": 0,
+  "fit_dates": "exact STEP3C purged retained Train base dates",
+  "scaler": "separate HMM StandardScaler fitted only on those dates; F1 scaler is not reused",
+  "selection": "max eligible finite final Train log likelihood; exact tie smallest seed",
+  "convergence": "monitor_converged AND at least two finite likelihoods AND 0<=last_delta<1e-4; maxiter alone insufficient; negative delta BLOCKED",
+  "covariance": "finite symmetric strictly positive definite",
+  "state_eligibility": "both Train hard-forward-filter states observed",
+  "naming": "empirical original-unit Train Vol_Regime mean within each Train hard-filter state; exact tied means BLOCKED",
+  "reproducibility": "fixed data/source/environment/seed SHA; pinned deterministic CPU settings and synthetic repeat PASS; do not silently double100 financial fit budget",
+  "posterior": "p(z_t | x_1..x_t), log-stable forward only",
+  "bridge": "one transition and emission for each consecutive KRX session after last Train date; no skipped purge/Validation tail dates",
+  "filter_2025_tail": "may filter observed2025 last20 sessions, but UNKNOWN targets excluded from evaluation; no2026",
+  "state_tie": "argmax first index, keep state mapping fixed; no Test occupancy forcing",
+  "master_sha256": "f4ea7a18d7812b00b8c581191a110f63a6799a22e066484ec251ee32f7912c5c",
+  "learning_kernel_sha256": "676cff063a52141a62fef3f9cda96db582fb75a8a831f54b1a18d3aba91eff09",
+  "source_status": "BOTH_UNVERIFIED",
+  "historical_available_at": "UNKNOWN",
+  "production_PIT": "BLOCKED",
+  "main_price": "PENDING",
+  "hmmlearn_version": "0.3.3"
+}
