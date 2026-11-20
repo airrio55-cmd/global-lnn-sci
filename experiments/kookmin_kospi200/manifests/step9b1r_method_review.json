@@ -1,0 +1,296 @@
+{
+  "stage": "STEP9B1R",
+  "status": "BLOCKED_METHOD_NOT_VALIDATED",
+  "recommended_financial_method": null,
+  "selection_criteria": {
+    "minimum_eligible_datasets_fraction": 0.9,
+    "core_TypeI_point_upper": 0.075,
+    "TypeI_Wilson_contains_nominal05": true,
+    "coverage_point_lower": 0.925,
+    "coverage_Wilson_contains95": true,
+    "valid_draw_fraction": 0.9,
+    "power_delta010_target": 0.8,
+    "all_core_scenarios_required": true
+  },
+  "all_nine_fail_core_holdout_criteria": true,
+  "eligibility": [
+    {
+      "method": "MBB20",
+      "all_core_criteria_passed": false,
+      "failures": [
+        {
+          "DGP": "overlap20_AR095_null",
+          "criteria_failed": [
+            "TypeI_not_compatible_with_frozen_criterion",
+            "coverage_not_compatible_with_frozen_criterion"
+          ]
+        },
+        {
+          "DGP": "rare03_null",
+          "criteria_failed": [
+            "eligible_dataset_fraction_below90percent",
+            "TypeI_not_compatible_with_frozen_criterion",
+            "coverage_not_compatible_with_frozen_criterion"
+          ]
+        },
+        {
+          "DGP": "shared_break_null",
+          "criteria_failed": [
+            "TypeI_not_compatible_with_frozen_criterion",
+            "coverage_not_compatible_with_frozen_criterion"
+          ]
+        }
+      ]
+    },
+    {
+      "method": "MBB40",
+      "all_core_criteria_passed": false,
+      "failures": [
+        {
+          "DGP": "overlap20_AR095_null",
+          "criteria_failed": [
+            "TypeI_not_compatible_with_frozen_criterion",
+            "coverage_not_compatible_with_frozen_criterion"
+          ]
+        },
+        {
+          "DGP": "rare03_null",
+          "criteria_failed": [
+            "eligible_dataset_fraction_below90percent",
+            "TypeI_not_compatible_with_frozen_criterion"
+          ]
+        },
+        {
+          "DGP": "shared_break_null",
+          "criteria_failed": [
+            "TypeI_not_compatible_with_frozen_criterion",
+            "coverage_not_compatible_with_frozen_criterion"
+          ]
+        }
+      ]
+    },
+    {
+      "method": "MBB60",
+      "all_core_criteria_passed": false,
+      "failures": [
+        {
+          "DGP": "overlap20_AR095_null",
+          "criteria_failed": [
+            "eligible_dataset_fraction_below90percent",
+            "TypeI_not_compatible_with_frozen_criterion",
+            "coverage_not_compatible_with_frozen_criterion"
+          ]
+        },
+        {
+          "DGP": "rare03_null",
+          "criteria_failed": [
+            "eligible_dataset_fraction_below90percent",
+            "TypeI_not_compatible_with_frozen_criterion",
+            "coverage_not_compatible_with_frozen_criterion"
+          ]
+        },
+        {
+          "DGP": "shared_break_null",
+          "criteria_failed": [
+            "eligible_dataset_fraction_below90percent",
+            "TypeI_not_compatible_with_frozen_criterion",
+            "coverage_not_compatible_with_frozen_criterion"
+          ]
+        }
+      ]
+    },
+    {
+      "method": "STATIONARY40",
+      "all_core_criteria_passed": false,
+      "failures": [
+        {
+          "DGP": "overlap20_AR095_null",
+          "criteria_failed": [
+            "TypeI_not_compatible_with_frozen_criterion",
+            "coverage_not_compatible_with_frozen_criterion"
+          ]
+        },
+        {
+          "DGP": "rare03_null",
+          "criteria_failed": [
+            "eligible_dataset_fraction_below90percent",
+            "TypeI_not_compatible_with_frozen_criterion",
+            "coverage_not_compatible_with_frozen_criterion"
+          ]
+        },
+        {
+          "DGP": "shared_break_null",
+          "criteria_failed": [
+            "TypeI_not_compatible_with_frozen_criterion",
+            "coverage_not_compatible_with_frozen_criterion"
+          ]
+        }
+      ]
+    },
+    {
+      "method": "STATIONARY120",
+      "all_core_criteria_passed": false,
+      "failures": [
+        {
+          "DGP": "overlap20_AR095_null",
+          "criteria_failed": [
+            "eligible_dataset_fraction_below90percent",
+            "TypeI_not_compatible_with_frozen_criterion",
+            "coverage_not_compatible_with_frozen_criterion"
+          ]
+        },
+        {
+          "DGP": "rare03_null",
+          "criteria_failed": [
+            "eligible_dataset_fraction_below90percent",
+            "TypeI_not_compatible_with_frozen_criterion",
+            "coverage_not_compatible_with_frozen_criterion"
+          ]
+        },
+        {
+          "DGP": "shared_break_null",
+          "criteria_failed": [
+            "eligible_dataset_fraction_below90percent",
+            "TypeI_not_compatible_with_frozen_criterion",
+            "coverage_not_compatible_with_frozen_criterion"
+          ]
+        }
+      ]
+    },
+    {
+      "method": "LOCAL40_W100",
+      "all_core_criteria_passed": false,
+      "failures": [
+        {
+          "DGP": "overlap20_AR095_null",
+          "criteria_failed": [
+            "TypeI_not_compatible_with_frozen_criterion",
+            "coverage_not_compatible_with_frozen_criterion"
+          ]
+        },
+        {
+          "DGP": "rare03_null",
+          "criteria_failed": [
+            "eligible_dataset_fraction_below90percent",
+            "TypeI_not_compatible_with_frozen_criterion",
+            "coverage_not_compatible_with_frozen_criterion"
+          ]
+        },
+        {
+          "DGP": "shared_break_null",
+          "criteria_failed": [
+            "TypeI_not_compatible_with_frozen_criterion",
+            "coverage_not_compatible_with_frozen_criterion"
+          ]
+        }
+      ]
+    },
+    {
+      "method": "HAC40",
+      "all_core_criteria_passed": false,
+      "failures": [
+        {
+          "DGP": "overlap20_AR095_null",
+          "criteria_failed": [
+            "TypeI_not_compatible_with_frozen_criterion",
+            "coverage_not_compatible_with_frozen_criterion"
+          ]
+        },
+        {
+          "DGP": "rare03_null",
+          "criteria_failed": [
+            "eligible_dataset_fraction_below90percent",
+            "TypeI_not_compatible_with_frozen_criterion",
+            "coverage_not_compatible_with_frozen_criterion"
+          ]
+        },
+        {
+          "DGP": "shared_break_null",
+          "criteria_failed": [
+            "TypeI_not_compatible_with_frozen_criterion",
+            "coverage_not_compatible_with_frozen_criterion"
+          ]
+        }
+      ]
+    },
+    {
+      "method": "HAC120",
+      "all_core_criteria_passed": false,
+      "failures": [
+        {
+          "DGP": "overlap20_AR095_null",
+          "criteria_failed": [
+            "TypeI_not_compatible_with_frozen_criterion",
+            "coverage_not_compatible_with_frozen_criterion"
+          ]
+        },
+        {
+          "DGP": "rare03_null",
+          "criteria_failed": [
+            "eligible_dataset_fraction_below90percent",
+            "TypeI_not_compatible_with_frozen_criterion",
+            "coverage_not_compatible_with_frozen_criterion"
+          ]
+        },
+        {
+          "DGP": "shared_break_null",
+          "criteria_failed": [
+            "TypeI_not_compatible_with_frozen_criterion",
+            "coverage_not_compatible_with_frozen_criterion"
+          ]
+        }
+      ]
+    },
+    {
+      "method": "MULTIPLIER120",
+      "all_core_criteria_passed": false,
+      "failures": [
+        {
+          "DGP": "overlap20_AR095_null",
+          "criteria_failed": [
+            "TypeI_not_compatible_with_frozen_criterion",
+            "coverage_not_compatible_with_frozen_criterion"
+          ]
+        },
+        {
+          "DGP": "rare03_null",
+          "criteria_failed": [
+            "eligible_dataset_fraction_below90percent",
+            "TypeI_not_compatible_with_frozen_criterion",
+            "coverage_not_compatible_with_frozen_criterion"
+          ]
+        },
+        {
+          "DGP": "shared_break_null",
+          "criteria_failed": [
+            "TypeI_not_compatible_with_frozen_criterion",
+            "coverage_not_compatible_with_frozen_criterion"
+          ]
+        }
+      ]
+    }
+  ],
+  "estimand_maintained_for_exact_BA_resampling": true,
+  "IF_HAC_and_multiplier": "same target functional, asymptotic linearization and support>=10 restrictions; not exact finite-sample equivalence",
+  "local_blocks": "same metric definition, but local-stationary sampling assumptions and finite-time inclusion weights differ; not automatically equivalent inference",
+  "families_preserved": {
+    "Primary_joint20": 0.05,
+    "Secondary_joint80": 0.05,
+    "global100_FWER5_claim": false
+  },
+  "old_protocols_modified": false,
+  "financial_bootstrap_enabled": false,
+  "financial_pvalue_budget": 0,
+  "financial_fit_forward_draw_CI_budgets": 0,
+  "STEP9B2_approved": false,
+  "tau100_recovery_preserved": true,
+  "old_STEP7B99_1_preserved": true,
+  "original_STEP8B_BLOCKED40_preserved": true,
+  "old_files_preserved": 10023,
+  "old_files_changed": 0,
+  "pricing": "BOTH_UNVERIFIED",
+  "primary_price": "PENDING",
+  "historical18KST_available_at": "UNKNOWN",
+  "production_PIT": "BLOCKED",
+  "financial_followup_started": false
+}

@@ -1,0 +1,17 @@
+{
+  "old_byte_SHA_preservation": "PASS",
+  "old9B1_and_STEP5C_families": "PASS_UNCHANGED",
+  "old_failure_reproduction": "PASS_EXACT6ROWS",
+  "synthetic_structural_tests": "PASS16",
+  "synthetic_actual_family_metric_IF_gradient_tests": "PASS4",
+  "synthetic_campaign_completion": "PASS4680PAIR_DATASETS_1200FAMILY_DATASETS",
+  "core_nominal_error_and_coverage": "FAIL_ALL9METHODS",
+  "rare_class_eligibility": "FAIL_UNRESOLVED",
+  "199_draw_Holm_resolution": "FAIL_NOT_INFORMATIVE",
+  "1999_draw_Holm_precision": "LIMITED_NOT_CERTIFICATION",
+  "financial_input_access": "PASS_ZERO",
+  "financial_fit_forward_draw_pvalues_CI": "PASS_ZERO",
+  "method_readiness": "BLOCKED_METHOD_NOT_VALIDATED",
+  "STEP9B2_approval": "BLOCKED_FALSE_BUDGET0",
+  "public_summary_consistency_tests": "PASS8"
+}

@@ -1,0 +1,100 @@
+{
+  "domain": "SYNTHETIC_ONLY",
+  "methods": [
+    "MBB20",
+    "MBB40",
+    "MBB60",
+    "STATIONARY40",
+    "STATIONARY120",
+    "LOCAL40_W100",
+    "HAC40",
+    "HAC120",
+    "MULTIPLIER120"
+  ],
+  "core_null_holdout_datasets": 500,
+  "core_null_development_datasets": 100,
+  "other_holdout": 80,
+  "other_development": 40,
+  "draws": 499,
+  "seed": 20261120,
+  "seed_axes": "[root,901or902,phase,scenario,rep,method]",
+  "workers": 2,
+  "BLAS_threads_per_worker": 1,
+  "criteria_frozen_before_new_results": {
+    "minimum_eligible_datasets_fraction": 0.9,
+    "core_TypeI_point_upper": 0.075,
+    "TypeI_Wilson_contains_nominal05": true,
+    "coverage_point_lower": 0.925,
+    "coverage_Wilson_contains95": true,
+    "valid_draw_fraction": 0.9,
+    "power_delta010_target": 0.8,
+    "all_core_scenarios_required": true
+  },
+  "family20_80_each_alpha": 0.05,
+  "financial_ops_budget": 0,
+  "method_changed_after_holdout_seen": false,
+  "status": "SYNTHETIC_ONLY_COMPLETED",
+  "financial_bootstrap_enabled": false,
+  "financial_pvalue_budget": 0,
+  "method_readiness": "BLOCKED_METHOD_NOT_VALIDATED",
+  "pair_total_datasets": 4680,
+  "pair_DGPs": 23,
+  "full_family_total_datasets": 1200,
+  "primary_Holm": 20,
+  "secondary_Holm": 80,
+  "main_DGP_rho": "binary Markov-error lag1 persistence, not Gaussian latent AR",
+  "Gaussian_extension": {
+    "domain": "SYNTHETIC_ONLY",
+    "purpose": "distinguish true Gaussian latent AR from prior binary Markov-error persistence; broaden DGP coverage, no method tuning",
+    "latent_AR": [
+      0.95,
+      0.98
+    ],
+    "development": [
+      100,
+      40
+    ],
+    "holdout": [
+      500,
+      80
+    ],
+    "draws": 499,
+    "seed_namespace": 3001,
+    "method_formulas_changed": false
+  },
+  "power_grid_extension": {
+    "purpose": "complete same-rho delta.02/.05/.10 grid; not method tuning",
+    "scenarios": [
+      "AR095_delta002",
+      "AR07_delta005",
+      "AR07_delta010"
+    ],
+    "development": 40,
+    "holdout": 80,
+    "RNG_namespace": 3101,
+    "method_formulas_changed": false,
+    "financial_ops": 0
+  },
+  "resolution_extension": {
+    "reason": "a priori discrete-p resolution failure of B199 under joint20/80 Holm; not financial results or favourable-method choice",
+    "old_B": 199,
+    "old_min_p": 0.005,
+    "Holm20_first": 0.0025,
+    "Holm80_first": 0.000625,
+    "old_rejection_information": "mechanically impossible with strict p<.05; zeroFWER uninformative",
+    "new_B": 1999,
+    "new_min_p": 0.0005,
+    "new_holdout_datasets_each_DGP": 100,
+    "DGPs": [
+      "overlap20_AR07_null",
+      "overlap20_AR095_null"
+    ],
+    "methods": [
+      "MBB40",
+      "STATIONARY120"
+    ],
+    "new_RNG_namespace": 9901,
+    "lower_tail_precision": "only ~1.25 expected counts at Holm80 boundary; largeMCerror, not certification",
+    "financial_ops": 0
+  }
+}
