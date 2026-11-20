@@ -1,0 +1,608 @@
+{
+  "stage": "STEP9B1",
+  "domain": "SYNTHETIC_ONLY",
+  "unit_tests_PASS": 22,
+  "unit_tests_FAIL": 0,
+  "simulation": {
+    "domain": "SYNTHETIC_ONLY",
+    "seed": 20261120,
+    "RNG": "PCG64/SeedSequence[seed,scenario,rep,block]",
+    "datasets_per_scenario": 80,
+    "draws_per_dataset_block": 399,
+    "N": 1000,
+    "NN_seed_axis": 10,
+    "scenarios": [
+      "iid_null",
+      "overlap20_AR07_null",
+      "overlap20_AR07_alt",
+      "shared_regime_break_null",
+      "shared_regime_break_alt",
+      "crossing_regime_null",
+      "rare_class_null",
+      "overlap20_AR095_null"
+    ],
+    "operating_characteristics": [
+      {
+        "scenario": "iid_null",
+        "block": 20,
+        "datasets": 80,
+        "eligible": 80,
+        "BLOCKED_datasets": 0,
+        "target_delta": 0.0,
+        "rejection_rate": 0.05,
+        "rate_interpretation": "TypeI_diagnostic",
+        "rate_MCSE": 0.02436698586202241,
+        "rate_Wilson95": [
+          0.01961355453554428,
+          0.1216227620464301
+        ],
+        "marginal_CI_coverage": 0.925,
+        "coverage_Wilson95": [
+          0.8458798391878072,
+          0.9651747507069949
+        ],
+        "mean_CI_width": 0.06067662260614086,
+        "invalid_draws_mean": 0.025
+      },
+      {
+        "scenario": "iid_null",
+        "block": 40,
+        "datasets": 80,
+        "eligible": 80,
+        "BLOCKED_datasets": 0,
+        "target_delta": 0.0,
+        "rejection_rate": 0.05,
+        "rate_interpretation": "TypeI_diagnostic",
+        "rate_MCSE": 0.02436698586202241,
+        "rate_Wilson95": [
+          0.01961355453554428,
+          0.1216227620464301
+        ],
+        "marginal_CI_coverage": 0.925,
+        "coverage_Wilson95": [
+          0.8458798391878072,
+          0.9651747507069949
+        ],
+        "mean_CI_width": 0.06059789736551292,
+        "invalid_draws_mean": 3.8
+      },
+      {
+        "scenario": "iid_null",
+        "block": 60,
+        "datasets": 80,
+        "eligible": 80,
+        "BLOCKED_datasets": 0,
+        "target_delta": 0.0,
+        "rejection_rate": 0.05,
+        "rate_interpretation": "TypeI_diagnostic",
+        "rate_MCSE": 0.02436698586202241,
+        "rate_Wilson95": [
+          0.01961355453554428,
+          0.1216227620464301
+        ],
+        "marginal_CI_coverage": 0.9125,
+        "coverage_Wilson95": [
+          0.8302320449152499,
+          0.9569679982179401
+        ],
+        "mean_CI_width": 0.06326513148300658,
+        "invalid_draws_mean": 19.95
+      },
+      {
+        "scenario": "overlap20_AR07_null",
+        "block": 20,
+        "datasets": 80,
+        "eligible": 80,
+        "BLOCKED_datasets": 0,
+        "target_delta": 0.0,
+        "rejection_rate": 0.05,
+        "rate_interpretation": "TypeI_diagnostic",
+        "rate_MCSE": 0.02436698586202241,
+        "rate_Wilson95": [
+          0.01961355453554428,
+          0.1216227620464301
+        ],
+        "marginal_CI_coverage": 0.95,
+        "coverage_Wilson95": [
+          0.8783772379535698,
+          0.9803864454644556
+        ],
+        "mean_CI_width": 0.1368458079660338,
+        "invalid_draws_mean": 0.9
+      },
+      {
+        "scenario": "overlap20_AR07_null",
+        "block": 40,
+        "datasets": 80,
+        "eligible": 80,
+        "BLOCKED_datasets": 0,
+        "target_delta": 0.0,
+        "rejection_rate": 0.05,
+        "rate_interpretation": "TypeI_diagnostic",
+        "rate_MCSE": 0.02436698586202241,
+        "rate_Wilson95": [
+          0.01961355453554428,
+          0.1216227620464301
+        ],
+        "marginal_CI_coverage": 0.9375,
+        "coverage_Wilson95": [
+          0.8618985123272557,
+          0.973010624329158
+        ],
+        "mean_CI_width": 0.1447232362312584,
+        "invalid_draws_mean": 9.825
+      },
+      {
+        "scenario": "overlap20_AR07_null",
+        "block": 60,
+        "datasets": 80,
+        "eligible": 62,
+        "BLOCKED_datasets": 18,
+        "target_delta": 0.0,
+        "rejection_rate": 0.04838709677419355,
+        "rate_interpretation": "TypeI_diagnostic",
+        "rate_MCSE": 0.02725204509637419,
+        "rate_Wilson95": [
+          0.016591685850580726,
+          0.1328803792732396
+        ],
+        "marginal_CI_coverage": 0.9354838709677419,
+        "coverage_Wilson95": [
+          0.8455248427224711,
+          0.9746270944795592
+        ],
+        "mean_CI_width": 0.1501442534514482,
+        "invalid_draws_mean": 34.1125
+      },
+      {
+        "scenario": "overlap20_AR07_alt",
+        "block": 20,
+        "datasets": 80,
+        "eligible": 80,
+        "BLOCKED_datasets": 0,
+        "target_delta": 0.1,
+        "rejection_rate": 0.7875,
+        "rate_interpretation": "power",
+        "rate_MCSE": 0.04573616594118926,
+        "rate_Wilson95": [
+          0.6857784426940333,
+          0.8628761328230384
+        ],
+        "marginal_CI_coverage": 0.9375,
+        "coverage_Wilson95": [
+          0.8618985123272557,
+          0.973010624329158
+        ],
+        "mean_CI_width": 0.13766154540264744,
+        "invalid_draws_mean": 1.1625
+      },
+      {
+        "scenario": "overlap20_AR07_alt",
+        "block": 40,
+        "datasets": 80,
+        "eligible": 78,
+        "BLOCKED_datasets": 2,
+        "target_delta": 0.1,
+        "rejection_rate": 0.717948717948718,
+        "rate_interpretation": "power",
+        "rate_MCSE": 0.050952259750157956,
+        "rate_Wilson95": [
+          0.6096907122939889,
+          0.8057466527032598
+        ],
+        "marginal_CI_coverage": 0.9743589743589743,
+        "coverage_Wilson95": [
+          0.9112472996432415,
+          0.9929399065272408
+        ],
+        "mean_CI_width": 0.14824680756425215,
+        "invalid_draws_mean": 11.525
+      },
+      {
+        "scenario": "overlap20_AR07_alt",
+        "block": 60,
+        "datasets": 80,
+        "eligible": 61,
+        "BLOCKED_datasets": 19,
+        "target_delta": 0.1,
+        "rejection_rate": 0.6557377049180327,
+        "rate_interpretation": "power",
+        "rate_MCSE": 0.06083379227915469,
+        "rate_Wilson95": [
+          0.5304974914056818,
+          0.7625249103965454
+        ],
+        "marginal_CI_coverage": 0.9344262295081968,
+        "coverage_Wilson95": [
+          0.8431719832010424,
+          0.9742062955104335
+        ],
+        "mean_CI_width": 0.1517056128815673,
+        "invalid_draws_mean": 36.1625
+      },
+      {
+        "scenario": "shared_regime_break_null",
+        "block": 20,
+        "datasets": 80,
+        "eligible": 80,
+        "BLOCKED_datasets": 0,
+        "target_delta": 0.0,
+        "rejection_rate": 0.05,
+        "rate_interpretation": "TypeI_diagnostic",
+        "rate_MCSE": 0.02436698586202241,
+        "rate_Wilson95": [
+          0.01961355453554428,
+          0.1216227620464301
+        ],
+        "marginal_CI_coverage": 0.9375,
+        "coverage_Wilson95": [
+          0.8618985123272557,
+          0.973010624329158
+        ],
+        "mean_CI_width": 0.12631114864387782,
+        "invalid_draws_mean": 1.9625
+      },
+      {
+        "scenario": "shared_regime_break_null",
+        "block": 40,
+        "datasets": 80,
+        "eligible": 78,
+        "BLOCKED_datasets": 2,
+        "target_delta": 0.0,
+        "rejection_rate": 0.02564102564102564,
+        "rate_interpretation": "TypeI_diagnostic",
+        "rate_MCSE": 0.017896985652618276,
+        "rate_Wilson95": [
+          0.007060093472759203,
+          0.08875270035675845
+        ],
+        "marginal_CI_coverage": 0.9487179487179487,
+        "coverage_Wilson95": [
+          0.8754332345270551,
+          0.9798789875261039
+        ],
+        "mean_CI_width": 0.13206327801726103,
+        "invalid_draws_mean": 12.75
+      },
+      {
+        "scenario": "shared_regime_break_null",
+        "block": 60,
+        "datasets": 80,
+        "eligible": 57,
+        "BLOCKED_datasets": 23,
+        "target_delta": 0.0,
+        "rejection_rate": 0.07017543859649122,
+        "rate_interpretation": "TypeI_diagnostic",
+        "rate_MCSE": 0.03383417933803951,
+        "rate_Wilson95": [
+          0.027626420229066015,
+          0.1670017009603369
+        ],
+        "marginal_CI_coverage": 0.9122807017543859,
+        "coverage_Wilson95": [
+          0.8105512290044132,
+          0.9619483282220778
+        ],
+        "mean_CI_width": 0.13475866402455464,
+        "invalid_draws_mean": 34.9875
+      },
+      {
+        "scenario": "shared_regime_break_alt",
+        "block": 20,
+        "datasets": 80,
+        "eligible": 80,
+        "BLOCKED_datasets": 0,
+        "target_delta": 0.1,
+        "rejection_rate": 0.8625,
+        "rate_interpretation": "power",
+        "rate_MCSE": 0.03850223207815359,
+        "rate_Wilson95": [
+          0.7703289993301339,
+          0.9214528567566089
+        ],
+        "marginal_CI_coverage": 0.8875,
+        "coverage_Wilson95": [
+          0.7998178190762713,
+          0.9396731305336952
+        ],
+        "mean_CI_width": 0.12191944479123636,
+        "invalid_draws_mean": 1.3125
+      },
+      {
+        "scenario": "shared_regime_break_alt",
+        "block": 40,
+        "datasets": 80,
+        "eligible": 79,
+        "BLOCKED_datasets": 1,
+        "target_delta": 0.1,
+        "rejection_rate": 0.7974683544303798,
+        "rate_interpretation": "power",
+        "rate_MCSE": 0.04521573856614586,
+        "rate_Wilson95": [
+          0.696039875520555,
+          0.8713088972929341
+        ],
+        "marginal_CI_coverage": 0.9113924050632911,
+        "coverage_Wilson95": [
+          0.8282165775378829,
+          0.9564147040126869
+        ],
+        "mean_CI_width": 0.12975392535447075,
+        "invalid_draws_mean": 12.1625
+      },
+      {
+        "scenario": "shared_regime_break_alt",
+        "block": 60,
+        "datasets": 80,
+        "eligible": 52,
+        "BLOCKED_datasets": 28,
+        "target_delta": 0.1,
+        "rejection_rate": 0.8269230769230769,
+        "rate_interpretation": "power",
+        "rate_MCSE": 0.052462679367767266,
+        "rate_Wilson95": [
+          0.702691358755192,
+          0.9061752560868979
+        ],
+        "marginal_CI_coverage": 0.9423076923076923,
+        "coverage_Wilson95": [
+          0.8435748863103923,
+          0.9801858278877295
+        ],
+        "mean_CI_width": 0.13289356369326144,
+        "invalid_draws_mean": 37.375
+      },
+      {
+        "scenario": "crossing_regime_null",
+        "block": 20,
+        "datasets": 80,
+        "eligible": 80,
+        "BLOCKED_datasets": 0,
+        "target_delta": 0.0,
+        "rejection_rate": 0.0,
+        "rate_interpretation": "TypeI_diagnostic",
+        "rate_MCSE": 0.0,
+        "rate_Wilson95": [
+          0,
+          0.0458181295355271
+        ],
+        "marginal_CI_coverage": 1.0,
+        "coverage_Wilson95": [
+          0.9541818704644728,
+          0.9999999999999999
+        ],
+        "mean_CI_width": 0.10984379144778807,
+        "invalid_draws_mean": 0.025
+      },
+      {
+        "scenario": "crossing_regime_null",
+        "block": 40,
+        "datasets": 80,
+        "eligible": 80,
+        "BLOCKED_datasets": 0,
+        "target_delta": 0.0,
+        "rejection_rate": 0.0,
+        "rate_interpretation": "TypeI_diagnostic",
+        "rate_MCSE": 0.0,
+        "rate_Wilson95": [
+          0,
+          0.0458181295355271
+        ],
+        "marginal_CI_coverage": 1.0,
+        "coverage_Wilson95": [
+          0.9541818704644728,
+          0.9999999999999999
+        ],
+        "mean_CI_width": 0.1452500729383155,
+        "invalid_draws_mean": 3.775
+      },
+      {
+        "scenario": "crossing_regime_null",
+        "block": 60,
+        "datasets": 80,
+        "eligible": 80,
+        "BLOCKED_datasets": 0,
+        "target_delta": 0.0,
+        "rejection_rate": 0.0,
+        "rate_interpretation": "TypeI_diagnostic",
+        "rate_MCSE": 0.0,
+        "rate_Wilson95": [
+          0,
+          0.0458181295355271
+        ],
+        "marginal_CI_coverage": 1.0,
+        "coverage_Wilson95": [
+          0.9541818704644728,
+          0.9999999999999999
+        ],
+        "mean_CI_width": 0.16158203509828115,
+        "invalid_draws_mean": 19.65
+      },
+      {
+        "scenario": "rare_class_null",
+        "block": 20,
+        "datasets": 80,
+        "eligible": 40,
+        "BLOCKED_datasets": 40,
+        "target_delta": 0.0,
+        "rejection_rate": 0.075,
+        "rate_interpretation": "TypeI_diagnostic",
+        "rate_MCSE": 0.04164582812239421,
+        "rate_Wilson95": [
+          0.025836025774588198,
+          0.19864233524310543
+        ],
+        "marginal_CI_coverage": 0.925,
+        "coverage_Wilson95": [
+          0.8013576647568946,
+          0.9741639742254119
+        ],
+        "mean_CI_width": 0.2138005019682617,
+        "invalid_draws_mean": 52.6375
+      },
+      {
+        "scenario": "rare_class_null",
+        "block": 40,
+        "datasets": 80,
+        "eligible": 19,
+        "BLOCKED_datasets": 61,
+        "target_delta": 0.0,
+        "rejection_rate": 0.0,
+        "rate_interpretation": "TypeI_diagnostic",
+        "rate_MCSE": 0.0,
+        "rate_Wilson95": [
+          0,
+          0.16817922405261626
+        ],
+        "marginal_CI_coverage": 1.0,
+        "coverage_Wilson95": [
+          0.8318207759473837,
+          1
+        ],
+        "mean_CI_width": 0.21539622838581032,
+        "invalid_draws_mean": 72.7
+      },
+      {
+        "scenario": "rare_class_null",
+        "block": 60,
+        "datasets": 80,
+        "eligible": 1,
+        "BLOCKED_datasets": 79,
+        "target_delta": 0.0,
+        "rejection_rate": 0.0,
+        "rate_interpretation": "TypeI_diagnostic",
+        "rate_MCSE": 0.0,
+        "rate_Wilson95": [
+          0,
+          0.7934506856227626
+        ],
+        "marginal_CI_coverage": 1.0,
+        "coverage_Wilson95": [
+          0.20654931437723745,
+          1
+        ],
+        "mean_CI_width": 0.2081035103846214,
+        "invalid_draws_mean": 100.0875
+      },
+      {
+        "scenario": "overlap20_AR095_null",
+        "block": 20,
+        "datasets": 80,
+        "eligible": 80,
+        "BLOCKED_datasets": 0,
+        "target_delta": 0.0,
+        "rejection_rate": 0.25,
+        "rate_interpretation": "TypeI_diagnostic",
+        "rate_MCSE": 0.04841229182759271,
+        "rate_Wilson95": [
+          0.16806231857542375,
+          0.3548467461923397
+        ],
+        "marginal_CI_coverage": 0.725,
+        "coverage_Wilson95": [
+          0.6185594135898548,
+          0.810822428119158
+        ],
+        "mean_CI_width": 0.21318718989664226,
+        "invalid_draws_mean": 0.9125
+      },
+      {
+        "scenario": "overlap20_AR095_null",
+        "block": 40,
+        "datasets": 80,
+        "eligible": 80,
+        "BLOCKED_datasets": 0,
+        "target_delta": 0.0,
+        "rejection_rate": 0.175,
+        "rate_interpretation": "TypeI_diagnostic",
+        "rate_MCSE": 0.04248161366991607,
+        "rate_Wilson95": [
+          0.10720636440977926,
+          0.2725754197883133
+        ],
+        "marginal_CI_coverage": 0.825,
+        "coverage_Wilson95": [
+          0.7274245802116865,
+          0.8927936355902206
+        ],
+        "mean_CI_width": 0.26533909614971407,
+        "invalid_draws_mean": 10.15
+      },
+      {
+        "scenario": "overlap20_AR095_null",
+        "block": 60,
+        "datasets": 80,
+        "eligible": 56,
+        "BLOCKED_datasets": 24,
+        "target_delta": 0.0,
+        "rejection_rate": 0.125,
+        "rate_interpretation": "TypeI_diagnostic",
+        "rate_MCSE": 0.04419417382415922,
+        "rate_Wilson95": [
+          0.06189068695717122,
+          0.2362547655819014
+        ],
+        "marginal_CI_coverage": 0.9107142857142857,
+        "coverage_Wilson95": [
+          0.8074399861448884,
+          0.9612578515504131
+        ],
+        "mean_CI_width": 0.2857225404502327,
+        "invalid_draws_mean": 34.1625
+      }
+    ],
+    "Holm_synthetic_FWER": [
+      {
+        "family_size": 20,
+        "synthetic_families": 5000,
+        "Gaussian_common_correlation": 0.0,
+        "Holm_FWER": 0.0462,
+        "FWER_Wilson95": [
+          0.0407216699236964,
+          0.05237509636163745
+        ]
+      },
+      {
+        "family_size": 20,
+        "synthetic_families": 5000,
+        "Gaussian_common_correlation": 0.6,
+        "Holm_FWER": 0.0296,
+        "FWER_Wilson95": [
+          0.025251375351397144,
+          0.03467087863851261
+        ]
+      },
+      {
+        "family_size": 80,
+        "synthetic_families": 5000,
+        "Gaussian_common_correlation": 0.0,
+        "Holm_FWER": 0.0452,
+        "FWER_Wilson95": [
+          0.03978255839785057,
+          0.051315743291373395
+        ]
+      },
+      {
+        "family_size": 80,
+        "synthetic_families": 5000,
+        "Gaussian_common_correlation": 0.6,
+        "Holm_FWER": 0.0246,
+        "FWER_Wilson95": [
+          0.02065752018768066,
+          0.02927241082167966
+        ]
+      }
+    ],
+    "limitations": [
+      "single representative BA pair for operating characteristics; not full100 financial family simulation",
+      "80 datasets yields substantial Monte Carlo uncertainty",
+      "oracle error forecasts are synthetic constructs, not trained models",
+      "invalid-draw conditioning may alter distribution",
+      "no real financial stationarity/coverage guarantee"
+    ],
+    "elapsed_seconds": 68.08132338523865
+  },
+  "statistical_nominal_validity": "NOT_ESTABLISHED",
+  "financial_data_access_resampling_pvalues_CI": 0,
+  "method_eligibility": "BLOCKED_REQUIRES_DESIGN_REVIEW"
+}

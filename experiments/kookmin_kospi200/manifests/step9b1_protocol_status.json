@@ -1,0 +1,19 @@
+{
+  "stage": "STEP9B1",
+  "status": "BLOCKED_REQUIRES_DESIGN_REVIEW",
+  "protocol_specification_frozen": true,
+  "protocol_sha256": "8a62308f6f41b5658d897980de2953b9456a0e33d7393b3f196565db977d0a30",
+  "primary_hypotheses": 20,
+  "secondary_hypotheses": 80,
+  "financial_execution_approved": false,
+  "financial_bootstrap_enabled": false,
+  "financial_fit_forward_resampling_pvalues_CI": 0,
+  "old_files_preserved": 9981,
+  "old_files_changed": 0,
+  "old_STEP5C_families_modified": false,
+  "PIT": "BLOCKED",
+  "BOTH_UNVERIFIED": true,
+  "primary_price": "PENDING",
+  "historical_available_at": "UNKNOWN",
+  "additional_financial_experiment_started": false
+}

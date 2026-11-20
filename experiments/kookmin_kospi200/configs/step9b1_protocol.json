@@ -1,0 +1,651 @@
+{
+  "stage": "STEP9B1",
+  "version": 1,
+  "families_frozen": true,
+  "families": {
+    "primary": [
+      {
+        "NN": "RNN",
+        "baseline": "MOMENTUM60",
+        "candidate": "A",
+        "metric": "BA"
+      },
+      {
+        "NN": "RNN",
+        "baseline": "MOMENTUM60",
+        "candidate": "B",
+        "metric": "BA"
+      },
+      {
+        "NN": "RNN",
+        "baseline": "CLIMATOLOGY",
+        "candidate": "A",
+        "metric": "BA"
+      },
+      {
+        "NN": "RNN",
+        "baseline": "CLIMATOLOGY",
+        "candidate": "B",
+        "metric": "BA"
+      },
+      {
+        "NN": "LSTM",
+        "baseline": "MOMENTUM60",
+        "candidate": "A",
+        "metric": "BA"
+      },
+      {
+        "NN": "LSTM",
+        "baseline": "MOMENTUM60",
+        "candidate": "B",
+        "metric": "BA"
+      },
+      {
+        "NN": "LSTM",
+        "baseline": "CLIMATOLOGY",
+        "candidate": "A",
+        "metric": "BA"
+      },
+      {
+        "NN": "LSTM",
+        "baseline": "CLIMATOLOGY",
+        "candidate": "B",
+        "metric": "BA"
+      },
+      {
+        "NN": "GRU",
+        "baseline": "MOMENTUM60",
+        "candidate": "A",
+        "metric": "BA"
+      },
+      {
+        "NN": "GRU",
+        "baseline": "MOMENTUM60",
+        "candidate": "B",
+        "metric": "BA"
+      },
+      {
+        "NN": "GRU",
+        "baseline": "CLIMATOLOGY",
+        "candidate": "A",
+        "metric": "BA"
+      },
+      {
+        "NN": "GRU",
+        "baseline": "CLIMATOLOGY",
+        "candidate": "B",
+        "metric": "BA"
+      },
+      {
+        "NN": "LTC",
+        "baseline": "MOMENTUM60",
+        "candidate": "A",
+        "metric": "BA"
+      },
+      {
+        "NN": "LTC",
+        "baseline": "MOMENTUM60",
+        "candidate": "B",
+        "metric": "BA"
+      },
+      {
+        "NN": "LTC",
+        "baseline": "CLIMATOLOGY",
+        "candidate": "A",
+        "metric": "BA"
+      },
+      {
+        "NN": "LTC",
+        "baseline": "CLIMATOLOGY",
+        "candidate": "B",
+        "metric": "BA"
+      },
+      {
+        "NN": "CfC",
+        "baseline": "MOMENTUM60",
+        "candidate": "A",
+        "metric": "BA"
+      },
+      {
+        "NN": "CfC",
+        "baseline": "MOMENTUM60",
+        "candidate": "B",
+        "metric": "BA"
+      },
+      {
+        "NN": "CfC",
+        "baseline": "CLIMATOLOGY",
+        "candidate": "A",
+        "metric": "BA"
+      },
+      {
+        "NN": "CfC",
+        "baseline": "CLIMATOLOGY",
+        "candidate": "B",
+        "metric": "BA"
+      }
+    ],
+    "secondary": [
+      {
+        "NN": "RNN",
+        "baseline": "MOMENTUM60",
+        "candidate": "A",
+        "metric": "macro_f1"
+      },
+      {
+        "NN": "RNN",
+        "baseline": "MOMENTUM60",
+        "candidate": "A",
+        "metric": "brier"
+      },
+      {
+        "NN": "RNN",
+        "baseline": "MOMENTUM60",
+        "candidate": "A",
+        "metric": "recall0"
+      },
+      {
+        "NN": "RNN",
+        "baseline": "MOMENTUM60",
+        "candidate": "A",
+        "metric": "recall1"
+      },
+      {
+        "NN": "RNN",
+        "baseline": "MOMENTUM60",
+        "candidate": "B",
+        "metric": "macro_f1"
+      },
+      {
+        "NN": "RNN",
+        "baseline": "MOMENTUM60",
+        "candidate": "B",
+        "metric": "brier"
+      },
+      {
+        "NN": "RNN",
+        "baseline": "MOMENTUM60",
+        "candidate": "B",
+        "metric": "recall0"
+      },
+      {
+        "NN": "RNN",
+        "baseline": "MOMENTUM60",
+        "candidate": "B",
+        "metric": "recall1"
+      },
+      {
+        "NN": "RNN",
+        "baseline": "CLIMATOLOGY",
+        "candidate": "A",
+        "metric": "macro_f1"
+      },
+      {
+        "NN": "RNN",
+        "baseline": "CLIMATOLOGY",
+        "candidate": "A",
+        "metric": "brier"
+      },
+      {
+        "NN": "RNN",
+        "baseline": "CLIMATOLOGY",
+        "candidate": "A",
+        "metric": "recall0"
+      },
+      {
+        "NN": "RNN",
+        "baseline": "CLIMATOLOGY",
+        "candidate": "A",
+        "metric": "recall1"
+      },
+      {
+        "NN": "RNN",
+        "baseline": "CLIMATOLOGY",
+        "candidate": "B",
+        "metric": "macro_f1"
+      },
+      {
+        "NN": "RNN",
+        "baseline": "CLIMATOLOGY",
+        "candidate": "B",
+        "metric": "brier"
+      },
+      {
+        "NN": "RNN",
+        "baseline": "CLIMATOLOGY",
+        "candidate": "B",
+        "metric": "recall0"
+      },
+      {
+        "NN": "RNN",
+        "baseline": "CLIMATOLOGY",
+        "candidate": "B",
+        "metric": "recall1"
+      },
+      {
+        "NN": "LSTM",
+        "baseline": "MOMENTUM60",
+        "candidate": "A",
+        "metric": "macro_f1"
+      },
+      {
+        "NN": "LSTM",
+        "baseline": "MOMENTUM60",
+        "candidate": "A",
+        "metric": "brier"
+      },
+      {
+        "NN": "LSTM",
+        "baseline": "MOMENTUM60",
+        "candidate": "A",
+        "metric": "recall0"
+      },
+      {
+        "NN": "LSTM",
+        "baseline": "MOMENTUM60",
+        "candidate": "A",
+        "metric": "recall1"
+      },
+      {
+        "NN": "LSTM",
+        "baseline": "MOMENTUM60",
+        "candidate": "B",
+        "metric": "macro_f1"
+      },
+      {
+        "NN": "LSTM",
+        "baseline": "MOMENTUM60",
+        "candidate": "B",
+        "metric": "brier"
+      },
+      {
+        "NN": "LSTM",
+        "baseline": "MOMENTUM60",
+        "candidate": "B",
+        "metric": "recall0"
+      },
+      {
+        "NN": "LSTM",
+        "baseline": "MOMENTUM60",
+        "candidate": "B",
+        "metric": "recall1"
+      },
+      {
+        "NN": "LSTM",
+        "baseline": "CLIMATOLOGY",
+        "candidate": "A",
+        "metric": "macro_f1"
+      },
+      {
+        "NN": "LSTM",
+        "baseline": "CLIMATOLOGY",
+        "candidate": "A",
+        "metric": "brier"
+      },
+      {
+        "NN": "LSTM",
+        "baseline": "CLIMATOLOGY",
+        "candidate": "A",
+        "metric": "recall0"
+      },
+      {
+        "NN": "LSTM",
+        "baseline": "CLIMATOLOGY",
+        "candidate": "A",
+        "metric": "recall1"
+      },
+      {
+        "NN": "LSTM",
+        "baseline": "CLIMATOLOGY",
+        "candidate": "B",
+        "metric": "macro_f1"
+      },
+      {
+        "NN": "LSTM",
+        "baseline": "CLIMATOLOGY",
+        "candidate": "B",
+        "metric": "brier"
+      },
+      {
+        "NN": "LSTM",
+        "baseline": "CLIMATOLOGY",
+        "candidate": "B",
+        "metric": "recall0"
+      },
+      {
+        "NN": "LSTM",
+        "baseline": "CLIMATOLOGY",
+        "candidate": "B",
+        "metric": "recall1"
+      },
+      {
+        "NN": "GRU",
+        "baseline": "MOMENTUM60",
+        "candidate": "A",
+        "metric": "macro_f1"
+      },
+      {
+        "NN": "GRU",
+        "baseline": "MOMENTUM60",
+        "candidate": "A",
+        "metric": "brier"
+      },
+      {
+        "NN": "GRU",
+        "baseline": "MOMENTUM60",
+        "candidate": "A",
+        "metric": "recall0"
+      },
+      {
+        "NN": "GRU",
+        "baseline": "MOMENTUM60",
+        "candidate": "A",
+        "metric": "recall1"
+      },
+      {
+        "NN": "GRU",
+        "baseline": "MOMENTUM60",
+        "candidate": "B",
+        "metric": "macro_f1"
+      },
+      {
+        "NN": "GRU",
+        "baseline": "MOMENTUM60",
+        "candidate": "B",
+        "metric": "brier"
+      },
+      {
+        "NN": "GRU",
+        "baseline": "MOMENTUM60",
+        "candidate": "B",
+        "metric": "recall0"
+      },
+      {
+        "NN": "GRU",
+        "baseline": "MOMENTUM60",
+        "candidate": "B",
+        "metric": "recall1"
+      },
+      {
+        "NN": "GRU",
+        "baseline": "CLIMATOLOGY",
+        "candidate": "A",
+        "metric": "macro_f1"
+      },
+      {
+        "NN": "GRU",
+        "baseline": "CLIMATOLOGY",
+        "candidate": "A",
+        "metric": "brier"
+      },
+      {
+        "NN": "GRU",
+        "baseline": "CLIMATOLOGY",
+        "candidate": "A",
+        "metric": "recall0"
+      },
+      {
+        "NN": "GRU",
+        "baseline": "CLIMATOLOGY",
+        "candidate": "A",
+        "metric": "recall1"
+      },
+      {
+        "NN": "GRU",
+        "baseline": "CLIMATOLOGY",
+        "candidate": "B",
+        "metric": "macro_f1"
+      },
+      {
+        "NN": "GRU",
+        "baseline": "CLIMATOLOGY",
+        "candidate": "B",
+        "metric": "brier"
+      },
+      {
+        "NN": "GRU",
+        "baseline": "CLIMATOLOGY",
+        "candidate": "B",
+        "metric": "recall0"
+      },
+      {
+        "NN": "GRU",
+        "baseline": "CLIMATOLOGY",
+        "candidate": "B",
+        "metric": "recall1"
+      },
+      {
+        "NN": "LTC",
+        "baseline": "MOMENTUM60",
+        "candidate": "A",
+        "metric": "macro_f1"
+      },
+      {
+        "NN": "LTC",
+        "baseline": "MOMENTUM60",
+        "candidate": "A",
+        "metric": "brier"
+      },
+      {
+        "NN": "LTC",
+        "baseline": "MOMENTUM60",
+        "candidate": "A",
+        "metric": "recall0"
+      },
+      {
+        "NN": "LTC",
+        "baseline": "MOMENTUM60",
+        "candidate": "A",
+        "metric": "recall1"
+      },
+      {
+        "NN": "LTC",
+        "baseline": "MOMENTUM60",
+        "candidate": "B",
+        "metric": "macro_f1"
+      },
+      {
+        "NN": "LTC",
+        "baseline": "MOMENTUM60",
+        "candidate": "B",
+        "metric": "brier"
+      },
+      {
+        "NN": "LTC",
+        "baseline": "MOMENTUM60",
+        "candidate": "B",
+        "metric": "recall0"
+      },
+      {
+        "NN": "LTC",
+        "baseline": "MOMENTUM60",
+        "candidate": "B",
+        "metric": "recall1"
+      },
+      {
+        "NN": "LTC",
+        "baseline": "CLIMATOLOGY",
+        "candidate": "A",
+        "metric": "macro_f1"
+      },
+      {
+        "NN": "LTC",
+        "baseline": "CLIMATOLOGY",
+        "candidate": "A",
+        "metric": "brier"
+      },
+      {
+        "NN": "LTC",
+        "baseline": "CLIMATOLOGY",
+        "candidate": "A",
+        "metric": "recall0"
+      },
+      {
+        "NN": "LTC",
+        "baseline": "CLIMATOLOGY",
+        "candidate": "A",
+        "metric": "recall1"
+      },
+      {
+        "NN": "LTC",
+        "baseline": "CLIMATOLOGY",
+        "candidate": "B",
+        "metric": "macro_f1"
+      },
+      {
+        "NN": "LTC",
+        "baseline": "CLIMATOLOGY",
+        "candidate": "B",
+        "metric": "brier"
+      },
+      {
+        "NN": "LTC",
+        "baseline": "CLIMATOLOGY",
+        "candidate": "B",
+        "metric": "recall0"
+      },
+      {
+        "NN": "LTC",
+        "baseline": "CLIMATOLOGY",
+        "candidate": "B",
+        "metric": "recall1"
+      },
+      {
+        "NN": "CfC",
+        "baseline": "MOMENTUM60",
+        "candidate": "A",
+        "metric": "macro_f1"
+      },
+      {
+        "NN": "CfC",
+        "baseline": "MOMENTUM60",
+        "candidate": "A",
+        "metric": "brier"
+      },
+      {
+        "NN": "CfC",
+        "baseline": "MOMENTUM60",
+        "candidate": "A",
+        "metric": "recall0"
+      },
+      {
+        "NN": "CfC",
+        "baseline": "MOMENTUM60",
+        "candidate": "A",
+        "metric": "recall1"
+      },
+      {
+        "NN": "CfC",
+        "baseline": "MOMENTUM60",
+        "candidate": "B",
+        "metric": "macro_f1"
+      },
+      {
+        "NN": "CfC",
+        "baseline": "MOMENTUM60",
+        "candidate": "B",
+        "metric": "brier"
+      },
+      {
+        "NN": "CfC",
+        "baseline": "MOMENTUM60",
+        "candidate": "B",
+        "metric": "recall0"
+      },
+      {
+        "NN": "CfC",
+        "baseline": "MOMENTUM60",
+        "candidate": "B",
+        "metric": "recall1"
+      },
+      {
+        "NN": "CfC",
+        "baseline": "CLIMATOLOGY",
+        "candidate": "A",
+        "metric": "macro_f1"
+      },
+      {
+        "NN": "CfC",
+        "baseline": "CLIMATOLOGY",
+        "candidate": "A",
+        "metric": "brier"
+      },
+      {
+        "NN": "CfC",
+        "baseline": "CLIMATOLOGY",
+        "candidate": "A",
+        "metric": "recall0"
+      },
+      {
+        "NN": "CfC",
+        "baseline": "CLIMATOLOGY",
+        "candidate": "A",
+        "metric": "recall1"
+      },
+      {
+        "NN": "CfC",
+        "baseline": "CLIMATOLOGY",
+        "candidate": "B",
+        "metric": "macro_f1"
+      },
+      {
+        "NN": "CfC",
+        "baseline": "CLIMATOLOGY",
+        "candidate": "B",
+        "metric": "brier"
+      },
+      {
+        "NN": "CfC",
+        "baseline": "CLIMATOLOGY",
+        "candidate": "B",
+        "metric": "recall0"
+      },
+      {
+        "NN": "CfC",
+        "baseline": "CLIMATOLOGY",
+        "candidate": "B",
+        "metric": "recall1"
+      }
+    ]
+  },
+  "primary_Holm_size": 20,
+  "secondary_Holm_size": 80,
+  "price_scope": "joint A/B within each family",
+  "alpha_per_family": 0.05,
+  "joint100_global_FWER_claim": false,
+  "global_union_bound": 0.1,
+  "same_family_across_lengths": "all20/40/60 reported; no outcome-based representative block selection",
+  "estimand": "mean5Origin(mean10Seed metricNN - metricbaseline); not ensemble; no seed pooling",
+  "effect_direction": {
+    "BA_F1_Recall": "positive favorsNN",
+    "Brier": "negative favorsNN"
+  },
+  "method_candidate": "noncircular official-session/calendar-contiguous synchronized moving blocks",
+  "method_eligibility": "BLOCKED_REQUIRES_DESIGN_REVIEW",
+  "block_lengths": [
+    20,
+    40,
+    60
+  ],
+  "future_attempted_draws_per_block": 10000,
+  "RNG": "NumPy PCG64; SeedSequence[20261120,block_length]; a common date draw used for every price/model/seed/family",
+  "future_chunk_size": 100,
+  "validity": "family-wide common finite mask; all5Origins and two actual classes; no origin omission",
+  "invalid_threshold": 0.1,
+  "minimum_valid_draws": 9000,
+  "draws_refilled_or_selected": false,
+  "pvalue": "two-sided centered bootstrap plus-one using valid count",
+  "CI": "marginal95 percentile, not simultaneous, coverage unverified",
+  "Holm_requires_valid_raw_p": true,
+  "historical_Test_seen": true,
+  "interpretation": "retrospective exploratory nominal inference only",
+  "financial_bootstrap_enabled": false,
+  "financial_execution_approved": false,
+  "financial_draw_budget": 0,
+  "financial_pvalue_CI_budget": 0,
+  "financial_read_paths": [],
+  "financial_write_paths": [],
+  "training_enabled": false,
+  "hmm_fit_enabled": false,
+  "old_STEP5C_families_modified": false
+}

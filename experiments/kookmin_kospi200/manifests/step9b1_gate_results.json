@@ -1,0 +1,13 @@
+{
+  "old_files_SHA": "PASS",
+  "STEP9A_DRAFT_preserved": "PASS",
+  "family20_80_completeness": "PASS",
+  "synthetic_structural_tests": "PASS22",
+  "simulations_completed": "PASS640datasets_3blocks",
+  "AR095_nominal_error_control": "FAIL",
+  "rare_class_validity": "BLOCKED_INSUFFICIENT_VALID_DATASETS",
+  "real_market_resampling_validity": "BLOCKED_REQUIRES_DESIGN_REVIEW",
+  "financial_approval": "BLOCKED_NOT_APPROVED",
+  "financial_entrypoint": "PASS_ALWAYS_BLOCKED",
+  "financial_budget": 0
+}
