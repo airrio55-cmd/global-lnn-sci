@@ -1,0 +1,51 @@
+{
+  "stage": "STEP9B_DRAFT",
+  "approved": false,
+  "financial_fit_budget": 0,
+  "financial_forward_budget": 0,
+  "financial_bootstrap_draw_budget": 0,
+  "financial_pvalue_budget": 0,
+  "families_frozen": false,
+  "historical_Test_results_already_seen": true,
+  "interpretation": "retrospective exploratory; not prospective preregistration or independent confirmation",
+  "NN_models": [
+    "RNN",
+    "LSTM",
+    "GRU",
+    "LTC",
+    "CfC"
+  ],
+  "baseline_options": [
+    "MOMENTUM60",
+    "CLIMATOLOGY"
+  ],
+  "BA_family_options": [
+    "MOMENTUM60 vsall5NN×2prices =10, HolmjointA/B",
+    "CLIMATOLOGY vsall5NN×2prices =10 additional exploratory family",
+    "jointbothbaselines×5NN×2prices =20 oneHolmfamily alternative"
+  ],
+  "secondary_proposal": "4metrics×2baselines×5NN×2prices=80, grouping not selected",
+  "metrics": [
+    "BA",
+    "macro_f1",
+    "brier",
+    "recall0",
+    "recall1"
+  ],
+  "estimand": "mean across5Origins of mean10Seed per-seed metric minus deterministic baseline metric; never probability ensemble or pooled_seed_samples",
+  "resampling_proposal": "one synchronized chronological official-session date block stream across all models/Seeds/prices; retain original date Origin membership; do not reset at year boundary by default",
+  "block_lengths_proposal": [
+    20,
+    40,
+    60
+  ],
+  "replicates_proposal": 10000,
+  "block_policy_not_selected": [
+    "noncircular moving blocks with edge/nonstationarity limitations",
+    "circular blocks sensitivity only with disclosed fictitious end/start boundary"
+  ],
+  "invalid_family_draw_proposal": "common valid-draw mask across selected family; require all5Origins and truth two classes; report invalid count; >10% invalid ->BLOCKED, threshold not frozen",
+  "missing_saved_predictions": "BLOCKED no refit/no0fill/no newNNforward",
+  "existing_STEP5C_families_modified": false,
+  "approval_required": true
+}

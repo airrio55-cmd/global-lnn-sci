@@ -1,0 +1,4972 @@
+{
+  "stage": "STEP9A",
+  "claims": [
+    {
+      "claim_id": "C01",
+      "claim": "저장된5Origin 평균BA에서NN이baseline보다높았지만Origin/지표전반에일관된우월성은아니다",
+      "evidence_status": "DESCRIPTIVE_SUPPORTED",
+      "source_reports": [
+        "reports/STEP8BR_NN_VS_BASELINE_KO.md",
+        "reports/STEP8BR_ORIGIN_SENSITIVITY_KO.md"
+      ],
+      "source_result_references": [
+        "manifests/step8br_public_aggregate_summary.json#/candidate_primary",
+        "manifests/step8br_public_aggregate_summary.json#/NN_baseline_descriptive_comparisons"
+      ],
+      "limitations": "baseline비교새p값0;정보이력길이다름;역사적Test노출",
+      "new_financial_inference": false
+    },
+    {
+      "claim_id": "C02",
+      "claim": "기존신경망간BA우수성은동결검정에서입증되지않았다",
+      "evidence_status": "EXISTING_INFERENCE_NO_REJECTION",
+      "source_reports": [
+        "reports/STEP5C_STATISTICAL_RESULTS_KO.md"
+      ],
+      "source_result_references": [
+        "manifests/step5c_public_aggregate_summary.json#/rows:primary+origin BA"
+      ],
+      "limitations": "비유의는동등성/무효과증명아님;블록반복독립아님",
+      "new_financial_inference": false
+    },
+    {
+      "claim_id": "C03",
+      "claim": "A의LSTM−LTC Recall1에는기존Secondary반대증거가있다",
+      "evidence_status": "EXISTING_SECONDARY_APPROX_EVIDENCE",
+      "source_reports": [
+        "reports/STEP5C_SECONDARY_METRICS_KO.md",
+        "reports/STEP5C_STATISTICAL_RESULTS_KO.md"
+      ],
+      "source_result_references": [
+        "manifests/step5c_public_aggregate_summary.json#/rows:secondary A LSTM LTC recall1"
+      ],
+      "limitations": "다른지표/블록을독립재현으로세지않음;BA로일반화금지",
+      "new_financial_inference": false
+    },
+    {
+      "claim_id": "C04",
+      "claim": "LTC전체Test단일클래스예측24/100",
+      "evidence_status": "DESCRIPTIVE_SUPPORTED",
+      "source_reports": [
+        "reports/STEP5B_TEST_RESULTS_KO.md",
+        "reports/STEP4D_LTC_DIAGNOSTICS_KO.md"
+      ],
+      "source_result_references": [
+        "manifests/step7b_execution_summary.json#/LTC_whole_Test_degenerate_preserved"
+      ],
+      "limitations": "Seed반복은시장반복아님;단일예측과NaN/발산구분;Validation선택편향",
+      "new_financial_inference": false
+    },
+    {
+      "claim_id": "C05",
+      "claim": "유효퇴화23개의effectiveτ가낮고공존셀7/7도같은기술적방향",
+      "evidence_status": "EXPLORATORY_ASSOCIATION_NOT_CAUSAL",
+      "source_reports": [
+        "reports/STEP7B_TAU_EXTRACTION_RESULTS_KO.md",
+        "reports/STEP8A_DEGENERACY_TAU_STRATIFIED_KO.md"
+      ],
+      "source_result_references": [
+        "manifests/step8a_public_aggregate_summary.json#/pooled",
+        "manifests/step8a_public_aggregate_summary.json#/common_support_composition"
+      ],
+      "limitations": "O3소표본/O5군부재/누락1/구성불균형/neurons·windows의존;전체조정효과NOT_IDENTIFIABLE",
+      "new_financial_inference": false
+    },
+    {
+      "claim_id": "C06",
+      "claim": "수동/HMM레짐표는점유율·support·null정책과함께기술적으로만해석",
+      "evidence_status": "DESCRIPTIVE_STRATIFICATION",
+      "source_reports": [
+        "reports/STEP6B_HMM_REGIME_TEST_KO.md",
+        "reports/STEP8A_HMM_INTEGRATION_KO.md"
+      ],
+      "source_result_references": [
+        "manifests/step6b_public_aggregate_summary.json#/HMM_regime_groups",
+        "manifests/step6b_public_aggregate_summary.json#/manual_regime_reference_groups"
+      ],
+      "limitations": "Train-onlythreshold/HMM fit;forwardfilter;Low일부BA null;시장레짐인과효과아님",
+      "new_financial_inference": false
+    },
+    {
+      "claim_id": "C07",
+      "claim": "Momentum60의평균MacroF1이모든NN보다높지만0/1Brier는불리하다",
+      "evidence_status": "DESCRIPTIVE_COUNTEREVIDENCE",
+      "source_reports": [
+        "reports/STEP8BR_NN_VS_BASELINE_KO.md",
+        "reports/STEP8BR_BASELINE_RESULTS_KO.md"
+      ],
+      "source_result_references": [
+        "manifests/step8br_public_aggregate_summary.json#/candidate_primary"
+      ],
+      "limitations": "규칙0/1은calibrated probability아님;지표별순위다름",
+      "new_financial_inference": false
+    },
+    {
+      "claim_id": "C08",
+      "claim": "퇴화LTC24개는같은코호트Climatology와BA가같다",
+      "evidence_status": "DESCRIPTIVE_PAIRED_COUNTS",
+      "source_reports": [
+        "reports/STEP8BR_NN_VS_BASELINE_KO.md"
+      ],
+      "source_result_references": [
+        "manifests/step8br_public_aggregate_summary.json#/degenerate_LTC_climatology"
+      ],
+      "limitations": "F1/Brier까지전부같은것은아님;Seed결과개수≠독립시장표본",
+      "new_financial_inference": false
+    },
+    {
+      "claim_id": "C09",
+      "claim": "실시간투자가능성/경제적기억/원형Ensemble우월성은현재지원되지않는다",
+      "evidence_status": "UNSUPPORTED_OR_BLOCKED",
+      "source_reports": [
+        "reports/STEP8A_ENSEMBLE_DATA_GATES_KO.md",
+        "reports/STEP8BR_NEXT_GATES_KO.md"
+      ],
+      "source_result_references": [
+        "manifests/step8br_execution_summary.json#/production_PIT"
+      ],
+      "limitations": "BOTH_UNVERIFIED;historicalavailable_atUNKNOWN;F1≠RAW5/LOG2;JOF V16다국가연구와분리",
+      "new_financial_inference": false
+    }
+  ],
+  "saved_performance": [
+    {
+      "candidate": "A",
+      "model": "CLIMATOLOGY",
+      "kind": "baseline",
+      "n_origins": 5,
+      "n_results": 5,
+      "weighting": "equal Seed within Origin for NN, then equal5Origin; baselines deterministic once",
+      "metrics": {
+        "BA": {
+          "mean": 0.5,
+          "Origin_sample_std": 0.0
+        },
+        "macro_f1": {
+          "mean": 0.3400817545282366,
+          "Origin_sample_std": 0.07051760299637502
+        },
+        "brier": {
+          "mean": 0.25136367192664494,
+          "Origin_sample_std": 0.017584292453014665
+        },
+        "recall0": {
+          "mean": 0.0,
+          "Origin_sample_std": 0.0
+        },
+        "recall1": {
+          "mean": 1.0,
+          "Origin_sample_std": 0.0
+        },
+        "accuracy": {
+          "mean": 0.5300366220550313,
+          "Origin_sample_std": 0.1725612589574878
+        },
+        "positive_rate": {
+          "mean": 1.0,
+          "Origin_sample_std": 0.0
+        }
+      },
+      "degenerate_count": 5
+    },
+    {
+      "candidate": "A",
+      "model": "LOGISTIC",
+      "kind": "baseline",
+      "n_origins": 5,
+      "n_results": 5,
+      "weighting": "equal Seed within Origin for NN, then equal5Origin; baselines deterministic once",
+      "metrics": {
+        "BA": {
+          "mean": 0.4924915746014554,
+          "Origin_sample_std": 0.01728425363755214
+        },
+        "macro_f1": {
+          "mean": 0.35963396926352886,
+          "Origin_sample_std": 0.06787694349421974
+        },
+        "brier": {
+          "mean": 0.2511508197547078,
+          "Origin_sample_std": 0.013052974756204951
+        },
+        "recall0": {
+          "mean": 0.06831770541882287,
+          "Origin_sample_std": 0.10270660928837476
+        },
+        "recall1": {
+          "mean": 0.9166654437840879,
+          "Origin_sample_std": 0.13287541824402083
+        },
+        "accuracy": {
+          "mean": 0.49188233131564557,
+          "Origin_sample_std": 0.09853441663988079
+        },
+        "positive_rate": {
+          "mean": 0.9193792491721707,
+          "Origin_sample_std": 0.1266138199633224
+        }
+      },
+      "degenerate_count": 1
+    },
+    {
+      "candidate": "A",
+      "model": "DMA200",
+      "kind": "baseline",
+      "n_origins": 5,
+      "n_results": 5,
+      "weighting": "equal Seed within Origin for NN, then equal5Origin; baselines deterministic once",
+      "metrics": {
+        "BA": {
+          "mean": 0.4821799912949953,
+          "Origin_sample_std": 0.06659655934559579
+        },
+        "macro_f1": {
+          "mean": 0.44262591771868554,
+          "Origin_sample_std": 0.0815647398394652
+        },
+        "brier": {
+          "mean": 0.4670591732110719,
+          "Origin_sample_std": 0.08757316001669886
+        },
+        "recall0": {
+          "mean": 0.4308089761576282,
+          "Origin_sample_std": 0.343303220854241
+        },
+        "recall1": {
+          "mean": 0.5335510064323624,
+          "Origin_sample_std": 0.29845344770230176
+        },
+        "accuracy": {
+          "mean": 0.5329408267889281,
+          "Origin_sample_std": 0.08757316001669886
+        },
+        "positive_rate": {
+          "mean": 0.545107924542464,
+          "Origin_sample_std": 0.309863371174183
+        }
+      },
+      "degenerate_count": 1
+    },
+    {
+      "candidate": "A",
+      "model": "MOMENTUM60",
+      "kind": "baseline",
+      "n_origins": 5,
+      "n_results": 5,
+      "weighting": "equal Seed within Origin for NN, then equal5Origin; baselines deterministic once",
+      "metrics": {
+        "BA": {
+          "mean": 0.5044160706533175,
+          "Origin_sample_std": 0.08553764174992425
+        },
+        "macro_f1": {
+          "mean": 0.49101944825046195,
+          "Origin_sample_std": 0.08426307166609523
+        },
+        "brier": {
+          "mean": 0.42507743084761124,
+          "Origin_sample_std": 0.058638927084574057
+        },
+        "recall0": {
+          "mean": 0.430143432068932,
+          "Origin_sample_std": 0.3325863283296583
+        },
+        "recall1": {
+          "mean": 0.578688709237703,
+          "Origin_sample_std": 0.2571437255372867
+        },
+        "accuracy": {
+          "mean": 0.5749225691523887,
+          "Origin_sample_std": 0.05863892708457405
+        },
+        "positive_rate": {
+          "mean": 0.55857376141644,
+          "Origin_sample_std": 0.2692592717373543
+        }
+      },
+      "degenerate_count": 0
+    },
+    {
+      "candidate": "A",
+      "model": "RNN",
+      "kind": "NN",
+      "n_origins": 5,
+      "n_results": 50,
+      "weighting": "equal Seed within Origin for NN, then equal5Origin; baselines deterministic once",
+      "metrics": {
+        "BA": {
+          "mean": 0.5183973799288006,
+          "Origin_sample_std": 0.03522287299530736
+        },
+        "macro_f1": {
+          "mean": 0.4448416287628534,
+          "Origin_sample_std": 0.09359419443759874
+        },
+        "brier": {
+          "mean": 0.2514723645185467,
+          "Origin_sample_std": 0.003515123014548251
+        },
+        "recall0": {
+          "mean": 0.3718676523419696,
+          "Origin_sample_std": 0.2170460874094807
+        },
+        "recall1": {
+          "mean": 0.6649271075156317,
+          "Origin_sample_std": 0.19809038899849468
+        },
+        "accuracy": {
+          "mean": 0.4767528393751361,
+          "Origin_sample_std": 0.07347695170399784
+        },
+        "positive_rate": {
+          "mean": 0.64666661027705,
+          "Origin_sample_std": 0.2054287218794826
+        }
+      },
+      "degenerate_count": 0
+    },
+    {
+      "candidate": "A",
+      "model": "LSTM",
+      "kind": "NN",
+      "n_origins": 5,
+      "n_results": 50,
+      "weighting": "equal Seed within Origin for NN, then equal5Origin; baselines deterministic once",
+      "metrics": {
+        "BA": {
+          "mean": 0.518008340351554,
+          "Origin_sample_std": 0.0341691303109246
+        },
+        "macro_f1": {
+          "mean": 0.4699510712279512,
+          "Origin_sample_std": 0.03665893476926732
+        },
+        "brier": {
+          "mean": 0.2484888483772439,
+          "Origin_sample_std": 0.004540531971995287
+        },
+        "recall0": {
+          "mean": 0.32970617918683,
+          "Origin_sample_std": 0.07319268794638782
+        },
+        "recall1": {
+          "mean": 0.7063105015162779,
+          "Origin_sample_std": 0.12104331489634892
+        },
+        "accuracy": {
+          "mean": 0.5161594509738644,
+          "Origin_sample_std": 0.055589204697153165
+        },
+        "positive_rate": {
+          "mean": 0.6843985740330133,
+          "Origin_sample_std": 0.08770433781835713
+        }
+      },
+      "degenerate_count": 1
+    },
+    {
+      "candidate": "A",
+      "model": "GRU",
+      "kind": "NN",
+      "n_origins": 5,
+      "n_results": 50,
+      "weighting": "equal Seed within Origin for NN, then equal5Origin; baselines deterministic once",
+      "metrics": {
+        "BA": {
+          "mean": 0.5278441923519104,
+          "Origin_sample_std": 0.04177827944237653
+        },
+        "macro_f1": {
+          "mean": 0.47790378899756775,
+          "Origin_sample_std": 0.06665090478395914
+        },
+        "brier": {
+          "mean": 0.2522487312947926,
+          "Origin_sample_std": 0.010627101876464064
+        },
+        "recall0": {
+          "mean": 0.39660558166096144,
+          "Origin_sample_std": 0.15104814992472318
+        },
+        "recall1": {
+          "mean": 0.6590828030428593,
+          "Origin_sample_std": 0.14561571072676832
+        },
+        "accuracy": {
+          "mean": 0.509409824020027,
+          "Origin_sample_std": 0.06486717633099905
+        },
+        "positive_rate": {
+          "mean": 0.6338781187262357,
+          "Origin_sample_std": 0.1338425892630677
+        }
+      },
+      "degenerate_count": 0
+    },
+    {
+      "candidate": "A",
+      "model": "LTC",
+      "kind": "NN",
+      "n_origins": 5,
+      "n_results": 50,
+      "weighting": "equal Seed within Origin for NN, then equal5Origin; baselines deterministic once",
+      "metrics": {
+        "BA": {
+          "mean": 0.53238654989694,
+          "Origin_sample_std": 0.02555021191397076
+        },
+        "macro_f1": {
+          "mean": 0.45215440969412163,
+          "Origin_sample_std": 0.056626183100549926
+        },
+        "brier": {
+          "mean": 0.2504271945249005,
+          "Origin_sample_std": 0.001363707347382333
+        },
+        "recall0": {
+          "mean": 0.46254038568934414,
+          "Origin_sample_std": 0.12139160210737908
+        },
+        "recall1": {
+          "mean": 0.6022327141045359,
+          "Origin_sample_std": 0.10231450203720299
+        },
+        "accuracy": {
+          "mean": 0.5290086098436095,
+          "Origin_sample_std": 0.02392662061489234
+        },
+        "positive_rate": {
+          "mean": 0.5769808719194504,
+          "Origin_sample_std": 0.103262156260475
+        }
+      },
+      "degenerate_count": 12
+    },
+    {
+      "candidate": "A",
+      "model": "CfC",
+      "kind": "NN",
+      "n_origins": 5,
+      "n_results": 50,
+      "weighting": "equal Seed within Origin for NN, then equal5Origin; baselines deterministic once",
+      "metrics": {
+        "BA": {
+          "mean": 0.5321117543233258,
+          "Origin_sample_std": 0.02805860976255928
+        },
+        "macro_f1": {
+          "mean": 0.4868332057620104,
+          "Origin_sample_std": 0.03595809266192522
+        },
+        "brier": {
+          "mean": 0.24691970533755347,
+          "Origin_sample_std": 0.00609796285303426
+        },
+        "recall0": {
+          "mean": 0.3928099685878686,
+          "Origin_sample_std": 0.12252573574991918
+        },
+        "recall1": {
+          "mean": 0.6714135400587828,
+          "Origin_sample_std": 0.12582054748485863
+        },
+        "accuracy": {
+          "mean": 0.5226346527464965,
+          "Origin_sample_std": 0.05878308714658241
+        },
+        "positive_rate": {
+          "mean": 0.6410081436635174,
+          "Origin_sample_std": 0.11198399633516154
+        }
+      },
+      "degenerate_count": 0
+    },
+    {
+      "candidate": "B",
+      "model": "CLIMATOLOGY",
+      "kind": "baseline",
+      "n_origins": 5,
+      "n_results": 5,
+      "weighting": "equal Seed within Origin for NN, then equal5Origin; baselines deterministic once",
+      "metrics": {
+        "BA": {
+          "mean": 0.5,
+          "Origin_sample_std": 0.0
+        },
+        "macro_f1": {
+          "mean": 0.3400817545282366,
+          "Origin_sample_std": 0.07051760299637502
+        },
+        "brier": {
+          "mean": 0.25136367192664494,
+          "Origin_sample_std": 0.017584292453014665
+        },
+        "recall0": {
+          "mean": 0.0,
+          "Origin_sample_std": 0.0
+        },
+        "recall1": {
+          "mean": 1.0,
+          "Origin_sample_std": 0.0
+        },
+        "accuracy": {
+          "mean": 0.5300366220550313,
+          "Origin_sample_std": 0.1725612589574878
+        },
+        "positive_rate": {
+          "mean": 1.0,
+          "Origin_sample_std": 0.0
+        }
+      },
+      "degenerate_count": 5
+    },
+    {
+      "candidate": "B",
+      "model": "LOGISTIC",
+      "kind": "baseline",
+      "n_origins": 5,
+      "n_results": 5,
+      "weighting": "equal Seed within Origin for NN, then equal5Origin; baselines deterministic once",
+      "metrics": {
+        "BA": {
+          "mean": 0.4924915746014554,
+          "Origin_sample_std": 0.01728425363755214
+        },
+        "macro_f1": {
+          "mean": 0.35963396926352886,
+          "Origin_sample_std": 0.06787694349421974
+        },
+        "brier": {
+          "mean": 0.2511500343565539,
+          "Origin_sample_std": 0.013052213312316817
+        },
+        "recall0": {
+          "mean": 0.06831770541882287,
+          "Origin_sample_std": 0.10270660928837476
+        },
+        "recall1": {
+          "mean": 0.9166654437840879,
+          "Origin_sample_std": 0.13287541824402083
+        },
+        "accuracy": {
+          "mean": 0.49188233131564557,
+          "Origin_sample_std": 0.09853441663988079
+        },
+        "positive_rate": {
+          "mean": 0.9193792491721707,
+          "Origin_sample_std": 0.1266138199633224
+        }
+      },
+      "degenerate_count": 1
+    },
+    {
+      "candidate": "B",
+      "model": "DMA200",
+      "kind": "baseline",
+      "n_origins": 5,
+      "n_results": 5,
+      "weighting": "equal Seed within Origin for NN, then equal5Origin; baselines deterministic once",
+      "metrics": {
+        "BA": {
+          "mean": 0.4821799912949953,
+          "Origin_sample_std": 0.06659655934559579
+        },
+        "macro_f1": {
+          "mean": 0.44262591771868554,
+          "Origin_sample_std": 0.0815647398394652
+        },
+        "brier": {
+          "mean": 0.4670591732110719,
+          "Origin_sample_std": 0.08757316001669886
+        },
+        "recall0": {
+          "mean": 0.4308089761576282,
+          "Origin_sample_std": 0.343303220854241
+        },
+        "recall1": {
+          "mean": 0.5335510064323624,
+          "Origin_sample_std": 0.29845344770230176
+        },
+        "accuracy": {
+          "mean": 0.5329408267889281,
+          "Origin_sample_std": 0.08757316001669886
+        },
+        "positive_rate": {
+          "mean": 0.545107924542464,
+          "Origin_sample_std": 0.309863371174183
+        }
+      },
+      "degenerate_count": 1
+    },
+    {
+      "candidate": "B",
+      "model": "MOMENTUM60",
+      "kind": "baseline",
+      "n_origins": 5,
+      "n_results": 5,
+      "weighting": "equal Seed within Origin for NN, then equal5Origin; baselines deterministic once",
+      "metrics": {
+        "BA": {
+          "mean": 0.5044160706533175,
+          "Origin_sample_std": 0.08553764174992425
+        },
+        "macro_f1": {
+          "mean": 0.49101944825046195,
+          "Origin_sample_std": 0.08426307166609523
+        },
+        "brier": {
+          "mean": 0.42507743084761124,
+          "Origin_sample_std": 0.058638927084574057
+        },
+        "recall0": {
+          "mean": 0.430143432068932,
+          "Origin_sample_std": 0.3325863283296583
+        },
+        "recall1": {
+          "mean": 0.578688709237703,
+          "Origin_sample_std": 0.2571437255372867
+        },
+        "accuracy": {
+          "mean": 0.5749225691523887,
+          "Origin_sample_std": 0.05863892708457405
+        },
+        "positive_rate": {
+          "mean": 0.55857376141644,
+          "Origin_sample_std": 0.2692592717373543
+        }
+      },
+      "degenerate_count": 0
+    },
+    {
+      "candidate": "B",
+      "model": "RNN",
+      "kind": "NN",
+      "n_origins": 5,
+      "n_results": 50,
+      "weighting": "equal Seed within Origin for NN, then equal5Origin; baselines deterministic once",
+      "metrics": {
+        "BA": {
+          "mean": 0.5201338924446135,
+          "Origin_sample_std": 0.03397895377870843
+        },
+        "macro_f1": {
+          "mean": 0.44819108867520396,
+          "Origin_sample_std": 0.09284918278084107
+        },
+        "brier": {
+          "mean": 0.2512589458868372,
+          "Origin_sample_std": 0.0034627579778378644
+        },
+        "recall0": {
+          "mean": 0.3690540930199357,
+          "Origin_sample_std": 0.21363325801391436
+        },
+        "recall1": {
+          "mean": 0.6712136918692915,
+          "Origin_sample_std": 0.18780546657963162
+        },
+        "accuracy": {
+          "mean": 0.4816749682621362,
+          "Origin_sample_std": 0.07169091174492907
+        },
+        "positive_rate": {
+          "mean": 0.6520628198020652,
+          "Origin_sample_std": 0.1975330029255735
+        }
+      },
+      "degenerate_count": 0
+    },
+    {
+      "candidate": "B",
+      "model": "LSTM",
+      "kind": "NN",
+      "n_origins": 5,
+      "n_results": 50,
+      "weighting": "equal Seed within Origin for NN, then equal5Origin; baselines deterministic once",
+      "metrics": {
+        "BA": {
+          "mean": 0.5195339437329842,
+          "Origin_sample_std": 0.03624208810755258
+        },
+        "macro_f1": {
+          "mean": 0.47313290804889696,
+          "Origin_sample_std": 0.04520048327970696
+        },
+        "brier": {
+          "mean": 0.24988942662267422,
+          "Origin_sample_std": 0.004127208795782734
+        },
+        "recall0": {
+          "mean": 0.37041629761132516,
+          "Origin_sample_std": 0.08353664166567523
+        },
+        "recall1": {
+          "mean": 0.6686515898546433,
+          "Origin_sample_std": 0.12429175824247231
+        },
+        "accuracy": {
+          "mean": 0.511738395138893,
+          "Origin_sample_std": 0.05054363298475703
+        },
+        "positive_rate": {
+          "mean": 0.6467443452382583,
+          "Origin_sample_std": 0.0939599049525756
+        }
+      },
+      "degenerate_count": 1
+    },
+    {
+      "candidate": "B",
+      "model": "GRU",
+      "kind": "NN",
+      "n_origins": 5,
+      "n_results": 50,
+      "weighting": "equal Seed within Origin for NN, then equal5Origin; baselines deterministic once",
+      "metrics": {
+        "BA": {
+          "mean": 0.5278959610626485,
+          "Origin_sample_std": 0.04174957654213832
+        },
+        "macro_f1": {
+          "mean": 0.4758028330788418,
+          "Origin_sample_std": 0.06933188698343462
+        },
+        "brier": {
+          "mean": 0.2518746738509303,
+          "Origin_sample_std": 0.008143619162707475
+        },
+        "recall0": {
+          "mean": 0.390023187059893,
+          "Origin_sample_std": 0.15451832578431698
+        },
+        "recall1": {
+          "mean": 0.665768735065404,
+          "Origin_sample_std": 0.1479632667495228
+        },
+        "accuracy": {
+          "mean": 0.5068200968531684,
+          "Origin_sample_std": 0.06614746669098794
+        },
+        "positive_rate": {
+          "mean": 0.6413639007349808,
+          "Origin_sample_std": 0.13620143809882398
+        }
+      },
+      "degenerate_count": 0
+    },
+    {
+      "candidate": "B",
+      "model": "LTC",
+      "kind": "NN",
+      "n_origins": 5,
+      "n_results": 50,
+      "weighting": "equal Seed within Origin for NN, then equal5Origin; baselines deterministic once",
+      "metrics": {
+        "BA": {
+          "mean": 0.5312916041926504,
+          "Origin_sample_std": 0.02446790915686095
+        },
+        "macro_f1": {
+          "mean": 0.4532253104633841,
+          "Origin_sample_std": 0.05930555166477301
+        },
+        "brier": {
+          "mean": 0.2502275798934886,
+          "Origin_sample_std": 0.0016566652912649437
+        },
+        "recall0": {
+          "mean": 0.4487399263511171,
+          "Origin_sample_std": 0.10652661011714967
+        },
+        "recall1": {
+          "mean": 0.6138432820341839,
+          "Origin_sample_std": 0.09687051283077454
+        },
+        "accuracy": {
+          "mean": 0.5340348665069911,
+          "Origin_sample_std": 0.03376554044014676
+        },
+        "positive_rate": {
+          "mean": 0.5894411331328306,
+          "Origin_sample_std": 0.09669174517422637
+        }
+      },
+      "degenerate_count": 12
+    },
+    {
+      "candidate": "B",
+      "model": "CfC",
+      "kind": "NN",
+      "n_origins": 5,
+      "n_results": 50,
+      "weighting": "equal Seed within Origin for NN, then equal5Origin; baselines deterministic once",
+      "metrics": {
+        "BA": {
+          "mean": 0.5189183568677751,
+          "Origin_sample_std": 0.020271206435009393
+        },
+        "macro_f1": {
+          "mean": 0.4744228880159101,
+          "Origin_sample_std": 0.03761427873354653
+        },
+        "brier": {
+          "mean": 0.25153516628594946,
+          "Origin_sample_std": 0.008841834415483923
+        },
+        "recall0": {
+          "mean": 0.34574124435968445,
+          "Origin_sample_std": 0.10163316334550422
+        },
+        "recall1": {
+          "mean": 0.6920954693758659,
+          "Origin_sample_std": 0.12448309714364433
+        },
+        "accuracy": {
+          "mean": 0.5116991756364017,
+          "Origin_sample_std": 0.058472843107105245
+        },
+        "positive_rate": {
+          "mean": 0.6721509506511791,
+          "Origin_sample_std": 0.10503393256794595
+        }
+      },
+      "degenerate_count": 0
+    }
+  ],
+  "saved_NN_baseline_differences": [
+    {
+      "candidate": "A",
+      "NN": "RNN",
+      "baseline": "CLIMATOLOGY",
+      "metrics": {
+        "BA": {
+          "mean_NN_minus_baseline": 0.01839737992880065,
+          "NN_better_Origins": 3,
+          "NN_worse_Origins": 2,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "mean_NN_minus_baseline": 0.1047598742346168,
+          "NN_better_Origins": 4,
+          "NN_worse_Origins": 1,
+          "exact_ties": 0
+        },
+        "brier": {
+          "mean_NN_minus_baseline": 0.00010869259190177116,
+          "NN_better_Origins": 3,
+          "NN_worse_Origins": 2,
+          "exact_ties": 0
+        }
+      },
+      "descriptive_only": true
+    },
+    {
+      "candidate": "A",
+      "NN": "RNN",
+      "baseline": "LOGISTIC",
+      "metrics": {
+        "BA": {
+          "mean_NN_minus_baseline": 0.025905805327345276,
+          "NN_better_Origins": 4,
+          "NN_worse_Origins": 1,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "mean_NN_minus_baseline": 0.08520765949932455,
+          "NN_better_Origins": 3,
+          "NN_worse_Origins": 2,
+          "exact_ties": 0
+        },
+        "brier": {
+          "mean_NN_minus_baseline": 0.00032154476383888797,
+          "NN_better_Origins": 1,
+          "NN_worse_Origins": 4,
+          "exact_ties": 0
+        }
+      },
+      "descriptive_only": true
+    },
+    {
+      "candidate": "A",
+      "NN": "RNN",
+      "baseline": "DMA200",
+      "metrics": {
+        "BA": {
+          "mean_NN_minus_baseline": 0.03621738863380537,
+          "NN_better_Origins": 3,
+          "NN_worse_Origins": 2,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "mean_NN_minus_baseline": 0.002215711044167834,
+          "NN_better_Origins": 2,
+          "NN_worse_Origins": 3,
+          "exact_ties": 0
+        },
+        "brier": {
+          "mean_NN_minus_baseline": -0.21558680869252517,
+          "NN_better_Origins": 5,
+          "NN_worse_Origins": 0,
+          "exact_ties": 0
+        }
+      },
+      "descriptive_only": true
+    },
+    {
+      "candidate": "A",
+      "NN": "RNN",
+      "baseline": "MOMENTUM60",
+      "metrics": {
+        "BA": {
+          "mean_NN_minus_baseline": 0.013981309275483179,
+          "NN_better_Origins": 2,
+          "NN_worse_Origins": 3,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "mean_NN_minus_baseline": -0.04617781948760855,
+          "NN_better_Origins": 2,
+          "NN_worse_Origins": 3,
+          "exact_ties": 0
+        },
+        "brier": {
+          "mean_NN_minus_baseline": -0.17360506632906453,
+          "NN_better_Origins": 5,
+          "NN_worse_Origins": 0,
+          "exact_ties": 0
+        }
+      },
+      "descriptive_only": true
+    },
+    {
+      "candidate": "A",
+      "NN": "LSTM",
+      "baseline": "CLIMATOLOGY",
+      "metrics": {
+        "BA": {
+          "mean_NN_minus_baseline": 0.018008340351553975,
+          "NN_better_Origins": 3,
+          "NN_worse_Origins": 2,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "mean_NN_minus_baseline": 0.12986931669971463,
+          "NN_better_Origins": 4,
+          "NN_worse_Origins": 1,
+          "exact_ties": 0
+        },
+        "brier": {
+          "mean_NN_minus_baseline": -0.0028748235494010623,
+          "NN_better_Origins": 3,
+          "NN_worse_Origins": 2,
+          "exact_ties": 0
+        }
+      },
+      "descriptive_only": true
+    },
+    {
+      "candidate": "A",
+      "NN": "LSTM",
+      "baseline": "LOGISTIC",
+      "metrics": {
+        "BA": {
+          "mean_NN_minus_baseline": 0.0255167657500986,
+          "NN_better_Origins": 4,
+          "NN_worse_Origins": 1,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "mean_NN_minus_baseline": 0.11031710196442238,
+          "NN_better_Origins": 4,
+          "NN_worse_Origins": 1,
+          "exact_ties": 0
+        },
+        "brier": {
+          "mean_NN_minus_baseline": -0.0026619713774639455,
+          "NN_better_Origins": 2,
+          "NN_worse_Origins": 3,
+          "exact_ties": 0
+        }
+      },
+      "descriptive_only": true
+    },
+    {
+      "candidate": "A",
+      "NN": "LSTM",
+      "baseline": "DMA200",
+      "metrics": {
+        "BA": {
+          "mean_NN_minus_baseline": 0.0358283490565587,
+          "NN_better_Origins": 3,
+          "NN_worse_Origins": 2,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "mean_NN_minus_baseline": 0.027325153509265666,
+          "NN_better_Origins": 2,
+          "NN_worse_Origins": 3,
+          "exact_ties": 0
+        },
+        "brier": {
+          "mean_NN_minus_baseline": -0.21857032483382802,
+          "NN_better_Origins": 5,
+          "NN_worse_Origins": 0,
+          "exact_ties": 0
+        }
+      },
+      "descriptive_only": true
+    },
+    {
+      "candidate": "A",
+      "NN": "LSTM",
+      "baseline": "MOMENTUM60",
+      "metrics": {
+        "BA": {
+          "mean_NN_minus_baseline": 0.013592269698236504,
+          "NN_better_Origins": 3,
+          "NN_worse_Origins": 2,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "mean_NN_minus_baseline": -0.02106837702251072,
+          "NN_better_Origins": 2,
+          "NN_worse_Origins": 3,
+          "exact_ties": 0
+        },
+        "brier": {
+          "mean_NN_minus_baseline": -0.17658858247036738,
+          "NN_better_Origins": 5,
+          "NN_worse_Origins": 0,
+          "exact_ties": 0
+        }
+      },
+      "descriptive_only": true
+    },
+    {
+      "candidate": "A",
+      "NN": "GRU",
+      "baseline": "CLIMATOLOGY",
+      "metrics": {
+        "BA": {
+          "mean_NN_minus_baseline": 0.02784419235191039,
+          "NN_better_Origins": 4,
+          "NN_worse_Origins": 1,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "mean_NN_minus_baseline": 0.13782203446933117,
+          "NN_better_Origins": 5,
+          "NN_worse_Origins": 0,
+          "exact_ties": 0
+        },
+        "brier": {
+          "mean_NN_minus_baseline": 0.0008850593681476226,
+          "NN_better_Origins": 2,
+          "NN_worse_Origins": 3,
+          "exact_ties": 0
+        }
+      },
+      "descriptive_only": true
+    },
+    {
+      "candidate": "A",
+      "NN": "GRU",
+      "baseline": "LOGISTIC",
+      "metrics": {
+        "BA": {
+          "mean_NN_minus_baseline": 0.03535261775045502,
+          "NN_better_Origins": 4,
+          "NN_worse_Origins": 1,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "mean_NN_minus_baseline": 0.11826981973403891,
+          "NN_better_Origins": 5,
+          "NN_worse_Origins": 0,
+          "exact_ties": 0
+        },
+        "brier": {
+          "mean_NN_minus_baseline": 0.0010979115400847395,
+          "NN_better_Origins": 2,
+          "NN_worse_Origins": 3,
+          "exact_ties": 0
+        }
+      },
+      "descriptive_only": true
+    },
+    {
+      "candidate": "A",
+      "NN": "GRU",
+      "baseline": "DMA200",
+      "metrics": {
+        "BA": {
+          "mean_NN_minus_baseline": 0.04566420105691511,
+          "NN_better_Origins": 3,
+          "NN_worse_Origins": 2,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "mean_NN_minus_baseline": 0.0352778712788822,
+          "NN_better_Origins": 2,
+          "NN_worse_Origins": 3,
+          "exact_ties": 0
+        },
+        "brier": {
+          "mean_NN_minus_baseline": -0.21481044191627932,
+          "NN_better_Origins": 5,
+          "NN_worse_Origins": 0,
+          "exact_ties": 0
+        }
+      },
+      "descriptive_only": true
+    },
+    {
+      "candidate": "A",
+      "NN": "GRU",
+      "baseline": "MOMENTUM60",
+      "metrics": {
+        "BA": {
+          "mean_NN_minus_baseline": 0.02342812169859292,
+          "NN_better_Origins": 3,
+          "NN_worse_Origins": 2,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "mean_NN_minus_baseline": -0.013115659252894185,
+          "NN_better_Origins": 2,
+          "NN_worse_Origins": 3,
+          "exact_ties": 0
+        },
+        "brier": {
+          "mean_NN_minus_baseline": -0.17282869955281868,
+          "NN_better_Origins": 5,
+          "NN_worse_Origins": 0,
+          "exact_ties": 0
+        }
+      },
+      "descriptive_only": true
+    },
+    {
+      "candidate": "A",
+      "NN": "LTC",
+      "baseline": "CLIMATOLOGY",
+      "metrics": {
+        "BA": {
+          "mean_NN_minus_baseline": 0.03238654989693999,
+          "NN_better_Origins": 5,
+          "NN_worse_Origins": 0,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "mean_NN_minus_baseline": 0.11207265516588502,
+          "NN_better_Origins": 5,
+          "NN_worse_Origins": 0,
+          "exact_ties": 0
+        },
+        "brier": {
+          "mean_NN_minus_baseline": -0.000936477401744501,
+          "NN_better_Origins": 3,
+          "NN_worse_Origins": 2,
+          "exact_ties": 0
+        }
+      },
+      "descriptive_only": true
+    },
+    {
+      "candidate": "A",
+      "NN": "LTC",
+      "baseline": "LOGISTIC",
+      "metrics": {
+        "BA": {
+          "mean_NN_minus_baseline": 0.039894975295484615,
+          "NN_better_Origins": 4,
+          "NN_worse_Origins": 1,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "mean_NN_minus_baseline": 0.09252044043059277,
+          "NN_better_Origins": 5,
+          "NN_worse_Origins": 0,
+          "exact_ties": 0
+        },
+        "brier": {
+          "mean_NN_minus_baseline": -0.0007236252298073842,
+          "NN_better_Origins": 2,
+          "NN_worse_Origins": 3,
+          "exact_ties": 0
+        }
+      },
+      "descriptive_only": true
+    },
+    {
+      "candidate": "A",
+      "NN": "LTC",
+      "baseline": "DMA200",
+      "metrics": {
+        "BA": {
+          "mean_NN_minus_baseline": 0.05020655860194471,
+          "NN_better_Origins": 3,
+          "NN_worse_Origins": 2,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "mean_NN_minus_baseline": 0.009528491975436048,
+          "NN_better_Origins": 3,
+          "NN_worse_Origins": 2,
+          "exact_ties": 0
+        },
+        "brier": {
+          "mean_NN_minus_baseline": -0.21663197868617143,
+          "NN_better_Origins": 5,
+          "NN_worse_Origins": 0,
+          "exact_ties": 0
+        }
+      },
+      "descriptive_only": true
+    },
+    {
+      "candidate": "A",
+      "NN": "LTC",
+      "baseline": "MOMENTUM60",
+      "metrics": {
+        "BA": {
+          "mean_NN_minus_baseline": 0.027970479243622514,
+          "NN_better_Origins": 3,
+          "NN_worse_Origins": 2,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "mean_NN_minus_baseline": -0.03886503855634034,
+          "NN_better_Origins": 1,
+          "NN_worse_Origins": 4,
+          "exact_ties": 0
+        },
+        "brier": {
+          "mean_NN_minus_baseline": -0.17465023632271082,
+          "NN_better_Origins": 5,
+          "NN_worse_Origins": 0,
+          "exact_ties": 0
+        }
+      },
+      "descriptive_only": true
+    },
+    {
+      "candidate": "A",
+      "NN": "CfC",
+      "baseline": "CLIMATOLOGY",
+      "metrics": {
+        "BA": {
+          "mean_NN_minus_baseline": 0.03211175432332576,
+          "NN_better_Origins": 5,
+          "NN_worse_Origins": 0,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "mean_NN_minus_baseline": 0.1467514512337738,
+          "NN_better_Origins": 5,
+          "NN_worse_Origins": 0,
+          "exact_ties": 0
+        },
+        "brier": {
+          "mean_NN_minus_baseline": -0.004443966589091469,
+          "NN_better_Origins": 3,
+          "NN_worse_Origins": 2,
+          "exact_ties": 0
+        }
+      },
+      "descriptive_only": true
+    },
+    {
+      "candidate": "A",
+      "NN": "CfC",
+      "baseline": "LOGISTIC",
+      "metrics": {
+        "BA": {
+          "mean_NN_minus_baseline": 0.03962017972187039,
+          "NN_better_Origins": 4,
+          "NN_worse_Origins": 1,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "mean_NN_minus_baseline": 0.12719923649848155,
+          "NN_better_Origins": 5,
+          "NN_worse_Origins": 0,
+          "exact_ties": 0
+        },
+        "brier": {
+          "mean_NN_minus_baseline": -0.004231114417154352,
+          "NN_better_Origins": 3,
+          "NN_worse_Origins": 2,
+          "exact_ties": 0
+        }
+      },
+      "descriptive_only": true
+    },
+    {
+      "candidate": "A",
+      "NN": "CfC",
+      "baseline": "DMA200",
+      "metrics": {
+        "BA": {
+          "mean_NN_minus_baseline": 0.04993176302833048,
+          "NN_better_Origins": 3,
+          "NN_worse_Origins": 2,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "mean_NN_minus_baseline": 0.04420728804332484,
+          "NN_better_Origins": 3,
+          "NN_worse_Origins": 2,
+          "exact_ties": 0
+        },
+        "brier": {
+          "mean_NN_minus_baseline": -0.2201394678735184,
+          "NN_better_Origins": 5,
+          "NN_worse_Origins": 0,
+          "exact_ties": 0
+        }
+      },
+      "descriptive_only": true
+    },
+    {
+      "candidate": "A",
+      "NN": "CfC",
+      "baseline": "MOMENTUM60",
+      "metrics": {
+        "BA": {
+          "mean_NN_minus_baseline": 0.027695683670008287,
+          "NN_better_Origins": 3,
+          "NN_worse_Origins": 2,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "mean_NN_minus_baseline": -0.004186242488451541,
+          "NN_better_Origins": 2,
+          "NN_worse_Origins": 3,
+          "exact_ties": 0
+        },
+        "brier": {
+          "mean_NN_minus_baseline": -0.17815772551005776,
+          "NN_better_Origins": 5,
+          "NN_worse_Origins": 0,
+          "exact_ties": 0
+        }
+      },
+      "descriptive_only": true
+    },
+    {
+      "candidate": "B",
+      "NN": "RNN",
+      "baseline": "CLIMATOLOGY",
+      "metrics": {
+        "BA": {
+          "mean_NN_minus_baseline": 0.020133892444613544,
+          "NN_better_Origins": 3,
+          "NN_worse_Origins": 2,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "mean_NN_minus_baseline": 0.10810933414696738,
+          "NN_better_Origins": 4,
+          "NN_worse_Origins": 1,
+          "exact_ties": 0
+        },
+        "brier": {
+          "mean_NN_minus_baseline": -0.00010472603980771211,
+          "NN_better_Origins": 3,
+          "NN_worse_Origins": 2,
+          "exact_ties": 0
+        }
+      },
+      "descriptive_only": true
+    },
+    {
+      "candidate": "B",
+      "NN": "RNN",
+      "baseline": "LOGISTIC",
+      "metrics": {
+        "BA": {
+          "mean_NN_minus_baseline": 0.02764231784315817,
+          "NN_better_Origins": 4,
+          "NN_worse_Origins": 1,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "mean_NN_minus_baseline": 0.08855711941167513,
+          "NN_better_Origins": 3,
+          "NN_worse_Origins": 2,
+          "exact_ties": 0
+        },
+        "brier": {
+          "mean_NN_minus_baseline": 0.00010891153028331768,
+          "NN_better_Origins": 1,
+          "NN_worse_Origins": 4,
+          "exact_ties": 0
+        }
+      },
+      "descriptive_only": true
+    },
+    {
+      "candidate": "B",
+      "NN": "RNN",
+      "baseline": "DMA200",
+      "metrics": {
+        "BA": {
+          "mean_NN_minus_baseline": 0.03795390114961826,
+          "NN_better_Origins": 3,
+          "NN_worse_Origins": 2,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "mean_NN_minus_baseline": 0.005565170956518417,
+          "NN_better_Origins": 2,
+          "NN_worse_Origins": 3,
+          "exact_ties": 0
+        },
+        "brier": {
+          "mean_NN_minus_baseline": -0.21580022732423465,
+          "NN_better_Origins": 5,
+          "NN_worse_Origins": 0,
+          "exact_ties": 0
+        }
+      },
+      "descriptive_only": true
+    },
+    {
+      "candidate": "B",
+      "NN": "RNN",
+      "baseline": "MOMENTUM60",
+      "metrics": {
+        "BA": {
+          "mean_NN_minus_baseline": 0.01571782179129607,
+          "NN_better_Origins": 2,
+          "NN_worse_Origins": 3,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "mean_NN_minus_baseline": -0.04282835957525797,
+          "NN_better_Origins": 2,
+          "NN_worse_Origins": 3,
+          "exact_ties": 0
+        },
+        "brier": {
+          "mean_NN_minus_baseline": -0.173818484960774,
+          "NN_better_Origins": 5,
+          "NN_worse_Origins": 0,
+          "exact_ties": 0
+        }
+      },
+      "descriptive_only": true
+    },
+    {
+      "candidate": "B",
+      "NN": "LSTM",
+      "baseline": "CLIMATOLOGY",
+      "metrics": {
+        "BA": {
+          "mean_NN_minus_baseline": 0.01953394373298426,
+          "NN_better_Origins": 3,
+          "NN_worse_Origins": 2,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "mean_NN_minus_baseline": 0.13305115352066035,
+          "NN_better_Origins": 4,
+          "NN_worse_Origins": 1,
+          "exact_ties": 0
+        },
+        "brier": {
+          "mean_NN_minus_baseline": -0.0014742453039707447,
+          "NN_better_Origins": 4,
+          "NN_worse_Origins": 1,
+          "exact_ties": 0
+        }
+      },
+      "descriptive_only": true
+    },
+    {
+      "candidate": "B",
+      "NN": "LSTM",
+      "baseline": "LOGISTIC",
+      "metrics": {
+        "BA": {
+          "mean_NN_minus_baseline": 0.02704236913152889,
+          "NN_better_Origins": 4,
+          "NN_worse_Origins": 1,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "mean_NN_minus_baseline": 0.11349893878536811,
+          "NN_better_Origins": 4,
+          "NN_worse_Origins": 1,
+          "exact_ties": 0
+        },
+        "brier": {
+          "mean_NN_minus_baseline": -0.001260607733879715,
+          "NN_better_Origins": 2,
+          "NN_worse_Origins": 3,
+          "exact_ties": 0
+        }
+      },
+      "descriptive_only": true
+    },
+    {
+      "candidate": "B",
+      "NN": "LSTM",
+      "baseline": "DMA200",
+      "metrics": {
+        "BA": {
+          "mean_NN_minus_baseline": 0.03735395243798898,
+          "NN_better_Origins": 3,
+          "NN_worse_Origins": 2,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "mean_NN_minus_baseline": 0.03050699033021139,
+          "NN_better_Origins": 2,
+          "NN_worse_Origins": 3,
+          "exact_ties": 0
+        },
+        "brier": {
+          "mean_NN_minus_baseline": -0.2171697465883977,
+          "NN_better_Origins": 5,
+          "NN_worse_Origins": 0,
+          "exact_ties": 0
+        }
+      },
+      "descriptive_only": true
+    },
+    {
+      "candidate": "B",
+      "NN": "LSTM",
+      "baseline": "MOMENTUM60",
+      "metrics": {
+        "BA": {
+          "mean_NN_minus_baseline": 0.015117873079666787,
+          "NN_better_Origins": 3,
+          "NN_worse_Origins": 2,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "mean_NN_minus_baseline": -0.017886540201564993,
+          "NN_better_Origins": 2,
+          "NN_worse_Origins": 3,
+          "exact_ties": 0
+        },
+        "brier": {
+          "mean_NN_minus_baseline": -0.17518800422493705,
+          "NN_better_Origins": 5,
+          "NN_worse_Origins": 0,
+          "exact_ties": 0
+        }
+      },
+      "descriptive_only": true
+    },
+    {
+      "candidate": "B",
+      "NN": "GRU",
+      "baseline": "CLIMATOLOGY",
+      "metrics": {
+        "BA": {
+          "mean_NN_minus_baseline": 0.027895961062648467,
+          "NN_better_Origins": 4,
+          "NN_worse_Origins": 1,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "mean_NN_minus_baseline": 0.1357210785506052,
+          "NN_better_Origins": 5,
+          "NN_worse_Origins": 0,
+          "exact_ties": 0
+        },
+        "brier": {
+          "mean_NN_minus_baseline": 0.0005110019242853647,
+          "NN_better_Origins": 3,
+          "NN_worse_Origins": 2,
+          "exact_ties": 0
+        }
+      },
+      "descriptive_only": true
+    },
+    {
+      "candidate": "B",
+      "NN": "GRU",
+      "baseline": "LOGISTIC",
+      "metrics": {
+        "BA": {
+          "mean_NN_minus_baseline": 0.035404386461193094,
+          "NN_better_Origins": 4,
+          "NN_worse_Origins": 1,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "mean_NN_minus_baseline": 0.11616886381531294,
+          "NN_better_Origins": 5,
+          "NN_worse_Origins": 0,
+          "exact_ties": 0
+        },
+        "brier": {
+          "mean_NN_minus_baseline": 0.0007246394943763945,
+          "NN_better_Origins": 1,
+          "NN_worse_Origins": 4,
+          "exact_ties": 0
+        }
+      },
+      "descriptive_only": true
+    },
+    {
+      "candidate": "B",
+      "NN": "GRU",
+      "baseline": "DMA200",
+      "metrics": {
+        "BA": {
+          "mean_NN_minus_baseline": 0.045715969767653186,
+          "NN_better_Origins": 3,
+          "NN_worse_Origins": 2,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "mean_NN_minus_baseline": 0.033176915360156226,
+          "NN_better_Origins": 3,
+          "NN_worse_Origins": 2,
+          "exact_ties": 0
+        },
+        "brier": {
+          "mean_NN_minus_baseline": -0.21518449936014158,
+          "NN_better_Origins": 5,
+          "NN_worse_Origins": 0,
+          "exact_ties": 0
+        }
+      },
+      "descriptive_only": true
+    },
+    {
+      "candidate": "B",
+      "NN": "GRU",
+      "baseline": "MOMENTUM60",
+      "metrics": {
+        "BA": {
+          "mean_NN_minus_baseline": 0.023479890409330996,
+          "NN_better_Origins": 3,
+          "NN_worse_Origins": 2,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "mean_NN_minus_baseline": -0.015216615171620162,
+          "NN_better_Origins": 2,
+          "NN_worse_Origins": 3,
+          "exact_ties": 0
+        },
+        "brier": {
+          "mean_NN_minus_baseline": -0.17320275699668095,
+          "NN_better_Origins": 5,
+          "NN_worse_Origins": 0,
+          "exact_ties": 0
+        }
+      },
+      "descriptive_only": true
+    },
+    {
+      "candidate": "B",
+      "NN": "LTC",
+      "baseline": "CLIMATOLOGY",
+      "metrics": {
+        "BA": {
+          "mean_NN_minus_baseline": 0.031291604192650445,
+          "NN_better_Origins": 5,
+          "NN_worse_Origins": 0,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "mean_NN_minus_baseline": 0.11314355593514754,
+          "NN_better_Origins": 5,
+          "NN_worse_Origins": 0,
+          "exact_ties": 0
+        },
+        "brier": {
+          "mean_NN_minus_baseline": -0.0011360920331563384,
+          "NN_better_Origins": 3,
+          "NN_worse_Origins": 2,
+          "exact_ties": 0
+        }
+      },
+      "descriptive_only": true
+    },
+    {
+      "candidate": "B",
+      "NN": "LTC",
+      "baseline": "LOGISTIC",
+      "metrics": {
+        "BA": {
+          "mean_NN_minus_baseline": 0.03880002959119507,
+          "NN_better_Origins": 4,
+          "NN_worse_Origins": 1,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "mean_NN_minus_baseline": 0.09359134119985528,
+          "NN_better_Origins": 5,
+          "NN_worse_Origins": 0,
+          "exact_ties": 0
+        },
+        "brier": {
+          "mean_NN_minus_baseline": -0.0009224544630653086,
+          "NN_better_Origins": 2,
+          "NN_worse_Origins": 3,
+          "exact_ties": 0
+        }
+      },
+      "descriptive_only": true
+    },
+    {
+      "candidate": "B",
+      "NN": "LTC",
+      "baseline": "DMA200",
+      "metrics": {
+        "BA": {
+          "mean_NN_minus_baseline": 0.049111612897655164,
+          "NN_better_Origins": 3,
+          "NN_worse_Origins": 2,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "mean_NN_minus_baseline": 0.010599392744698566,
+          "NN_better_Origins": 3,
+          "NN_worse_Origins": 2,
+          "exact_ties": 0
+        },
+        "brier": {
+          "mean_NN_minus_baseline": -0.21683159331758328,
+          "NN_better_Origins": 5,
+          "NN_worse_Origins": 0,
+          "exact_ties": 0
+        }
+      },
+      "descriptive_only": true
+    },
+    {
+      "candidate": "B",
+      "NN": "LTC",
+      "baseline": "MOMENTUM60",
+      "metrics": {
+        "BA": {
+          "mean_NN_minus_baseline": 0.026875533539332974,
+          "NN_better_Origins": 3,
+          "NN_worse_Origins": 2,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "mean_NN_minus_baseline": -0.03779413778707782,
+          "NN_better_Origins": 1,
+          "NN_worse_Origins": 4,
+          "exact_ties": 0
+        },
+        "brier": {
+          "mean_NN_minus_baseline": -0.17484985095412264,
+          "NN_better_Origins": 5,
+          "NN_worse_Origins": 0,
+          "exact_ties": 0
+        }
+      },
+      "descriptive_only": true
+    },
+    {
+      "candidate": "B",
+      "NN": "CfC",
+      "baseline": "CLIMATOLOGY",
+      "metrics": {
+        "BA": {
+          "mean_NN_minus_baseline": 0.01891835686777512,
+          "NN_better_Origins": 4,
+          "NN_worse_Origins": 1,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "mean_NN_minus_baseline": 0.1343411334876735,
+          "NN_better_Origins": 5,
+          "NN_worse_Origins": 0,
+          "exact_ties": 0
+        },
+        "brier": {
+          "mean_NN_minus_baseline": 0.00017149435930448597,
+          "NN_better_Origins": 3,
+          "NN_worse_Origins": 2,
+          "exact_ties": 0
+        }
+      },
+      "descriptive_only": true
+    },
+    {
+      "candidate": "B",
+      "NN": "CfC",
+      "baseline": "LOGISTIC",
+      "metrics": {
+        "BA": {
+          "mean_NN_minus_baseline": 0.026426782266319747,
+          "NN_better_Origins": 5,
+          "NN_worse_Origins": 0,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "mean_NN_minus_baseline": 0.11478891875238124,
+          "NN_better_Origins": 5,
+          "NN_worse_Origins": 0,
+          "exact_ties": 0
+        },
+        "brier": {
+          "mean_NN_minus_baseline": 0.00038513192939551577,
+          "NN_better_Origins": 3,
+          "NN_worse_Origins": 2,
+          "exact_ties": 0
+        }
+      },
+      "descriptive_only": true
+    },
+    {
+      "candidate": "B",
+      "NN": "CfC",
+      "baseline": "DMA200",
+      "metrics": {
+        "BA": {
+          "mean_NN_minus_baseline": 0.03673836557277984,
+          "NN_better_Origins": 4,
+          "NN_worse_Origins": 1,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "mean_NN_minus_baseline": 0.031796970297224524,
+          "NN_better_Origins": 3,
+          "NN_worse_Origins": 2,
+          "exact_ties": 0
+        },
+        "brier": {
+          "mean_NN_minus_baseline": -0.21552400692512247,
+          "NN_better_Origins": 5,
+          "NN_worse_Origins": 0,
+          "exact_ties": 0
+        }
+      },
+      "descriptive_only": true
+    },
+    {
+      "candidate": "B",
+      "NN": "CfC",
+      "baseline": "MOMENTUM60",
+      "metrics": {
+        "BA": {
+          "mean_NN_minus_baseline": 0.01450228621445765,
+          "NN_better_Origins": 4,
+          "NN_worse_Origins": 1,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "mean_NN_minus_baseline": -0.01659656023455186,
+          "NN_better_Origins": 2,
+          "NN_worse_Origins": 3,
+          "exact_ties": 0
+        },
+        "brier": {
+          "mean_NN_minus_baseline": -0.17354226456166183,
+          "NN_better_Origins": 5,
+          "NN_worse_Origins": 0,
+          "exact_ties": 0
+        }
+      },
+      "descriptive_only": true
+    }
+  ],
+  "saved_Origin_directions": [
+    {
+      "origin": "O1",
+      "NN": "RNN",
+      "baseline": "CLIMATOLOGY",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 0,
+          "NN_worse_candidates": 2,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O1",
+      "NN": "RNN",
+      "baseline": "LOGISTIC",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 0,
+          "NN_worse_candidates": 2,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 0,
+          "NN_worse_candidates": 2,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 0,
+          "NN_worse_candidates": 2,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O1",
+      "NN": "RNN",
+      "baseline": "DMA200",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 0,
+          "NN_worse_candidates": 2,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 0,
+          "NN_worse_candidates": 2,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O1",
+      "NN": "RNN",
+      "baseline": "MOMENTUM60",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 0,
+          "NN_worse_candidates": 2,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 0,
+          "NN_worse_candidates": 2,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O1",
+      "NN": "LSTM",
+      "baseline": "CLIMATOLOGY",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 0,
+          "NN_worse_candidates": 2,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O1",
+      "NN": "LSTM",
+      "baseline": "LOGISTIC",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 0,
+          "NN_worse_candidates": 2,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O1",
+      "NN": "LSTM",
+      "baseline": "DMA200",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 0,
+          "NN_worse_candidates": 2,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 0,
+          "NN_worse_candidates": 2,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O1",
+      "NN": "LSTM",
+      "baseline": "MOMENTUM60",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 0,
+          "NN_worse_candidates": 2,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 0,
+          "NN_worse_candidates": 2,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O1",
+      "NN": "GRU",
+      "baseline": "CLIMATOLOGY",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 0,
+          "NN_worse_candidates": 2,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 1,
+          "NN_worse_candidates": 1,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O1",
+      "NN": "GRU",
+      "baseline": "LOGISTIC",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 0,
+          "NN_worse_candidates": 2,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 0,
+          "NN_worse_candidates": 2,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O1",
+      "NN": "GRU",
+      "baseline": "DMA200",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 0,
+          "NN_worse_candidates": 2,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 0,
+          "NN_worse_candidates": 2,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O1",
+      "NN": "GRU",
+      "baseline": "MOMENTUM60",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 0,
+          "NN_worse_candidates": 2,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 0,
+          "NN_worse_candidates": 2,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O1",
+      "NN": "LTC",
+      "baseline": "CLIMATOLOGY",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O1",
+      "NN": "LTC",
+      "baseline": "LOGISTIC",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 0,
+          "NN_worse_candidates": 2,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O1",
+      "NN": "LTC",
+      "baseline": "DMA200",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 0,
+          "NN_worse_candidates": 2,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 0,
+          "NN_worse_candidates": 2,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O1",
+      "NN": "LTC",
+      "baseline": "MOMENTUM60",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 0,
+          "NN_worse_candidates": 2,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 0,
+          "NN_worse_candidates": 2,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O1",
+      "NN": "CfC",
+      "baseline": "CLIMATOLOGY",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O1",
+      "NN": "CfC",
+      "baseline": "LOGISTIC",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 1,
+          "NN_worse_candidates": 1,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O1",
+      "NN": "CfC",
+      "baseline": "DMA200",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 1,
+          "NN_worse_candidates": 1,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 0,
+          "NN_worse_candidates": 2,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O1",
+      "NN": "CfC",
+      "baseline": "MOMENTUM60",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 1,
+          "NN_worse_candidates": 1,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 0,
+          "NN_worse_candidates": 2,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O2",
+      "NN": "RNN",
+      "baseline": "CLIMATOLOGY",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O2",
+      "NN": "RNN",
+      "baseline": "LOGISTIC",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O2",
+      "NN": "RNN",
+      "baseline": "DMA200",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O2",
+      "NN": "RNN",
+      "baseline": "MOMENTUM60",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 0,
+          "NN_worse_candidates": 2,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 0,
+          "NN_worse_candidates": 2,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O2",
+      "NN": "LSTM",
+      "baseline": "CLIMATOLOGY",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O2",
+      "NN": "LSTM",
+      "baseline": "LOGISTIC",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O2",
+      "NN": "LSTM",
+      "baseline": "DMA200",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O2",
+      "NN": "LSTM",
+      "baseline": "MOMENTUM60",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 0,
+          "NN_worse_candidates": 2,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O2",
+      "NN": "GRU",
+      "baseline": "CLIMATOLOGY",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O2",
+      "NN": "GRU",
+      "baseline": "LOGISTIC",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O2",
+      "NN": "GRU",
+      "baseline": "DMA200",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O2",
+      "NN": "GRU",
+      "baseline": "MOMENTUM60",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 0,
+          "NN_worse_candidates": 2,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O2",
+      "NN": "LTC",
+      "baseline": "CLIMATOLOGY",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O2",
+      "NN": "LTC",
+      "baseline": "LOGISTIC",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O2",
+      "NN": "LTC",
+      "baseline": "DMA200",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O2",
+      "NN": "LTC",
+      "baseline": "MOMENTUM60",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 0,
+          "NN_worse_candidates": 2,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O2",
+      "NN": "CfC",
+      "baseline": "CLIMATOLOGY",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O2",
+      "NN": "CfC",
+      "baseline": "LOGISTIC",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O2",
+      "NN": "CfC",
+      "baseline": "DMA200",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O2",
+      "NN": "CfC",
+      "baseline": "MOMENTUM60",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 0,
+          "NN_worse_candidates": 2,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O3",
+      "NN": "RNN",
+      "baseline": "CLIMATOLOGY",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 0,
+          "NN_worse_candidates": 2,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O3",
+      "NN": "RNN",
+      "baseline": "LOGISTIC",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 0,
+          "NN_worse_candidates": 2,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O3",
+      "NN": "RNN",
+      "baseline": "DMA200",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O3",
+      "NN": "RNN",
+      "baseline": "MOMENTUM60",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O3",
+      "NN": "LSTM",
+      "baseline": "CLIMATOLOGY",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O3",
+      "NN": "LSTM",
+      "baseline": "LOGISTIC",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 0,
+          "NN_worse_candidates": 2,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O3",
+      "NN": "LSTM",
+      "baseline": "DMA200",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O3",
+      "NN": "LSTM",
+      "baseline": "MOMENTUM60",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O3",
+      "NN": "GRU",
+      "baseline": "CLIMATOLOGY",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O3",
+      "NN": "GRU",
+      "baseline": "LOGISTIC",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 1,
+          "NN_worse_candidates": 1,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O3",
+      "NN": "GRU",
+      "baseline": "DMA200",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O3",
+      "NN": "GRU",
+      "baseline": "MOMENTUM60",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O3",
+      "NN": "LTC",
+      "baseline": "CLIMATOLOGY",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 0,
+          "NN_worse_candidates": 2,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O3",
+      "NN": "LTC",
+      "baseline": "LOGISTIC",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 0,
+          "NN_worse_candidates": 2,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O3",
+      "NN": "LTC",
+      "baseline": "DMA200",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O3",
+      "NN": "LTC",
+      "baseline": "MOMENTUM60",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 0,
+          "NN_worse_candidates": 2,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O3",
+      "NN": "CfC",
+      "baseline": "CLIMATOLOGY",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 0,
+          "NN_worse_candidates": 2,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O3",
+      "NN": "CfC",
+      "baseline": "LOGISTIC",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 0,
+          "NN_worse_candidates": 2,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O3",
+      "NN": "CfC",
+      "baseline": "DMA200",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O3",
+      "NN": "CfC",
+      "baseline": "MOMENTUM60",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O4",
+      "NN": "RNN",
+      "baseline": "CLIMATOLOGY",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O4",
+      "NN": "RNN",
+      "baseline": "LOGISTIC",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 0,
+          "NN_worse_candidates": 2,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O4",
+      "NN": "RNN",
+      "baseline": "DMA200",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 0,
+          "NN_worse_candidates": 2,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 0,
+          "NN_worse_candidates": 2,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O4",
+      "NN": "RNN",
+      "baseline": "MOMENTUM60",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 0,
+          "NN_worse_candidates": 2,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 0,
+          "NN_worse_candidates": 2,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O4",
+      "NN": "LSTM",
+      "baseline": "CLIMATOLOGY",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 1,
+          "NN_worse_candidates": 1,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O4",
+      "NN": "LSTM",
+      "baseline": "LOGISTIC",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 0,
+          "NN_worse_candidates": 2,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O4",
+      "NN": "LSTM",
+      "baseline": "DMA200",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 0,
+          "NN_worse_candidates": 2,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 0,
+          "NN_worse_candidates": 2,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O4",
+      "NN": "LSTM",
+      "baseline": "MOMENTUM60",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 0,
+          "NN_worse_candidates": 2,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 0,
+          "NN_worse_candidates": 2,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O4",
+      "NN": "GRU",
+      "baseline": "CLIMATOLOGY",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 0,
+          "NN_worse_candidates": 2,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O4",
+      "NN": "GRU",
+      "baseline": "LOGISTIC",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 0,
+          "NN_worse_candidates": 2,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O4",
+      "NN": "GRU",
+      "baseline": "DMA200",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 0,
+          "NN_worse_candidates": 2,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 0,
+          "NN_worse_candidates": 2,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O4",
+      "NN": "GRU",
+      "baseline": "MOMENTUM60",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 0,
+          "NN_worse_candidates": 2,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 0,
+          "NN_worse_candidates": 2,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O4",
+      "NN": "LTC",
+      "baseline": "CLIMATOLOGY",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O4",
+      "NN": "LTC",
+      "baseline": "LOGISTIC",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 0,
+          "NN_worse_candidates": 2,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O4",
+      "NN": "LTC",
+      "baseline": "DMA200",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 0,
+          "NN_worse_candidates": 2,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 0,
+          "NN_worse_candidates": 2,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O4",
+      "NN": "LTC",
+      "baseline": "MOMENTUM60",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 0,
+          "NN_worse_candidates": 2,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 0,
+          "NN_worse_candidates": 2,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O4",
+      "NN": "CfC",
+      "baseline": "CLIMATOLOGY",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 1,
+          "NN_worse_candidates": 1,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O4",
+      "NN": "CfC",
+      "baseline": "LOGISTIC",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 0,
+          "NN_worse_candidates": 2,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O4",
+      "NN": "CfC",
+      "baseline": "DMA200",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 0,
+          "NN_worse_candidates": 2,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 0,
+          "NN_worse_candidates": 2,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O4",
+      "NN": "CfC",
+      "baseline": "MOMENTUM60",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 0,
+          "NN_worse_candidates": 2,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 0,
+          "NN_worse_candidates": 2,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O5",
+      "NN": "RNN",
+      "baseline": "CLIMATOLOGY",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 0,
+          "NN_worse_candidates": 2,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 0,
+          "NN_worse_candidates": 2,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 0,
+          "NN_worse_candidates": 2,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O5",
+      "NN": "RNN",
+      "baseline": "LOGISTIC",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 0,
+          "NN_worse_candidates": 2,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 0,
+          "NN_worse_candidates": 2,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O5",
+      "NN": "RNN",
+      "baseline": "DMA200",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 0,
+          "NN_worse_candidates": 2,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O5",
+      "NN": "RNN",
+      "baseline": "MOMENTUM60",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O5",
+      "NN": "LSTM",
+      "baseline": "CLIMATOLOGY",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 0,
+          "NN_worse_candidates": 2,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 0,
+          "NN_worse_candidates": 2,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 0,
+          "NN_worse_candidates": 2,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O5",
+      "NN": "LSTM",
+      "baseline": "LOGISTIC",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 0,
+          "NN_worse_candidates": 2,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 0,
+          "NN_worse_candidates": 2,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O5",
+      "NN": "LSTM",
+      "baseline": "DMA200",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 0,
+          "NN_worse_candidates": 2,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O5",
+      "NN": "LSTM",
+      "baseline": "MOMENTUM60",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O5",
+      "NN": "GRU",
+      "baseline": "CLIMATOLOGY",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 0,
+          "NN_worse_candidates": 2,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O5",
+      "NN": "GRU",
+      "baseline": "LOGISTIC",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 0,
+          "NN_worse_candidates": 2,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O5",
+      "NN": "GRU",
+      "baseline": "DMA200",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 1,
+          "NN_worse_candidates": 1,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O5",
+      "NN": "GRU",
+      "baseline": "MOMENTUM60",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O5",
+      "NN": "LTC",
+      "baseline": "CLIMATOLOGY",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 0,
+          "NN_worse_candidates": 2,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O5",
+      "NN": "LTC",
+      "baseline": "LOGISTIC",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 0,
+          "NN_worse_candidates": 2,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O5",
+      "NN": "LTC",
+      "baseline": "DMA200",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O5",
+      "NN": "LTC",
+      "baseline": "MOMENTUM60",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O5",
+      "NN": "CfC",
+      "baseline": "CLIMATOLOGY",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 0,
+          "NN_worse_candidates": 2,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O5",
+      "NN": "CfC",
+      "baseline": "LOGISTIC",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O5",
+      "NN": "CfC",
+      "baseline": "DMA200",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    },
+    {
+      "origin": "O5",
+      "NN": "CfC",
+      "baseline": "MOMENTUM60",
+      "metrics": {
+        "BA": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "macro_f1": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        },
+        "brier": {
+          "NN_better_candidates": 2,
+          "NN_worse_candidates": 0,
+          "exact_ties": 0
+        }
+      },
+      "candidate_pair_is_not_independent_market_replication": true
+    }
+  ],
+  "rankings_of_saved_summaries": [
+    {
+      "candidate": "A",
+      "metric": "accuracy",
+      "ranking": "descriptive exact ties share rank; not model selection",
+      "rows": [
+        {
+          "model": "MOMENTUM60",
+          "rank": 1,
+          "value": 0.5749225691523887
+        },
+        {
+          "model": "DMA200",
+          "rank": 2,
+          "value": 0.5329408267889281
+        },
+        {
+          "model": "CLIMATOLOGY",
+          "rank": 3,
+          "value": 0.5300366220550313
+        },
+        {
+          "model": "LTC",
+          "rank": 4,
+          "value": 0.5290086098436095
+        },
+        {
+          "model": "CfC",
+          "rank": 5,
+          "value": 0.5226346527464965
+        },
+        {
+          "model": "LSTM",
+          "rank": 6,
+          "value": 0.5161594509738644
+        },
+        {
+          "model": "GRU",
+          "rank": 7,
+          "value": 0.509409824020027
+        },
+        {
+          "model": "LOGISTIC",
+          "rank": 8,
+          "value": 0.49188233131564557
+        },
+        {
+          "model": "RNN",
+          "rank": 9,
+          "value": 0.4767528393751361
+        }
+      ]
+    },
+    {
+      "candidate": "A",
+      "metric": "BA",
+      "ranking": "descriptive exact ties share rank; not model selection",
+      "rows": [
+        {
+          "model": "LTC",
+          "rank": 1,
+          "value": 0.53238654989694
+        },
+        {
+          "model": "CfC",
+          "rank": 2,
+          "value": 0.5321117543233258
+        },
+        {
+          "model": "GRU",
+          "rank": 3,
+          "value": 0.5278441923519104
+        },
+        {
+          "model": "RNN",
+          "rank": 4,
+          "value": 0.5183973799288006
+        },
+        {
+          "model": "LSTM",
+          "rank": 5,
+          "value": 0.518008340351554
+        },
+        {
+          "model": "MOMENTUM60",
+          "rank": 6,
+          "value": 0.5044160706533175
+        },
+        {
+          "model": "CLIMATOLOGY",
+          "rank": 7,
+          "value": 0.5
+        },
+        {
+          "model": "LOGISTIC",
+          "rank": 8,
+          "value": 0.4924915746014554
+        },
+        {
+          "model": "DMA200",
+          "rank": 9,
+          "value": 0.4821799912949953
+        }
+      ]
+    },
+    {
+      "candidate": "A",
+      "metric": "macro_f1",
+      "ranking": "descriptive exact ties share rank; not model selection",
+      "rows": [
+        {
+          "model": "MOMENTUM60",
+          "rank": 1,
+          "value": 0.49101944825046195
+        },
+        {
+          "model": "CfC",
+          "rank": 2,
+          "value": 0.4868332057620104
+        },
+        {
+          "model": "GRU",
+          "rank": 3,
+          "value": 0.47790378899756775
+        },
+        {
+          "model": "LSTM",
+          "rank": 4,
+          "value": 0.4699510712279512
+        },
+        {
+          "model": "LTC",
+          "rank": 5,
+          "value": 0.45215440969412163
+        },
+        {
+          "model": "RNN",
+          "rank": 6,
+          "value": 0.4448416287628534
+        },
+        {
+          "model": "DMA200",
+          "rank": 7,
+          "value": 0.44262591771868554
+        },
+        {
+          "model": "LOGISTIC",
+          "rank": 8,
+          "value": 0.35963396926352886
+        },
+        {
+          "model": "CLIMATOLOGY",
+          "rank": 9,
+          "value": 0.3400817545282366
+        }
+      ]
+    },
+    {
+      "candidate": "A",
+      "metric": "brier",
+      "ranking": "descriptive exact ties share rank; not model selection",
+      "rows": [
+        {
+          "model": "CfC",
+          "rank": 1,
+          "value": 0.24691970533755347
+        },
+        {
+          "model": "LSTM",
+          "rank": 2,
+          "value": 0.2484888483772439
+        },
+        {
+          "model": "LTC",
+          "rank": 3,
+          "value": 0.2504271945249005
+        },
+        {
+          "model": "LOGISTIC",
+          "rank": 4,
+          "value": 0.2511508197547078
+        },
+        {
+          "model": "CLIMATOLOGY",
+          "rank": 5,
+          "value": 0.25136367192664494
+        },
+        {
+          "model": "RNN",
+          "rank": 6,
+          "value": 0.2514723645185467
+        },
+        {
+          "model": "GRU",
+          "rank": 7,
+          "value": 0.2522487312947926
+        },
+        {
+          "model": "MOMENTUM60",
+          "rank": 8,
+          "value": 0.42507743084761124
+        },
+        {
+          "model": "DMA200",
+          "rank": 9,
+          "value": 0.4670591732110719
+        }
+      ]
+    },
+    {
+      "candidate": "A",
+      "metric": "recall0",
+      "ranking": "descriptive exact ties share rank; not model selection",
+      "rows": [
+        {
+          "model": "LTC",
+          "rank": 1,
+          "value": 0.46254038568934414
+        },
+        {
+          "model": "DMA200",
+          "rank": 2,
+          "value": 0.4308089761576282
+        },
+        {
+          "model": "MOMENTUM60",
+          "rank": 3,
+          "value": 0.430143432068932
+        },
+        {
+          "model": "GRU",
+          "rank": 4,
+          "value": 0.39660558166096144
+        },
+        {
+          "model": "CfC",
+          "rank": 5,
+          "value": 0.3928099685878686
+        },
+        {
+          "model": "RNN",
+          "rank": 6,
+          "value": 0.3718676523419696
+        },
+        {
+          "model": "LSTM",
+          "rank": 7,
+          "value": 0.32970617918683
+        },
+        {
+          "model": "LOGISTIC",
+          "rank": 8,
+          "value": 0.06831770541882287
+        },
+        {
+          "model": "CLIMATOLOGY",
+          "rank": 9,
+          "value": 0.0
+        }
+      ]
+    },
+    {
+      "candidate": "A",
+      "metric": "recall1",
+      "ranking": "descriptive exact ties share rank; not model selection",
+      "rows": [
+        {
+          "model": "CLIMATOLOGY",
+          "rank": 1,
+          "value": 1.0
+        },
+        {
+          "model": "LOGISTIC",
+          "rank": 2,
+          "value": 0.9166654437840879
+        },
+        {
+          "model": "LSTM",
+          "rank": 3,
+          "value": 0.7063105015162779
+        },
+        {
+          "model": "CfC",
+          "rank": 4,
+          "value": 0.6714135400587828
+        },
+        {
+          "model": "RNN",
+          "rank": 5,
+          "value": 0.6649271075156317
+        },
+        {
+          "model": "GRU",
+          "rank": 6,
+          "value": 0.6590828030428593
+        },
+        {
+          "model": "LTC",
+          "rank": 7,
+          "value": 0.6022327141045359
+        },
+        {
+          "model": "MOMENTUM60",
+          "rank": 8,
+          "value": 0.578688709237703
+        },
+        {
+          "model": "DMA200",
+          "rank": 9,
+          "value": 0.5335510064323624
+        }
+      ]
+    },
+    {
+      "candidate": "B",
+      "metric": "accuracy",
+      "ranking": "descriptive exact ties share rank; not model selection",
+      "rows": [
+        {
+          "model": "MOMENTUM60",
+          "rank": 1,
+          "value": 0.5749225691523887
+        },
+        {
+          "model": "LTC",
+          "rank": 2,
+          "value": 0.5340348665069911
+        },
+        {
+          "model": "DMA200",
+          "rank": 3,
+          "value": 0.5329408267889281
+        },
+        {
+          "model": "CLIMATOLOGY",
+          "rank": 4,
+          "value": 0.5300366220550313
+        },
+        {
+          "model": "LSTM",
+          "rank": 5,
+          "value": 0.511738395138893
+        },
+        {
+          "model": "CfC",
+          "rank": 6,
+          "value": 0.5116991756364017
+        },
+        {
+          "model": "GRU",
+          "rank": 7,
+          "value": 0.5068200968531684
+        },
+        {
+          "model": "LOGISTIC",
+          "rank": 8,
+          "value": 0.49188233131564557
+        },
+        {
+          "model": "RNN",
+          "rank": 9,
+          "value": 0.4816749682621362
+        }
+      ]
+    },
+    {
+      "candidate": "B",
+      "metric": "BA",
+      "ranking": "descriptive exact ties share rank; not model selection",
+      "rows": [
+        {
+          "model": "LTC",
+          "rank": 1,
+          "value": 0.5312916041926504
+        },
+        {
+          "model": "GRU",
+          "rank": 2,
+          "value": 0.5278959610626485
+        },
+        {
+          "model": "RNN",
+          "rank": 3,
+          "value": 0.5201338924446135
+        },
+        {
+          "model": "LSTM",
+          "rank": 4,
+          "value": 0.5195339437329842
+        },
+        {
+          "model": "CfC",
+          "rank": 5,
+          "value": 0.5189183568677751
+        },
+        {
+          "model": "MOMENTUM60",
+          "rank": 6,
+          "value": 0.5044160706533175
+        },
+        {
+          "model": "CLIMATOLOGY",
+          "rank": 7,
+          "value": 0.5
+        },
+        {
+          "model": "LOGISTIC",
+          "rank": 8,
+          "value": 0.4924915746014554
+        },
+        {
+          "model": "DMA200",
+          "rank": 9,
+          "value": 0.4821799912949953
+        }
+      ]
+    },
+    {
+      "candidate": "B",
+      "metric": "macro_f1",
+      "ranking": "descriptive exact ties share rank; not model selection",
+      "rows": [
+        {
+          "model": "MOMENTUM60",
+          "rank": 1,
+          "value": 0.49101944825046195
+        },
+        {
+          "model": "GRU",
+          "rank": 2,
+          "value": 0.4758028330788418
+        },
+        {
+          "model": "CfC",
+          "rank": 3,
+          "value": 0.4744228880159101
+        },
+        {
+          "model": "LSTM",
+          "rank": 4,
+          "value": 0.47313290804889696
+        },
+        {
+          "model": "LTC",
+          "rank": 5,
+          "value": 0.4532253104633841
+        },
+        {
+          "model": "RNN",
+          "rank": 6,
+          "value": 0.44819108867520396
+        },
+        {
+          "model": "DMA200",
+          "rank": 7,
+          "value": 0.44262591771868554
+        },
+        {
+          "model": "LOGISTIC",
+          "rank": 8,
+          "value": 0.35963396926352886
+        },
+        {
+          "model": "CLIMATOLOGY",
+          "rank": 9,
+          "value": 0.3400817545282366
+        }
+      ]
+    },
+    {
+      "candidate": "B",
+      "metric": "brier",
+      "ranking": "descriptive exact ties share rank; not model selection",
+      "rows": [
+        {
+          "model": "LSTM",
+          "rank": 1,
+          "value": 0.24988942662267422
+        },
+        {
+          "model": "LTC",
+          "rank": 2,
+          "value": 0.2502275798934886
+        },
+        {
+          "model": "LOGISTIC",
+          "rank": 3,
+          "value": 0.2511500343565539
+        },
+        {
+          "model": "RNN",
+          "rank": 4,
+          "value": 0.2512589458868372
+        },
+        {
+          "model": "CLIMATOLOGY",
+          "rank": 5,
+          "value": 0.25136367192664494
+        },
+        {
+          "model": "CfC",
+          "rank": 6,
+          "value": 0.25153516628594946
+        },
+        {
+          "model": "GRU",
+          "rank": 7,
+          "value": 0.2518746738509303
+        },
+        {
+          "model": "MOMENTUM60",
+          "rank": 8,
+          "value": 0.42507743084761124
+        },
+        {
+          "model": "DMA200",
+          "rank": 9,
+          "value": 0.4670591732110719
+        }
+      ]
+    },
+    {
+      "candidate": "B",
+      "metric": "recall0",
+      "ranking": "descriptive exact ties share rank; not model selection",
+      "rows": [
+        {
+          "model": "LTC",
+          "rank": 1,
+          "value": 0.4487399263511171
+        },
+        {
+          "model": "DMA200",
+          "rank": 2,
+          "value": 0.4308089761576282
+        },
+        {
+          "model": "MOMENTUM60",
+          "rank": 3,
+          "value": 0.430143432068932
+        },
+        {
+          "model": "GRU",
+          "rank": 4,
+          "value": 0.390023187059893
+        },
+        {
+          "model": "LSTM",
+          "rank": 5,
+          "value": 0.37041629761132516
+        },
+        {
+          "model": "RNN",
+          "rank": 6,
+          "value": 0.3690540930199357
+        },
+        {
+          "model": "CfC",
+          "rank": 7,
+          "value": 0.34574124435968445
+        },
+        {
+          "model": "LOGISTIC",
+          "rank": 8,
+          "value": 0.06831770541882287
+        },
+        {
+          "model": "CLIMATOLOGY",
+          "rank": 9,
+          "value": 0.0
+        }
+      ]
+    },
+    {
+      "candidate": "B",
+      "metric": "recall1",
+      "ranking": "descriptive exact ties share rank; not model selection",
+      "rows": [
+        {
+          "model": "CLIMATOLOGY",
+          "rank": 1,
+          "value": 1.0
+        },
+        {
+          "model": "LOGISTIC",
+          "rank": 2,
+          "value": 0.9166654437840879
+        },
+        {
+          "model": "CfC",
+          "rank": 3,
+          "value": 0.6920954693758659
+        },
+        {
+          "model": "RNN",
+          "rank": 4,
+          "value": 0.6712136918692915
+        },
+        {
+          "model": "LSTM",
+          "rank": 5,
+          "value": 0.6686515898546433
+        },
+        {
+          "model": "GRU",
+          "rank": 6,
+          "value": 0.665768735065404
+        },
+        {
+          "model": "LTC",
+          "rank": 7,
+          "value": 0.6138432820341839
+        },
+        {
+          "model": "MOMENTUM60",
+          "rank": 8,
+          "value": 0.578688709237703
+        },
+        {
+          "model": "DMA200",
+          "rank": 9,
+          "value": 0.5335510064323624
+        }
+      ]
+    }
+  ],
+  "existing_statistics_counts": [
+    {
+      "family": "primary",
+      "block": 20,
+      "hypotheses": 20,
+      "existing_Holm_below_005": 0
+    },
+    {
+      "family": "primary",
+      "block": 40,
+      "hypotheses": 20,
+      "existing_Holm_below_005": 0
+    },
+    {
+      "family": "primary",
+      "block": 60,
+      "hypotheses": 20,
+      "existing_Holm_below_005": 0
+    },
+    {
+      "family": "origin",
+      "block": 20,
+      "hypotheses": 100,
+      "existing_Holm_below_005": 0
+    },
+    {
+      "family": "origin",
+      "block": 40,
+      "hypotheses": 100,
+      "existing_Holm_below_005": 0
+    },
+    {
+      "family": "origin",
+      "block": 60,
+      "hypotheses": 100,
+      "existing_Holm_below_005": 0
+    },
+    {
+      "family": "secondary",
+      "block": 20,
+      "hypotheses": 80,
+      "existing_Holm_below_005": 3
+    },
+    {
+      "family": "secondary",
+      "block": 40,
+      "hypotheses": 80,
+      "existing_Holm_below_005": 2
+    },
+    {
+      "family": "secondary",
+      "block": 60,
+      "hypotheses": 80,
+      "existing_Holm_below_005": 3
+    }
+  ],
+  "existing_secondary_counterevidence": [
+    {
+      "family": "secondary",
+      "block_length": 20,
+      "origin": "ALL",
+      "candidate": "A",
+      "model_a": "LSTM",
+      "model_b": "LTC",
+      "metric": "recall1",
+      "effect_direction": "model_a minus model_b",
+      "lower_is_better": false,
+      "observed_difference": 0.1040777874117419,
+      "ci95_percentile": [
+        0.041572278516241026,
+        0.1518250487915959
+      ],
+      "p_approx_centered": 0.00039996000399960006,
+      "valid_replicates": 10000,
+      "invalid_replicates": 0,
+      "invalid_rate": 0.0,
+      "status": "PASS",
+      "p_is_finite_replication_approximation": true,
+      "CI_is_simultaneous": false,
+      "p_holm": 0.031196880311968805,
+      "family_status": "PASS",
+      "decision": "DESCRIPTIVE_APPROX_EVIDENCE"
+    },
+    {
+      "family": "secondary",
+      "block_length": 40,
+      "origin": "ALL",
+      "candidate": "A",
+      "model_a": "LSTM",
+      "model_b": "LTC",
+      "metric": "recall1",
+      "effect_direction": "model_a minus model_b",
+      "lower_is_better": false,
+      "observed_difference": 0.1040777874117419,
+      "ci95_percentile": [
+        0.038750687066093414,
+        0.14951074064525624
+      ],
+      "p_approx_centered": 0.0005999400059994001,
+      "valid_replicates": 10000,
+      "invalid_replicates": 0,
+      "invalid_rate": 0.0,
+      "status": "PASS",
+      "p_is_finite_replication_approximation": true,
+      "CI_is_simultaneous": false,
+      "p_holm": 0.04739526047395261,
+      "family_status": "PASS",
+      "decision": "DESCRIPTIVE_APPROX_EVIDENCE"
+    },
+    {
+      "family": "secondary",
+      "block_length": 60,
+      "origin": "ALL",
+      "candidate": "A",
+      "model_a": "LSTM",
+      "model_b": "LTC",
+      "metric": "recall1",
+      "effect_direction": "model_a minus model_b",
+      "lower_is_better": false,
+      "observed_difference": 0.1040777874117419,
+      "ci95_percentile": [
+        0.046712171393833594,
+        0.14460876787459848
+      ],
+      "p_approx_centered": 0.00019998000199980003,
+      "valid_replicates": 10000,
+      "invalid_replicates": 0,
+      "invalid_rate": 0.0,
+      "status": "PASS",
+      "p_is_finite_replication_approximation": true,
+      "CI_is_simultaneous": false,
+      "p_holm": 0.015798420157984203,
+      "family_status": "PASS",
+      "decision": "DESCRIPTIVE_APPROX_EVIDENCE"
+    }
+  ],
+  "saved_degeneracy_comparison": [
+    {
+      "candidate": "A",
+      "degenerate_LTC_results": 12,
+      "BA_equal_to_climatology": 12,
+      "macro_F1_better_equal_worse": [
+        4,
+        8,
+        0
+      ],
+      "LTC_Brier_better": 8,
+      "LTC_Brier_worse": 4,
+      "interpretation": "paired descriptive result counts; Seeds are not independent market repetitions"
+    },
+    {
+      "candidate": "B",
+      "degenerate_LTC_results": 12,
+      "BA_equal_to_climatology": 12,
+      "macro_F1_better_equal_worse": [
+        4,
+        8,
+        0
+      ],
+      "LTC_Brier_better": 8,
+      "LTC_Brier_worse": 4,
+      "interpretation": "paired descriptive result counts; Seeds are not independent market repetitions"
+    }
+  ],
+  "numerical_policy": "No new financial metrics or pvalues; copy saved summaries and sort saved values only",
+  "individual_financial_lineage_published": false
+}

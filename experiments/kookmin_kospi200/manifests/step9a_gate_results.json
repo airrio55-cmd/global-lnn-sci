@@ -1,0 +1,12 @@
+{
+  "read_only_evidence_audit_PASS": 1063,
+  "FAIL": 0,
+  "synthetic_design_tests_PASS": 16,
+  "financial_execution": "NOT_AUTHORIZED_BUDGET0",
+  "STEP9B_family_freeze": "DRAFT_NOT_SELECTED",
+  "real_market_resampling_validity": "BLOCKED_REQUIRES_DESIGN_REVIEW",
+  "tau_causal_effect": "NOT_IDENTIFIABLE",
+  "production_PIT": "BLOCKED",
+  "public_evidence_consistency_PASS": 8,
+  "public_evidence_consistency_FAIL": 0
+}
